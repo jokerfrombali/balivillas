@@ -10,17 +10,21 @@
     <style>
       a[aria-label="Go to homepage"] svg { display: none !important; }
       a[aria-label="Go to homepage"] { display: inline-block; line-height: 0; }
+      header.site-header .col-span-full { height: auto !important; }
+      header.site-header [class*="h-[72px]"] { height: auto !important; min-height: 72px; }
       a[aria-label="Go to homepage"]::after {
         content: "";
         display: inline-block;
-        height: 40px;
-        width: 58px;
+        height: 200px;
+        width: 290px;
+        max-width: 90vw;
         background: url("assets/images/logobalivillas.png") left center / contain no-repeat;
       }
       @media (max-width: 768px) {
         a[aria-label="Go to homepage"]::after {
-          height: 32px;
-          width: 47px;
+          height: 140px;
+          width: 205px;
+          max-width: 80vw;
         }
       }
     </style>
