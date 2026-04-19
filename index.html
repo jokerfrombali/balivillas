@@ -9,22 +9,36 @@
     <link rel="icon" type="image/png" href="assets/images/logobalivillas.png">
     <style>
       a[aria-label="Go to homepage"] svg { display: none !important; }
-      a[aria-label="Go to homepage"] { display: inline-block; line-height: 0; }
-      header.site-header a[aria-label="Go to homepage"] { display: inline-flex; align-items: center; height: 100%; }
-      a[aria-label="Go to homepage"]::after {
+      header.site-header [class*="max-h-9"],
+      header.site-header [class*="h-["][class*="22px"] { max-height: none !important; overflow: visible !important; }
+      header.site-header a[aria-label="Go to homepage"] {
+        position: absolute;
+        top: 0;
+        left: 24px;
+        height: 72px;
+        display: inline-flex;
+        align-items: center;
+        line-height: 0;
+        z-index: 1;
+      }
+      header.site-header a[aria-label="Go to homepage"]::after {
         content: "";
-        display: inline-block;
-        vertical-align: middle;
+        display: block;
         height: 48px;
         width: 166px;
-        max-width: 60vw;
         background: url("assets/images/logobalivillas.png") left center / contain no-repeat;
       }
+      @media (min-width: 1024px) {
+        header.site-header a[aria-label="Go to homepage"] { left: 32px; }
+      }
+      @media (min-width: 1536px) {
+        header.site-header a[aria-label="Go to homepage"] { left: 48px; }
+      }
       @media (max-width: 768px) {
-        a[aria-label="Go to homepage"]::after {
+        header.site-header a[aria-label="Go to homepage"] { left: 24px; }
+        header.site-header a[aria-label="Go to homepage"]::after {
           height: 36px;
           width: 124px;
-          max-width: 50vw;
         }
       }
     </style>
