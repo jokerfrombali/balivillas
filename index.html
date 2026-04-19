@@ -8,13 +8,22 @@
     <title>BaliVillas.ai</title>
     <link rel="icon" type="image/png" href="assets/images/logobalivillas.png">
     <style>
+      /* Override max-h-9 on the logo wrapper so the logo can be larger */
+      span.block.max-h-9 { max-height: none !important; }
+      span.block.max-h-9 [aria-label="Go to homepage"] { display: inline-block; line-height: 0; }
       a[aria-label="Go to homepage"] svg { display: none !important; }
       a[aria-label="Go to homepage"]::after {
         content: "";
         display: inline-block;
-        height: 40px;
-        width: 200px;
+        height: 56px;
+        width: 230px;
         background: url("assets/images/logobalivillas.png") left center / contain no-repeat;
+      }
+      @media (max-width: 768px) {
+        a[aria-label="Go to homepage"]::after {
+          height: 44px;
+          width: 180px;
+        }
       }
     </style>
     <link rel="stylesheet" href="assets/css/main.css">
