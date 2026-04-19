@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umalas Premier Villa - Photos</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; }
+
+        .gallery-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            z-index: 100;
+            border-bottom: 1px solid #e5e5e5;
+            transition: box-shadow 0.3s;
+        }
+        .gallery-header.scrolled { box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .back-btn {
+            width: 40px; height: 40px;
+            border: 1px solid #e5e5e5;
+            border-radius: 50%;
+            background: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .back-btn:hover { background: #f5f5f5; transform: scale(1.05); }
+        .back-btn svg { width: 20px; height: 20px; }
+
+        .header-center { display: flex; flex-direction: column; align-items: center; }
+        .property-title { font-size: 18px; font-weight: 600; color: #1a1a1a; }
+        .photo-counter { font-size: 13px; color: #666; margin-top: 2px; }
+
+        .header-actions { display: flex; gap: 12px; align-items: center; }
+        .icon-btn {
+            width: 40px; height: 40px;
+            border: none; background: transparent;
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+        .icon-btn:hover { background: #f5f5f5; }
+        .icon-btn svg { width: 24px; height: 24px; stroke: #1a1a1a; fill: none; }
+
+        .add-dates-btn {
+            padding: 10px 20px;
+            background: #1a1a1a; color: #fff;
+            border: none; border-radius: 24px;
+            font-size: 14px; font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .add-dates-btn:hover { background: #333; }
+
+        .category-tabs {
+            display: flex; gap: 8px;
+            padding: 12px 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .category-tabs::-webkit-scrollbar { display: none; }
+
+        .tab {
+            padding: 8px 16px;
+            font-size: 14px; color: #666;
+            cursor: pointer;
+            white-space: nowrap;
+            border-radius: 20px;
+            background: #f5f5f5;
+            transition: all 0.3s;
+        }
+        .tab:hover { color: #1a1a1a; background: #eee; }
+        .tab.active { color: #fff; background: #1a1a1a; font-weight: 500; }
+
+        .gallery-content {
+            padding-top: 140px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-bottom: 60px;
+        }
+
+        .category-section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .category-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .section-title { font-size: 22px; font-weight: 600; color: #1a1a1a; }
+        .section-count { font-size: 14px; color: #888; }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        .photo-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+            background: #f0f0f0;
+        }
+        .photo-item img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease, opacity 0.4s;
+            opacity: 0;
+        }
+        .photo-item img.loaded { opacity: 1; }
+        .photo-item:hover img { transform: scale(1.05); }
+
+        .photo-grid .photo-item:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .fullscreen-viewer {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+        }
+        .fullscreen-viewer.active { display: flex; }
+        .fullscreen-viewer img {
+            max-width: 90%; max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .fullscreen-close {
+            position: absolute;
+            top: 20px; right: 20px;
+            width: 48px; height: 48px;
+            background: rgba(255,255,255,0.1);
+            border: none; border-radius: 50%;
+            cursor: pointer;
+            color: #fff; font-size: 28px;
+            transition: all 0.2s;
+        }
+        .fullscreen-close:hover { background: rgba(255,255,255,0.2); }
+        .fullscreen-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 56px; height: 56px;
+            background: rgba(255,255,255,0.9);
+            border: none; border-radius: 50%;
+            cursor: pointer; font-size: 24px;
+            transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .fullscreen-nav:hover { background: #fff; transform: translateY(-50%) scale(1.1); }
+        .fullscreen-prev { left: 24px; }
+        .fullscreen-next { right: 24px; }
+        .fullscreen-info {
+            position: absolute;
+            bottom: 30px; left: 50%;
+            transform: translateX(-50%);
+            color: #fff; text-align: center;
+        }
+        .fullscreen-counter { font-size: 16px; font-weight: 500; }
+        .fullscreen-category { font-size: 13px; color: #aaa; margin-top: 4px; }
+
+        @media (max-width: 1024px) {
+            .photo-grid { grid-template-columns: repeat(2, 1fr); }
+            .photo-grid .photo-item:first-child { grid-column: span 2; grid-row: span 1; }
+        }
+        @media (max-width: 768px) {
+            .photo-grid { grid-template-columns: 1fr; gap: 8px; }
+            .photo-grid .photo-item:first-child { grid-column: span 1; }
+            .property-title { display: none; }
+            .gallery-content { padding: 130px 16px 40px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-header" id="galleryHeader">
+        <div class="header-top">
+            <button class="back-btn" onclick="window.location.href='f2089f67.html'">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="header-center">
+                <span class="property-title">Umalas Premier Villa</span>
+                <span class="photo-counter" id="photoCounter">1 / 48 photos</span>
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn" title="Save"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+                <button class="icon-btn" title="Share"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></button>
+                <button class="add-dates-btn">Забронировать</button>
+            </div>
+        </div>
+        <div class="category-tabs" id="categoryTabs">
+            <div class="tab active" data-category="showcase">Showcase</div>
+            <div class="tab" data-category="exterior">Exterior</div>
+            <div class="tab" data-category="living">Living Room</div>
+            <div class="tab" data-category="dining">Dining Room</div>
+            <div class="tab" data-category="kitchen">Kitchen</div>
+            <div class="tab" data-category="bedroom1">Bedroom 1</div>
+            <div class="tab" data-category="bedroom2">Bedroom 2</div>
+            <div class="tab" data-category="bedroom3">Bedroom 3</div>
+            <div class="tab" data-category="bathroom1">Bathroom 1</div>
+            <div class="tab" data-category="bathroom2">Bathroom 2</div>
+            <div class="tab" data-category="bathroom3">Bathroom 3</div>
+        </div>
+    </div>
+
+    <div class="gallery-content">
+        <div class="category-section" data-section="showcase">
+            <div class="section-header">
+                <h2 class="section-title">Showcase</h2>
+                <span class="section-count">6 photos</span>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-item"><img loading="lazy" src="assets/images/mainfoto.webp" alt="Showcase"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_1.jpeg" alt="Showcase"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_2.jpeg" alt="Showcase"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_7.jpeg" alt="Showcase"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_27.jpeg" alt="Showcase"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_10.webp" alt="Showcase"></div>
+            </div>
+        </div>
+
+        <div class="category-section" data-section="exterior">
+            <div class="section-header">
+                <h2 class="section-title">Exterior</h2>
+                <span class="section-count">9 photos</span>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_25.webp" alt="Exterior"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_19.webp" alt="Exterior"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_11.webp" alt="Exterior"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_6.webp" alt="Exterior"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_32.webp" alt="Exterior"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_16.jpeg" alt="Exterior"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_14.webp" alt="Exterior"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_36.webp" alt="Exterior"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_3.jpeg" alt="Exterior"></div>
+            </div>
+        </div>
+
+        <div class="category-section" data-section="living">
+            <div class="section-header">
+                <h2 class="section-title">Living Room</h2>
+                <span class="section-count">6 photos</span>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_2.jpeg" alt="Living Room"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_7.jpeg" alt="Living Room"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_3.webp" alt="Living Room"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_1.jpeg" alt="Living Room"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_9.webp" alt="Living Room"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_17.webp" alt="Living Room"></div>
+            </div>
+        </div>
+
+        <div class="category-section" data-section="dining">
+            <div class="section-header">
+                <h2 class="section-title">Dining Room</h2>
+                <span class="section-count">4 photos</span>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_26.jpeg" alt="Dining Room"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_35.webp" alt="Dining Room"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_39.webp" alt="Dining Room"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_22.webp" alt="Dining Room"></div>
+            </div>
+        </div>
+
+        <div class="category-section" data-section="kitchen">
+            <div class="section-header">
+                <h2 class="section-title">Kitchen</h2>
+                <span class="section-count">2 photos</span>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_23.webp" alt="Kitchen"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_31.webp" alt="Kitchen"></div>
+            </div>
+        </div>
+
+        <div class="category-section" data-section="bedroom1">
+            <div class="section-header">
+                <h2 class="section-title">Bedroom 1</h2>
+                <span class="section-count">5 photos</span>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_10.webp" alt="Bedroom 1"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_24.webp" alt="Bedroom 1"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_13.webp" alt="Bedroom 1"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_29.webp" alt="Bedroom 1"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_30.webp" alt="Bedroom 1"></div>
+            </div>
+        </div>
+
+        <div class="category-section" data-section="bedroom2">
+            <div class="section-header">
+                <h2 class="section-title">Bedroom 2</h2>
+                <span class="section-count">2 photos</span>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_33.webp" alt="Bedroom 2"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_4.webp" alt="Bedroom 2"></div>
+            </div>
+        </div>
+
+        <div class="category-section" data-section="bedroom3">
+            <div class="section-header">
+                <h2 class="section-title">Bedroom 3</h2>
+                <span class="section-count">9 photos</span>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_45.jpeg" alt="Bedroom 3"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_46.webp" alt="Bedroom 3"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_44.webp" alt="Bedroom 3"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_37.webp" alt="Bedroom 3"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_43.webp" alt="Bedroom 3"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_34.webp" alt="Bedroom 3"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_18.webp" alt="Bedroom 3"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_41.webp" alt="Bedroom 3"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_12.webp" alt="Bedroom 3"></div>
+            </div>
+        </div>
+
+        <div class="category-section" data-section="bathroom1">
+            <div class="section-header">
+                <h2 class="section-title">Ensuite Bathroom 1</h2>
+                <span class="section-count">4 photos</span>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_5.webp" alt="Bathroom 1"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_21.webp" alt="Bathroom 1"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_20.webp" alt="Bathroom 1"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_38.webp" alt="Bathroom 1"></div>
+            </div>
+        </div>
+
+        <div class="category-section" data-section="bathroom2">
+            <div class="section-header">
+                <h2 class="section-title">Ensuite Bathroom 2</h2>
+                <span class="section-count">3 photos</span>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_15.jpeg" alt="Bathroom 2"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_42.webp" alt="Bathroom 2"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_28.webp" alt="Bathroom 2"></div>
+            </div>
+        </div>
+
+        <div class="category-section" data-section="bathroom3">
+            <div class="section-header">
+                <h2 class="section-title">Ensuite Bathroom 3</h2>
+                <span class="section-count">2 photos</span>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_40.webp" alt="Bathroom 3"></div>
+                <div class="photo-item"><img loading="lazy" src="assets/images/photo_8.jpeg" alt="Bathroom 3"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fullscreen-viewer" id="fullscreenViewer">
+        <button class="fullscreen-close" onclick="closeFullscreen()">×</button>
+        <button class="fullscreen-nav fullscreen-prev" onclick="prevImage()">‹</button>
+        <img id="fullscreenImage" src="" alt="Photo">
+        <button class="fullscreen-nav fullscreen-next" onclick="nextImage()">›</button>
+        <div class="fullscreen-info">
+            <div class="fullscreen-counter"><span id="currentIndex">1</span> / <span id="totalCount">48</span></div>
+            <div class="fullscreen-category" id="currentCategory">Showcase</div>
+        </div>
+    </div>
+
+    <script>
+        const allImages = [];
+        const imageCategories = [];
+        document.querySelectorAll('.photo-item img').forEach(img => {
+            allImages.push(img.src);
+            imageCategories.push(img.alt);
+        });
+
+        let currentImageIndex = 0;
+        const totalPhotos = allImages.length;
+        document.getElementById('totalCount').textContent = totalPhotos;
+        document.getElementById('photoCounter').textContent = `1 / ${totalPhotos} photos`;
+
+        // Intersection Observer - auto reveal sections on scroll
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    const sectionId = entry.target.dataset.section;
+                    updateActiveTab(sectionId);
+
+                    const firstImg = entry.target.querySelector('.photo-item');
+                    if (firstImg) {
+                        const imgs = document.querySelectorAll('.photo-item');
+                        const idx = Array.from(imgs).indexOf(firstImg) + 1;
+                        document.getElementById('photoCounter').textContent = `${idx} / ${totalPhotos} photos`;
+                    }
+                }
+            });
+        }, { threshold: 0.01, rootMargin: '500px 0px 500px 0px' });
+
+        document.querySelectorAll('.category-section').forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Image lazy load
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.complete) img.classList.add('loaded');
+                    else img.onload = () => img.classList.add('loaded');
+                    imageObserver.unobserve(img);
+                }
+            });
+        }, { rootMargin: '600px' });
+
+        document.querySelectorAll('.photo-item img').forEach(img => imageObserver.observe(img));
+
+        function updateActiveTab(categoryId) {
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.toggle('active', tab.dataset.category === categoryId);
+            });
+            const activeTab = document.querySelector(`.tab[data-category="${categoryId}"]`);
+            if (activeTab) activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+
+        // Tab click - scroll to section
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const section = document.querySelector(`[data-section="${this.dataset.category}"]`);
+                if (section) {
+                    const headerHeight = document.getElementById('galleryHeader').offsetHeight;
+                    window.scrollTo({ top: section.offsetTop - headerHeight - 20, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Header shadow
+        window.addEventListener('scroll', () => {
+            document.getElementById('galleryHeader').classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        // Photo click
+        document.querySelectorAll('.photo-item').forEach((item, index) => {
+            item.addEventListener('click', () => openFullscreen(index));
+        });
+
+        function openFullscreen(index) {
+            currentImageIndex = index;
+            updateFullscreenImage();
+            document.getElementById('fullscreenViewer').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFullscreen() {
+            document.getElementById('fullscreenViewer').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function updateFullscreenImage() {
+            document.getElementById('fullscreenImage').src = allImages[currentImageIndex];
+            document.getElementById('currentIndex').textContent = currentImageIndex + 1;
+            document.getElementById('currentCategory').textContent = imageCategories[currentImageIndex];
+        }
+
+        function nextImage() { currentImageIndex = (currentImageIndex + 1) % allImages.length; updateFullscreenImage(); }
+        function prevImage() { currentImageIndex = (currentImageIndex - 1 + allImages.length) % allImages.length; updateFullscreenImage(); }
+
+        document.addEventListener('keydown', e => {
+            if (!document.getElementById('fullscreenViewer').classList.contains('active')) return;
+            if (e.key === 'Escape') closeFullscreen();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+
+        document.getElementById('fullscreenViewer').addEventListener('click', e => {
+            if (e.target.id === 'fullscreenViewer') closeFullscreen();
+        });
+
+        // Show first 3 sections immediately (no white space on load)
+        document.querySelectorAll('.category-section').forEach((section, index) => {
+            if (index < 3) section.classList.add('visible');
+        });
+    </script>
+</body>
+</html>
