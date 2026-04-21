@@ -478,7 +478,8 @@ In consultation we can always see if it is possible to meet a request for early 
 
 <script type="text/javascript" id="" charset="">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","AW-11281037427");</script><div id="dbee1"><div><iframe title="Webchat Widget" state="widgetClose" src="https://cdn.respond.io/webchat/widget/chat.html?colorScheme=light" width="100%" height="100%" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" class="dfa50 bda45 eca54 d3396 e57b4" style="right: 25px !important; bottom: 25px !important; max-height: calc(100% - 25px) !important; max-width: unset !important;"></iframe><div class="b11ce"><span style="background-image: url(&quot;&quot;);"></span></div></div></div><script>
 (function() {
-    var LOGO_HTML = '<img src="/logo.svg" alt="Bali Villas" class="inline-block shrink-0 h-10" style="height: 40px; width: auto;">';
+    var LOGO_HTML = '<img src="/logo.svg" alt="Bali Villas" data-logo="1" class="inline-block shrink-0 h-10" style="height: 40px; width: auto;">';
+    var SCROLL_THRESHOLD = 80;
 
     function replaceLogos() {
         var imgs = document.querySelectorAll('img[src*="mantavillas-white"], img[alt="Manta Villas"]');
@@ -490,11 +491,20 @@ In consultation we can always see if it is possible to meet a request for early 
             newEl.dataset.replaced = '1';
             img.parentNode.replaceChild(newEl, img);
         });
+        applyLogoTheme();
+    }
+
+    function applyLogoTheme() {
+        var isDark = window.scrollY > SCROLL_THRESHOLD;
+        document.querySelectorAll('img[data-logo="1"]').forEach(function(logo) {
+            logo.src = isDark ? '/logo-dark.svg' : '/logo.svg';
+        });
     }
 
     replaceLogos();
     var observer = new MutationObserver(replaceLogos);
     observer.observe(document.body, { childList: true, subtree: true });
+    window.addEventListener('scroll', applyLogoTheme, { passive: true });
 })();
 </script>
 </body></html>
