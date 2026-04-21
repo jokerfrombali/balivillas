@@ -10,202 +10,224 @@
 <link rel="icon" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
       colors: {
-        'brand-dark': '#0a2421',
-        'brand-darker': '#071a18',
-        'brand-green': '#14453f',
-        'brand-accent': '#0d3530',
-        'brand-gold': '#c9a961',
-        'brand-gold-light': '#d9b876',
-        'brand-cream': '#f7f2ea',
-        'brand-cream-dark': '#ede5d3'
+        ink: '#0a0a0a',
+        off: '#fafaf7',
+        paper: '#f4f2ed',
+        stone: '#9a9a94',
+        line: '#e6e3dc'
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
-        'serif': ['Playfair Display', 'Georgia', 'serif']
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Fraunces', 'Georgia', 'serif']
+      },
+      letterSpacing: {
+        tightest: '-0.045em',
+        'extra-wide': '0.22em'
       }
     }
   }
 }
 </script>
 <style>
-body { font-family: 'Inter', sans-serif; }
-.font-serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
+body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -webkit-font-smoothing: antialiased; }
+.font-display { font-family: 'Fraunces', Georgia, serif; }
 html { scroll-behavior: smooth; }
-.gradient-hero { background: linear-gradient(90deg, #0a2421 0%, #0a2421 45%, rgba(10,36,33,0.4) 65%, rgba(10,36,33,0) 100%); }
-.card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-.nav-link { position: relative; }
-.nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: #c9a961; transform: scaleX(0); transition: transform 0.2s; }
+.kicker { text-transform: uppercase; letter-spacing: 0.22em; font-size: 11px; font-weight: 600; color: #6b6b66; }
+.btn-primary { background: #0a0a0a; color: #fff; border-radius: 999px; padding: 14px 24px; font-weight: 600; font-size: 14px; transition: transform 0.15s, background 0.2s; }
+.btn-primary:hover { background: #1c1c1c; transform: translateY(-1px); }
+.btn-outline { border: 1px solid #0a0a0a; color: #0a0a0a; background: transparent; border-radius: 999px; padding: 13px 23px; font-weight: 600; font-size: 14px; transition: all 0.2s; }
+.btn-outline:hover { background: #0a0a0a; color: #fff; }
+.card-hover { transition: transform 0.4s cubic-bezier(0.2, 0.6, 0.2, 1); }
+.card-hover:hover { transform: translateY(-4px); }
+.nav-link { position: relative; color: #0a0a0a; font-weight: 500; font-size: 14px; }
+.nav-link::after { content: ''; position: absolute; bottom: -6px; left: 0; right: 0; height: 1.5px; background: #0a0a0a; transform: scaleX(0); transform-origin: left; transition: transform 0.25s; }
 .nav-link:hover::after { transform: scaleX(1); }
-.testimonial-quote::before { content: '"'; font-family: 'Playfair Display', serif; font-size: 80px; color: #c9a961; opacity: 0.25; position: absolute; top: -20px; left: 16px; line-height: 1; }
-@keyframes pulse-ring {
-  0% { transform: scale(1); opacity: 0.7; }
-  100% { transform: scale(1.8); opacity: 0; }
-}
+.tab-active { background: #0a0a0a; color: #fff; }
+.divider { border-top: 1px solid #e6e3dc; }
+@keyframes wave { 0%,100% { transform: scaleY(0.4); } 50% { transform: scaleY(1); } }
+.wave-bar { animation: wave 1.2s infinite ease-in-out; transform-origin: bottom; }
+@keyframes pulse-ring { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(2); opacity: 0; } }
 .pulse-ring { animation: pulse-ring 2s infinite ease-out; }
+.text-stroke { -webkit-text-stroke: 1px rgba(255,255,255,0.9); color: transparent; }
+.hero-img { filter: brightness(0.92); }
 </style>
 </head>
-<body class="bg-brand-cream text-brand-dark">
+<body>
 
 <!-- =============== NAVBAR =============== -->
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-  <div class="bg-brand-dark/95 backdrop-blur-md border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="flex items-center justify-between h-18 py-4">
-        <!-- Logo -->
-        <a href="/" class="flex items-center gap-2">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path d="M16 28 L15 16 L17 16 L16 28 Z" fill="#c9a961"/>
-            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(-20 16 12)"/>
-            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(20 16 12)"/>
-            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(-60 16 12)"/>
-            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(60 16 12)"/>
-            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(-90 16 12)"/>
-            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(90 16 12)"/>
-            <circle cx="16" cy="9" r="1.2" fill="#c9a961"/>
-          </svg>
-          <span class="text-white font-bold tracking-wider text-lg">BALI VILLAS</span>
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-off/80 backdrop-blur-md border-b border-line">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="flex items-center justify-between h-[72px]">
+      <a href="/" class="flex items-center gap-2.5">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+          <path d="M16 28 L15 16 L17 16 L16 28 Z" fill="#0a0a0a"/>
+          <ellipse cx="16" cy="12" rx="3" ry="8" fill="#0a0a0a" transform="rotate(-20 16 12)"/>
+          <ellipse cx="16" cy="12" rx="3" ry="8" fill="#0a0a0a" transform="rotate(20 16 12)"/>
+          <ellipse cx="16" cy="12" rx="3" ry="8" fill="#0a0a0a" transform="rotate(-60 16 12)"/>
+          <ellipse cx="16" cy="12" rx="3" ry="8" fill="#0a0a0a" transform="rotate(60 16 12)"/>
+          <ellipse cx="16" cy="12" rx="3" ry="8" fill="#0a0a0a" transform="rotate(-90 16 12)"/>
+          <ellipse cx="16" cy="12" rx="3" ry="8" fill="#0a0a0a" transform="rotate(90 16 12)"/>
+          <circle cx="16" cy="9" r="1.2" fill="#0a0a0a"/>
+        </svg>
+        <span class="font-display font-semibold text-[19px] tracking-tight">Bali Villas</span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-9">
+        <a href="#matches" class="nav-link flex items-center gap-1">Villas <svg class="w-3 h-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+        <a href="#locations" class="nav-link flex items-center gap-1">Destinations <svg class="w-3 h-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+        <a href="#longterm" class="nav-link">Monthly &amp; Yearly</a>
+        <a href="#management" class="nav-link">Villa Management</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="/villa/" class="nav-link">Journal</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button aria-label="Favorites" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-paper transition">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <a href="https://wa.me/6281000000000" class="btn-primary hidden sm:inline-flex items-center gap-2">
+          Contact Concierge
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
         </a>
-
-        <!-- Nav Links -->
-        <div class="hidden lg:flex items-center gap-8 text-white/90 text-sm font-medium">
-          <a href="#matches" class="nav-link flex items-center gap-1">Villas <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
-          <a href="#locations" class="nav-link flex items-center gap-1">Destinations <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
-          <a href="#longterm" class="nav-link">Monthly &amp; Yearly</a>
-          <a href="#management" class="nav-link">Villa Management</a>
-          <a href="#about" class="nav-link">About Us</a>
-          <a href="/villa/" class="nav-link">Blog</a>
-        </div>
-
-        <!-- Right Actions -->
-        <div class="flex items-center gap-3">
-          <button aria-label="Favorites" class="w-10 h-10 flex items-center justify-center text-white/80 hover:text-white">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-          <a href="https://wa.me/6281000000000" class="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-accent text-white px-4 py-2.5 rounded-full text-sm font-semibold transition">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-            Contact Concierge
-          </a>
-        </div>
       </div>
     </div>
   </div>
 </nav>
 
 <!-- =============== HERO =============== -->
-<section class="relative min-h-[680px] bg-brand-dark overflow-hidden pt-24">
-  <!-- Background image -->
-  <div class="absolute inset-0">
-    <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1920&q=80&auto=format&fit=crop" alt="" class="w-full h-full object-cover opacity-90">
-    <div class="absolute inset-0 gradient-hero"></div>
+<section class="relative pt-[72px] bg-off">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 pt-10 pb-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+      <div class="lg:col-span-7">
+        <p class="kicker mb-5">AI-powered villa finder · Bali</p>
+        <h1 class="font-display text-[64px] lg:text-[96px] leading-[0.95] tracking-tightest font-normal mb-6">
+          Find your perfect<br>
+          Bali villa<br>
+          <span class="italic font-light">in seconds.</span>
+        </h1>
+      </div>
+      <div class="lg:col-span-5 lg:pb-4">
+        <p class="text-[17px] leading-relaxed text-ink/70 max-w-md">
+          AI-powered search for daily, monthly or yearly stays. Talk or type — we'll find the villa that fits you.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-12 pb-16">
-    <div class="max-w-2xl">
-      <h1 class="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-        Find your perfect<br>
-        Bali villa <span class="font-serif-italic text-brand-gold font-normal">in seconds</span>
-      </h1>
-      <p class="text-white/85 text-lg mb-10 leading-relaxed">
-        AI-powered search for daily, monthly or yearly stays.<br>
-        Talk or type — we'll find the perfect villa for you.
-      </p>
+  <!-- Hero image full bleed -->
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="relative rounded-[28px] overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1800&q=85&auto=format&fit=crop" alt="" class="w-full h-[540px] object-cover hero-img">
 
-      <!-- Stay type tabs -->
-      <div class="inline-flex bg-white/10 backdrop-blur-sm rounded-lg p-1 mb-5">
-        <button class="px-5 py-2 text-sm font-medium rounded-md text-white/80 hover:text-white transition">Daily stays</button>
-        <button class="px-5 py-2 text-sm font-semibold rounded-md bg-white text-brand-dark">Monthly stays</button>
-        <button class="px-5 py-2 text-sm font-medium rounded-md text-white/80 hover:text-white transition flex items-center gap-2">
-          Yearly rentals
-          <span class="bg-brand-gold text-brand-dark text-[10px] px-2 py-0.5 rounded-full font-bold">Best value</span>
-        </button>
-      </div>
-
-      <!-- AI Search input -->
-      <div class="bg-white rounded-xl shadow-2xl p-2 flex items-center gap-2">
-        <div class="flex-1 flex items-center px-3">
-          <svg class="w-5 h-5 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-          <input type="text" placeholder="Example: 3BR villa in Canggu for 3 months with pool under $2000/month" class="flex-1 px-3 py-3 text-sm text-brand-dark placeholder:text-gray-500 focus:outline-none">
-          <button aria-label="Voice search" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-500">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-          </button>
+      <!-- Floating search bar -->
+      <div class="absolute left-1/2 -translate-x-1/2 bottom-8 w-[92%] max-w-3xl">
+        <div class="bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] overflow-hidden">
+          <!-- Tabs -->
+          <div class="flex border-b border-line px-4 pt-3 gap-1">
+            <button class="px-4 py-2.5 text-sm font-medium text-ink/60 hover:text-ink rounded-t-lg">Daily stays</button>
+            <button class="px-4 py-2.5 text-sm font-semibold text-ink border-b-2 border-ink -mb-px">Monthly stays</button>
+            <button class="px-4 py-2.5 text-sm font-medium text-ink/60 hover:text-ink rounded-t-lg flex items-center gap-2">
+              Yearly <span class="bg-ink text-white text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Best value</span>
+            </button>
+          </div>
+          <!-- Input -->
+          <div class="flex items-center px-4 py-3">
+            <svg class="w-5 h-5 text-ink/40 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input class="flex-1 px-3 py-2 text-[15px] placeholder:text-ink/50 focus:outline-none bg-transparent" placeholder="Example: 3BR villa in Canggu for 3 months, pool, under $2000/month">
+            <button aria-label="Voice" class="w-10 h-10 rounded-full hover:bg-paper flex items-center justify-center">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </button>
+            <button class="btn-primary ml-2">Find Villas</button>
+          </div>
         </div>
-        <button class="bg-brand-gold hover:bg-brand-gold-light text-brand-dark px-6 py-3 rounded-lg font-semibold text-sm whitespace-nowrap transition">Find Villas</button>
       </div>
+    </div>
+  </div>
 
-      <!-- Trust badges -->
-      <div class="flex flex-wrap gap-x-6 gap-y-3 mt-8 text-white/90 text-sm">
-        <div class="flex items-center gap-2"><span class="text-brand-gold">★</span> 4.9/5 from 500+ travelers</div>
-        <div class="flex items-center gap-2"><span class="text-brand-gold">♡</span> 500+ handpicked villas</div>
-        <div class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Response in minutes</div>
-        <div class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Verified &amp; trusted</div>
+  <!-- Trust strip -->
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 pt-10 pb-16">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+      <div class="flex items-center gap-3">
+        <span class="text-2xl">★</span>
+        <div><p class="font-semibold">4.9/5</p><p class="text-ink/60 text-xs">from 500+ travelers</p></div>
+      </div>
+      <div class="flex items-center gap-3">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <div><p class="font-semibold">500+ villas</p><p class="text-ink/60 text-xs">handpicked by locals</p></div>
+      </div>
+      <div class="flex items-center gap-3">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><p class="font-semibold">Minutes</p><p class="text-ink/60 text-xs">not hours of searching</p></div>
+      </div>
+      <div class="flex items-center gap-3">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div><p class="font-semibold">Verified</p><p class="text-ink/60 text-xs">&amp; trusted properties</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- =============== VIBE SELECTOR =============== -->
-<section class="py-20 bg-brand-cream">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="text-center mb-14">
-      <h2 class="text-4xl lg:text-5xl font-bold mb-3">What kind of stay are you looking for?</h2>
-      <p class="text-gray-600 text-lg">We'll match you with villas that fit your style and needs.</p>
+<section class="bg-off py-24 border-t border-line">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="flex items-end justify-between mb-12 flex-wrap gap-4">
+      <div>
+        <p class="kicker mb-3">Choose your vibe</p>
+        <h2 class="font-display text-[44px] lg:text-[60px] leading-[1] tracking-tightest max-w-2xl">What kind of stay<br>are you looking for?</h2>
+      </div>
+      <p class="text-ink/60 max-w-xs text-[15px]">We'll match you with villas that fit your style and needs.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-      <!-- Romantic Escape -->
-      <a href="#matches" class="group card-hover relative rounded-2xl overflow-hidden aspect-[4/5] bg-brand-dark block">
-        <img src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=600&q=80&auto=format&fit=crop" alt="Romantic Escape" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-        <div class="absolute top-4 right-4 w-9 h-9 bg-white rounded-full flex items-center justify-center">
-          <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <a href="#matches" class="group card-hover relative rounded-3xl overflow-hidden aspect-[3/4] bg-ink block">
+        <img src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=700&q=80&auto=format&fit=crop" alt="Romantic Escape" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute top-5 right-5 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center backdrop-blur-sm">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </div>
         <div class="absolute bottom-6 left-6 right-6 text-white">
-          <h3 class="text-xl font-bold mb-1">Romantic Escape</h3>
-          <p class="text-sm text-white/85">Private villas for two, perfect for couples.</p>
+          <h3 class="font-display text-[26px] leading-tight mb-1">Romantic Escape</h3>
+          <p class="text-sm text-white/80">Private villas for two, perfect for couples.</p>
         </div>
       </a>
-      <!-- Surf & Friends -->
-      <a href="#matches" class="group card-hover relative rounded-2xl overflow-hidden aspect-[4/5] bg-brand-dark block">
-        <img src="https://images.unsplash.com/photo-1502933691298-84fc14542831?w=600&q=80&auto=format&fit=crop" alt="Surf & Friends" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-        <div class="absolute top-4 right-4 w-9 h-9 bg-white rounded-full flex items-center justify-center">
-          <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      <a href="#matches" class="group card-hover relative rounded-3xl overflow-hidden aspect-[3/4] bg-ink block">
+        <img src="https://images.unsplash.com/photo-1502933691298-84fc14542831?w=700&q=80&auto=format&fit=crop" alt="Surf & Friends" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute top-5 right-5 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
         </div>
         <div class="absolute bottom-6 left-6 right-6 text-white">
-          <h3 class="text-xl font-bold mb-1">Surf &amp; Friends</h3>
-          <p class="text-sm text-white/85">Villas close to beaches and good vibes.</p>
+          <h3 class="font-display text-[26px] leading-tight mb-1">Surf &amp; Friends</h3>
+          <p class="text-sm text-white/80">Villas close to beaches and good vibes.</p>
         </div>
       </a>
-      <!-- Family Retreat -->
-      <a href="#matches" class="group card-hover relative rounded-2xl overflow-hidden aspect-[4/5] bg-brand-dark block">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format&fit=crop" alt="Family Retreat" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-        <div class="absolute top-4 right-4 w-9 h-9 bg-white rounded-full flex items-center justify-center">
-          <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <a href="#matches" class="group card-hover relative rounded-3xl overflow-hidden aspect-[3/4] bg-ink block">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80&auto=format&fit=crop" alt="Family Retreat" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute top-5 right-5 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
         </div>
         <div class="absolute bottom-6 left-6 right-6 text-white">
-          <h3 class="text-xl font-bold mb-1">Family Retreat</h3>
-          <p class="text-sm text-white/85">Spacious villas for the whole family.</p>
+          <h3 class="font-display text-[26px] leading-tight mb-1">Family Retreat</h3>
+          <p class="text-sm text-white/80">Spacious villas for the whole family.</p>
         </div>
       </a>
-      <!-- Work & Live -->
-      <a href="#matches" class="group card-hover relative rounded-2xl overflow-hidden aspect-[4/5] bg-brand-dark block">
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80&auto=format&fit=crop" alt="Work & Live" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-        <div class="absolute top-4 right-4 w-9 h-9 bg-white rounded-full flex items-center justify-center">
-          <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <a href="#matches" class="group card-hover relative rounded-3xl overflow-hidden aspect-[3/4] bg-ink block">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80&auto=format&fit=crop" alt="Work & Live" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute top-5 right-5 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
         <div class="absolute bottom-6 left-6 right-6 text-white">
-          <h3 class="text-xl font-bold mb-1">Work &amp; Live</h3>
-          <p class="text-sm text-white/85">Fast Wi-Fi, quiet spaces and good energy.</p>
+          <h3 class="font-display text-[26px] leading-tight mb-1">Work &amp; Live</h3>
+          <p class="text-sm text-white/80">Fast Wi-Fi, quiet spaces and good energy.</p>
         </div>
       </a>
     </div>
@@ -213,421 +235,419 @@ html { scroll-behavior: smooth; }
 </section>
 
 <!-- =============== AI MATCHES =============== -->
-<section id="matches" class="py-20 bg-brand-cream">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+<section id="matches" class="bg-off py-24 border-t border-line">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="flex items-end justify-between mb-12 flex-wrap gap-6">
       <div>
-        <p class="text-brand-gold text-xs font-bold tracking-[0.2em] mb-2">AI MATCHES FOR YOU</p>
-        <h2 class="text-4xl lg:text-5xl font-bold">Your perfect matches</h2>
-        <p class="text-gray-600 mt-2">Based on your search</p>
+        <p class="kicker mb-3">AI matches for you</p>
+        <h2 class="font-display text-[44px] lg:text-[60px] leading-[1] tracking-tightest">Your perfect matches.</h2>
+        <p class="text-ink/60 mt-3 text-[15px]">Based on your search</p>
       </div>
-      <div class="flex items-center gap-4">
-        <a href="#" class="text-brand-dark font-semibold hover:text-brand-gold">View all matches</a>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-sm font-semibold underline underline-offset-4 hover:no-underline">View all matches</a>
         <div class="flex gap-2">
-          <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-brand-dark"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-          <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-brand-dark"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+          <button class="w-11 h-11 rounded-full border border-line hover:border-ink flex items-center justify-center transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="w-11 h-11 rounded-full border border-line hover:border-ink flex items-center justify-center transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
         </div>
       </div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <!-- Villa Sora -->
-      <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
-        <div class="relative aspect-[4/3]">
-          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&auto=format&fit=crop" alt="Villa Sora" class="w-full h-full object-cover">
-          <span class="absolute top-4 left-4 bg-brand-green text-white text-xs font-bold px-3 py-1.5 rounded-md">Perfect Match</span>
-          <button aria-label="Save" class="absolute top-4 right-4 w-9 h-9 bg-white/90 rounded-full flex items-center justify-center hover:bg-white">
-            <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <a href="/villa/" class="card-hover block">
+        <div class="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4">
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&q=85&auto=format&fit=crop" alt="Villa Sora" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-white text-ink text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Perfect Match</span>
+          <button aria-label="Save" class="absolute top-4 right-4 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </button>
         </div>
-        <div class="p-5">
-          <h3 class="text-xl font-bold mb-1">Villa Sora</h3>
-          <p class="text-sm text-gray-500 mb-3">Canggu, Bali</p>
-          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600 mb-4">
-            <span>🛏 3 Bedrooms</span><span>🛁 3 Bathrooms</span><span>🏊 Pool</span><span>📶 Wi-Fi</span>
+        <div class="px-1">
+          <div class="flex items-start justify-between mb-1">
+            <h3 class="font-display text-[22px] leading-tight">Villa Sora</h3>
+            <p class="text-sm font-semibold">$1,800<span class="text-ink/50 font-normal">/mo</span></p>
           </div>
-          <div class="flex items-end justify-between pt-3 border-t border-gray-100">
-            <div>
-              <p class="text-2xl font-bold">$1,800 <span class="text-sm font-normal text-gray-500">/ month</span></p>
-              <p class="text-xs text-green-700 font-medium mt-0.5">Available monthly</p>
-            </div>
+          <p class="text-sm text-ink/60 mb-3">Canggu, Bali</p>
+          <div class="flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink/70">
+            <span>3 Bed</span><span>·</span><span>3 Bath</span><span>·</span><span>Pool</span><span>·</span><span>Wi-Fi</span>
           </div>
         </div>
-      </article>
+      </a>
       <!-- Villa Uma -->
-      <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
-        <div class="relative aspect-[4/3]">
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80&auto=format&fit=crop" alt="Villa Uma" class="w-full h-full object-cover">
-          <span class="absolute top-4 left-4 bg-brand-green text-white text-xs font-bold px-3 py-1.5 rounded-md">Perfect Match</span>
-          <button aria-label="Save" class="absolute top-4 right-4 w-9 h-9 bg-white/90 rounded-full flex items-center justify-center hover:bg-white">
-            <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <a href="/villa/" class="card-hover block">
+        <div class="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&q=85&auto=format&fit=crop" alt="Villa Uma" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-white text-ink text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Perfect Match</span>
+          <button aria-label="Save" class="absolute top-4 right-4 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </button>
         </div>
-        <div class="p-5">
-          <h3 class="text-xl font-bold mb-1">Villa Uma</h3>
-          <p class="text-sm text-gray-500 mb-3">Canggu, Bali</p>
-          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600 mb-4">
-            <span>🛏 3 Bedrooms</span><span>🛁 3 Bathrooms</span><span>🏊 Pool</span><span>📶 Wi-Fi</span>
+        <div class="px-1">
+          <div class="flex items-start justify-between mb-1">
+            <h3 class="font-display text-[22px] leading-tight">Villa Uma</h3>
+            <p class="text-sm font-semibold">$22,000<span class="text-ink/50 font-normal">/yr</span></p>
           </div>
-          <div class="flex items-end justify-between pt-3 border-t border-gray-100">
-            <div>
-              <p class="text-2xl font-bold">$22,000 <span class="text-sm font-normal text-gray-500">/ year</span></p>
-              <p class="text-xs text-brand-gold font-medium mt-0.5">Best for long-term</p>
-            </div>
+          <p class="text-sm text-ink/60 mb-3">Canggu, Bali</p>
+          <div class="flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink/70">
+            <span>3 Bed</span><span>·</span><span>3 Bath</span><span>·</span><span>Pool</span><span>·</span><span>Wi-Fi</span>
           </div>
         </div>
-      </article>
+      </a>
       <!-- Villa Hikari -->
-      <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
-        <div class="relative aspect-[4/3]">
-          <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80&auto=format&fit=crop" alt="Villa Hikari" class="w-full h-full object-cover">
-          <span class="absolute top-4 left-4 bg-brand-green text-white text-xs font-bold px-3 py-1.5 rounded-md">Perfect Match</span>
-          <button aria-label="Save" class="absolute top-4 right-4 w-9 h-9 bg-white/90 rounded-full flex items-center justify-center hover:bg-white">
-            <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <a href="/villa/" class="card-hover block">
+        <div class="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4">
+          <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=900&q=85&auto=format&fit=crop" alt="Villa Hikari" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-white text-ink text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Perfect Match</span>
+          <button aria-label="Save" class="absolute top-4 right-4 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </button>
         </div>
-        <div class="p-5">
-          <h3 class="text-xl font-bold mb-1">Villa Hikari</h3>
-          <p class="text-sm text-gray-500 mb-3">Uluwatu, Bali</p>
-          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600 mb-4">
-            <span>🛏 4 Bedrooms</span><span>🛁 4 Bathrooms</span><span>🏊 Pool</span><span>📶 Wi-Fi</span>
+        <div class="px-1">
+          <div class="flex items-start justify-between mb-1">
+            <h3 class="font-display text-[22px] leading-tight">Villa Hikari</h3>
+            <p class="text-sm font-semibold">$520<span class="text-ink/50 font-normal">/night</span></p>
           </div>
-          <div class="flex items-end justify-between pt-3 border-t border-gray-100">
-            <div>
-              <p class="text-2xl font-bold">$520 <span class="text-sm font-normal text-gray-500">/ night</span></p>
-              <p class="text-xs text-green-700 font-medium mt-0.5">Available now</p>
-            </div>
+          <p class="text-sm text-ink/60 mb-3">Uluwatu, Bali</p>
+          <div class="flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink/70">
+            <span>4 Bed</span><span>·</span><span>4 Bath</span><span>·</span><span>Pool</span><span>·</span><span>Wi-Fi</span>
           </div>
         </div>
-      </article>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- =============== LONG-TERM + MANAGEMENT =============== -->
-<section id="longterm" class="py-16 bg-brand-cream">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
-    <!-- Long-term -->
-    <div class="bg-brand-green rounded-2xl p-8 lg:p-10 text-white relative overflow-hidden">
-      <p class="text-brand-gold text-xs font-bold tracking-[0.2em] mb-3">LONG-TERM LIVING</p>
-      <h3 class="text-3xl font-bold mb-3 leading-tight">Looking for long-term<br>rentals in Bali?</h3>
-      <p class="text-white/80 mb-6">Handpicked villas for monthly and yearly stays.</p>
-      <ul class="space-y-2 mb-8 text-sm">
-        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-gold rounded-full flex items-center justify-center text-brand-dark text-xs">✓</span> Monthly rentals from $1,200</li>
-        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-gold rounded-full flex items-center justify-center text-brand-dark text-xs">✓</span> Yearly rentals with best value</li>
-        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-gold rounded-full flex items-center justify-center text-brand-dark text-xs">✓</span> Perfect for nomads, families and investors</li>
-      </ul>
-      <button class="bg-brand-gold hover:bg-brand-gold-light text-brand-dark px-6 py-3 rounded-full font-semibold text-sm transition">Explore long-term villas</button>
-
-      <div class="hidden lg:grid absolute right-10 top-8 gap-3 grid-cols-1 w-52">
-        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=400&q=80&auto=format&fit=crop" class="rounded-xl aspect-[4/3] object-cover" alt="">
-        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80&auto=format&fit=crop" class="rounded-xl aspect-[4/3] object-cover" alt="">
+<section id="longterm" class="bg-off py-16 border-t border-line">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <!-- Long-term — BLACK card -->
+    <div class="bg-ink text-white rounded-[28px] p-10 lg:p-12 flex flex-col justify-between min-h-[420px] relative overflow-hidden">
+      <div class="relative z-10">
+        <p class="kicker !text-white/60 mb-4">Long-term living</p>
+        <h3 class="font-display text-[40px] lg:text-[48px] leading-[0.95] tracking-tightest mb-5">Looking for<br><span class="italic">long-term</span> rentals<br>in Bali?</h3>
+        <p class="text-white/75 mb-8 max-w-sm">Handpicked villas for monthly and yearly stays. Perfect for nomads, families, and investors.</p>
+        <ul class="space-y-2 mb-10 text-sm text-white/85">
+          <li class="flex items-center gap-2">— Monthly rentals from $1,200</li>
+          <li class="flex items-center gap-2">— Yearly rentals with best value</li>
+          <li class="flex items-center gap-2">— Dedicated concierge, end-to-end</li>
+        </ul>
+        <button class="bg-white text-ink hover:bg-paper rounded-full px-6 py-3.5 font-semibold text-sm transition">Explore long-term villas →</button>
+      </div>
+      <div class="absolute right-0 top-0 bottom-0 w-2/5 opacity-80 hidden lg:block">
+        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=85&auto=format&fit=crop" class="w-full h-full object-cover" alt="">
+        <div class="absolute inset-0 bg-gradient-to-l from-transparent to-ink"></div>
       </div>
     </div>
 
-    <!-- Villa Management -->
-    <div id="management" class="bg-brand-cream-dark rounded-2xl p-8 lg:p-10 relative overflow-hidden">
-      <p class="text-brand-green text-xs font-bold tracking-[0.2em] mb-3">VILLA MANAGEMENT</p>
-      <h3 class="text-3xl font-bold mb-3 leading-tight">Own a villa? We<br>manage it for you.</h3>
-      <p class="text-gray-700 mb-6">Full-service management<br>so you can relax and earn more.</p>
-      <ul class="space-y-2 mb-8 text-sm">
-        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-green rounded-full flex items-center justify-center text-brand-gold text-xs">✓</span> Guest management</li>
-        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-green rounded-full flex items-center justify-center text-brand-gold text-xs">✓</span> Cleaning &amp; maintenance</li>
-        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-green rounded-full flex items-center justify-center text-brand-gold text-xs">✓</span> Pricing optimization</li>
-        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-green rounded-full flex items-center justify-center text-brand-gold text-xs">✓</span> Marketing &amp; listings</li>
-        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-green rounded-full flex items-center justify-center text-brand-gold text-xs">✓</span> 24/7 support</li>
-      </ul>
-      <button class="border-2 border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white px-6 py-3 rounded-full font-semibold text-sm transition">Learn about management</button>
-
-      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&q=80&auto=format&fit=crop" class="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 w-60 rounded-xl shadow-xl" alt="Analytics dashboard">
+    <!-- Villa Management — PAPER card -->
+    <div id="management" class="bg-paper rounded-[28px] p-10 lg:p-12 flex flex-col justify-between min-h-[420px] relative overflow-hidden">
+      <div class="relative z-10">
+        <p class="kicker mb-4">Villa management</p>
+        <h3 class="font-display text-[40px] lg:text-[48px] leading-[0.95] tracking-tightest mb-5">Own a villa?<br>We <span class="italic">manage it</span><br>for you.</h3>
+        <p class="text-ink/70 mb-8 max-w-sm">Full-service management so you can relax and earn more. We handle everything.</p>
+        <ul class="space-y-2 mb-10 text-sm text-ink/85">
+          <li>— Guest management &amp; communications</li>
+          <li>— Cleaning, maintenance &amp; inspections</li>
+          <li>— Pricing optimization &amp; listings</li>
+          <li>— 24/7 on-the-ground support</li>
+        </ul>
+        <button class="btn-outline">Learn about management →</button>
+      </div>
+      <div class="absolute -right-8 top-1/2 -translate-y-1/2 w-56 hidden lg:block">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&q=85&auto=format&fit=crop" class="w-full rounded-2xl shadow-2xl" alt="Dashboard">
+      </div>
     </div>
   </div>
 </section>
 
 <!-- =============== LOCATIONS =============== -->
-<section id="locations" class="py-20 bg-brand-cream">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+<section id="locations" class="bg-off py-24 border-t border-line">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="flex items-end justify-between mb-12 flex-wrap gap-4">
       <div>
-        <p class="text-brand-gold text-xs font-bold tracking-[0.2em] mb-2">EXPLORE BALI BY LOCATION</p>
-        <h2 class="text-4xl lg:text-5xl font-bold mb-2">Where would you<br>like to stay?</h2>
-        <p class="text-gray-600">Top locations. Best villas.<br>Find your perfect spot.</p>
-        <button class="mt-6 inline-flex items-center gap-2 bg-white border border-gray-300 hover:border-brand-dark text-brand-dark px-5 py-2.5 rounded-full text-sm font-semibold transition">
-          <span>Explore on map</span>
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
+        <p class="kicker mb-3">Explore Bali by location</p>
+        <h2 class="font-display text-[44px] lg:text-[60px] leading-[1] tracking-tightest">Where would you<br><span class="italic">like to stay?</span></h2>
       </div>
-
-      <!-- Location cards -->
-      <div class="flex-1 ml-0 lg:ml-10 grid grid-cols-2 md:grid-cols-5 gap-3 min-w-0">
-        <a href="#" class="card-hover group relative aspect-[3/4] rounded-2xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=400&q=80&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Canggu">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-          <div class="absolute bottom-3 left-3 text-white">
-            <p class="font-bold text-sm">Canggu</p>
-            <p class="text-[11px] text-white/80">417 villas</p>
-          </div>
-        </a>
-        <a href="#" class="card-hover group relative aspect-[3/4] rounded-2xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=80&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Uluwatu">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-          <div class="absolute bottom-3 left-3 text-white">
-            <p class="font-bold text-sm">Uluwatu</p>
-            <p class="text-[11px] text-white/80">256 villas</p>
-          </div>
-        </a>
-        <a href="#" class="card-hover group relative aspect-[3/4] rounded-2xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?w=400&q=80&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Ubud">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-          <div class="absolute bottom-3 left-3 text-white">
-            <p class="font-bold text-sm">Ubud</p>
-            <p class="text-[11px] text-white/80">189 villas</p>
-          </div>
-        </a>
-        <a href="#" class="card-hover group relative aspect-[3/4] rounded-2xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=400&q=80&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Seminyak">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-          <div class="absolute bottom-3 left-3 text-white">
-            <p class="font-bold text-sm">Seminyak</p>
-            <p class="text-[11px] text-white/80">132 villas</p>
-          </div>
-        </a>
-        <a href="#" class="card-hover group relative aspect-[3/4] rounded-2xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1519658422507-26ec47bd0bd1?w=400&q=80&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Sanur">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-          <div class="absolute bottom-3 left-3 text-white">
-            <p class="font-bold text-sm">Sanur</p>
-            <p class="text-[11px] text-white/80">89 villas</p>
-          </div>
-        </a>
-      </div>
+      <button class="btn-outline inline-flex items-center gap-2">
+        Explore on map
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </button>
     </div>
 
-    <!-- Map placeholder -->
-    <div class="mt-8 bg-brand-cream-dark rounded-2xl overflow-hidden h-48 lg:h-56 relative">
-      <div class="absolute inset-0 opacity-60" style="background: linear-gradient(135deg, #e8dfc9 0%, #d4c4a0 100%);"></div>
-      <svg class="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 800 200" preserveAspectRatio="none">
-        <path d="M 50 120 Q 150 80 250 110 T 450 100 Q 550 120 650 90 T 800 110" stroke="#14453f" stroke-width="2" fill="none" opacity="0.4"/>
-        <path d="M 0 140 Q 100 130 200 145 T 400 135 Q 500 140 600 125 T 800 140" stroke="#14453f" stroke-width="1.5" fill="none" opacity="0.3"/>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-10">
+      <a href="#" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500&q=85&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Canggu">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5 text-white">
+          <p class="font-display text-[22px] leading-none">Canggu</p>
+          <p class="text-[12px] text-white/80 mt-1">417 villas</p>
+        </div>
+      </a>
+      <a href="#" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=500&q=85&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Uluwatu">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5 text-white">
+          <p class="font-display text-[22px] leading-none">Uluwatu</p>
+          <p class="text-[12px] text-white/80 mt-1">256 villas</p>
+        </div>
+      </a>
+      <a href="#" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?w=500&q=85&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Ubud">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5 text-white">
+          <p class="font-display text-[22px] leading-none">Ubud</p>
+          <p class="text-[12px] text-white/80 mt-1">189 villas</p>
+        </div>
+      </a>
+      <a href="#" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=500&q=85&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Seminyak">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5 text-white">
+          <p class="font-display text-[22px] leading-none">Seminyak</p>
+          <p class="text-[12px] text-white/80 mt-1">132 villas</p>
+        </div>
+      </a>
+      <a href="#" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1519658422507-26ec47bd0bd1?w=500&q=85&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Sanur">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5 text-white">
+          <p class="font-display text-[22px] leading-none">Sanur</p>
+          <p class="text-[12px] text-white/80 mt-1">89 villas</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Mini map -->
+    <div class="bg-paper rounded-3xl overflow-hidden h-52 lg:h-60 relative">
+      <svg class="absolute inset-0 w-full h-full" viewBox="0 0 800 200" preserveAspectRatio="none">
+        <path d="M 50 120 Q 150 80 250 110 T 450 100 Q 550 120 650 90 T 800 110" stroke="#c9c5b9" stroke-width="2" fill="none"/>
+        <path d="M 0 150 Q 100 140 200 155 T 400 145 Q 500 150 600 135 T 800 150" stroke="#c9c5b9" stroke-width="1.5" fill="none"/>
+        <path d="M 30 95 Q 130 100 230 90 T 430 80 Q 530 85 630 75" stroke="#d4d0c4" stroke-width="1" fill="none"/>
       </svg>
-      <!-- Map pins -->
-      <div class="absolute top-[45%] left-[18%] flex flex-col items-center">
-        <svg class="w-7 h-7 text-brand-green" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-        <span class="text-xs font-semibold text-brand-dark mt-0.5">Canggu</span>
+      <div class="absolute top-[45%] left-[16%] flex flex-col items-center">
+        <svg class="w-7 h-7 text-ink" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        <span class="text-xs font-semibold mt-0.5">Canggu</span>
       </div>
-      <div class="absolute top-[52%] left-[30%] flex flex-col items-center">
-        <svg class="w-7 h-7 text-brand-green" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-        <span class="text-xs font-semibold text-brand-dark mt-0.5">Seminyak</span>
+      <div class="absolute top-[55%] left-[28%] flex flex-col items-center">
+        <svg class="w-7 h-7 text-ink" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        <span class="text-xs font-semibold mt-0.5">Seminyak</span>
       </div>
-      <div class="absolute top-[65%] left-[40%] flex flex-col items-center">
-        <svg class="w-7 h-7 text-brand-green" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-        <span class="text-xs font-semibold text-brand-dark mt-0.5">Uluwatu</span>
+      <div class="absolute top-[68%] left-[38%] flex flex-col items-center">
+        <svg class="w-7 h-7 text-ink" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        <span class="text-xs font-semibold mt-0.5">Uluwatu</span>
       </div>
-      <div class="absolute top-[30%] left-[55%] flex flex-col items-center">
-        <svg class="w-7 h-7 text-brand-green" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-        <span class="text-xs font-semibold text-brand-dark mt-0.5">Ubud</span>
+      <div class="absolute top-[28%] left-[54%] flex flex-col items-center">
+        <svg class="w-7 h-7 text-ink" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        <span class="text-xs font-semibold mt-0.5">Ubud</span>
       </div>
       <div class="absolute top-[58%] left-[72%] flex flex-col items-center">
-        <svg class="w-7 h-7 text-brand-green" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-        <span class="text-xs font-semibold text-brand-dark mt-0.5">Sanur</span>
+        <svg class="w-7 h-7 text-ink" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        <span class="text-xs font-semibold mt-0.5">Sanur</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- =============== TESTIMONIALS =============== -->
-<section class="py-20 bg-brand-green text-white">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+<section class="bg-ink text-white py-24 relative overflow-hidden">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="flex items-end justify-between mb-14 flex-wrap gap-4">
       <div>
-        <p class="text-brand-gold text-xs font-bold tracking-[0.2em] mb-2">TRUSTED BY TRAVELERS</p>
-        <h2 class="text-4xl lg:text-5xl font-bold mb-3">Loved by guests<br>around the world</h2>
-        <div class="flex items-center gap-2 text-brand-gold">
-          <span>★★★★★</span> <span class="text-white/90 text-sm">4.9/5 average rating</span>
+        <p class="kicker !text-white/60 mb-3">Trusted by travelers</p>
+        <h2 class="font-display text-[44px] lg:text-[60px] leading-[1] tracking-tightest">Loved by guests<br><span class="italic">around the world.</span></h2>
+        <div class="flex items-center gap-2 mt-4 text-sm">
+          <span>★★★★★</span><span class="text-white/70">4.9/5 average rating</span>
         </div>
       </div>
       <div class="flex gap-2">
-        <button class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-        <button class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+        <button class="w-11 h-11 rounded-full border border-white/30 hover:border-white flex items-center justify-center transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="w-11 h-11 rounded-full border border-white/30 hover:border-white flex items-center justify-center transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
       </div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-      <div class="bg-brand-accent rounded-2xl p-6 relative testimonial-quote">
-        <div class="flex items-center gap-3 mb-4">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80&auto=format&fit=crop" class="w-12 h-12 rounded-full object-cover" alt="Sarah J.">
-          <div>
-            <p class="font-semibold">Sarah J.</p>
-            <p class="text-white/60 text-xs">Australia</p>
-          </div>
-        </div>
-        <p class="text-white/90 text-sm leading-relaxed">"Found our dream villa in 2 minutes. Way better than Airbnb!"</p>
-      </div>
-      <div class="bg-brand-accent rounded-2xl p-6 relative testimonial-quote">
-        <div class="flex items-center gap-3 mb-4">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&auto=format&fit=crop" class="w-12 h-12 rounded-full object-cover" alt="Michael T.">
-          <div>
-            <p class="font-semibold">Michael T.</p>
-            <p class="text-white/60 text-xs">UK</p>
-          </div>
-        </div>
-        <p class="text-white/90 text-sm leading-relaxed">"Amazing service and beautiful villas. Highly recommended!"</p>
-      </div>
-      <div class="bg-brand-accent rounded-2xl p-6 relative testimonial-quote">
-        <div class="flex items-center gap-3 mb-4">
-          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80&auto=format&fit=crop" class="w-12 h-12 rounded-full object-cover" alt="Emma L.">
-          <div>
-            <p class="font-semibold">Emma L.</p>
-            <p class="text-white/60 text-xs">USA</p>
-          </div>
-        </div>
-        <p class="text-white/90 text-sm leading-relaxed">"The team helped us find the perfect long-term home."</p>
-      </div>
+      <figure class="bg-white/[0.06] border border-white/10 rounded-3xl p-8">
+        <svg class="w-8 h-8 text-white/25 mb-5" viewBox="0 0 32 32" fill="currentColor"><path d="M10 8c-3 0-5 2.5-5 5.5S7 19 10 19h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5zm12 0c-3 0-5 2.5-5 5.5s2 5.5 5 5.5h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5z"/></svg>
+        <p class="font-display text-[22px] leading-snug mb-8">Found our dream villa in 2 minutes. Way better than Airbnb.</p>
+        <figcaption class="flex items-center gap-3 pt-5 border-t border-white/10">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80&auto=format&fit=crop" class="w-11 h-11 rounded-full object-cover" alt="">
+          <div><p class="font-semibold text-sm">Sarah J.</p><p class="text-xs text-white/60">Australia</p></div>
+        </figcaption>
+      </figure>
+      <figure class="bg-white/[0.06] border border-white/10 rounded-3xl p-8">
+        <svg class="w-8 h-8 text-white/25 mb-5" viewBox="0 0 32 32" fill="currentColor"><path d="M10 8c-3 0-5 2.5-5 5.5S7 19 10 19h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5zm12 0c-3 0-5 2.5-5 5.5s2 5.5 5 5.5h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5z"/></svg>
+        <p class="font-display text-[22px] leading-snug mb-8">Amazing service and beautiful villas. Highly recommended.</p>
+        <figcaption class="flex items-center gap-3 pt-5 border-t border-white/10">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80&auto=format&fit=crop" class="w-11 h-11 rounded-full object-cover" alt="">
+          <div><p class="font-semibold text-sm">Michael T.</p><p class="text-xs text-white/60">United Kingdom</p></div>
+        </figcaption>
+      </figure>
+      <figure class="bg-white/[0.06] border border-white/10 rounded-3xl p-8">
+        <svg class="w-8 h-8 text-white/25 mb-5" viewBox="0 0 32 32" fill="currentColor"><path d="M10 8c-3 0-5 2.5-5 5.5S7 19 10 19h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5zm12 0c-3 0-5 2.5-5 5.5s2 5.5 5 5.5h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5z"/></svg>
+        <p class="font-display text-[22px] leading-snug mb-8">The team helped us find the perfect long-term home.</p>
+        <figcaption class="flex items-center gap-3 pt-5 border-t border-white/10">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80&auto=format&fit=crop" class="w-11 h-11 rounded-full object-cover" alt="">
+          <div><p class="font-semibold text-sm">Emma L.</p><p class="text-xs text-white/60">United States</p></div>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
 <!-- =============== HOW IT WORKS + VOICE =============== -->
-<section class="py-20 bg-brand-cream-dark">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+<section class="bg-off py-24 border-t border-line">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16">
     <div>
-      <p class="text-brand-gold text-xs font-bold tracking-[0.2em] mb-2">HOW IT WORKS</p>
-      <h2 class="text-4xl lg:text-5xl font-bold mb-10 leading-tight">3 easy steps to your<br>perfect stay</h2>
+      <p class="kicker mb-3">How it works</p>
+      <h2 class="font-display text-[44px] lg:text-[60px] leading-[1] tracking-tightest mb-12">3 easy steps to<br><span class="italic">your perfect stay.</span></h2>
 
-      <div class="grid grid-cols-3 gap-4">
-        <div>
-          <div class="w-10 h-10 rounded-full bg-brand-green text-brand-gold flex items-center justify-center font-bold mb-4">1</div>
-          <p class="font-bold mb-1">Search or talk</p>
-          <p class="text-xs text-gray-600">Tell us what you want or use voice search.</p>
+      <div class="space-y-8">
+        <div class="flex gap-5">
+          <span class="font-display text-[56px] text-ink/15 leading-none">01</span>
+          <div class="pt-3">
+            <p class="font-semibold mb-1 text-lg">Search or talk</p>
+            <p class="text-ink/60 text-[15px] max-w-md">Tell us what you want — or use voice search and describe your ideal stay.</p>
+          </div>
         </div>
-        <div>
-          <div class="w-10 h-10 rounded-full bg-brand-green text-brand-gold flex items-center justify-center font-bold mb-4">2</div>
-          <p class="font-bold mb-1">Get best matches</p>
-          <p class="text-xs text-gray-600">AI finds the best villas for you in seconds.</p>
+        <div class="flex gap-5">
+          <span class="font-display text-[56px] text-ink/15 leading-none">02</span>
+          <div class="pt-3">
+            <p class="font-semibold mb-1 text-lg">Get best matches</p>
+            <p class="text-ink/60 text-[15px] max-w-md">AI finds the villas that fit you best in seconds, not hours.</p>
+          </div>
         </div>
-        <div>
-          <div class="w-10 h-10 rounded-full bg-brand-green text-brand-gold flex items-center justify-center font-bold mb-4">3</div>
-          <p class="font-bold mb-1">Book &amp; relax</p>
-          <p class="text-xs text-gray-600">We handle the rest. You enjoy Bali.</p>
+        <div class="flex gap-5">
+          <span class="font-display text-[56px] text-ink/15 leading-none">03</span>
+          <div class="pt-3">
+            <p class="font-semibold mb-1 text-lg">Book &amp; relax</p>
+            <p class="text-ink/60 text-[15px] max-w-md">We handle the rest. Concierge on the ground, 24/7. You just enjoy Bali.</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="bg-white rounded-2xl p-8 flex flex-col justify-center">
-      <p class="text-brand-gold text-xs font-bold tracking-[0.2em] mb-2">TALK INSTEAD OF TYPING</p>
-      <h3 class="text-3xl font-bold mb-3">Use voice search</h3>
-      <p class="text-gray-600 mb-8">Tap the mic and tell us what you're looking for.</p>
+    <div class="bg-ink text-white rounded-[28px] p-10 flex flex-col justify-center relative overflow-hidden">
+      <p class="kicker !text-white/60 mb-3">Talk instead of typing</p>
+      <h3 class="font-display text-[40px] leading-[1] tracking-tightest mb-4">Use voice search.</h3>
+      <p class="text-white/70 mb-10 max-w-sm">Tap the mic and tell us what you're looking for. Natural language, no filters.</p>
 
       <div class="flex items-center gap-6">
-        <div class="relative">
-          <div class="absolute inset-0 rounded-full bg-brand-gold/40 pulse-ring"></div>
-          <button class="relative w-20 h-20 bg-brand-green rounded-full flex items-center justify-center text-brand-gold hover:bg-brand-accent">
-            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        <div class="relative flex-shrink-0">
+          <div class="absolute inset-0 rounded-full bg-white/20 pulse-ring"></div>
+          <button class="relative w-20 h-20 bg-white rounded-full flex items-center justify-center text-ink hover:scale-95 transition">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
           </button>
         </div>
-        <div class="flex-1">
-          <p class="text-sm text-gray-500 mb-2">Tap to speak</p>
-          <div class="flex items-end gap-1 h-8">
-            <span class="w-1 bg-brand-gold/60 rounded animate-pulse" style="height: 30%"></span>
-            <span class="w-1 bg-brand-gold/80 rounded animate-pulse" style="height: 70%; animation-delay: .1s"></span>
-            <span class="w-1 bg-brand-gold rounded animate-pulse" style="height: 100%; animation-delay: .2s"></span>
-            <span class="w-1 bg-brand-gold/80 rounded animate-pulse" style="height: 60%; animation-delay: .3s"></span>
-            <span class="w-1 bg-brand-gold/60 rounded animate-pulse" style="height: 90%; animation-delay: .4s"></span>
-            <span class="w-1 bg-brand-gold/80 rounded animate-pulse" style="height: 40%; animation-delay: .5s"></span>
-            <span class="w-1 bg-brand-gold rounded animate-pulse" style="height: 75%; animation-delay: .6s"></span>
-            <span class="w-1 bg-brand-gold/70 rounded animate-pulse" style="height: 50%; animation-delay: .7s"></span>
-            <span class="w-1 bg-brand-gold/50 rounded animate-pulse" style="height: 85%; animation-delay: .8s"></span>
-            <span class="w-1 bg-brand-gold/80 rounded animate-pulse" style="height: 35%; animation-delay: .9s"></span>
-            <span class="w-1 bg-brand-gold rounded animate-pulse" style="height: 65%; animation-delay: 1s"></span>
-          </div>
+        <div class="flex items-end gap-1 h-12">
+          <span class="w-1 bg-white rounded wave-bar" style="height: 30%"></span>
+          <span class="w-1 bg-white rounded wave-bar" style="height: 70%; animation-delay: .1s"></span>
+          <span class="w-1 bg-white rounded wave-bar" style="height: 100%; animation-delay: .2s"></span>
+          <span class="w-1 bg-white rounded wave-bar" style="height: 60%; animation-delay: .3s"></span>
+          <span class="w-1 bg-white rounded wave-bar" style="height: 90%; animation-delay: .4s"></span>
+          <span class="w-1 bg-white rounded wave-bar" style="height: 40%; animation-delay: .5s"></span>
+          <span class="w-1 bg-white rounded wave-bar" style="height: 75%; animation-delay: .6s"></span>
+          <span class="w-1 bg-white rounded wave-bar" style="height: 50%; animation-delay: .7s"></span>
+          <span class="w-1 bg-white rounded wave-bar" style="height: 85%; animation-delay: .8s"></span>
+          <span class="w-1 bg-white rounded wave-bar" style="height: 35%; animation-delay: .9s"></span>
+          <span class="w-1 bg-white rounded wave-bar" style="height: 65%; animation-delay: 1s"></span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- =============== FINAL CTA =============== -->
+<section class="bg-off py-24 border-t border-line">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 text-center">
+    <p class="kicker mb-5">Ready to find your villa?</p>
+    <h2 class="font-display text-[56px] lg:text-[88px] leading-[0.95] tracking-tightest mb-8">Stop searching.<br><span class="italic">Start experiencing.</span></h2>
+    <p class="text-ink/60 text-[17px] max-w-xl mx-auto mb-10">Your perfect Bali villa is one prompt away.</p>
+    <a href="#" class="btn-primary inline-flex items-center gap-2 !px-8 !py-4 !text-base">
+      Find my villa now
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
 <!-- =============== FOOTER =============== -->
-<footer id="about" class="bg-brand-green text-white pt-16 pb-8 relative overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1546412414-e1885e51cfa5?w=1200&q=80&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-10" alt="">
-  <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
+<footer id="about" class="bg-ink text-white pt-20 pb-10">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-14">
       <div class="col-span-2">
-        <div class="flex items-center gap-2 mb-4">
+        <div class="flex items-center gap-2 mb-5">
           <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-            <path d="M16 28 L15 16 L17 16 L16 28 Z" fill="#c9a961"/>
-            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(-20 16 12)"/>
-            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(20 16 12)"/>
-            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(-60 16 12)"/>
-            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(60 16 12)"/>
-            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(-90 16 12)"/>
-            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(90 16 12)"/>
+            <path d="M16 28 L15 16 L17 16 L16 28 Z" fill="#fff"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#fff" transform="rotate(-20 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#fff" transform="rotate(20 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#fff" transform="rotate(-60 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#fff" transform="rotate(60 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#fff" transform="rotate(-90 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#fff" transform="rotate(90 16 12)"/>
           </svg>
-          <span class="font-bold tracking-wider">BALI VILLAS</span>
+          <span class="font-display font-semibold text-[19px]">Bali Villas</span>
         </div>
-        <p class="text-white/70 text-sm leading-relaxed mb-6 max-w-xs">
-          AI-powered villa rentals in Bali.<br>
-          Daily, monthly and yearly stays<br>
-          with full-service management.
+        <p class="text-white/60 text-sm leading-relaxed max-w-xs mb-6">
+          AI-powered villa rentals in Bali. Daily, monthly and yearly stays with full-service management.
         </p>
-        <div class="flex gap-3">
-          <a href="#" aria-label="Instagram" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4 1 .5.4.7.8 1 1.4.2.5.3 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-1 1.4-.4.5-.8.7-1.4 1-.5.2-1 .3-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-1-.5-.4-.7-.8-1-1.4-.2-.5-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-1.8.4-2.2.2-.6.5-1 1-1.4.4-.5.8-.7 1.4-1 .5-.2 1-.3 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1c-1.3.1-2.2.3-3 .6-.8.3-1.5.7-2.2 1.4C1.2 2.8.8 3.5.5 4.3c-.3.8-.5 1.7-.6 3C-.2 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.7.6-3 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.2C21.2 1.2 20.5.8 19.7.5c-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0zm0 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm7.8-10.4c0 .8-.6 1.4-1.4 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4z"/></svg></a>
-          <a href="#" aria-label="Facebook" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
-          <a href="#" aria-label="TikTok" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.93a8.16 8.16 0 0 0 4.77 1.52V7a4.85 4.85 0 0 1-1.84-.31z"/></svg></a>
-          <a href="#" aria-label="YouTube" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2c-.3-1-1-1.8-2-2C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.5.6c-1 .3-1.8 1-2 2C0 8.4 0 12 0 12s0 3.6.5 5.8c.3 1 1 1.8 2 2 2.2.6 9.5.7 9.5.7s7.3 0 9.5-.6c1-.3 1.8-1 2-2 .5-2.2.5-5.8.5-5.8s0-3.6-.5-5.9zM9.6 16.4V7.6l6.4 4.4-6.4 4.4z"/></svg></a>
+        <div class="flex gap-2">
+          <a href="#" aria-label="Instagram" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-ink transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4 1 .5.4.7.8 1 1.4.2.5.3 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-1 1.4-.4.5-.8.7-1.4 1-.5.2-1 .3-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-1-.5-.4-.7-.8-1-1.4-.2-.5-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-1.8.4-2.2.2-.6.5-1 1-1.4.4-.5.8-.7 1.4-1 .5-.2 1-.3 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1c-1.3.1-2.2.3-3 .6-.8.3-1.5.7-2.2 1.4C1.2 2.8.8 3.5.5 4.3c-.3.8-.5 1.7-.6 3C-.2 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.7.6-3 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.2C21.2 1.2 20.5.8 19.7.5c-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0zm0 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm7.8-10.4c0 .8-.6 1.4-1.4 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4z"/></svg></a>
+          <a href="#" aria-label="Facebook" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-ink transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+          <a href="#" aria-label="TikTok" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-ink transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.93a8.16 8.16 0 0 0 4.77 1.52V7a4.85 4.85 0 0 1-1.84-.31z"/></svg></a>
+          <a href="#" aria-label="YouTube" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-ink transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2c-.3-1-1-1.8-2-2C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.5.6c-1 .3-1.8 1-2 2C0 8.4 0 12 0 12s0 3.6.5 5.8c.3 1 1 1.8 2 2 2.2.6 9.5.7 9.5.7s7.3 0 9.5-.6c1-.3 1.8-1 2-2 .5-2.2.5-5.8.5-5.8s0-3.6-.5-5.9zM9.6 16.4V7.6l6.4 4.4-6.4 4.4z"/></svg></a>
         </div>
       </div>
       <div>
-        <h4 class="font-bold mb-4 text-brand-gold">Explore</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li><a href="#" class="hover:text-white">Villas in Canggu</a></li>
-          <li><a href="#" class="hover:text-white">Villas in Uluwatu</a></li>
-          <li><a href="#" class="hover:text-white">Villas in Ubud</a></li>
-          <li><a href="#" class="hover:text-white">Villas in Seminyak</a></li>
-          <li><a href="#" class="hover:text-white">All Destinations</a></li>
+        <h4 class="font-semibold mb-4 text-white/90">Explore</h4>
+        <ul class="space-y-2 text-sm text-white/55">
+          <li><a href="#" class="hover:text-white">Canggu</a></li>
+          <li><a href="#" class="hover:text-white">Uluwatu</a></li>
+          <li><a href="#" class="hover:text-white">Ubud</a></li>
+          <li><a href="#" class="hover:text-white">Seminyak</a></li>
+          <li><a href="#" class="hover:text-white">All destinations</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="font-bold mb-4 text-brand-gold">Rentals</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li><a href="#" class="hover:text-white">Daily Villas</a></li>
-          <li><a href="#" class="hover:text-white">Monthly Villas</a></li>
-          <li><a href="#" class="hover:text-white">Yearly Villas</a></li>
-          <li><a href="#" class="hover:text-white">Long-term Deals</a></li>
+        <h4 class="font-semibold mb-4 text-white/90">Rentals</h4>
+        <ul class="space-y-2 text-sm text-white/55">
+          <li><a href="#" class="hover:text-white">Daily villas</a></li>
+          <li><a href="#" class="hover:text-white">Monthly villas</a></li>
+          <li><a href="#" class="hover:text-white">Yearly villas</a></li>
+          <li><a href="#" class="hover:text-white">Long-term deals</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="font-bold mb-4 text-brand-gold">Management</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li><a href="#" class="hover:text-white">Villa Management</a></li>
-          <li><a href="#" class="hover:text-white">Become a Property</a></li>
-          <li><a href="#" class="hover:text-white">Our Services</a></li>
+        <h4 class="font-semibold mb-4 text-white/90">Management</h4>
+        <ul class="space-y-2 text-sm text-white/55">
+          <li><a href="#" class="hover:text-white">Villa management</a></li>
+          <li><a href="#" class="hover:text-white">Become a property</a></li>
+          <li><a href="#" class="hover:text-white">Our services</a></li>
           <li><a href="#" class="hover:text-white">FAQ</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="font-bold mb-4 text-brand-gold">Company</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li><a href="#" class="hover:text-white">About Us</a></li>
-          <li><a href="/villa/" class="hover:text-white">Blog</a></li>
+        <h4 class="font-semibold mb-4 text-white/90">Company</h4>
+        <ul class="space-y-2 text-sm text-white/55">
+          <li><a href="#" class="hover:text-white">About</a></li>
+          <li><a href="/villa/" class="hover:text-white">Journal</a></li>
           <li><a href="#" class="hover:text-white">Careers</a></li>
           <li><a href="#" class="hover:text-white">Contact</a></li>
         </ul>
       </div>
     </div>
-    <div class="pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs text-white/60">
+    <div class="pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs text-white/50">
       <div class="flex gap-6">
         <a href="#" class="hover:text-white">Privacy Policy</a>
         <a href="#" class="hover:text-white">Terms of Service</a>
       </div>
-      <div>© 2024 BaliVillas.ai. All rights reserved.</div>
+      <div>© 2024 BaliVillas.ai — All rights reserved</div>
     </div>
   </div>
 </footer>
 
 <!-- =============== FLOATING WHATSAPP =============== -->
-<a href="https://wa.me/6281000000000" class="fixed bottom-6 right-6 z-40 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full shadow-2xl flex items-center gap-2 font-semibold text-sm transition">
+<a href="https://wa.me/6281000000000" class="fixed bottom-6 right-6 z-40 bg-ink hover:bg-ink/90 text-white px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-2 font-semibold text-sm transition">
   <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-  Chat on WhatsApp
+  Chat
 </a>
 
 </body>
