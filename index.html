@@ -1,510 +1,634 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
-    <meta name="bingbot" content="noindex, nofollow">
-    <!-- Define gtag function so it works alongside GTM -->
-    <script type="text/javascript" async="" src="https://static.hotjar.com/c/hotjar-4958650.js?sv=7"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-ES10RWH41M&amp;cx=c&amp;gtm=4e64h1"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-18073159751&amp;cx=c&amp;gtm=4e64h1"></script><script src="https://connect.facebook.net/signals/config/1286405936647329?v=2.9.303&amp;r=stable&amp;domain=mantavillas.com&amp;hme=97937018cefade17726f0472876fc101316b2ce9008a35a6a5a7977d7436151a&amp;ex_m=104%2C205%2C154%2C22%2C72%2C73%2C145%2C68%2C67%2C11%2C162%2C90%2C16%2C138%2C127%2C39%2C75%2C78%2C134%2C159%2C164%2C8%2C4%2C5%2C7%2C6%2C3%2C91%2C101%2C165%2C170%2C219%2C62%2C186%2C187%2C55%2C276%2C30%2C74%2C231%2C230%2C229%2C23%2C33%2C103%2C61%2C10%2C63%2C97%2C98%2C99%2C105%2C130%2C31%2C29%2C132%2C133%2C129%2C128%2C155%2C76%2C158%2C156%2C157%2C50%2C60%2C123%2C15%2C161%2C45%2C263%2C264%2C262%2C26%2C27%2C28%2C48%2C146%2C77%2C112%2C18%2C20%2C44%2C40%2C42%2C41%2C83%2C92%2C96%2C110%2C144%2C147%2C46%2C111%2C24%2C21%2C119%2C69%2C36%2C149%2C148%2C150%2C141%2C139%2C25%2C35%2C59%2C109%2C160%2C70%2C17%2C152%2C114%2C81%2C66%2C19%2C85%2C86%2C116%2C84%2C136%2C135%2C34%2C278%2C293%2C212%2C201%2C202%2C200%2C296%2C288%2C52%2C213%2C107%2C131%2C80%2C121%2C54%2C47%2C49%2C113%2C120%2C126%2C58%2C64%2C151%2C115%2C37%2C32%2C53%2C56%2C100%2C163%2C1%2C124%2C14%2C122%2C12%2C2%2C57%2C93%2C65%2C118%2C89%2C88%2C166%2C167%2C94%2C95%2C9%2C125%2C102%2C51%2C142%2C87%2C79%2C71%2C117%2C106%2C43%2C143%2C0%2C82%2C137%2C140%2C153%2C38%2C108%2C13%2C168" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5LK5T4NP"></script><script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){window.dataLayer.push(arguments);}
-    gtag('js', new Date());
-    </script>
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5LK5T4NP');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Event snippet for Uitgaande klik - Whatsapp conversion -->
-    <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-18073159751/_pAyCI373pkcEMeQ-qlD',
-          'event_callback': callback
-      });
-      return false;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="bingbot" content="noindex, nofollow">
+<title>BaliVillas.ai — AI-powered villa search in Bali</title>
+<link rel="icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'brand-dark': '#0a2421',
+        'brand-darker': '#071a18',
+        'brand-green': '#14453f',
+        'brand-accent': '#0d3530',
+        'brand-gold': '#c9a961',
+        'brand-gold-light': '#d9b876',
+        'brand-cream': '#f7f2ea',
+        'brand-cream-dark': '#ede5d3'
+      },
+      fontFamily: {
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'serif': ['Playfair Display', 'Georgia', 'serif']
+      }
     }
-    </script>
-    <!-- End Whatsapp conversion snippet -->
-    
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1286405936647329');
-    fbq('track', 'PageView');
-    </script>
-    <!-- End Meta Pixel Code -->
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/favicon.png">
-    
-    <!-- SEO Meta Tags -->
-    <title>Manta Villas Bali - Luxury Villa Rentals &amp; Villa Management</title>
-    <meta name="description" content="Discover Bali’s finest luxury villas, expertly managed for rentals and dream holidays. Book your perfect stay or partner with us today! | Manta Villas">
-    <meta name="keywords" content="{&quot;bali villa rentals&quot;,&quot;luxury villa management bali&quot;,&quot;bali villa holiday rentals&quot;,&quot;bali property management&quot;,&quot;luxury bali holidays&quot;,&quot;rent a villa in bali&quot;}">
-    <meta name="keywords" content="Bali villas, luxury villas Bali, villa rentals Bali, Bali accommodation, private villas Bali, villa management Bali, Manta Villas, Bali vacation rentals, luxury stays Bali">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Luxury Bali Villa Rentals &amp; Management | Manta Villas">
-    <meta property="og:description" content="Discover Bali’s finest luxury villas, expertly managed for rentals and dream holidays. Book your perfect stay or partner with us today! | Manta Villas">
-    <meta property="og:image" content="https://images.unsplash.com/photo-v_q1TquLqNo?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;h=630">
-    <meta property="og:url" content="/">
-    <meta property="og:site_name" content="Manta Villas Bali">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Luxury Bali Villa Rentals &amp; Management | Manta Villas">
-    <meta name="twitter:description" content="Discover Bali’s finest luxury villas, expertly managed for rentals and dream holidays. Book your perfect stay or partner with us today! | Manta Villas">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-v_q1TquLqNo?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;h=630">
-    
-    <link rel="canonical" href="/">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <!-- Only load the two font families actually used: Poppins (body) + Roboto Mono (code) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Roboto+Mono:wght@400&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Roboto+Mono:wght@400&amp;display=swap" media="all" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto+Mono:wght@400&display=swap"></noscript>
-    <script type="module" crossorigin="" src="/assets/index-C0uR9YM5.js"></script>
-    <link rel="stylesheet" crossorigin="" href="/assets/index-Da4wPASr.css">
-      <link rel="alternate" hreflang="en" href="/">
-    <link rel="alternate" hreflang="id" href="/id">
-    <link rel="alternate" hreflang="fr" href="/fr">
-    <link rel="alternate" hreflang="es" href="/es">
-    <link rel="alternate" hreflang="it" href="/it">
-    <link rel="alternate" hreflang="de" href="/de">
-    <link rel="alternate" hreflang="ru" href="/ru">
-    <link rel="alternate" hreflang="zh" href="/zh">
-    <link rel="alternate" hreflang="x-default" href="/">
-  <script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/18073159751/?random=1776750671441&amp;cv=11&amp;fst=1776750671441&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be64h1v9248733620z89137216291za20gzb9137216291zd9137216291xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=0~115616985~115938465~115938468~117266401~118463261&amp;u_w=1400&amp;u_h=900&amp;url=https%3A%2F%2Fmantavillas.com%2F&amp;rcb=7&amp;frm=0&amp;tiba=Luxury%20Bali%20Villa%20Rentals%20%26%20Management%20%7C%20Manta%20Villas&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=997284098.1776750671&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11281037427/?random=1776750671555&amp;cv=11&amp;fst=1776750671555&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be64h1v9228493225za200zd9228493225xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=0~115938465~115938468~117266400&amp;u_w=1400&amp;u_h=900&amp;url=https%3A%2F%2Fmantavillas.com%2F&amp;rcb=15&amp;frm=0&amp;tiba=Luxury%20Bali%20Villa%20Rentals%20%26%20Management%20%7C%20Manta%20Villas&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=997284098.1776750671&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script><style>.b11ce{
-	display:none;
-	position:fixed;
-	z-index:999;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	padding:1em;
-	background:rgba(0, 0, 0, 0.8);
+  }
 }
-
-.d36f2{
-	display:block;
-	animation:db9df 200ms linear forwards;
-}
-
-.b11ce span{
-	display:block;
-	width:100%;
-	height:100%;
-	background-position:center;
-	background-repeat:no-repeat;
-	background-size:contain;
-}
-
-@keyframes db9df{
-	0%{
-		opacity:0;
-	}
-	100%{
-		opacity:1;
-	}
-}
-.dfa50{
-	background-color:transparent !important;
-	border:none !important;
-	position:fixed !important;
-	bottom:0px !important;
-	right:0px !important;
-	box-sizing:border-box !important;
-	min-width:auto;
-	max-height:100%;
-}
-
-.eac07{
-	bottom:0px !important;
-	left:0px !important;
-}
-
-.faa07{
-	bottom:0px !important;
-	right:0px !important;
-}
-
-.bda45.d0b39{
-	width:90px !important;
-	height:90px !important;
-}
-
-.bda45.e22f5{
-	width:72px !important;
-	height:72px !important;
-}
-
-.bda45.d3396{
-	width:108px !important;
-	height:108px !important;
-}
-
-.eca54{
-	width:90px !important;
-	height:0px !important;
-	visibility:hidden !important;
-}
-
-.c8d90.ce2e4{
-	width:320px !important;
-	height:480px !important;
-}
-
-.c8d90.deef1{
-	width:400px !important;
-	height:600px !important;
-}
-
-.c8d90.e57b4{
-	width:480px !important;
-	height:720px !important;
-}
-
-.c8d90.bd30a{
-	width:100% !important;
-	height:100% !important;
-}
-
-@media (max-width: 600px){
-	.c8d90.ce2e4,
-	.c8d90.deef1,
-	.c8d90.e57b4{
-		width:100% !important;
-		height:100% !important;
-	}
-}
-
-.c8caa{
-	width:270px !important;
-	height:180px !important;
-}
-
-.ce859{
-	width:100% !important;
-	height:302px !important;
-}
-
-@media (max-width: 400px){
-	.c8caa{
-		width:100% !important;
-	}
-	.ce859{
-		width:100% !important;
-	}
-}
-#dbee1{
-	position:fixed;
-	z-index:2147483647 !important;
-}
-</style><style type="text/css">[data-vaul-drawer]{touch-action:none;will-change:transform;transition:transform .5s cubic-bezier(.32, .72, 0, 1);animation-duration:.5s;animation-timing-function:cubic-bezier(0.32,0.72,0,1)}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=bottom][data-state=open]{animation-name:slideFromBottom}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=bottom][data-state=closed]{animation-name:slideToBottom}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=top][data-state=open]{animation-name:slideFromTop}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=top][data-state=closed]{animation-name:slideToTop}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=left][data-state=open]{animation-name:slideFromLeft}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=left][data-state=closed]{animation-name:slideToLeft}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=right][data-state=open]{animation-name:slideFromRight}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=right][data-state=closed]{animation-name:slideToRight}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=bottom]{transform:translate3d(0,var(--initial-transform,100%),0)}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=top]{transform:translate3d(0,calc(var(--initial-transform,100%) * -1),0)}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=left]{transform:translate3d(calc(var(--initial-transform,100%) * -1),0,0)}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=right]{transform:translate3d(var(--initial-transform,100%),0,0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=top]{transform:translate3d(0,var(--snap-point-height,0),0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=bottom]{transform:translate3d(0,var(--snap-point-height,0),0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=left]{transform:translate3d(var(--snap-point-height,0),0,0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=right]{transform:translate3d(var(--snap-point-height,0),0,0)}[data-vaul-overlay][data-vaul-snap-points=false]{animation-duration:.5s;animation-timing-function:cubic-bezier(0.32,0.72,0,1)}[data-vaul-overlay][data-vaul-snap-points=false][data-state=open]{animation-name:fadeIn}[data-vaul-overlay][data-state=closed]{animation-name:fadeOut}[data-vaul-animate=false]{animation:none!important}[data-vaul-overlay][data-vaul-snap-points=true]{opacity:0;transition:opacity .5s cubic-bezier(.32, .72, 0, 1)}[data-vaul-overlay][data-vaul-snap-points=true]{opacity:1}[data-vaul-drawer]:not([data-vaul-custom-container=true])::after{content:'';position:absolute;background:inherit;background-color:inherit}[data-vaul-drawer][data-vaul-drawer-direction=top]::after{top:initial;bottom:100%;left:0;right:0;height:200%}[data-vaul-drawer][data-vaul-drawer-direction=bottom]::after{top:100%;bottom:initial;left:0;right:0;height:200%}[data-vaul-drawer][data-vaul-drawer-direction=left]::after{left:initial;right:100%;top:0;bottom:0;width:200%}[data-vaul-drawer][data-vaul-drawer-direction=right]::after{left:100%;right:initial;top:0;bottom:0;width:200%}[data-vaul-overlay][data-vaul-snap-points=true]:not([data-vaul-snap-points-overlay=true]):not(
-[data-state=closed]
-){opacity:0}[data-vaul-overlay][data-vaul-snap-points-overlay=true]{opacity:1}[data-vaul-handle]{display:block;position:relative;opacity:.7;background:#e2e2e4;margin-left:auto;margin-right:auto;height:5px;width:32px;border-radius:1rem;touch-action:pan-y}[data-vaul-handle]:active,[data-vaul-handle]:hover{opacity:1}[data-vaul-handle-hitarea]{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max(100%,2.75rem);height:max(100%,2.75rem);touch-action:inherit}@media (hover:hover) and (pointer:fine){[data-vaul-drawer]{user-select:none}}@media (pointer:fine){[data-vaul-handle-hitarea]:{width:100%;height:100%}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeOut{to{opacity:0}}@keyframes slideFromBottom{from{transform:translate3d(0,var(--initial-transform,100%),0)}to{transform:translate3d(0,0,0)}}@keyframes slideToBottom{to{transform:translate3d(0,var(--initial-transform,100%),0)}}@keyframes slideFromTop{from{transform:translate3d(0,calc(var(--initial-transform,100%) * -1),0)}to{transform:translate3d(0,0,0)}}@keyframes slideToTop{to{transform:translate3d(0,calc(var(--initial-transform,100%) * -1),0)}}@keyframes slideFromLeft{from{transform:translate3d(calc(var(--initial-transform,100%) * -1),0,0)}to{transform:translate3d(0,0,0)}}@keyframes slideToLeft{to{transform:translate3d(calc(var(--initial-transform,100%) * -1),0,0)}}@keyframes slideFromRight{from{transform:translate3d(var(--initial-transform,100%),0,0)}to{transform:translate3d(0,0,0)}}@keyframes slideToRight{to{transform:translate3d(var(--initial-transform,100%),0,0)}}</style><link rel="canonical" href="/" data-rh="true"><meta name="description" content="Discover luxury villa rentals and professional villa management in Bali. Manta Villas offers stunning accommodations in Seminyak, Canggu, Uluwatu, and more. Book your dream villa or maximize your property revenue today." data-rh="true"><meta property="og:type" content="website" data-rh="true"><meta property="og:title" content="Manta Villas Bali - Luxury Villa Rentals &amp; Villa Management" data-rh="true"><meta property="og:description" content="Discover luxury villa rentals and professional villa management in Bali. Manta Villas offers stunning accommodations in Seminyak, Canggu, Uluwatu, and more. Book your dream villa or maximize your property revenue today." data-rh="true"><meta property="og:image" content="/assets/DSC03580_1761732168501-DXEUYbKu.jpg" data-rh="true"><meta property="og:url" content="/" data-rh="true"><meta property="og:site_name" content="Manta Villas Bali" data-rh="true"><meta name="twitter:card" content="summary_large_image" data-rh="true"><meta name="twitter:title" content="Manta Villas Bali - Luxury Villa Rentals &amp; Villa Management" data-rh="true"><meta name="twitter:description" content="Discover luxury villa rentals and professional villa management in Bali. Manta Villas offers stunning accommodations in Seminyak, Canggu, Uluwatu, and more. Book your dream villa or maximize your property revenue today." data-rh="true"><meta name="twitter:image" content="/assets/DSC03580_1761732168501-DXEUYbKu.jpg" data-rh="true"><script type="application/ld+json" data-rh="true">{"@context":"https://schema.org","@type":["Organization","LocalBusiness","LodgingBusiness"],"@id":"/#organization","name":"Manta Villas Bali","url":"","logo":{"@type":"ImageObject","url":"/public-objects/images/manta-villas-logo.png","width":600,"height":60},"image":"/public-objects/images/manta-villas-logo.png","description":"Manta Villas is a premier luxury villa rental and property management company in Bali, Indonesia. We offer handpicked private villas for vacation rentals and comprehensive villa management services.","address":{"@type":"PostalAddress","streetAddress":"Jl. Raya Seminyak","addressLocality":"Seminyak","addressRegion":"Bali","postalCode":"80361","addressCountry":"ID"},"geo":{"@type":"GeoCoordinates","latitude":-8.6895,"longitude":115.1686},"contactPoint":[{"@type":"ContactPoint","telephone":"+62-823-4007-4941","contactType":"customer service","availableLanguage":["English","Indonesian"]}],"sameAs":["https://www.instagram.com/mantavillas","https://www.facebook.com/mantavillas"],"areaServed":{"@type":"Place","name":"Bali, Indonesia"},"priceRange":"$$$","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"20:00"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"150","bestRating":"5","worstRating":"1"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Bali Villa Rentals","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"LodgingReservation","name":"Daily Villa Rental"}},{"@type":"Offer","itemOffered":{"@type":"LodgingReservation","name":"Monthly Villa Rental"}},{"@type":"Offer","itemOffered":{"@type":"LodgingReservation","name":"Yearly Villa Rental"}}]}}</script><script type="application/ld+json" data-rh="true">{"@context":"https://schema.org","@type":"WebSite","@id":"/#website","url":"","name":"Manta Villas Bali","description":"Discover luxury villas for rent in Bali. From beachfront retreats in Seminyak to clifftop havens in Uluwatu, find your perfect Bali villa for daily, monthly, or yearly rentals.","publisher":{"@id":"/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"/vacation-rentals?search={search_term_string}"},"query-input":"required name=search_term_string"},"inLanguage":"en-US"}</script><script type="application/ld+json" data-rh="true">{"@context":"https://schema.org","@type":"TouristDestination","@id":"/#bali-destination","name":"Bali, Indonesia","description":"Bali is a tropical paradise known for its lush rice terraces, ancient temples, world-class surfing, and luxury villa accommodations. Popular areas include Seminyak, Canggu, Ubud, and Uluwatu.","url":"","image":["https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200","https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1200"],"geo":{"@type":"GeoCoordinates","latitude":-8.3405,"longitude":115.092},"containsPlace":[{"@type":"City","name":"Seminyak","description":"Upscale beach resort area known for luxury villas, high-end boutiques, and trendy beach clubs."},{"@type":"City","name":"Canggu","description":"Hip coastal village popular with surfers and digital nomads, featuring rice fields and beach bars."},{"@type":"City","name":"Ubud","description":"Cultural heart of Bali surrounded by rainforest, rice paddies, temples, and art galleries."},{"@type":"City","name":"Uluwatu","description":"Clifftop area on the southern tip known for dramatic ocean views, surfing, and the famous Uluwatu Temple."},{"@type":"City","name":"Nusa Dua","description":"Exclusive resort enclave with pristine beaches and calm waters, ideal for families."},{"@type":"City","name":"Jimbaran","description":"Fishing village famous for its seafood restaurants on the beach and luxury resorts."}],"touristType":["Luxury travelers","Honeymooners","Families","Digital nomads","Wellness seekers","Surfers","Culture enthusiasts"],"hasMap":"https://www.google.com/maps/place/Bali"}</script><script type="application/ld+json" data-rh="true">{"@context":"https://schema.org","@type":"FAQPage","@id":"","mainEntity":[{"@type":"Question","name":"What is the best area to stay in Bali for luxury villas?","acceptedAnswer":{"@type":"Answer","text":"Seminyak and Canggu are the most popular areas for luxury villas in Bali, offering a perfect blend of beachfront locations, world-class dining, and vibrant nightlife. Uluwatu is ideal for clifftop villas with dramatic ocean views, while Ubud offers serene jungle retreats surrounded by rice terraces and cultural attractions."}},{"@type":"Question","name":"How much does it cost to rent a luxury villa in Bali?","acceptedAnswer":{"@type":"Answer","text":"Luxury villa rentals in Bali typically range from $200-$2,000+ per night depending on location, size, and amenities. Many villas offer significant discounts for monthly rentals (starting from $3,000/month) and yearly leases. Prices vary by season, with peak rates during July-August and December-January."}},{"@type":"Question","name":"What amenities are included in Bali villa rentals?","acceptedAnswer":{"@type":"Answer","text":"Most Bali luxury villas include private pools, fully equipped kitchens, air conditioning, WiFi, and daily housekeeping. Premium villas often feature private chefs, spa services, personal butlers, home theaters, gyms, and stunning views of rice fields, oceans, or tropical gardens."}},{"@type":"Question","name":"What is the best time to visit Bali?","acceptedAnswer":{"@type":"Answer","text":"The best time to visit Bali is during the dry season from April to October, with May, June, and September offering the best weather with fewer crowds. The wet season (November-March) brings afternoon showers but also lush landscapes and lower prices."}},{"@type":"Question","name":"Do I need a visa to visit Bali?","acceptedAnswer":{"@type":"Answer","text":"Many nationalities can obtain a Visa on Arrival (VOA) for 30 days upon arrival in Bali, which can be extended once for another 30 days. For longer stays, you may need to apply for a social or business visa. Always check the latest requirements before traveling."}},{"@type":"Question","name":"What is a typical Bali itinerary for 7 days?","acceptedAnswer":{"@type":"Answer","text":"A perfect 7-day Bali itinerary includes: Days 1-2 in Seminyak for beaches and shopping, Days 3-4 in Ubud for temples, rice terraces, and cultural experiences, Days 5-6 in Uluwatu for clifftop views and surfing, and Day 7 for spa treatments and relaxation before departure."}},{"@type":"Question","name":"Are private villas better than hotels in Bali?","acceptedAnswer":{"@type":"Answer","text":"Private villas offer more space, privacy, and personalized service compared to hotels. They're ideal for families, groups, or couples seeking an intimate experience. Villas typically include private pools, full kitchens, and often come with staff including housekeeping, security, and optional private chefs."}},{"@type":"Question","name":"What activities can I do near Bali villas?","acceptedAnswer":{"@type":"Answer","text":"Activities near Bali villas include surfing, snorkeling, temple visits, rice terrace trekking, yoga and wellness retreats, cooking classes, water sports, volcano hiking, waterfall chasing, cultural performances, and exploring local markets and cafes."}}]}</script><script type="application/ld+json" data-rh="true">{"@context":"https://schema.org","@type":"WebPage","@id":"","name":"Manta Villas Bali - Luxury Villa Rentals & Management","description":"Discover handpicked luxury villas for rent in Bali, Indonesia. Daily, monthly, and yearly rentals with professional villa management services.","url":"","isPartOf":{"@id":"/#website"},"publisher":{"@id":"/#organization"},"inLanguage":"en-US","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1","h2",".hero-description"]}}</script></head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LK5T4NP"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
-    <!-- Meta Pixel Code (noscript) -->
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1286405936647329&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code (noscript) -->
-    
-    <div id="root"><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;"><ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol></div><div class="min-h-screen flex flex-col"><nav class="top-0 w-full backdrop-blur-lg z-50 transition-all duration-300 fixed bg-black/30 border-b border-white/20 text-white shadow-lg" data-testid="navbar"><div class="w-full px-6 lg:px-12"><div class="flex justify-between items-center h-16"><a data-testid="logo-link" href="/" class="flex-shrink-0"><img src="/logo.svg" alt="Bali Villas" class="inline-block shrink-0 h-10" style="height: 40px; width: auto;"></a><div class="hidden md:flex lg:flex items-center justify-center flex-1 max-w-3xl mx-4 lg:mx-8"><nav aria-label="Main" data-orientation="horizontal" dir="ltr" class="relative z-10 flex max-w-max flex-1 items-center justify-center"><div style="position: relative;"><ul data-orientation="horizontal" class="group flex flex-1 list-none items-center justify-center space-x-1 md:space-x-4 lg:space-x-8" dir="ltr"><li><a data-testid="nav-link-book-a-villa" data-radix-collection-item="" href="/book-villa/" class="md:text-sm lg:text-base font-medium transition-all duration-300 relative py-2 block after:absolute after:bottom-0 after:left-0 after:right-0 after:h-1 after:transform after:transition-transform after:duration-200 after:scale-x-0 hover:after:scale-x-100 text-white/80 hover:text-white after:bg-white">Book a Villa</a></li><li><a data-testid="nav-link-experiences" data-radix-collection-item="" href="/experiences/" class="md:text-sm lg:text-base font-medium transition-all duration-300 relative py-2 block after:absolute after:bottom-0 after:left-0 after:right-0 after:h-1 after:transform after:transition-transform after:duration-200 after:scale-x-0 hover:after:scale-x-100 text-white/80 hover:text-white after:bg-white">Experiences</a></li><li><a data-testid="nav-link-villa-management" data-radix-collection-item="" href="/bali-villa-management/" class="md:text-sm lg:text-base font-medium transition-all duration-300 relative py-2 block after:absolute after:bottom-0 after:left-0 after:right-0 after:h-1 after:transform after:transition-transform after:duration-200 after:scale-x-0 hover:after:scale-x-100 text-white/80 hover:text-white after:bg-white">Villa management</a></li><li><a data-testid="nav-link-about-us" data-radix-collection-item="" href="/about/" class="md:text-sm lg:text-base font-medium transition-all duration-300 relative py-2 block after:absolute after:bottom-0 after:left-0 after:right-0 after:h-1 after:transform after:transition-transform after:duration-200 after:scale-x-0 hover:after:scale-x-100 text-white/80 hover:text-white after:bg-white">About us</a></li></ul></div><div class="absolute left-0 top-full flex justify-center"></div></nav></div><div class="hidden md:flex lg:flex items-center md:space-x-3 lg:space-x-4 flex-shrink-0"><a href="https://owners.mantavillas.com" target="_blank" rel="noopener noreferrer" class="md:text-xs lg:text-sm font-medium transition-colors duration-300 whitespace-nowrap text-white/80 hover:text-white" data-testid="owners-login-link">Owners login</a><a href="https://owners.mantavillas.com/create-account" target="_blank" rel="noopener noreferrer" class="font-medium md:px-3 lg:px-6 py-2 h-8 md:h-8 lg:h-9 md:text-xs lg:text-sm rounded-full transition-all duration-300 bg-orange-500 hover:bg-orange-600 text-white inline-flex items-center whitespace-nowrap" data-testid="list-property-cta">Get a free projection</a></div><div class="md:hidden flex items-center space-x-3"><a href="https://owners.mantavillas.com/create-account" target="_blank" rel="noopener noreferrer" class="bg-orange-500 hover:bg-orange-600 text-white px-3 h-8 text-xs shadow-md rounded-full inline-flex items-center whitespace-nowrap" data-testid="mobile-list-property-cta">Get a free projection</a><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-9 p-2 rounded-lg transition-all duration-300 hover:bg-white/10" data-testid="mobile-menu-trigger" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r5:" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6 transition-all duration-300 text-white"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button></div></div></div></nav><main class="flex-grow"><div data-testid="home-page"><section class="relative h-screen flex flex-col overflow-hidden bg-gradient-to-b from-slate-900 to-slate-700" data-testid="video-hero"><div class="absolute top-0 left-0 w-full h-full overflow-hidden"><video autoplay="" loop="" playsinline="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover scale-[1.25]" data-testid="hero-background-video-selfhosted"><source src="/video-header-manta.mp4" type="video/mp4">Your browser does not support the video tag.</video></div><div class="absolute inset-0 bg-black z-10" style="opacity: 0.3;"></div><div class="relative z-20 pt-24 md:pt-28 px-4 sm:px-6 lg:px-8"><div class="max-w-4xl mx-auto" style="opacity: 1; transform: none;"><div class=""><div class="sm:hidden"><button class="w-full bg-white rounded-full px-6 py-4 flex items-center gap-3 shadow-lg" data-testid="hero-search-mobile-trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search h-5 w-5 text-gray-400"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><span class="text-gray-600 font-medium">Start your search</span></button></div><div class="hidden sm:block bg-white rounded-3xl lg:rounded-full shadow-xl"><div class="flex flex-row items-stretch"><button class="flex items-center gap-1 sm:gap-3 px-2 sm:px-4 lg:px-5 py-3 lg:py-4 rounded-l-3xl lg:rounded-l-full transition-colors flex-1 min-w-0 text-left border-r border-gray-200" data-testid="hero-search-location-trigger" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:rb:" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-3 w-3 sm:h-5 sm:w-5 lg:h-5 lg:w-5 text-[#4A7C59] flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg><div class="min-w-0 hidden sm:block"><div class="text-[8px] sm:text-xs lg:text-xs text-[#4A7C59] font-medium">Location</div><div class="text-[7px] sm:text-sm lg:text-sm text-gray-900 truncate">Where are you going?</div></div><div class="min-w-0 sm:hidden"><div class="text-[9px] text-gray-900 truncate">Where?</div></div></button><button class="flex items-center gap-1 sm:gap-3 px-2 sm:px-4 lg:px-5 py-3 lg:py-4 transition-colors flex-1 min-w-0 text-left border-r border-gray-200" data-testid="hero-search-date-trigger" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:rc:" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar h-3 w-3 sm:h-5 sm:w-5 lg:h-5 lg:w-5 text-gray-400 flex-shrink-0"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg><div class="min-w-0 hidden sm:block"><div class="text-[8px] sm:text-xs lg:text-sm text-gray-900 font-medium">Add dates</div><div class="text-[7px] sm:text-xs text-gray-500">Check-in - Check-out</div></div><div class="min-w-0 sm:hidden"><div class="text-[9px] text-gray-900 truncate">Dates</div></div></button><button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-black hover:bg-gray-800 text-white px-6 sm:px-8 lg:px-10 py-3 lg:py-4 rounded-r-3xl lg:rounded-r-full h-auto m-0 flex-shrink-0 gap-2" data-testid="hero-search-submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search h-4 w-4 sm:h-5 sm:w-5"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><span class="font-semibold text-sm sm:text-base">Search</span></button></div></div></div><div class="md:hidden text-center mt-[80px] mb-[80px]"><h1 class="font-bold mb-2 text-white text-[36px]">Discover Your Perfect Villa in Bali</h1><p class="mb-4 text-white/90 text-[18px]">Experience luxury living in the heart of Bali</p><div class="flex flex-row gap-3 w-full"><button class="flex-1 rounded-lg font-semibold transition-colors bg-white text-black hover:bg-gray-100" style="padding: 1rem 1.5rem;">Book a Villa</button><button class="flex-1 rounded-lg font-semibold transition-colors border-2 border-white text-white hover:bg-white hover:text-black" style="padding: 1rem 1.5rem;">List your property</button></div></div></div></div><div class="relative z-20 flex-1 flex items-end pb-16 md:pb-24 hidden md:flex"><div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8"><div class="max-w-xl"><h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-white leading-tight" data-testid="hero-title" style="opacity: 1; transform: none;">Discover Your Perfect Villa in Bali</h1><p class="text-sm sm:text-base md:text-lg mb-6 text-white/90 leading-relaxed" data-testid="hero-subtitle" style="opacity: 1; transform: none;">Experience luxury living in the heart of Bali</p><div class="flex flex-wrap gap-3" style="opacity: 1; transform: none;"><button class="rounded-lg font-semibold transition-colors bg-white text-black hover:bg-gray-100" data-testid="hero-button-1" style="padding: 1rem 1.5rem;">Book a Villa</button><button class="rounded-lg font-semibold transition-colors border-2 border-white text-white hover:bg-white hover:text-black" data-testid="hero-button-2" style="padding: 1rem 1.5rem;">List your property</button></div></div></div></div></div></section><section id="featured-villas" class="py-8 sm:py-12 bg-background"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-6 sm:mb-8" style="opacity: 1; transform: none;"><h2 class="md3-headline-large text-foreground mb-4" data-testid="featured-villas-title">Featured Luxury Villas</h2><p class="md3-body-large text-muted-foreground" data-testid="featured-villas-subtitle">Handpicked properties for your perfect Bali getaway</p></div><div dir="ltr" data-orientation="horizontal" class="w-full"><div role="tablist" aria-orientation="horizontal" class="h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground grid w-full max-w-md mx-auto grid-cols-3 mb-8" tabindex="0" data-orientation="horizontal" style="outline: none;"><button type="button" role="tab" aria-selected="true" aria-controls="radix-:rd:-content-daily" data-state="active" id="radix-:rd:-trigger-daily" class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm" data-testid="tab-daily" tabindex="-1" data-orientation="horizontal" data-radix-collection-item="">Daily</button><button type="button" role="tab" aria-selected="false" aria-controls="radix-:rd:-content-monthly" data-state="inactive" id="radix-:rd:-trigger-monthly" class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm" data-testid="tab-monthly" tabindex="-1" data-orientation="horizontal" data-radix-collection-item="">Monthly</button><button type="button" role="tab" aria-selected="false" aria-controls="radix-:rd:-content-yearly" data-state="inactive" id="radix-:rd:-trigger-yearly" class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm" data-testid="tab-yearly" tabindex="-1" data-orientation="horizontal" data-radix-collection-item="">Yearly</button></div><div data-state="active" data-orientation="horizontal" role="tabpanel" aria-labelledby="radix-:rd:-trigger-daily" id="radix-:rd:-content-daily" tabindex="0" class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" data-testid="daily-listings" style=""><div class="md:hidden overflow-hidden"><div class="flex gap-4" style="transform: translate3d(0px, 0px, 0px);"><div class="flex-none w-[85%] min-w-0"><div data-testid="villa-card-hostaway-503658" class="w-full"><a href="/villa/samadhi-villas-aruna/" class="block cursor-pointer"><div class="text-card-foreground overflow-hidden border-0 shadow-sm hover:shadow-md transition-all duration-300 bg-white rounded-xl"><div class="relative rounded-t-xl overflow-hidden"><div class="relative w-full h-64 bg-gray-200 group"><img src="/public-objects/images/hostaway-503658-1.jpg" alt="1BR Villa with Rice Field &amp; Mountain Views Sidemen" class="w-full h-full object-cover"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-10 w-10 absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-testid="gallery-prev-1BR Villa with Rice Field &amp; Mountain Views Sidemen"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left h-6 w-6"><path d="m15 18-6-6 6-6"></path></svg></button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-10 w-10 absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-testid="gallery-next-1BR Villa with Rice Field &amp; Mountain Views Sidemen"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right h-6 w-6"><path d="m9 18 6-6-6-6"></path></svg></button><div class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded">1/5</div><div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2"><button class="h-2 w-2 rounded-full transition-all bg-white w-6" data-testid="gallery-dot-0"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-1"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-2"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-3"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-4"></button></div></div><div class="absolute top-3 left-3 flex flex-wrap gap-1"><div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 bg-primary text-primary-foreground font-medium capitalize" data-testid="villa-rental-type-daily-hostaway-503658">Daily</div></div></div><div class="p-4"><h3 class="font-semibold text-lg text-gray-900 mb-1 line-clamp-1" data-testid="villa-name-hostaway-503658">1BR Villa with Rice Field &amp; Mountain Views Sidemen</h3><p class="text-gray-600 text-sm mb-3 line-clamp-2" data-testid="villa-description-hostaway-503658">Selamat Datang di Samadhi Villas – Aruna, a stunning and tranquil 1-bedroom retreat designed for a truly peaceful escape in Sidemen. Surrounded by lush Balinese nature, with breathtaking rice field and mountain views. Thoughtfully designed with warm tropical ambiance, Samadhi Villas – Sidhi is the ideal sanctuary for those seeking relaxation, comfort, and an authentic island experience.
-
-Escape to Samadhi Villas - Aruna, a beautifully designed 1-bedroom sanctuary offering the perfect peaceful retreat in Sidemen. This stylish two-story property features a refreshing private pool and glass doors that open directly onto serene views of lush tropical greenery and traditional rice fields. Samadhi Villas provides a tranquil, fully air-conditioned haven complete with a well-equipped kitchenette and Wi-Fi, making it the ideal base for couples or small families seeking both peace and serene comfort.
-
-When you stay here, you’ll have the entire property of Aruna Villa to yourself. That means you can enjoy every corner of its beautiful space, from the cozy interiors to the outdoor areas. Whether you want to relax in the living room, cook up a meal in the fully-equipped kitchen, or unwind in the garden, it’s all yours to explore. We’ve made sure everything you need for a comfortable stay is at your fingertips, so feel free to make yourself at home.
-
-GUEST SUPPORT &amp; CONCIERGE SERVICES
-Your comfort and convenience are our top priorities. Our dedicated villa manager will be at your service throughout your stay. He will reach out to you prior to your arrival to coordinate the check-in process and provide a personal tour of the villa. During your stay, he will be your single point of contact, ready to assist with any needs or questions you might have.
-
-GUEST APP
-Additionally, you'll gain access to our exclusive Guest App, where you can explore detailed villa guides and enhance your stay with a variety of upgrades. Whether you need an airport shuttle, in-house massage, private driver, chef, or a yoga instructor, it’s all just a few taps away.
-
-Restaurant: 
-
-- Warung Ume Anyar - 1 min with bike ( Delivery to Villa also available
-
-- Warung Puriasih Sidemen - 1 min with bike
-
-- Restaurant Melita - 3 mins with bike
-
-- Warung Lotus Sidemen - 4 mins with bike
-
-Activities:
-
-- Made Silver Class - 2 mins with bike
-
-- Sidemen Rice Terrace - 2 mins with bike
-
-- Anjani Spa - 6 mins with bike
-
-NOTE
-- Smoking is not allowed inside the villa. We will have to charge additional cleaning costs if you do smoke inside the villa.
-- It is not allowed to host a party
-
-Early check-in and late check-out
-In consultation we can always see if it is possible to meet a request for early check-in or late check-out. This is always confirmed at the last minute and is subject to availability. If you want to be sure that this is possible, we recommend booking an extra night in advance or afterwards.
-
-CONSTRUCTION DISCLAIMER:
-
-Please be aware that construction could take place next to ANY villa anywhere in Bali. Since the construction is initiated by other villa owners and is beyond our control, we are unable to offer refunds for any disturbances. We appreciate your understanding and are committed to ensuring your stay is as enjoyable as possible.</p><div class="flex items-center gap-1 text-sm text-gray-600 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg><span data-testid="villa-city-hostaway-503658">Sidemen</span></div><div class="flex items-center gap-3 text-sm text-gray-600 mb-3"><div class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bed h-4 w-4"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg><span data-testid="villa-bedrooms-hostaway-503658">1</span></div><div class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bath h-4 w-4"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path><line x1="10" x2="8" y1="5" y2="7"></line><line x1="2" x2="22" y1="12" y2="12"></line><line x1="7" x2="7" y1="19" y2="21"></line><line x1="17" x2="17" y1="19" y2="21"></line></svg><span data-testid="villa-bathrooms-hostaway-503658">1</span></div></div><div class="space-y-1 pt-2 border-t border-gray-100"><div class="flex items-baseline gap-1"><span class="font-semibold text-gray-900">IDR&nbsp;2,000,000</span><span class="text-sm text-gray-500">/ night</span></div></div></div></div></a></div></div><div class="flex-none w-[85%] min-w-0"><div data-testid="villa-card-hostaway-505192" class="w-full"><a href="/villa/villa-santai-aja/" class="block cursor-pointer"><div class="text-card-foreground overflow-hidden border-0 shadow-sm hover:shadow-md transition-all duration-300 bg-white rounded-xl"><div class="relative rounded-t-xl overflow-hidden"><div class="relative w-full h-64 bg-gray-200 group"><img src="/public-objects/images/hostaway-505192-1.jpg" alt="3BR Luxury Villa in Balangan with Private Pool" class="w-full h-full object-cover"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-10 w-10 absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-testid="gallery-prev-3BR Luxury Villa in Balangan with Private Pool"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left h-6 w-6"><path d="m15 18-6-6 6-6"></path></svg></button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-10 w-10 absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-testid="gallery-next-3BR Luxury Villa in Balangan with Private Pool"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right h-6 w-6"><path d="m9 18 6-6-6-6"></path></svg></button><div class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded">1/5</div><div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2"><button class="h-2 w-2 rounded-full transition-all bg-white w-6" data-testid="gallery-dot-0"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-1"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-2"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-3"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-4"></button></div></div><div class="absolute top-3 left-3 flex flex-wrap gap-1"><div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 bg-primary text-primary-foreground font-medium capitalize" data-testid="villa-rental-type-daily-hostaway-505192">Daily</div></div></div><div class="p-4"><h3 class="font-semibold text-lg text-gray-900 mb-1 line-clamp-1" data-testid="villa-name-hostaway-505192">3BR Luxury Villa in Balangan with Private Pool</h3><p class="text-gray-600 text-sm mb-3 line-clamp-2" data-testid="villa-description-hostaway-505192">Selamat datang di Villa Santai Aja. Experience refined tropical living in this beautifully designed 3-bedroom villa, where modern architecture meets warm natural textures. Perfectly crafted for comfort and style, this private retreat offers a शांत and sophisticated escape for families, groups, or long-stay guests in Bali.
-
-This private 3-bedroom villa is designed with a modern tropical concept, offering a perfect balance between elegance and comfort. The property features a spacious open-plan layout that connects the living, dining, and kitchen areas directly to the outdoor pool and garden.
-
-Surrounded by lush greenery, the villa provides a शांत and intimate atmosphere while still maintaining a sleek, contemporary design. Large glass doors allow natural light to fill the space, creating a bright and airy ambiance throughout the day.
-
-Each corner of the villa is thoughtfully curated from the stylish living area to the warm wooden finishes—ensuring a comfortable and visually pleasing stay. The private pool and outdoor area serve as the heart of the villa, perfect for relaxing, unwinding, or enjoying quality time with family and friends.
-
-Ideal for families, groups, or long stays, this property offers both privacy and functionality in a beautifully designed setting.
-
-Guests will have full private access to the entire villa during their stay, ensuring complete comfort and privacy.
-
-This includes:
-
-All 3 bedrooms and en-suite bathrooms
-Private swimming pool and garden area
-Living room, dining area, and fully equipped kitchen
-
-The villa is exclusively yours—no shared spaces with other guests.
-
-Our team will assist you with check-in and remain available throughout your stay should you need any support, while always respecting your privacy.
-
-Parking area is available on-site for your convenience.
-
-GUEST SUPPORT &amp; CONCIERGE SERVICES
-Your comfort and convenience are our top priorities. Our dedicated villa manager will be at your service throughout your stay. He will reach out to you prior to your arrival to coordinate the check-in process and provide a personal tour of the villa. During your stay, he will be your single point of contact, ready to assist with any needs or questions you might have.
-
-GUEST APP
-Additionally, you'll gain access to our exclusive Guest App, where you can explore detailed villa guides and enhance your stay with a variety of upgrades. Whether you need an airport shuttle, in-house massage, private driver, chef, or a yoga instructor, it’s all just a few taps away.
-
-NOTE
-- Smoking is not allowed inside the villa. We will have to charge additional cleaning costs if you do smoke inside the villa.
-- It is not allowed to host a party
-
-Early check-in and late check-out
-In consultation we can always see if it is possible to meet a request for early check-in or late check-out. This is always confirmed at the last minute and is subject to availability. If you want to be sure that this is possible, we recommend booking an extra night in advance or afterwards.
-
-CONSTRUCTION DISCLAIMER:
-
-Please be aware that construction could take place next to ANY villa anywhere in Bali. Since the construction is initiated by other villa owners and is beyond our control, we are unable to offer refunds for any disturbances. We appreciate your understanding and are committed to ensuring your stay is as enjoyable as possible.</p><div class="flex items-center gap-1 text-sm text-gray-600 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg><span data-testid="villa-city-hostaway-505192">South Kuta</span></div><div class="flex items-center gap-3 text-sm text-gray-600 mb-3"><div class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bed h-4 w-4"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg><span data-testid="villa-bedrooms-hostaway-505192">3</span></div><div class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bath h-4 w-4"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path><line x1="10" x2="8" y1="5" y2="7"></line><line x1="2" x2="22" y1="12" y2="12"></line><line x1="7" x2="7" y1="19" y2="21"></line><line x1="17" x2="17" y1="19" y2="21"></line></svg><span data-testid="villa-bathrooms-hostaway-505192">3</span></div></div><div class="space-y-1 pt-2 border-t border-gray-100"><div class="flex items-baseline gap-1"><span class="font-semibold text-gray-900">IDR&nbsp;3,500,000</span><span class="text-sm text-gray-500">/ night</span></div></div></div></div></a></div></div><div class="flex-none w-[85%] min-w-0"><div data-testid="villa-card-hostaway-296152" class="w-full"><a href="/villa/villa-glentana/" class="block cursor-pointer"><div class="text-card-foreground overflow-hidden border-0 shadow-sm hover:shadow-md transition-all duration-300 bg-white rounded-xl"><div class="relative rounded-t-xl overflow-hidden"><div class="relative w-full h-64 bg-gray-200 group"><img src="/public-objects/images/hostaway-296152-1.jpg" alt="Villa Glentana" class="w-full h-full object-cover"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-10 w-10 absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-testid="gallery-prev-Villa Glentana"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left h-6 w-6"><path d="m15 18-6-6 6-6"></path></svg></button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-10 w-10 absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-testid="gallery-next-Villa Glentana"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right h-6 w-6"><path d="m9 18 6-6-6-6"></path></svg></button><div class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded">1/5</div><div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2"><button class="h-2 w-2 rounded-full transition-all bg-white w-6" data-testid="gallery-dot-0"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-1"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-2"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-3"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-4"></button></div></div><div class="absolute top-3 left-3 flex flex-wrap gap-1"><div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 bg-primary text-primary-foreground font-medium capitalize" data-testid="villa-rental-type-daily-hostaway-296152">Daily</div></div></div><div class="p-4"><h3 class="font-semibold text-lg text-gray-900 mb-1 line-clamp-1" data-testid="villa-name-hostaway-296152">Villa Glentana</h3><p class="text-gray-600 text-sm mb-3 line-clamp-2" data-testid="villa-description-hostaway-296152">Escape to our Mediterranean-style villa in Seseh, featuring three spacious bedrooms, each designed for comfort and tranquility. Overlooking lush rice fields, this villa offers stunning views and a serene ambiance. Enjoy a private pool, perfect for a refreshing dip or lounging under the sun. The villa blends modern amenities with rustic charm, providing a perfect retreat. Located just minutes from the beach and local attractions, it's an ideal destination for relaxation and adventure.
-
-Our villa features three bedrooms, each with an ensuite bathroom for ultimate privacy. The closed living room offers a cozy space for relaxation. Step outside to enjoy the infinity pool and sunbeds, perfect for unwinding under the sun. Experience breathtaking sunsets over the epic rice fields, the best in whole Bali, creating a picturesque backdrop for your stay. Enjoy a fully equipped kitchen and spacious dining area, ideal for family meals and gatherings.
-
-DAILY CLEANING
-- Housekeeping will come over daily to clean the villa
-
-TRANSPORTATION
-- We offer airport pick-up and drop-off services with private driver
-- We can arrange a car with private driver for you to explore the island
-
-INCLUDED 
-- Complimentary drinking water
-- WiFi
-- Private pool
-- Change of linnen 2x per week
-- Gardening and pool cleaning 2x per week
-- Private car parking for 1 car
-
-EXTRA SERVICES (PAID)
-- In house massage
-- Nanny/babysitter service (upon availability)
-- Private cook/cooking classes (upon availability)
-- Scuba diving trips and courses
-- Snorkling trips
-- Private chauffeur (island excursions, personalized trips)
-
-BREAKFAST
-- Breakfast is not included in you reservation. This can be ordered after your booking is complete.
-- We offer floating breakfast
--  Please inform us at least one day upfront regarding your breakfast requests so there is enough preparation time
-
-NOTE
-- Smoking is not allowed inside the villa. We will have to charge additional cleaning costs if you do smoke inside the villa.
-- It is not allowed to host a party
-
-Early check-in and late check-out
-In consultation we can always see if it is possible to meet a request for early check-in or late check-out. This is always confirmed at the last minute and is subject to availability. If you want to be sure that this is possible, we recommend booking an extra night in advance or afterwards.</p><div class="flex items-center gap-1 text-sm text-gray-600 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg><span data-testid="villa-city-hostaway-296152">Seseh</span></div><div class="flex items-center gap-3 text-sm text-gray-600 mb-3"><div class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bed h-4 w-4"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg><span data-testid="villa-bedrooms-hostaway-296152">3</span></div><div class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bath h-4 w-4"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path><line x1="10" x2="8" y1="5" y2="7"></line><line x1="2" x2="22" y1="12" y2="12"></line><line x1="7" x2="7" y1="19" y2="21"></line><line x1="17" x2="17" y1="19" y2="21"></line></svg><span data-testid="villa-bathrooms-hostaway-296152">3</span></div></div><div class="space-y-1 pt-2 border-t border-gray-100"><div class="flex items-baseline gap-1"><span class="font-semibold text-gray-900">IDR&nbsp;3,875,266</span><span class="text-sm text-gray-500">/ night</span></div></div></div></div></a></div></div></div></div><div class="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6"><div data-testid="villa-card-hostaway-503658" class="w-full"><a href="/villa/samadhi-villas-aruna/" class="block cursor-pointer"><div class="text-card-foreground overflow-hidden border-0 shadow-sm hover:shadow-md transition-all duration-300 bg-white rounded-xl"><div class="relative rounded-t-xl overflow-hidden"><div class="relative w-full h-64 bg-gray-200 group"><img src="/public-objects/images/hostaway-503658-1.jpg" alt="1BR Villa with Rice Field &amp; Mountain Views Sidemen" class="w-full h-full object-cover"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-10 w-10 absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-testid="gallery-prev-1BR Villa with Rice Field &amp; Mountain Views Sidemen"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left h-6 w-6"><path d="m15 18-6-6 6-6"></path></svg></button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-10 w-10 absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-testid="gallery-next-1BR Villa with Rice Field &amp; Mountain Views Sidemen"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right h-6 w-6"><path d="m9 18 6-6-6-6"></path></svg></button><div class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded">1/5</div><div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2"><button class="h-2 w-2 rounded-full transition-all bg-white w-6" data-testid="gallery-dot-0"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-1"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-2"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-3"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-4"></button></div></div><div class="absolute top-3 left-3 flex flex-wrap gap-1"><div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 bg-primary text-primary-foreground font-medium capitalize" data-testid="villa-rental-type-daily-hostaway-503658">Daily</div></div></div><div class="p-4"><h3 class="font-semibold text-lg text-gray-900 mb-1 line-clamp-1" data-testid="villa-name-hostaway-503658">1BR Villa with Rice Field &amp; Mountain Views Sidemen</h3><p class="text-gray-600 text-sm mb-3 line-clamp-2" data-testid="villa-description-hostaway-503658">Selamat Datang di Samadhi Villas – Aruna, a stunning and tranquil 1-bedroom retreat designed for a truly peaceful escape in Sidemen. Surrounded by lush Balinese nature, with breathtaking rice field and mountain views. Thoughtfully designed with warm tropical ambiance, Samadhi Villas – Sidhi is the ideal sanctuary for those seeking relaxation, comfort, and an authentic island experience.
-
-Escape to Samadhi Villas - Aruna, a beautifully designed 1-bedroom sanctuary offering the perfect peaceful retreat in Sidemen. This stylish two-story property features a refreshing private pool and glass doors that open directly onto serene views of lush tropical greenery and traditional rice fields. Samadhi Villas provides a tranquil, fully air-conditioned haven complete with a well-equipped kitchenette and Wi-Fi, making it the ideal base for couples or small families seeking both peace and serene comfort.
-
-When you stay here, you’ll have the entire property of Aruna Villa to yourself. That means you can enjoy every corner of its beautiful space, from the cozy interiors to the outdoor areas. Whether you want to relax in the living room, cook up a meal in the fully-equipped kitchen, or unwind in the garden, it’s all yours to explore. We’ve made sure everything you need for a comfortable stay is at your fingertips, so feel free to make yourself at home.
-
-GUEST SUPPORT &amp; CONCIERGE SERVICES
-Your comfort and convenience are our top priorities. Our dedicated villa manager will be at your service throughout your stay. He will reach out to you prior to your arrival to coordinate the check-in process and provide a personal tour of the villa. During your stay, he will be your single point of contact, ready to assist with any needs or questions you might have.
-
-GUEST APP
-Additionally, you'll gain access to our exclusive Guest App, where you can explore detailed villa guides and enhance your stay with a variety of upgrades. Whether you need an airport shuttle, in-house massage, private driver, chef, or a yoga instructor, it’s all just a few taps away.
-
-Restaurant: 
-
-- Warung Ume Anyar - 1 min with bike ( Delivery to Villa also available
-
-- Warung Puriasih Sidemen - 1 min with bike
-
-- Restaurant Melita - 3 mins with bike
-
-- Warung Lotus Sidemen - 4 mins with bike
-
-Activities:
-
-- Made Silver Class - 2 mins with bike
-
-- Sidemen Rice Terrace - 2 mins with bike
-
-- Anjani Spa - 6 mins with bike
-
-NOTE
-- Smoking is not allowed inside the villa. We will have to charge additional cleaning costs if you do smoke inside the villa.
-- It is not allowed to host a party
-
-Early check-in and late check-out
-In consultation we can always see if it is possible to meet a request for early check-in or late check-out. This is always confirmed at the last minute and is subject to availability. If you want to be sure that this is possible, we recommend booking an extra night in advance or afterwards.
-
-CONSTRUCTION DISCLAIMER:
-
-Please be aware that construction could take place next to ANY villa anywhere in Bali. Since the construction is initiated by other villa owners and is beyond our control, we are unable to offer refunds for any disturbances. We appreciate your understanding and are committed to ensuring your stay is as enjoyable as possible.</p><div class="flex items-center gap-1 text-sm text-gray-600 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg><span data-testid="villa-city-hostaway-503658">Sidemen</span></div><div class="flex items-center gap-3 text-sm text-gray-600 mb-3"><div class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bed h-4 w-4"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg><span data-testid="villa-bedrooms-hostaway-503658">1</span></div><div class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bath h-4 w-4"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path><line x1="10" x2="8" y1="5" y2="7"></line><line x1="2" x2="22" y1="12" y2="12"></line><line x1="7" x2="7" y1="19" y2="21"></line><line x1="17" x2="17" y1="19" y2="21"></line></svg><span data-testid="villa-bathrooms-hostaway-503658">1</span></div></div><div class="space-y-1 pt-2 border-t border-gray-100"><div class="flex items-baseline gap-1"><span class="font-semibold text-gray-900">IDR&nbsp;2,000,000</span><span class="text-sm text-gray-500">/ night</span></div></div></div></div></a></div><div data-testid="villa-card-hostaway-505192" class="w-full"><a href="/villa/villa-santai-aja/" class="block cursor-pointer"><div class="text-card-foreground overflow-hidden border-0 shadow-sm hover:shadow-md transition-all duration-300 bg-white rounded-xl"><div class="relative rounded-t-xl overflow-hidden"><div class="relative w-full h-64 bg-gray-200 group"><img src="/public-objects/images/hostaway-505192-1.jpg" alt="3BR Luxury Villa in Balangan with Private Pool" class="w-full h-full object-cover"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-10 w-10 absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-testid="gallery-prev-3BR Luxury Villa in Balangan with Private Pool"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left h-6 w-6"><path d="m15 18-6-6 6-6"></path></svg></button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-10 w-10 absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-testid="gallery-next-3BR Luxury Villa in Balangan with Private Pool"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right h-6 w-6"><path d="m9 18 6-6-6-6"></path></svg></button><div class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded">1/5</div><div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2"><button class="h-2 w-2 rounded-full transition-all bg-white w-6" data-testid="gallery-dot-0"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-1"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-2"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-3"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-4"></button></div></div><div class="absolute top-3 left-3 flex flex-wrap gap-1"><div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 bg-primary text-primary-foreground font-medium capitalize" data-testid="villa-rental-type-daily-hostaway-505192">Daily</div></div></div><div class="p-4"><h3 class="font-semibold text-lg text-gray-900 mb-1 line-clamp-1" data-testid="villa-name-hostaway-505192">3BR Luxury Villa in Balangan with Private Pool</h3><p class="text-gray-600 text-sm mb-3 line-clamp-2" data-testid="villa-description-hostaway-505192">Selamat datang di Villa Santai Aja. Experience refined tropical living in this beautifully designed 3-bedroom villa, where modern architecture meets warm natural textures. Perfectly crafted for comfort and style, this private retreat offers a शांत and sophisticated escape for families, groups, or long-stay guests in Bali.
-
-This private 3-bedroom villa is designed with a modern tropical concept, offering a perfect balance between elegance and comfort. The property features a spacious open-plan layout that connects the living, dining, and kitchen areas directly to the outdoor pool and garden.
-
-Surrounded by lush greenery, the villa provides a शांत and intimate atmosphere while still maintaining a sleek, contemporary design. Large glass doors allow natural light to fill the space, creating a bright and airy ambiance throughout the day.
-
-Each corner of the villa is thoughtfully curated from the stylish living area to the warm wooden finishes—ensuring a comfortable and visually pleasing stay. The private pool and outdoor area serve as the heart of the villa, perfect for relaxing, unwinding, or enjoying quality time with family and friends.
-
-Ideal for families, groups, or long stays, this property offers both privacy and functionality in a beautifully designed setting.
-
-Guests will have full private access to the entire villa during their stay, ensuring complete comfort and privacy.
-
-This includes:
-
-All 3 bedrooms and en-suite bathrooms
-Private swimming pool and garden area
-Living room, dining area, and fully equipped kitchen
-
-The villa is exclusively yours—no shared spaces with other guests.
-
-Our team will assist you with check-in and remain available throughout your stay should you need any support, while always respecting your privacy.
-
-Parking area is available on-site for your convenience.
-
-GUEST SUPPORT &amp; CONCIERGE SERVICES
-Your comfort and convenience are our top priorities. Our dedicated villa manager will be at your service throughout your stay. He will reach out to you prior to your arrival to coordinate the check-in process and provide a personal tour of the villa. During your stay, he will be your single point of contact, ready to assist with any needs or questions you might have.
-
-GUEST APP
-Additionally, you'll gain access to our exclusive Guest App, where you can explore detailed villa guides and enhance your stay with a variety of upgrades. Whether you need an airport shuttle, in-house massage, private driver, chef, or a yoga instructor, it’s all just a few taps away.
-
-NOTE
-- Smoking is not allowed inside the villa. We will have to charge additional cleaning costs if you do smoke inside the villa.
-- It is not allowed to host a party
-
-Early check-in and late check-out
-In consultation we can always see if it is possible to meet a request for early check-in or late check-out. This is always confirmed at the last minute and is subject to availability. If you want to be sure that this is possible, we recommend booking an extra night in advance or afterwards.
-
-CONSTRUCTION DISCLAIMER:
-
-Please be aware that construction could take place next to ANY villa anywhere in Bali. Since the construction is initiated by other villa owners and is beyond our control, we are unable to offer refunds for any disturbances. We appreciate your understanding and are committed to ensuring your stay is as enjoyable as possible.</p><div class="flex items-center gap-1 text-sm text-gray-600 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg><span data-testid="villa-city-hostaway-505192">South Kuta</span></div><div class="flex items-center gap-3 text-sm text-gray-600 mb-3"><div class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bed h-4 w-4"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg><span data-testid="villa-bedrooms-hostaway-505192">3</span></div><div class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bath h-4 w-4"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path><line x1="10" x2="8" y1="5" y2="7"></line><line x1="2" x2="22" y1="12" y2="12"></line><line x1="7" x2="7" y1="19" y2="21"></line><line x1="17" x2="17" y1="19" y2="21"></line></svg><span data-testid="villa-bathrooms-hostaway-505192">3</span></div></div><div class="space-y-1 pt-2 border-t border-gray-100"><div class="flex items-baseline gap-1"><span class="font-semibold text-gray-900">IDR&nbsp;3,500,000</span><span class="text-sm text-gray-500">/ night</span></div></div></div></div></a></div><div data-testid="villa-card-hostaway-296152" class="w-full"><a href="/villa/villa-glentana/" class="block cursor-pointer"><div class="text-card-foreground overflow-hidden border-0 shadow-sm hover:shadow-md transition-all duration-300 bg-white rounded-xl"><div class="relative rounded-t-xl overflow-hidden"><div class="relative w-full h-64 bg-gray-200 group"><img src="/public-objects/images/hostaway-296152-1.jpg" alt="Villa Glentana" class="w-full h-full object-cover"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-10 w-10 absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-testid="gallery-prev-Villa Glentana"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left h-6 w-6"><path d="m15 18-6-6 6-6"></path></svg></button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-10 w-10 absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity" data-testid="gallery-next-Villa Glentana"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right h-6 w-6"><path d="m9 18 6-6-6-6"></path></svg></button><div class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded">1/5</div><div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2"><button class="h-2 w-2 rounded-full transition-all bg-white w-6" data-testid="gallery-dot-0"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-1"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-2"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-3"></button><button class="h-2 w-2 rounded-full transition-all bg-white/60" data-testid="gallery-dot-4"></button></div></div><div class="absolute top-3 left-3 flex flex-wrap gap-1"><div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 bg-primary text-primary-foreground font-medium capitalize" data-testid="villa-rental-type-daily-hostaway-296152">Daily</div></div></div><div class="p-4"><h3 class="font-semibold text-lg text-gray-900 mb-1 line-clamp-1" data-testid="villa-name-hostaway-296152">Villa Glentana</h3><p class="text-gray-600 text-sm mb-3 line-clamp-2" data-testid="villa-description-hostaway-296152">Escape to our Mediterranean-style villa in Seseh, featuring three spacious bedrooms, each designed for comfort and tranquility. Overlooking lush rice fields, this villa offers stunning views and a serene ambiance. Enjoy a private pool, perfect for a refreshing dip or lounging under the sun. The villa blends modern amenities with rustic charm, providing a perfect retreat. Located just minutes from the beach and local attractions, it's an ideal destination for relaxation and adventure.
-
-Our villa features three bedrooms, each with an ensuite bathroom for ultimate privacy. The closed living room offers a cozy space for relaxation. Step outside to enjoy the infinity pool and sunbeds, perfect for unwinding under the sun. Experience breathtaking sunsets over the epic rice fields, the best in whole Bali, creating a picturesque backdrop for your stay. Enjoy a fully equipped kitchen and spacious dining area, ideal for family meals and gatherings.
-
-DAILY CLEANING
-- Housekeeping will come over daily to clean the villa
-
-TRANSPORTATION
-- We offer airport pick-up and drop-off services with private driver
-- We can arrange a car with private driver for you to explore the island
-
-INCLUDED 
-- Complimentary drinking water
-- WiFi
-- Private pool
-- Change of linnen 2x per week
-- Gardening and pool cleaning 2x per week
-- Private car parking for 1 car
-
-EXTRA SERVICES (PAID)
-- In house massage
-- Nanny/babysitter service (upon availability)
-- Private cook/cooking classes (upon availability)
-- Scuba diving trips and courses
-- Snorkling trips
-- Private chauffeur (island excursions, personalized trips)
-
-BREAKFAST
-- Breakfast is not included in you reservation. This can be ordered after your booking is complete.
-- We offer floating breakfast
--  Please inform us at least one day upfront regarding your breakfast requests so there is enough preparation time
-
-NOTE
-- Smoking is not allowed inside the villa. We will have to charge additional cleaning costs if you do smoke inside the villa.
-- It is not allowed to host a party
-
-Early check-in and late check-out
-In consultation we can always see if it is possible to meet a request for early check-in or late check-out. This is always confirmed at the last minute and is subject to availability. If you want to be sure that this is possible, we recommend booking an extra night in advance or afterwards.</p><div class="flex items-center gap-1 text-sm text-gray-600 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg><span data-testid="villa-city-hostaway-296152">Seseh</span></div><div class="flex items-center gap-3 text-sm text-gray-600 mb-3"><div class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bed h-4 w-4"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg><span data-testid="villa-bedrooms-hostaway-296152">3</span></div><div class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bath h-4 w-4"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path><line x1="10" x2="8" y1="5" y2="7"></line><line x1="2" x2="22" y1="12" y2="12"></line><line x1="7" x2="7" y1="19" y2="21"></line><line x1="17" x2="17" y1="19" y2="21"></line></svg><span data-testid="villa-bathrooms-hostaway-296152">3</span></div></div><div class="space-y-1 pt-2 border-t border-gray-100"><div class="flex items-baseline gap-1"><span class="font-semibold text-gray-900">IDR&nbsp;3,875,266</span><span class="text-sm text-gray-500">/ night</span></div></div></div></div></a></div></div></div><div data-state="inactive" data-orientation="horizontal" role="tabpanel" aria-labelledby="radix-:rd:-trigger-monthly" hidden="" id="radix-:rd:-content-monthly" tabindex="0" class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" data-testid="monthly-listings"></div><div data-state="inactive" data-orientation="horizontal" role="tabpanel" aria-labelledby="radix-:rd:-trigger-yearly" hidden="" id="radix-:rd:-content-yearly" tabindex="0" class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" data-testid="yearly-listings"></div></div></div></section><section id="villa-management" class="py-12 sm:py-16 lg:py-20 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"><div style="opacity: 1; transform: none;"><div class="text-xs sm:text-sm font-medium text-blue-600 mb-3 sm:mb-4">Experts in Villa Management</div><h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Elevating Your Villa with Unparalleled Luxury and Service</h2><p class="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">Turn your property into a lucrative investment. Choose Manta Villas for superior management and exceptional ROI. Connect with us today!</p><p class="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">Manta Villas Bali is a premium villa management company that specializes in offering luxurious and unique accommodations for travelers seeking an unforgettable experience in Bali, Indonesia. With a focus on personalized service, Manta Villas Bali ensures each property under its management maintains high standards of comfort, style, and privacy.</p><a data-testid="calculate-revenue-cta" href="/bali-villa-management/" class="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg text-sm sm:text-base">Calculate your daily revenue</a></div><div class="relative" style="opacity: 1; transform: none;"><img src="/assets/DSC03580_1761732168501-DXEUYbKu.jpg" alt="Luxury Villa Management" class="rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl w-full" data-testid="homepage-villa-image"></div></div></div></section><section id="popular-destinations" class="py-12 sm:py-16 bg-gray-50"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-8 sm:mb-12" style="opacity: 1; transform: none;"><h2 class="text-3xl sm:text-4xl font-light text-foreground mb-4" data-testid="destinations-title">Popular Destinations</h2><p class="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="destinations-subtitle">Experience charming Ubud, trendy Canggu, and vibrant Seminyak, where beauty meets modern comfort in these beloved destinations.</p></div><div class="md:hidden overflow-hidden"><div class="flex gap-4 px-4" style="transform: translate3d(0px, 0px, 0px);"><a href="/book-villa/?city=Canggu" class="flex-none w-[85%] min-w-0"><div class="relative rounded-2xl overflow-hidden group cursor-pointer h-64" data-testid="destination-canggu" style="opacity: 0; transform: translateY(20px);"><img src="/images/locations/canggu.jpg" alt="Canggu" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"><div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div><div class="absolute bottom-6 left-6"><h3 class="text-white font-semibold text-xl shadow-text">Canggu</h3><p class="text-white/90 text-sm mt-1">Surfing &amp; beach vibes</p></div></div></a><a href="/book-villa/?city=Ubud" class="flex-none w-[85%] min-w-0"><div class="relative rounded-2xl overflow-hidden group cursor-pointer h-64" data-testid="destination-ubud" style="opacity: 0; transform: translateY(20px);"><img src="/images/locations/ubud.jpg" alt="Ubud" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"><div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div><div class="absolute bottom-6 left-6"><h3 class="text-white font-semibold text-xl shadow-text">Ubud</h3><p class="text-white/90 text-sm mt-1">Culture &amp; nature</p></div></div></a><a href="/book-villa/?city=Seminyak" class="flex-none w-[85%] min-w-0"><div class="relative rounded-2xl overflow-hidden group cursor-pointer h-64" data-testid="destination-seminyak" style="opacity: 0; transform: translateY(20px);"><img src="/images/locations/seminyak.jpg" alt="Seminyak" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"><div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div><div class="absolute bottom-6 left-6"><h3 class="text-white font-semibold text-xl shadow-text">Seminyak</h3><p class="text-white/90 text-sm">Luxury &amp; dining</p></div></div></a><a href="/book-villa/?city=Nusa Lembongan" class="flex-none w-[85%] min-w-0"><div class="relative rounded-2xl overflow-hidden group cursor-pointer h-64" data-testid="destination-nusa-lembongan" style="opacity: 0; transform: translateY(20px);"><img src="/images/locations/nusa-lembongan.jpg" alt="Nusa Lembongan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"><div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div><div class="absolute bottom-6 left-6"><h3 class="text-white font-semibold text-xl shadow-text">Nusa Lembongan</h3><p class="text-white/90 text-sm">Island paradise</p></div></div></a><a href="/book-villa/?city=Uluwatu" class="flex-none w-[85%] min-w-0"><div class="relative rounded-2xl overflow-hidden group cursor-pointer h-64" data-testid="destination-uluwatu" style="opacity: 0; transform: translateY(20px);"><img src="/images/locations/uluwatu.jpg" alt="Uluwatu" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"><div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div><div class="absolute bottom-6 left-6"><h3 class="text-white font-semibold text-xl shadow-text">Uluwatu</h3><p class="text-white/90 text-sm">Coastal cliffs</p></div></div></a><a href="/book-villa/?city=Nusa Dua" class="flex-none w-[85%] min-w-0"><div class="relative rounded-2xl overflow-hidden group cursor-pointer h-64" data-testid="destination-nusa-dua" style="opacity: 0; transform: translateY(20px);"><img src="/images/locations/nusa-dua.avif" alt="Nusa Dua" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"><div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div><div class="absolute bottom-6 left-6"><h3 class="text-white font-semibold text-xl shadow-text">Nusa Dua</h3><p class="text-white/90 text-sm">Luxury beachfront</p></div></div></a></div></div><div class="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6"><a href="/book-villa/?city=Canggu"><div class="relative rounded-2xl overflow-hidden group cursor-pointer h-64" data-testid="destination-canggu" style="opacity: 1; transform: none;"><img src="/images/locations/canggu.jpg" alt="Canggu" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"><div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div><div class="absolute bottom-6 left-6"><h3 class="text-white font-semibold text-xl shadow-text">Canggu</h3><p class="text-white/90 text-sm mt-1">Surfing &amp; beach vibes</p></div></div></a><a href="/book-villa/?city=Ubud"><div class="relative rounded-2xl overflow-hidden group cursor-pointer h-64" data-testid="destination-ubud" style="opacity: 1; transform: none;"><img src="/images/locations/ubud.jpg" alt="Ubud" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"><div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div><div class="absolute bottom-6 left-6"><h3 class="text-white font-semibold text-xl shadow-text">Ubud</h3><p class="text-white/90 text-sm mt-1">Culture &amp; nature</p></div></div></a><a href="/book-villa/?city=Seminyak"><div class="relative rounded-2xl overflow-hidden group cursor-pointer h-64" data-testid="destination-seminyak" style="opacity: 1; transform: none;"><img src="/images/locations/seminyak.jpg" alt="Seminyak" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"><div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div><div class="absolute bottom-6 left-6"><h3 class="text-white font-semibold text-xl shadow-text">Seminyak</h3><p class="text-white/90 text-sm">Luxury &amp; dining</p></div></div></a><a href="/book-villa/?city=Nusa Lembongan"><div class="relative rounded-2xl overflow-hidden group cursor-pointer h-64" data-testid="destination-nusa-lembongan" style="opacity: 1; transform: none;"><img src="/images/locations/nusa-lembongan.jpg" alt="Nusa Lembongan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"><div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div><div class="absolute bottom-6 left-6"><h3 class="text-white font-semibold text-xl shadow-text">Nusa Lembongan</h3><p class="text-white/90 text-sm">Island paradise</p></div></div></a><a href="/book-villa/?city=Uluwatu"><div class="relative rounded-2xl overflow-hidden group cursor-pointer h-64" data-testid="destination-uluwatu" style="opacity: 1; transform: none;"><img src="/images/locations/uluwatu.jpg" alt="Uluwatu" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"><div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div><div class="absolute bottom-6 left-6"><h3 class="text-white font-semibold text-xl shadow-text">Uluwatu</h3><p class="text-white/90 text-sm">Clifftop views</p></div></div></a><a href="/book-villa/?city=Nusa Dua"><div class="relative rounded-2xl overflow-hidden group cursor-pointer h-64" data-testid="destination-nusa-dua" style="opacity: 1; transform: none;"><img src="/images/locations/nusa-dua.avif" alt="Nusa Dua" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"><div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div><div class="absolute bottom-6 left-6"><h3 class="text-white font-semibold text-xl shadow-text">Nusa Dua</h3><p class="text-white/90 text-sm">Luxury beachfront</p></div></div></a></div></div></section><section id="premium-services" class="py-12 sm:py-16 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"><div class="relative" style="opacity: 1; transform: none;"><img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;h=600" alt="Premium Villa Services" class="rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl w-full"></div><div style="opacity: 1; transform: none;"><div class="text-xs sm:text-sm font-medium text-blue-600 mb-3 sm:mb-4">Exclusive Services for an Unforgettable Experience</div><h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Enhance Your Stay</h2><p class="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">Elevate your Bali getaway with Manta Villas Bali's premium services. From convenient airport shuttles to private chef experiences, indulge in the luxury of choice. Start your day with a unique floating breakfast and explore Bali with personalized tours. Experience the best of island living, tailored just for you.</p><a data-testid="book-stay-services-cta" href="/book-villa/" class="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg text-sm sm:text-base">Book your stay</a></div></div></div></section><section id="relaxation" class="py-12 sm:py-16 bg-gray-50"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"><div style="opacity: 1; transform: none;"><div class="text-xs sm:text-sm font-medium text-blue-600 mb-3 sm:mb-4">Signature massages for a memorable retreat</div><h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Indulge in Ultimate Relaxation</h2><p class="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">Elevate your Bali escape at Manta Villas Bali with our bespoke services. Enjoy seamless airport transfers, savor culinary delights by a private chef, and greet the day with a picturesque floating breakfast. Explore the island's beauty with custom tours and unwind with our exclusive massage services, crafted for deep relaxation. Experience luxury and tranquility, tailored to your desires.</p><a data-testid="book-relaxation-cta" href="/book-villa/" class="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg text-sm sm:text-base">Book your stay</a></div><div class="relative" style="opacity: 1; transform: none;"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;h=600" alt="Spa and Relaxation Services" class="rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl w-full"></div></div></div></section><section id="platform-logos" class="py-8 sm:py-12 bg-white border-t border-gray-100"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center" style="opacity: 1; transform: none;"><h3 class="text-base sm:text-lg font-medium text-gray-600 mb-6 sm:mb-8">Featured On</h3><div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-4 sm:gap-6 lg:gap-8 items-center"><div class="flex justify-center items-center gap-1.5 group cursor-pointer"><svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="h-6 w-6 text-gray-400 group-hover:text-[#FF5A5F] transition-colors" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12.001 18.275c-1.353-1.697-2.148-3.184-2.413-4.457-.263-1.027-.16-1.848.291-2.465.477-.71 1.188-1.056 2.121-1.056s1.643.345 2.12 1.063c.446.61.558 1.432.286 2.465-.291 1.298-1.085 2.785-2.412 4.458zm9.601 1.14c-.185 1.246-1.034 2.28-2.2 2.783-2.253.98-4.483-.583-6.392-2.704 3.157-3.951 3.74-7.028 2.385-9.018-.795-1.14-1.933-1.695-3.394-1.695-2.944 0-4.563 2.49-3.927 5.382.37 1.565 1.352 3.343 2.917 5.332-.98 1.085-1.91 1.856-2.732 2.333-.636.344-1.245.558-1.828.609-2.679.399-4.778-2.2-3.825-4.88.132-.345.395-.98.845-1.961l.025-.053c1.464-3.178 3.242-6.79 5.285-10.795l.053-.132.58-1.116c.45-.822.635-1.19 1.351-1.643.346-.21.77-.315 1.246-.315.954 0 1.698.558 2.016 1.007.158.239.345.557.582.953l.558 1.089.08.159c2.041 4.004 3.821 7.608 5.279 10.794l.026.025.533 1.22.318.764c.243.613.294 1.222.213 1.858zm1.22-2.39c-.186-.583-.505-1.271-.9-2.094v-.03c-1.889-4.006-3.642-7.608-5.307-10.844l-.111-.163C15.317 1.461 14.468 0 12.001 0c-2.44 0-3.476 1.695-4.535 3.898l-.081.16c-1.669 3.236-3.421 6.843-5.303 10.847v.053l-.559 1.22c-.21.504-.317.768-.345.847C-.172 20.74 2.611 24 5.98 24c.027 0 .132 0 .265-.027h.372c1.75-.213 3.554-1.325 5.384-3.317 1.829 1.989 3.635 3.104 5.382 3.317h.372c.133.027.239.027.265.027 3.37.003 6.152-3.261 4.802-6.975z"></path></svg><span class="text-base font-semibold text-gray-400 group-hover:text-[#FF5A5F] transition-colors">Airbnb</span></div><div class="flex justify-center items-center gap-1.5 group cursor-pointer"><svg class="h-5 w-5 text-gray-400 group-hover:text-[#003580] transition-colors" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 2C.9 2 0 2.9 0 4v16c0 1.1.9 2 2.01 2H22c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H2.01zM12 6.5c2.49 0 4.5 2.01 4.5 4.5s-2.01 4.5-4.5 4.5S7.5 13.49 7.5 11s2.01-4.5 4.5-4.5zm0 1.5a3 3 0 100 6 3 3 0 000-6z"></path></svg><span class="text-base font-semibold text-gray-400 group-hover:text-[#003580] transition-colors">Booking.com</span></div><div class="flex justify-center items-center gap-1.5 group cursor-pointer"><svg class="h-5 w-5 text-gray-400 group-hover:text-[#5392f9] transition-colors" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm4 0h-2v-2h2v2zm-2-4c-1.1 0-2-.9-2-2V8h2v2h2v2h-2z"></path></svg><span class="text-base font-semibold text-gray-400 group-hover:text-[#5392f9] transition-colors">Agoda</span></div><div class="flex justify-center items-center gap-1.5 group cursor-pointer"><svg class="h-5 w-5 text-gray-400 group-hover:text-[#3662A8] transition-colors" viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"></path></svg><span class="text-base font-semibold text-gray-400 group-hover:text-[#3662A8] transition-colors">VRBO</span></div><div class="flex justify-center items-center gap-1.5 group cursor-pointer"><svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="h-5 w-5 text-gray-400 group-hover:text-[#287DFA] transition-colors" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17.834 9.002c-.68 0-1.29.31-1.707.799v-.514h-1.708v8.348h1.897v-2.923c.416.344.943.551 1.518.551 1.677 0 3.036-1.401 3.036-3.13s-1.36-3.13-3.036-3.13zm-.19 4.516c-.733 0-1.328-.62-1.328-1.385s.595-1.385 1.328-1.385c.734 0 1.328.62 1.328 1.385s-.594 1.385-1.328 1.385zm6.356.607a1.138 1.138 0 1 1-2.277 0 1.138 1.138 0 0 1 2.277 0zM13.205 7.428a1.062 1.062 0 1 1-2.125 0 1.062 1.062 0 0 1 2.125 0zm-2.011 1.859h1.897v5.692h-1.897V9.287zM6.83 8.225H4.364v6.754H2.466V8.225H0V6.63h6.83v1.594zm3.035 1.033c.13 0 .255.012.38.03v1.74a1.55 1.55 0 0 0-.297-.031c-.88 0-1.594.612-1.594 1.593v2.389H6.451V9.287h1.707v.9c.363-.558.991-.93 1.707-.93z"></path></svg><span class="text-base font-semibold text-gray-400 group-hover:text-[#287DFA] transition-colors">Trip.com</span></div><div class="flex justify-center items-center gap-1.5 group cursor-pointer"><svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="h-5 w-5 text-gray-400 group-hover:text-[#1C1C1C] transition-colors" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8.802 11.083l-1.178 2.41c-.8 1.425-1.931 3.167-3.646 3.603-.668.232-1.255.023-1.9-.023L0 20.476a1.626 1.626 0 0 0 .59.386c3.647 1.39 5.122-.1 8.722-8.238l3.403 7.249h4.53l-2.14-4.893 1.213-2.53 3.345 7.311 4.337.027-7.59-16.677-3.475 1.738 2.738 6.222-1.201 2.445L9.45 2.678l-3.7 1.877Z"></path></svg><span class="text-base font-semibold text-gray-400 group-hover:text-[#1C1C1C] transition-colors">Marriott</span></div><div class="flex justify-center items-center gap-1.5 group cursor-pointer"><svg class="h-5 w-5 text-gray-400 group-hover:text-[#00C2A8] transition-colors" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg><span class="text-base font-semibold text-gray-400 group-hover:text-[#00C2A8] transition-colors">Dtravel</span></div></div></div></div></section></div></main><footer class="bg-primary text-primary-foreground py-16" data-testid="footer"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid grid-cols-1 md:grid-cols-4 gap-8"><div><div class="text-2xl font-bold mb-4">Manta Villas</div><p class="text-primary-foreground/80 mb-4">Redefining hospitality in Bali with luxury villa management and unforgettable guest experiences.</p></div><div><h3 class="text-lg font-semibold mb-4">Quick Links</h3><ul class="space-y-2 text-primary-foreground/80"><li><a data-testid="footer-link-home" href="/"><span class="hover:text-accent transition-colors">Home</span></a></li><li><a data-testid="footer-link-villa-management" href="/bali-villa-management/"><span class="hover:text-accent transition-colors">Villa Management</span></a></li><li><a data-testid="footer-link-book-villa" href="/book-villa/"><span class="hover:text-accent transition-colors">Book a Villa</span></a></li><li><a data-testid="footer-link-experiences" href="/experiences/"><span class="hover:text-accent transition-colors">Experiences</span></a></li><li><a data-testid="footer-link-contact" href="/contact/"><span class="hover:text-accent transition-colors">Contact Us</span></a></li></ul></div><div><h3 class="text-lg font-semibold mb-4">Contact</h3><ul class="space-y-3 text-primary-foreground/80 text-sm"><li><div class="font-semibold text-primary-foreground mb-1">General</div><a href="mailto:hello@mantavillas.com" class="hover:text-accent transition-colors block" data-testid="footer-email">hello@mantavillas.com</a><a href="https://wa.me/6281918843134" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors block" data-testid="footer-whatsapp">+62 819-1884-3134</a></li><li><div class="font-semibold text-primary-foreground mb-1">HR</div><a href="mailto:hr@mantavillas.com" class="hover:text-accent transition-colors block" data-testid="footer-email-hr">hr@mantavillas.com</a><a href="https://wa.me/+6287818072800" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors block" data-testid="footer-whatsapp-hr">+62 878-1807-2800</a></li><li><div class="font-semibold text-primary-foreground mb-1">Guest Relations</div><a href="mailto:uta@mantavillas.com" class="hover:text-accent transition-colors block" data-testid="footer-email-guest">uta@mantavillas.com</a><a href="https://wa.me/+6287786877419" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors block" data-testid="footer-whatsapp-guest">+62 877-8687-7419</a></li><li class="pt-2">Jl Padang Sari, Kerobokan<br>Badung, Bali 80361</li></ul></div><div><h3 class="text-lg font-semibold mb-4">Follow Us</h3><div class="flex space-x-4 mb-6"><a href="https://www.instagram.com/themantavillasbali/" target="_blank" rel="noopener noreferrer" class="text-primary-foreground/80 hover:text-accent transition-colors p-2" data-testid="footer-social-instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram h-6 w-6"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a><a href="https://www.facebook.com/p/The-Manta-Villas-Bali-61557595500980/" target="_blank" rel="noopener noreferrer" class="text-primary-foreground/80 hover:text-accent transition-colors p-2" data-testid="footer-social-facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook h-6 w-6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a href="https://www.tiktok.com/@manta.villas" target="_blank" rel="noopener noreferrer" class="text-primary-foreground/80 hover:text-accent transition-colors p-2" data-testid="footer-social-tiktok"><svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg></a><a href="https://www.youtube.com/@MantaVillas/" target="_blank" rel="noopener noreferrer" class="text-primary-foreground/80 hover:text-accent transition-colors p-2" data-testid="footer-social-youtube"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube h-6 w-6"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg></a></div><a href="https://apps.apple.com/app/manta-villas/id6758138932" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/20 transition-colors border border-white/20 rounded-lg px-4 py-2.5" data-testid="footer-appstore"><svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="h-5 w-5 text-primary-foreground" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"></path></svg><div class="leading-tight"><div class="text-primary-foreground/70 text-[10px] uppercase tracking-wide">Download on the</div><div class="text-primary-foreground text-sm font-semibold">App Store</div></div></a></div></div><div class="border-t border-primary-foreground/20 mt-12 pt-8 text-center text-primary-foreground/80"><p>© 2026 PT PARI SEGARA SHAKTI / PT THE MANTA VILLAS - Manta Villas. All rights reserved.</p></div></div></footer><div class="fixed right-4 md:right-6 z-50 bottom-20" data-testid="minimal-notification" style="max-width: 320px; width: calc(-2rem + 100vw); opacity: 1; transform: none;"><div class="bg-white rounded-2xl shadow-2xl p-4 mb-3 relative" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 20px 50px; opacity: 1; transform: none;"><button class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors" data-testid="close-minimal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-4 w-4"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button><div class="flex gap-3 pr-6"><div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0"><img src="/public-objects/images/c3a61ccd-a4c2-4a0b-a736-5d774d23d1ae.JPG" alt="Claudya" class="w-full h-full object-cover"></div><div class="flex-1 min-w-0"><h3 class="font-semibold text-gray-900 text-sm mb-0.5">Claudya</h3><p class="text-gray-600 text-sm leading-relaxed">Hi 👋, Welcome to Manta Villas Bali. How can we help you today?</p></div></div></div><div class="space-y-2"><button class="w-full px-5 py-3 rounded-full text-sm font-medium transition-all bg-[#111827] hover:bg-gray-900 text-white border-2 border-white" data-testid="minimal-action-0" tabindex="0" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 30px; opacity: 1; transform: none;">I need villa management</button><button class="w-full px-5 py-3 rounded-full text-sm font-medium transition-all bg-white hover:bg-gray-50 text-gray-700 border border-gray-200" data-testid="minimal-action-1" tabindex="0" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 30px; opacity: 1; transform: none;">Book a villa</button><button class="w-full px-5 py-3 rounded-full text-sm font-medium transition-all bg-white hover:bg-gray-50 text-gray-700 border border-gray-200" data-testid="minimal-action-2" tabindex="0" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 30px; opacity: 1; transform: none;">Chat with our travel agents</button></div></div><button class="fixed right-4 md:right-6 bg-[#111827] hover:bg-gray-900 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all z-50 bottom-4" data-testid="minimal-float-button" tabindex="0" style="transform: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle h-6 w-6"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg></button></div></div>
-    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
-    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
-<script id="" text="" charset="" type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=AW-11281037427"></script><script id="respondio__widget" text="" charset="" type="text/javascript" src="https://cdn.respond.io/webchat/widget/widget.js?cId=96d7eb6c8be86d2f3c7bef97a3c6989"></script>
-<script type="text/javascript" id="" charset="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1286405936647329");fbq("track","PageView");</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1286405936647329&amp;ev=PageView&amp;noscript=1"></noscript>
-
-<script type="text/javascript" id="" charset="">gtag("event","conversion",{send_to:"AW-18073159751/QChaCI3Y-5ccEMeQ-qlD",value:1,currency:"IDR"});</script>
-
-  
-
-<script type="text/javascript" id="" charset="">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","AW-11281037427");</script><div id="dbee1"><div><iframe title="Webchat Widget" state="widgetClose" src="https://cdn.respond.io/webchat/widget/chat.html?colorScheme=light" width="100%" height="100%" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" class="dfa50 bda45 eca54 d3396 e57b4" style="right: 25px !important; bottom: 25px !important; max-height: calc(100% - 25px) !important; max-width: unset !important;"></iframe><div class="b11ce"><span style="background-image: url(&quot;&quot;);"></span></div></div></div><script>
-(function() {
-    var LOGO_HTML = '<img src="/logo.svg" alt="Bali Villas" data-logo="1" class="inline-block shrink-0 h-10" style="height: 40px; width: auto;">';
-    var SCROLL_THRESHOLD = 80;
-
-    function replaceLogos() {
-        var imgs = document.querySelectorAll('img[src*="mantavillas-white"], img[alt="Manta Villas"]');
-        imgs.forEach(function(img) {
-            if (img.dataset.replaced === '1') return;
-            var wrapper = document.createElement('span');
-            wrapper.innerHTML = LOGO_HTML;
-            var newEl = wrapper.firstElementChild;
-            newEl.dataset.replaced = '1';
-            img.parentNode.replaceChild(newEl, img);
-        });
-        applyLogoTheme();
-    }
-
-    function applyLogoTheme() {
-        var isDark = window.scrollY > SCROLL_THRESHOLD;
-        document.querySelectorAll('img[data-logo="1"]').forEach(function(logo) {
-            logo.src = isDark ? '/logo-dark.svg' : '/logo.svg';
-        });
-    }
-
-    replaceLogos();
-    var observer = new MutationObserver(replaceLogos);
-    observer.observe(document.body, { childList: true, subtree: true });
-    window.addEventListener('scroll', applyLogoTheme, { passive: true });
-})();
 </script>
-</body></html>
+<style>
+body { font-family: 'Inter', sans-serif; }
+.font-serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
+html { scroll-behavior: smooth; }
+.gradient-hero { background: linear-gradient(90deg, #0a2421 0%, #0a2421 45%, rgba(10,36,33,0.4) 65%, rgba(10,36,33,0) 100%); }
+.card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+.nav-link { position: relative; }
+.nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: #c9a961; transform: scaleX(0); transition: transform 0.2s; }
+.nav-link:hover::after { transform: scaleX(1); }
+.testimonial-quote::before { content: '"'; font-family: 'Playfair Display', serif; font-size: 80px; color: #c9a961; opacity: 0.25; position: absolute; top: -20px; left: 16px; line-height: 1; }
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+.pulse-ring { animation: pulse-ring 2s infinite ease-out; }
+</style>
+</head>
+<body class="bg-brand-cream text-brand-dark">
+
+<!-- =============== NAVBAR =============== -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="bg-brand-dark/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-18 py-4">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M16 28 L15 16 L17 16 L16 28 Z" fill="#c9a961"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(-20 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(20 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(-60 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(60 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(-90 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(90 16 12)"/>
+            <circle cx="16" cy="9" r="1.2" fill="#c9a961"/>
+          </svg>
+          <span class="text-white font-bold tracking-wider text-lg">BALI VILLAS</span>
+        </a>
+
+        <!-- Nav Links -->
+        <div class="hidden lg:flex items-center gap-8 text-white/90 text-sm font-medium">
+          <a href="#matches" class="nav-link flex items-center gap-1">Villas <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+          <a href="#locations" class="nav-link flex items-center gap-1">Destinations <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+          <a href="#longterm" class="nav-link">Monthly &amp; Yearly</a>
+          <a href="#management" class="nav-link">Villa Management</a>
+          <a href="#about" class="nav-link">About Us</a>
+          <a href="/villa/" class="nav-link">Blog</a>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3">
+          <button aria-label="Favorites" class="w-10 h-10 flex items-center justify-center text-white/80 hover:text-white">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+          <a href="https://wa.me/6281000000000" class="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-accent text-white px-4 py-2.5 rounded-full text-sm font-semibold transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Contact Concierge
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- =============== HERO =============== -->
+<section class="relative min-h-[680px] bg-brand-dark overflow-hidden pt-24">
+  <!-- Background image -->
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1920&q=80&auto=format&fit=crop" alt="" class="w-full h-full object-cover opacity-90">
+    <div class="absolute inset-0 gradient-hero"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-12 pb-16">
+    <div class="max-w-2xl">
+      <h1 class="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+        Find your perfect<br>
+        Bali villa <span class="font-serif-italic text-brand-gold font-normal">in seconds</span>
+      </h1>
+      <p class="text-white/85 text-lg mb-10 leading-relaxed">
+        AI-powered search for daily, monthly or yearly stays.<br>
+        Talk or type — we'll find the perfect villa for you.
+      </p>
+
+      <!-- Stay type tabs -->
+      <div class="inline-flex bg-white/10 backdrop-blur-sm rounded-lg p-1 mb-5">
+        <button class="px-5 py-2 text-sm font-medium rounded-md text-white/80 hover:text-white transition">Daily stays</button>
+        <button class="px-5 py-2 text-sm font-semibold rounded-md bg-white text-brand-dark">Monthly stays</button>
+        <button class="px-5 py-2 text-sm font-medium rounded-md text-white/80 hover:text-white transition flex items-center gap-2">
+          Yearly rentals
+          <span class="bg-brand-gold text-brand-dark text-[10px] px-2 py-0.5 rounded-full font-bold">Best value</span>
+        </button>
+      </div>
+
+      <!-- AI Search input -->
+      <div class="bg-white rounded-xl shadow-2xl p-2 flex items-center gap-2">
+        <div class="flex-1 flex items-center px-3">
+          <svg class="w-5 h-5 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" placeholder="Example: 3BR villa in Canggu for 3 months with pool under $2000/month" class="flex-1 px-3 py-3 text-sm text-brand-dark placeholder:text-gray-500 focus:outline-none">
+          <button aria-label="Voice search" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-500">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </button>
+        </div>
+        <button class="bg-brand-gold hover:bg-brand-gold-light text-brand-dark px-6 py-3 rounded-lg font-semibold text-sm whitespace-nowrap transition">Find Villas</button>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="flex flex-wrap gap-x-6 gap-y-3 mt-8 text-white/90 text-sm">
+        <div class="flex items-center gap-2"><span class="text-brand-gold">★</span> 4.9/5 from 500+ travelers</div>
+        <div class="flex items-center gap-2"><span class="text-brand-gold">♡</span> 500+ handpicked villas</div>
+        <div class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Response in minutes</div>
+        <div class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Verified &amp; trusted</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== VIBE SELECTOR =============== -->
+<section class="py-20 bg-brand-cream">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <h2 class="text-4xl lg:text-5xl font-bold mb-3">What kind of stay are you looking for?</h2>
+      <p class="text-gray-600 text-lg">We'll match you with villas that fit your style and needs.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <!-- Romantic Escape -->
+      <a href="#matches" class="group card-hover relative rounded-2xl overflow-hidden aspect-[4/5] bg-brand-dark block">
+        <img src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=600&q=80&auto=format&fit=crop" alt="Romantic Escape" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+        <div class="absolute top-4 right-4 w-9 h-9 bg-white rounded-full flex items-center justify-center">
+          <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div class="absolute bottom-6 left-6 right-6 text-white">
+          <h3 class="text-xl font-bold mb-1">Romantic Escape</h3>
+          <p class="text-sm text-white/85">Private villas for two, perfect for couples.</p>
+        </div>
+      </a>
+      <!-- Surf & Friends -->
+      <a href="#matches" class="group card-hover relative rounded-2xl overflow-hidden aspect-[4/5] bg-brand-dark block">
+        <img src="https://images.unsplash.com/photo-1502933691298-84fc14542831?w=600&q=80&auto=format&fit=crop" alt="Surf & Friends" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+        <div class="absolute top-4 right-4 w-9 h-9 bg-white rounded-full flex items-center justify-center">
+          <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div class="absolute bottom-6 left-6 right-6 text-white">
+          <h3 class="text-xl font-bold mb-1">Surf &amp; Friends</h3>
+          <p class="text-sm text-white/85">Villas close to beaches and good vibes.</p>
+        </div>
+      </a>
+      <!-- Family Retreat -->
+      <a href="#matches" class="group card-hover relative rounded-2xl overflow-hidden aspect-[4/5] bg-brand-dark block">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format&fit=crop" alt="Family Retreat" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+        <div class="absolute top-4 right-4 w-9 h-9 bg-white rounded-full flex items-center justify-center">
+          <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="absolute bottom-6 left-6 right-6 text-white">
+          <h3 class="text-xl font-bold mb-1">Family Retreat</h3>
+          <p class="text-sm text-white/85">Spacious villas for the whole family.</p>
+        </div>
+      </a>
+      <!-- Work & Live -->
+      <a href="#matches" class="group card-hover relative rounded-2xl overflow-hidden aspect-[4/5] bg-brand-dark block">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80&auto=format&fit=crop" alt="Work & Live" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+        <div class="absolute top-4 right-4 w-9 h-9 bg-white rounded-full flex items-center justify-center">
+          <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="absolute bottom-6 left-6 right-6 text-white">
+          <h3 class="text-xl font-bold mb-1">Work &amp; Live</h3>
+          <p class="text-sm text-white/85">Fast Wi-Fi, quiet spaces and good energy.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =============== AI MATCHES =============== -->
+<section id="matches" class="py-20 bg-brand-cream">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+      <div>
+        <p class="text-brand-gold text-xs font-bold tracking-[0.2em] mb-2">AI MATCHES FOR YOU</p>
+        <h2 class="text-4xl lg:text-5xl font-bold">Your perfect matches</h2>
+        <p class="text-gray-600 mt-2">Based on your search</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-brand-dark font-semibold hover:text-brand-gold">View all matches</a>
+        <div class="flex gap-2">
+          <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-brand-dark"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-brand-dark"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Villa Sora -->
+      <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
+        <div class="relative aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&auto=format&fit=crop" alt="Villa Sora" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-brand-green text-white text-xs font-bold px-3 py-1.5 rounded-md">Perfect Match</span>
+          <button aria-label="Save" class="absolute top-4 right-4 w-9 h-9 bg-white/90 rounded-full flex items-center justify-center hover:bg-white">
+            <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="p-5">
+          <h3 class="text-xl font-bold mb-1">Villa Sora</h3>
+          <p class="text-sm text-gray-500 mb-3">Canggu, Bali</p>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600 mb-4">
+            <span>🛏 3 Bedrooms</span><span>🛁 3 Bathrooms</span><span>🏊 Pool</span><span>📶 Wi-Fi</span>
+          </div>
+          <div class="flex items-end justify-between pt-3 border-t border-gray-100">
+            <div>
+              <p class="text-2xl font-bold">$1,800 <span class="text-sm font-normal text-gray-500">/ month</span></p>
+              <p class="text-xs text-green-700 font-medium mt-0.5">Available monthly</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Villa Uma -->
+      <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
+        <div class="relative aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80&auto=format&fit=crop" alt="Villa Uma" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-brand-green text-white text-xs font-bold px-3 py-1.5 rounded-md">Perfect Match</span>
+          <button aria-label="Save" class="absolute top-4 right-4 w-9 h-9 bg-white/90 rounded-full flex items-center justify-center hover:bg-white">
+            <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="p-5">
+          <h3 class="text-xl font-bold mb-1">Villa Uma</h3>
+          <p class="text-sm text-gray-500 mb-3">Canggu, Bali</p>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600 mb-4">
+            <span>🛏 3 Bedrooms</span><span>🛁 3 Bathrooms</span><span>🏊 Pool</span><span>📶 Wi-Fi</span>
+          </div>
+          <div class="flex items-end justify-between pt-3 border-t border-gray-100">
+            <div>
+              <p class="text-2xl font-bold">$22,000 <span class="text-sm font-normal text-gray-500">/ year</span></p>
+              <p class="text-xs text-brand-gold font-medium mt-0.5">Best for long-term</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Villa Hikari -->
+      <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
+        <div class="relative aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80&auto=format&fit=crop" alt="Villa Hikari" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-brand-green text-white text-xs font-bold px-3 py-1.5 rounded-md">Perfect Match</span>
+          <button aria-label="Save" class="absolute top-4 right-4 w-9 h-9 bg-white/90 rounded-full flex items-center justify-center hover:bg-white">
+            <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="p-5">
+          <h3 class="text-xl font-bold mb-1">Villa Hikari</h3>
+          <p class="text-sm text-gray-500 mb-3">Uluwatu, Bali</p>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600 mb-4">
+            <span>🛏 4 Bedrooms</span><span>🛁 4 Bathrooms</span><span>🏊 Pool</span><span>📶 Wi-Fi</span>
+          </div>
+          <div class="flex items-end justify-between pt-3 border-t border-gray-100">
+            <div>
+              <p class="text-2xl font-bold">$520 <span class="text-sm font-normal text-gray-500">/ night</span></p>
+              <p class="text-xs text-green-700 font-medium mt-0.5">Available now</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =============== LONG-TERM + MANAGEMENT =============== -->
+<section id="longterm" class="py-16 bg-brand-cream">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <!-- Long-term -->
+    <div class="bg-brand-green rounded-2xl p-8 lg:p-10 text-white relative overflow-hidden">
+      <p class="text-brand-gold text-xs font-bold tracking-[0.2em] mb-3">LONG-TERM LIVING</p>
+      <h3 class="text-3xl font-bold mb-3 leading-tight">Looking for long-term<br>rentals in Bali?</h3>
+      <p class="text-white/80 mb-6">Handpicked villas for monthly and yearly stays.</p>
+      <ul class="space-y-2 mb-8 text-sm">
+        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-gold rounded-full flex items-center justify-center text-brand-dark text-xs">✓</span> Monthly rentals from $1,200</li>
+        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-gold rounded-full flex items-center justify-center text-brand-dark text-xs">✓</span> Yearly rentals with best value</li>
+        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-gold rounded-full flex items-center justify-center text-brand-dark text-xs">✓</span> Perfect for nomads, families and investors</li>
+      </ul>
+      <button class="bg-brand-gold hover:bg-brand-gold-light text-brand-dark px-6 py-3 rounded-full font-semibold text-sm transition">Explore long-term villas</button>
+
+      <div class="hidden lg:grid absolute right-10 top-8 gap-3 grid-cols-1 w-52">
+        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=400&q=80&auto=format&fit=crop" class="rounded-xl aspect-[4/3] object-cover" alt="">
+        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80&auto=format&fit=crop" class="rounded-xl aspect-[4/3] object-cover" alt="">
+      </div>
+    </div>
+
+    <!-- Villa Management -->
+    <div id="management" class="bg-brand-cream-dark rounded-2xl p-8 lg:p-10 relative overflow-hidden">
+      <p class="text-brand-green text-xs font-bold tracking-[0.2em] mb-3">VILLA MANAGEMENT</p>
+      <h3 class="text-3xl font-bold mb-3 leading-tight">Own a villa? We<br>manage it for you.</h3>
+      <p class="text-gray-700 mb-6">Full-service management<br>so you can relax and earn more.</p>
+      <ul class="space-y-2 mb-8 text-sm">
+        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-green rounded-full flex items-center justify-center text-brand-gold text-xs">✓</span> Guest management</li>
+        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-green rounded-full flex items-center justify-center text-brand-gold text-xs">✓</span> Cleaning &amp; maintenance</li>
+        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-green rounded-full flex items-center justify-center text-brand-gold text-xs">✓</span> Pricing optimization</li>
+        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-green rounded-full flex items-center justify-center text-brand-gold text-xs">✓</span> Marketing &amp; listings</li>
+        <li class="flex items-center gap-2"><span class="w-5 h-5 bg-brand-green rounded-full flex items-center justify-center text-brand-gold text-xs">✓</span> 24/7 support</li>
+      </ul>
+      <button class="border-2 border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white px-6 py-3 rounded-full font-semibold text-sm transition">Learn about management</button>
+
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&q=80&auto=format&fit=crop" class="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 w-60 rounded-xl shadow-xl" alt="Analytics dashboard">
+    </div>
+  </div>
+</section>
+
+<!-- =============== LOCATIONS =============== -->
+<section id="locations" class="py-20 bg-brand-cream">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+      <div>
+        <p class="text-brand-gold text-xs font-bold tracking-[0.2em] mb-2">EXPLORE BALI BY LOCATION</p>
+        <h2 class="text-4xl lg:text-5xl font-bold mb-2">Where would you<br>like to stay?</h2>
+        <p class="text-gray-600">Top locations. Best villas.<br>Find your perfect spot.</p>
+        <button class="mt-6 inline-flex items-center gap-2 bg-white border border-gray-300 hover:border-brand-dark text-brand-dark px-5 py-2.5 rounded-full text-sm font-semibold transition">
+          <span>Explore on map</span>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+
+      <!-- Location cards -->
+      <div class="flex-1 ml-0 lg:ml-10 grid grid-cols-2 md:grid-cols-5 gap-3 min-w-0">
+        <a href="#" class="card-hover group relative aspect-[3/4] rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=400&q=80&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Canggu">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 text-white">
+            <p class="font-bold text-sm">Canggu</p>
+            <p class="text-[11px] text-white/80">417 villas</p>
+          </div>
+        </a>
+        <a href="#" class="card-hover group relative aspect-[3/4] rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=80&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Uluwatu">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 text-white">
+            <p class="font-bold text-sm">Uluwatu</p>
+            <p class="text-[11px] text-white/80">256 villas</p>
+          </div>
+        </a>
+        <a href="#" class="card-hover group relative aspect-[3/4] rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?w=400&q=80&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Ubud">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 text-white">
+            <p class="font-bold text-sm">Ubud</p>
+            <p class="text-[11px] text-white/80">189 villas</p>
+          </div>
+        </a>
+        <a href="#" class="card-hover group relative aspect-[3/4] rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=400&q=80&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Seminyak">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 text-white">
+            <p class="font-bold text-sm">Seminyak</p>
+            <p class="text-[11px] text-white/80">132 villas</p>
+          </div>
+        </a>
+        <a href="#" class="card-hover group relative aspect-[3/4] rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1519658422507-26ec47bd0bd1?w=400&q=80&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Sanur">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 text-white">
+            <p class="font-bold text-sm">Sanur</p>
+            <p class="text-[11px] text-white/80">89 villas</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Map placeholder -->
+    <div class="mt-8 bg-brand-cream-dark rounded-2xl overflow-hidden h-48 lg:h-56 relative">
+      <div class="absolute inset-0 opacity-60" style="background: linear-gradient(135deg, #e8dfc9 0%, #d4c4a0 100%);"></div>
+      <svg class="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 800 200" preserveAspectRatio="none">
+        <path d="M 50 120 Q 150 80 250 110 T 450 100 Q 550 120 650 90 T 800 110" stroke="#14453f" stroke-width="2" fill="none" opacity="0.4"/>
+        <path d="M 0 140 Q 100 130 200 145 T 400 135 Q 500 140 600 125 T 800 140" stroke="#14453f" stroke-width="1.5" fill="none" opacity="0.3"/>
+      </svg>
+      <!-- Map pins -->
+      <div class="absolute top-[45%] left-[18%] flex flex-col items-center">
+        <svg class="w-7 h-7 text-brand-green" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        <span class="text-xs font-semibold text-brand-dark mt-0.5">Canggu</span>
+      </div>
+      <div class="absolute top-[52%] left-[30%] flex flex-col items-center">
+        <svg class="w-7 h-7 text-brand-green" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        <span class="text-xs font-semibold text-brand-dark mt-0.5">Seminyak</span>
+      </div>
+      <div class="absolute top-[65%] left-[40%] flex flex-col items-center">
+        <svg class="w-7 h-7 text-brand-green" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        <span class="text-xs font-semibold text-brand-dark mt-0.5">Uluwatu</span>
+      </div>
+      <div class="absolute top-[30%] left-[55%] flex flex-col items-center">
+        <svg class="w-7 h-7 text-brand-green" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        <span class="text-xs font-semibold text-brand-dark mt-0.5">Ubud</span>
+      </div>
+      <div class="absolute top-[58%] left-[72%] flex flex-col items-center">
+        <svg class="w-7 h-7 text-brand-green" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        <span class="text-xs font-semibold text-brand-dark mt-0.5">Sanur</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== TESTIMONIALS =============== -->
+<section class="py-20 bg-brand-green text-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+      <div>
+        <p class="text-brand-gold text-xs font-bold tracking-[0.2em] mb-2">TRUSTED BY TRAVELERS</p>
+        <h2 class="text-4xl lg:text-5xl font-bold mb-3">Loved by guests<br>around the world</h2>
+        <div class="flex items-center gap-2 text-brand-gold">
+          <span>★★★★★</span> <span class="text-white/90 text-sm">4.9/5 average rating</span>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <button class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="bg-brand-accent rounded-2xl p-6 relative testimonial-quote">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80&auto=format&fit=crop" class="w-12 h-12 rounded-full object-cover" alt="Sarah J.">
+          <div>
+            <p class="font-semibold">Sarah J.</p>
+            <p class="text-white/60 text-xs">Australia</p>
+          </div>
+        </div>
+        <p class="text-white/90 text-sm leading-relaxed">"Found our dream villa in 2 minutes. Way better than Airbnb!"</p>
+      </div>
+      <div class="bg-brand-accent rounded-2xl p-6 relative testimonial-quote">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&auto=format&fit=crop" class="w-12 h-12 rounded-full object-cover" alt="Michael T.">
+          <div>
+            <p class="font-semibold">Michael T.</p>
+            <p class="text-white/60 text-xs">UK</p>
+          </div>
+        </div>
+        <p class="text-white/90 text-sm leading-relaxed">"Amazing service and beautiful villas. Highly recommended!"</p>
+      </div>
+      <div class="bg-brand-accent rounded-2xl p-6 relative testimonial-quote">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80&auto=format&fit=crop" class="w-12 h-12 rounded-full object-cover" alt="Emma L.">
+          <div>
+            <p class="font-semibold">Emma L.</p>
+            <p class="text-white/60 text-xs">USA</p>
+          </div>
+        </div>
+        <p class="text-white/90 text-sm leading-relaxed">"The team helped us find the perfect long-term home."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== HOW IT WORKS + VOICE =============== -->
+<section class="py-20 bg-brand-cream-dark">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <div>
+      <p class="text-brand-gold text-xs font-bold tracking-[0.2em] mb-2">HOW IT WORKS</p>
+      <h2 class="text-4xl lg:text-5xl font-bold mb-10 leading-tight">3 easy steps to your<br>perfect stay</h2>
+
+      <div class="grid grid-cols-3 gap-4">
+        <div>
+          <div class="w-10 h-10 rounded-full bg-brand-green text-brand-gold flex items-center justify-center font-bold mb-4">1</div>
+          <p class="font-bold mb-1">Search or talk</p>
+          <p class="text-xs text-gray-600">Tell us what you want or use voice search.</p>
+        </div>
+        <div>
+          <div class="w-10 h-10 rounded-full bg-brand-green text-brand-gold flex items-center justify-center font-bold mb-4">2</div>
+          <p class="font-bold mb-1">Get best matches</p>
+          <p class="text-xs text-gray-600">AI finds the best villas for you in seconds.</p>
+        </div>
+        <div>
+          <div class="w-10 h-10 rounded-full bg-brand-green text-brand-gold flex items-center justify-center font-bold mb-4">3</div>
+          <p class="font-bold mb-1">Book &amp; relax</p>
+          <p class="text-xs text-gray-600">We handle the rest. You enjoy Bali.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl p-8 flex flex-col justify-center">
+      <p class="text-brand-gold text-xs font-bold tracking-[0.2em] mb-2">TALK INSTEAD OF TYPING</p>
+      <h3 class="text-3xl font-bold mb-3">Use voice search</h3>
+      <p class="text-gray-600 mb-8">Tap the mic and tell us what you're looking for.</p>
+
+      <div class="flex items-center gap-6">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-full bg-brand-gold/40 pulse-ring"></div>
+          <button class="relative w-20 h-20 bg-brand-green rounded-full flex items-center justify-center text-brand-gold hover:bg-brand-accent">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </button>
+        </div>
+        <div class="flex-1">
+          <p class="text-sm text-gray-500 mb-2">Tap to speak</p>
+          <div class="flex items-end gap-1 h-8">
+            <span class="w-1 bg-brand-gold/60 rounded animate-pulse" style="height: 30%"></span>
+            <span class="w-1 bg-brand-gold/80 rounded animate-pulse" style="height: 70%; animation-delay: .1s"></span>
+            <span class="w-1 bg-brand-gold rounded animate-pulse" style="height: 100%; animation-delay: .2s"></span>
+            <span class="w-1 bg-brand-gold/80 rounded animate-pulse" style="height: 60%; animation-delay: .3s"></span>
+            <span class="w-1 bg-brand-gold/60 rounded animate-pulse" style="height: 90%; animation-delay: .4s"></span>
+            <span class="w-1 bg-brand-gold/80 rounded animate-pulse" style="height: 40%; animation-delay: .5s"></span>
+            <span class="w-1 bg-brand-gold rounded animate-pulse" style="height: 75%; animation-delay: .6s"></span>
+            <span class="w-1 bg-brand-gold/70 rounded animate-pulse" style="height: 50%; animation-delay: .7s"></span>
+            <span class="w-1 bg-brand-gold/50 rounded animate-pulse" style="height: 85%; animation-delay: .8s"></span>
+            <span class="w-1 bg-brand-gold/80 rounded animate-pulse" style="height: 35%; animation-delay: .9s"></span>
+            <span class="w-1 bg-brand-gold rounded animate-pulse" style="height: 65%; animation-delay: 1s"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FOOTER =============== -->
+<footer id="about" class="bg-brand-green text-white pt-16 pb-8 relative overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1546412414-e1885e51cfa5?w=1200&q=80&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-10" alt="">
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
+      <div class="col-span-2">
+        <div class="flex items-center gap-2 mb-4">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <path d="M16 28 L15 16 L17 16 L16 28 Z" fill="#c9a961"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(-20 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(20 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(-60 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(60 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(-90 16 12)"/>
+            <ellipse cx="16" cy="12" rx="3" ry="8" fill="#c9a961" transform="rotate(90 16 12)"/>
+          </svg>
+          <span class="font-bold tracking-wider">BALI VILLAS</span>
+        </div>
+        <p class="text-white/70 text-sm leading-relaxed mb-6 max-w-xs">
+          AI-powered villa rentals in Bali.<br>
+          Daily, monthly and yearly stays<br>
+          with full-service management.
+        </p>
+        <div class="flex gap-3">
+          <a href="#" aria-label="Instagram" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4 1 .5.4.7.8 1 1.4.2.5.3 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-1 1.4-.4.5-.8.7-1.4 1-.5.2-1 .3-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-1-.5-.4-.7-.8-1-1.4-.2-.5-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-1.8.4-2.2.2-.6.5-1 1-1.4.4-.5.8-.7 1.4-1 .5-.2 1-.3 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1c-1.3.1-2.2.3-3 .6-.8.3-1.5.7-2.2 1.4C1.2 2.8.8 3.5.5 4.3c-.3.8-.5 1.7-.6 3C-.2 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.7.6-3 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.2C21.2 1.2 20.5.8 19.7.5c-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0zm0 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm7.8-10.4c0 .8-.6 1.4-1.4 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4z"/></svg></a>
+          <a href="#" aria-label="Facebook" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+          <a href="#" aria-label="TikTok" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.93a8.16 8.16 0 0 0 4.77 1.52V7a4.85 4.85 0 0 1-1.84-.31z"/></svg></a>
+          <a href="#" aria-label="YouTube" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2c-.3-1-1-1.8-2-2C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.5.6c-1 .3-1.8 1-2 2C0 8.4 0 12 0 12s0 3.6.5 5.8c.3 1 1 1.8 2 2 2.2.6 9.5.7 9.5.7s7.3 0 9.5-.6c1-.3 1.8-1 2-2 .5-2.2.5-5.8.5-5.8s0-3.6-.5-5.9zM9.6 16.4V7.6l6.4 4.4-6.4 4.4z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-brand-gold">Explore</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><a href="#" class="hover:text-white">Villas in Canggu</a></li>
+          <li><a href="#" class="hover:text-white">Villas in Uluwatu</a></li>
+          <li><a href="#" class="hover:text-white">Villas in Ubud</a></li>
+          <li><a href="#" class="hover:text-white">Villas in Seminyak</a></li>
+          <li><a href="#" class="hover:text-white">All Destinations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-brand-gold">Rentals</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><a href="#" class="hover:text-white">Daily Villas</a></li>
+          <li><a href="#" class="hover:text-white">Monthly Villas</a></li>
+          <li><a href="#" class="hover:text-white">Yearly Villas</a></li>
+          <li><a href="#" class="hover:text-white">Long-term Deals</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-brand-gold">Management</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><a href="#" class="hover:text-white">Villa Management</a></li>
+          <li><a href="#" class="hover:text-white">Become a Property</a></li>
+          <li><a href="#" class="hover:text-white">Our Services</a></li>
+          <li><a href="#" class="hover:text-white">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-brand-gold">Company</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><a href="#" class="hover:text-white">About Us</a></li>
+          <li><a href="/villa/" class="hover:text-white">Blog</a></li>
+          <li><a href="#" class="hover:text-white">Careers</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs text-white/60">
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-white">Privacy Policy</a>
+        <a href="#" class="hover:text-white">Terms of Service</a>
+      </div>
+      <div>© 2024 BaliVillas.ai. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- =============== FLOATING WHATSAPP =============== -->
+<a href="https://wa.me/6281000000000" class="fixed bottom-6 right-6 z-40 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full shadow-2xl flex items-center gap-2 font-semibold text-sm transition">
+  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  Chat on WhatsApp
+</a>
+
+</body>
+</html>
