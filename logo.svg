@@ -1,50 +1,5 @@
-<svg style="color: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 50" width="320" height="50" class="inline-block shrink-0 h-10">
-  <g fill="currentColor">
-    <!-- Balinese style roof (thatched/layered) -->
-    <path d="M8 28 L25 12 L42 28 L40 28 L25 15 L10 28 Z" stroke="currentColor" stroke-width="0.5"/>
-    <path d="M10 25 L25 14 L40 25" fill="none" stroke="currentColor" stroke-width="1.5"/>
-    <path d="M12 22 L25 13 L38 22" fill="none" stroke="currentColor" stroke-width="1"/>
-    <path d="M14 19 L25 12 L36 19" fill="none" stroke="currentColor" stroke-width="0.7"/>
-
-    <!-- Villa body -->
-    <rect x="12" y="28" width="26" height="18" rx="1" fill="currentColor"/>
-
-    <!-- Decorative columns -->
-    <rect x="14" y="28" width="2" height="18" fill="white" opacity="0.3"/>
-    <rect x="34" y="28" width="2" height="18" fill="white" opacity="0.3"/>
-
-    <!-- Balinese door (arched) -->
-    <path d="M21 46 L21 34 Q25 30 29 34 L29 46 Z" fill="white"/>
-    <line x1="25" y1="34" x2="25" y2="46" stroke="currentColor" stroke-width="0.5"/>
-
-    <!-- Windows with Balinese style -->
-    <rect x="15" y="32" width="4" height="5" rx="0.5" fill="white"/>
-    <line x1="17" y1="32" x2="17" y2="37" stroke="currentColor" stroke-width="0.3"/>
-    <rect x="31" y="32" width="4" height="5" rx="0.5" fill="white"/>
-    <line x1="33" y1="32" x2="33" y2="37" stroke="currentColor" stroke-width="0.3"/>
-
-    <!-- Palm trees -->
-    <path d="M3 46 L5 38 L7 46 Z" fill="currentColor"/>
-    <ellipse cx="5" cy="36" rx="5" ry="3" fill="currentColor" opacity="0.8"/>
-    <ellipse cx="3" cy="34" rx="4" ry="2" fill="currentColor" opacity="0.6" transform="rotate(-30 3 34)"/>
-    <ellipse cx="7" cy="34" rx="4" ry="2" fill="currentColor" opacity="0.6" transform="rotate(30 7 34)"/>
-
-    <path d="M43 46 L45 38 L47 46 Z" fill="currentColor"/>
-    <ellipse cx="45" cy="36" rx="5" ry="3" fill="currentColor" opacity="0.8"/>
-    <ellipse cx="43" cy="34" rx="4" ry="2" fill="currentColor" opacity="0.6" transform="rotate(-30 43 34)"/>
-    <ellipse cx="47" cy="34" rx="4" ry="2" fill="currentColor" opacity="0.6" transform="rotate(30 47 34)"/>
-
-    <!-- Pool reflection line -->
-    <line x1="8" y1="48" x2="42" y2="48" stroke="currentColor" stroke-width="0.5" opacity="0.4"/>
-  </g>
-
-  <!-- Text "Bali Villas AI" -->
-  <text x="58" y="32" font-family="Georgia, 'Palatino Linotype', serif" font-size="26" font-weight="700" fill="currentColor" letter-spacing="1">
+<svg style="color: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50" class="inline-block shrink-0 h-10">
+  <text x="0" y="36" font-family="Georgia, 'Palatino Linotype', serif" font-size="28" font-weight="700" fill="currentColor" letter-spacing="1">
     Bali Villas <tspan fill="#0088ff" font-weight="800">AI</tspan>
-  </text>
-
-  <!-- "for rent" subtitle -->
-  <text x="58" y="45" font-family="Arial, sans-serif" font-size="11" fill="currentColor" opacity="0.7" letter-spacing="2" font-style="italic">
-    FOR RENT
   </text>
 </svg>
