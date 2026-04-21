@@ -105,41 +105,33 @@ html { scroll-behavior: smooth; }
 <!-- =============== HERO =============== -->
 <section class="relative bg-off">
   <!-- Full-bleed image with overlay -->
-  <div class="relative h-[100vh] min-h-[760px] w-full overflow-hidden">
+  <div class="relative h-[78vh] min-h-[620px] max-h-[780px] w-full overflow-hidden">
     <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=2200&q=90&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover hero-img">
-    <!-- Subtle vignette + bottom fade for text legibility -->
-    <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 55%, rgba(10,10,10,0.85) 100%);"></div>
+    <!-- Softer gradient now that content sits higher -->
+    <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 35%, rgba(0,0,0,0) 70%, rgba(10,10,10,0.65) 100%);"></div>
 
     <!-- Top-left kicker badge -->
-    <div class="absolute top-[110px] left-6 lg:left-10 flex items-center gap-2 text-white/85 text-[11px] font-semibold tracking-[0.22em] uppercase">
+    <div class="absolute top-[100px] left-6 lg:left-10 flex items-center gap-2 text-white/85 text-[11px] font-semibold tracking-[0.22em] uppercase">
       <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
       AI-powered villa finder · Bali
     </div>
 
-    <!-- Title block -->
-    <div class="absolute bottom-[160px] left-0 right-0 px-6 lg:px-10">
+    <!-- Title block — raised to upper-middle of viewport -->
+    <div class="absolute top-[32%] left-0 right-0 px-6 lg:px-10">
       <div class="max-w-[1400px] mx-auto">
-        <h1 class="font-display text-white text-[56px] sm:text-[80px] lg:text-[132px] leading-[0.88] tracking-tightest font-normal">
+        <h1 class="font-display text-white text-[48px] sm:text-[72px] lg:text-[112px] leading-[0.88] tracking-tightest font-normal">
           Find your perfect<br>
           Bali villa <span class="italic font-light">in seconds.</span>
         </h1>
-        <p class="text-white/80 text-[16px] lg:text-[18px] mt-6 max-w-xl">
+        <p class="text-white/85 text-[16px] lg:text-[18px] mt-5 max-w-xl">
           Talk or type — our AI matches you with handpicked villas across Bali for daily, monthly or yearly stays.
         </p>
       </div>
     </div>
-
-    <!-- Scroll cue -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 text-xs flex flex-col items-center gap-2">
-      <span class="tracking-wider uppercase">Scroll</span>
-      <div class="w-px h-10 bg-white/40 relative overflow-hidden">
-        <span class="absolute top-0 left-0 right-0 h-4 bg-white" style="animation: scrollLine 2s infinite linear;"></span>
-      </div>
-    </div>
   </div>
 
-  <!-- Search card overlapping hero -->
-  <div class="relative -mt-20 z-20 max-w-[1100px] mx-auto px-4 lg:px-10">
+  <!-- Search card overlapping hero — deeper overlap so it lives on the first screen -->
+  <div class="relative -mt-32 lg:-mt-40 z-20 max-w-[1100px] mx-auto px-4 lg:px-10">
     <div class="bg-white rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.18)] p-4 lg:p-5">
       <!-- Tabs -->
       <div class="flex gap-1 mb-3 border-b border-line">
