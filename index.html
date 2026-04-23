@@ -143,11 +143,54 @@ html { scroll-behavior: smooth; }
   border-color: #007aff;
   box-shadow: 0 0 0 3px rgba(0,122,255,0.15);
 }
-.apple-mic { transition: transform .2s; }
-.apple-mic:hover { transform: scale(1.06); }
-.apple-mic:active { transform: scale(0.95); }
-@keyframes apple-ring { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.8); opacity: 0; } }
-.apple-ring { border: 1.5px solid #8a2be2; animation: apple-ring 1.6s infinite cubic-bezier(0.4,0,0.2,1); }
+.apple-mic {
+  transition: transform .2s;
+  animation: mic-breath 2.4s ease-in-out infinite;
+}
+.apple-mic:hover { transform: scale(1.08); }
+.apple-mic:active { transform: scale(0.92); }
+@keyframes mic-breath { 0%,100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+
+/* Multi-layer ripples */
+@keyframes apple-ring {
+  0%   { transform: scale(1);   opacity: 0.75; border-width: 2px; }
+  100% { transform: scale(2.6); opacity: 0;    border-width: 1px; }
+}
+.apple-ring { border: 2px solid #8a2be2; animation: apple-ring 1.6s infinite cubic-bezier(0.3,0,0.3,1); }
+.apple-ring-pink { border-color: #ff2d92; }
+.apple-ring-blue { border-color: #007aff; }
+
+/* Rotating conic halo behind the mic */
+@keyframes mic-halo { to { transform: rotate(360deg); } }
+.apple-mic-halo {
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #ff2d92, #8a2be2, #007aff, #34c759, #ffcc00, #ff9500, #ff2d92);
+  filter: blur(6px);
+  opacity: 0.8;
+  animation: mic-halo 3s linear infinite;
+  z-index: -1;
+}
+
+/* Sparkle particles orbiting */
+@keyframes spark-orbit {
+  0%   { transform: rotate(0deg) translate(32px) scale(0.4); opacity: 0; }
+  30%  { opacity: 1; }
+  70%  { opacity: 1; }
+  100% { transform: rotate(360deg) translate(32px) scale(1); opacity: 0; }
+}
+.apple-spark {
+  position: absolute;
+  top: 50%; left: 50%;
+  margin: -3px 0 0 -3px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 10px 2px rgba(255,255,255,0.9);
+  animation: spark-orbit 2.4s linear infinite;
+  pointer-events: none;
+}
 @keyframes apple-sparkle { 0%,100% { transform: scale(1) rotate(0); } 50% { transform: scale(1.15) rotate(180deg); } }
 .apple-sparkle { animation: apple-sparkle 4s ease-in-out infinite; }
 .apple-chip {
@@ -294,12 +337,19 @@ html { scroll-behavior: smooth; }
         <div class="relative">
           <textarea id="aiPrompt" rows="2" class="apple-input w-full resize-none rounded-2xl px-5 py-4 pr-20 text-[18px] lg:text-[20px] leading-snug text-[#1d1d1f] placeholder:text-[#86868b] focus:outline-none" placeholder="Describe your perfect villa…"></textarea>
 
-          <!-- Mic button (Siri-style) -->
+          <!-- Mic button (Siri-style, pumped animation) -->
           <button aria-label="Voice" class="apple-mic absolute right-3 bottom-3 w-12 h-12 rounded-full flex items-center justify-center group">
-            <span class="absolute inset-0 rounded-full bg-gradient-to-br from-[#ff2d92] via-[#8a2be2] to-[#007aff] opacity-90"></span>
-            <span class="absolute inset-0 rounded-full apple-ring" style="animation-delay:0s"></span>
-            <span class="absolute inset-0 rounded-full apple-ring" style="animation-delay:.6s"></span>
-            <svg class="relative w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            <span class="apple-mic-halo"></span>
+            <span class="absolute inset-0 rounded-full bg-gradient-to-br from-[#ff2d92] via-[#8a2be2] to-[#007aff] shadow-lg"></span>
+            <span class="absolute inset-0 rounded-full apple-ring apple-ring-pink" style="animation-delay:0s"></span>
+            <span class="absolute inset-0 rounded-full apple-ring" style="animation-delay:.4s"></span>
+            <span class="absolute inset-0 rounded-full apple-ring apple-ring-blue" style="animation-delay:.8s"></span>
+            <span class="absolute inset-0 rounded-full apple-ring" style="animation-delay:1.2s"></span>
+            <span class="apple-spark" style="animation-delay:0s"></span>
+            <span class="apple-spark" style="animation-delay:.6s"></span>
+            <span class="apple-spark" style="animation-delay:1.2s"></span>
+            <span class="apple-spark" style="animation-delay:1.8s"></span>
+            <svg class="relative w-5 h-5 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
           </button>
         </div>
 
