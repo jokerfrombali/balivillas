@@ -70,18 +70,20 @@ html { scroll-behavior: smooth; }
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-off/80 backdrop-blur-md border-b border-line">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
     <div class="flex items-center justify-between h-[72px]">
-      <a href="/" class="flex items-center gap-2.5">
-        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-          <path d="M16 28 L15 16 L17 16 L16 28 Z" fill="#0a0a0a"/>
-          <ellipse cx="16" cy="12" rx="3" ry="8" fill="#0a0a0a" transform="rotate(-20 16 12)"/>
-          <ellipse cx="16" cy="12" rx="3" ry="8" fill="#0a0a0a" transform="rotate(20 16 12)"/>
-          <ellipse cx="16" cy="12" rx="3" ry="8" fill="#0a0a0a" transform="rotate(-60 16 12)"/>
-          <ellipse cx="16" cy="12" rx="3" ry="8" fill="#0a0a0a" transform="rotate(60 16 12)"/>
-          <ellipse cx="16" cy="12" rx="3" ry="8" fill="#0a0a0a" transform="rotate(-90 16 12)"/>
-          <ellipse cx="16" cy="12" rx="3" ry="8" fill="#0a0a0a" transform="rotate(90 16 12)"/>
-          <circle cx="16" cy="9" r="1.2" fill="#0a0a0a"/>
+      <a href="/" class="flex items-center gap-2.5 text-ink">
+        <!-- Palm-in-oval mark (matches /villa/ logo) -->
+        <svg width="36" height="26" viewBox="0 0 42 30" fill="none" class="shrink-0">
+          <ellipse cx="21" cy="15" rx="19" ry="12.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M21 23 L20.2 14 L21.8 14 Z" fill="currentColor"/>
+          <ellipse cx="21" cy="11" rx="2" ry="6" fill="currentColor" transform="rotate(-20 21 11)"/>
+          <ellipse cx="21" cy="11" rx="2" ry="6" fill="currentColor" transform="rotate(20 21 11)"/>
+          <ellipse cx="21" cy="11" rx="2" ry="6" fill="currentColor" transform="rotate(-55 21 11)"/>
+          <ellipse cx="21" cy="11" rx="2" ry="6" fill="currentColor" transform="rotate(55 21 11)"/>
+          <ellipse cx="21" cy="11" rx="2" ry="6" fill="currentColor" transform="rotate(-85 21 11)"/>
+          <ellipse cx="21" cy="11" rx="2" ry="6" fill="currentColor" transform="rotate(85 21 11)"/>
+          <circle cx="21" cy="8" r="0.9" fill="currentColor"/>
         </svg>
-        <span class="font-display font-semibold text-[19px] tracking-tight">Bali Villas</span>
+        <span class="font-display text-[19px] tracking-tight"><span class="italic">Bali</span> <span class="font-semibold">Villas</span></span>
       </a>
 
       <div class="hidden lg:flex items-center gap-9">
