@@ -133,20 +133,8 @@ html { scroll-behavior: smooth; }
     </div>
   </div>
 
-  <!-- Selling-tagline typewriter ticker (above form) -->
-  <div class="relative -mt-32 lg:-mt-40 z-20 max-w-[900px] mx-auto px-4 lg:px-10 mb-3">
-    <div class="inline-flex items-center gap-2 px-4 py-2 bg-ink/90 backdrop-blur-sm text-white rounded-full text-xs font-medium shadow-lg">
-      <span class="flex gap-0.5">
-        <span class="w-1 h-1 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="w-1 h-1 rounded-full bg-emerald-400 animate-pulse" style="animation-delay:.15s"></span>
-        <span class="w-1 h-1 rounded-full bg-emerald-400 animate-pulse" style="animation-delay:.3s"></span>
-      </span>
-      <span id="sellingTicker" class="whitespace-nowrap">AI is finding villas…</span><span class="inline-block w-[2px] h-3 bg-white/80 ml-0.5 animate-pulse"></span>
-    </div>
-  </div>
-
   <!-- AI-first search — conversational, prompt-led -->
-  <div class="relative z-20 max-w-[900px] mx-auto px-4 lg:px-10">
+  <div class="relative -mt-48 lg:-mt-56 z-20 max-w-[900px] mx-auto px-4 lg:px-10">
     <div class="bg-white rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.18)] overflow-hidden">
       <!-- Mode toggle (AI ↔ Classic) -->
       <div class="flex items-center justify-between px-5 pt-4 pb-3 border-b border-line">
@@ -732,16 +720,6 @@ html { scroll-behavior: smooth; }
 <script>
 /* ===== Selling-tagline ticker + textarea placeholder typewriter ===== */
 (function () {
-  var tickerPhrases = [
-    "AI finds your villa in under 3 seconds",
-    "500+ handpicked luxury villas across Bali",
-    "Save up to 40% on monthly stays",
-    "24/7 concierge on the ground",
-    "Unlock hidden gems locals love",
-    "Zero booking fees · best-price guarantee",
-    "Pay monthly, live like a local",
-    "From $1,200/mo · private pool · fast Wi-Fi"
-  ];
   var promptPhrases = [
     "A 3-bedroom villa in Canggu for 3 months, pool, under $2,000/mo…",
     "Cliff-front villa in Uluwatu with a private chef…",
@@ -777,9 +755,6 @@ html { scroll-behavior: smooth; }
     }
     tick();
   }
-
-  var ticker = document.getElementById('sellingTicker');
-  if (ticker) typewriter(ticker, tickerPhrases, { type: 35, erase: 15, hold: 2200 });
 
   var prompt = document.getElementById('aiPrompt');
   if (prompt) typewriter(prompt, promptPhrases, {
