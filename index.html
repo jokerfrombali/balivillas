@@ -149,8 +149,22 @@ html { scroll-behavior: smooth; }
               <a href="#" class="mega-item">Chef service <span class="mega-count">28</span></a>
             </div>
             <div class="mega-divider"></div>
+            <!-- Map card -->
+            <div style="min-width:170px;flex-shrink:0;border-radius:14px;overflow:hidden;border:1px solid #e6e3dc;cursor:pointer;display:flex;flex-direction:column">
+              <div style="flex:1;overflow:hidden;position:relative;min-height:200px;background:#e8f0e8">
+                <iframe
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=114.42%2C-8.93%2C115.89%2C-7.88&layer=mapnik"
+                  style="width:100%;height:100%;border:none;position:absolute;inset:0;pointer-events:none;filter:saturate(0.7) brightness(1.05)"
+                  loading="lazy"></iframe>
+              </div>
+              <div style="padding:11px 14px;background:#fafaf7;display:flex;align-items:center;gap:7px;border-top:1px solid #e6e3dc">
+                <svg style="width:14px;height:14px;flex-shrink:0;color:#0a0a0a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span style="font-size:13px;font-weight:600;color:#0a0a0a">Search on map</span>
+              </div>
+            </div>
+            <div class="mega-divider"></div>
             <!-- Featured card -->
-            <div class="mega-featured" style="min-width:200px">
+            <div class="mega-featured" style="min-width:180px">
               <img src="/images/ubud.jpg" alt="Ubud">
               <div class="mega-featured-overlay"></div>
               <div class="mega-featured-content">
@@ -827,36 +841,38 @@ html { scroll-behavior: smooth; }
   });
 })();
 
-/* Villas mega-menu with hover delay */
+/* Villas mega-menu — closes only when mouse exits bottom boundary */
 (function () {
   var trigger = document.querySelector('.mega-trigger');
   var panel = document.getElementById('villasPanel');
   var chevron = trigger && trigger.querySelector('.mega-chevron');
   if (!trigger || !panel) return;
-  var timer;
 
   function openMenu() {
-    clearTimeout(timer);
     panel.classList.add('open');
     if (chevron) chevron.classList.add('open');
   }
   function closeMenu() {
-    timer = setTimeout(function () {
-      panel.classList.remove('open');
-      if (chevron) chevron.classList.remove('open');
-    }, 180);
+    panel.classList.remove('open');
+    if (chevron) chevron.classList.remove('open');
   }
 
   trigger.addEventListener('mouseenter', openMenu);
-  trigger.addEventListener('mouseleave', closeMenu);
-  panel.addEventListener('mouseenter', openMenu);
-  panel.addEventListener('mouseleave', closeMenu);
 
+  /* Close only when mouse crosses the BOTTOM edge of the panel */
+  document.addEventListener('mousemove', function (e) {
+    if (!panel.classList.contains('open')) return;
+    var pr = panel.getBoundingClientRect();
+    var tr = trigger.getBoundingClientRect();
+    /* combined zone: from top of trigger to bottom of panel, within panel horizontal bounds */
+    var inZone = e.clientY >= tr.top && e.clientY <= pr.bottom + 8
+                 && e.clientX >= pr.left - 24 && e.clientX <= pr.right + 24;
+    if (!inZone && e.clientY > tr.bottom) closeMenu();
+  });
+
+  /* Click outside to close */
   document.addEventListener('click', function (e) {
-    if (!trigger.contains(e.target) && !panel.contains(e.target)) {
-      panel.classList.remove('open');
-      if (chevron) chevron.classList.remove('open');
-    }
+    if (!trigger.contains(e.target) && !panel.contains(e.target)) closeMenu();
   });
 })();
 </script>
