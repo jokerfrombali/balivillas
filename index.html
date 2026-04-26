@@ -863,18 +863,190 @@ html { scroll-behavior: smooth; }
   });
 })();
 
-/* Navbar voice mic toggle */
+/* ===== Voice Search ===== */
 (function () {
-  var btn = document.getElementById('navMicBtn');
-  var ring = document.getElementById('navMicRing');
-  if (!btn) return;
-  var active = false;
-  btn.addEventListener('click', function () {
-    active = !active;
-    btn.style.background = active ? '#0a0a0a' : '#0a0a0a';
-    btn.style.boxShadow = active ? '0 0 0 3px rgba(10,10,10,0.15)' : '';
-    ring.style.display = active ? 'block' : 'none';
+  /* ---- Overlay HTML ---- */
+  var overlay = document.createElement('div');
+  overlay.id = 'voiceOverlay';
+  overlay.innerHTML = `
+    <div id="voiceCard">
+      <div id="voiceOrb">
+        <div class="vorb-ring r1"></div>
+        <div class="vorb-ring r2"></div>
+        <div class="vorb-ring r3"></div>
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round">
+          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+          <line x1="12" y1="19" x2="12" y2="23"/>
+          <line x1="8" y1="23" x2="16" y2="23"/>
+        </svg>
+      </div>
+      <p id="voiceStatus">Listening…</p>
+      <p id="voiceTranscript">Start speaking</p>
+      <div style="display:flex;gap:12px;margin-top:28px">
+        <button id="voiceCancel">Cancel</button>
+        <button id="voiceDone">Use this text →</button>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+
+  /* ---- Styles ---- */
+  var style = document.createElement('style');
+  style.textContent = `
+    #voiceOverlay {
+      display:none; position:fixed; inset:0; z-index:2000;
+      background:rgba(0,0,0,0.82); backdrop-filter:blur(18px);
+      align-items:center; justify-content:center; flex-direction:column;
+    }
+    #voiceOverlay.open { display:flex; }
+    #voiceCard {
+      display:flex; flex-direction:column; align-items:center;
+      padding:48px 40px; border-radius:28px;
+      background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12);
+      max-width:460px; width:90%;
+    }
+    #voiceOrb {
+      position:relative; width:110px; height:110px; border-radius:50%;
+      background:#0a0a0a; display:flex; align-items:center; justify-content:center;
+      margin-bottom:32px; flex-shrink:0;
+    }
+    .vorb-ring {
+      position:absolute; inset:0; border-radius:50%;
+      border:2px solid rgba(255,255,255,0.35);
+      animation:vorbPulse 2s ease-out infinite;
+    }
+    .vorb-ring.r2 { animation-delay:0.55s; }
+    .vorb-ring.r3 { animation-delay:1.1s; }
+    #voiceOrb.listening .vorb-ring { border-color:rgba(255,255,255,0.5); }
+    @keyframes vorbPulse {
+      0%   { transform:scale(1);   opacity:0.7; }
+      100% { transform:scale(2.1); opacity:0; }
+    }
+    #voiceStatus {
+      font-size:13px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase;
+      color:rgba(255,255,255,0.5); margin-bottom:16px;
+    }
+    #voiceTranscript {
+      font-family:'Fraunces',Georgia,serif; font-size:24px; font-weight:600;
+      color:white; text-align:center; line-height:1.35; min-height:64px;
+      max-width:360px;
+    }
+    #voiceTranscript.interim { color:rgba(255,255,255,0.55); }
+    #voiceCancel {
+      padding:12px 24px; border-radius:999px; border:1px solid rgba(255,255,255,0.25);
+      background:transparent; color:rgba(255,255,255,0.7); font-size:14px;
+      font-weight:500; cursor:pointer; transition:all 0.2s;
+    }
+    #voiceCancel:hover { background:rgba(255,255,255,0.1); }
+    #voiceDone {
+      padding:12px 28px; border-radius:999px; background:white; color:#0a0a0a;
+      font-size:14px; font-weight:600; border:none; cursor:pointer;
+      transition:transform 0.15s; display:none;
+    }
+    #voiceDone:hover { transform:translateY(-1px); }
+  `;
+  document.head.appendChild(style);
+
+  /* ---- Speech Recognition ---- */
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  var recognition = SR ? new SR() : null;
+  var finalText = '';
+  var interimText = '';
+
+  if (recognition) {
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = 'en-US';
+
+    recognition.onresult = function (e) {
+      finalText = ''; interimText = '';
+      for (var i = 0; i < e.results.length; i++) {
+        if (e.results[i].isFinal) finalText += e.results[i][0].transcript;
+        else interimText += e.results[i][0].transcript;
+      }
+      var transcript = document.getElementById('voiceTranscript');
+      var shown = finalText + interimText;
+      transcript.textContent = shown || 'Start speaking';
+      transcript.className = interimText && !finalText ? 'interim' : '';
+      var done = document.getElementById('voiceDone');
+      if (done) done.style.display = finalText ? 'block' : 'none';
+    };
+
+    recognition.onerror = function (e) {
+      var status = document.getElementById('voiceStatus');
+      if (status) status.textContent = e.error === 'not-allowed' ? 'Microphone access denied' : 'Error — try again';
+    };
+
+    recognition.onend = function () {
+      var status = document.getElementById('voiceStatus');
+      if (status && overlay.classList.contains('open')) status.textContent = 'Done — review your text';
+      var orb = document.getElementById('voiceOrb');
+      if (orb) orb.classList.remove('listening');
+    };
+  }
+
+  function openVoice() {
+    finalText = ''; interimText = '';
+    document.getElementById('voiceTranscript').textContent = 'Start speaking';
+    document.getElementById('voiceTranscript').className = '';
+    document.getElementById('voiceStatus').textContent = 'Listening…';
+    document.getElementById('voiceDone').style.display = 'none';
+    document.getElementById('voiceOrb').classList.add('listening');
+    overlay.classList.add('open');
+    if (recognition) { try { recognition.start(); } catch(e){} }
+  }
+
+  function closeVoice() {
+    overlay.classList.remove('open');
+    if (recognition) { try { recognition.stop(); } catch(e){} }
+    var ring = document.getElementById('navMicRing');
+    if (ring) ring.style.display = 'none';
+  }
+
+  function applyText() {
+    var text = (finalText || interimText).trim();
+    if (!text) { closeVoice(); return; }
+    var prompt = document.getElementById('aiPrompt');
+    if (prompt) {
+      prompt.value = text;
+      prompt.dispatchEvent(new Event('input'));
+      prompt.focus();
+      /* Scroll to search form */
+      var card = prompt.closest('section') || prompt.parentElement;
+      if (card) card.scrollIntoView({ behavior:'smooth', block:'center' });
+    }
+    closeVoice();
+  }
+
+  /* ---- Button wiring ---- */
+  var navBtn = document.getElementById('navMicBtn');
+  if (navBtn) navBtn.addEventListener('click', openVoice);
+
+  /* Also wire the in-card mic button */
+  document.querySelectorAll('button[aria-label="Voice"]').forEach(function(b) {
+    b.addEventListener('click', openVoice);
   });
+
+  document.getElementById('voiceCancel').addEventListener('click', closeVoice);
+  document.getElementById('voiceDone').addEventListener('click', applyText);
+
+  /* Close on backdrop click */
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeVoice();
+  });
+
+  /* Keyboard: Escape to close, Enter to apply */
+  document.addEventListener('keydown', function(e) {
+    if (!overlay.classList.contains('open')) return;
+    if (e.key === 'Escape') closeVoice();
+    if (e.key === 'Enter') applyText();
+  });
+
+  if (!SR) {
+    [navBtn].concat(Array.from(document.querySelectorAll('button[aria-label="Voice"]'))).forEach(function(b) {
+      if (b) b.title = 'Voice search not supported in this browser';
+    });
+  }
 })();
 
 /* Villas mega-menu — closes only when mouse exits bottom boundary */
