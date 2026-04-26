@@ -21,36 +21,242 @@ tailwind.config = {
 </script>
 <style>
 * { box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -webkit-font-smoothing: antialiased; }
-.font-display { font-family: 'Fraunces', Georgia, serif; }
-.kicker { text-transform: uppercase; letter-spacing: 0.22em; font-size: 11px; font-weight: 600; color: #6b6b66; }
-.nav-link { position: relative; color: #0a0a0a; font-weight: 500; font-size: 14px; text-decoration: none; }
-.btn-primary { background: #0a0a0a; color: #fff; border-radius: 999px; padding: 12px 22px; font-weight: 600; font-size: 14px; border: none; cursor: pointer; transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px; }
-.btn-primary:hover { background: #222; }
-.btn-outline { border: 1px solid #0a0a0a; color: #0a0a0a; background: transparent; border-radius: 999px; padding: 11px 21px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s; }
-.btn-outline:hover { background: #0a0a0a; color: #fff; }
+body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -webkit-font-smoothing: antialiased; margin: 0; }
 
-/* Filter sidebar */
-.filter-section { border-bottom: 1px solid #e6e3dc; padding: 20px 0; }
-.filter-section:last-child { border-bottom: none; }
-.filter-title { font-size: 13px; font-weight: 700; color: #0a0a0a; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
-.filter-title svg { transition: transform 0.2s; }
-.filter-title.collapsed svg { transform: rotate(-90deg); }
-.filter-body { overflow: hidden; transition: max-height 0.3s ease; }
+/* NAV */
+.nav-link { color: #0a0a0a; font-weight: 500; font-size: 14px; text-decoration: none; }
 
-/* Checkbox-pill style */
-.f-chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; border: 1px solid #e6e3dc; font-size: 13px; cursor: pointer; transition: all 0.15s; user-select: none; background: white; }
-.f-chip:hover { border-color: #0a0a0a; }
-.f-chip.active { background: #0a0a0a; color: white; border-color: #0a0a0a; }
-.f-chip .count { font-size: 11px; opacity: 0.55; }
-.f-chip.active .count { opacity: 0.7; }
+/* PROMO BANNER */
+.promo-banner {
+  position: relative;
+  background: #0a0a0a;
+  overflow: hidden;
+  padding: 32px 40px;
+}
+.promo-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/images/ubud.jpg') center/cover no-repeat;
+  opacity: 0.18;
+}
+.promo-inner {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.promo-thumb {
+  width: 140px;
+  height: 110px;
+  border-radius: 16px;
+  object-fit: cover;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+.promo-center { flex: 1; text-align: center; }
+.promo-tag {
+  display: inline-block;
+  background: #b8f04a;
+  color: #0a0a0a;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+.promo-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.promo-title em { color: #b8f04a; font-style: normal; }
+.promo-subtitle { color: rgba(255,255,255,0.65); font-size: 13px; margin-bottom: 16px; }
+.promo-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 13px;
+  color: white;
+  margin-bottom: 18px;
+}
+.promo-code strong { color: #b8f04a; letter-spacing: 0.06em; }
+.promo-search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 999px;
+  overflow: hidden;
+  max-width: 560px;
+  margin: 0 auto;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+.promo-search-field {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+}
+.promo-search-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: #0a0a0a;
+  padding: 13px 14px;
+  background: transparent;
+}
+.promo-search-field input::placeholder { color: #b0ada6; }
+.promo-search-divider { width: 1px; height: 24px; background: #e6e3dc; flex-shrink: 0; }
+.promo-search-btn {
+  background: #0a0a0a;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 999px 999px 0;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+}
+.promo-search-btn:hover { background: #222; }
+.promo-right { text-align: center; flex-shrink: 0; }
+.promo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(184,240,74,0.15);
+  border: 1px solid rgba(184,240,74,0.4);
+  border-radius: 12px;
+  padding: 10px 18px;
+  margin-bottom: 8px;
+}
+.promo-badge-text { font-size: 13px; font-weight: 600; color: #b8f04a; }
+.promo-tiers { display: flex; flex-direction: column; gap: 4px; }
+.promo-tier { font-size: 12px; color: rgba(255,255,255,0.55); }
+.promo-tier strong { color: rgba(255,255,255,0.85); }
 
-/* Property cards */
+/* AMENITY PILLS ROW */
+.pills-bar {
+  background: white;
+  border-bottom: 1px solid #e6e3dc;
+  padding: 0 40px;
+}
+.pills-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.pills-scroll {
+  flex: 1;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 12px 0;
+  scrollbar-width: none;
+}
+.pills-scroll::-webkit-scrollbar { display: none; }
+.pill {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+}
+.pill:hover { border-color: #0a0a0a; background: #fafaf7; }
+.pill.active { border-color: #0a0a0a; background: #0a0a0a; color: white; }
+.pill-icon { font-size: 18px; line-height: 1; }
+.pill-label { font-size: 11.5px; font-weight: 500; color: inherit; }
+.pill.active .pill-label { color: white; }
+.pills-sep { width: 1px; height: 40px; background: #e6e3dc; flex-shrink: 0; margin: 0 12px; }
+.filters-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  background: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  color: #0a0a0a;
+  transition: all 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.filters-btn:hover { border-color: #0a0a0a; }
+.filter-count-badge {
+  background: #0a0a0a;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 999px;
+  display: none;
+}
+
+/* RESULTS BAR */
+.results-bar {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sort-select {
+  border: 1.5px solid #e6e3dc;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  background: white;
+  cursor: pointer;
+  color: #0a0a0a;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
+.sort-select:hover { border-color: #0a0a0a; }
+.view-btn { width: 36px; height: 36px; border: 1.5px solid #e6e3dc; border-radius: 8px; display: flex; align-items: center; justify-content: center; background: white; cursor: pointer; transition: all 0.15s; }
+.view-btn.active, .view-btn:hover { background: #0a0a0a; border-color: #0a0a0a; color: white; }
+.view-btn svg { width: 16px; height: 16px; }
+
+/* CARDS */
+.cards-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 24px 40px 60px;
+}
 .prop-card { background: white; border-radius: 20px; overflow: hidden; border: 1px solid #e6e3dc; transition: transform 0.3s cubic-bezier(0.2,0.6,0.2,1), box-shadow 0.3s; cursor: pointer; }
 .prop-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.10); }
+.prop-card .img-wrap { overflow: hidden; position: relative; }
 .prop-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.5s cubic-bezier(0.2,0.6,0.2,1); }
 .prop-card:hover img { transform: scale(1.04); }
-.prop-card .img-wrap { overflow: hidden; position: relative; }
 .badge { position: absolute; top: 12px; left: 12px; background: rgba(10,10,10,0.72); backdrop-filter: blur(6px); color: white; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 999px; }
 .badge-type { position: absolute; top: 12px; right: 44px; background: rgba(250,250,247,0.92); color: #0a0a0a; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 999px; }
 .heart-btn { position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; background: rgba(250,250,247,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: none; cursor: pointer; transition: all 0.2s; }
@@ -59,62 +265,209 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
 .prop-meta { display: flex; align-items: center; gap: 12px; font-size: 12px; color: #6b6b66; }
 .prop-meta span { display: flex; align-items: center; gap: 4px; }
 
-/* Sort/results bar */
-.sort-select { border: 1px solid #e6e3dc; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; background: white; cursor: pointer; color: #0a0a0a; outline: none; }
-.sort-select:hover { border-color: #0a0a0a; }
+/* FILTER DRAWER */
+#filterDrawer {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: none;
+}
+#filterDrawer.open { display: flex; }
+#filterBackdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,10,0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+#filterPanel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 380px;
+  background: #fafaf7;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+  padding: 0;
+}
+#filterDrawer.open #filterPanel { transform: translateX(0); }
 
-/* Active filter chips */
-.active-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: #0a0a0a; color: white; font-size: 12px; font-weight: 500; }
-.active-chip button { background: none; border: none; color: white; cursor: pointer; line-height: 1; opacity: 0.7; font-size: 14px; padding: 0; }
+.filter-section { border-bottom: 1px solid #e6e3dc; padding: 20px 28px; }
+.filter-section:last-child { border-bottom: none; }
+.filter-title { font-size: 13px; font-weight: 700; color: #0a0a0a; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+.filter-title svg { transition: transform 0.2s; }
+.filter-title.collapsed svg { transform: rotate(-90deg); }
+.filter-body { overflow: hidden; transition: max-height 0.3s ease; }
 
-/* Price inputs */
-.price-input { border: 1px solid #e6e3dc; border-radius: 10px; padding: 8px 12px; font-size: 13px; width: 100%; background: white; outline: none; font-family: 'Inter', sans-serif; }
+.f-chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 13px; border-radius: 999px; border: 1.5px solid #e6e3dc; font-size: 13px; cursor: pointer; transition: all 0.15s; user-select: none; background: white; font-family: 'Inter', sans-serif; }
+.f-chip:hover { border-color: #0a0a0a; }
+.f-chip.active { background: #0a0a0a; color: white; border-color: #0a0a0a; }
+.f-chip .count { font-size: 11px; opacity: 0.55; }
+.f-chip.active .count { opacity: 0.7; }
+
+.price-input { border: 1.5px solid #e6e3dc; border-radius: 10px; padding: 8px 12px; font-size: 13px; width: 100%; background: white; outline: none; font-family: 'Inter', sans-serif; }
 .price-input:focus { border-color: #0a0a0a; }
 
-/* View toggle */
-.view-btn { width: 36px; height: 36px; border: 1px solid #e6e3dc; border-radius: 8px; display: flex; align-items: center; justify-content: center; background: white; cursor: pointer; transition: all 0.15s; }
-.view-btn.active, .view-btn:hover { background: #0a0a0a; border-color: #0a0a0a; color: white; }
-.view-btn svg { width: 16px; height: 16px; }
+/* CATEGORY CARDS */
+.cat-grid {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.cat-card {
+  background: white;
+  border: 1px solid #e6e3dc;
+  border-radius: 20px;
+  padding: 24px 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.cat-card:hover { border-color: #0a0a0a; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.07); }
+.cat-img { width: 64px; height: 64px; object-fit: contain; flex-shrink: 0; }
+.cat-card h3 { font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 700; margin: 0 0 3px; }
+.cat-card p { font-size: 12px; color: #6b6b66; margin: 0; }
+
+/* BTN */
+.btn-primary { background: #0a0a0a; color: #fff; border-radius: 999px; padding: 12px 22px; font-weight: 600; font-size: 14px; border: none; cursor: pointer; transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; }
+.btn-primary:hover { background: #222; }
+.btn-outline { border: 1.5px solid #0a0a0a; color: #0a0a0a; background: transparent; border-radius: 999px; padding: 11px 21px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif; }
+.btn-outline:hover { background: #0a0a0a; color: #fff; }
 </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,250,247,0.9);backdrop-filter:saturate(1.3) blur(12px);border-bottom:1px solid #e6e3dc">
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,247,0.92);backdrop-filter:saturate(1.3) blur(12px);border-bottom:1px solid #e6e3dc">
   <div style="max-width:1400px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:68px">
     <a href="/" style="text-decoration:none;color:#0a0a0a;font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700;letter-spacing:-0.01em">
       <span style="font-style:italic;font-weight:400">Bali</span> Villas
     </a>
     <div style="display:flex;align-items:center;gap:32px">
-      <a href="/bali-property-rental/" style="font-size:14px;font-weight:600;color:#0a0a0a;text-decoration:none;border-bottom:1.5px solid #0a0a0a;padding-bottom:2px">Villas</a>
+      <a href="/property-rental/" style="font-size:14px;font-weight:600;color:#0a0a0a;text-decoration:none;border-bottom:1.5px solid #0a0a0a;padding-bottom:2px">Villas</a>
       <a href="/#locations" class="nav-link">Destinations</a>
-      <a href="/#longterm" class="nav-link">Monthly & Yearly</a>
+      <a href="/#longterm" class="nav-link">Monthly &amp; Yearly</a>
       <a href="/#management" class="nav-link">Villa Management</a>
       <a href="/#about" class="nav-link">About</a>
     </div>
     <div style="display:flex;align-items:center;gap:10px">
-      <a href="/" class="btn-outline" style="font-size:13px;padding:9px 18px">← Back to search</a>
+      <a href="/" class="btn-outline" style="font-size:13px;padding:9px 18px">← Back</a>
       <a href="https://wa.me/6281000000000" class="btn-primary" style="font-size:13px;padding:9px 18px">Contact Concierge →</a>
     </div>
   </div>
 </nav>
 
-<!-- PAGE BODY -->
-<div style="padding-top:68px;min-height:100vh;display:flex;flex-direction:column">
+<!-- PAGE -->
+<div style="padding-top:68px;min-height:100vh">
 
-  <!-- Top bar -->
-  <div style="background:#fafaf7;border-bottom:1px solid #e6e3dc;padding:16px 40px;max-width:1400px;width:100%;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px">
+  <!-- PROMO BANNER -->
+  <div class="promo-banner">
+    <div class="promo-inner">
+      <!-- Left thumb -->
+      <img class="promo-thumb" src="/images/ubud.jpg" alt="Ubud villa" style="border-radius:16px;width:130px;height:100px;object-fit:cover;flex-shrink:0;opacity:0.8">
+
+      <!-- Center -->
+      <div class="promo-center">
+        <div class="promo-tag">🌿 May Escape Sale</div>
+        <h1 class="promo-title">May <em>Getaway</em> Offer</h1>
+        <p class="promo-subtitle">Book your Bali villa now and save up to 15%</p>
+        <div class="promo-code">Book with code <strong>STAYMAY</strong></div>
+        <div class="promo-search">
+          <input type="text" placeholder="Location — Canggu, Ubud, Seminyak…" style="flex:1;border:none;outline:none;font-size:14px;font-family:'Inter',sans-serif;color:#0a0a0a;padding:13px 18px;background:transparent">
+          <div style="width:1px;height:24px;background:#e6e3dc;flex-shrink:0"></div>
+          <input type="text" placeholder="Check in" style="width:100px;border:none;outline:none;font-size:13px;font-family:'Inter',sans-serif;color:#0a0a0a;padding:13px 10px;background:transparent">
+          <div style="width:1px;height:24px;background:#e6e3dc;flex-shrink:0"></div>
+          <input type="text" placeholder="Check out" style="width:100px;border:none;outline:none;font-size:13px;font-family:'Inter',sans-serif;color:#0a0a0a;padding:13px 10px;background:transparent">
+          <div style="width:1px;height:24px;background:#e6e3dc;flex-shrink:0"></div>
+          <input type="text" placeholder="Guests" style="width:74px;border:none;outline:none;font-size:13px;font-family:'Inter',sans-serif;color:#0a0a0a;padding:13px 10px;background:transparent">
+          <button class="promo-search-btn">Search</button>
+        </div>
+        <p style="color:rgba(255,255,255,0.4);font-size:11.5px;margin-top:10px">*5% any stay &nbsp;•&nbsp; 10% weekly &nbsp;•&nbsp; 15% monthly</p>
+      </div>
+
+      <!-- Right badge -->
+      <div class="promo-right" style="flex-shrink:0">
+        <img class="promo-thumb" src="/images/canggu.jpg" alt="Canggu" style="border-radius:16px;width:130px;height:100px;object-fit:cover;opacity:0.8;margin-bottom:10px">
+        <div class="promo-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8f04a" stroke-width="2.5"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <span class="promo-badge-text">5% — 15% OFF*</span>
+        </div>
+        <div class="promo-tiers">
+          <span class="promo-tier"><strong>5%</strong> any stay</span>
+          <span class="promo-tier"><strong>10%</strong> weekly</span>
+          <span class="promo-tier"><strong>15%</strong> monthly</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AMENITY PILLS + FILTERS -->
+  <div class="pills-bar">
+    <div class="pills-inner">
+      <div class="pills-scroll" id="pillsScroll">
+        <button class="pill active" data-amenity="all" onclick="setPill(this)">
+          <span class="pill-icon">🏠</span><span class="pill-label">All</span>
+        </button>
+        <button class="pill" data-amenity="pool" onclick="setPill(this)">
+          <span class="pill-icon">🏊</span><span class="pill-label">Private pool</span>
+        </button>
+        <button class="pill" data-amenity="wifi" onclick="setPill(this)">
+          <span class="pill-icon">📶</span><span class="pill-label">Fast Wi-Fi</span>
+        </button>
+        <button class="pill" data-amenity="kitchen" onclick="setPill(this)">
+          <span class="pill-icon">🍳</span><span class="pill-label">Kitchen</span>
+        </button>
+        <button class="pill" data-amenity="ac" onclick="setPill(this)">
+          <span class="pill-icon">❄️</span><span class="pill-label">Air conditioning</span>
+        </button>
+        <button class="pill" data-amenity="parking" onclick="setPill(this)">
+          <span class="pill-icon">🅿️</span><span class="pill-label">Parking</span>
+        </button>
+        <button class="pill" data-amenity="gym" onclick="setPill(this)">
+          <span class="pill-icon">🏋️</span><span class="pill-label">Gym</span>
+        </button>
+        <button class="pill" data-amenity="jacuzzi" onclick="setPill(this)">
+          <span class="pill-icon">🛁</span><span class="pill-label">Jacuzzi</span>
+        </button>
+        <button class="pill" data-amenity="beach" onclick="setPill(this)">
+          <span class="pill-icon">🏖️</span><span class="pill-label">Beachfront</span>
+        </button>
+        <button class="pill" data-amenity="ocean" onclick="setPill(this)">
+          <span class="pill-icon">🌊</span><span class="pill-label">Ocean view</span>
+        </button>
+        <button class="pill" data-amenity="chef" onclick="setPill(this)">
+          <span class="pill-icon">👨‍🍳</span><span class="pill-label">Private chef</span>
+        </button>
+        <button class="pill" data-amenity="dining" onclick="setPill(this)">
+          <span class="pill-icon">🌿</span><span class="pill-label">Outdoor dining</span>
+        </button>
+        <button class="pill" data-amenity="living" onclick="setPill(this)">
+          <span class="pill-icon">🛋️</span><span class="pill-label">Living room</span>
+        </button>
+      </div>
+      <div class="pills-sep"></div>
+      <button class="filters-btn" onclick="openFilters()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+        Filters
+        <span class="filter-count-badge" id="filterCountBadge">0</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- RESULTS BAR -->
+  <div class="results-bar">
     <div>
-      <p class="kicker" style="margin-bottom:2px">Bali Property Rental</p>
-      <h1 style="font-family:'Fraunces',Georgia,serif;font-size:28px;font-weight:700;line-height:1.1" id="resultsTitle">515 villas available</h1>
+      <p style="font-size:12px;color:#6b6b66;text-transform:uppercase;letter-spacing:0.18em;font-weight:600;margin-bottom:3px">Bali Property Rental</p>
+      <p style="font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:700" id="resultsTitle">515 villas available</p>
     </div>
-    <!-- Search bar -->
-    <div style="flex:1;max-width:420px;display:flex;align-items:center;gap:8px;background:white;border:1px solid #e6e3dc;border-radius:999px;padding:8px 8px 8px 18px">
-      <svg style="width:16px;height:16px;flex-shrink:0;color:#6b6b66" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input id="searchInput" type="text" placeholder="Search location, villa name…" style="border:none;outline:none;font-size:14px;flex:1;background:transparent;font-family:'Inter',sans-serif">
-      <button class="btn-primary" style="padding:8px 16px;font-size:13px">Search</button>
-    </div>
-    <!-- Sort & view -->
     <div style="display:flex;align-items:center;gap:10px">
       <select class="sort-select" id="sortSelect">
         <option>Recommended</option>
@@ -134,438 +487,339 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
     </div>
   </div>
 
-  <!-- Active filters -->
-  <div id="activeFilters" style="max-width:1400px;width:100%;margin:0 auto;padding:12px 40px;display:none;align-items:center;gap:8px;flex-wrap:wrap">
-    <span style="font-size:12px;color:#6b6b66;font-weight:500">Filters:</span>
+  <!-- CATEGORY CARDS -->
+  <div class="cat-grid" style="padding-top:20px">
+    <div class="cat-card" onclick="openFilters()">
+      <img class="cat-img" src="https://cdn-icons-png.flaticon.com/128/2919/2919592.png" alt="">
+      <div>
+        <h3>New on BaliVillas</h3>
+        <p>Recently added villas &amp; apartments</p>
+      </div>
+    </div>
+    <div class="cat-card" onclick="openFilters()">
+      <img class="cat-img" src="https://cdn-icons-png.flaticon.com/128/4054/4054428.png" alt="">
+      <div>
+        <h3>Luxury Properties</h3>
+        <p>Handpicked high-end stays</p>
+      </div>
+    </div>
+    <div class="cat-card" onclick="openFilters()">
+      <img class="cat-img" src="https://cdn-icons-png.flaticon.com/128/2370/2370264.png" alt="">
+      <div>
+        <h3>Monthly Stays</h3>
+        <p>Flexible long-term options</p>
+      </div>
+    </div>
   </div>
 
-  <!-- Main layout -->
-  <div style="max-width:1400px;width:100%;margin:0 auto;padding:0 40px 60px;display:flex;gap:32px;align-items:flex-start;flex:1">
+  <!-- CARDS GRID -->
+  <div class="cards-wrap">
+    <div id="cardGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
 
-    <!-- SIDEBAR -->
-    <aside style="width:260px;flex-shrink:0;position:sticky;top:88px;background:white;border:1px solid #e6e3dc;border-radius:20px;padding:24px;max-height:calc(100vh - 108px);overflow-y:auto">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
-        <span style="font-size:15px;font-weight:700">Filters</span>
-        <button onclick="clearAllFilters()" style="font-size:12px;color:#6b6b66;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:underline">Clear all</button>
-      </div>
-
-      <!-- Property type -->
-      <div class="filter-section">
-        <div class="filter-title" onclick="toggleFilter(this)">
-          Property type
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      <!-- Card 1 -->
+      <div class="prop-card" onclick="window.location='/villa/'">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80&auto=format&fit=crop" alt="Villa">
+          <span class="badge">Canggu</span>
+          <span class="badge-type">Villa</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
-        <div class="filter-body">
-          <div style="display:flex;flex-wrap:wrap;gap:6px">
-            <label class="f-chip active"><input type="checkbox" checked style="display:none" data-filter="type" value="all"> All <span class="count">515</span></label>
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="type" value="villa"> Villa <span class="count">222</span></label>
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="type" value="apartment"> Apartment <span class="count">188</span></label>
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="type" value="luxury"> Luxury <span class="count">64</span></label>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Modern 3BR Villa — Infinity Pool</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>3 bed</span><span>3 bath</span><span>280 m²</span>
           </div>
-        </div>
-      </div>
-
-      <!-- Bedrooms -->
-      <div class="filter-section">
-        <div class="filter-title" onclick="toggleFilter(this)">
-          Bedrooms
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="filter-body">
-          <div style="display:flex;flex-wrap:wrap;gap:6px">
-            <label class="f-chip active"><input type="checkbox" checked style="display:none" data-filter="beds" value="any"> Any</label>
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="beds" value="1"> 1</label>
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="beds" value="2"> 2</label>
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="beds" value="3"> 3</label>
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="beds" value="4"> 4</label>
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="beds" value="5"> 5+</label>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$2,400</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Rental period -->
-      <div class="filter-section">
-        <div class="filter-title" onclick="toggleFilter(this)">
-          Rental period
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      <!-- Card 2 -->
+      <div class="prop-card" onclick="window.location='/villa/'">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80&auto=format&fit=crop" alt="Villa">
+          <span class="badge">Ubud</span>
+          <span class="badge-type">Luxury</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
-        <div class="filter-body">
-          <div style="display:flex;flex-wrap:wrap;gap:6px">
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="period" value="daily"> Daily</label>
-            <label class="f-chip active"><input type="checkbox" checked style="display:none" data-filter="period" value="monthly"> Monthly</label>
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="period" value="yearly"> Yearly</label>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Jungle Retreat — Pool & Chef</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>4 bed</span><span>4 bath</span><span>420 m²</span>
           </div>
-        </div>
-      </div>
-
-      <!-- Price -->
-      <div class="filter-section">
-        <div class="filter-title" onclick="toggleFilter(this)">
-          Price per month
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="filter-body">
-          <div style="display:flex;gap:10px;align-items:center">
-            <div style="flex:1">
-              <div style="font-size:11px;color:#6b6b66;margin-bottom:4px">From</div>
-              <input type="number" class="price-input" placeholder="$500" id="priceMin">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$5,800</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Chef</span>
             </div>
-            <div style="color:#ccc;font-size:18px;margin-top:14px">—</div>
-            <div style="flex:1">
-              <div style="font-size:11px;color:#6b6b66;margin-bottom:4px">To</div>
-              <input type="number" class="price-input" placeholder="$5000" id="priceMax">
-            </div>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">
-            <label class="f-chip" onclick="setPrice(500,1500)">$500–$1.5k</label>
-            <label class="f-chip" onclick="setPrice(1500,3000)">$1.5k–$3k</label>
-            <label class="f-chip" onclick="setPrice(3000,6000)">$3k–$6k</label>
-            <label class="f-chip" onclick="setPrice(6000,99999)">$6k+</label>
           </div>
         </div>
       </div>
 
-      <!-- Location -->
-      <div class="filter-section">
-        <div class="filter-title" onclick="toggleFilter(this)">
-          Location
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      <!-- Card 3 -->
+      <div class="prop-card" onclick="window.location='/villa/'">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80&auto=format&fit=crop" alt="Villa">
+          <span class="badge">Seminyak</span>
+          <span class="badge-type">Villa</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
-        <div class="filter-body">
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px">
-              <span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="canggu" style="accent-color:#0a0a0a"> Canggu</span>
-              <span style="font-size:12px;color:#b0ada6">371</span>
-            </label>
-            <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px">
-              <span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="seminyak" style="accent-color:#0a0a0a"> Seminyak</span>
-              <span style="font-size:12px;color:#b0ada6">27</span>
-            </label>
-            <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px">
-              <span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="ubud" style="accent-color:#0a0a0a"> Ubud</span>
-              <span style="font-size:12px;color:#b0ada6">37</span>
-            </label>
-            <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px">
-              <span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="uluwatu" style="accent-color:#0a0a0a"> Uluwatu</span>
-              <span style="font-size:12px;color:#b0ada6">8</span>
-            </label>
-            <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px">
-              <span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="berawa" style="accent-color:#0a0a0a"> Berawa</span>
-              <span style="font-size:12px;color:#b0ada6">365</span>
-            </label>
-            <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px">
-              <span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="umalas" style="accent-color:#0a0a0a"> Umalas</span>
-              <span style="font-size:12px;color:#b0ada6">365</span>
-            </label>
-            <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px">
-              <span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="jimbaran" style="accent-color:#0a0a0a"> Jimbaran</span>
-              <span style="font-size:12px;color:#b0ada6">5</span>
-            </label>
-            <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px">
-              <span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="sanur" style="accent-color:#0a0a0a"> Sanur</span>
-              <span style="font-size:12px;color:#b0ada6">89</span>
-            </label>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Beachfront 2BR near Ku De Ta</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>2 bed</span><span>2 bath</span><span>160 m²</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$1,900</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Beach</span>
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Amenities -->
-      <div class="filter-section">
-        <div class="filter-title" onclick="toggleFilter(this)">
-          Amenities
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      <!-- Card 4 -->
+      <div class="prop-card" onclick="window.location='/villa/'">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1540541338537-0c4b94d7a37c?w=600&q=80&auto=format&fit=crop" alt="Villa">
+          <span class="badge">Uluwatu</span>
+          <span class="badge-type">Villa</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
-        <div class="filter-body">
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <label style="display:flex;align-items:center;gap:8px;padding:5px 0;cursor:pointer;font-size:13.5px"><input type="checkbox" data-filter="amenity" value="pool" style="accent-color:#0a0a0a"> Private pool</label>
-            <label style="display:flex;align-items:center;gap:8px;padding:5px 0;cursor:pointer;font-size:13.5px"><input type="checkbox" data-filter="amenity" value="beach" style="accent-color:#0a0a0a"> Near beach</label>
-            <label style="display:flex;align-items:center;gap:8px;padding:5px 0;cursor:pointer;font-size:13.5px"><input type="checkbox" data-filter="amenity" value="ocean" style="accent-color:#0a0a0a"> Ocean view</label>
-            <label style="display:flex;align-items:center;gap:8px;padding:5px 0;cursor:pointer;font-size:13.5px"><input type="checkbox" data-filter="amenity" value="chef" style="accent-color:#0a0a0a"> Private chef</label>
-            <label style="display:flex;align-items:center;gap:8px;padding:5px 0;cursor:pointer;font-size:13.5px"><input type="checkbox" data-filter="amenity" value="wifi" style="accent-color:#0a0a0a"> Fast Wi-Fi</label>
-            <label style="display:flex;align-items:center;gap:8px;padding:5px 0;cursor:pointer;font-size:13.5px"><input type="checkbox" data-filter="amenity" value="gym" style="accent-color:#0a0a0a"> Gym / Fitness</label>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Cliff-top Villa — Ocean View</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>3 bed</span><span>3 bath</span><span>310 m²</span>
           </div>
-        </div>
-      </div>
-
-      <!-- Type of stay -->
-      <div class="filter-section">
-        <div class="filter-title" onclick="toggleFilter(this)">
-          Type of stay
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="filter-body">
-          <div style="display:flex;flex-wrap:wrap;gap:6px">
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="vibe" value="romantic"> Romantic Escape</label>
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="vibe" value="surf"> Surf & Friends</label>
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="vibe" value="family"> Family Retreat</label>
-            <label class="f-chip"><input type="checkbox" style="display:none" data-filter="vibe" value="work"> Work & Live</label>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$3,200</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Ocean view</span>
+            </div>
           </div>
         </div>
       </div>
 
-    </aside>
-
-    <!-- LISTINGS -->
-    <main style="flex:1;min-width:0;padding-top:24px">
-
-      <!-- Active filter chips row -->
-      <div id="chipRow" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px"></div>
-
-      <!-- Cards grid -->
-      <div id="cardGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
-
-        <!-- Card 1 -->
-        <div class="prop-card" onclick="window.location='/villa/'">
-          <div class="img-wrap">
-            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80&auto=format&fit=crop" alt="Villa">
-            <span class="badge">Canggu</span>
-            <span class="badge-type">Villa</span>
-            <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
+      <!-- Card 5 -->
+      <div class="prop-card" onclick="window.location='/villa/'">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80&auto=format&fit=crop" alt="Villa">
+          <span class="badge">Berawa</span>
+          <span class="badge-type">Apartment</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Studio + Rooftop Pool — Nomad Ready</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>1 bed</span><span>1 bath</span><span>55 m²</span>
           </div>
-          <div style="padding:16px">
-            <p style="font-family:'Fraunces',Georgia,serif;font-size:17px;font-weight:600;margin-bottom:6px;line-height:1.2">Modern 3BR Villa with Infinity Pool</p>
-            <div class="prop-meta" style="margin-bottom:10px">
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> 3 bed</span>
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3H3v11h18z"/><path d="M3 14v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4"/></svg> 3 bath</span>
-              <span>280 m²</span>
-            </div>
-            <div style="display:flex;align-items:center;justify-content:space-between">
-              <div><span style="font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700">$2,400</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-              <div style="display:flex;gap:6px">
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
-              </div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$750</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Gym</span>
             </div>
           </div>
         </div>
-
-        <!-- Card 2 -->
-        <div class="prop-card" onclick="window.location='/villa/'">
-          <div class="img-wrap">
-            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80&auto=format&fit=crop" alt="Villa">
-            <span class="badge">Ubud</span>
-            <span class="badge-type">Luxury</span>
-            <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-          </div>
-          <div style="padding:16px">
-            <p style="font-family:'Fraunces',Georgia,serif;font-size:17px;font-weight:600;margin-bottom:6px;line-height:1.2">Jungle Retreat — Private Pool & Chef</p>
-            <div class="prop-meta" style="margin-bottom:10px">
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> 4 bed</span>
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3H3v11h18z"/><path d="M3 14v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4"/></svg> 4 bath</span>
-              <span>420 m²</span>
-            </div>
-            <div style="display:flex;align-items:center;justify-content:space-between">
-              <div><span style="font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700">$5,800</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-              <div style="display:flex;gap:6px">
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Chef</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="prop-card" onclick="window.location='/villa/'">
-          <div class="img-wrap">
-            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80&auto=format&fit=crop" alt="Villa">
-            <span class="badge">Seminyak</span>
-            <span class="badge-type">Villa</span>
-            <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-          </div>
-          <div style="padding:16px">
-            <p style="font-family:'Fraunces',Georgia,serif;font-size:17px;font-weight:600;margin-bottom:6px;line-height:1.2">Beachfront 2BR near Ku De Ta</p>
-            <div class="prop-meta" style="margin-bottom:10px">
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> 2 bed</span>
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3H3v11h18z"/><path d="M3 14v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4"/></svg> 2 bath</span>
-              <span>160 m²</span>
-            </div>
-            <div style="display:flex;align-items:center;justify-content:space-between">
-              <div><span style="font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700">$1,900</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-              <div style="display:flex;gap:6px">
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Beach</span>
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="prop-card" onclick="window.location='/villa/'">
-          <div class="img-wrap">
-            <img src="https://images.unsplash.com/photo-1540541338537-0c4b94d7a37c?w=600&q=80&auto=format&fit=crop" alt="Villa">
-            <span class="badge">Uluwatu</span>
-            <span class="badge-type">Villa</span>
-            <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-          </div>
-          <div style="padding:16px">
-            <p style="font-family:'Fraunces',Georgia,serif;font-size:17px;font-weight:600;margin-bottom:6px;line-height:1.2">Cliff-top Villa with Ocean View</p>
-            <div class="prop-meta" style="margin-bottom:10px">
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> 3 bed</span>
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3H3v11h18z"/><path d="M3 14v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4"/></svg> 3 bath</span>
-              <span>310 m²</span>
-            </div>
-            <div style="display:flex;align-items:center;justify-content:space-between">
-              <div><span style="font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700">$3,200</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-              <div style="display:flex;gap:6px">
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Ocean view</span>
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="prop-card" onclick="window.location='/villa/'">
-          <div class="img-wrap">
-            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80&auto=format&fit=crop" alt="Villa">
-            <span class="badge">Berawa</span>
-            <span class="badge-type">Apartment</span>
-            <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-          </div>
-          <div style="padding:16px">
-            <p style="font-family:'Fraunces',Georgia,serif;font-size:17px;font-weight:600;margin-bottom:6px;line-height:1.2">Studio with Rooftop Pool — Digital Nomad</p>
-            <div class="prop-meta" style="margin-bottom:10px">
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> 1 bed</span>
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3H3v11h18z"/><path d="M3 14v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4"/></svg> 1 bath</span>
-              <span>55 m²</span>
-            </div>
-            <div style="display:flex;align-items:center;justify-content:space-between">
-              <div><span style="font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700">$750</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-              <div style="display:flex;gap:6px">
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Gym</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="prop-card" onclick="window.location='/villa/'">
-          <div class="img-wrap">
-            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80&auto=format&fit=crop" alt="Villa" style="filter:hue-rotate(10deg)">
-            <span class="badge">Sanur</span>
-            <span class="badge-type">Villa</span>
-            <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-          </div>
-          <div style="padding:16px">
-            <p style="font-family:'Fraunces',Georgia,serif;font-size:17px;font-weight:600;margin-bottom:6px;line-height:1.2">Family Villa 5BR near Sanur Beach</p>
-            <div class="prop-meta" style="margin-bottom:10px">
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> 5 bed</span>
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3H3v11h18z"/><path d="M3 14v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4"/></svg> 5 bath</span>
-              <span>580 m²</span>
-            </div>
-            <div style="display:flex;align-items:center;justify-content:space-between">
-              <div><span style="font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700">$4,100</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-              <div style="display:flex;gap:6px">
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Beach</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 7 -->
-        <div class="prop-card" onclick="window.location='/villa/'">
-          <div class="img-wrap">
-            <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=600&q=80&auto=format&fit=crop" alt="Villa">
-            <span class="badge">Umalas</span>
-            <span class="badge-type">Villa</span>
-            <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-          </div>
-          <div style="padding:16px">
-            <p style="font-family:'Fraunces',Georgia,serif;font-size:17px;font-weight:600;margin-bottom:6px;line-height:1.2">Tropical 2BR with Rice Field View</p>
-            <div class="prop-meta" style="margin-bottom:10px">
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> 2 bed</span>
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3H3v11h18z"/><path d="M3 14v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4"/></svg> 2 bath</span>
-              <span>200 m²</span>
-            </div>
-            <div style="display:flex;align-items:center;justify-content:space-between">
-              <div><span style="font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700">$1,350</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-              <div style="display:flex;gap:6px">
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 8 -->
-        <div class="prop-card" onclick="window.location='/villa/'">
-          <div class="img-wrap">
-            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80&auto=format&fit=crop" alt="Villa">
-            <span class="badge">Jimbaran</span>
-            <span class="badge-type">Luxury</span>
-            <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-          </div>
-          <div style="padding:16px">
-            <p style="font-family:'Fraunces',Georgia,serif;font-size:17px;font-weight:600;margin-bottom:6px;line-height:1.2">Luxury 6BR Estate — Infinity Pool & Staff</p>
-            <div class="prop-meta" style="margin-bottom:10px">
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> 6 bed</span>
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3H3v11h18z"/><path d="M3 14v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4"/></svg> 6 bath</span>
-              <span>900 m²</span>
-            </div>
-            <div style="display:flex;align-items:center;justify-content:space-between">
-              <div><span style="font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700">$12,000</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-              <div style="display:flex;gap:6px">
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Chef</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 9 -->
-        <div class="prop-card" onclick="window.location='/villa/'">
-          <div class="img-wrap">
-            <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80&auto=format&fit=crop" alt="Villa">
-            <span class="badge">Canggu</span>
-            <span class="badge-type">Apartment</span>
-            <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-          </div>
-          <div style="padding:16px">
-            <p style="font-family:'Fraunces',Georgia,serif;font-size:17px;font-weight:600;margin-bottom:6px;line-height:1.2">1BR Coworking Apartment, Echo Beach</p>
-            <div class="prop-meta" style="margin-bottom:10px">
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> 1 bed</span>
-              <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3H3v11h18z"/><path d="M3 14v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4"/></svg> 1 bath</span>
-              <span>65 m²</span>
-            </div>
-            <div style="display:flex;align-items:center;justify-content:space-between">
-              <div><span style="font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700">$680</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-              <div style="display:flex;gap:6px">
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
-                <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Gym</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <!-- Load more -->
-      <div style="text-align:center;margin-top:48px">
-        <button class="btn-outline">Load more villas</button>
-        <p style="font-size:13px;color:#6b6b66;margin-top:12px">Showing 9 of 515 villas</p>
+      <!-- Card 6 -->
+      <div class="prop-card" onclick="window.location='/villa/'">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80&auto=format&fit=crop" alt="Villa" style="filter:hue-rotate(10deg)">
+          <span class="badge">Sanur</span>
+          <span class="badge-type">Villa</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Family 5BR near Sanur Beach</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>5 bed</span><span>5 bath</span><span>580 m²</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$4,100</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Beach</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-    </main>
+      <!-- Card 7 -->
+      <div class="prop-card" onclick="window.location='/villa/'">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=600&q=80&auto=format&fit=crop" alt="Villa">
+          <span class="badge">Umalas</span>
+          <span class="badge-type">Villa</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Tropical 2BR — Rice Field View</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>2 bed</span><span>2 bath</span><span>200 m²</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$1,350</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="prop-card" onclick="window.location='/villa/'">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80&auto=format&fit=crop" alt="Villa">
+          <span class="badge">Jimbaran</span>
+          <span class="badge-type">Luxury</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Luxury 6BR Estate — Infinity Pool</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>6 bed</span><span>6 bath</span><span>900 m²</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$12,000</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Chef</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="prop-card" onclick="window.location='/villa/'">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80&auto=format&fit=crop" alt="Villa">
+          <span class="badge">Canggu</span>
+          <span class="badge-type">Apartment</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">1BR Coworking Apt, Echo Beach</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>1 bed</span><span>1 bath</span><span>65 m²</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$680</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Gym</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 10 -->
+      <div class="prop-card" onclick="window.location='/villa/'">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&auto=format&fit=crop" alt="Villa">
+          <span class="badge">Kerobokan</span>
+          <span class="badge-type">Villa</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">4BR Tropical Villa — Garden & Pool</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>4 bed</span><span>4 bath</span><span>350 m²</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$2,900</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 11 -->
+      <div class="prop-card" onclick="window.location='/villa/'">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80&auto=format&fit=crop" alt="Villa">
+          <span class="badge">Pererenan</span>
+          <span class="badge-type">Villa</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Rice Terrace Villa — Romantic Escape</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>2 bed</span><span>2 bath</span><span>175 m²</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$1,600</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 12 -->
+      <div class="prop-card" onclick="window.location='/villa/'">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&q=80&auto=format&fit=crop" alt="Villa">
+          <span class="badge">Nusa Dua</span>
+          <span class="badge-type">Luxury</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Beachfront Penthouse — 5★ Resort</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>3 bed</span><span>3 bath</span><span>240 m²</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$7,500</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Beach</span>
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Load more -->
+    <div style="text-align:center;margin-top:48px">
+      <button class="btn-outline">Load more villas</button>
+      <p style="font-size:13px;color:#6b6b66;margin-top:12px">Showing 12 of 515 villas</p>
+    </div>
   </div>
 </div>
 
@@ -575,13 +829,176 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   <p style="font-size:13px;color:rgba(255,255,255,0.45)">© 2026 BaliVillas.ai — AI-powered villa search in Bali</p>
 </footer>
 
+<!-- FILTER DRAWER -->
+<div id="filterDrawer">
+  <div id="filterBackdrop" onclick="closeFilters()"></div>
+  <div id="filterPanel">
+    <!-- Header -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 28px 16px;border-bottom:1px solid #e6e3dc;position:sticky;top:0;background:#fafaf7;z-index:1">
+      <span style="font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:700">Filters</span>
+      <div style="display:flex;align-items:center;gap:12px">
+        <button onclick="clearAllFilters()" style="font-size:12px;color:#6b6b66;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:underline">Clear all</button>
+        <button onclick="closeFilters()" style="width:32px;height:32px;border-radius:50%;border:1.5px solid #e6e3dc;background:white;cursor:pointer;display:flex;align-items:center;justify-content:center">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Property type -->
+    <div class="filter-section">
+      <div class="filter-title" onclick="toggleFilter(this)">
+        Property type
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="filter-body">
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <label class="f-chip active"><input type="checkbox" checked style="display:none" data-filter="type" value="all"> All <span class="count">515</span></label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="type" value="villa"> Villa <span class="count">222</span></label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="type" value="apartment"> Apartment <span class="count">188</span></label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="type" value="luxury"> Luxury <span class="count">64</span></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bedrooms -->
+    <div class="filter-section">
+      <div class="filter-title" onclick="toggleFilter(this)">
+        Bedrooms
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="filter-body">
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <label class="f-chip active"><input type="checkbox" checked style="display:none" data-filter="beds" value="any"> Any</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="beds" value="1"> 1</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="beds" value="2"> 2</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="beds" value="3"> 3</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="beds" value="4"> 4</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="beds" value="5"> 5+</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rental period -->
+    <div class="filter-section">
+      <div class="filter-title" onclick="toggleFilter(this)">
+        Rental period
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="filter-body">
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="period" value="daily"> Daily</label>
+          <label class="f-chip active"><input type="checkbox" checked style="display:none" data-filter="period" value="monthly"> Monthly</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="period" value="yearly"> Yearly</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Price -->
+    <div class="filter-section">
+      <div class="filter-title" onclick="toggleFilter(this)">
+        Price per month
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="filter-body">
+        <div style="display:flex;gap:10px;align-items:center">
+          <div style="flex:1">
+            <div style="font-size:11px;color:#6b6b66;margin-bottom:4px">From</div>
+            <input type="number" class="price-input" placeholder="$500" id="priceMin">
+          </div>
+          <div style="color:#ccc;font-size:18px;margin-top:14px">—</div>
+          <div style="flex:1">
+            <div style="font-size:11px;color:#6b6b66;margin-bottom:4px">To</div>
+            <input type="number" class="price-input" placeholder="$5000" id="priceMax">
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">
+          <label class="f-chip" onclick="setPrice(500,1500)">$500–$1.5k</label>
+          <label class="f-chip" onclick="setPrice(1500,3000)">$1.5k–$3k</label>
+          <label class="f-chip" onclick="setPrice(3000,6000)">$3k–$6k</label>
+          <label class="f-chip" onclick="setPrice(6000,99999)">$6k+</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="filter-section">
+      <div class="filter-title" onclick="toggleFilter(this)">
+        Location
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="filter-body">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px"><span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="canggu" style="accent-color:#0a0a0a"> Canggu</span><span style="font-size:12px;color:#b0ada6">371</span></label>
+          <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px"><span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="seminyak" style="accent-color:#0a0a0a"> Seminyak</span><span style="font-size:12px;color:#b0ada6">27</span></label>
+          <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px"><span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="ubud" style="accent-color:#0a0a0a"> Ubud</span><span style="font-size:12px;color:#b0ada6">37</span></label>
+          <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px"><span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="uluwatu" style="accent-color:#0a0a0a"> Uluwatu</span><span style="font-size:12px;color:#b0ada6">8</span></label>
+          <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px"><span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="berawa" style="accent-color:#0a0a0a"> Berawa</span><span style="font-size:12px;color:#b0ada6">365</span></label>
+          <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px"><span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="umalas" style="accent-color:#0a0a0a"> Umalas</span><span style="font-size:12px;color:#b0ada6">365</span></label>
+          <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px"><span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="jimbaran" style="accent-color:#0a0a0a"> Jimbaran</span><span style="font-size:12px;color:#b0ada6">5</span></label>
+          <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px"><span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="sanur" style="accent-color:#0a0a0a"> Sanur</span><span style="font-size:12px;color:#b0ada6">89</span></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amenities -->
+    <div class="filter-section">
+      <div class="filter-title" onclick="toggleFilter(this)">
+        Amenities
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="filter-body">
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="amenity" value="pool"> Private pool</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="amenity" value="beach"> Beachfront</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="amenity" value="ocean"> Ocean view</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="amenity" value="chef"> Private chef</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="amenity" value="wifi"> Fast Wi-Fi</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="amenity" value="gym"> Gym</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="amenity" value="jacuzzi"> Jacuzzi</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="amenity" value="kitchen"> Kitchen</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Type of stay -->
+    <div class="filter-section">
+      <div class="filter-title" onclick="toggleFilter(this)">
+        Type of stay
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="filter-body">
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="vibe" value="romantic"> 🌹 Romantic Escape</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="vibe" value="surf"> 🏄 Surf & Friends</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="vibe" value="family"> 👨‍👩‍👧 Family Retreat</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="vibe" value="work"> 💻 Work & Live</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apply -->
+    <div style="padding:20px 28px;position:sticky;bottom:0;background:#fafaf7;border-top:1px solid #e6e3dc">
+      <button class="btn-primary" style="width:100%;justify-content:center;font-size:15px" onclick="closeFilters()">Show 515 villas</button>
+    </div>
+  </div>
+</div>
+
 <script>
-/* Filter chip toggle */
-document.querySelectorAll('.f-chip input').forEach(function(inp) {
-  inp.closest('.f-chip').addEventListener('click', function() {
-    this.classList.toggle('active');
-  });
-});
+/* Pill toggle */
+function setPill(el) {
+  document.querySelectorAll('.pill').forEach(function(p) { p.classList.remove('active'); });
+  el.classList.add('active');
+}
+
+/* Filter drawer */
+function openFilters() {
+  document.getElementById('filterDrawer').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeFilters() {
+  document.getElementById('filterDrawer').classList.remove('open');
+  document.body.style.overflow = '';
+}
 
 /* Collapsible filter sections */
 function toggleFilter(titleEl) {
@@ -593,16 +1010,28 @@ function toggleFilter(titleEl) {
     body.style.maxHeight = body.scrollHeight + 'px';
   }
 }
-/* Init all open */
 document.querySelectorAll('.filter-body').forEach(function(b) {
   b.style.maxHeight = b.scrollHeight + 'px';
 });
 
+/* Filter chip toggle + count badge */
+document.querySelectorAll('.f-chip input').forEach(function(inp) {
+  inp.closest('.f-chip').addEventListener('click', function() {
+    this.classList.toggle('active');
+    updateFilterCount();
+  });
+});
+function updateFilterCount() {
+  var n = document.querySelectorAll('.f-chip.active').length;
+  var badge = document.getElementById('filterCountBadge');
+  if (n > 0) { badge.style.display = 'inline'; badge.textContent = n; } else { badge.style.display = 'none'; }
+}
+
 function clearAllFilters() {
   document.querySelectorAll('.f-chip').forEach(function(c) { c.classList.remove('active'); });
-  document.querySelectorAll('input[data-filter]').forEach(function(i) { i.checked = false; });
   document.getElementById('priceMin').value = '';
   document.getElementById('priceMax').value = '';
+  updateFilterCount();
 }
 
 function setPrice(min, max) {
@@ -614,12 +1043,17 @@ function setPrice(min, max) {
 document.getElementById('viewGrid').addEventListener('click', function() {
   this.classList.add('active');
   document.getElementById('viewList').classList.remove('active');
-  document.getElementById('cardGrid').style.gridTemplateColumns = 'repeat(3,1fr)';
+  document.getElementById('cardGrid').style.gridTemplateColumns = 'repeat(4,1fr)';
 });
 document.getElementById('viewList').addEventListener('click', function() {
   this.classList.add('active');
   document.getElementById('viewGrid').classList.remove('active');
   document.getElementById('cardGrid').style.gridTemplateColumns = '1fr';
+});
+
+/* Close drawer on Escape */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeFilters();
 });
 </script>
 </body>
