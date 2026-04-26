@@ -50,6 +50,26 @@ html { scroll-behavior: smooth; }
 .nav-link { position: relative; color: #0a0a0a; font-weight: 500; font-size: 14px; }
 .nav-link::after { content: ''; position: absolute; bottom: -6px; left: 0; right: 0; height: 1.5px; background: #0a0a0a; transform: scaleX(0); transform-origin: left; transition: transform 0.25s; }
 .nav-link:hover::after { transform: scaleX(1); }
+/* Mega-menu */
+.mega-trigger { position: relative; }
+.mega-panel {
+  display: none; position: absolute; top: calc(100% + 16px); left: 50%; transform: translateX(-50%);
+  width: 900px; background: #fafaf7; border: 1px solid #e6e3dc; border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.06);
+  padding: 32px; z-index: 100;
+}
+.mega-trigger:hover .mega-panel { display: flex; gap: 28px; }
+.mega-col-title { text-transform: uppercase; letter-spacing: 0.18em; font-size: 10.5px; font-weight: 700; color: #8a8a85; margin-bottom: 14px; }
+.mega-item { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; font-size: 13.5px; color: #0a0a0a; text-decoration: none; transition: color 0.15s; cursor: pointer; border: none; background: none; width: 100%; text-align: left; }
+.mega-item:hover { color: #555; }
+.mega-count { font-size: 12px; color: #b0ad a6; margin-left: 8px; flex-shrink: 0; }
+.mega-divider { width: 1px; background: #e6e3dc; flex-shrink: 0; }
+.mega-featured { width: 220px; flex-shrink: 0; border-radius: 14px; overflow: hidden; position: relative; min-height: 260px; }
+.mega-featured img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mega-featured-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 50%, transparent 100%); }
+.mega-featured-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 16px; color: white; }
+.mega-chevron { transition: transform 0.2s; }
+.mega-trigger:hover .mega-chevron { transform: rotate(180deg); }
 .tab-active { background: #0a0a0a; color: #fff; }
 .divider { border-top: 1px solid #e6e3dc; }
 @keyframes wave { 0%,100% { transform: scaleY(0.4); } 50% { transform: scaleY(1); } }
@@ -76,7 +96,68 @@ html { scroll-behavior: smooth; }
       </a>
 
       <div class="hidden lg:flex items-center gap-9">
-        <a href="#matches" class="nav-link flex items-center gap-1">Villas <svg class="w-3 h-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="mega-trigger">
+          <button class="nav-link flex items-center gap-1">Villas <svg class="w-3 h-3 opacity-60 mega-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="mega-panel">
+            <!-- Col: Property type -->
+            <div style="min-width:110px">
+              <p class="mega-col-title">Property type</p>
+              <a href="#" class="mega-item">Apartment <span class="mega-count">188</span></a>
+              <a href="#" class="mega-item">Villa <span class="mega-count">222</span></a>
+              <a href="#" class="mega-item">All types <span class="mega-count">515</span></a>
+            </div>
+            <div class="mega-divider"></div>
+            <!-- Col: Bedrooms -->
+            <div style="min-width:115px">
+              <p class="mega-col-title">Bedrooms</p>
+              <a href="#" class="mega-item">1 bedroom <span class="mega-count">515</span></a>
+              <a href="#" class="mega-item">2 bedrooms <span class="mega-count">244</span></a>
+              <a href="#" class="mega-item">3 bedrooms <span class="mega-count">106</span></a>
+              <a href="#" class="mega-item">4 bedrooms <span class="mega-count">36</span></a>
+              <a href="#" class="mega-item">5 bedrooms <span class="mega-count">12</span></a>
+            </div>
+            <div class="mega-divider"></div>
+            <!-- Col: Rental Period -->
+            <div style="min-width:100px">
+              <p class="mega-col-title">Rental period</p>
+              <a href="#" class="mega-item">Daily <span class="mega-count">515</span></a>
+              <a href="#" class="mega-item">Monthly <span class="mega-count">46</span></a>
+              <a href="#" class="mega-item">Yearly <span class="mega-count">165</span></a>
+            </div>
+            <div class="mega-divider"></div>
+            <!-- Col: Location -->
+            <div style="min-width:115px">
+              <p class="mega-col-title">Location</p>
+              <a href="#" class="mega-item">Canggu <span class="mega-count">371</span></a>
+              <a href="#" class="mega-item">Seminyak <span class="mega-count">27</span></a>
+              <a href="#" class="mega-item">Ubud <span class="mega-count">37</span></a>
+              <a href="#" class="mega-item">Uluwatu <span class="mega-count">8</span></a>
+              <a href="#" class="mega-item">Berawa <span class="mega-count">365</span></a>
+              <a href="#" class="mega-item">Umalas <span class="mega-count">365</span></a>
+              <a href="#" class="mega-item">Jimbaran <span class="mega-count">5</span></a>
+            </div>
+            <div class="mega-divider"></div>
+            <!-- Col: Amenities -->
+            <div style="min-width:105px">
+              <p class="mega-col-title">Amenities</p>
+              <a href="#" class="mega-item">Private pool <span class="mega-count">195</span></a>
+              <a href="#" class="mega-item">Near beach <span class="mega-count">34</span></a>
+              <a href="#" class="mega-item">Ocean view <span class="mega-count">61</span></a>
+              <a href="#" class="mega-item">Chef service <span class="mega-count">28</span></a>
+            </div>
+            <div class="mega-divider"></div>
+            <!-- Featured card -->
+            <div class="mega-featured" style="min-width:200px">
+              <img src="/images/ubud.jpg" alt="Ubud">
+              <div class="mega-featured-overlay"></div>
+              <div class="mega-featured-content">
+                <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:700;line-height:1.25;margin-bottom:6px">Art, Culture<br>& Tranquility</p>
+                <p style="font-size:11px;opacity:0.75;margin-bottom:12px">Discover Ubud — a jungle retreat for the soul</p>
+                <a href="#locations" style="font-size:12px;font-weight:600;background:white;color:#0a0a0a;border-radius:999px;padding:6px 14px;text-decoration:none">Explore Ubud →</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <a href="#locations" class="nav-link flex items-center gap-1">Destinations <svg class="w-3 h-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
         <a href="#longterm" class="nav-link">Monthly &amp; Yearly</a>
         <a href="#management" class="nav-link">Villa Management</a>
