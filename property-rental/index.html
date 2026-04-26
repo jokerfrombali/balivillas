@@ -175,8 +175,8 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  padding: 8px 16px;
+  gap: 5px;
+  padding: 10px 14px;
   border-radius: 12px;
   border: 1.5px solid transparent;
   cursor: pointer;
@@ -185,12 +185,12 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   flex-shrink: 0;
   background: transparent;
   font-family: 'Inter', sans-serif;
+  color: #4a4a45;
 }
-.pill:hover { border-color: #0a0a0a; background: #fafaf7; }
+.pill svg { stroke: currentColor; transition: stroke 0.15s; }
+.pill:hover { border-color: #0a0a0a; background: #f5f3ee; color: #0a0a0a; }
 .pill.active { border-color: #0a0a0a; background: #0a0a0a; color: white; }
-.pill-icon { font-size: 18px; line-height: 1; }
-.pill-label { font-size: 11.5px; font-weight: 500; color: inherit; }
-.pill.active .pill-label { color: white; }
+.pill-label { font-size: 11px; font-weight: 500; color: inherit; }
 .pills-sep { width: 1px; height: 40px; background: #e6e3dc; flex-shrink: 0; margin: 0 12px; }
 .filters-btn {
   display: flex;
@@ -371,9 +371,6 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   <!-- PROMO BANNER -->
   <div class="promo-banner">
     <div class="promo-inner">
-      <!-- Left thumb -->
-      <img class="promo-thumb" src="/images/ubud.jpg" alt="Ubud villa" style="border-radius:16px;width:130px;height:100px;object-fit:cover;flex-shrink:0;opacity:0.8">
-
       <!-- Center -->
       <div class="promo-center">
         <div class="promo-tag">🌿 May Escape Sale</div>
@@ -393,19 +390,6 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
         <p style="color:rgba(255,255,255,0.4);font-size:11.5px;margin-top:10px">*5% any stay &nbsp;•&nbsp; 10% weekly &nbsp;•&nbsp; 15% monthly</p>
       </div>
 
-      <!-- Right badge -->
-      <div class="promo-right" style="flex-shrink:0">
-        <img class="promo-thumb" src="/images/canggu.jpg" alt="Canggu" style="border-radius:16px;width:130px;height:100px;object-fit:cover;opacity:0.8;margin-bottom:10px">
-        <div class="promo-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8f04a" stroke-width="2.5"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-          <span class="promo-badge-text">5% — 15% OFF*</span>
-        </div>
-        <div class="promo-tiers">
-          <span class="promo-tier"><strong>5%</strong> any stay</span>
-          <span class="promo-tier"><strong>10%</strong> weekly</span>
-          <span class="promo-tier"><strong>15%</strong> monthly</span>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -414,43 +398,56 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
     <div class="pills-inner">
       <div class="pills-scroll" id="pillsScroll">
         <button class="pill active" data-amenity="all" onclick="setPill(this)">
-          <span class="pill-icon">🏠</span><span class="pill-label">All</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <span class="pill-label">All</span>
         </button>
         <button class="pill" data-amenity="pool" onclick="setPill(this)">
-          <span class="pill-icon">🏊</span><span class="pill-label">Private pool</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/><path d="M2 18c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/><circle cx="12" cy="5" r="2"/><path d="M12 7v3"/></svg>
+          <span class="pill-label">Private pool</span>
         </button>
         <button class="pill" data-amenity="wifi" onclick="setPill(this)">
-          <span class="pill-icon">📶</span><span class="pill-label">Fast Wi-Fi</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
+          <span class="pill-label">Fast Wi-Fi</span>
         </button>
         <button class="pill" data-amenity="kitchen" onclick="setPill(this)">
-          <span class="pill-icon">🍳</span><span class="pill-label">Kitchen</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2"/><path d="M18 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="none"/><path d="M18 6v16"/></svg>
+          <span class="pill-label">Kitchen</span>
         </button>
         <button class="pill" data-amenity="ac" onclick="setPill(this)">
-          <span class="pill-icon">❄️</span><span class="pill-label">Air conditioning</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="8" rx="2"/><path d="M7 14v2M12 14v4M17 14v2"/><path d="M6 10h.01M10 10h.01M14 10h.01"/></svg>
+          <span class="pill-label">Air con</span>
         </button>
         <button class="pill" data-amenity="parking" onclick="setPill(this)">
-          <span class="pill-icon">🅿️</span><span class="pill-label">Parking</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
+          <span class="pill-label">Parking</span>
         </button>
         <button class="pill" data-amenity="gym" onclick="setPill(this)">
-          <span class="pill-icon">🏋️</span><span class="pill-label">Gym</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5v14M18 5v14"/><path d="M2 9v6M22 9v6"/><path d="M6 12h12"/></svg>
+          <span class="pill-label">Gym</span>
         </button>
         <button class="pill" data-amenity="jacuzzi" onclick="setPill(this)">
-          <span class="pill-icon">🛁</span><span class="pill-label">Jacuzzi</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15h16v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3z"/><path d="M8 15V9"/><path d="M12 15V7"/><path d="M16 15V9"/><path d="M7 7c0-1 .5-2 1.5-2s1.5 1 2.5 1 1.5-1 2.5-1S15 6 15 7"/></svg>
+          <span class="pill-label">Jacuzzi</span>
         </button>
         <button class="pill" data-amenity="beach" onclick="setPill(this)">
-          <span class="pill-icon">🏖️</span><span class="pill-label">Beachfront</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0-4.4-3.6-8-8-8s-8 3.6-8 8"/><path d="M12 2v20"/><path d="M4 10h16"/><path d="M3 20h18"/></svg>
+          <span class="pill-label">Beachfront</span>
         </button>
         <button class="pill" data-amenity="ocean" onclick="setPill(this)">
-          <span class="pill-icon">🌊</span><span class="pill-label">Ocean view</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/><path d="M2 20c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/><circle cx="12" cy="8" r="3"/><path d="M12 5V3"/></svg>
+          <span class="pill-label">Ocean view</span>
         </button>
         <button class="pill" data-amenity="chef" onclick="setPill(this)">
-          <span class="pill-icon">👨‍🍳</span><span class="pill-label">Private chef</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6v-7.13z"/><path d="M6 17h12"/></svg>
+          <span class="pill-label">Private chef</span>
         </button>
         <button class="pill" data-amenity="dining" onclick="setPill(this)">
-          <span class="pill-icon">🌿</span><span class="pill-label">Outdoor dining</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>
+          <span class="pill-label">Outdoor dining</span>
         </button>
         <button class="pill" data-amenity="living" onclick="setPill(this)">
-          <span class="pill-icon">🛋️</span><span class="pill-label">Living room</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5H2v-5z"/><path d="M4 16v2M20 16v2"/></svg>
+          <span class="pill-label">Living room</span>
         </button>
       </div>
       <div class="pills-sep"></div>
