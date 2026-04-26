@@ -54,7 +54,9 @@ html { scroll-behavior: smooth; }
 .mega-trigger { position: relative; }
 #villasBackdrop {
   display: none; position: fixed; inset: 0; top: 72px;
-  background: rgba(0,0,0,0.5); z-index: 300;
+  background: rgba(0,0,0,0.45); z-index: 300;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 #villasBackdrop.open { display: block; }
 #villasPanel {
