@@ -73,7 +73,7 @@ html { scroll-behavior: smooth; }
   max-width: 1400px; width: 100%; padding: 0 40px;
 }
 .mega-col-title { text-transform: uppercase; letter-spacing: 0.18em; font-size: 10.5px; font-weight: 700; color: #8a8a85; margin-bottom: 14px; }
-.mega-item { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; font-size: 13.5px; color: #0a0a0a; text-decoration: none; transition: color 0.2s; cursor: pointer; border: none; background: none; width: 100%; text-align: left; position: relative; }
+.mega-item { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; font-size: 13.5px; color: #0a0a0a; text-decoration: none; transition: color 0.2s; cursor: pointer; border: none; background: none; width: 100%; text-align: left; position: relative; white-space: nowrap; }
 .mega-item::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: #0a0a0a; transform: scaleX(0); transform-origin: center; transition: transform 0.25s cubic-bezier(0.4,0,0.2,1); }
 .mega-item:hover { color: #0a0a0a; }
 .mega-item:hover::after { transform: scaleX(1); }
@@ -178,30 +178,31 @@ html { scroll-behavior: smooth; }
 <!-- Villas mega-menu panel (outside nav to avoid stacking context issues) -->
 <div id="villasPanel">
   <div class="mega-inner">
-    <div style="min-width:130px;padding:0 28px 0 0">
+    <div style="width:140px;flex-shrink:0;padding:0 28px 0 0">
       <p class="mega-col-title">Property type</p>
       <a href="#" class="mega-item">Apartment <span class="mega-count">188</span></a>
       <a href="#" class="mega-item">Villa <span class="mega-count">222</span></a>
+      <a href="#" class="mega-item">Luxury <span class="mega-count">64</span></a>
       <a href="#" class="mega-item">All types <span class="mega-count">515</span></a>
     </div>
     <div class="mega-divider" style="margin-right:28px"></div>
-    <div style="min-width:130px;padding-right:28px">
+    <div style="width:150px;flex-shrink:0;padding-right:28px">
       <p class="mega-col-title">Bedrooms</p>
       <a href="#" class="mega-item">1 bedroom <span class="mega-count">515</span></a>
       <a href="#" class="mega-item">2 bedrooms <span class="mega-count">244</span></a>
       <a href="#" class="mega-item">3 bedrooms <span class="mega-count">106</span></a>
       <a href="#" class="mega-item">4 bedrooms <span class="mega-count">36</span></a>
-      <a href="#" class="mega-item">5 bedrooms <span class="mega-count">12</span></a>
+      <a href="#" class="mega-item">5+ bedrooms <span class="mega-count">12</span></a>
     </div>
     <div class="mega-divider" style="margin-right:28px"></div>
-    <div style="min-width:120px;padding-right:28px">
+    <div style="width:130px;flex-shrink:0;padding-right:28px">
       <p class="mega-col-title">Rental period</p>
       <a href="#" class="mega-item">Daily <span class="mega-count">515</span></a>
       <a href="#" class="mega-item">Monthly <span class="mega-count">46</span></a>
       <a href="#" class="mega-item">Yearly <span class="mega-count">165</span></a>
     </div>
     <div class="mega-divider" style="margin-right:28px"></div>
-    <div style="min-width:130px;padding-right:28px">
+    <div style="width:140px;flex-shrink:0;padding-right:28px">
       <p class="mega-col-title">Location</p>
       <a href="#" class="mega-item">Canggu <span class="mega-count">371</span></a>
       <a href="#" class="mega-item">Seminyak <span class="mega-count">27</span></a>
@@ -210,9 +211,10 @@ html { scroll-behavior: smooth; }
       <a href="#" class="mega-item">Berawa <span class="mega-count">365</span></a>
       <a href="#" class="mega-item">Umalas <span class="mega-count">365</span></a>
       <a href="#" class="mega-item">Jimbaran <span class="mega-count">5</span></a>
+      <a href="#" class="mega-item" style="margin-top:6px;border-top:1px solid #e6e3dc;padding-top:8px;color:#6b6b66">All on map →</a>
     </div>
     <div class="mega-divider" style="margin-right:28px"></div>
-    <div style="min-width:130px;padding-right:28px">
+    <div style="width:140px;flex-shrink:0;padding-right:28px">
       <p class="mega-col-title">Amenities</p>
       <a href="#" class="mega-item">Private pool <span class="mega-count">195</span></a>
       <a href="#" class="mega-item">Near beach <span class="mega-count">34</span></a>
