@@ -94,6 +94,7 @@ html { scroll-behavior: smooth; }
 @keyframes mic-pulse-kf { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.15); opacity: 0.85; } }
 .mic-pulse { animation: mic-pulse-kf 1.6s ease-in-out infinite; transform-origin: center; }
 @keyframes scrollLine { 0% { transform: translateY(-100%); } 100% { transform: translateY(250%); } }
+@keyframes navMicPulse { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.9); opacity: 0; } }
 .text-stroke { -webkit-text-stroke: 1px rgba(255,255,255,0.9); color: transparent; }
 .hero-img { filter: brightness(0.82) saturate(1.05); }
 .hero-title { text-shadow: 0 2px 24px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.35); }
@@ -149,6 +150,16 @@ html { scroll-behavior: smooth; }
             </button>
           </div>
         </div>
+        <!-- Voice search button -->
+        <button id="navMicBtn" aria-label="Voice search" class="relative w-10 h-10 flex items-center justify-center rounded-full bg-ink text-white transition-transform hover:scale-105 active:scale-95" title="Voice Search">
+          <svg id="navMicIcon" class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="23"/>
+            <line x1="8" y1="23" x2="16" y2="23"/>
+          </svg>
+          <span id="navMicRing" style="display:none;position:absolute;inset:-4px;border-radius:50%;border:2px solid #0a0a0a;animation:navMicPulse 1s ease-out infinite;opacity:0.5"></span>
+        </button>
         <button aria-label="Favorites" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-paper transition">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </button>
@@ -849,6 +860,20 @@ html { scroll-behavior: smooth; }
       menu.classList.add('hidden');
       toggle.setAttribute('aria-expanded', 'false');
     }
+  });
+})();
+
+/* Navbar voice mic toggle */
+(function () {
+  var btn = document.getElementById('navMicBtn');
+  var ring = document.getElementById('navMicRing');
+  if (!btn) return;
+  var active = false;
+  btn.addEventListener('click', function () {
+    active = !active;
+    btn.style.background = active ? '#0a0a0a' : '#0a0a0a';
+    btn.style.boxShadow = active ? '0 0 0 3px rgba(10,10,10,0.15)' : '';
+    ring.style.display = active ? 'block' : 'none';
   });
 })();
 
