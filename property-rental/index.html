@@ -348,18 +348,43 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
 .cat-card {
   background: white;
   border: 1px solid #e6e3dc;
-  border-radius: 20px;
-  padding: 24px 24px 20px;
+  border-radius: 24px;
+  padding: 28px 28px 26px;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 22px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.25s cubic-bezier(0.2,0.6,0.2,1);
+  overflow: hidden;
+  position: relative;
 }
-.cat-card:hover { border-color: #0a0a0a; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.07); }
-.cat-img { width: 64px; height: 64px; object-fit: contain; flex-shrink: 0; }
-.cat-card h3 { font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 700; margin: 0 0 3px; }
-.cat-card p { font-size: 12px; color: #6b6b66; margin: 0; }
+.cat-card::after {
+  content: '→';
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%) translateX(4px);
+  font-size: 18px;
+  color: #ccc;
+  transition: all 0.25s;
+  opacity: 0;
+}
+.cat-card:hover { border-color: #0a0a0a; transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.10); }
+.cat-card:hover::after { opacity: 1; transform: translateY(-50%) translateX(0); color: #0a0a0a; }
+.cat-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s cubic-bezier(0.2,0.6,0.2,1);
+}
+.cat-card:hover .cat-icon { transform: scale(1.06) rotate(-2deg); }
+.cat-card h3 { font-family: 'Fraunces', Georgia, serif; font-size: 17px; font-weight: 700; margin: 0 0 4px; letter-spacing: -0.01em; }
+.cat-card p { font-size: 12.5px; color: #6b6b66; margin: 0; line-height: 1.4; }
 
 /* BTN */
 .btn-primary { background: #0a0a0a; color: #fff; border-radius: 999px; padding: 12px 22px; font-weight: 600; font-size: 14px; border: none; cursor: pointer; transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; }
@@ -572,22 +597,51 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
 
   <!-- CATEGORY CARDS -->
   <div class="cat-grid" style="padding-top:20px">
+    <!-- New listings -->
     <div class="cat-card" onclick="openFilters()">
-      <img class="cat-img" src="https://cdn-icons-png.flaticon.com/128/2919/2919592.png" alt="">
+      <div class="cat-icon">
+        <!-- Spark / new: bold lightning bolt with small stars -->
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 3L9 20h10l-4 13L27 16H17L21 3z" fill="white" stroke="white" stroke-width="1.2" stroke-linejoin="round"/>
+          <circle cx="5" cy="8" r="1.5" fill="rgba(255,255,255,0.45)"/>
+          <circle cx="30" cy="28" r="1.5" fill="rgba(255,255,255,0.45)"/>
+          <circle cx="29" cy="7" r="1" fill="rgba(255,255,255,0.3)"/>
+        </svg>
+      </div>
       <div>
         <h3>New on BaliVillas</h3>
         <p>Recently added villas &amp; apartments</p>
       </div>
     </div>
+
+    <!-- Luxury -->
     <div class="cat-card" onclick="openFilters()">
-      <img class="cat-img" src="https://cdn-icons-png.flaticon.com/128/4054/4054428.png" alt="">
+      <div class="cat-icon">
+        <!-- Diamond with crown top -->
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 4L8 14h20L18 4z" fill="rgba(255,255,255,0.25)" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M8 14L18 32L28 14H8z" fill="white" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M8 14L14 20M28 14L22 20M18 32L18 20" stroke="#0a0a0a" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
       <div>
         <h3>Luxury Properties</h3>
         <p>Handpicked high-end stays</p>
       </div>
     </div>
+
+    <!-- Monthly stays -->
     <div class="cat-card" onclick="openFilters()">
-      <img class="cat-img" src="https://cdn-icons-png.flaticon.com/128/2370/2370264.png" alt="">
+      <div class="cat-icon">
+        <!-- Sleek calendar with arc/cycle -->
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="8" width="28" height="24" rx="5" stroke="white" stroke-width="1.8" fill="none"/>
+          <path d="M4 14h28" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="12" y1="4" x2="12" y2="11" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="24" y1="4" x2="24" y2="11" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <text x="18" y="27" text-anchor="middle" font-family="'Fraunces',Georgia,serif" font-size="11" font-weight="700" fill="white">mo</text>
+        </svg>
+      </div>
       <div>
         <h3>Monthly Stays</h3>
         <p>Flexible long-term options</p>
