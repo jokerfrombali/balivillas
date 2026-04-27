@@ -600,12 +600,14 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
     <!-- New listings -->
     <div class="cat-card" onclick="openFilters()">
       <div class="cat-icon">
-        <!-- Spark / new: bold lightning bolt with small stars -->
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21 3L9 20h10l-4 13L27 16H17L21 3z" fill="white" stroke="white" stroke-width="1.2" stroke-linejoin="round"/>
-          <circle cx="5" cy="8" r="1.5" fill="rgba(255,255,255,0.45)"/>
-          <circle cx="30" cy="28" r="1.5" fill="rgba(255,255,255,0.45)"/>
-          <circle cx="29" cy="7" r="1" fill="rgba(255,255,255,0.3)"/>
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Star burst sparkle -->
+          <path d="M19 5l2.5 9.5L31 12l-7.5 6 2.5 9.5L19 22l-7 5.5 2.5-9.5L7 12l9.5 2.5L19 5z" fill="#b8f04a" stroke="#b8f04a" stroke-width="0.5" stroke-linejoin="round"/>
+          <!-- small accent dots -->
+          <circle cx="7" cy="7" r="2" fill="white" opacity="0.6"/>
+          <circle cx="31" cy="31" r="2" fill="white" opacity="0.6"/>
+          <circle cx="31" cy="8" r="1.2" fill="white" opacity="0.35"/>
+          <circle cx="7" cy="30" r="1.2" fill="white" opacity="0.35"/>
         </svg>
       </div>
       <div>
@@ -617,11 +619,15 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
     <!-- Luxury -->
     <div class="cat-card" onclick="openFilters()">
       <div class="cat-icon">
-        <!-- Diamond with crown top -->
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 4L8 14h20L18 4z" fill="rgba(255,255,255,0.25)" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
-          <path d="M8 14L18 32L28 14H8z" fill="white" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
-          <path d="M8 14L14 20M28 14L22 20M18 32L18 20" stroke="#0a0a0a" stroke-width="1.2" stroke-linecap="round"/>
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Crown shape -->
+          <path d="M5 28h28l-3-14-7 7-4-10-4 10-7-7-3 14z" fill="#b8f04a" stroke="#b8f04a" stroke-width="0.5" stroke-linejoin="round"/>
+          <!-- Crown base line -->
+          <rect x="5" y="28" width="28" height="3.5" rx="1.5" fill="white" opacity="0.9"/>
+          <!-- Crown jewels -->
+          <circle cx="19" cy="10" r="2.5" fill="white"/>
+          <circle cx="8.5" cy="19" r="1.8" fill="white" opacity="0.7"/>
+          <circle cx="29.5" cy="19" r="1.8" fill="white" opacity="0.7"/>
         </svg>
       </div>
       <div>
@@ -633,13 +639,22 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
     <!-- Monthly stays -->
     <div class="cat-card" onclick="openFilters()">
       <div class="cat-icon">
-        <!-- Sleek calendar with arc/cycle -->
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="8" width="28" height="24" rx="5" stroke="white" stroke-width="1.8" fill="none"/>
-          <path d="M4 14h28" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="12" y1="4" x2="12" y2="11" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="24" y1="4" x2="24" y2="11" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <text x="18" y="27" text-anchor="middle" font-family="'Fraunces',Georgia,serif" font-size="11" font-weight="700" fill="white">mo</text>
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Calendar body -->
+          <rect x="4" y="9" width="30" height="25" rx="5" fill="none" stroke="white" stroke-width="2"/>
+          <!-- Header fill -->
+          <rect x="4" y="9" width="30" height="11" rx="5" fill="#b8f04a"/>
+          <rect x="4" y="16" width="30" height="4" fill="#b8f04a"/>
+          <!-- Rings -->
+          <line x1="13" y1="5" x2="13" y2="13" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="25" y1="5" x2="25" y2="13" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Day dots -->
+          <circle cx="12" cy="24" r="2" fill="white" opacity="0.5"/>
+          <circle cx="19" cy="24" r="2" fill="white"/>
+          <circle cx="26" cy="24" r="2" fill="white" opacity="0.5"/>
+          <circle cx="12" cy="31" r="2" fill="white" opacity="0.5"/>
+          <circle cx="19" cy="31" r="2" fill="white" opacity="0.5"/>
+          <circle cx="26" cy="31" r="2" fill="#b8f04a"/>
         </svg>
       </div>
       <div>
