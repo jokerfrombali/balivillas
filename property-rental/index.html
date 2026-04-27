@@ -440,6 +440,45 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
     </div>
   </div>
 
+  <!-- AI SEARCH STRIP -->
+  <div style="background:#f5f3ee;border-bottom:1px solid #e6e3dc;padding:20px 40px">
+    <div style="max-width:860px;margin:0 auto">
+      <!-- Label row -->
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6b6b66">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
+          AI Search
+        </span>
+        <span style="font-size:11.5px;color:#b0ada6">— describe your ideal villa in plain language</span>
+      </div>
+      <!-- Card -->
+      <div style="background:white;border-radius:20px;border:1px solid #e6e3dc;box-shadow:0 4px 24px rgba(0,0,0,0.06);overflow:hidden">
+        <!-- Textarea -->
+        <div style="padding:16px 20px 10px;display:flex;align-items:flex-start;gap:12px">
+          <textarea id="aiPrompt" rows="2" style="flex:1;resize:none;background:transparent;font-family:'Fraunces',Georgia,serif;font-size:17px;line-height:1.5;color:#0a0a0a;border:none;outline:none;placeholder-color:#b0ada6" placeholder="e.g. 3 bedroom villa in Canggu with pool, close to beach, monthly rent under $2500…"></textarea>
+          <!-- Voice button -->
+          <button id="voiceMicBtn" title="Voice search" style="width:42px;height:42px;flex-shrink:0;border-radius:50%;background:#0a0a0a;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform 0.15s;margin-top:2px" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </button>
+        </div>
+        <!-- Quick chips + submit -->
+        <div style="padding:8px 16px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <button onclick="appendPrompt('Canggu')" style="padding:5px 12px;border:1px solid #e6e3dc;border-radius:999px;font-size:12px;font-weight:500;background:white;cursor:pointer;font-family:'Inter',sans-serif;color:#4a4a45;transition:all 0.15s" onmouseover="this.style.borderColor='#0a0a0a';this.style.color='#0a0a0a'" onmouseout="this.style.borderColor='#e6e3dc';this.style.color='#4a4a45'">📍 Canggu</button>
+            <button onclick="appendPrompt('Ubud')" style="padding:5px 12px;border:1px solid #e6e3dc;border-radius:999px;font-size:12px;font-weight:500;background:white;cursor:pointer;font-family:'Inter',sans-serif;color:#4a4a45;transition:all 0.15s" onmouseover="this.style.borderColor='#0a0a0a';this.style.color='#0a0a0a'" onmouseout="this.style.borderColor='#e6e3dc';this.style.color='#4a4a45'">📍 Ubud</button>
+            <button onclick="appendPrompt('private pool')" style="padding:5px 12px;border:1px solid #e6e3dc;border-radius:999px;font-size:12px;font-weight:500;background:white;cursor:pointer;font-family:'Inter',sans-serif;color:#4a4a45;transition:all 0.15s" onmouseover="this.style.borderColor='#0a0a0a';this.style.color='#0a0a0a'" onmouseout="this.style.borderColor='#e6e3dc';this.style.color='#4a4a45'">🏊 Private pool</button>
+            <button onclick="appendPrompt('monthly rental under $2000')" style="padding:5px 12px;border:1px solid #e6e3dc;border-radius:999px;font-size:12px;font-weight:500;background:white;cursor:pointer;font-family:'Inter',sans-serif;color:#4a4a45;transition:all 0.15s" onmouseover="this.style.borderColor='#0a0a0a';this.style.color='#0a0a0a'" onmouseout="this.style.borderColor='#e6e3dc';this.style.color='#4a4a45'">💰 Under $2k/mo</button>
+            <button onclick="appendPrompt('near beach')" style="padding:5px 12px;border:1px solid #e6e3dc;border-radius:999px;font-size:12px;font-weight:500;background:white;cursor:pointer;font-family:'Inter',sans-serif;color:#4a4a45;transition:all 0.15s" onmouseover="this.style.borderColor='#0a0a0a';this.style.color='#0a0a0a'" onmouseout="this.style.borderColor='#e6e3dc';this.style.color='#4a4a45'">🏖️ Near beach</button>
+          </div>
+          <button style="display:flex;align-items:center;gap:7px;background:#0a0a0a;color:white;border:none;border-radius:12px;padding:10px 20px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap" onmouseover="this.style.background='#222'" onmouseout="this.style.background='#0a0a0a'">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
+            Find my villa
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- AMENITY PILLS + FILTERS -->
   <div class="pills-bar">
     <div class="pills-inner">
@@ -1097,8 +1136,91 @@ document.getElementById('viewList').addEventListener('click', function() {
 
 /* Close drawer on Escape */
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeFilters();
+  if (e.key === 'Escape') { closeFilters(); closeVoice(); }
 });
+
+/* Quick chip helper */
+function appendPrompt(text) {
+  var ta = document.getElementById('aiPrompt');
+  if (!ta) return;
+  ta.value = ta.value ? ta.value.trimEnd() + ', ' + text : text;
+  ta.focus();
+}
+
+/* ===== Voice Search ===== */
+(function () {
+  /* overlay */
+  var overlay = document.createElement('div');
+  overlay.id = 'voiceOverlay';
+  overlay.innerHTML = '<div id="voiceCard"><div id="voiceOrb"><div class="vorb-ring r1"></div><div class="vorb-ring r2"></div><div class="vorb-ring r3"></div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div><p id="voiceStatus">Listening…</p><p id="voiceTranscript">Start speaking</p><div style="display:flex;gap:12px;margin-top:28px"><button id="voiceCancel">Cancel</button><button id="voiceDone">Use this text →</button></div></div>';
+  document.body.appendChild(overlay);
+
+  var style = document.createElement('style');
+  style.textContent = '#voiceOverlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,0.82);backdrop-filter:blur(18px);align-items:center;justify-content:center;flex-direction:column}#voiceOverlay.open{display:flex}#voiceCard{display:flex;flex-direction:column;align-items:center;padding:48px 40px;border-radius:28px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);max-width:460px;width:90%}#voiceOrb{position:relative;width:100px;height:100px;border-radius:50%;background:#0a0a0a;display:flex;align-items:center;justify-content:center;margin-bottom:28px;flex-shrink:0}.vorb-ring{position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255,255,255,0.3);animation:vorbPulse 2s ease-out infinite}.vorb-ring.r2{animation-delay:.55s}.vorb-ring.r3{animation-delay:1.1s}@keyframes vorbPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.1);opacity:0}}#voiceStatus{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}#voiceTranscript{font-family:"Fraunces",Georgia,serif;font-size:22px;font-weight:600;color:white;text-align:center;line-height:1.35;min-height:60px;max-width:340px}#voiceTranscript.interim{color:rgba(255,255,255,.5)}#voiceCancel{padding:11px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:transparent;color:rgba(255,255,255,.7);font-size:14px;font-weight:500;cursor:pointer}#voiceDone{padding:11px 26px;border-radius:999px;background:white;color:#0a0a0a;font-size:14px;font-weight:600;border:none;cursor:pointer;display:none}';
+  document.head.appendChild(style);
+
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  var recognition = SR ? new SR() : null;
+  var finalText = '', interimText = '';
+
+  if (recognition) {
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = 'en-US';
+    recognition.onresult = function(e) {
+      finalText = ''; interimText = '';
+      for (var i = 0; i < e.results.length; i++) {
+        if (e.results[i].isFinal) finalText += e.results[i][0].transcript;
+        else interimText += e.results[i][0].transcript;
+      }
+      var t = document.getElementById('voiceTranscript');
+      t.textContent = (finalText + interimText) || 'Start speaking';
+      t.className = (interimText && !finalText) ? 'interim' : '';
+      var d = document.getElementById('voiceDone');
+      if (d) d.style.display = finalText ? 'block' : 'none';
+    };
+    recognition.onerror = function(e) {
+      var s = document.getElementById('voiceStatus');
+      if (s) s.textContent = e.error === 'not-allowed' ? 'Microphone denied' : 'Error — try again';
+    };
+    recognition.onend = function() {
+      var s = document.getElementById('voiceStatus');
+      if (s && overlay.classList.contains('open')) s.textContent = 'Done — review your text';
+      var o = document.getElementById('voiceOrb');
+      if (o) o.classList.remove('listening');
+    };
+  }
+
+  function openVoice() {
+    finalText = ''; interimText = '';
+    document.getElementById('voiceTranscript').textContent = 'Start speaking';
+    document.getElementById('voiceTranscript').className = '';
+    document.getElementById('voiceStatus').textContent = 'Listening…';
+    document.getElementById('voiceDone').style.display = 'none';
+    document.getElementById('voiceOrb').classList.add('listening');
+    overlay.classList.add('open');
+    if (recognition) { try { recognition.start(); } catch(e){} }
+  }
+
+  function closeVoice() {
+    overlay.classList.remove('open');
+    if (recognition) { try { recognition.stop(); } catch(e){} }
+  }
+  window.closeVoice = closeVoice;
+
+  function applyText() {
+    var text = (finalText || interimText).trim();
+    closeVoice();
+    if (!text) return;
+    var ta = document.getElementById('aiPrompt');
+    if (ta) { ta.value = text; ta.focus(); }
+  }
+
+  document.getElementById('voiceMicBtn').addEventListener('click', openVoice);
+  document.getElementById('voiceCancel').addEventListener('click', closeVoice);
+  document.getElementById('voiceDone').addEventListener('click', applyText);
+  overlay.addEventListener('click', function(e) { if (e.target === overlay) closeVoice(); });
+})();
 </script>
 </body>
 </html>
