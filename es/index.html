@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alquiler de Villas en Bali — Búsqueda IA | BaliVillas.ai</title>
+<meta name="description" content="Encuentra tu villa perfecta en Bali con IA. 515+ villas en Canggu, Ubud, Seminyak, Uluwatu. Alquiler diario y mensual.">
+<link rel="canonical" href="https://balivillas.ai/es/">
+
+  <link rel="alternate" hreflang="x-default" href="https://balivillas.ai/" />
+  <link rel="alternate" hreflang="en"       href="https://balivillas.ai/en/" />
+  <link rel="alternate" hreflang="en-AU"    href="https://balivillas.ai/en-au/" />
+  <link rel="alternate" hreflang="en-US"    href="https://balivillas.ai/en-us/" />
+  <link rel="alternate" hreflang="en-GB"    href="https://balivillas.ai/en-gb/" />
+  <link rel="alternate" hreflang="ru"       href="https://balivillas.ai/ru/" />
+  <link rel="alternate" hreflang="de"       href="https://balivillas.ai/de/" />
+  <link rel="alternate" hreflang="fr"       href="https://balivillas.ai/fr/" />
+  <link rel="alternate" hreflang="nl"       href="https://balivillas.ai/nl/" />
+  <link rel="alternate" hreflang="es"       href="https://balivillas.ai/es/" />
+  <link rel="alternate" hreflang="it"       href="https://balivillas.ai/it/" />
+  <link rel="alternate" hreflang="ja"       href="https://balivillas.ai/ja/" />
+  <link rel="alternate" hreflang="ko"       href="https://balivillas.ai/ko/" />
+  <link rel="alternate" hreflang="zh-Hans"  href="https://balivillas.ai/zh-hans/" />
+  <link rel="alternate" hreflang="zh-Hant"  href="https://balivillas.ai/zh-hant/" />
+  <link rel="alternate" hreflang="ar"       href="https://balivillas.ai/ar/" />
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#fafaf7;color:#0a0a0a;-webkit-font-smoothing:antialiased}
+.fd{font-family:'Fraunces',Georgia,serif}
+nav{position:sticky;top:0;z-index:50;background:rgba(250,250,247,.93);backdrop-filter:blur(12px);border-bottom:1px solid #e6e3dc}
+.nav-inner{max-width:1300px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:68px;gap:32px}
+.nav-logo{text-decoration:none;color:#0a0a0a;font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{color:#0a0a0a;font-weight:500;font-size:14px;text-decoration:none;white-space:nowrap}
+.nav-links a:hover{opacity:.7}
+.nav-cta{background:#0a0a0a;color:#fff;border-radius:999px;padding:10px 20px;font-weight:600;font-size:13px;text-decoration:none;white-space:nowrap}
+.hero{padding:80px 40px 60px;text-align:center;max-width:900px;margin:0 auto}
+.hero h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(42px,7vw,80px);font-weight:800;line-height:1.05;letter-spacing:-0.03em;margin-bottom:18px}
+.hero h1 em{font-style:italic;font-weight:700;color:#0a0a0a}
+.hero p{font-size:18px;color:#6b6b66;margin-bottom:36px;line-height:1.6}
+.search-box{background:white;border-radius:20px;border:1px solid #e6e3dc;box-shadow:0 8px 40px rgba(0,0,0,.08);max-width:700px;margin:0 auto;overflow:hidden}
+.search-top{display:flex;align-items:center;gap:10px;padding:16px 20px;border-bottom:1px solid #e6e3dc}
+.search-top svg{color:#b0ada6;flex-shrink:0}
+.search-top input{flex:1;border:none;outline:none;font-size:16px;font-family:'Fraunces',Georgia,serif;color:#0a0a0a;background:transparent}
+.search-top input::placeholder{color:#b0ada6}
+.search-bot{display:flex;align-items:center;padding:12px 12px 12px 20px;gap:0}
+.sf{flex:1}
+.sf label{display:block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0a0a0a;margin-bottom:2px}
+.sf input{border:none;outline:none;font-size:13px;color:#6b6b66;font-family:'Inter',sans-serif;background:transparent;width:100%}
+.sdiv{width:1px;height:22px;background:#e6e3dc;margin:0 14px;flex-shrink:0}
+.sbtn{background:#0a0a0a;color:white;border:none;border-radius:12px;padding:11px 22px;font-size:14px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;display:flex;align-items:center;gap:7px;flex-shrink:0}
+.sbtn:hover{background:#222}
+section{max-width:1300px;margin:0 auto;padding:60px 40px}
+.sec-title{font-family:'Fraunces',Georgia,serif;font-size:36px;font-weight:700;margin-bottom:32px;letter-spacing:-0.02em}
+.loc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.loc-card{border-radius:20px;overflow:hidden;aspect-ratio:3/4;position:relative;cursor:pointer;background:#e6e3dc}
+.loc-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.6,.2,1)}
+.loc-card:hover img{transform:scale(1.06)}
+.loc-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.75) 0%,transparent 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:16px}
+.loc-name{font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700;color:white}
+.loc-count{font-size:12px;color:rgba(255,255,255,.7)}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feat-card{background:white;border:1px solid #e6e3dc;border-radius:20px;padding:28px}
+.feat-icon{width:44px;height:44px;background:#0a0a0a;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.feat-card h3{font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700;margin-bottom:8px}
+.feat-card p{font-size:14px;color:#6b6b66;line-height:1.6}
+.lang-bar{background:white;border-top:1px solid #e6e3dc;border-bottom:1px solid #e6e3dc;padding:16px 40px;overflow-x:auto}
+.lang-inner{max-width:1300px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.lang-pill{display:inline-block;padding:5px 14px;border:1px solid #e6e3dc;border-radius:999px;font-size:12px;font-weight:500;color:#6b6b66;text-decoration:none;white-space:nowrap;transition:all .15s}
+.lang-pill:hover,.lang-pill.cur{border-color:#0a0a0a;color:#0a0a0a;background:white}
+.lang-pill.cur{background:#0a0a0a;color:white}
+footer{background:#0a0a0a;color:white;padding:40px;text-align:center}
+footer .logo{font-family:'Fraunces',Georgia,serif;font-size:20px;margin-bottom:8px}
+footer p{font-size:13px;color:rgba(255,255,255,.45)}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .loc-grid{grid-template-columns:repeat(2,1fr)}
+  .feat-grid{grid-template-columns:1fr}
+  .search-bot{flex-wrap:wrap;gap:10px}
+  section{padding:40px 20px}
+  .hero{padding:50px 20px 40px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/es/" class="nav-logo"><span style="font-style:italic;font-weight:400">Bali</span> Villas</a>
+    <div class="nav-links">
+      <a href="/property-rental/">Villas</a>
+      <a href="/#locations">Destinos</a>
+      <a href="/#longterm">Mensual & Anual</a>
+      <a href="/#management">Gestión de villas</a>
+      <a href="/#about">Sobre nosotros</a>
+    </div>
+    <a href="/property-rental/" class="nav-cta">Encontrar mi villa →</a>
+  </div>
+</nav>
+
+<!-- LANGUAGE SWITCHER BAR -->
+<div class="lang-bar">
+  <div class="lang-inner">
+    <span style="font-size:12px;color:#b0ada6;font-weight:600;margin-right:4px">🌐</span>
+    <a class="lang-pill" href="/en/">EN</a>
+    <a class="lang-pill" href="/en-au/">EN-AU</a>
+    <a class="lang-pill" href="/en-us/">EN-US</a>
+    <a class="lang-pill" href="/en-gb/">EN-GB</a>
+    <a class="lang-pill" href="/ru/">RU</a>
+    <a class="lang-pill" href="/de/">DE</a>
+    <a class="lang-pill" href="/fr/">FR</a>
+    <a class="lang-pill" href="/nl/">NL</a>
+    <a class="lang-pill" href="/es/">ES</a>
+    <a class="lang-pill" href="/it/">IT</a>
+    <a class="lang-pill" href="/ja/">JA</a>
+    <a class="lang-pill" href="/ko/">KO</a>
+    <a class="lang-pill" href="/zh-hans/">ZH-Hans</a>
+    <a class="lang-pill" href="/zh-hant/">ZH-Hant</a>
+    <a class="lang-pill" href="/ar/">AR</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Encuentra Tu Villa<br><em>Perfecta en Bali</em></h1>
+  <p>Búsqueda con IA entre 515+ villas seleccionadas. Describe lo que quieres — nosotros la encontramos.</p>
+  <div class="search-box">
+    <div class="search-top">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" placeholder="Describe tu villa ideal — ubicación, habitaciones, piscina, presupuesto…">
+    </div>
+    <div class="search-bot">
+      <div class="sf">
+        <label>Check in</label>
+        <input type="text" placeholder="Add date">
+      </div>
+      <div class="sdiv"></div>
+      <div class="sf">
+        <label>Check out</label>
+        <input type="text" placeholder="Add date">
+      </div>
+      <div class="sdiv"></div>
+      <div class="sf">
+        <label>Guests</label>
+        <input type="text" placeholder="Add guests">
+      </div>
+      <button class="sbtn" onclick="window.location='/property-rental/'">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
+        Encontrar mi villa
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- LOCATIONS -->
+<section>
+  <h2 class="sec-title fd">Destinos populares</h2>
+  <div class="loc-grid">
+    <div class="loc-card" onclick="window.location='/property-rental/?location=canggu'">
+      <img src="/images/canggu.jpg" alt="Canggu villas" loading="lazy">
+      <div class="loc-overlay">
+        <div class="loc-name">Canggu</div>
+        <div class="loc-count">371 villas</div>
+      </div>
+    </div>
+    <div class="loc-card" onclick="window.location='/property-rental/?location=ubud'">
+      <img src="/images/ubud.jpg" alt="Ubud villas" loading="lazy">
+      <div class="loc-overlay">
+        <div class="loc-name">Ubud</div>
+        <div class="loc-count">37 villas</div>
+      </div>
+    </div>
+    <div class="loc-card" onclick="window.location='/property-rental/?location=seminyak'">
+      <img src="/images/seminyak.jpg" alt="Seminyak villas" loading="lazy">
+      <div class="loc-overlay">
+        <div class="loc-name">Seminyak</div>
+        <div class="loc-count">27 villas</div>
+      </div>
+    </div>
+    <div class="loc-card" onclick="window.location='/property-rental/?location=uluwatu'">
+      <img src="/images/uluwatu.webp" alt="Uluwatu villas" loading="lazy">
+      <div class="loc-overlay">
+        <div class="loc-name">Uluwatu</div>
+        <div class="loc-count">8 villas</div>
+      </div>
+    </div>
+    <div class="loc-card" onclick="window.location='/property-rental/?location=sanur'">
+      <img src="/images/sanur.jpg" alt="Sanur villas" loading="lazy">
+      <div class="loc-overlay">
+        <div class="loc-name">Sanur</div>
+        <div class="loc-count">89 villas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section style="background:white;max-width:100%;padding:60px 0">
+  <div style="max-width:1300px;margin:0 auto;padding:0 40px">
+    <h2 class="sec-title fd">Por qué BaliVillas.ai</h2>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
+        </div>
+        <h3>Búsqueda IA</h3>
+        <p>Descríbelo en español y nuestra IA lo encuentra al instante.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
+        </div>
+        <h3>515+ villas</h3>
+        <p>Selección curada en toda Bali — verificada y validada.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
+        </div>
+        <h3>Alquiler a largo plazo</h3>
+        <p>Mejores tarifas desde 1 mes. Ideal para expatriados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section style="text-align:center;padding:60px 40px">
+  <h2 class="fd" style="font-size:clamp(28px,5vw,48px);font-weight:800;letter-spacing:-0.02em;margin-bottom:16px">Encuentra Tu Villa <em>Perfecta en Bali</em></h2>
+  <a href="/property-rental/" style="display:inline-flex;align-items:center;gap:8px;background:#0a0a0a;color:white;border-radius:999px;padding:14px 28px;font-size:15px;font-weight:600;text-decoration:none;margin-top:8px">Ver todas las villas →</a>
+</section>
+
+<footer>
+  <p class="logo"><span style="font-style:italic;font-weight:400">Bali</span> <strong>Villas</strong> <span style="color:#0088ff">AI</span></p>
+  <p>Búsqueda IA de villas en Bali — © 2026 BaliVillas.ai</p>
+</footer>
+
+</body>
+</html>
