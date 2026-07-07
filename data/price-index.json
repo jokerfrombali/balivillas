@@ -1,0 +1,43 @@
+{
+  "updated": "2026-07-07",
+  "source": "https://balivillas.ai",
+  "totalVillas": 74,
+  "medianNightlyUSD": 2500000,
+  "byArea": [
+    {
+      "area": "Uluwatu",
+      "n": 23,
+      "avgN": 2630031,
+      "medN": 2500000,
+      "medM": 45000000
+    },
+    {
+      "area": "Canggu",
+      "n": 15,
+      "avgN": 2985501,
+      "medN": 2500000,
+      "medM": 45000000
+    },
+    {
+      "area": "Seminyak",
+      "n": 11,
+      "avgN": 2773885,
+      "medN": 2500000,
+      "medM": 45000000
+    },
+    {
+      "area": "Ubud",
+      "n": 9,
+      "avgN": 2117013,
+      "medN": 2200000,
+      "medM": 39600000
+    },
+    {
+      "area": "Seseh",
+      "n": 4,
+      "avgN": 2831333,
+      "medN": 2847694,
+      "medM": 51258492
+    }
+  ]
+}

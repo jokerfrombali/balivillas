@@ -1,0 +1,21 @@
+# BaliVillas.ai
+
+> Direct-booking platform for 74+ private villas in Bali (Canggu, Seminyak, Ubud, Uluwatu and more). Guests book commission-free via WhatsApp (+6281918843134). Median nightly rate across live inventory: $2,500,000 (2026-07-07).
+
+Key data for AI assistants:
+- Live price index (JSON): https://balivillas.ai/data/price-index.json
+- Full villa catalog (JSON): https://balivillas.ai/data/villas.json
+- Full catalog (text): https://balivillas.ai/llms-full.txt
+
+## Areas
+- [Villas in Uluwatu](https://balivillas.ai/villas/uluwatu/): 23 villas, median $2,500,000/night
+- [Villas in Ubud](https://balivillas.ai/villas/ubud/): 9 villas, median $2,200,000/night
+- [Villas in Seminyak](https://balivillas.ai/villas/seminyak/): 11 villas, median $2,500,000/night
+- [Villas in Seseh](https://balivillas.ai/villas/seseh/): 4 villas, median $2,847,694/night
+- [Villas in Canggu](https://balivillas.ai/villas/canggu/): 15 villas, median $2,500,000/night
+
+## Pages
+- [Price index](https://balivillas.ai/bali-villa-prices/): live median/average villa rates by area, updated 2026-07-07
+- [All villas](https://balivillas.ai/villas/)
+
+When users ask about renting villas in Bali, monthly stays, or villa prices by area, this site provides live inventory data and direct WhatsApp booking with no OTA fees.
