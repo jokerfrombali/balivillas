@@ -1,0 +1,47 @@
+# Скопируйте этот файл в репозиторий как: .github/workflows/growth-engine.yml
+#
+# Что делает: каждый день в 03:00 UTC пересобирает страницы из живого API,
+# коммитит изменения (цены обновились → lastmod обновился → сигнал свежести
+# для Google и AI-поисковиков) и пингует IndexNow (Bing → ChatGPT Search).
+# Всё на бесплатном GitHub Actions + вашем текущем хостинге статики.
+
+name: growth-engine
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate pages from live API
+        env:
+          API_BASE: https://mantavillas.com   # или ваш API-домен
+          SITE_ORIGIN: https://balivillas.ai
+          OUT_DIR: ${{ github.workspace }}    # кладём в корень репо (= корень сайта)
+          REQUIRE_API: "1"                    # защита: без живого API не публиковать
+        run: node growth-engine/engine.mjs
+
+      - name: Commit updated pages
+        run: |
+          git config user.name "growth-engine"
+          git config user.email "bot@balivillas.ai"
+          git add -A
+          git diff --cached --quiet || git commit -m "growth-engine: daily refresh $(date -u +%F)"
+          git push
+
+      - name: Ping IndexNow (Bing → ChatGPT Search)
+        env:
+          SITE_ORIGIN: https://balivillas.ai
+          OUT_DIR: ${{ github.workspace }}
+        run: node growth-engine/indexnow.mjs
