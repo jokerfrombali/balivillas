@@ -1,13 +1,13 @@
 {
-  "updated": "2026-07-08",
+  "updated": "2026-07-09",
   "source": "https://balivillas.ai",
-  "totalVillas": 74,
+  "totalVillas": 76,
   "medianNightlyUSD": 2500000,
   "byArea": [
     {
       "area": "Uluwatu",
-      "n": 23,
-      "avgN": 2630031,
+      "n": 24,
+      "avgN": 2584427,
       "medN": 2500000,
       "medM": 45000000
     },
@@ -20,8 +20,8 @@
     },
     {
       "area": "Seminyak",
-      "n": 11,
-      "avgN": 2773885,
+      "n": 12,
+      "avgN": 2702213,
       "medN": 2500000,
       "medM": 45000000
     },
