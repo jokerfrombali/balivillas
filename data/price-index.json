@@ -1,9 +1,23 @@
 {
-  "updated": "2026-07-12",
+  "updated": "2026-07-13",
   "source": "https://balivillas.ai",
-  "totalVillas": 76,
-  "medianNightlyUSD": 2500000,
+  "totalVillas": 188,
+  "medianNightlyUSD": 473.575,
   "byArea": [
+    {
+      "area": "Ubud",
+      "n": 66,
+      "avgN": 289028,
+      "medN": 344,
+      "medM": 6198
+    },
+    {
+      "area": "Kecamatan Ubud",
+      "n": 26,
+      "avgN": 363,
+      "medN": 349,
+      "medM": 6291
+    },
     {
       "area": "Uluwatu",
       "n": 24,
@@ -13,10 +27,10 @@
     },
     {
       "area": "Canggu",
-      "n": 15,
-      "avgN": 2985501,
-      "medN": 2500000,
-      "medM": 45000000
+      "n": 19,
+      "avgN": 2357071,
+      "medN": 2200000,
+      "medM": 39600000
     },
     {
       "area": "Seminyak",
@@ -26,11 +40,32 @@
       "medM": 45000000
     },
     {
-      "area": "Ubud",
-      "n": 9,
-      "avgN": 2117013,
-      "medN": 2200000,
-      "medM": 39600000
+      "area": "South Kuta",
+      "n": 7,
+      "avgN": 400203,
+      "medN": 207,
+      "medM": 3727
+    },
+    {
+      "area": "Umalas",
+      "n": 5,
+      "avgN": 185,
+      "medN": 182,
+      "medM": 3275
+    },
+    {
+      "area": "Tampaksiring",
+      "n": 4,
+      "avgN": 457,
+      "medN": 454,
+      "medM": 8180
+    },
+    {
+      "area": "Sukawati",
+      "n": 4,
+      "avgN": 292,
+      "medN": 289,
+      "medM": 5205
     },
     {
       "area": "Seseh",
@@ -38,6 +73,13 @@
       "avgN": 2831333,
       "medN": 2847694,
       "medM": 51258492
+    },
+    {
+      "area": "Mengwi",
+      "n": 3,
+      "avgN": 833482,
+      "medN": 263,
+      "medM": 4740
     }
   ]
 }
