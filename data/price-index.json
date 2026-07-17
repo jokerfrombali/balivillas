@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-16",
+  "updated": "2026-07-17",
   "source": "https://balivillas.ai",
-  "totalVillas": 188,
-  "medianNightlyUSD": 473.575,
+  "totalVillas": 191,
+  "medianNightlyUSD": 475.41,
   "byArea": [
     {
       "area": "Ubud",
@@ -52,6 +52,13 @@
       "avgN": 185,
       "medN": 182,
       "medM": 3275
+    },
+    {
+      "area": "Sidemen",
+      "n": 5,
+      "avgN": 2748169,
+      "medN": 2902699,
+      "medM": 52248582
     },
     {
       "area": "Tampaksiring",
