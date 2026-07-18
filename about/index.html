@@ -69,20 +69,26 @@ html { scroll-behavior: smooth; }
 </nav>
 
 <!-- =============== HERO =============== -->
-<header class="relative min-h-[92vh] flex items-end overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1707467390539-8ada3e4e2c2a?q=80&w=2200&auto=format&fit=crop" alt="The BaliVillas team in Canggu, Bali" class="absolute inset-0 w-full h-full object-cover object-center">
-  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/50"></div>
-  <div class="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 w-full pt-[140px] pb-28 lg:pb-36 text-white">
-    <div class="flex items-center gap-2 mb-6 flex-wrap">
-      <span class="text-[11px] font-semibold tracking-[0.18em] uppercase bg-white/15 backdrop-blur border border-white/25 rounded-full px-4 py-1.5">Sales</span>
-      <span class="text-[11px] font-semibold tracking-[0.18em] uppercase bg-white/15 backdrop-blur border border-white/25 rounded-full px-4 py-1.5">Rentals</span>
-      <span class="text-[11px] font-semibold tracking-[0.18em] uppercase bg-white/15 backdrop-blur border border-white/25 rounded-full px-4 py-1.5">Management</span>
+<header class="bg-ink text-white pt-[72px]">
+  <div class="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] min-h-[86vh]">
+    <div class="flex flex-col justify-center px-6 lg:pl-[max(2.5rem,calc((100vw-1400px)/2+2.5rem))] lg:pr-16 py-20">
+      <div class="flex items-center gap-2 mb-7 flex-wrap">
+        <span class="text-[11px] font-semibold tracking-[0.18em] uppercase border border-white/30 rounded-full px-4 py-1.5 text-white/80">Sales</span>
+        <span class="text-[11px] font-semibold tracking-[0.18em] uppercase border border-white/30 rounded-full px-4 py-1.5 text-white/80">Rentals</span>
+        <span class="text-[11px] font-semibold tracking-[0.18em] uppercase border border-white/30 rounded-full px-4 py-1.5 text-white/80">Management</span>
+      </div>
+      <h1 class="font-display text-[44px] lg:text-[72px] leading-[0.97] tracking-tightest mb-7">We're on a mission to make Bali stays <span class="italic">honest.</span></h1>
+      <p class="text-white/70 text-[16px] max-w-md mb-10">Verified villas instead of pretty lies. Real people instead of ticket queues. Full cycle — from your first stay to buying your own villa or land. Built in Bali, by people who live here.</p>
+      <div class="flex gap-3 flex-wrap">
+        <a href="#story" class="btn-white">Get to know us</a>
+        <a href="#contact" class="border border-white/40 text-white rounded-full px-6 py-3.5 font-semibold text-sm hover:bg-white hover:text-ink transition">Visit our office</a>
+      </div>
     </div>
-    <h1 class="font-display text-[46px] lg:text-[88px] leading-[0.95] tracking-tightest mb-7 max-w-4xl" style="text-shadow:0 2px 24px rgba(0,0,0,.45)">We're on a mission to make Bali stays <span class="italic">honest.</span></h1>
-    <p class="text-white/85 text-[16.5px] max-w-xl mb-10" style="text-shadow:0 1px 10px rgba(0,0,0,.5)">Verified villas instead of pretty lies. Real people instead of ticket queues. Full cycle — from your first stay to buying your own villa or land. Built in Bali, by people who live here.</p>
-    <div class="flex gap-3 flex-wrap">
-      <a href="#story" class="btn-white">Get to know us</a>
-      <a href="#contact" class="border border-white/50 text-white rounded-full px-6 py-3.5 font-semibold text-sm hover:bg-white hover:text-ink transition backdrop-blur">Visit our office</a>
+    <div class="relative min-h-[380px] lg:min-h-0">
+      <img src="https://images.unsplash.com/photo-1707467390539-8ada3e4e2c2a?q=80&w=1600&auto=format&fit=crop" alt="The BaliVillas team in Canggu, Bali" class="absolute inset-0 w-full h-full object-cover object-center">
+      <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/60 to-transparent"></div>
+      <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-ink to-transparent hidden lg:block"></div>
+      <p class="absolute bottom-5 right-6 text-white/90 font-semibold text-[13px]">The BaliVillas team — Canggu, Bali</p>
     </div>
   </div>
 </header>
