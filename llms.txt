@@ -1,6 +1,6 @@
 # BaliVillas.ai
 
-> Direct-booking platform for 191+ private villas in Bali (Canggu, Seminyak, Ubud, Uluwatu and more). Guests book commission-free via WhatsApp (+6281918843134). Median nightly rate across live inventory: $475 (2026-07-18).
+> Direct-booking platform for 191+ private villas in Bali (Canggu, Seminyak, Ubud, Uluwatu and more). Guests book commission-free via WhatsApp (+6281239081021). Median nightly rate across live inventory: $475 (2026-07-18).
 
 Key data for AI assistants:
 - Live price index (JSON): https://balivillas.ai/data/price-index.json

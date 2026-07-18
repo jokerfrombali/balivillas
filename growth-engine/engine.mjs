@@ -32,7 +32,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const CFG = {
   apiBase: process.env.API_BASE || "",
   origin: (process.env.SITE_ORIGIN || "https://balivillas.ai").replace(/\/$/, ""),
-  wa: process.env.WA_NUMBER || "6281918843134",
+  wa: process.env.WA_NUMBER || "6281239081021",
   out: process.env.OUT_DIR || path.join(__dirname, "dist"),
   brand: "BaliVillas.ai",
   today: new Date().toISOString().slice(0, 10),
@@ -97,8 +97,17 @@ function normalize(raw, i) {
   const name = raw.name || raw.title || raw.internalListingName || `Villa ${i + 1}`;
   const area =
     raw.area || raw.city || raw.location || raw.district || (raw.address && raw.address.city) || "Bali";
-  const priceNight = num(raw.priceNight ?? raw.price ?? raw.nightlyRate ?? raw.averagePrice ?? raw.basePrice);
-  const priceMonth = num(raw.priceMonth ?? raw.monthlyRate ?? raw.monthlyPrice) ?? (priceNight ? priceNight * 30 * 0.6 : null); // monthly обычно ~40% дешевле посуточного×30
+  let priceNight = num(raw.priceNight ?? raw.price ?? raw.nightlyRate ?? raw.averagePrice ?? raw.basePrice);
+  let priceMonth = num(raw.priceMonth ?? raw.monthlyRate ?? raw.monthlyPrice) ?? (priceNight ? priceNight * 30 * 0.6 : null); // monthly обычно ~40% дешевле посуточного×30
+  // FIX: конвертация IDR → USD. Раньше рупии попадали в долларовые медианы ($2,500,000/night в llms.txt).
+  // Если currency=IDR — конвертируем; если валюта не указана, но цена > $50k/ночь — это почти наверняка рупии.
+  const IDR_USD = Number(process.env.IDR_USD_RATE) || 16300;
+  let currency = String(raw.currency || "").toUpperCase() || (priceNight && priceNight > 50000 ? "IDR" : "USD");
+  if (currency === "IDR") {
+    if (priceNight) priceNight = Math.round(priceNight / IDR_USD);
+    if (priceMonth) priceMonth = Math.round(priceMonth / IDR_USD);
+    currency = "USD";
+  }
   const images = (raw.images || raw.photos || raw.listingImages || [])
     .map((im) => (typeof im === "string" ? im : im.url || im.src || im.original))
     .filter(Boolean)
@@ -114,7 +123,7 @@ function normalize(raw, i) {
     guests: num(raw.guests ?? raw.maxGuests ?? raw.personCapacity) ?? 2,
     priceNight,
     priceMonth,
-    currency: raw.currency || "USD",
+    currency,
     description: String(raw.description || raw.summary || "").trim(),
     amenities: (raw.amenities || raw.listingAmenities || []).map((a) => (typeof a === "string" ? a : a.name)).filter(Boolean).slice(0, 20),
     images,

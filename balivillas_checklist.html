@@ -1,0 +1,2563 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>balivillas.ai — 90-дневный план продвижения</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,700;9..144,900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f1310;
+    --bg-card: #161c18;
+    --bg-elev: #1c2520;
+    --ink: #e8e5d8;
+    --ink-dim: #9aa097;
+    --ink-muted: #5e6660;
+    --accent: #d4a574;
+    --accent-hot: #e8895c;
+    --jungle: #4a7c59;
+    --jungle-light: #6b9b7a;
+    --terracotta: #c4664a;
+    --line: rgba(212, 165, 116, 0.15);
+    --line-strong: rgba(212, 165, 116, 0.35);
+    --shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 10% 0%, rgba(74, 124, 89, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 90% 100%, rgba(196, 102, 74, 0.06) 0%, transparent 40%);
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 32px 120px;
+  }
+
+  /* === HEADER === */
+  header {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 48px;
+    margin-bottom: 64px;
+    position: relative;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  .subtitle {
+    font-size: 17px;
+    color: var(--ink-dim);
+    max-width: 620px;
+    margin-bottom: 40px;
+  }
+
+  /* === STATS === */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  .stat {
+    background: var(--bg);
+    padding: 20px 24px;
+  }
+
+  .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 8px;
+  }
+
+  .stat-value {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--ink);
+  }
+
+  .stat-value .unit {
+    font-size: 14px;
+    color: var(--ink-dim);
+    margin-left: 4px;
+  }
+
+  /* === PROGRESS GLOBAL === */
+  .progress-global {
+    margin-top: 40px;
+    padding: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+  }
+
+  .progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+  }
+
+  .progress-label-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+
+  .progress-label-value {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    color: var(--accent);
+  }
+
+  .progress-bar {
+    height: 4px;
+    background: var(--line);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--jungle-light), var(--accent), var(--terracotta));
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 0%;
+  }
+
+  /* === SECTIONS === */
+  .section {
+    margin-bottom: 80px;
+    position: relative;
+  }
+
+  .section-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 24px;
+    align-items: baseline;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .section-num {
+    font-family: 'Fraunces', serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 1;
+    font-style: italic;
+  }
+
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+
+  .section-title .sub {
+    display: block;
+    font-size: 14px;
+    color: var(--ink-dim);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 8px;
+    letter-spacing: 0;
+  }
+
+  .section-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-align: right;
+    color: var(--ink-dim);
+    line-height: 1.7;
+  }
+
+  .section-meta strong {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .section-progress {
+    height: 2px;
+    background: var(--line);
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+
+  .section-progress-fill {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.4s ease;
+  }
+
+  /* === TASKS === */
+  .task {
+    border: 1px solid var(--line);
+    margin-bottom: 12px;
+    background: var(--bg-card);
+    transition: all 0.2s;
+  }
+
+  .task:hover {
+    border-color: var(--line-strong);
+  }
+
+  .task.done {
+    opacity: 0.6;
+  }
+
+  .task.done .task-title {
+    text-decoration: line-through;
+    text-decoration-color: var(--ink-muted);
+  }
+
+  .task-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    align-items: center;
+    padding: 18px 24px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .task-header:hover {
+    background: var(--bg-elev);
+  }
+
+  .checkbox {
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid var(--line-strong);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+  }
+
+  .checkbox:hover {
+    border-color: var(--accent);
+  }
+
+  .checkbox:checked {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .checkbox:checked::after {
+    content: '';
+    width: 6px;
+    height: 11px;
+    border: solid var(--bg);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-top: -2px;
+  }
+
+  .task-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .task-cost {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-dim);
+    padding: 4px 10px;
+    border: 1px solid var(--line);
+  }
+
+  .expand-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-dim);
+    transition: transform 0.3s;
+    font-size: 12px;
+  }
+
+  .task.open .expand-btn {
+    transform: rotate(180deg);
+    color: var(--accent);
+  }
+
+  .task-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .task.open .task-body {
+    max-height: 4000px;
+  }
+
+  .task-body-inner {
+    padding: 0 24px 24px 62px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    margin-top: 0;
+  }
+
+  .task-desc {
+    font-size: 14px;
+    color: var(--ink-dim);
+    margin-bottom: 20px;
+  }
+
+  .task-desc strong {
+    color: var(--ink);
+  }
+
+  .task-desc ul {
+    margin: 12px 0;
+    padding-left: 20px;
+  }
+
+  .task-desc li {
+    margin-bottom: 6px;
+  }
+
+  /* === PROMPT BLOCK === */
+  .prompt-block {
+    background: var(--bg-elev);
+    border-left: 2px solid var(--accent);
+    margin-top: 16px;
+    position: relative;
+  }
+
+  .prompt-header {
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .prompt-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .copy-btn {
+    background: transparent;
+    border: 1px solid var(--line-strong);
+    color: var(--ink-dim);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    padding: 6px 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+
+  .copy-btn:hover {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+
+  .copy-btn.copied {
+    background: var(--jungle);
+    color: var(--ink);
+    border-color: var(--jungle);
+  }
+
+  .prompt-content {
+    padding: 18px 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: var(--ink);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+
+  .prompt-content::-webkit-scrollbar { width: 6px; }
+  .prompt-content::-webkit-scrollbar-track { background: transparent; }
+  .prompt-content::-webkit-scrollbar-thumb { background: var(--line-strong); }
+
+  /* === NOTES === */
+  .notes-block {
+    margin-top: 16px;
+  }
+
+  .notes-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 8px;
+  }
+
+  .notes-textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    padding: 12px 14px;
+    resize: vertical;
+    min-height: 60px;
+    transition: border 0.2s;
+  }
+
+  .notes-textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+
+  /* === ACTIONS === */
+  .actions {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+  }
+
+  .action-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--line-strong);
+    color: var(--ink-dim);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    backdrop-filter: blur(10px);
+  }
+
+  .action-btn:hover {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+
+  /* === MILESTONES === */
+  .milestones {
+    margin-top: 48px;
+    padding: 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    position: relative;
+  }
+
+  .milestones::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .milestones h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+
+  .milestone {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 24px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .milestone:last-child { border-bottom: none; }
+
+  .milestone-day {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .milestone-text {
+    font-size: 14px;
+    color: var(--ink-dim);
+  }
+
+  .milestone-text strong { color: var(--ink); }
+
+  /* === DISCLAIMER === */
+  .disclaimer {
+    margin-top: 48px;
+    padding: 20px 24px;
+    background: rgba(196, 102, 74, 0.08);
+    border-left: 2px solid var(--terracotta);
+    font-size: 13px;
+    color: var(--ink-dim);
+    line-height: 1.7;
+  }
+
+  .disclaimer strong {
+    color: var(--terracotta);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 680px) {
+    .container { padding: 32px 16px 100px; }
+    .section-header { grid-template-columns: 1fr; gap: 12px; }
+    .section-meta { text-align: left; }
+    .task-header { padding: 14px 16px; grid-template-columns: auto 1fr auto; }
+    .task-cost { grid-column: 2; justify-self: start; margin-top: 4px; }
+    .task-body-inner { padding-left: 16px; padding-right: 16px; }
+    .actions { right: 12px; bottom: 12px; flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="eyebrow">90-day playbook · solo execution</div>
+  <h1>balivillas<em>.ai</em><br>план <em>продвижения</em></h1>
+  <p class="subtitle">Серая LLM-оптимизация и контент-доминирование под short-term tourist Bali villa rental. Новый домен, бюджет $2K, 90 дней, соло.</p>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-label">Бюджет</div>
+      <div class="stat-value">$2,000<span class="unit">USD</span></div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Горизонт</div>
+      <div class="stat-value">90<span class="unit">дней</span></div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Статей</div>
+      <div class="stat-value">60-80</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Каналы</div>
+      <div class="stat-value">4<span class="unit">блока</span></div>
+    </div>
+  </div>
+
+  <div class="progress-global">
+    <div class="progress-label">
+      <span class="progress-label-text">Общий прогресс</span>
+      <span class="progress-label-value" id="globalPercent">0%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="globalFill"></div></div>
+  </div>
+</header>
+
+<!-- ============ BLOCK 1 ============ -->
+<section class="section" data-section="1">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title">
+      LLM-фундамент сайта
+      <span class="sub">Превращаем balivillas.ai в источник, который цитируют ChatGPT, Perplexity, Gemini</span>
+    </div>
+    <div class="section-meta">
+      Бюджет: <strong>~$450</strong><br>
+      Сроки: <strong>дни 1-90</strong><br>
+      Приоритет: <strong>#1</strong>
+    </div>
+  </div>
+  <div class="section-progress"><div class="section-progress-fill" data-section-fill="1"></div></div>
+
+  <!-- TASK 1.1 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="1.1">
+      <div class="task-title">Аудит текущего состояния сайта</div>
+      <div class="task-cost">$0 · 2 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Понять стартовую точку. Что есть, что отсутствует, что мешает LLM правильно понять контент.
+        <ul>
+          <li>Проверить индексацию: <code>site:balivillas.ai</code> в Google и Bing</li>
+          <li>Прогнать через PageSpeed Insights, Lighthouse</li>
+          <li>Проверить robots.txt, sitemap.xml</li>
+          <li>Список текущих страниц с типами контента</li>
+        </ul>
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для аудита</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Проведи технический аудит сайта balivillas.ai с точки зрения LLM-визибилити (ChatGPT, Perplexity, Gemini, Google AI Overviews). Цель — понять, насколько сайт готов цитироваться нейросетями при запросах туристов про аренду вилл на Бали short-term (1-14 дней).
+
+Проверь и дай отчёт по пунктам:
+1. Структура HTML: есть ли семантические теги (article, section, nav), правильная иерархия H1-H6
+2. Schema.org разметка: какая есть, какой не хватает для LodgingBusiness, Accommodation, FAQPage, BreadcrumbList
+3. Meta-теги: title, description на каждой странице, OpenGraph
+4. /robots.txt — не блокирует ли GPTBot, ClaudeBot, PerplexityBot, Google-Extended
+5. /sitemap.xml — есть ли, валиден ли
+6. /llms.txt — есть ли (новый стандарт от Anthropic)
+7. Скорость загрузки, mobile-friendly
+8. Внутренняя перелинковка между страницами
+9. Текущий контент: есть ли длинные информационные статьи или только product pages
+10. Author markup: указаны ли авторы статей с E-E-A-T сигналами
+
+По каждому пункту дай: что есть сейчас (если можешь определить), что должно быть, конкретные шаги для исправления.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="1.1"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 1.2 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="1.2">
+      <div class="task-title">Создание /llms.txt в корне сайта</div>
+      <div class="task-cost">$0 · 1 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Файл-карта сайта для LLM-краулеров (стандарт от Anthropic, 2024). Помогает моделям быстрее понять структуру и контент. Большинство конкурентов в Бали-нише о нём не слышали — это твой edge.
+        <ul>
+          <li>Создать <code>/llms.txt</code> и <code>/llms-full.txt</code> в корне</li>
+          <li>Описать ключевые разделы, авторов, основные area-страницы</li>
+          <li>Добавить в robots.txt разрешение для AI-краулеров</li>
+        </ul>
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для генерации llms.txt</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Сгенерируй файлы /llms.txt и /llms-full.txt для balivillas.ai по спецификации llmstxt.org. Сайт занимается short-term арендой вилл на Бали (1-14 дней) для международной аудитории (digital nomads, австралийцы, русскоязычные туристы, EU/UK).
+
+Структура llms.txt должна включать:
+- # balivillas.ai (заголовок проекта)
+- > Краткое описание в одной строке: что за сервис, для кого, чем отличается
+- ## Core sections — ссылки на главные разделы (Areas, Villa types, Booking guide, FAQ, About)
+- ## Areas — все локации (Canggu, Seminyak, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, Berawa)
+- ## Guides — гайды (first-time visitors, families, couples, digital nomads, surfers)
+- ## Resources — Airport transfer, scooter rental, visa info
+- ## Optional — менее критичные ссылки
+
+Для llms-full.txt — расширенная версия с короткими описаниями каждой страницы.
+
+Также дай:
+1. Обновлённый robots.txt, который явно разрешает GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended, CCBot (для Common Crawl)
+2. Пример FastAPI route для отдачи llms.txt с правильным Content-Type: text/markdown
+3. Чек: как проверить, что файл доступен (curl команда)
+
+Используй реальные урлы вида https://balivillas.ai/areas/canggu, https://balivillas.ai/guides/first-time-bali и т.д.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="1.2"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 1.3 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="1.3">
+      <div class="task-title">Schema.org разметка через JSON-LD</div>
+      <div class="task-cost">$0 · 4 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        LLM и Google парсят JSON-LD напрямую и используют его как первоисточник фактов. Без этого ты невидим в AI Overviews.
+        <ul>
+          <li><strong>LodgingBusiness</strong> для главной и страниц вилл</li>
+          <li><strong>FAQPage</strong> на каждой статье с FAQ-блоком</li>
+          <li><strong>Article</strong> + <strong>Person</strong> (author) для блог-постов</li>
+          <li><strong>BreadcrumbList</strong> везде</li>
+          <li><strong>Review</strong> + <strong>AggregateRating</strong> — только когда будут реальные отзывы</li>
+        </ul>
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для генерации schema</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Сгенерируй полный набор JSON-LD schema.org разметки для balivillas.ai (short-term villa rental Bali). Нужны шаблоны под FastAPI/Jinja2 темплейты.
+
+1. ORGANIZATION schema для главной страницы:
+- name, url, logo, sameAs (соцсети — оставь плейсхолдеры), contactPoint, areaServed (Bali, Indonesia)
+
+2. LODGINGBUSINESS schema для страницы каждой виллы:
+- name, image (массив URL), description, address (PostalAddress с addressLocality, addressRegion="Bali", addressCountry="ID"), geo (latitude/longitude), priceRange, amenityFeature (массив LocationFeatureSpecification: pool, wifi, ac, kitchen), starRating, numberOfRooms, petsAllowed
+
+3. ARTICLE + PERSON schema для блог-постов:
+- headline, datePublished, dateModified, author (Person с name, url, jobTitle, sameAs LinkedIn), publisher (Organization), mainEntityOfPage, image
+
+4. FAQPAGE schema — для FAQ-блоков на каждой статье. Шаблон с массивом mainEntity.Question/acceptedAnswer
+
+5. BREADCRUMBLIST для иерархии URL
+
+6. TOURISTATTRACTION или Place для area-страниц (Canggu, Seminyak и т.д.)
+
+7. AGGREGATEOFFER для страниц со списком вилл в локации
+
+Для каждого типа дай:
+- Готовый JSON-LD темплейт с Jinja2-переменными ({{ villa.name }} и т.д.)
+- Пример заполненный реальными данными для виллы в Canggu
+- FastAPI код, который инжектит этот JSON-LD в HTML head
+- Проверку валидности через https://validator.schema.org/
+
+Все имена полей по официальной спецификации schema.org, версия актуальная на 2026.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="1.3"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 1.4 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="1.4">
+      <div class="task-title">Кластерный keyword-research под LLM-выдачу</div>
+      <div class="task-cost">$0 · 6 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Не классическое SEO ядро, а карта вопросов, которые туристы реально задают ChatGPT/Perplexity. По каждому кластеру — приоритет, частотность, конкуренция в LLM-выдаче.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для keyword research</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Собери keyword-кластеры для balivillas.ai (short-term villa rental Bali, 1-14 дней). Цель — попадать в LLM-цитирование (ChatGPT, Perplexity, Gemini) и Google AI Overviews. ЦА: digital nomads (US/UK/EU/AU), russian relocants, australian tourists.
+
+Дай таблицу с 5 кластерами, в каждом 12-15 запросов:
+
+КЛАСТЕР 1: AREA GUIDES (informational)
+Запросы вида "where to stay in bali for X", "canggu vs seminyak", "best area in bali for first time visitors", "is ubud good for couples". Под каждый — primary keyword, 3-5 long-tail вариаций, тип контента (guide / comparison / listicle), оценка конкуренции (low/med/high), приоритет.
+
+КЛАСТЕР 2: VILLA-TYPE GUIDES (commercial-informational)
+Запросы про типы вилл: "private pool villa canggu under 200", "family villa bali 4 bedrooms", "honeymoon villa uluwatu", "beachfront villa seminyak". Подразумевают намерение бронировать.
+
+КЛАСТЕР 3: LOGISTICS & PRACTICAL (informational, high volume)
+"how to get from denpasar airport to canggu", "do i need scooter in bali", "best sim card for bali", "tap water bali safe", "bali currency exchange tips".
+
+КЛАСТЕР 4: COMPARISON & DECISION (high commercial intent)
+"airbnb vs villa rental bali", "is it cheaper to rent villa or hotel bali", "should i book villa in advance bali", "best month to visit bali for villa rental".
+
+КЛАСТЕР 5: FAQ / OBJECTIONS (informational, defensive)
+Реальные страхи туристов: "is bali safe in 2026", "do villas in bali have hot water", "are bali villas mosquito free", "can you trust online villa booking bali".
+
+По каждому запросу:
+- Search volume (приблизительно, US/global)
+- Сложность ранжирования в Google (1-10)
+- Шанс попадания в LLM-цитирование (1-10, обоснуй)
+- Тип контента под запрос (article/listicle/comparison/FAQ-page)
+- Внутренние ссылки куда
+
+В конце — top 20 запросов по приоритету (рассчитан как volume × LLM-chance / difficulty).</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="1.4"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 1.5 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="1.5">
+      <div class="task-title">Контент-план на 60-80 статей</div>
+      <div class="task-cost">$0 · 3 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        План публикации с распределением по типам контента, дедлайнам и приоритетам. Темп: ~7 статей в неделю, 30 в месяц.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для контент-плана</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">На основе keyword-кластеров (которые я тебе скину следующим сообщением) составь контент-план balivillas.ai на 90 дней. Total: 60-80 статей. Темп: 7 статей/неделя.
+
+Распределение:
+- 15-20 Area guides (по локациям Бали)
+- 15-20 Villa-type guides
+- 10-15 Logistics & practical
+- 10-15 FAQ-pages (одна страница = один популярный вопрос)
+- 10 Listicles формата "Top 10 villas in X for Y"
+
+Для каждой статьи в плане:
+1. № в плане
+2. Дата публикации (от старта day 1)
+3. Title (SEO + LLM-friendly, до 60 символов)
+4. URL slug
+5. Primary keyword + 3 secondary
+6. Тип контента
+7. Целевая длина (700-1500 слов под LLM, не больше)
+8. Структура H2-блоков (4-7 секций)
+9. Должен ли быть FAQ-блок в конце (да/нет)
+10. Внутренние ссылки: на какие 3-5 других статей плана ссылается
+11. Главный CTA (бронирование? подписка на newsletter? переход к villa list?)
+12. Приоритет (P0/P1/P2)
+
+Группируй по неделям. Первая неделя — фундаментальные guides (area overviews по 4-5 главным районам), потом более узкие темы. P0 публикуем первыми, P2 — последними.
+
+Выведи план таблицей в Markdown.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="1.5"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 1.6 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="1.6">
+      <div class="task-title">Шаблон LLM-оптимизированной статьи</div>
+      <div class="task-cost">$0 · 2 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Унифицированный шаблон под который генерируется каждая статья. Bottom-line-up-front, FAQ внизу, сравнительные таблицы в HTML, last-updated в шапке.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для шаблона статьи</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Создай универсальный шаблон LLM-оптимизированной статьи для balivillas.ai. Шаблон должен максимизировать вероятность цитирования ChatGPT, Perplexity, Gemini, Google AI Overviews.
+
+Структурные требования:
+1. ОТВЕТ В ПЕРВЫХ 50 СЛОВАХ — прямой ответ на основной запрос статьи. Без вступлений типа "Bali is a beautiful island...". Сразу: "The best area in Bali for first-time visitors is Seminyak because..."
+2. LAST UPDATED дата в шапке (обновляется реально раз в 1-2 месяца)
+3. AUTHOR BIO мини-блок: имя, фото, 1-2 строки экспертизы, ссылка на полный профиль
+4. TL;DR блок после интро — буллеты с главными выводами
+5. H2-структура: General → Specific (от общего к частному, не наоборот)
+6. ОБЯЗАТЕЛЬНО: одна сравнительная таблица в чистом HTML (не картинкой), если применимо
+7. Bottom-line-up-front в каждом абзаце — вывод первым предложением, потом обоснование
+8. КОНКРЕТНЫЕ цифры, даты, имена. Не "many villas" а "127 villas in Canggu range from $80 to $400/night"
+9. FAQ-блок в конце: 8-12 вопросов, ответы по 1-3 предложения, прямые
+10. Related articles блок (3-5 внутренних ссылок)
+11. JSON-LD schema (Article + FAQPage если есть FAQ)
+
+Дай:
+A) Markdown-шаблон с заглушками {{PRIMARY_KEYWORD}}, {{TLDR_BULLETS}}, {{H2_1_TITLE}}, {{FAQ_QUESTIONS}}
+B) HTML-обёртку (Jinja2) с правильной семантикой
+C) Чек-лист на 15 пунктов для ручной проверки готовой статьи перед публикацией
+D) Пример заполнения шаблона на статье "Canggu vs Seminyak: Where to Stay in Bali in 2026" (краткий, для демонстрации структуры)
+
+Стиль текста: разговорный экспертный, не маркетинговый, не "AI-генеренный". Избегай слов "vibrant", "stunning", "paradise", "ultimate guide", "unlock". Пиши как резидент Бали, который реально знает локации.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="1.6"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 1.7 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="1.7">
+      <div class="task-title">Автогенерация статей через Claude Code + Ollama</div>
+      <div class="task-cost">$50 · 8 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Скрипт-пайплайн: на вход получает строку из контент-плана, на выход — готовую статью по шаблону + JSON-LD + изображения. Ollama (Qwen3 или Mistral) делает драфт локально, Claude доводит. Ручная редактура 10-15 мин на статью.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для скрипта генерации</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Напиши Python-скрипт article_generator.py для пакетной генерации LLM-оптимизированных статей под balivillas.ai. Стек: Python 3.11, Ollama (localhost:11434), Anthropic API (Claude Sonnet 4.6 для финальной правки), Pillow для обработки изображений, SQLite для хранения статей.
+
+Архитектура:
+1. INPUT: CSV-файл с контент-планом (колонки: id, title, slug, primary_keyword, secondary_keywords, type, target_length, h2_structure, faq_needed, internal_links, priority)
+2. PIPELINE на каждую статью:
+   - Шаг 1: Research promt → Ollama (Qwen3:32b) собирает факты, конкретные цифры, имена локаций, цены
+   - Шаг 2: Draft prompt → Ollama пишет первый драфт по шаблону (передаётся как system prompt)
+   - Шаг 3: Quality check → Claude API проверяет: есть ли ответ в первых 50 словах, нет ли AI-клише, корректна ли структура. Возвращает либо approval либо список правок
+   - Шаг 4: Polish → Claude API делает финальную редактуру
+   - Шаг 5: Генерация JSON-LD (Article + FAQPage)
+   - Шаг 6: Генерация meta-title, meta-description, OpenGraph
+   - Шаг 7: Сохранение в SQLite + markdown-файл в /content/{slug}.md
+3. OUTPUT: готовый markdown с frontmatter + JSON-LD блок + лог качества
+
+Требования:
+- Rate limiting для Claude API (5 req/min)
+- Retry с exponential backoff
+- Кеширование research-результатов (если у нескольких статей один кластер — research общий)
+- Логирование в /logs/generation_{date}.log
+- CLI: python article_generator.py --plan plan.csv --limit 5 --priority P0
+- Dry run режим
+- Темплейт промтов в отдельных файлах /prompts/research.txt, /prompts/draft.txt, /prompts/qc.txt, /prompts/polish.txt
+
+Запретные слова для polish-фазы (Claude должен их убирать): "vibrant", "stunning", "paradise", "ultimate", "unlock", "elevate", "dive into", "world-class", "breathtaking", "hidden gem", "must-see".
+
+Дай:
+- Полный код article_generator.py
+- Все 4 файла промтов с подробными инструкциями
+- requirements.txt
+- README с инструкцией запуска
+- Пример первого запуска на 1 статье</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="1.7"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 1.8 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="1.8">
+      <div class="task-title">Публикация первых 20 статей (P0)</div>
+      <div class="task-cost">$0 · 30 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Якорные статьи по самым важным запросам. Темп: 7 в неделю в первые 3 недели. Ручная редактура каждой 10-15 мин. Фотографии из своей базы вилл + Midjourney для иллюстраций гайдов.
+        <ul>
+          <li>Деплой через FastAPI route на каждый slug</li>
+          <li>Sitemap.xml автоматически обновляется при публикации</li>
+          <li>Принудительная отправка в Google Search Console (URL Inspection → Request Indexing)</li>
+          <li>Аналогично в Bing Webmaster Tools (важно, потому что ChatGPT берёт из Bing)</li>
+        </ul>
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для чек-листа публикации</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Создай детальный pre-publish чек-лист на 1 статью balivillas.ai. После прохождения чек-листа статья готова к публикации.
+
+Чек-лист должен покрывать:
+
+A) КОНТЕНТ (10 пунктов):
+- Ответ на основной запрос в первых 50 словах присутствует
+- Длина 700-1500 слов
+- Минимум 1 конкретная цифра/цена/факт в каждом H2-блоке
+- FAQ-блок 8-12 вопросов
+- Нет запретных слов (vibrant, stunning, etc.)
+- Author bio заполнен
+- Last updated date актуальна
+
+B) ТЕХНИЧЕСКОЕ (10 пунктов):
+- JSON-LD Article + FAQPage инжектится в head
+- Все изображения с alt-текстом (описательным, не keyword-stuffed)
+- Изображения сжаты (WebP, < 200KB)
+- Внутренние ссылки 3-5 на другие статьи (relative, не absolute)
+- Slug соответствует плану
+- Canonical URL установлен
+- OpenGraph image 1200x630
+- Mobile-rendering проверен
+- Lighthouse score > 90
+
+C) ИНДЕКСАЦИЯ (5 пунктов):
+- URL добавлен в sitemap.xml
+- Submit в Google Search Console (URL Inspection)
+- Submit в Bing Webmaster (важно для ChatGPT)
+- Submit в IndexNow API (если настроен)
+- Внутренняя ссылка с главной/category-страницы стоит
+
+D) AMPLIFICATION (5 пунктов):
+- Запостить ссылку с тизером в свой LinkedIn
+- Запостить в Telegram-канал (если есть)
+- Поделиться в 1-2 релевантных Telegram/Discord чатах (без спама — где это уместно)
+- Закладка в Reddit-сейв для упоминания в подходящем треде позже
+- Запись в трекинг-таблице LLM-citations (для дальнейшего мониторинга)
+
+Сделай как Markdown-чеклист с чекбоксами, который я могу скопировать в Notion или Obsidian для каждой статьи. Плюс дай Python-скрипт publish_helper.py, который автоматизирует пункты B и C (отправка в GSC, Bing, IndexNow через их API).</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="1.8"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 1.9 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="1.9">
+      <div class="task-title">Тех-аудит на Kwork/Upwork ($150-200)</div>
+      <div class="task-cost">$150 · 1 ч заказ</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Внешний взгляд от SEO-специалиста, специализирующегося на AI Search / GEO (Generative Engine Optimization). Найти в США/UK на Upwork по запросу "GEO optimization audit" или на Kwork по "AI SEO аудит". После публикации первых 15-20 статей.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">ТЗ для фрилансера-аудитора</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Project brief: GEO (Generative Engine Optimization) audit for balivillas.ai
+
+Background:
+- New domain (<6 months), short-term Bali villa rental
+- Already implemented: JSON-LD schema, /llms.txt, FAQ blocks, llm-friendly content structure
+- 15-20 articles published
+- Target: maximize citations in ChatGPT, Perplexity, Gemini, Google AI Overviews
+
+What I need from you (deliverable: 10-15 page report + 30-min Loom walkthrough):
+
+1. CITATION TEST: Run 25 queries in ChatGPT, Perplexity, Gemini, Google AI Overviews about Bali villa rental (queries I'll provide). Report:
+   - Which queries already cite balivillas.ai
+   - Which competitors dominate (top 5 cited domains per query)
+   - Source quality patterns (what makes the cited sources rank)
+
+2. TECHNICAL GEO AUDIT:
+   - Schema.org implementation correctness
+   - /llms.txt compliance with spec
+   - Robots.txt for AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
+   - Content structure analysis vs. cited competitors
+   - Internal linking patterns
+
+3. CONTENT GAP ANALYSIS:
+   - What topics do competitors cover that we don't
+   - What format/structure differs from top-cited sources
+   - Specific 10 article ideas with reasoning
+
+4. ACTION LIST: prioritized P0-P2 fixes with effort estimates
+
+5. KPI TRACKING SETUP:
+   - Recommend tools (Otterly.ai, Rusal Ratings, Profound, etc.)
+   - Set up baseline metrics
+
+Budget: $150-200
+Timeline: 5-7 days
+Format: Notion doc or PDF + Loom video
+
+Looking for: someone with proven GEO/AI Search experience (not regular SEO). Please share 2-3 case studies or sample audits.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="1.9"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+</section>
+
+<!-- ============ BLOCK 2 ============ -->
+<section class="section" data-section="2">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title">
+      Reddit, Quora, nomad-комьюнити
+      <span class="sub">Реальное присутствие в источниках, которые LLM цитируют чаще всего</span>
+    </div>
+    <div class="section-meta">
+      Бюджет: <strong>~$400</strong><br>
+      Сроки: <strong>дни 1-90</strong><br>
+      Приоритет: <strong>#2</strong>
+    </div>
+  </div>
+  <div class="section-progress"><div class="section-progress-fill" data-section-fill="2"></div></div>
+
+  <!-- TASK 2.1 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="2.1">
+      <div class="task-title">Аудит Reddit-аккаунтов и стратегия прогрева</div>
+      <div class="task-cost">$60 · 2 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Использовать твой реальный аккаунт + 2 рабочих от команды. Если нет — купить 2 аккаунта возрастом 2+ года с кармой 500+ на accs.market или buyaccs. Прогрев 3-4 недели до первого упоминания.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для стратегии аккаунтов</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Разработай детальную стратегию работы с Reddit-аккаунтами для продвижения balivillas.ai (short-term Bali villa rental). Цель — стабильно попадать в источники ChatGPT и Perplexity по запросам про Бали.
+
+Контекст:
+- У меня есть свой реальный аккаунт (Bali-резидент)
+- Планирую завести 2 дополнительных аккаунта (для жены/партнёра, реальных людей)
+- Бюджет: $60 (если нужно купить прогретые аккаунты как fallback)
+
+Дай план по пунктам:
+
+1. KEY SUBREDDITS — список топ-15 сабреддитов с приоритетом:
+   - r/bali, r/IndonesianExpat, r/digitalnomad, r/canggu, r/SoutheastAsia + другие релевантные
+   - Для каждого: размер, активность, правила про self-promotion, тон сообщества, частота вопросов про villa rental
+
+2. ACCOUNT PROFILES — что должен показывать каждый из 3 аккаунтов:
+   - Bio, аватарка, флейр в r/bali (если есть)
+   - Тематика преимущественных постов (не только Бали — общие интересы)
+   - Реалистичная "история" присутствия
+
+3. WARM-UP PROTOCOL (3-4 недели):
+   - Week 1: 10-15 комментариев в общих сабах (нерелевантных Бали — r/CasualConversation, r/AskReddit, etc.), цель — карма 50+
+   - Week 2: войти в Бали-сабы, начать читать, ставить апвоуты, 5-7 комментариев на нерелевантные темы (еда, серфинг, виза)
+   - Week 3: первые помогающие комменты в Бали-сабах, без упоминаний бренда
+   - Week 4: первое мягкое упоминание (только если контекст 100% подходит)
+
+4. RATIO PROTOCOL:
+   - Соотношение упоминаний к обычным комментам: 1:25 минимум
+   - Никогда два аккаунта не отвечают в одном треде
+   - Никогда не пишем "I recommend balivillas.ai" — пишем как опыт ("I used balivillas for my 2-month stay, found them via X")
+
+5. SAFE PATTERNS — как формулировать упоминания, чтобы не получить shadowban:
+   - 5 примеров "правильных" упоминаний
+   - 5 примеров "неправильных" (что не делать)
+
+6. MODERATION RISKS:
+   - Какие модераторы r/bali особо строгие
+   - Как реагировать если удалили коммент
+   - Что делать при shadowban (как проверить через r/ShadowBan)
+
+7. TOOLING:
+   - Какой VPN/прокси использовать (резидентка Bali через какой провайдер)
+   - Браузер-профили для разделения аккаунтов (Multilogin, Dolphin Anty, AdsPower)
+
+8. TRACKING SHEET — Google Sheets шаблон для трекинга:
+   - Дата, аккаунт, саб, тип активности, ссылка на коммент, было ли упоминание, апвоуты, реакция модератора
+
+Выведи как структурированный документ с заголовками. Будь конкретен, не общими словами.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="2.1"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 2.2 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="2.2">
+      <div class="task-title">Setup антидетект-окружения и резидентских прокси</div>
+      <div class="task-cost">$100 · 3 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Каждый Reddit/Quora-аккаунт — на отдельный браузерный профиль с уникальным fingerprint и своей резидентской прокси. AdsPower (бесплатный план до 5 профилей) + Bright Data или Smartproxy для прокси.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для setup антидетект-окружения</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Дай пошаговую инструкцию по setup антидетект-окружения для управления 3-5 Reddit/Quora аккаунтами без палева мультиаккаунтинга. Цель — чтобы Reddit/Quora алгоритмы не связали аккаунты между собой и с моим основным.
+
+Сравни и выбери оптимум по соотношению цена/удобство/безопасность:
+- AdsPower (free до 5 профилей)
+- Dolphin Anty
+- Multilogin
+- GoLogin
+- Octobrowser
+
+Для выбранного дай:
+1. Setup-инструкцию (скачать, установить, начальная конфигурация)
+2. Как создать профиль под каждый аккаунт: операционка, разрешение экрана, timezone, language, WebRTC, Canvas/WebGL fingerprint randomization, JA3
+3. Какой User-Agent использовать (актуальные на 2026)
+
+Для прокси сравни:
+- Bright Data residential (premium, дорого)
+- Smartproxy residential
+- IPRoyal
+- Soax
+
+Рекомендация под бюджет $100 на 90 дней для 3-5 аккаунтов. Учти что для Reddit нужны "чистые" IP без истории спама.
+
+Geo-распределение прокси:
+- Аккаунт 1 (мой): Bali, ID (но я могу switch на US/AU когда путешествую)
+- Аккаунт 2 (жена/партнёр): US или AU
+- Аккаунт 3 (помощник): UK или EU
+
+Дай:
+- Конкретный provider с тарифом
+- Как привязать прокси к браузерному профилю
+- Как тестировать что fingerprint и IP действительно уникальны (whoer.net, browserleaks.com, pixelscan.net)
+- Protocol гигиены: никогда не логинимся в два аккаунта в одном профиле, не переключаемся через clear cookies, не используем один прокси на два аккаунта
+
+В конце — список из 8 правил-заповедей "что нельзя делать", чтобы аккаунты прожили долго.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="2.2"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 2.3 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="2.3">
+      <div class="task-title">Reddit warm-up: 4 недели подготовки</div>
+      <div class="task-cost">$0 · 1 ч/день</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Прогрев аккаунтов перед первыми упоминаниями. 4 недели реальной активности. Темп: 15-20 минут утром, 15-20 вечером на каждый аккаунт. Karma 200+ к концу периода.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для warm-up плана по неделям</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Составь детальный 28-дневный warm-up план для 3 Reddit-аккаунтов (мой основной, partner, helper). Цель — к концу 4-й недели начать аккуратные упоминания balivillas.ai в Бали-сабах без триггеров спам-фильтра.
+
+Для каждого дня каждого аккаунта дай конкретную активность:
+
+Week 1 — General presence (не Бали):
+- Сабы: r/CasualConversation, r/AskReddit, r/todayilearned, r/mildlyinteresting, r/Showerthoughts
+- Цель: 3-5 комментариев/день, набрать первую карму
+- Тип активности: ответы на популярные посты, добавляющие ценность
+
+Week 2 — Topic expansion:
+- Расширяем интересы под бекграунд аккаунта
+- Для меня: r/digitalnomad, r/Entrepreneur, r/SaaS (моя реальная экспертиза)
+- Для partner: r/Cooking, r/yoga, r/HouseDesign (реалистичные интересы)
+- Для helper: travel-сабы r/solotravel, r/travel
+- 5-7 комментариев/день
+
+Week 3 — Soft entry в Бали-сабы:
+- Начинаем читать r/bali, r/IndonesianExpat
+- Только апвоуты и сохранения, 1-2 комментария БЕЗ упоминания брендов
+- Темы: советы по локациям, ответы на вопросы новичков, рекомендации еды/мест
+
+Week 4 — Active in Bali subs:
+- 3-5 комментариев/день в r/bali и related
+- Первое упоминание balivillas.ai только если идеальный контекст (см. safe patterns)
+- Не более 1 упоминания на аккаунт в неделю
+
+Для каждой недели дай:
+1. Конкретные ТИПЫ комментариев с примерами
+2. Чего НЕ делать
+3. Метрики на конец недели (карма, кол-во комментов, кол-во апвоутов)
+
+Bonus: 10 топ-вопросов в r/bali, которые регулярно повторяются (где можно давать развёрнутые ответы и потенциально упомянуть свой сайт через 2-3 недели).
+
+В конце — таблица с дневным планом (Excel-формат): Day | Account | Subreddit | Activity | Estimated time.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="2.3"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 2.4 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="2.4">
+      <div class="task-title">Banking 20 шаблонов "опытных" ответов</div>
+      <div class="task-cost">$0 · 3 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Заготовки ответов на типовые вопросы r/bali. Не копировать дословно (палится), а использовать как структуру. Каждый ответ — личная история с конкретными деталями.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для генерации шаблонов</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Сгенерируй 20 шаблонов комментариев для Reddit от лица Bali-резидента (мой профиль: живу в Бали с 2019 по KITAS, работаю в IT, есть partner, опыт в недвижимости через CRM-проект). Эти комментарии я буду использовать как структуру для ответов на типовые вопросы в r/bali, r/digitalnomad, r/IndonesianExpat.
+
+Требования к каждому шаблону:
+- Звучит как реальный опыт, не как маркетинг
+- Содержит 1-2 конкретных детали (название кафе, цена, район, имя)
+- Длина: 80-150 слов (Reddit любит средние комменты)
+- Заканчивается либо вопросом к OP, либо мягким wrap-up
+- НЕТ упоминания balivillas.ai (это для базы, упоминания будут добавляться в 4 из 20)
+
+Темы шаблонов:
+1. "First time in Bali, where to stay?" — рекомендация районов под разные потребности
+2. "Canggu vs Seminyak" — сравнение, личное мнение
+3. "How long should I stay in Bali?" — опыт долгосрочника
+4. "Renting villa monthly — tips?" — практический ответ (4 из 20 — здесь УПОМИНАНИЕ сайта)
+5. "Best area for digital nomads" — конкретика по коворкингам и сетям
+6. "Is Bali safe?" — балансированный ответ
+7. "Scooter or no scooter?" — личный опыт
+8. "Food costs in Bali" — реальные цифры
+9. "How to find villa not on Airbnb?" — здесь УПОМИНАНИЕ
+10. "Best beaches near Canggu" — local knowledge
+11. "Visa runs 2026" — обновлённая инфа
+12. "Bali rainy season — worth coming?" — опыт
+13. "Working from villa — internet reality" — здесь УПОМИНАНИЕ
+14. "Going to Bali with kids" — practical
+15. "Surfing for beginners — where?" — конкретные споты
+16. "Bali for solo female traveler" — safety perspective
+17. "How to avoid tourist traps" — local tips
+18. "Best long-term rental strategy" — здесь УПОМИНАНИЕ
+19. "Bali vs Lombok / Java" — comparison
+20. "What I wish I knew before moving to Bali" — reflection
+
+Для шаблонов с упоминанием — формулировка вида "I went through 3 different rental services for my partner's family — ended up with balivillas (random shoutout, no affiliation), they had decent process for [specific detail]". Не "best", не "recommend strongly", не CTA.
+
+Каждый шаблон в формате:
+- TRIGGER: какой вопрос/ситуация
+- TEMPLATE: текст с переменными {{LOCATION}}, {{PRICE}}, {{PERSONAL_DETAIL}}
+- VARIATIONS: 2-3 способа сказать то же иначе
+- DO_NOT: что НЕ добавлять, чтобы не палилось
+
+В конце — protocol: как адаптировать шаблон под конкретный тред (всегда читать пост и предыдущие комменты, всегда добавлять 1 деталь под контекст OP, никогда не копи-пейст дословно).</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="2.4"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 2.5 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="2.5">
+      <div class="task-title">Quora-стратегия: 2 аккаунта, длинные ответы</div>
+      <div class="task-cost">$0 · 1 ч setup + 30 мин/день</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Quora высокотрастова для LLM, особенно Gemini и Perplexity. Длинные ответы (300-500 слов) с фото живут годами. Меньше рисков бана, чем Reddit.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для Quora-стратегии</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Разработай стратегию работы с Quora для balivillas.ai. Цель — попадать в Gemini и Perplexity цитирования по запросам про Бали, плюс driving direct traffic с самой Quora.
+
+1. ACCOUNT SETUP:
+   - 2 аккаунта (мой основной + partner)
+   - Bio для каждого: реалистичный, с credibility-сигналами (Bali resident since X, IT background, runs villa business)
+   - Profile photo, credentials, links
+
+2. SPACE STRATEGY:
+   - Какие Quora Spaces релевантны (Bali Travel, Digital Nomads, Indonesia, Southeast Asia Tourism)
+   - Стоит ли создавать свой Space "Bali Villa Insights"
+
+3. QUESTION DISCOVERY:
+   - Найди 30 актуальных вопросов на Quora с топ-запросами про Бали
+   - Для каждого: URL вопроса, кол-во подписчиков, кол-во ответов, дата последней активности
+   - Приоритизируй: high views + few quality answers = high priority
+
+4. ANSWER FORMAT:
+   - Длина 300-500 слов
+   - Структура: hook (1 sentence) → personal context (2-3 sentences) → main answer with H2-like структурой (Quora их поддерживает) → 1-2 фото → soft mention (где уместно)
+   - Embed: можно ли вставлять ссылки на balivillas.ai (когда да, когда нет)
+
+5. UPVOTE PROTOCOL:
+   - Как получать первые апвоуты (не покупка — это палится)
+   - Cross-promotion с partner-аккаунта (через несколько часов после публикации)
+   - Шаринг в LinkedIn / Twitter для extra visibility
+
+6. CONTENT REPURPOSING:
+   - Каждый ответ Quora должен быть production of base article из blog balivillas.ai
+   - Не дословное копирование (Quora не любит)
+   - Сжатая версия с дополнительным личным углом
+
+7. 10 первых вопросов для ответа (если можешь найти реальные URL):
+   - С указанием стратегии для каждого
+   - С шаблоном начала ответа
+
+В конце — недельный план: 2 ответа в неделю на аккаунт = 4 ответа/неделю = 16/месяц = 48 за 90 дней. Это реалистично.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="2.5"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 2.6 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="2.6">
+      <div class="task-title">Telegram-каналы Bali nomads: спонсорские посты</div>
+      <div class="task-cost">$200 · 5 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        1-2 спонсорских поста в крупных русскоязычных и англоязычных Telegram-каналах Бали-комьюнити. Не реклама "забронируй сейчас", а полезный контент со ссылкой.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для Telegram-плана</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Разработай план посевов в Telegram-каналах Bali-комьюнити для balivillas.ai. Бюджет на этот канал: $200.
+
+1. КАНАЛЫ — найди и приоритизируй:
+   - Русскоязычные Bali-каналы (нужны имена/handles): для релокантов, для туристов, для нянь, для серфингистов
+   - Англоязычные: Bali Nomads, Bali Digital Nomads, Canggu communities
+   - Узкие нишевые: семейные с детьми в Бали, серфингисты, инвесторы в недвижку
+
+Для каждого канала: примерное кол-во подписчиков, активность (просмотры на пост), стоимость поста (если есть открытая), контакт админа.
+
+2. CONTENT FORMATS — что лучше работает в Telegram (не очевидная реклама):
+   - Гайд-пост со ссылкой на статью в блоге ("10 ошибок при аренде виллы на Бали — подробно с примерами")
+   - Кейс-стори ("Как одна семья сэкономила $1200 на 2 месяцах в Чангу — наш разбор")
+   - Анализ рынка ("Сколько стоит вилла в Чангу в 2026 vs 2024 — данные нашей платформы")
+
+Подготовь 3 разных post-формата с готовыми текстами 800-1500 знаков + предложение креатива (картинка/видео).
+
+3. NEGOTIATION TEMPLATE:
+   - Как писать админам каналов
+   - Как просить test-post (1 пост со скидкой 30%)
+   - Как trackить эффективность (UTM, промокод)
+
+4. BUDGET ALLOCATION:
+   - 60% на 1-2 крупных канала (1000$+ просмотров пост)
+   - 40% на 3-5 мелких каналов
+
+5. METRICS:
+   - Clicks (через UTM)
+   - Прямые брони с промокодом
+   - LLM-citation lift через 3-4 недели (хорошие посты подбираются Telegram-парсерами и попадают в индекс)
+
+В конце — таблица: канал, contact, ориентировочная цена, content format, ожидаемый CTR, expected ROI. И последовательность outreach: с кем писаться первым.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="2.6"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 2.7 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="2.7">
+      <div class="task-title">LinkedIn-присутствие как Founder</div>
+      <div class="task-cost">$0 · 2 ч/неделя</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        LinkedIn — это сильный E-E-A-T сигнал для Google и LLM. Личный профиль "Founder, balivillas.ai" + 1-2 статьи в месяц про Bali rental market. ChatGPT часто цитирует LinkedIn-статьи как авторитетный источник.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для LinkedIn-плана</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Разработай 90-дневную LinkedIn-стратегию для Alex Anichkin как Founder balivillas.ai. Цель — построить authority в нише Bali real estate / villa rental, что даст boost к E-E-A-T сигналам для balivillas.ai и попаданию в LLM-цитаты.
+
+Контекст обо мне:
+- Russian entrepreneur, Bali-based с 2019, KITAS
+- Несколько проектов: Auditka AI (B2B SaaS), balivillas.ai, Bali Real Estate CRM
+- Опыт в IT, ML, automation
+- Цель: позиционировать как expert по Bali rental market
+
+1. PROFILE OPTIMIZATION:
+   - Headline (220 chars max): варианты с keyword "Bali villa rental" / "Bali real estate"
+   - About section: 2000 chars, история, expertise, что строю
+   - Featured: top articles, balivillas.ai link
+   - Skills, endorsements strategy
+
+2. CONTENT STRATEGY — 90 дней:
+   - 2 long-form articles (LinkedIn Articles) в месяц = 6 статей за 90 дней
+   - 3 posts в неделю = 36 posts за 90 дней
+
+   Темы статей:
+   - "Bali Villa Rental Market 2026: What the data shows" (с реальными числами из моей CRM)
+   - "5 reasons short-term villa renting is replacing hotels in Bali"
+   - "How AI is changing villa management — our experience" (cross с Auditka)
+   - "Canggu vs Ubud: 50,000 booking data points analyzed"
+   - "Building a villa rental platform in Bali — lessons from 2 years"
+   - "The economics of villa rental: what owners and renters don't see"
+
+   Темы постов: market insights, behind the scenes, personal observations as Bali resident, mini case studies.
+
+3. NETWORKING:
+   - Кого добавлять (Bali entrepreneurs, real estate, travel industry)
+   - Comment strategy на чужих постах (10-15 thoughtful comments/неделя)
+   - Engagement pods: стоит ли вступать (риски)
+
+4. CROSS-LINKING:
+   - В каждой статье — natural mention balivillas.ai (не CTA, а контекстно)
+   - LinkedIn profile → linkedin.com/in/alex-anichkin → balivillas.ai (в featured)
+   - Article authors на balivillas.ai → link на LinkedIn profile (E-E-A-T loop)
+
+5. METRICS:
+   - Profile views growth
+   - Post impressions / engagements
+   - Connection requests
+   - Brand searches (LinkedIn-driven)
+   - LLM citation lift (особенно ChatGPT — он любит LinkedIn)
+
+В конце — content calendar на первые 4 недели с темами постов на каждый день.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="2.7"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+</section>
+
+<!-- ============ BLOCK 3 ============ -->
+<section class="section" data-section="3">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title">
+      Google Business + TripAdvisor + Booking
+      <span class="sub">Trust-сигналы и каналы, где Бали-туристы реально ищут</span>
+    </div>
+    <div class="section-meta">
+      Бюджет: <strong>~$300</strong><br>
+      Сроки: <strong>дни 7-90</strong><br>
+      Приоритет: <strong>#3</strong>
+    </div>
+  </div>
+  <div class="section-progress"><div class="section-progress-fill" data-section-fill="3"></div></div>
+
+  <!-- TASK 3.1 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="3.1">
+      <div class="task-title">Google Business Profile setup</div>
+      <div class="task-cost">$0 · 3 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        GBP с категорией "Vacation home rental agency". Адрес офиса (можно coworking / адрес партнёра в Бали). Главное — пройти верификацию (открытка или видео).
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для GBP-setup</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Дай полный гайд по созданию Google Business Profile для balivillas.ai (Bali, Indonesia, vacation rental agency).
+
+1. CATEGORY SELECTION:
+   - Primary: "Vacation home rental agency" или альтернативы
+   - Secondary: ещё 2-3 категории (Real estate agency? Travel agency?)
+   - Какая дает лучший охват для Бали-запросов в Google Maps
+
+2. ADDRESS:
+   - Service-area business vs physical location — что выбрать
+   - Если physical: можно ли использовать coworking, partner office, virtual office
+   - Адрес в Canggu, Seminyak, Denpasar — какой даст лучший охват
+   - Что делать если бизнес обслуживает всю Бали (можно ли указать service area без физического адреса)
+
+3. VERIFICATION:
+   - Возможные методы в Индонезии (postcard, phone, email, video)
+   - Что делать если postcard не приходит (Bali postal system)
+   - Video verification — что снимать (подробный сценарий 30-60 секунд)
+   - Сколько ждать ответа Google
+
+4. PROFILE OPTIMIZATION:
+   - Business name (нельзя keyword-stuffing, но можно "balivillas.ai — Villa Rentals")
+   - Description 750 chars: написать SEO-friendly но natural
+   - Phone, website, hours (24/7? business hours?)
+   - Service areas — какие районы Бали указать
+   - Attributes (LGBTQ-friendly, women-led, etc.)
+
+5. PHOTOS:
+   - Сколько (минимум 10, рекомендую 30+)
+   - Что снимать: офис/coworking, team, villas, Bali локации
+   - Geo-tag фотографий перед загрузкой (важно для local SEO)
+   - Регулярность добавления (2-3 фото в неделю первые месяцы)
+
+6. POSTS:
+   - 1-2 поста в неделю
+   - Форматы: Offer, Update, Event
+   - Темы: новые виллы, гайды, locations spotlight
+
+7. Q&A SECTION:
+   - Засеять самим 10-15 типовых вопросов с ответами (с помощью второго аккаунта)
+   - Топ-15 вопросов которые туристы реально задают
+
+8. PRODUCTS:
+   - Можно ли добавить вилы как Products
+   - Pricing, photos, descriptions
+
+9. MESSAGING:
+   - Включить или нет (response time важен для рейтинга)
+   - Auto-reply setup
+
+10. ANALYTICS:
+   - GBP Insights — что трекать
+   - UTM-разметка ссылок на сайт
+
+В конце — пошаговый action list на 14 дней от регистрации до полностью настроенного и верифицированного профиля.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="3.1"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 3.2 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="3.2">
+      <div class="task-title">Сбор первых 20 реальных GBP-отзывов</div>
+      <div class="task-cost">$200 (incentives) · ongoing</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Реальные клиенты после стэя получают предложение оставить отзыв. Не покупка на биржах (Google палит и удаляет), не накрутка. Цель: 20-30 отзывов за 90 дней.
+        <ul>
+          <li><strong>Важно:</strong> Google TOS формально запрещает любые incentivized reviews. На практике массово делают, но риск всегда есть. Безопаснее — просто просить без incentive (конверсия 15-20% вместо 50%)</li>
+        </ul>
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для review-collection системы</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Разработай review collection систему для balivillas.ai. Цель — за 90 дней собрать 20-30 реальных отзывов в Google Business Profile + Trustpilot + TripAdvisor.
+
+1. WORKFLOW автоматизации (под FastAPI/SQLite стек):
+   - Trigger: гость завершил стэй (check-out date passed)
+   - Day +1: thank-you email с фотографиями стэя (если есть)
+   - Day +3: первый review request (email + WhatsApp если есть номер)
+   - Day +7: follow-up если не оставил
+   - Day +14: финальная попытка, тогда же optional incentive
+
+2. EMAIL TEMPLATES (3 штуки):
+   - Thank-you (no ask) — нейтральный, тёплый
+   - Review request 1 — мягкий ask, два варианта (Google review / Trustpilot)
+   - Review request 2 — follow-up с personal touch
+
+3. WHATSAPP TEMPLATES (короткие, 2-3 строки):
+   - С учётом что это residual marketing в мессенджере, нужно очень кратко
+   - Каждое сообщение с прямой ссылкой "Leave a Google review here: [link]"
+
+4. INCENTIVE STRATEGY (если решу делать):
+   - $20 next-stay credit за честный отзыв (любой длины и оценки)
+   - КРИТИЧНО: incentive не зависит от позитивности отзыва (формальная защита от GBP-бана)
+   - Disclosure в письме: "We appreciate honest feedback — positive or critical"
+   - Альтернатива без incentive: просто просить, конверсия будет 15-20%
+   - РИСК: Google TOS technically запрещает любые incentivized reviews
+
+5. REVIEW LINK GENERATOR:
+   - Прямой Google review link для GBP (формат https://search.google.com/local/writereview?placeid=PLACE_ID)
+   - QR-код на тапке-благодарности в каждой вилле
+   - Лендинг /review-us с тремя кнопками: Google / Trustpilot / TripAdvisor
+
+6. RESPONSE PROTOCOL для отзывов:
+   - На каждый 4-5★: thank you + personal touch (упоминание конкретной виллы / experience guest упомянул)
+   - На 3★ и ниже: extended response, понимание проблемы, fix, инвайт на повторный стэй
+   - На fake/негатив-конкурент: flagging через GBP, плюс публичный честный ответ
+   - Response time target: <24 часа
+
+7. CODE: дай Python script review_request_pipeline.py:
+   - Cron-job который проверяет SQLite на гостей с check-out date в прошлом
+   - Sends emails через SMTP / SendGrid
+   - Triggers WhatsApp через Twilio API
+   - Logs всё в /logs/reviews.log
+   - Tracks rates: sent → opened → review left
+
+8. KPI dashboard:
+   - Total reviews count
+   - Conversion rate (stays → reviews)
+   - Avg rating
+   - Time-to-review (median)
+   - Channel split (Google vs Trustpilot vs TripAdvisor)
+
+Tone требований: вежливо, без выпрашивания, без манипуляций ("If you enjoyed your stay..." — ОК, "You promised..." — НЕ ОК).</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="3.2"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 3.3 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="3.3">
+      <div class="task-title">TripAdvisor + Trustpilot business listings</div>
+      <div class="task-cost">$0 · 2 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Бесплатные business listings на обеих платформах. TripAdvisor для туристов критически важен в Бали-нише, Trustpilot — для долгосрочного trust-сигнала.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для setup listings</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Дай пошаговый гайд по созданию business listings на TripAdvisor и Trustpilot для balivillas.ai.
+
+PART A: TRIPADVISOR
+1. Какая категория business: Travel Agency, Vacation Home Rental Agency, Lodging
+2. Подача заявки: формат, документы (если нужны), сроки верификации
+3. Можно ли быть Travel Agency без офиса в Бали (service area only)
+4. Optimization: business description, photos (минимум 5, лучше 20+), категории услуг
+5. TripAdvisor Awards: за что дают (Travelers' Choice, Bali experts)
+6. Можно ли listing-ить individual villas как separate listings (стратегия)
+7. Q&A section: засеять типовыми вопросами
+8. Reviews protocol: на TripAdvisor отвечать на каждый отзыв
+9. Linking: где разрешено линковать на сайт
+10. TripAdvisor Plus / Premium — стоит ли платить (для balivillas.ai — нет)
+
+PART B: TRUSTPILOT
+1. Free vs paid account — что в free достаточно
+2. Domain verification (нужно поставить script на сайт или txt record)
+3. Profile setup: logo, description, categories
+4. Inviting reviews via Trustpilot API (integration с моим SQLite review pipeline)
+5. Trustpilot widget на сайт: какой формат лучше (stars badge, carousel, mini)
+6. Bad reviews response strategy
+7. Categories selection (Vacation Rental, Travel Agency)
+
+PART C: CROSS-PLATFORM STRATEGY
+- Один review system → 3 platforms (Google, Trustpilot, TripAdvisor)
+- Какие отзывы куда направлять (гость выбирает)
+- Trustpilot для credibility B2B (агенты, partners), TripAdvisor для B2C туристов, Google для local search
+
+PART D: WIDGETS ON SITE
+- Где разместить (footer? landing? booking page?)
+- Schema.org разметка для widget (AggregateRating)
+- Performance impact (lazy load)
+
+В конце — Day 1-30 checklist для setup обоих listings до состояния готовности принимать отзывы.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="3.3"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 3.4 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="3.4">
+      <div class="task-title">Airbnb parasitе-стратегия: 5 listings с CTA</div>
+      <div class="task-cost">$0 · 4 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Airbnb-listings ранжируются в Google по long-tail запросам. В "About the host" можно мягко упомянуть свой сайт. Это легально, Airbnb allows. Использовать как trust-сигнал + driver трафика.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для Airbnb-стратегии</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Разработай "Airbnb parasite SEO" стратегию для balivillas.ai. Не отказываемся от Airbnb-канала, а используем его как trust-signal и driver direct трафика на наш сайт.
+
+1. LISTING STRATEGY:
+   - 5 виллов в Airbnb (наши лучшие или наших партнёров)
+   - Каждое listing оптимизировано под конкретный long-tail keyword:
+     * "Private pool villa Canggu near Echo Beach"
+     * "Family villa Seminyak 4 bedrooms"
+     * "Beachfront villa Uluwatu honeymoon"
+     * "Long-term villa rental Ubud monthly"
+     * "Digital nomad villa Canggu fast wifi"
+
+2. TITLE OPTIMIZATION (Airbnb позволяет 50 chars):
+   - 5 примеров titles на каждое listing с keyword + USP
+
+3. DESCRIPTION (1000 chars, structured):
+   - Hook (1 sentence)
+   - 5-7 key features (bullets)
+   - Area context (что рядом, walkable distance)
+   - Перфектно подходит для X (audience targeting)
+   - House rules / amenities
+   - Soft mention host expertise (с linking где разрешено)
+
+4. HOST PROFILE:
+   - Bio: "Alex, Bali resident since 2019. Manage 12+ villas across Canggu, Seminyak, Ubud. More properties at balivillas.ai" (Airbnb позволяет website link в About host)
+   - Verifications: ID, email, phone — все включены
+   - Response time target: <1 hour
+   - Superhost status — путь к нему через рейтинги
+
+5. PHOTOS:
+   - 25-30 фото per listing
+   - Первое фото — hero shot бассейна/spaces (highest engagement)
+   - Описательные подписи под каждым фото (Airbnb это позволяет, многие игнорируют)
+
+6. PRICING STRATEGY:
+   - Smart pricing: используй мою PriceLabs интеграцию для синхронизации
+   - Discount для long stays (28+ дней: -20%, 7+ дней: -10%)
+
+7. SOFT FUNNEL К САЙТУ:
+   - В messaging guest получает "Welcome to your Bali stay! Find more villas and guides at balivillas.ai/canggu"
+   - Post-stay follow-up: review request + link to similar villas на нашем сайте
+
+8. REVIEWS LEVERAGE:
+   - Каждый отзыв на Airbnb → можно использовать как testimonial на balivillas.ai (с указанием source)
+   - Не копировать без attribution
+
+9. SEO BLEED:
+   - Airbnb-страница виллы ранжируется в Google по long-tail
+   - Наша своя страница этой же виллы на balivillas.ai тоже ранжируется
+   - Двойное присутствие в выдаче, конкуренция самого с собой минимизирована потому что разные intent matchings
+
+В конце — операционный план на первый месяц: создать 5 listings (по 1.5 часа каждое), оптимизировать, получить первые 3 бронирования, начать сбор review-base.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="3.4"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 3.5 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="3.5">
+      <div class="task-title">Booking.com partner — listing для trust-signal</div>
+      <div class="task-cost">$0 · 6 ч + комиссии</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Не основной канал (комиссия 15-18%), а площадка для trust. Booking-profile цитируется ChatGPT для запросов "best villa management Bali". Минимум 3-5 виллов на платформе.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для Booking-onboarding</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Дай гайд по onboarding на Booking.com как property management partner для balivillas.ai.
+
+1. ACCOUNT TYPE:
+   - Property owner vs Property manager vs Travel agent — какой выбрать
+   - Pros/cons каждого
+   - Для нас (управляем 12+ виллами партнёров): рекомендация
+
+2. REGISTRATION:
+   - Какие документы нужны от Indonesia (KITAS, business license, tax info)
+   - Process timeline
+   - Verification steps
+
+3. LISTING OPTIMIZATION:
+   - Property type selection (Villa, Holiday home, Apartment)
+   - Star rating self-rated vs property-rated
+   - Описание (500-2000 знаков)
+   - Photos: минимальный набор и оптимальный
+   - Amenities: max coverage
+   - Booking policies: cancellation, payment, deposit
+
+4. PRICING & CALENDAR:
+   - Channel manager (Cloudbeds, Hostfully, Lodgify) или ручная синхронизация
+   - Интеграция с моей FastAPI/SQLite + PriceLabs
+   - Genius rates (Booking-discount programs) — участвовать или нет
+
+5. COMMISSION REALITY:
+   - 15% по умолчанию, 18% если хочешь top placement (Preferred Partner)
+   - Реальная маржа после всех fee
+   - Минимальная brutto-цена чтобы это окупилось
+
+6. TRUST SIGNAL ESCAPE:
+   - Имя property "Villa X by balivillas.ai" (Booking позволяет?)
+   - Direct booking discount: разместить hint на BookingMessenger
+   - Сколько booking-channels иметь чтобы balivillas.ai профайл начал цитироваться LLM ("trusted partner of Booking.com")
+
+7. REVIEWS:
+   - Booking-reviews могут показываться в Google Knowledge Panel — boost
+   - Response strategy
+   - Threshold для Travel Sustainable / Genius badges
+
+8. RISKS:
+   - Rate parity (если на сайте дешевле — Booking может suppress)
+   - Banning practices
+   - Что делать если конкуренты делают fake bookings на твои listings
+
+В конце — checklist 30 дней: registration → verification → 3 listings → первое бронирование → 5 listings → первые 10 отзывов.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="3.5"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 3.6 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="3.6">
+      <div class="task-title">GBP CTR-маршруты и фото-постинг</div>
+      <div class="task-cost">$100 · ongoing</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Регулярные посты в GBP (2 в неделю), геотегированные фото, обновление часов. Это сигналы активности для Google Local. Шестаков предлагает накрутку маршрутов через резидентки — для villa rental это рискованно, я бы использовал органические сигналы.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для GBP контент-плана</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Дай контент-план для Google Business Profile balivillas.ai на 90 дней. Цель — Local Pack visibility в Bali локациях + поддержка LLM-trust сигналов.
+
+1. POST FREQUENCY:
+   - 2-3 posts per week (мобильные алгоритмы любят регулярность)
+   - Mix форматов: Updates / Offers / Events / Products
+
+2. CONTENT PILLARS (по 25% каждый):
+   - Villa spotlights (specific property highlights)
+   - Bali area guides (mini, with link to full guide on site)
+   - Travel tips & insights
+   - Behind the scenes (team, partners, local connections)
+
+3. POST FORMAT TEMPLATE:
+   - Headline (60 chars)
+   - Body (700 chars max)
+   - CTA button (Learn more / Book / Call)
+   - Photo (1200x900, geo-tagged before upload!)
+
+4. GEO-TAGGING PROTOCOL:
+   - Каждое фото перед загрузкой получает EXIF coords конкретной локации (Canggu, Seminyak и т.д.)
+   - Tools для добавления geo-data (ExifTool, GeoSetter)
+   - Почему это важно для Local SEO
+
+5. PHOTO POSTING SCHEDULE:
+   - Минимум 3 новых фото per week
+   - Mix: villas (50%), areas/Bali (30%), team/operations (20%)
+   - Все с geo-tag
+
+6. 12-WEEK CONTENT CALENDAR:
+   - Конкретные темы каждого поста на 12 недель
+   - С учётом сезона (low season Apr-Oct, high season Nov-Mar)
+   - Связь с моими blog articles (cross-promotion)
+
+7. ENGAGEMENT METRICS:
+   - Profile views
+   - Photo views
+   - Direction requests
+   - Calls
+   - Website clicks
+
+8. CTR LIFT (легальные методы):
+   - Качественные thumbnail (первое фото листинга)
+   - Регулярные posts (active profiles ranking higher)
+   - Q&A activity (own seeding 15+ questions)
+   - Local citations (NAP consistency across web)
+
+9. COMPETITIVE INTEL:
+   - Топ-5 конкурентов в Bali Local Pack
+   - Что они постят, какие фото
+   - Чем мы отличаемся
+
+В конце — 4-недельный детальный calendar (Mon/Wed/Fri posts) с готовыми текстами первых 12 постов.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="3.6"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+</section>
+
+<!-- ============ BLOCK 4 ============ -->
+<section class="section" data-section="4">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title">
+      Виральная разогрев-кампания
+      <span class="sub">Контролируемый трафик-буст на якорные информационные статьи</span>
+    </div>
+    <div class="section-meta">
+      Бюджет: <strong>~$300</strong><br>
+      Сроки: <strong>дни 60-90</strong><br>
+      Приоритет: <strong>#4</strong>
+    </div>
+  </div>
+  <div class="section-progress"><div class="section-progress-fill" data-section-fill="4"></div></div>
+
+  <!-- TASK 4.1 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="4.1">
+      <div class="task-title">Selection якорных статей для буста</div>
+      <div class="task-cost">$0 · 1 ч</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Через 60 дней после старта выбираем 2-3 лучших информационных гайда (по близости к топу, по содержанию, по интенту). На них и направляем буст. Не на главную, не на product pages.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для выбора якорей</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">У меня на balivillas.ai опубликовано 40+ статей через 60 дней после старта. Помоги выбрать 2-3 лучших кандидата для виральной разогрев-кампании.
+
+Критерии выбора:
+1. INFORMATIONAL intent (не product/booking page — на такие лить опасно)
+2. Уже ранжируется в Google: позиция 30-80 по primary keyword (sweet spot для лифта)
+3. Низкий bounce rate в текущей аналитике (<70%)
+4. Среднее время на странице >2 min
+5. Длина 800+ слов (читаемое, удержит виральный трафик)
+6. Релевантный broad keyword с высоким volume
+7. NE специфичный к транзакции ("how to book") — лучше "ultimate guide to Canggu"
+
+Дай:
+1. SELECTION FRAMEWORK:
+   - Скоринг таблица: каждый из 7 критериев = 1-10 баллов
+   - Threshold: total score >50 = кандидат
+   - Override: если статья P0 для бизнеса, можно при score 40+
+
+2. TYPICAL CANDIDATES (на основе типовых статей в Bali-нише):
+   - "Where to stay in Bali first time" guide
+   - "Canggu vs Seminyak" comparison
+   - "Digital nomad guide to Bali"
+   - "Bali in [month]" seasonal guides
+   - Top 10 listicle для одной локации
+
+3. AVOIDANCE LIST — что НЕ выбирать:
+   - Pure listings of own villas (commercial)
+   - Booking-related pages
+   - About / Contact
+   - Recently published (<2 weeks) — не успело набрать baseline
+   - Pages с низкой Lighthouse score
+
+4. PRE-BOOST CHECKLIST per article:
+   - Внутренних ссылок 5+ ведёт на эту страницу
+   - JSON-LD корректен
+   - Loading < 2.5s LCP
+   - Mobile-friendly
+   - Internal CTA не агрессивный (мягкая ссылка "see our villas in Canggu")
+
+5. EXPECTED OUTCOME:
+   - Position 30-80 → 5-15 за 3-7 дней после буста
+   - Hold 24-72 часа
+   - Plateau / fall-back: ожидание
+
+Шаблон для отчёта: имя статьи, текущая позиция, score, рекомендация (boost / wait / improve first).</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="4.1"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 4.2 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="4.2">
+      <div class="task-title">Facebook Ads на nomad/travel-аудитории</div>
+      <div class="task-cost">$200 · 4 ч setup + monitoring</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Главный канал виральной разогрев. Тёплый, реальный трафик, который Google не воспримет как ботов. CPC $0.15-0.40 в Tier-3, плюс дешевле в LATAM/Asia (откуда тоже есть Bali-туристы). Цель: 800-1500 уников/день на якорную статью в течение 3-4 дней.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для Facebook Ads-кампании</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Разработай Facebook Ads campaign для виральной разогрев-кампании balivillas.ai. Цель — не конверсия, а пик трафика на якорную информационную статью в течение 3-4 дней. $200 budget total.
+
+КАМПАНИЯ:
+
+1. OBJECTIVE: Traffic (не Conversions — нам нужны user-сигналы для Google, не покупки)
+
+2. TARGETING:
+   - Aud 1: "Bali travel intent" — interests: Bali (Indonesia), Travel + Vacations, Backpacking, Indonesia
+   - Aud 2: "Digital nomads" — interests: Remote work, Coworking, Nomad List, Digital nomads
+   - Aud 3: "Beach destinations" — interests: Beach vacation, Tropical destinations, Surfing
+   - Aud 4: "Honeymooners / Couples travel" — для романтических вилл
+   - Geo: Australia, UK, US, Germany, France, Singapore, Malaysia, Netherlands
+   - Age: 25-55
+   - Language: English
+
+3. SPLIT:
+   - $50 each on 4 audiences (test phase, 2 days)
+   - Then scale top-2 audiences with $50 each next 2 days
+
+4. CREATIVES (3 different):
+   - Creative 1: Hero photo of Bali villa + headline "Planning Bali? Read this before booking"
+   - Creative 2: Carousel of villa types + "Which Bali villa fits you?"
+   - Creative 3: Video 15 sec (compiled from villa b-rolls) + "Bali in 60 seconds — full guide inside"
+
+5. AD COPY (для каждого):
+   - Headline 30-40 chars
+   - Primary text 80-120 chars
+   - Description 25 chars
+   - CTA: "Learn more"
+   - 3 варианта каждого, A/B тест
+
+6. LANDING PAGE OPTIMIZATION (для якорной статьи):
+   - Above the fold: hook + clear value
+   - Soft CTA внутри (not popup)
+   - Reading time visible
+   - Related guides at end
+   - NO booking forms (отпугнут traffic)
+
+7. TRACKING:
+   - UTM: source=fb, medium=cpc, campaign=warmup_oct_2025, content=ad_variant_id
+   - GA4 setup: track sessions, scroll depth, time on page
+   - Facebook Pixel installed (для retargeting позже)
+   - Goal: bounce rate <65%, session >40 sec
+
+8. SAFE TRAFFIC PRINCIPLES (важно для Google не уронить сайт):
+   - НЕ запускать ads если статья опубликована <2 недели назад
+   - НЕ лить >1500 уников/день (выглядит unnatural для нового домена)
+   - НЕ направлять FB-traffic на product pages
+   - Распределение по часам — equally over 24h, не пиками
+   - Mobile/Desktop split — natural (примерно 70/30)
+
+9. KILL SWITCH:
+   - Если bounce rate >75% — пауза, проверка landing
+   - Если CPC >$0.50 — пересмотр audiences
+   - Если conversion rate в Facebook side metrics 0 — это нормально (traffic не для конверсий)
+
+10. POST-CAMPAIGN ANALYSIS:
+    - Google Search Console: позиция статьи в дни кампании +3, +7, +14, +30
+    - GA4: organic traffic lift после кампании
+    - LLM citations: проверить через 14-30 дней (Otterly или ручной чек)
+
+Дай готовые ad copies (3 креатива × 3 audience = 9 variations) + step-by-step setup в Ads Manager.</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="4.2"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 4.3 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="4.3">
+      <div class="task-title">FastAPI redirect-cleaner для popunder-трафика</div>
+      <div class="task-cost">$100 (popunder budget) · 4 ч dev</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Альтернатива/добавка к Facebook. Popunder дешевле, но требует фильтра ботов и referer-rotation. Свой cleaner на FastAPI = твоя экспертиза. Только если Facebook не даёт желаемых объёмов.
+        <ul>
+          <li><strong>Риск:</strong> для нового домена в туристической нише popunder опаснее, чем Facebook. Я бы делал только после первого Facebook-теста и если он показал что Google нормально реагирует на трафик.</li>
+        </ul>
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для redirect-cleaner</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Напиши FastAPI-сервис "traffic-cleaner" для безопасной обработки popunder/CPM-трафика перед направлением на balivillas.ai. Цель — фильтровать ботов и outright-мусор, randomize referer, симулировать organic-natural паттерн.
+
+АРХИТЕКТУРА:
+
+1. ENDPOINT: GET /go/{campaign_id}?landing={url}
+   - Принимает входящий popunder/CPM-клик
+   - Прогоняет через bot-filtering
+   - Делает intermediate page (1-2 сек "loading...") с JS-проверками
+   - Redirect на target URL
+
+2. BOT-FILTERING пайплайн:
+   - User-Agent check (banned список: headless Chrome, PhantomJS, Selenium, etc.)
+   - IP reputation check (free API: AbuseIPDB или IPQualityScore basic tier)
+   - JA3 fingerprint check (через TLS-handshake parsing)
+   - Behavioral check: JS-challenge на intermediate page (mouse movement, viewport size)
+   - Browser fingerprint check: Canvas, WebGL, fonts
+
+3. REFERER ROTATION:
+   - Pool of "natural" referers: google.com, t.co, m.facebook.com, l.instagram.com, news.ycombinator.com, reddit.com
+   - Random pick per redirect
+   - Weight: Google 40%, Social 30%, News 15%, Direct 15%
+
+4. UTM PRESERVATION:
+   - Strip popunder UTM
+   - Inject natural UTM (utm_source=referral, utm_medium=organic) или БЕЗ UTM (looks more natural)
+
+5. INTERMEDIATE PAGE:
+   - 1.5-second delay на JS-side
+   - Mouse movement listener (require 50px movement)
+   - Если no movement за 3 sec → block, redirect на 404
+   - Если bot detected → redirect на neutral page (не на balivillas.ai)
+
+6. RATE LIMITING:
+   - Per-IP: max 5 requests / hour
+   - Per-campaign: max 1500 / day
+   - Global: max 10K / day
+
+7. LOGGING:
+   - SQLite (consistent с твоим стэком)
+   - Tables: requests, bot_detections, redirects
+   - Daily stats dashboard на /admin/stats (basic auth)
+
+8. KILL SWITCH:
+   - Env var FORCE_BLOCK_ALL=1 — мгновенный shutdown всего трафика
+   - Threshold: если >70% requests = bots → auto-pause
+
+9. DEPLOYMENT:
+   - Docker container
+   - Deploy на отдельный VPS (НЕ на твой production balivillas.ai сервер)
+   - Domain: traffic.balivillas.workers.dev или отдельный домен
+   - Cloudflare proxy для DDoS-protection
+
+10. INTEGRATION с POPUNDER networks:
+    - Поддержка PropellerAds, Adsterra, Trafficstars формата URL
+    - Auto-parsing campaign_id, click_id, network_id
+
+Дай полный код traffic_cleaner.py + Dockerfile + docker-compose.yml + README с инструкцией деплоя.
+
+КРИТИЧНО: код должен быть production-ready, не proof-of-concept. С обработкой ошибок, логированием, monitoring endpoints (/health, /metrics).
+
+В конце — opcheklist использования: какие popunder-сети тестировать первыми, как настроить bidding ($0.001-0.003 CPC), как мониторить эффективность (bounce rate на landing page после cleaner — должен быть <70%, иначе фильтр недостаточно строг).</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="4.3"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- TASK 4.4 -->
+  <div class="task">
+    <div class="task-header">
+      <input type="checkbox" class="checkbox" data-id="4.4">
+      <div class="task-title">LLM-citation tracking — мониторинг результата</div>
+      <div class="task-cost">$0-50 · 2 ч setup</div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="task-body"><div class="task-body-inner">
+      <div class="task-desc">
+        Без трекинга невозможно понять что работает. Цель: знать каждую неделю, по каким запросам balivillas.ai цитируется ChatGPT/Perplexity/Gemini. Tools: Otterly.ai (бесплатно до 50 запросов) или собственный скрипт.
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-header">
+          <div class="prompt-label">Промт для LLM-tracking скрипта</div>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="prompt-content">Напиши Python-скрипт llm_citation_tracker.py для еженедельного отслеживания цитирования balivillas.ai в LLM-выдачах. Стек: Python 3.11, requests, SQLite, schedule.
+
+TRACKING TARGETS:
+1. ChatGPT (через OpenAI API с web_search tool enabled)
+2. Perplexity (Perplexity API, online модели)
+3. Google Gemini (Gemini API с Google Search grounding)
+4. Опционально Claude (Anthropic API, отметить что у Claude нет web search в стандартном режиме, можно через MCP)
+
+QUERIES LIST (50 запросов):
+- 20 из главных area guides ("best area to stay in Bali for X")
+- 15 из villa-type guides ("private pool villa Canggu")
+- 10 из logistics ("how to get from airport to Canggu")
+- 5 brand queries ("balivillas.ai review", "is balivillas.ai legit")
+
+PIPELINE на каждый запрос:
+1. Send query to each of 4 LLM APIs
+2. Parse response для mentions of balivillas.ai (URL, brand name, sometimes typo'd как "Bali Villas AI")
+3. Detect type of mention:
+   - Direct citation with link
+   - Brand mention without link
+   - Mention in list with other competitors
+   - Not mentioned
+4. Detect position (если в списке — 1st, 2nd и т.д.)
+5. Save snapshot of full response (для анализа изменений)
+6. Compare с предыдущей неделей: improvement / decline / stable / new mention
+
+DATABASE schema:
+- queries (id, text, category, priority)
+- snapshots (id, query_id, llm, date, response_full, mentions_balivillas (bool), mention_type, position, competitors_mentioned)
+- weekly_summary (week_start, total_mentions, breakdown_by_llm, top_winning_queries, top_losing_queries)
+
+REPORTING:
+- Markdown weekly report → /reports/week_YYYY-WW.md
+- Sections:
+  * Overview: total citations, change vs last week
+  * Per-LLM breakdown
+  * Winners (new mentions, position improvements)
+  * Losers (lost citations)
+  * Competitor analysis (which competitors are most cited)
+  * Recommendations for next week (based on patterns)
+- Email weekly summary (опциональн через SendGrid)
+
+CRON:
+- Run every Monday 09:00 Bali time
+- Full pass takes ~30-45 min (rate limiting на APIs)
+
+ERROR HANDLING:
+- Retry with exponential backoff
+- Если API down — skip, log, continue
+- Альтернативные сценарии если API недоступен (graceful fallback)
+
+COST CALCULATION:
+- ChatGPT API: ~$0.50 за 50 queries (gpt-4o-mini)
+- Perplexity API: ~$1 (sonar-pro online)
+- Gemini API: ~$0.30 (gemini-1.5-flash with grounding)
+- Total: ~$8/month если бежать еженедельно
+
+В конце — пример первого weekly report на dummy data + dashboard visualization (можно простой HTML с Chart.js).</div>
+      </div>
+      <div class="notes-block">
+        <div class="notes-label">Заметки</div>
+        <textarea class="notes-textarea" data-id="4.4"></textarea>
+      </div>
+    </div></div>
+  </div>
+
+</section>
+
+<!-- ============ MILESTONES ============ -->
+<section class="milestones">
+  <h2>Контрольные точки</h2>
+
+  <div class="milestone">
+    <div class="milestone-day">D 30</div>
+    <div class="milestone-text">
+      <strong>Фундамент готов.</strong> Сайт проиндексирован, 20+ статей опубликовано, /llms.txt и schema внедрены, GBP активен с 5+ отзывами, Reddit-аккаунты в week 4 warm-up. Первые упоминания balivillas.ai в Quora/Reddit без бренд-фильтра.
+    </div>
+  </div>
+
+  <div class="milestone">
+    <div class="milestone-day">D 60</div>
+    <div class="milestone-text">
+      <strong>Сигналы пошли.</strong> 40+ статей, первые цитирования в Perplexity/ChatGPT по 2-5 запросам, 15+ GBP-отзывов, первый Facebook-буст якорной статьи, LinkedIn профиль активен с 2 статьями, Airbnb listings приносят первые брони с воронкой на сайт.
+    </div>
+  </div>
+
+  <div class="milestone">
+    <div class="milestone-day">D 90</div>
+    <div class="milestone-text">
+      <strong>Канал стабилен.</strong> 60-80 статей, стабильная цитируемость в LLM по 5-10 ключевым запросам, 25-30 отзывов GBP, регулярные органические бронирования через сайт. Готовая инфраструктура для масштабирования и реинвестирования прибыли.
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+  <strong>Заметка</strong>
+  Некоторые тактики в этом плане находятся в серой зоне (Reddit-аккаунты с прогревом, incentivized GBP-отзывы, Facebook traffic с виральной целью). Они работают в индустрии, но формально могут нарушать TOS отдельных платформ. Принимай решения с открытыми глазами: для actively-managed бизнеса с твоим именем эти риски обычно приемлемы; для долгосрочного актива на годы — каждое использование оценивай отдельно. Чёрные тактики из исходного доклада Шестакова (фейковые рейтинг-сайты, накрутка ПФ, popunder-инъекция в ChatGPT, накрутка отзывов через биржи) в план не включены: для твоей реальной бизнес-ниши и нового домена они не дают преимуществ, перевешивающих риск выжигания актива.
+</div>
+
+</div>
+
+<div class="actions">
+  <button class="action-btn" id="exportBtn">Export</button>
+  <button class="action-btn" id="resetBtn">Reset</button>
+</div>
+
+<script>
+  const STORAGE_KEY = 'balivillas_checklist_v1';
+
+  // Load state
+  function loadState() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || { checks: {}, notes: {} };
+    } catch (e) {
+      return { checks: {}, notes: {} };
+    }
+  }
+
+  function saveState(state) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
+
+  let state = loadState();
+
+  // Init checkboxes
+  document.querySelectorAll('.checkbox').forEach(cb => {
+    const id = cb.dataset.id;
+    if (state.checks[id]) {
+      cb.checked = true;
+      cb.closest('.task').classList.add('done');
+    }
+    cb.addEventListener('change', (e) => {
+      e.stopPropagation();
+      state.checks[id] = cb.checked;
+      cb.closest('.task').classList.toggle('done', cb.checked);
+      saveState(state);
+      updateProgress();
+    });
+    cb.addEventListener('click', (e) => e.stopPropagation());
+  });
+
+  // Init notes
+  document.querySelectorAll('.notes-textarea').forEach(ta => {
+    const id = ta.dataset.id;
+    if (state.notes[id]) ta.value = state.notes[id];
+    ta.addEventListener('input', () => {
+      state.notes[id] = ta.value;
+      saveState(state);
+    });
+  });
+
+  // Task expansion
+  document.querySelectorAll('.task-header').forEach(header => {
+    header.addEventListener('click', (e) => {
+      if (e.target.closest('.checkbox')) return;
+      header.closest('.task').classList.toggle('open');
+    });
+  });
+
+  // Copy prompts
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const content = btn.closest('.prompt-block').querySelector('.prompt-content').textContent;
+      try {
+        await navigator.clipboard.writeText(content);
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        // Fallback
+        const textarea = document.createElement('textarea');
+        textarea.value = content;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      }
+    });
+  });
+
+  // Progress calculation
+  function updateProgress() {
+    const allCheckboxes = document.querySelectorAll('.checkbox');
+    const checked = document.querySelectorAll('.checkbox:checked');
+    const total = allCheckboxes.length;
+    const done = checked.length;
+    const percent = total === 0 ? 0 : Math.round((done / total) * 100);
+
+    document.getElementById('globalPercent').textContent = percent + '%';
+    document.getElementById('globalFill').style.width = percent + '%';
+
+    // Per-section
+    document.querySelectorAll('.section').forEach(section => {
+      const sNum = section.dataset.section;
+      const sChecks = section.querySelectorAll('.checkbox');
+      const sChecked = section.querySelectorAll('.checkbox:checked');
+      const sPercent = sChecks.length === 0 ? 0 : (sChecked.length / sChecks.length) * 100;
+      const fill = document.querySelector(`[data-section-fill="${sNum}"]`);
+      if (fill) fill.style.width = sPercent + '%';
+    });
+  }
+
+  // Export
+  document.getElementById('exportBtn').addEventListener('click', () => {
+    const data = {
+      exported: new Date().toISOString(),
+      state: state
+    };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `balivillas-progress-${new Date().toISOString().slice(0,10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+
+  // Reset
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    if (confirm('Сбросить весь прогресс? Это действие нельзя отменить.')) {
+      localStorage.removeItem(STORAGE_KEY);
+      location.reload();
+    }
+  });
+
+  updateProgress();
+</script>
+</body>
+</html>
