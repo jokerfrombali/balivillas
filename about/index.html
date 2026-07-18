@@ -24,7 +24,7 @@ tailwind.config = {
 }
 </script>
 <style>
-body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -webkit-font-smoothing: antialiased; overflow-x: clip; }
 .font-display { font-family: 'Fraunces', Georgia, serif; }
 html { scroll-behavior: smooth; }
 .kicker { text-transform: uppercase; letter-spacing: 0.22em; font-size: 11px; font-weight: 600; color: #6b6b66; }
@@ -63,10 +63,44 @@ html { scroll-behavior: smooth; }
         <a href="/about/" class="nav-link active">About</a>
         <a href="/villa/" class="nav-link">Journal</a>
       </div>
-      <a href="#contact" class="btn-primary hidden sm:inline-block !py-2.5 !px-5">Contact us</a>
+      <div class="flex items-center gap-2">
+        <a href="#contact" class="btn-primary hidden sm:inline-block !py-2.5 !px-5">Contact us</a>
+        <button id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full hover:bg-paper transition">
+          <svg id="burgerIcon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+          <svg id="closeIcon" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu panel -->
+  <div id="mobileMenu" class="hidden lg:hidden bg-off border-t border-line px-6 py-6">
+    <div class="flex flex-col gap-1 text-[16px] font-medium">
+      <a href="/property-rental/" class="py-3 border-b border-line">Villas</a>
+      <a href="/#locations" class="py-3 border-b border-line">Destinations</a>
+      <a href="/#longterm" class="py-3 border-b border-line">Monthly &amp; Yearly</a>
+      <a href="/#management" class="py-3 border-b border-line">Villa Management</a>
+      <a href="/about/" class="py-3 border-b border-line font-semibold">About</a>
+      <a href="/villa/" class="py-3 border-b border-line">Journal</a>
+      <a href="#contact" class="btn-primary text-center mt-5">Contact us</a>
     </div>
   </div>
 </nav>
+<script>
+(function(){
+  var btn=document.getElementById('mobileMenuBtn'),menu=document.getElementById('mobileMenu'),
+      b=document.getElementById('burgerIcon'),x=document.getElementById('closeIcon');
+  if(!btn||!menu)return;
+  function toggle(force){
+    var open=typeof force==='boolean'?force:menu.classList.contains('hidden');
+    menu.classList.toggle('hidden',!open);
+    b.classList.toggle('hidden',open);
+    x.classList.toggle('hidden',!open);
+    btn.setAttribute('aria-expanded',open);
+  }
+  btn.addEventListener('click',function(){toggle()});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){toggle(false)})});
+})();
+</script>
 
 <!-- =============== HERO =============== -->
 <header class="bg-ink text-white pt-[72px]">
@@ -199,7 +233,7 @@ html { scroll-behavior: smooth; }
       </a>
       <a href="/#management" class="group bg-white border border-line rounded-[28px] p-8 card-hover reveal" style="transition-delay:.05s">
         <div class="w-12 h-12 rounded-full bg-ink text-white flex items-center justify-center mb-6"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.3 7.2 16.9l.9-5.4L4.2 7.7l5.4-.8z"/></svg></div>
-        <h3 class="font-semibold text-lg mb-2">Villa management</h3>
+        <h3 class="font-semibold text-lg mb-2">Villa management <span class="block text-[11px] font-semibold tracking-[0.14em] uppercase text-ink/40 mt-1">by The Host</span></h3>
         <p class="text-ink/55 text-[14px] mb-4">Listings on Airbnb &amp; Booking.com, guest communication, housekeeping, garden and pool care, repairs, tax compliance. No hidden markups, no vague monthly summaries — owning a villa should be an asset, not a second job.</p>
         <span class="text-[13.5px] font-semibold underline underline-offset-4 group-hover:no-underline">Learn more →</span>
       </a>
@@ -400,7 +434,7 @@ html { scroll-behavior: smooth; }
           <span class="font-display font-semibold text-[19px]">Bali Villas</span>
         </div>
         <p class="text-white/60 text-sm leading-relaxed max-w-xs mb-6">
-          AI-powered villa rentals in Bali. Daily, monthly and yearly stays with full-service management.
+          AI-powered villa rentals in Bali. Daily, monthly and yearly stays with full-service management by The Host.
         </p>
       </div>
       <div>

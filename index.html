@@ -52,7 +52,7 @@ tailwind.config = {
 }
 </script>
 <style>
-body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -webkit-font-smoothing: antialiased; overflow-x: clip; }
 .font-display { font-family: 'Fraunces', Georgia, serif; }
 html { scroll-behavior: smooth; }
 .kicker { text-transform: uppercase; letter-spacing: 0.22em; font-size: 11px; font-weight: 600; color: #6b6b66; }
@@ -185,10 +185,43 @@ html { scroll-behavior: smooth; }
           Contact Concierge
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
         </a>
+        <!-- Mobile burger -->
+        <button id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full hover:bg-paper transition">
+          <svg id="burgerIcon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+          <svg id="closeIcon" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
       </div>
     </div>
   </div>
+  <!-- Mobile menu panel -->
+  <div id="mobileMenu" class="hidden lg:hidden bg-off border-t border-line px-6 py-6">
+    <div class="flex flex-col gap-1 text-[16px] font-medium">
+      <a href="/property-rental/" class="py-3 border-b border-line">Villas</a>
+      <a href="#locations" class="py-3 border-b border-line mobile-menu-link">Destinations</a>
+      <a href="#longterm" class="py-3 border-b border-line mobile-menu-link">Monthly &amp; Yearly</a>
+      <a href="#management" class="py-3 border-b border-line mobile-menu-link">Villa Management</a>
+      <a href="/about/" class="py-3 border-b border-line">About</a>
+      <a href="/villa/" class="py-3 border-b border-line">Journal</a>
+      <a href="https://wa.me/6281239081021" class="btn-primary text-center mt-5">Contact Concierge</a>
+    </div>
+  </div>
 </nav>
+<script>
+(function(){
+  var btn=document.getElementById('mobileMenuBtn'),menu=document.getElementById('mobileMenu'),
+      b=document.getElementById('burgerIcon'),x=document.getElementById('closeIcon');
+  if(!btn||!menu)return;
+  function toggle(force){
+    var open=typeof force==='boolean'?force:menu.classList.contains('hidden');
+    menu.classList.toggle('hidden',!open);
+    b.classList.toggle('hidden',open);
+    x.classList.toggle('hidden',!open);
+    btn.setAttribute('aria-expanded',open);
+  }
+  btn.addEventListener('click',function(){toggle()});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){toggle(false)})});
+})();
+</script>
 
 <!-- Villas mega-menu panel (outside nav to avoid stacking context issues) -->
 <div id="villasPanel">
@@ -864,7 +897,7 @@ html { scroll-behavior: smooth; }
           <span class="font-display font-semibold text-[19px]">Bali Villas</span>
         </div>
         <p class="text-white/60 text-sm leading-relaxed max-w-xs mb-6">
-          AI-powered villa rentals in Bali. Daily, monthly and yearly stays with full-service management.
+          AI-powered villa rentals in Bali. Daily, monthly and yearly stays with full-service management by The Host.
         </p>
         <div class="flex gap-2">
           <a href="#" aria-label="Instagram" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-ink transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4 1 .5.4.7.8 1 1.4.2.5.3 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-1 1.4-.4.5-.8.7-1.4 1-.5.2-1 .3-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-1-.5-.4-.7-.8-1-1.4-.2-.5-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-1.8.4-2.2.2-.6.5-1 1-1.4.4-.5.8-.7 1.4-1 .5-.2 1-.3 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1c-1.3.1-2.2.3-3 .6-.8.3-1.5.7-2.2 1.4C1.2 2.8.8 3.5.5 4.3c-.3.8-.5 1.7-.6 3C-.2 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.7.6-3 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.2C21.2 1.2 20.5.8 19.7.5c-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0zm0 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm7.8-10.4c0 .8-.6 1.4-1.4 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4z"/></svg></a>
