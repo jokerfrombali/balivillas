@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us — BaliVillas.ai | Bali Locals + AI</title>
-<meta name="description" content="Meet the team behind BaliVillas.ai — Bali locals and technologists who verified 500+ villas by hand. Our story, our values, our office in Canggu.">
+<meta name="description" content="We're on a mission to make renting, owning and managing a villa in Bali honest and effortless. Meet the team, see how we work, visit us in Canggu.">
 <link rel="canonical" href="https://balivillas.ai/about/">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/favicon.png">
@@ -30,6 +30,8 @@ html { scroll-behavior: smooth; }
 .kicker { text-transform: uppercase; letter-spacing: 0.22em; font-size: 11px; font-weight: 600; color: #6b6b66; }
 .btn-primary { background: #0a0a0a; color: #fff; border-radius: 999px; padding: 14px 24px; font-weight: 600; font-size: 14px; transition: transform 0.15s, background 0.2s; }
 .btn-primary:hover { background: #1c1c1c; transform: translateY(-1px); }
+.btn-white { background: #fff; color: #0a0a0a; border-radius: 999px; padding: 14px 24px; font-weight: 600; font-size: 14px; transition: transform 0.15s; }
+.btn-white:hover { transform: translateY(-1px); }
 .btn-outline { border: 1px solid #0a0a0a; color: #0a0a0a; background: transparent; border-radius: 999px; padding: 13px 23px; font-weight: 600; font-size: 14px; transition: all 0.2s; }
 .btn-outline:hover { background: #0a0a0a; color: #fff; }
 .nav-link { position: relative; color: #0a0a0a; font-weight: 500; font-size: 14px; }
@@ -38,6 +40,10 @@ html { scroll-behavior: smooth; }
 .nav-link.active::after { transform: scaleX(1); }
 .card-hover { transition: transform 0.4s cubic-bezier(0.2, 0.6, 0.2, 1); }
 .card-hover:hover { transform: translateY(-4px); }
+.img-zoom img { transition: transform 0.6s cubic-bezier(0.2, 0.6, 0.2, 1); }
+.img-zoom:hover img { transform: scale(1.05); }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
@@ -63,74 +69,149 @@ html { scroll-behavior: smooth; }
 </nav>
 
 <!-- =============== HERO =============== -->
-<header class="bg-ink text-white pt-[72px]">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 py-24 lg:py-32">
-    <p class="kicker !text-white/60 mb-5">About BaliVillas.ai</p>
-    <h1 class="font-display text-[52px] lg:text-[92px] leading-[0.95] tracking-tightest max-w-4xl mb-8">Born in Bali.<br><span class="italic">Powered by people.</span></h1>
-    <p class="text-white/70 text-[17px] max-w-xl">We're a team of Bali locals and technologists who got tired of watching travelers get lost in outdated listings — so we built something better.</p>
+<header class="bg-ink text-white pt-[72px] relative overflow-hidden">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 py-24 lg:py-32 relative z-10 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-14 items-center">
+    <div>
+      <p class="kicker !text-white/60 mb-5">About BaliVillas.ai</p>
+      <h1 class="font-display text-[48px] lg:text-[84px] leading-[0.95] tracking-tightest mb-8">We're on a mission to make Bali stays <span class="italic">honest.</span></h1>
+      <p class="text-white/70 text-[17px] max-w-xl mb-10">Verified villas instead of pretty lies. Real people instead of ticket queues. Transparent numbers instead of vague reports. Built in Bali, by people who live here.</p>
+      <div class="flex gap-3 flex-wrap">
+        <a href="#story" class="btn-white">Get to know us</a>
+        <a href="#contact" class="border border-white/40 text-white rounded-full px-6 py-3.5 font-semibold text-sm hover:bg-white hover:text-ink transition">Visit our office</a>
+      </div>
+    </div>
+    <div class="hidden lg:grid grid-cols-2 gap-4">
+      <div class="img-zoom rounded-[24px] overflow-hidden h-[220px] mt-10"><img src="https://images.unsplash.com/photo-1774109556498-652c0458d4af?q=80&w=600&auto=format&fit=crop" alt="Pool cleaning at a managed villa" class="w-full h-full object-cover"></div>
+      <div class="img-zoom rounded-[24px] overflow-hidden h-[220px]"><img src="https://images.unsplash.com/photo-1774600134168-b9ebd714e4e1?q=80&w=600&auto=format&fit=crop" alt="Back office team at work" class="w-full h-full object-cover"></div>
+      <div class="img-zoom rounded-[24px] overflow-hidden h-[220px] mt-10"><img src="https://images.unsplash.com/photo-1772463099737-a482008045f7?q=80&w=600&auto=format&fit=crop" alt="Welcome drink for a guest" class="w-full h-full object-cover"></div>
+      <div class="img-zoom rounded-[24px] overflow-hidden h-[220px]"><img src="https://images.unsplash.com/photo-1691229219606-f9aa47d9cdef?q=80&w=600&auto=format&fit=crop" alt="Our team in Bali" class="w-full h-full object-cover"></div>
+    </div>
   </div>
 </header>
 
-<!-- =============== STORY =============== -->
-<section class="bg-off py-24 border-t border-line">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-    <div>
-      <p class="kicker mb-3">Our story</p>
-      <h2 class="font-display text-[40px] lg:text-[54px] leading-[1] tracking-tightest mb-8">It started with<br><span class="italic">one bad booking.</span></h2>
-      <div class="space-y-5 text-ink/60 text-[15px]">
-        <p>A villa that looked stunning online. Photos five years old, pool half-drained, Wi-Fi that died at sunset. Every traveler in Bali has this story — and so did we. The difference is, we live here, and we decided to fix it.</p>
-        <p>We spent a year on scooters, visiting villas one by one across Canggu, Uluwatu, Ubud, Seminyak and Sanur. We photographed them as they really are, tested the Wi-Fi, met the staff, checked the paperwork. Only then did a villa earn its place on our platform.</p>
-        <p>Then we added the technology: an AI search that understands plain human language. Tell it "quiet 2-bedroom near Berawa beach, fast Wi-Fi, under $1,500 a month" — and it finds your match in seconds, from villas we've personally verified.</p>
-        <p>Today BaliVillas.ai is both a platform and a hospitality team: AI on the surface, real people on the ground — housekeeping, maintenance, guest support, and transparent management for villa owners.</p>
+<!-- =============== QUICK FACTS =============== -->
+<section class="bg-off py-16 border-b border-line">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <p class="kicker mb-8">Quick facts about BaliVillas</p>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="reveal"><p class="font-display text-[52px] lg:text-[64px] leading-none tracking-tightest mb-2">500+</p><p class="text-ink/50 text-[14px]">villas handpicked and verified in person</p></div>
+      <div class="reveal" style="transition-delay:.1s"><p class="font-display text-[52px] lg:text-[64px] leading-none tracking-tightest mb-2">10,000+</p><p class="text-ink/50 text-[14px]">guests hosted across Bali</p></div>
+      <div class="reveal" style="transition-delay:.2s"><p class="font-display text-[52px] lg:text-[64px] leading-none tracking-tightest mb-2">4.9/5</p><p class="text-ink/50 text-[14px]">average guest rating on major platforms</p></div>
+      <div class="reveal" style="transition-delay:.3s"><p class="font-display text-[52px] lg:text-[64px] leading-none tracking-tightest mb-2">&lt;5 min</p><p class="text-ink/50 text-[14px]">average reply time, day and night</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== PROBLEMS WE SOLVE =============== -->
+<section class="bg-off py-24">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="mb-14 reveal">
+      <p class="kicker mb-3">Why we exist</p>
+      <h2 class="font-display text-[40px] lg:text-[60px] leading-[1] tracking-tightest max-w-3xl">Bali's rental market has a trust problem.<br><span class="italic">We're fixing it.</span></h2>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="bg-paper rounded-[28px] p-9 lg:p-12 reveal">
+        <p class="kicker !text-ink/40 mb-6">The old way</p>
+        <ul class="space-y-5">
+          <li class="flex gap-4"><span class="flex-none w-7 h-7 rounded-full border border-ink/20 text-ink/40 flex items-center justify-center text-sm">✕</span><div><p class="font-semibold mb-0.5">Photos that lie</p><p class="text-ink/55 text-[14.5px]">Five-year-old listings, rendered pools, "fast Wi-Fi" that dies at sunset.</p></div></li>
+          <li class="flex gap-4"><span class="flex-none w-7 h-7 rounded-full border border-ink/20 text-ink/40 flex items-center justify-center text-sm">✕</span><div><p class="font-semibold mb-0.5">Support that vanishes</p><p class="text-ink/55 text-[14.5px]">Everyone answers before you pay. Then the chat goes quiet.</p></div></li>
+          <li class="flex gap-4"><span class="flex-none w-7 h-7 rounded-full border border-ink/20 text-ink/40 flex items-center justify-center text-sm">✕</span><div><p class="font-semibold mb-0.5">Owners left in the dark</p><p class="text-ink/55 text-[14.5px]">Vague monthly summaries, hidden markups, promises nobody can keep.</p></div></li>
+          <li class="flex gap-4"><span class="flex-none w-7 h-7 rounded-full border border-ink/20 text-ink/40 flex items-center justify-center text-sm">✕</span><div><p class="font-semibold mb-0.5">Hours of scrolling</p><p class="text-ink/55 text-[14.5px]">Hundreds of identical listings, zero way to know which one is real.</p></div></li>
+        </ul>
+      </div>
+      <div class="bg-ink text-white rounded-[28px] p-9 lg:p-12 reveal" style="transition-delay:.15s">
+        <p class="kicker !text-white/50 mb-6">The BaliVillas way</p>
+        <ul class="space-y-5">
+          <li class="flex gap-4"><span class="flex-none w-7 h-7 rounded-full bg-white text-ink flex items-center justify-center text-sm">✓</span><div><p class="font-semibold mb-0.5">Verified in person</p><p class="text-white/60 text-[14.5px]">Our team visits every villa: we test the Wi-Fi, meet the staff, shoot real photos.</p></div></li>
+          <li class="flex gap-4"><span class="flex-none w-7 h-7 rounded-full bg-white text-ink flex items-center justify-center text-sm">✓</span><div><p class="font-semibold mb-0.5">Humans on the ground, 24/7</p><p class="text-white/60 text-[14.5px]">A real local team that answers in minutes — before, during and after your stay.</p></div></li>
+          <li class="flex gap-4"><span class="flex-none w-7 h-7 rounded-full bg-white text-ink flex items-center justify-center text-sm">✓</span><div><p class="font-semibold mb-0.5">Every rupiah reported</p><p class="text-white/60 text-[14.5px]">Owners see every booking, every expense, every payout. Itemized. On time.</p></div></li>
+          <li class="flex gap-4"><span class="flex-none w-7 h-7 rounded-full bg-white text-ink flex items-center justify-center text-sm">✓</span><div><p class="font-semibold mb-0.5">AI that finds your match in seconds</p><p class="text-white/60 text-[14.5px]">Describe your stay in plain words — get verified villas that actually fit.</p></div></li>
+        </ul>
       </div>
     </div>
-    <div class="grid grid-cols-2 gap-5">
-      <div class="rounded-[28px] overflow-hidden h-[260px]"><img src="/images/ubud.jpg" alt="Ubud jungle" class="w-full h-full object-cover"></div>
-      <div class="rounded-[28px] overflow-hidden h-[260px] mt-10"><img src="/images/all-bali.jpg" alt="Map of Bali" class="w-full h-full object-cover"></div>
-      <div class="bg-ink text-white rounded-[28px] p-8 col-span-2">
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-          <div><p class="font-display text-[34px] leading-none mb-1">500+</p><p class="text-white/50 text-[12px]">handpicked villas</p></div>
-          <div><p class="font-display text-[34px] leading-none mb-1">10,000+</p><p class="text-white/50 text-[12px]">happy travelers</p></div>
-          <div><p class="font-display text-[34px] leading-none mb-1">4.9/5</p><p class="text-white/50 text-[12px]">average rating</p></div>
-          <div><p class="font-display text-[34px] leading-none mb-1">24/7</p><p class="text-white/50 text-[12px]">on-the-ground support</p></div>
+  </div>
+</section>
+
+<!-- =============== OUR JOURNEY =============== -->
+<section id="story" class="bg-paper py-24 border-t border-line">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="mb-16 reveal">
+      <p class="kicker mb-3">Our journey</p>
+      <h2 class="font-display text-[40px] lg:text-[60px] leading-[1] tracking-tightest">It started with<br><span class="italic">one bad booking.</span></h2>
+    </div>
+
+    <div class="space-y-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
+        <div class="img-zoom rounded-[28px] overflow-hidden h-[340px]"><img src="https://images.unsplash.com/photo-1600707605368-0eda2534e923?q=80&w=1000&auto=format&fit=crop" alt="Checking a villa pool in person" class="w-full h-full object-cover" loading="lazy"></div>
+        <div>
+          <span class="font-display text-[64px] text-ink/10 leading-none">01</span>
+          <h3 class="font-display text-[30px] tracking-tightest mt-2 mb-4">A year on scooters</h3>
+          <p class="text-ink/60 text-[15px] max-w-lg">A villa that looked stunning online turned out to be a half-drained pool with dying Wi-Fi. Every traveler has this story — we decided to end it. We spent a year visiting villas one by one across Canggu, Uluwatu, Ubud, Seminyak and Sanur: testing, photographing, meeting the staff, checking the paperwork. Only then did a villa earn its place on our platform.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
+        <div class="lg:order-2 img-zoom rounded-[28px] overflow-hidden h-[340px]"><img src="https://images.unsplash.com/photo-1531539134685-27d854339120?q=80&w=1000&auto=format&fit=crop" alt="Building the AI platform" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="lg:order-1">
+          <span class="font-display text-[64px] text-ink/10 leading-none">02</span>
+          <h3 class="font-display text-[30px] tracking-tightest mt-2 mb-4">Then we taught AI to speak villa</h3>
+          <p class="text-ink/60 text-[15px] max-w-lg">We built a search engine that understands plain human language. Tell it "quiet 2-bedroom near Berawa beach, fast Wi-Fi, under $1,500 a month" — and it finds your match in seconds. Not from scraped listings. Only from villas we verified ourselves.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
+        <div class="img-zoom rounded-[28px] overflow-hidden h-[340px]"><img src="https://images.unsplash.com/photo-1764168798776-2a531b7d6621?q=80&w=1000&auto=format&fit=crop" alt="Housekeeping preparing a villa" class="w-full h-full object-cover" loading="lazy"></div>
+        <div>
+          <span class="font-display text-[64px] text-ink/10 leading-none">03</span>
+          <h3 class="font-display text-[30px] tracking-tightest mt-2 mb-4">Today: platform + full operations</h3>
+          <p class="text-ink/60 text-[15px] max-w-lg">BaliVillas.ai is now both a tech platform and a hospitality team. AI on the surface — housekeeping, pool and garden crews, guest support and transparent owner management on the ground. That's why owners trust us with their properties, and guests come back.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- =============== MISSION QUOTE =============== -->
+<section class="bg-ink text-white py-24">
+  <div class="max-w-[1000px] mx-auto px-6 lg:px-10 text-center reveal">
+    <svg class="w-10 h-10 text-white/20 mx-auto mb-8" viewBox="0 0 32 32" fill="currentColor"><path d="M10 8c-3 0-5 2.5-5 5.5S7 19 10 19h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5zm12 0c-3 0-5 2.5-5 5.5s2 5.5 5 5.5h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5z"/></svg>
+    <p class="font-display text-[28px] lg:text-[40px] leading-[1.2] tracking-tightest italic mb-8">"Our mission is simple: make renting, owning and managing a villa in Bali feel as good as the island itself."</p>
+    <p class="text-white/50 text-sm">— The BaliVillas.ai team</p>
+  </div>
+</section>
+
 <!-- =============== TEAM =============== -->
-<section class="bg-paper py-24 border-t border-line">
+<section class="bg-off py-24 border-t border-line">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-    <div class="mb-14">
+    <div class="mb-14 reveal">
       <p class="kicker mb-3">The team</p>
       <h2 class="font-display text-[40px] lg:text-[54px] leading-[1] tracking-tightest">The people behind<br><span class="italic">every perfect stay.</span></h2>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <div class="bg-off border border-line rounded-[28px] p-7 card-hover">
-        <img src="https://images.unsplash.com/photo-1516011362164-3095a82b0af9?q=80&w=700&h=800&auto=format&fit=crop&crop=faces" alt="Made Wirawan, Head of Villa Operations" loading="lazy" class="w-full aspect-[7/8] object-cover rounded-[20px] mb-6">
+      <div class="bg-white border border-line rounded-[28px] p-7 card-hover reveal">
+        <div class="img-zoom rounded-[20px] overflow-hidden mb-6"><img src="https://images.unsplash.com/photo-1516011362164-3095a82b0af9?q=80&w=700&h=800&auto=format&fit=crop&crop=faces" alt="Made Wirawan, Head of Villa Operations" loading="lazy" class="w-full aspect-[7/8] object-cover"></div>
         <p class="font-semibold text-lg mb-0.5">Made Wirawan</p>
         <p class="text-ink/50 text-[13px] mb-3">Head of Villa Operations</p>
         <p class="text-ink/60 text-[13.5px]">Born in Denpasar. Knows every villa in our collection by heart — because he approved each one personally.</p>
       </div>
 
-      <div class="bg-off border border-line rounded-[28px] p-7 card-hover">
-        <img src="https://images.unsplash.com/photo-1647964528306-06569a844aa3?q=80&w=700&h=800&auto=format&fit=crop&crop=faces" alt="Ayu Lestari, Guest Experience Lead" loading="lazy" class="w-full aspect-[7/8] object-cover rounded-[20px] mb-6">
+      <div class="bg-white border border-line rounded-[28px] p-7 card-hover reveal" style="transition-delay:.1s">
+        <div class="img-zoom rounded-[20px] overflow-hidden mb-6"><img src="https://images.unsplash.com/photo-1647964528306-06569a844aa3?q=80&w=700&h=800&auto=format&fit=crop&crop=faces" alt="Ayu Lestari, Guest Experience Lead" loading="lazy" class="w-full aspect-[7/8] object-cover"></div>
         <p class="font-semibold text-lg mb-0.5">Ayu Lestari</p>
         <p class="text-ink/50 text-[13px] mb-3">Guest Experience Lead</p>
         <p class="text-ink/60 text-[13.5px]">From Ubud. The voice behind our 24/7 support — if you message us, chances are Ayu's team answers in minutes.</p>
       </div>
 
-      <div class="bg-off border border-line rounded-[28px] p-7 card-hover">
-        <img src="https://images.unsplash.com/photo-1715140608409-04e6176ce948?q=80&w=700&h=800&auto=format&fit=crop&crop=faces" alt="Wayan Putra, Maintenance and Gardens" loading="lazy" class="w-full aspect-[7/8] object-cover rounded-[20px] mb-6">
+      <div class="bg-white border border-line rounded-[28px] p-7 card-hover reveal" style="transition-delay:.2s">
+        <div class="img-zoom rounded-[20px] overflow-hidden mb-6"><img src="https://images.unsplash.com/photo-1715140608409-04e6176ce948?q=80&w=700&h=800&auto=format&fit=crop&crop=faces" alt="Wayan Putra, Maintenance and Gardens" loading="lazy" class="w-full aspect-[7/8] object-cover"></div>
         <p class="font-semibold text-lg mb-0.5">Wayan Putra</p>
         <p class="text-ink/50 text-[13px] mb-3">Maintenance &amp; Gardens</p>
         <p class="text-ink/60 text-[13.5px]">Third-generation Canggu local. Leads the crews that keep pools blue, gardens green, and everything working.</p>
       </div>
 
-      <div class="bg-off border border-line rounded-[28px] p-7 card-hover">
-        <img src="https://images.unsplash.com/photo-1677168916969-e5a4af982664?q=80&w=700&h=800&auto=format&fit=crop&crop=faces" alt="Sari Dewi, Owner Relations" loading="lazy" class="w-full aspect-[7/8] object-cover rounded-[20px] mb-6">
+      <div class="bg-white border border-line rounded-[28px] p-7 card-hover reveal" style="transition-delay:.3s">
+        <div class="img-zoom rounded-[20px] overflow-hidden mb-6"><img src="https://images.unsplash.com/photo-1677168916969-e5a4af982664?q=80&w=700&h=800&auto=format&fit=crop&crop=faces" alt="Sari Dewi, Owner Relations" loading="lazy" class="w-full aspect-[7/8] object-cover"></div>
         <p class="font-semibold text-lg mb-0.5">Sari Dewi</p>
         <p class="text-ink/50 text-[13px] mb-3">Owner Relations</p>
         <p class="text-ink/60 text-[13.5px]">From Sanur. Makes sure every villa owner gets what we promise: clear reports, honest numbers, zero surprises.</p>
@@ -141,40 +222,50 @@ html { scroll-behavior: smooth; }
 </section>
 
 <!-- =============== LIFE AT BALIVILLAS =============== -->
-<section class="bg-off py-24 border-t border-line">
+<section class="bg-paper py-24 border-t border-line">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-    <div class="flex items-end justify-between mb-14 flex-wrap gap-4">
+    <div class="flex items-end justify-between mb-14 flex-wrap gap-4 reveal">
       <div>
         <p class="kicker mb-3">Life at BaliVillas</p>
-        <h2 class="font-display text-[40px] lg:text-[54px] leading-[1] tracking-tightest">Real people.<br><span class="italic">Real work. Every day.</span></h2>
+        <h2 class="font-display text-[40px] lg:text-[54px] leading-[1] tracking-tightest">Real villas. Real work.<br><span class="italic">Every single day.</span></h2>
       </div>
-      <p class="text-ink/50 text-[14px] max-w-xs">From morning briefings in Canggu to welcoming guests at sunset — a look behind the scenes.</p>
+      <p class="text-ink/50 text-[14px] max-w-xs">From 7am pool checks to late-night guest support — this is what "managed" actually looks like.</p>
     </div>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 auto-rows-[220px]">
-      <div class="relative rounded-[24px] overflow-hidden col-span-2 row-span-2 card-hover">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 auto-rows-[210px]">
+      <div class="relative rounded-[24px] overflow-hidden col-span-2 row-span-2 img-zoom reveal">
         <img src="https://images.unsplash.com/photo-1691229219606-f9aa47d9cdef?q=80&w=1200&auto=format&fit=crop" alt="BaliVillas operations team together in Bali" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
         <p class="absolute bottom-5 left-6 text-white font-semibold text-[15px]">Our operations crew — Canggu, Bali</p>
       </div>
-      <div class="relative rounded-[24px] overflow-hidden card-hover">
-        <img src="https://images.unsplash.com/photo-1772463099737-a482008045f7?q=80&w=700&auto=format&fit=crop" alt="Team member serving a welcome drink to a guest" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+      <div class="relative rounded-[24px] overflow-hidden img-zoom reveal">
+        <img src="https://images.unsplash.com/photo-1774109556498-652c0458d4af?q=80&w=700&auto=format&fit=crop" alt="Morning pool service at a managed villa" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <p class="absolute bottom-4 left-5 text-white font-semibold text-[13px]">7am pool service</p>
+      </div>
+      <div class="relative rounded-[24px] overflow-hidden img-zoom reveal">
+        <img src="https://images.unsplash.com/photo-1605702755163-4f303492e55f?q=80&w=700&auto=format&fit=crop" alt="Villa inspection before guest arrival" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <p class="absolute bottom-4 left-5 text-white font-semibold text-[13px]">Villa check before arrival</p>
+      </div>
+      <div class="relative rounded-[24px] overflow-hidden img-zoom reveal">
+        <img src="https://images.unsplash.com/photo-1774600134168-b9ebd714e4e1?q=80&w=700&auto=format&fit=crop" alt="Back office team managing bookings and reports" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <p class="absolute bottom-4 left-5 text-white font-semibold text-[13px]">Back office — bookings &amp; reports</p>
+      </div>
+      <div class="relative rounded-[24px] overflow-hidden img-zoom reveal">
+        <img src="https://images.unsplash.com/photo-1698047682129-c3e217ac08b7?q=80&w=700&auto=format&fit=crop" alt="Guest support team answering messages" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <p class="absolute bottom-4 left-5 text-white font-semibold text-[13px]">Guest support, always on</p>
+      </div>
+      <div class="relative rounded-[24px] overflow-hidden col-span-2 img-zoom reveal">
+        <img src="https://images.unsplash.com/photo-1772463099737-a482008045f7?q=80&w=1000&auto=format&fit=crop" alt="Welcoming a guest with a drink at check-in" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
         <p class="absolute bottom-4 left-5 text-white font-semibold text-[13px]">Welcome drinks at check-in</p>
       </div>
-      <div class="relative rounded-[24px] overflow-hidden card-hover">
-        <img src="https://images.unsplash.com/photo-1771812967957-2e32963cc31d?q=80&w=700&auto=format&fit=crop" alt="Staff member in uniform preparing villa dining" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-        <p class="absolute bottom-4 left-5 text-white font-semibold text-[13px]">Villa dining, guest-ready</p>
-      </div>
-      <div class="relative rounded-[24px] overflow-hidden card-hover">
-        <img src="https://images.unsplash.com/photo-1724230758718-406bab979e67?q=80&w=700&auto=format&fit=crop" alt="Guest experience team member at the front desk" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+      <div class="relative rounded-[24px] overflow-hidden col-span-2 img-zoom reveal">
+        <img src="https://images.unsplash.com/photo-1724230758718-406bab979e67?q=80&w=1000&auto=format&fit=crop" alt="Guest experience desk" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
         <p class="absolute bottom-4 left-5 text-white font-semibold text-[13px]">Guest experience desk</p>
-      </div>
-      <div class="relative rounded-[24px] overflow-hidden card-hover">
-        <img src="https://images.unsplash.com/photo-1764168798776-2a531b7d6621?q=80&w=700&auto=format&fit=crop" alt="Housekeeping team member preparing fresh towels" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-        <p class="absolute bottom-4 left-5 text-white font-semibold text-[13px]">Fresh towels, daily housekeeping</p>
       </div>
     </div>
   </div>
@@ -183,15 +274,15 @@ html { scroll-behavior: smooth; }
 <!-- =============== VALUES =============== -->
 <section class="bg-ink text-white py-24">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-    <div class="mb-14">
+    <div class="mb-14 reveal">
       <p class="kicker !text-white/60 mb-3">What we stand for</p>
       <h2 class="font-display text-[40px] lg:text-[54px] leading-[1] tracking-tightest">Fewer promises.<br><span class="italic">All of them kept.</span></h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-      <div><span class="font-display text-[56px] text-white/15 leading-none">01</span><p class="font-semibold mt-4 mb-2">Verified, not scraped</p><p class="text-white/60 text-[14px]">Every villa visited and checked by our team before it goes live. No stock photos, no surprises.</p></div>
-      <div><span class="font-display text-[56px] text-white/15 leading-none">02</span><p class="font-semibold mt-4 mb-2">Honest matches</p><p class="text-white/60 text-[14px]">Our AI recommends what fits you — not what pays us more. Rankings can't be bought.</p></div>
-      <div><span class="font-display text-[56px] text-white/15 leading-none">03</span><p class="font-semibold mt-4 mb-2">On the ground</p><p class="text-white/60 text-[14px]">Real local support in Bali, 24/7, from booking to checkout. A team that answers, not a ticket queue.</p></div>
-      <div><span class="font-display text-[56px] text-white/15 leading-none">04</span><p class="font-semibold mt-4 mb-2">Transparency for owners</p><p class="text-white/60 text-[14px]">Full reporting on every booking and every expense. Every rupiah in and out, documented.</p></div>
+      <div class="reveal"><span class="font-display text-[56px] text-white/15 leading-none">01</span><p class="font-semibold mt-4 mb-2">Verified, not scraped</p><p class="text-white/60 text-[14px]">Every villa visited and checked by our team before it goes live. No stock listings, no surprises.</p></div>
+      <div class="reveal" style="transition-delay:.1s"><span class="font-display text-[56px] text-white/15 leading-none">02</span><p class="font-semibold mt-4 mb-2">Honest matches</p><p class="text-white/60 text-[14px]">Our AI recommends what fits you — not what pays us more. Rankings can't be bought.</p></div>
+      <div class="reveal" style="transition-delay:.2s"><span class="font-display text-[56px] text-white/15 leading-none">03</span><p class="font-semibold mt-4 mb-2">On the ground</p><p class="text-white/60 text-[14px]">Real local support in Bali, 24/7, from booking to checkout. A team that answers, not a ticket queue.</p></div>
+      <div class="reveal" style="transition-delay:.3s"><span class="font-display text-[56px] text-white/15 leading-none">04</span><p class="font-semibold mt-4 mb-2">Transparency for owners</p><p class="text-white/60 text-[14px]">Full reporting on every booking and every expense. Every rupiah in and out, documented.</p></div>
     </div>
   </div>
 </section>
@@ -199,7 +290,7 @@ html { scroll-behavior: smooth; }
 <!-- =============== CONTACT + OFFICE =============== -->
 <section id="contact" class="bg-off py-24 border-t border-line">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16">
-    <div>
+    <div class="reveal">
       <p class="kicker mb-3">Visit us</p>
       <h2 class="font-display text-[40px] lg:text-[54px] leading-[1] tracking-tightest mb-8">Drop by for<br><span class="italic">a coffee in Canggu.</span></h2>
       <div class="space-y-6 mb-10">
@@ -222,7 +313,7 @@ html { scroll-behavior: smooth; }
       </div>
       <a href="https://wa.me/6281000000000" class="btn-primary inline-flex items-center gap-2">Message us on WhatsApp</a>
     </div>
-    <div class="rounded-[28px] overflow-hidden border border-line min-h-[420px] bg-paper">
+    <div class="rounded-[28px] overflow-hidden border border-line min-h-[420px] bg-paper reveal">
       <iframe title="BaliVillas.ai office on the map" src="https://www.google.com/maps?q=Jl.+Pantai+Berawa,+Tibubeneng,+Canggu,+Bali&z=15&output=embed" class="w-full h-full min-h-[420px]" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
   </div>
@@ -230,7 +321,7 @@ html { scroll-behavior: smooth; }
 
 <!-- =============== CTA =============== -->
 <section class="bg-off py-24 border-t border-line">
-  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 text-center">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-10 text-center reveal">
     <p class="kicker mb-5">Ready when you are</p>
     <h2 class="font-display text-[48px] lg:text-[80px] leading-[0.95] tracking-tightest mb-8">Now you know us.<br><span class="italic">Let's find your villa.</span></h2>
     <a href="/property-rental/" class="btn-primary inline-flex items-center gap-2 !px-8 !py-4 !text-base">
@@ -311,5 +402,18 @@ html { scroll-behavior: smooth; }
   Chat
 </a>
 
+<script>
+/* Scroll reveal animation */
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('visible')}); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function (e) { io.observe(e); });
+})();
+</script>
 </body>
 </html>
