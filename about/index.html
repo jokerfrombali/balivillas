@@ -69,37 +69,32 @@ html { scroll-behavior: smooth; }
 </nav>
 
 <!-- =============== HERO =============== -->
-<header class="bg-ink text-white pt-[72px] relative overflow-hidden">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 pt-24 lg:pt-32 pb-16 relative z-10">
-    <p class="kicker !text-white/60 mb-5">About BaliVillas.ai</p>
-    <h1 class="font-display text-[48px] lg:text-[84px] leading-[0.95] tracking-tightest mb-8 max-w-4xl">We're on a mission to make Bali stays <span class="italic">honest.</span></h1>
-    <p class="text-white/70 text-[17px] max-w-xl mb-10">Verified villas instead of pretty lies. Real people instead of ticket queues. Transparent numbers instead of vague reports. Full cycle — from your first stay to buying your own villa or land. Built in Bali, by people who live here.</p>
+<header class="relative min-h-[92vh] flex items-end overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1707467390539-8ada3e4e2c2a?q=80&w=2200&auto=format&fit=crop" alt="The BaliVillas team in Canggu, Bali" class="absolute inset-0 w-full h-full object-cover object-center">
+  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/50"></div>
+  <div class="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 w-full pt-[140px] pb-28 lg:pb-36 text-white">
+    <div class="flex items-center gap-2 mb-6 flex-wrap">
+      <span class="text-[11px] font-semibold tracking-[0.18em] uppercase bg-white/15 backdrop-blur border border-white/25 rounded-full px-4 py-1.5">Sales</span>
+      <span class="text-[11px] font-semibold tracking-[0.18em] uppercase bg-white/15 backdrop-blur border border-white/25 rounded-full px-4 py-1.5">Rentals</span>
+      <span class="text-[11px] font-semibold tracking-[0.18em] uppercase bg-white/15 backdrop-blur border border-white/25 rounded-full px-4 py-1.5">Management</span>
+    </div>
+    <h1 class="font-display text-[46px] lg:text-[88px] leading-[0.95] tracking-tightest mb-7 max-w-4xl" style="text-shadow:0 2px 24px rgba(0,0,0,.45)">We're on a mission to make Bali stays <span class="italic">honest.</span></h1>
+    <p class="text-white/85 text-[16.5px] max-w-xl mb-10" style="text-shadow:0 1px 10px rgba(0,0,0,.5)">Verified villas instead of pretty lies. Real people instead of ticket queues. Full cycle — from your first stay to buying your own villa or land. Built in Bali, by people who live here.</p>
     <div class="flex gap-3 flex-wrap">
       <a href="#story" class="btn-white">Get to know us</a>
-      <a href="#contact" class="border border-white/40 text-white rounded-full px-6 py-3.5 font-semibold text-sm hover:bg-white hover:text-ink transition">Visit our office</a>
-    </div>
-  </div>
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 pb-0 relative z-10">
-    <div class="relative rounded-t-[28px] overflow-hidden img-zoom">
-      <img src="https://images.unsplash.com/photo-1745487383569-949c119560ef?q=80&w=2000&auto=format&fit=crop" alt="The BaliVillas team in front of the office in Canggu" class="w-full h-[340px] lg:h-[520px] object-cover">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/5 to-black/30"></div>
-      <div class="absolute top-6 left-0 right-0 text-center">
-        <p class="text-white/95 font-display text-[18px] lg:text-[26px] tracking-[0.25em] uppercase" style="text-shadow:0 2px 14px rgba(0,0,0,.6)">Sales &nbsp;·&nbsp; Rentals &nbsp;·&nbsp; Management</p>
-      </div>
-      <p class="absolute bottom-5 left-7 text-white font-semibold text-[14px] lg:text-[15px]">The BaliVillas team — Canggu, Bali</p>
+      <a href="#contact" class="border border-white/50 text-white rounded-full px-6 py-3.5 font-semibold text-sm hover:bg-white hover:text-ink transition backdrop-blur">Visit our office</a>
     </div>
   </div>
 </header>
 
-<!-- =============== QUICK FACTS =============== -->
-<section class="bg-off py-16 border-b border-line">
+<!-- =============== QUICK FACTS (overlapping card) =============== -->
+<section class="bg-off pb-16 border-b border-line">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-    <p class="kicker mb-8">Quick facts about BaliVillas</p>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
-      <div class="reveal"><p class="font-display text-[52px] lg:text-[64px] leading-none tracking-tightest mb-2">500+</p><p class="text-ink/50 text-[14px]">villas handpicked and verified in person</p></div>
-      <div class="reveal" style="transition-delay:.1s"><p class="font-display text-[52px] lg:text-[64px] leading-none tracking-tightest mb-2">10,000+</p><p class="text-ink/50 text-[14px]">guests hosted across Bali</p></div>
-      <div class="reveal" style="transition-delay:.2s"><p class="font-display text-[52px] lg:text-[64px] leading-none tracking-tightest mb-2">4.9/5</p><p class="text-ink/50 text-[14px]">average guest rating on major platforms</p></div>
-      <div class="reveal" style="transition-delay:.3s"><p class="font-display text-[52px] lg:text-[64px] leading-none tracking-tightest mb-2">&lt;5 min</p><p class="text-ink/50 text-[14px]">average reply time, day and night</p></div>
+    <div class="bg-white rounded-[28px] shadow-[0_24px_80px_rgba(10,10,10,0.12)] border border-line px-8 lg:px-12 py-10 -mt-20 relative z-20 grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="reveal"><p class="font-display text-[44px] lg:text-[56px] leading-none tracking-tightest mb-2">500+</p><p class="text-ink/50 text-[13.5px]">villas handpicked and verified in person</p></div>
+      <div class="reveal" style="transition-delay:.1s"><p class="font-display text-[44px] lg:text-[56px] leading-none tracking-tightest mb-2">10,000+</p><p class="text-ink/50 text-[13.5px]">guests hosted across Bali</p></div>
+      <div class="reveal" style="transition-delay:.2s"><p class="font-display text-[44px] lg:text-[56px] leading-none tracking-tightest mb-2">4.9/5</p><p class="text-ink/50 text-[13.5px]">average guest rating on major platforms</p></div>
+      <div class="reveal" style="transition-delay:.3s"><p class="font-display text-[44px] lg:text-[56px] leading-none tracking-tightest mb-2">&lt;5 min</p><p class="text-ink/50 text-[13.5px]">average reply time, day and night</p></div>
     </div>
   </div>
 </section>
