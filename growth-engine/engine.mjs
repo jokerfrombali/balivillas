@@ -266,14 +266,14 @@ function listPage({ title, h1, intro, urlPath, villas, qa }) {
   const prices = villas.map((v) => v.priceNight).filter(Boolean);
   const stats = prices.length
     ? `Across ${villas.length} villas: from ${usd(Math.min(...prices))} to ${usd(Math.max(...prices))}/night, median ${usd(median(prices))} (${CFG.today}).`
-    : `${villas.length} villas managed by our own team — book direct via WhatsApp, Airbnb or Booking.com.`;
+    : `Message us on WhatsApp for availability and a same-day quote.`;
   const body = `
 <h1>${esc(h1)}</h1>
 <p><strong>${esc(intro)}</strong> ${esc(stats)}</p>
 <a class="btn" href="${waLink(null, urlPath)}">Get a shortlist on WhatsApp →</a>
 <div class="g">${villas.map(card).join("")}</div>
 ${qa ? `<h2>FAQ</h2>${qa.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a)}</p>`).join("")}` : ""}
-<p><a href="/bali-villa-prices/">See full Bali villa price index →</a></p>`;
+<p><a href="/about/">About us</a> · <a href="${waLink(null, urlPath)}">WhatsApp us</a></p>`;
   return page({
     title,
     desc: `${intro} ${stats}`,
