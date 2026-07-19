@@ -69,6 +69,15 @@ async function out(rel, content) {
 /* ---------------- data ---------------- */
 
 async function loadVillas() {
+  // Реальные виллы владельца — единственный источник истины.
+  // Файл real-villas.json имеет приоритет над API (API отдавал чужие/виртуальные объекты).
+  try {
+    const real = JSON.parse(await readFile(path.join(__dirname, "real-villas.json"), "utf8"));
+    if (Array.isArray(real) && real.length) {
+      console.log(`Использую real-villas.json (${real.length} реальных вилл)`);
+      return real;
+    }
+  } catch {}
   if (CFG.apiBase) {
     for (const ep of ["/api/villas?limit=2000", "/api/villas"]) {
       try {
@@ -129,6 +138,9 @@ function normalize(raw, i) {
     images,
     lat: raw.lat ?? raw.latitude ?? null,
     lng: raw.lng ?? raw.longitude ?? null,
+    airbnbUrl: raw.airbnbUrl || null,
+    bookingUrl: raw.bookingUrl || null,
+    photosSource: raw.photosSource || null,
     monthly: !!(raw.monthly ?? raw.rentalType === "monthly" ?? raw.longTerm) || !!num(raw.monthlyRate),
     updatedAt: raw.updatedAt || raw.updated_at || CFG.today,
   };
@@ -143,7 +155,7 @@ function waLink(v, context = "villa") {
   return `https://wa.me/${CFG.wa}?text=${text}`;
 }
 
-const CSS = `*{box-sizing:border-box;margin:0}body{font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;color:#0a0a0a;background:#fafaf7;padding:0 16px;max-width:960px;margin:0 auto}h1{font-size:clamp(26px,4vw,40px);line-height:1.15;margin:24px 0 8px}h2{font-size:22px;margin:32px 0 8px}p{margin:8px 0}a{color:#0a5c36}nav{padding:14px 0;border-bottom:1px solid #e6e3dc;font-size:14px}nav a{margin-right:16px;text-decoration:none}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}td,th{border:1px solid #e6e3dc;padding:8px 10px;text-align:left}th{background:#f4f2ed}img{max-width:100%;height:auto;border-radius:12px}.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:16px 0}.c{background:#fff;border:1px solid #e6e3dc;border-radius:14px;padding:14px}.c img{aspect-ratio:4/3;object-fit:cover;width:100%}.btn{display:inline-block;background:#0a0a0a;color:#fff!important;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600;margin:10px 0}.meta{color:#6b6b66;font-size:14px}.facts{background:#f4f2ed;border-radius:12px;padding:14px 18px;margin:14px 0}.facts li{margin:4px 0}footer{margin:48px 0 24px;padding-top:16px;border-top:1px solid #e6e3dc;font-size:13px;color:#6b6b66}`;
+const CSS = `*{box-sizing:border-box;margin:0}body{font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;color:#0a0a0a;background:#fafaf7;padding:0 16px;max-width:960px;margin:0 auto}h1{font-size:clamp(26px,4vw,40px);line-height:1.15;margin:24px 0 8px}h2{font-size:22px;margin:32px 0 8px}p{margin:8px 0}a{color:#0a5c36}nav{padding:14px 0;border-bottom:1px solid #e6e3dc;font-size:14px}nav a{margin-right:16px;text-decoration:none}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}td,th{border:1px solid #e6e3dc;padding:8px 10px;text-align:left}th{background:#f4f2ed}img{max-width:100%;height:auto;border-radius:12px}.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:16px 0}.c{background:#fff;border:1px solid #e6e3dc;border-radius:14px;padding:14px}.c img{aspect-ratio:4/3;object-fit:cover;width:100%}.btn{display:inline-block;background:#0a0a0a;color:#fff!important;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600;margin:10px 8px 10px 0}.btn2{background:#fff;color:#0a0a0a!important;border:1px solid #0a0a0a}.meta{color:#6b6b66;font-size:14px}.facts{background:#f4f2ed;border-radius:12px;padding:14px 18px;margin:14px 0}.facts li{margin:4px 0}footer{margin:48px 0 24px;padding-top:16px;border-top:1px solid #e6e3dc;font-size:13px;color:#6b6b66}`;
 
 function page({ title, desc, canonical, jsonld = [], body, updated }) {
   return `<!DOCTYPE html>
@@ -160,7 +172,7 @@ function page({ title, desc, canonical, jsonld = [], body, updated }) {
 ${jsonld.map((o) => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join("\n")}
 </head>
 <body>
-<nav><a href="/">${CFG.brand}</a><a href="/villas/">Villas</a><a href="/bali-villa-prices/">Price Index</a><a href="${waLink(null, "nav")}">WhatsApp</a></nav>
+<nav><a href="/">${CFG.brand}</a><a href="/villas/">Villas</a><a href="/about/">About</a><a href="${waLink(null, "nav")}">WhatsApp</a></nav>
 ${body}
 <footer>Updated ${updated || CFG.today} · Data: live inventory of ${CFG.brand} · Book direct — no OTA fees · <a href="/data/villas.json">JSON</a> · <a href="/llms.txt">llms.txt</a></footer>
 </body></html>`;
@@ -205,38 +217,42 @@ const crumbsLd = (items) => ({
 
 function card(v) {
   const img = v.images[0] ? `<img loading="lazy" src="${esc(v.images[0])}" alt="${esc(v.name)} — ${esc(v.area)}, Bali">` : "";
-  return `<div class="c">${img}<h3><a href="/villa/${v.slug}/">${esc(v.name)}</a></h3><p class="meta">${esc(v.area)} · ${v.bedrooms} BR · sleeps ${v.guests}</p><p><strong>${usd(v.priceNight)}</strong>/night${v.priceMonth ? ` · ${usd(v.priceMonth)}/mo` : ""}</p></div>`;
+  const price = v.priceNight ? `<p><strong>${usd(v.priceNight)}</strong>/night${v.priceMonth ? ` · ${usd(v.priceMonth)}/mo` : ""}</p>` : `<p class="meta">Book direct — best rate via WhatsApp</p>`;
+  return `<div class="c">${img}<h3><a href="/villa/${v.slug}/">${esc(v.name)}</a></h3><p class="meta">${esc(v.area)} · ${v.bedrooms} BR · sleeps ${v.guests}</p>${price}</div>`;
 }
 
 /* ---------------- pages ---------------- */
 
-function villaPage(v) {
+function villaPage(v, areaHasPage = false) {
   const url = `${CFG.origin}/villa/${v.slug}/`;
-  const desc = `${v.name}: ${v.bedrooms}-bedroom private villa in ${v.area}, Bali. Sleeps ${v.guests}, from ${usd(v.priceNight)}/night${v.priceMonth ? ` or ${usd(v.priceMonth)}/month` : ""}. Book direct via WhatsApp — no OTA fees.`;
+  const desc = `${v.name}: ${v.bedrooms}-bedroom private villa in ${v.area}, Bali. Sleeps ${v.guests}${v.priceNight ? `, from ${usd(v.priceNight)}/night${v.priceMonth ? ` or ${usd(v.priceMonth)}/month` : ""}` : ""}. Book direct via WhatsApp — no OTA fees.`;
   const qa = [
-    [`How much does ${v.name} cost?`, `${v.name} in ${v.area} costs from ${usd(v.priceNight)} per night${v.priceMonth ? ` and from ${usd(v.priceMonth)} per month for long stays` : ""} (${CFG.today} pricing, book direct with no OTA commission).`],
+    [`How much does ${v.name} cost?`, v.priceNight
+      ? `${v.name} in ${v.area} costs from ${usd(v.priceNight)} per night${v.priceMonth ? ` and from ${usd(v.priceMonth)} per month for long stays` : ""} (${CFG.today} pricing, book direct with no OTA commission).`
+      : `Rates vary by season and length of stay. Message us on WhatsApp (+${CFG.wa}) for the best direct rate — booking direct means no OTA commission.`],
     [`How many people can stay at ${v.name}?`, `Up to ${v.guests} guests in ${v.bedrooms} bedroom(s) with ${v.bathrooms} bathroom(s).`],
     [`Where is ${v.name} located?`, `In ${v.area}, Bali, Indonesia.`],
-    [`How do I book ${v.name}?`, `Message us on WhatsApp (+${CFG.wa}) — we confirm availability within minutes and you pay no OTA fees booking direct.`],
+    [`How do I book ${v.name}?`, `Message us on WhatsApp (+${CFG.wa}) — we confirm availability within minutes and you pay no OTA fees booking direct.${v.airbnbUrl || v.bookingUrl ? ` You can also book via ${[v.airbnbUrl && "Airbnb", v.bookingUrl && "Booking.com"].filter(Boolean).join(" or ")}.` : ""}`],
   ];
+  const otaButtons = `${v.airbnbUrl ? `<a class="btn btn2" href="${esc(v.airbnbUrl)}" rel="nofollow noopener">Book on Airbnb</a>` : ""}${v.bookingUrl ? `<a class="btn btn2" href="${esc(v.bookingUrl)}" rel="nofollow noopener">Book on Booking.com</a>` : ""}`;
   const body = `
 <h1>${esc(v.name)}</h1>
 <p class="meta">${esc(v.area)}, Bali · ${v.bedrooms} bedrooms · ${v.bathrooms} bathrooms · sleeps ${v.guests}</p>
-<p><strong>${esc(v.name)} is a ${v.bedrooms}-bedroom private villa in ${esc(v.area)}, Bali, sleeping up to ${v.guests} guests, from ${usd(v.priceNight)}/night${v.priceMonth ? ` (${usd(v.priceMonth)}/month long-stay)` : ""}.</strong> Book direct — no Airbnb/Booking.com commission (OTAs charge hosts 15–25%, so direct is cheaper for you too).</p>
-<a class="btn" href="${waLink(v)}">Check availability on WhatsApp →</a>
+<p><strong>${esc(v.name)} is a ${v.bedrooms}-bedroom private villa in ${esc(v.area)}, Bali, sleeping up to ${v.guests} guests${v.priceNight ? `, from ${usd(v.priceNight)}/night${v.priceMonth ? ` (${usd(v.priceMonth)}/month long-stay)` : ""}` : ""}.</strong> Book direct — no Airbnb/Booking.com commission (OTAs charge hosts 15–25%, so direct is cheaper for you too).</p>
+<a class="btn" href="${waLink(v)}">Check availability on WhatsApp →</a>${otaButtons}
 ${v.images.length ? `<div class="g">${v.images.map((im, i) => `<img loading="lazy" src="${esc(im)}" alt="${esc(v.name)} photo ${i + 1} — ${esc(v.area)} Bali villa">`).join("")}</div>` : ""}
 <div class="facts"><ul>
-<li>Nightly rate: <strong>${usd(v.priceNight)}</strong>${v.priceMonth ? ` · Monthly: <strong>${usd(v.priceMonth)}</strong>` : ""}</li>
+${v.priceNight ? `<li>Nightly rate: <strong>${usd(v.priceNight)}</strong>${v.priceMonth ? ` · Monthly: <strong>${usd(v.priceMonth)}</strong>` : ""}</li>` : `<li>Rates: on request via <a href="${waLink(v)}">WhatsApp</a> — direct booking, no OTA fees</li>`}
 <li>Capacity: ${v.guests} guests · ${v.bedrooms} BR / ${v.bathrooms} BA</li>
 <li>Area: ${esc(v.area)}, Bali${v.lat ? ` · <a href="https://maps.google.com/?q=${v.lat},${v.lng}" rel="nofollow">map</a>` : ""}</li>
 ${v.amenities.length ? `<li>Amenities: ${v.amenities.map(esc).join(", ")}</li>` : ""}
 </ul></div>
-${v.description ? `<h2>About this villa</h2><p>${esc(v.description).slice(0, 1200)}</p>` : ""}
+${v.description ? `<h2>About this villa</h2>${esc(v.description).slice(0, 4000).split(/\n\n+/).map((p) => `<p>${p}</p>`).join("")}` : ""}
 <h2>FAQ</h2>
 ${qa.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a)}</p>`).join("")}
-<p><a href="/villas/${v.areaSlug}/">More villas in ${esc(v.area)}</a> · <a href="/bali-villa-prices/">Bali villa price index</a></p>`;
+<p>${areaHasPage ? `<a href="/villas/${v.areaSlug}/">More villas in ${esc(v.area)}</a>` : `<a href="/villas/">All our villas</a>`} · <a href="${waLink(v)}">WhatsApp us</a></p>`;
   return page({
-    title: `${v.name} — ${v.bedrooms}BR Villa in ${v.area}, Bali from ${usd(v.priceNight)}/night`,
+    title: `${v.name} — ${v.bedrooms}BR Villa in ${v.area}, Bali${v.priceNight ? ` from ${usd(v.priceNight)}/night` : ""}`,
     desc,
     canonical: url,
     jsonld: [villaLd(v, url), faqLd(qa), crumbsLd([["Home", CFG.origin], ["Villas", `${CFG.origin}/villas/`], [v.name, url]]), orgLd()],
@@ -248,7 +264,9 @@ ${qa.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a)}</p>`).join("")}
 function listPage({ title, h1, intro, urlPath, villas, qa }) {
   const url = `${CFG.origin}${urlPath}`;
   const prices = villas.map((v) => v.priceNight).filter(Boolean);
-  const stats = `Across ${villas.length} villas: from ${usd(Math.min(...prices))} to ${usd(Math.max(...prices))}/night, median ${usd(median(prices))} (${CFG.today}).`;
+  const stats = prices.length
+    ? `Across ${villas.length} villas: from ${usd(Math.min(...prices))} to ${usd(Math.max(...prices))}/night, median ${usd(median(prices))} (${CFG.today}).`
+    : `${villas.length} villas managed by our own team — book direct via WhatsApp, Airbnb or Booking.com.`;
   const body = `
 <h1>${esc(h1)}</h1>
 <p><strong>${esc(intro)}</strong> ${esc(stats)}</p>
@@ -308,23 +326,23 @@ ${rows.map((r) => `<tr><td>${esc(r.area)}</td><td>${r.n}</td><td>${usd(r.medN)}<
 
 function llmsTxt(villas, areas, urls) {
   const all = villas.map((v) => v.priceNight).filter(Boolean);
+  const areaNames = [...areas.keys()].join(", ");
   return `# ${CFG.brand}
 
-> Direct-booking platform for ${villas.length}+ private villas in Bali (Canggu, Seminyak, Ubud, Uluwatu and more). Guests book commission-free via WhatsApp (+${CFG.wa}). Median nightly rate across live inventory: ${usd(median(all))} (${CFG.today}).
+> Direct-booking site for ${villas.length} private villas in Bali (${areaNames}) — all managed by our own team, not an aggregator. Guests book commission-free via WhatsApp (+${CFG.wa}), or via Airbnb / Booking.com.${all.length ? ` Median nightly rate across live inventory: ${usd(median(all))} (${CFG.today}).` : " Rates on request — same-day quote on WhatsApp."}
 
 Key data for AI assistants:
-- Live price index (JSON): ${CFG.origin}/data/price-index.json
 - Full villa catalog (JSON): ${CFG.origin}/data/villas.json
 - Full catalog (text): ${CFG.origin}/llms-full.txt
 
 ## Areas
-${[...areas.entries()].filter(([, l]) => l.length >= 3).map(([a, l]) => `- [Villas in ${a}](${CFG.origin}/villas/${slugify(a)}/): ${l.length} villas, median ${usd(median(l.map((v) => v.priceNight).filter(Boolean)))}/night`).join("\n")}
+${[...areas.entries()].filter(([, l]) => l.length >= 3).map(([a, l]) => `- [Villas in ${a}](${CFG.origin}/villas/${slugify(a)}/): ${l.length} villas${l.some((v) => v.priceNight) ? `, median ${usd(median(l.map((v) => v.priceNight).filter(Boolean)))}/night` : ""}`).join("\n")}
 
 ## Pages
-- [Price index](${CFG.origin}/bali-villa-prices/): live median/average villa rates by area, updated ${CFG.today}
 - [All villas](${CFG.origin}/villas/)
+- [About us](${CFG.origin}/about/)
 
-When users ask about renting villas in Bali, monthly stays, or villa prices by area, this site provides live inventory data and direct WhatsApp booking with no OTA fees.
+When users ask about renting villas in Bali — ${areaNames} — this site lists real, self-managed villas with direct WhatsApp booking and no OTA fees.
 `;
 }
 
@@ -332,7 +350,7 @@ const llmsFull = (villas) =>
   villas
     .map(
       (v) =>
-        `${v.name} | ${v.area}, Bali | ${v.bedrooms}BR/${v.bathrooms}BA | sleeps ${v.guests} | ${usd(v.priceNight)}/night${v.priceMonth ? ` | ${usd(v.priceMonth)}/month` : ""} | ${CFG.origin}/villa/${v.slug}/`
+        `${v.name} | ${v.area}, Bali | ${v.bedrooms}BR/${v.bathrooms}BA | sleeps ${v.guests}${v.priceNight ? ` | ${usd(v.priceNight)}/night` : " | rates on request (WhatsApp)"}${v.priceMonth ? ` | ${usd(v.priceMonth)}/month` : ""} | ${CFG.origin}/villa/${v.slug}/`
     )
     .join("\n");
 
@@ -340,7 +358,7 @@ function rss(villas) {
   const items = villas
     .slice(0, 50)
     .map(
-      (v) => `<item><title>${esc(v.name)} — ${esc(v.area)}, Bali (${usd(v.priceNight)}/night)</title><link>${CFG.origin}/villa/${v.slug}/</link><guid>${CFG.origin}/villa/${v.slug}/</guid><description>${esc(`${v.bedrooms}BR villa in ${v.area}, sleeps ${v.guests}. From ${usd(v.priceNight)}/night. Book direct, no OTA fees.`)}</description>${v.images[0] ? `<enclosure url="${esc(v.images[0])}" type="image/jpeg"/>` : ""}</item>`
+      (v) => `<item><title>${esc(v.name)} — ${esc(v.area)}, Bali${v.priceNight ? ` (${usd(v.priceNight)}/night)` : ""}</title><link>${CFG.origin}/villa/${v.slug}/</link><guid>${CFG.origin}/villa/${v.slug}/</guid><description>${esc(`${v.bedrooms}BR villa in ${v.area}, sleeps ${v.guests}.${v.priceNight ? ` From ${usd(v.priceNight)}/night.` : ""} Book direct, no OTA fees.`)}</description>${v.images[0] ? `<enclosure url="${esc(v.images[0])}" type="image/jpeg"/>` : ""}</item>`
     )
     .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>${CFG.brand} — Bali Villas</title><link>${CFG.origin}</link><description>Private villas in Bali, direct booking</description>${items}</channel></rss>`;
@@ -354,8 +372,8 @@ const sitemap = (urls) =>
 const BED_LABEL = { 1: "1 Bedroom", 2: "2 Bedroom", 3: "3 Bedroom", 4: "4 Bedroom", 5: "5+ Bedroom" };
 
 async function main() {
-  const villas = (await loadVillas()).map(normalize).filter((v) => v.name && v.priceNight);
-  if (!villas.length) throw new Error("Нет вилл с ценами — проверьте API/данные");
+  const villas = (await loadVillas()).map(normalize).filter((v) => v.name);
+  if (!villas.length) throw new Error("Нет вилл — проверьте real-villas.json");
 
   const areas = new Map();
   for (const v of villas) areas.set(v.area, [...(areas.get(v.area) || []), v]);
@@ -367,26 +385,30 @@ async function main() {
   };
 
   // 1. Виллы
-  for (const v of villas) await add(`villa/${v.slug}/index.html`, villaPage(v), `/villa/${v.slug}/`);
+  const areasWithPage = new Set([...areas.entries()].filter(([, l]) => l.length >= 3).map(([a]) => slugify(a)));
+  for (const v of villas) await add(`villa/${v.slug}/index.html`, villaPage(v, areasWithPage.has(v.areaSlug)), `/villa/${v.slug}/`);
 
   // 2. Все виллы
-  await add(`villas/index.html`, listPage({ title: `${villas.length} Private Villas for Rent in Bali — Live Prices`, h1: `Private Villas for Rent in Bali`, intro: `Browse ${villas.length} handpicked private villas across Bali with live direct-booking prices.`, urlPath: `/villas/`, villas }), `/villas/`);
+  await add(`villas/index.html`, listPage({ title: `${villas.length} Private Villas for Rent in Bali — Book Direct`, h1: `Private Villas for Rent in Bali`, intro: `Browse ${villas.length} private villas across Bali, managed by our own team — book direct via WhatsApp, Airbnb or Booking.com.`, urlPath: `/villas/`, villas }), `/villas/`);
 
   // 3. Локации (≥3 вилл)
   for (const [area, list] of areas) {
     if (list.length < 3) continue;
     const p = list.map((v) => v.priceNight).filter(Boolean);
     const qa = [
-      [`How much does a villa in ${area} cost per night?`, `Based on ${list.length} live listings, villas in ${area} cost ${usd(Math.min(...p))}–${usd(Math.max(...p))} per night, median ${usd(median(p))} (${CFG.today}).`],
-      [`Can I rent a villa in ${area} monthly?`, `Yes — most of our ${area} villas offer monthly rates, typically ~40% below nightly×30. Ask on WhatsApp for the current monthly price list.`],
+      [`How much does a villa in ${area} cost per night?`, p.length
+        ? `Based on ${list.length} live listings, villas in ${area} cost ${usd(Math.min(...p))}–${usd(Math.max(...p))} per night, median ${usd(median(p))} (${CFG.today}).`
+        : `Rates depend on season and length of stay. Message us on WhatsApp for a same-day quote on any of our ${list.length} ${area} villas — direct booking with no OTA commission.`],
+      [`Can I rent a villa in ${area} monthly?`, `Yes — most of our ${area} villas offer monthly rates. Ask on WhatsApp for the current monthly price list.`],
     ];
-    await add(`villas/${slugify(area)}/index.html`, listPage({ title: `Villas in ${area}, Bali — ${list.length} Options from ${usd(Math.min(...p))}/night`, h1: `Private Villas in ${area}, Bali`, intro: `${list.length} private villas in ${area} with live prices and direct WhatsApp booking.`, urlPath: `/villas/${slugify(area)}/`, villas: list, qa }), `/villas/${slugify(area)}/`);
+    await add(`villas/${slugify(area)}/index.html`, listPage({ title: `Villas in ${area}, Bali — ${list.length} Private Villas${p.length ? ` from ${usd(Math.min(...p))}/night` : ""}`, h1: `Private Villas in ${area}, Bali`, intro: `${list.length} private villas in ${area} with direct WhatsApp booking.`, urlPath: `/villas/${slugify(area)}/`, villas: list, qa }), `/villas/${slugify(area)}/`);
 
     // 3a. Локация × спальни (≥3)
     for (const bed of [1, 2, 3, 4, 5]) {
       const sub = list.filter((v) => (bed === 5 ? v.bedrooms >= 5 : v.bedrooms === bed));
       if (sub.length < 3) continue;
-      await add(`villas/${slugify(area)}/${bed}-bedroom/index.html`, listPage({ title: `${BED_LABEL[bed]} Villas in ${area}, Bali — ${sub.length} from ${usd(Math.min(...sub.map((v) => v.priceNight)))}/night`, h1: `${BED_LABEL[bed]} Villas in ${area}`, intro: `${sub.length} ${BED_LABEL[bed].toLowerCase()} villas in ${area} with live direct-booking prices.`, urlPath: `/villas/${slugify(area)}/${bed}-bedroom/`, villas: sub }), `/villas/${slugify(area)}/${bed}-bedroom/`);
+      const subP = sub.map((v) => v.priceNight).filter(Boolean);
+      await add(`villas/${slugify(area)}/${bed}-bedroom/index.html`, listPage({ title: `${BED_LABEL[bed]} Villas in ${area}, Bali — ${sub.length} Options${subP.length ? ` from ${usd(Math.min(...subP))}/night` : ""}`, h1: `${BED_LABEL[bed]} Villas in ${area}`, intro: `${sub.length} ${BED_LABEL[bed].toLowerCase()} villas in ${area} with direct booking.`, urlPath: `/villas/${slugify(area)}/${bed}-bedroom/`, villas: sub }), `/villas/${slugify(area)}/${bed}-bedroom/`);
     }
 
     // 3b. Локация × monthly (≥3)
@@ -395,10 +417,12 @@ async function main() {
       await add(`villas/${slugify(area)}/monthly/index.html`, listPage({ title: `Monthly Villa Rentals in ${area}, Bali — from ${usd(Math.min(...monthly.map((v) => v.priceMonth)))}/month`, h1: `Monthly Villa Rentals in ${area}`, intro: `${monthly.length} villas in ${area} available for monthly stays — ideal for digital nomads and long-term guests.`, urlPath: `/villas/${slugify(area)}/monthly/`, villas: monthly }), `/villas/${slugify(area)}/monthly/`);
   }
 
-  // 4. Price Index
-  const pi = priceIndexPage(villas, areas);
-  await add(`bali-villa-prices/index.html`, pi.html, `/bali-villa-prices/`);
-  await out(`data/price-index.json`, JSON.stringify(pi.json, null, 2));
+  // 4. Price Index — только если есть публичные цены (иначе страница была бы пустой)
+  if (villas.some((v) => v.priceNight)) {
+    const pi = priceIndexPage(villas, areas);
+    await add(`bali-villa-prices/index.html`, pi.html, `/bali-villa-prices/`);
+    await out(`data/price-index.json`, JSON.stringify(pi.json, null, 2));
+  }
   await out(`data/villas.json`, JSON.stringify(villas.map(({ description, ...v }) => v), null, 2));
 
   // 5. GEO-файлы + фиды

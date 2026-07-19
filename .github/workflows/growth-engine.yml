@@ -24,12 +24,11 @@ jobs:
         with:
           node-version: 20
 
-      - name: Generate pages from live API
+      - name: Generate pages from real-villas.json
         env:
-          API_BASE: https://mantavillas.com   # или ваш API-домен
+          # API отключён: источник истины — growth-engine/real-villas.json (наши реальные виллы).
           SITE_ORIGIN: https://balivillas.ai
           OUT_DIR: ${{ github.workspace }}    # кладём в корень репо (= корень сайта)
-          REQUIRE_API: "1"                    # защита: без живого API не публиковать
         run: node growth-engine/engine.mjs
 
       - name: Commit updated pages
