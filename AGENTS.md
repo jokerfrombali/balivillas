@@ -13,4 +13,5 @@
 - For villa pages and Airbnb imports, preserve the approved current BaliVillas design/layout: hero photo grid, booking card, smart back navigation, photo-tour gallery sections, captions, and existing visual style. Do not replace it with a simplified or unrelated template unless the user explicitly asks for a redesign.
 - Canonical villa page design reference: `/villa/premier-umalas-16-3br-pool-townhouse/`. For every new villa page, clone/adapt this exact design system and interaction model first, then replace content/photos. Do not invent a new villa page layout.
 - Canonical area listing design reference: `/villas/umalas/`. For every `/villas/{area}/` page, clone/adapt this exact catalog design first, then replace the area copy and cards. Area pages must show only villas for that area unless the user explicitly asks for a mixed catalog.
+- Area category pages such as /villas/sanur/ and /villas/umalas/ must stay focused on that area: no generic Bali/AI search blocks in the category header, default filters must match the area, counters/titles must name the current area, and cards must only include villas from that area.
 
