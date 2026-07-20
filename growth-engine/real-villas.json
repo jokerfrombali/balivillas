@@ -95,5 +95,226 @@
       "/public-objects/images/villa-black-pool-6.jpg"
     ],
     "description": "Villa Black Pool is a spacious, modern 4-bedroom villa featuring a stunning private black-tiled pool, lush tropical garden, and stylish open-plan design. Located in a peaceful corner of Sanur, it combines privacy with convenience — just a short walk to the beach, cafes, and shops.\n\nBedrooms: 4 private bedrooms with A/C, blackout curtains, and garden views; soft linens, fresh towels, and quality mattresses. Each of the 4 bedrooms has a private en-suite bathroom, plus a refreshing outdoor shower by the pool. Fully equipped kitchen with stove, fridge, water filter, and utensils; coffee, tea, and cooking essentials provided. Large open living room with comfortable lounge area and pool view, indoor dining space and shaded outdoor terrace.\n\nHousekeeping 2x a week, bed linens changed every 5 days, pool and garden maintenance 2x a week. High-speed fiber Wi-Fi (300 Mbps) and a work-friendly desk setup — ideal for remote work. Walking distance to Sanur beach, yoga studios, massage spots, and restaurants. Safe, calm area with easy access to Renon, Seminyak, and the airport."
+  },
+  {
+    "id": "own-sanur-2br-townhouse",
+    "slug": "sanur/stylish-2br-pool-townhouse-sanur",
+    "name": "Stylish 2BR Pool Townhouse in Sanur",
+    "area": "Sanur",
+    "areaSlug": "sanur",
+    "bedrooms": 2,
+    "bathrooms": 2.5,
+    "guests": 4,
+    "priceNight": null,
+    "priceMonth": null,
+    "currency": "USD",
+    "amenities": [
+      "Private plunge pool",
+      "Fast Wi-Fi 300 Mbps",
+      "Two king bedrooms",
+      "Dedicated workspace",
+      "Smart TV",
+      "Fully equipped kitchen",
+      "Washing machine",
+      "Safe",
+      "Air conditioning",
+      "Housekeeping 3x/week",
+      "Walk to beach",
+      "Parking for bikes"
+    ],
+    "images": [
+      "/public-objects/images/sanur-2br-townhouse-01.jpg",
+      "/public-objects/images/sanur-2br-townhouse-02.jpg",
+      "/public-objects/images/sanur-2br-townhouse-03.jpg",
+      "/public-objects/images/sanur-2br-townhouse-04.jpg",
+      "/public-objects/images/sanur-2br-townhouse-05.jpg",
+      "/public-objects/images/sanur-2br-townhouse-06.jpg",
+      "/public-objects/images/sanur-2br-townhouse-07.jpg",
+      "/public-objects/images/sanur-2br-townhouse-08.jpg",
+      "/public-objects/images/sanur-2br-townhouse-09.jpg",
+      "/public-objects/images/sanur-2br-townhouse-10.jpg",
+      "/public-objects/images/sanur-2br-townhouse-11.jpg",
+      "/public-objects/images/sanur-2br-townhouse-12.jpg",
+      "/public-objects/images/sanur-2br-townhouse-13.jpg",
+      "/public-objects/images/sanur-2br-townhouse-14.jpg",
+      "/public-objects/images/sanur-2br-townhouse-15.jpg",
+      "/public-objects/images/sanur-2br-townhouse-16.jpg",
+      "/public-objects/images/sanur-2br-townhouse-17.jpg",
+      "/public-objects/images/sanur-2br-townhouse-18.jpg",
+      "/public-objects/images/sanur-2br-townhouse-19.jpg",
+      "/public-objects/images/sanur-2br-townhouse-20.jpg",
+      "/public-objects/images/sanur-2br-townhouse-21.jpg",
+      "/public-objects/images/sanur-2br-townhouse-22.jpg",
+      "/public-objects/images/sanur-2br-townhouse-23.jpg",
+      "/public-objects/images/sanur-2br-townhouse-24.jpg",
+      "/public-objects/images/sanur-2br-townhouse-25.jpg",
+      "/public-objects/images/sanur-2br-townhouse-26.jpg",
+      "/public-objects/images/sanur-2br-townhouse-27.jpg",
+      "/public-objects/images/sanur-2br-townhouse-28.jpg",
+      "/public-objects/images/sanur-2br-townhouse-29.jpg",
+      "/public-objects/images/sanur-2br-townhouse-30.jpg",
+      "/public-objects/images/sanur-2br-townhouse-31.jpg",
+      "/public-objects/images/sanur-2br-townhouse-32.jpg",
+      "/public-objects/images/sanur-2br-townhouse-33.jpg"
+    ],
+    "cardImage": "/public-objects/images/sanur-2br-townhouse-29.jpg",
+    "topGallery": [
+      "/public-objects/images/sanur-2br-townhouse-29.jpg",
+      "/public-objects/images/sanur-2br-townhouse-01.jpg",
+      "/public-objects/images/sanur-2br-townhouse-04.jpg",
+      "/public-objects/images/sanur-2br-townhouse-12.jpg",
+      "/public-objects/images/sanur-2br-townhouse-15.jpg"
+    ],
+    "lat": -8.6911,
+    "lng": 115.2599,
+    "airbnbUrl": "https://www.airbnb.com/rooms/1623064753663498759",
+    "bookingUrl": null,
+    "photosSource": "https://ru.airbnb.com/rooms/1623064753663498759",
+    "monthly": false,
+    "updatedAt": "2026-07-21",
+    "photoGroups": [
+      {
+        "name": "Living room",
+        "airbnbLabel": "Living room",
+        "images": [
+          "/public-objects/images/sanur-2br-townhouse-01.jpg",
+          "/public-objects/images/sanur-2br-townhouse-02.jpg",
+          "/public-objects/images/sanur-2br-townhouse-03.jpg"
+        ]
+      },
+      {
+        "name": "Full kitchen",
+        "airbnbLabel": "Full kitchen",
+        "images": [
+          "/public-objects/images/sanur-2br-townhouse-04.jpg",
+          "/public-objects/images/sanur-2br-townhouse-05.jpg",
+          "/public-objects/images/sanur-2br-townhouse-06.jpg",
+          "/public-objects/images/sanur-2br-townhouse-07.jpg",
+          "/public-objects/images/sanur-2br-townhouse-08.jpg"
+        ]
+      },
+      {
+        "name": "Dining area",
+        "airbnbLabel": "Dining area",
+        "images": [
+          "/public-objects/images/sanur-2br-townhouse-09.jpg",
+          "/public-objects/images/sanur-2br-townhouse-10.jpg",
+          "/public-objects/images/sanur-2br-townhouse-11.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 1",
+        "airbnbLabel": "Bedroom 1",
+        "images": [
+          "/public-objects/images/sanur-2br-townhouse-12.jpg",
+          "/public-objects/images/sanur-2br-townhouse-13.jpg",
+          "/public-objects/images/sanur-2br-townhouse-14.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 2",
+        "airbnbLabel": "Bedroom 2",
+        "images": [
+          "/public-objects/images/sanur-2br-townhouse-15.jpg",
+          "/public-objects/images/sanur-2br-townhouse-16.jpg",
+          "/public-objects/images/sanur-2br-townhouse-17.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 1",
+        "airbnbLabel": "Full bathroom 1",
+        "images": [
+          "/public-objects/images/sanur-2br-townhouse-18.jpg",
+          "/public-objects/images/sanur-2br-townhouse-19.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 2",
+        "airbnbLabel": "Full bathroom 2",
+        "images": [
+          "/public-objects/images/sanur-2br-townhouse-20.jpg",
+          "/public-objects/images/sanur-2br-townhouse-21.jpg",
+          "/public-objects/images/sanur-2br-townhouse-22.jpg"
+        ]
+      },
+      {
+        "name": "Half bathroom",
+        "airbnbLabel": "Half bathroom",
+        "images": [
+          "/public-objects/images/sanur-2br-townhouse-23.jpg"
+        ]
+      },
+      {
+        "name": "Patio",
+        "airbnbLabel": "Patio",
+        "images": [
+          "/public-objects/images/sanur-2br-townhouse-24.jpg"
+        ]
+      },
+      {
+        "name": "Laundry area",
+        "airbnbLabel": "Laundry area",
+        "images": [
+          "/public-objects/images/sanur-2br-townhouse-25.jpg"
+        ]
+      },
+      {
+        "name": "Exterior",
+        "airbnbLabel": "Exterior",
+        "images": [
+          "/public-objects/images/sanur-2br-townhouse-26.jpg",
+          "/public-objects/images/sanur-2br-townhouse-27.jpg",
+          "/public-objects/images/sanur-2br-townhouse-28.jpg"
+        ]
+      },
+      {
+        "name": "Pool",
+        "airbnbLabel": "Pool",
+        "images": [
+          "/public-objects/images/sanur-2br-townhouse-29.jpg",
+          "/public-objects/images/sanur-2br-townhouse-30.jpg",
+          "/public-objects/images/sanur-2br-townhouse-31.jpg"
+        ]
+      },
+      {
+        "name": "Additional photos",
+        "airbnbLabel": "Additional photos",
+        "images": [
+          "/public-objects/images/sanur-2br-townhouse-32.jpg",
+          "/public-objects/images/sanur-2br-townhouse-33.jpg"
+        ]
+      }
+    ],
+    "description": "Modern 2-bedroom townhouse in Sanur, about 15 minutes walk to the beach, with a private plunge pool, enclosed living room, full kitchen, fast Wi-Fi and two king bedrooms with en-suite bathrooms.",
+    "categories": [
+      "all-villas",
+      "property-rental",
+      "area:sanur",
+      "bedrooms:2",
+      "area-bedrooms:sanur:2",
+      "new-on-balivillas",
+      "filter:private-pool",
+      "filter:fast-wifi",
+      "filter:kitchen",
+      "filter:air-conditioning",
+      "filter:parking",
+      "filter:near-beach"
+    ],
+    "filterTags": [
+      "private-pool",
+      "fast-wifi",
+      "kitchen",
+      "air-conditioning",
+      "parking",
+      "near-beach"
+    ],
+    "seoSections": {
+      "allVillas": true,
+      "area": true,
+      "bedroomPage": true,
+      "monthly": false,
+      "newOnBaliVillas": true,
+      "luxury": false
+    }
   }
 ]
