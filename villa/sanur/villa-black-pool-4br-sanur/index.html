@@ -838,11 +838,27 @@ document.addEventListener('DOMContentLoaded', function() {
       img.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        window.location.href = '/villa/sanur/villa-black-pool-4br-sanur/gallery/?returnTo=' + encodeURIComponent(window.location.pathname + window.location.search + window.location.hash);
+        goToBlackPoolGallery(e);
       });
     }
   });
 
+  const BLACK_POOL_GALLERY_URL = '/villa/sanur/villa-black-pool-4br-sanur/gallery/';
+  const goToBlackPoolGallery = function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (typeof e.stopImmediatePropagation === 'function') e.stopImmediatePropagation();
+    window.location.href = BLACK_POOL_GALLERY_URL + '?returnTo=' + encodeURIComponent(window.location.pathname + window.location.search + window.location.hash);
+  };
+
+  // Force sleep photos to open this villa gallery, not the old embedded gallery
+  const sleepSection = document.querySelector('#section-sleep');
+  if (sleepSection) {
+    sleepSection.querySelectorAll('img, button, a, div[role="button"]').forEach(el => {
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', goToBlackPoolGallery, true);
+    });
+  }
   // Handle "Show all photos" button
   document.querySelectorAll('button, a, span').forEach(el => {
     if (el.textContent && el.textContent.includes('Show all photos')) {
@@ -850,7 +866,7 @@ document.addEventListener('DOMContentLoaded', function() {
       el.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        window.location.href = '/villa/sanur/villa-black-pool-4br-sanur/gallery/?returnTo=' + encodeURIComponent(window.location.pathname + window.location.search + window.location.hash);
+        goToBlackPoolGallery(e);
       });
     }
   });
@@ -864,7 +880,7 @@ document.addEventListener('DOMContentLoaded', function() {
         parent.addEventListener('click', function(e) {
           e.preventDefault();
           e.stopPropagation();
-          window.location.href = '/villa/sanur/villa-black-pool-4br-sanur/gallery/?returnTo=' + encodeURIComponent(window.location.pathname + window.location.search + window.location.hash);
+          goToBlackPoolGallery(e);
         });
       }
     });
@@ -1199,6 +1215,7 @@ function villaSmartBack() {
 </script>
 </body>
 </html>
+
 
 
 
