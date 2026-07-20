@@ -10,75 +10,200 @@
 <meta property="og:description" content="Private villas in Umalas, Bali with direct WhatsApp booking. Compare 2-3 bedroom pool villas near Canggu, Berawa and Seminyak.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://balivillas.ai/villas/umalas/">
+<link rel="icon" type="image/png" href="/favicon.png">
 <link rel="alternate" type="application/json" href="https://balivillas.ai/data/villas.json" title="Villa data (JSON)">
-<style>*{box-sizing:border-box;margin:0}body{font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;color:#0a0a0a;background:#fafaf7;padding:0 16px;max-width:960px;margin:0 auto}h1{font-size:clamp(26px,4vw,40px);line-height:1.15;margin:24px 0 8px}h2{font-size:22px;margin:32px 0 8px}h3{font-size:18px;margin:18px 0 6px}p{margin:8px 0}a{color:#0a5c36}nav{padding:14px 0;border-bottom:1px solid #e6e3dc;font-size:14px}nav a{margin-right:16px;text-decoration:none}img{max-width:100%;height:auto;border-radius:12px}.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:16px 0}.c{background:#fff;border:1px solid #e6e3dc;border-radius:14px;padding:14px}.c img{aspect-ratio:4/3;object-fit:cover;width:100%}.btn{display:inline-block;background:#0a0a0a;color:#fff!important;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600;margin:10px 8px 10px 0}.btn2{background:#fff;color:#0a0a0a!important;border:1px solid #0a0a0a}.meta{color:#6b6b66;font-size:14px}.facts{background:#f4f2ed;border-radius:12px;padding:14px 18px;margin:14px 0}.facts li{margin:4px 0}.links{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.links a{background:#fff;border:1px solid #e6e3dc;border-radius:999px;padding:7px 12px;text-decoration:none;font-size:14px}footer{margin:48px 0 24px;padding-top:16px;border-top:1px solid #e6e3dc;font-size:13px;color:#6b6b66}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,sans-serif;background:#fafaf7;color:#0a0a0a;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.font-display{font-family:Fraunces,Georgia,serif}
+.nav{position:sticky;top:0;z-index:50;background:rgba(250,250,247,.84);backdrop-filter:blur(16px);border-bottom:1px solid #e6e3dc}
+.nav-inner{max-width:1400px;margin:0 auto;height:72px;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{font-family:Fraunces,Georgia,serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:-.02em}
+.brand em{font-weight:400}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-size:14px;font-weight:500;text-decoration:none;position:relative}
+.nav-links a:after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:1.5px;background:#0a0a0a;transform:scaleX(0);transform-origin:left;transition:.22s}
+.nav-links a:hover:after{transform:scaleX(1)}
+.nav-cta{display:inline-flex;align-items:center;border-radius:999px;background:#0a0a0a;color:#fff;text-decoration:none;font-size:13px;font-weight:700;padding:10px 18px}
+.hero{position:relative;min-height:560px;background:#0a0a0a;color:#fff;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.74),rgba(0,0,0,.38),rgba(0,0,0,.18)),url('/public-objects/images/premier-umalas-16-1.jpg') center/cover no-repeat;filter:saturate(1.02)}
+.hero-inner{position:relative;max-width:1400px;margin:0 auto;padding:98px 40px 76px;display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:54px;align-items:end}
+.kicker{text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:800;color:rgba(255,255,255,.72);margin-bottom:18px}
+h1{font-family:Fraunces,Georgia,serif;font-size:clamp(46px,7vw,92px);line-height:.94;letter-spacing:-.045em;font-weight:600;max-width:850px;text-shadow:0 2px 28px rgba(0,0,0,.45)}
+.hero-copy{font-size:18px;line-height:1.7;color:rgba(255,255,255,.82);max-width:680px;margin-top:24px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:14px 24px;font-size:14px;font-weight:700;text-decoration:none;border:1px solid transparent}
+.btn-primary{background:#fff;color:#0a0a0a}
+.btn-dark{background:#0a0a0a;color:#fff}
+.btn-outline{border-color:rgba(255,255,255,.38);color:#fff;background:rgba(255,255,255,.08)}
+.hero-panel{background:rgba(250,250,247,.96);color:#0a0a0a;border:1px solid rgba(255,255,255,.28);border-radius:20px;padding:22px;box-shadow:0 24px 80px rgba(0,0,0,.28)}
+.hero-panel h2{font-family:Fraunces,Georgia,serif;font-size:25px;line-height:1.1;margin-bottom:14px}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.fact{border:1px solid #e6e3dc;background:#fff;border-radius:14px;padding:12px}
+.fact strong{display:block;font-size:20px;font-family:Fraunces,Georgia,serif}
+.fact span{font-size:12px;color:#6b6b66}
+main{max-width:1240px;margin:0 auto;padding:52px 40px 80px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:22px}
+.section-head h2{font-family:Fraunces,Georgia,serif;font-size:clamp(30px,4vw,48px);line-height:1;letter-spacing:-.035em}
+.section-head p{max-width:500px;color:#6b6b66;line-height:1.65}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.card{background:#fff;border:1px solid #e6e3dc;border-radius:20px;overflow:hidden;transition:transform .28s,box-shadow .28s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 54px rgba(0,0,0,.11)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.card-body{padding:20px}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.badge{display:inline-flex;border-radius:999px;background:#f2efe8;padding:5px 10px;font-size:12px;font-weight:700;color:#4d4a43}
+.card h3{font-family:Fraunces,Georgia,serif;font-size:27px;line-height:1.08;letter-spacing:-.02em;margin-bottom:10px}
+.meta{color:#6b6b66;font-size:14px;margin-bottom:12px}
+.card p{line-height:1.65;color:#3d3a35}
+.card-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.article{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:44px;margin-top:64px}
+.article h2,.faq h2{font-family:Fraunces,Georgia,serif;font-size:42px;line-height:1;letter-spacing:-.035em;margin-bottom:18px}
+.article p,.faq p{line-height:1.75;color:#3d3a35;margin:12px 0}
+.fit-box{background:#0a0a0a;color:#fff;border-radius:22px;padding:28px;align-self:start}
+.fit-box h3{font-family:Fraunces,Georgia,serif;font-size:28px;line-height:1.1;margin-bottom:16px}
+.fit-box li{margin:10px 0;color:rgba(255,255,255,.78);line-height:1.55}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.links a{border:1px solid #e6e3dc;background:#fff;border-radius:999px;padding:9px 14px;text-decoration:none;font-size:14px;font-weight:600}
+.faq{margin-top:68px;border-top:1px solid #e6e3dc;padding-top:42px}
+.faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.faq-item{background:#fff;border:1px solid #e6e3dc;border-radius:18px;padding:20px}
+.faq-item h3{font-size:17px;margin-bottom:8px}
+footer{border-top:1px solid #e6e3dc;padding:26px 40px;margin-top:30px;color:#6b6b66;font-size:13px;max-width:1240px;margin-left:auto;margin-right:auto}
+@media(max-width:900px){.nav-inner{padding:0 20px}.nav-links{display:none}.hero-inner{grid-template-columns:1fr;padding:74px 22px 48px}.hero-panel{max-width:440px}.section-head,.article,.faq-grid{display:block}.cards{grid-template-columns:1fr}main{padding:40px 20px 60px}footer{padding:24px 20px}}
+</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Private Villas in Umalas, Bali","numberOfItems":2,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://balivillas.ai/villa/premier-umalas-16-3br-pool-townhouse/"},{"@type":"ListItem","position":2,"url":"https://balivillas.ai/villa/premier-umalas-17-2br-pool-home/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Umalas a good area to rent a villa in Bali?","acceptedAnswer":{"@type":"Answer","text":"Yes. Umalas is a good choice if you want a quieter residential base close to Canggu, Berawa and Seminyak without staying directly in the busiest streets."}},{"@type":"Question","name":"What kind of villas are available in Umalas?","acceptedAnswer":{"@type":"Answer","text":"Umalas is strongest for private pool homes, townhouses and modern 2-3 bedroom villas that work well for families, couples, small groups and remote workers."}},{"@type":"Question","name":"Can I book an Umalas villa direct?","acceptedAnswer":{"@type":"Answer","text":"Yes. Message BaliVillas.ai on WhatsApp for current availability, direct rates and stay-length options without OTA commission."}},{"@type":"Question","name":"Is Umalas better than Canggu or Seminyak?","acceptedAnswer":{"@type":"Answer","text":"Umalas is better when you want calmer residential streets while staying within easy reach of Canggu cafes, Berawa Beach and Seminyak restaurants."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://balivillas.ai/"},{"@type":"ListItem","position":2,"name":"Villas","item":"https://balivillas.ai/villas/"},{"@type":"ListItem","position":3,"name":"Umalas villas","item":"https://balivillas.ai/villas/umalas/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BaliVillas.ai","url":"https://balivillas.ai","sameAs":["https://mantavillas.com"]}</script>
 </head>
 <body>
-<nav><a href="/">BaliVillas.ai</a><a href="/villas/">Villas</a><a href="/property-rental/">Rental catalog</a><a href="/about/">About</a><a href="https://wa.me/6281239081021?text=Hi!%20I'm%20interested%20in%20a%20villa%20in%20Umalas.%20Is%20it%20available%3F%20%5Bvia%20balivillas.ai%2Fvillas%2Fumalas%2F%5D">WhatsApp</a></nav>
-
-<h1>Private Villas in Umalas, Bali</h1>
-<p><strong>Umalas is one of the most practical areas for renting a private villa in Bali: quiet enough for longer stays, but close to Canggu, Berawa and Seminyak.</strong> Browse our Umalas villas below and message us on WhatsApp for live availability and direct rates.</p>
-<a class="btn" href="https://wa.me/6281239081021?text=Hi!%20I'm%20interested%20in%20a%20villa%20in%20Umalas.%20Please%20send%20availability%20and%20direct%20rates.%20%5Bvia%20balivillas.ai%2Fvillas%2Fumalas%2F%5D">Get Umalas villa availability →</a>
-<a class="btn btn2" href="/property-rental/?location=umalas">Open Umalas filter</a>
-
-<h2>Available Umalas villas</h2>
-<div class="g">
-  <div class="c">
-    <img loading="lazy" src="/public-objects/images/premier-umalas-16-1.jpg" alt="Premier Umalas 16 — 3 bedroom private pool townhouse in Umalas, Bali">
-    <h3><a href="/villa/premier-umalas-16-3br-pool-townhouse/">Premier Umalas 16 — Stylish 3BR Pool Townhouse</a></h3>
-    <p class="meta">Umalas · 3 bedrooms · 3 bathrooms · sleeps 6</p>
-    <p>Modern two-floor townhouse with private pool, fast Wi-Fi, workspaces, Smart TV, full kitchen and three balcony bedrooms. This is the villa that previously lived at <code>/villa/</code>.</p>
-    <a class="btn btn2" href="/villa/premier-umalas-16-3br-pool-townhouse/">View villa</a>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/"><em>Bali</em>Villas.ai</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="/property-rental/">Villas</a>
+      <a href="/villas/">All villas</a>
+      <a href="/villas/sanur/">Sanur</a>
+      <a href="/villas/ungasan/">Ungasan</a>
+      <a href="/#management">Villa Management</a>
+    </nav>
+    <a class="nav-cta" href="https://wa.me/6281239081021?text=Hi!%20I'm%20interested%20in%20a%20villa%20in%20Umalas.%20Please%20send%20availability%20and%20direct%20rates.%20%5Bvia%20balivillas.ai%2Fvillas%2Fumalas%2F%5D">WhatsApp</a>
   </div>
-  <div class="c">
-    <img loading="lazy" src="/public-objects/images/premier-umalas-17-1.jpg" alt="Premier Umalas 17 — 2 bedroom private pool home in Umalas, Bali">
-    <h3><a href="/villa/premier-umalas-17-2br-pool-home/">Premier Umalas 17 — Stylish 2BR Private Pool Home</a></h3>
-    <p class="meta">Umalas · 2 bedrooms · 2 bathrooms · sleeps 4</p>
-    <p>Compact private pool home for couples, small families or two remote workers who want a calmer base near Canggu and Berawa.</p>
-    <a class="btn btn2" href="/villa/premier-umalas-17-2br-pool-home/">View villa</a>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="kicker">Umalas Villa Rentals</div>
+      <h1>Private Villas in Umalas, Bali</h1>
+      <p class="hero-copy">A quieter residential base between Canggu, Berawa and Seminyak. Compare private pool homes and townhouses, then book direct with BaliVillas.ai.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://wa.me/6281239081021?text=Hi!%20I'm%20interested%20in%20a%20villa%20in%20Umalas.%20Please%20send%20availability%20and%20direct%20rates.%20%5Bvia%20balivillas.ai%2Fvillas%2Fumalas%2F%5D">Get Umalas availability</a>
+        <a class="btn btn-outline" href="/property-rental/?location=umalas">Open Umalas filter</a>
+      </div>
+    </div>
+    <aside class="hero-panel">
+      <h2>Why guests choose Umalas</h2>
+      <p>Calmer streets, private pools, fast access to Canggu and Berawa, and villa layouts that work for families and remote work.</p>
+      <div class="fact-grid">
+        <div class="fact"><strong>2</strong><span>listed Umalas villas</span></div>
+        <div class="fact"><strong>2-3 BR</strong><span>best-fit layouts</span></div>
+        <div class="fact"><strong>Pool</strong><span>private villa style</span></div>
+        <div class="fact"><strong>Direct</strong><span>WhatsApp booking</span></div>
+      </div>
+    </aside>
   </div>
-</div>
+</section>
 
-<h2>Why rent a villa in Umalas?</h2>
-<p>Umalas sits between the busier rental markets of Canggu, Berawa and Seminyak, which makes it useful for guests who want access without constant traffic and nightlife outside the door. It is especially strong for private pool townhouses, modern family villas and comfortable homes for monthly stays. Many guests choose Umalas because it gives them a quieter residential feeling while keeping cafes, gyms, coworking spaces, international schools, restaurants and beaches within practical scooter or car distance.</p>
-<p>For families, Umalas can be easier than central Canggu because the streets feel more residential and the villa layouts often include enclosed living, work areas and full kitchens. For remote workers, the area works well because fast Wi-Fi, desks and calmer mornings matter more than being directly on the beach. For couples or small groups, Umalas is a good middle point: you can reach Berawa Beach, Batu Belig, Seminyak dining and Canggu cafes without committing to one single scene.</p>
-<p>If you are comparing locations, choose Umalas when privacy and convenience are more important than walking distance to nightlife. Choose Canggu or Berawa if surf, beach clubs and cafes are the main reason for the trip. Choose Sanur for calmer family beach stays, and Ungasan or Uluwatu for cliff-side villas, beaches and southern Bali views.</p>
+<main>
+  <div class="section-head">
+    <h2>Available Umalas Villas</h2>
+    <p>These are real villa pages in the current BaliVillas.ai inventory. The first villa is the one that previously opened from the old generic <code>/villa/</code> URL.</p>
+  </div>
 
-<div class="facts">
-  <strong>Best fit:</strong>
-  <ul>
-    <li>Families who want a private pool and quieter streets.</li>
-    <li>Couples or small groups looking for 2-3 bedroom villas.</li>
-    <li>Remote workers who need Wi-Fi, workspaces and access to Canggu.</li>
-    <li>Monthly stays where kitchen, laundry and privacy matter.</li>
-  </ul>
-</div>
+  <section class="cards" aria-label="Available villas in Umalas">
+    <article class="card">
+      <img loading="lazy" src="/public-objects/images/premier-umalas-16-1.jpg" alt="Premier Umalas 16 private pool townhouse in Umalas, Bali">
+      <div class="card-body">
+        <div class="badge-row"><span class="badge">Umalas</span><span class="badge">3 bedrooms</span><span class="badge">Private pool</span></div>
+        <h3>Premier Umalas 16 — Stylish 3BR Pool Townhouse</h3>
+        <p class="meta">3 bedrooms · 3 bathrooms · sleeps 6 · Wi-Fi 200 Mbps</p>
+        <p>Modern two-floor townhouse with a private pool, workspaces, Smart TV, full kitchen, washing machine and three balcony bedrooms. Strong fit for families, small groups and longer stays.</p>
+        <div class="card-actions">
+          <a class="btn btn-dark" href="/villa/premier-umalas-16-3br-pool-townhouse/">View villa</a>
+          <a class="btn btn2" href="https://wa.me/6281239081021?text=Hi!%20I'm%20interested%20in%20Premier%20Umalas%2016.%20Is%20it%20available%3F">Check dates</a>
+        </div>
+      </div>
+    </article>
 
-<h2>Related villa searches</h2>
-<div class="links">
-  <a href="/villas/">All Bali villas</a>
-  <a href="/villas/sanur/">Villas in Sanur</a>
-  <a href="/villas/ungasan/">Villas in Ungasan</a>
-  <a href="/property-rental/?location=umalas">Interactive Umalas filter</a>
-  <a href="/villa/premier-umalas-16-3br-pool-townhouse/">3BR Umalas townhouse</a>
-  <a href="/villa/premier-umalas-17-2br-pool-home/">2BR Umalas pool home</a>
-</div>
+    <article class="card">
+      <img loading="lazy" src="/public-objects/images/premier-umalas-17-1.jpg" alt="Premier Umalas 17 private pool home in Umalas, Bali">
+      <div class="card-body">
+        <div class="badge-row"><span class="badge">Umalas</span><span class="badge">2 bedrooms</span><span class="badge">Private pool</span></div>
+        <h3>Premier Umalas 17 — Stylish 2BR Private Pool Home</h3>
+        <p class="meta">2 bedrooms · 2 bathrooms · sleeps 4 · workspaces</p>
+        <p>Compact private pool home for couples, small families or two remote workers who want a calmer base near Canggu, Berawa and Seminyak.</p>
+        <div class="card-actions">
+          <a class="btn btn-dark" href="/villa/premier-umalas-17-2br-pool-home/">View villa</a>
+          <a class="btn btn2" href="https://wa.me/6281239081021?text=Hi!%20I'm%20interested%20in%20Premier%20Umalas%2017.%20Is%20it%20available%3F">Check dates</a>
+        </div>
+      </div>
+    </article>
+  </section>
 
-<h2>FAQ</h2>
-<h3>Is Umalas a good area to rent a villa in Bali?</h3>
-<p>Yes. Umalas is a good choice if you want a quieter residential base close to Canggu, Berawa and Seminyak without staying directly in the busiest streets.</p>
-<h3>What kind of villas are available in Umalas?</h3>
-<p>Umalas is strongest for private pool homes, townhouses and modern 2-3 bedroom villas that work well for families, couples, small groups and remote workers.</p>
-<h3>Can I book an Umalas villa direct?</h3>
-<p>Yes. Message BaliVillas.ai on WhatsApp for current availability, direct rates and stay-length options without OTA commission.</p>
-<h3>Is Umalas better than Canggu or Seminyak?</h3>
-<p>Umalas is better when you want calmer residential streets while staying within easy reach of Canggu cafes, Berawa Beach and Seminyak restaurants.</p>
+  <section class="article">
+    <div>
+      <h2>Why Rent a Villa in Umalas?</h2>
+      <p>Umalas sits between the busier rental markets of Canggu, Berawa and Seminyak, which makes it useful for guests who want access without constant traffic and nightlife outside the door. It is especially strong for private pool townhouses, modern family villas and comfortable homes for monthly stays.</p>
+      <p>For families, Umalas can be easier than central Canggu because the streets feel more residential and the villa layouts often include enclosed living, work areas and full kitchens. For remote workers, the area works well because fast Wi-Fi, desks and calmer mornings matter more than being directly on the beach.</p>
+      <p>If you are comparing locations, choose Umalas when privacy and convenience are more important than walking distance to nightlife. Choose Canggu or Berawa if surf, beach clubs and cafes are the main reason for the trip. Choose Sanur for calmer family beach stays, and Ungasan or Uluwatu for southern Bali beaches and cliff-side views.</p>
+      <div class="links">
+        <a href="/villas/">All Bali villas</a>
+        <a href="/villas/sanur/">Villas in Sanur</a>
+        <a href="/villas/ungasan/">Villas in Ungasan</a>
+        <a href="/property-rental/?location=umalas">Interactive Umalas filter</a>
+      </div>
+    </div>
+    <aside class="fit-box">
+      <h3>Best fit for</h3>
+      <ul>
+        <li>Families who want a private pool and quieter streets.</li>
+        <li>Couples or small groups looking for 2-3 bedroom villas.</li>
+        <li>Remote workers who need Wi-Fi, workspaces and access to Canggu.</li>
+        <li>Monthly stays where kitchen, laundry and privacy matter.</li>
+      </ul>
+    </aside>
+  </section>
 
-<p><a href="/villas/">All villas</a> · <a href="https://wa.me/6281239081021?text=Hi!%20I'm%20interested%20in%20a%20villa%20in%20Umalas.%20Please%20send%20availability%20and%20direct%20rates.%20%5Bvia%20balivillas.ai%2Fvillas%2Fumalas%2F%5D">WhatsApp us</a></p>
-<footer>Updated 2026-07-20 · Data: BaliVillas.ai rental inventory · Book direct — no OTA fees · <a href="/data/villas.json">JSON</a> · <a href="/llms.txt">llms.txt</a></footer>
+  <section class="faq">
+    <h2>Umalas Villa FAQ</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Is Umalas a good area to rent a villa in Bali?</h3>
+        <p>Yes. Umalas is a good choice if you want a quieter residential base close to Canggu, Berawa and Seminyak without staying directly in the busiest streets.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What kind of villas are available in Umalas?</h3>
+        <p>Umalas is strongest for private pool homes, townhouses and modern 2-3 bedroom villas that work well for families, couples, small groups and remote workers.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I book an Umalas villa direct?</h3>
+        <p>Yes. Message BaliVillas.ai on WhatsApp for current availability, direct rates and stay-length options without OTA commission.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is Umalas better than Canggu or Seminyak?</h3>
+        <p>Umalas is better when you want calmer residential streets while staying within easy reach of Canggu cafes, Berawa Beach and Seminyak restaurants.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>Updated 2026-07-20 · BaliVillas.ai rental inventory · Book direct — no OTA fees · <a href="/data/villas.json">JSON</a> · <a href="/sitemap.xml">Sitemap</a></footer>
 </body>
 </html>
