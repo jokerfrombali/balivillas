@@ -214,7 +214,7 @@
 <body>
     <div class="gallery-header" id="galleryHeader">
         <div class="header-top">
-            <button class="back-btn" onclick="window.location.href='f2089f67.html'">
+            <button class="back-btn" onclick="gallerySmartBack()" aria-label="Back to villa">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
             </button>
             <div class="header-center">
@@ -407,6 +407,28 @@
     </div>
 
     <script>
+        const DEFAULT_VILLA_URL = '/villa/premier-umalas-16-3br-pool-townhouse/';
+
+        function getSafeReturnUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const returnTo = params.get('returnTo');
+            if (returnTo && returnTo.startsWith('/') && !returnTo.startsWith('//')) return returnTo;
+            return DEFAULT_VILLA_URL;
+        }
+
+        function gallerySmartBack() {
+            const fallback = getSafeReturnUrl();
+            const referrer = document.referrer ? new URL(document.referrer, window.location.origin) : null;
+            if (referrer && referrer.origin === window.location.origin && referrer.pathname !== window.location.pathname && window.history.length > 1) {
+                window.history.back();
+                setTimeout(function() {
+                    if (window.location.pathname.endsWith('/gallery.html')) window.location.href = fallback;
+                }, 350);
+                return;
+            }
+            window.location.href = fallback;
+        }
+
         const allImages = [];
         const imageCategories = [];
         document.querySelectorAll('.photo-item img').forEach(img => {
