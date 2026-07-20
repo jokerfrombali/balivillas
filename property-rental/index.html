@@ -724,7 +724,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   <div class="results-bar">
     <div>
       <p style="font-size:12px;color:#6b6b66;text-transform:uppercase;letter-spacing:0.18em;font-weight:600;margin-bottom:3px">Bali Property Rental</p>
-      <p style="font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:700" id="resultsTitle">515 villas available</p>
+      <p style="font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:700" id="resultsTitle">3 villas available</p>
     </div>
     <div style="display:flex;align-items:center;gap:10px">
       <select class="sort-select" id="sortSelect">
@@ -817,158 +817,10 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   <!-- CARDS GRID -->
   <div class="cards-wrap">
     <div id="cardGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
-
-      <!-- Card 1 -->
-      <div class="prop-card" data-location="canggu" onclick="window.location='/villa/'">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80&auto=format&fit=crop" alt="Villa">
-          <span class="badge">Canggu</span>
-          <span class="badge-type">Villa</span>
-          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Modern 3BR Villa — Infinity Pool</p>
-          <div class="prop-meta" style="margin-bottom:10px">
-            <span>3 bed</span><span>3 bath</span><span>280 m²</span>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$2,400</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="prop-card" data-location="ubud" onclick="window.location='/villa/'">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80&auto=format&fit=crop" alt="Villa">
-          <span class="badge">Ubud</span>
-          <span class="badge-type">Luxury</span>
-          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Jungle Retreat — Pool & Chef</p>
-          <div class="prop-meta" style="margin-bottom:10px">
-            <span>4 bed</span><span>4 bath</span><span>420 m²</span>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$5,800</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Chef</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="prop-card" data-location="seminyak" onclick="window.location='/villa/'">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80&auto=format&fit=crop" alt="Villa">
-          <span class="badge">Seminyak</span>
-          <span class="badge-type">Villa</span>
-          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Beachfront 2BR near Ku De Ta</p>
-          <div class="prop-meta" style="margin-bottom:10px">
-            <span>2 bed</span><span>2 bath</span><span>160 m²</span>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$1,900</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Beach</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="prop-card" data-location="uluwatu" onclick="window.location='/villa/'">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1540541338537-0c4b94d7a37c?w=600&q=80&auto=format&fit=crop" alt="Villa">
-          <span class="badge">Uluwatu</span>
-          <span class="badge-type">Villa</span>
-          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Cliff-top Villa — Ocean View</p>
-          <div class="prop-meta" style="margin-bottom:10px">
-            <span>3 bed</span><span>3 bath</span><span>310 m²</span>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$3,200</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Ocean view</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="prop-card" data-location="berawa" onclick="window.location='/villa/'">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80&auto=format&fit=crop" alt="Villa">
-          <span class="badge">Berawa</span>
-          <span class="badge-type">Apartment</span>
-          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Studio + Rooftop Pool — Nomad Ready</p>
-          <div class="prop-meta" style="margin-bottom:10px">
-            <span>1 bed</span><span>1 bath</span><span>55 m²</span>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$750</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Gym</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Card 6 -->
-      <div class="prop-card" data-location="sanur" data-beds="4" data-guests="8" data-type="villa" data-amenities="pool wifi kitchen work beach family" onclick="window.location='/villa/sanur/villa-black-pool-4br-sanur/'">
-        <div class="img-wrap">
-          <img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — 4BR private pool villa in Sanur">
-          <span class="badge">Sanur</span>
-          <span class="badge-type">Villa</span>
-          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Villa Black Pool — Family 4BR Villa with Big Pool</p>
-          <div class="prop-meta" style="margin-bottom:10px">
-            <span>4 bed</span><span>4 bath</span><span>8 guests</span>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Beach</span>
-            </div>
-          </div>
-        </div>
-      </div>
-<!-- Card 7 -->
+      <!-- Umalas villa 1 -->
       <div class="prop-card" data-location="umalas" data-beds="3" data-guests="6" data-type="villa" data-amenities="pool wifi kitchen work" onclick="window.location='/villa/premier-umalas-16-3br-pool-townhouse/'">
         <div class="img-wrap">
-          <img src="/villa/assets/images/new_img_1.webp" alt="Premier Umalas 16 villa in Umalas">
+          <img src="/villa/assets/images/new_img_1.webp" alt="Premier Umalas 16 — Stylish 3BR Pool Townhouse — Umalas villa">
           <span class="badge">Umalas</span>
           <span class="badge-type">Villa</span>
           <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
@@ -988,13 +840,10 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
             </div>
           </div>
         </div>
-      </div>
-
-
-      <!-- Premier Umalas 17 -->
+      </div>      <!-- Umalas villa 2 -->
       <div class="prop-card" data-location="umalas" data-beds="2" data-guests="4" data-type="villa" data-amenities="pool wifi kitchen work" onclick="window.location='/villa/premier-umalas-17-2br-pool-home/'">
         <div class="img-wrap">
-          <img src="/public-objects/images/premier-umalas-17-24.jpg" alt="Premier Umalas 17 — 2BR private pool villa in Umalas">
+          <img src="/public-objects/images/premier-umalas-17-24.jpg" alt="Premier Umalas 17 — Stylish 2BR Private Pool Home — Umalas villa">
           <span class="badge">Umalas</span>
           <span class="badge-type">Villa</span>
           <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
@@ -1004,7 +853,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
         <div style="padding:14px">
           <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Premier Umalas 17 — Stylish 2BR Private Pool Home</p>
           <div class="prop-meta" style="margin-bottom:10px">
-            <span>2 bed</span><span>2.5 bath</span><span>4 guests</span>
+            <span>2 bed</span><span>2 bath</span><span>4 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
@@ -1014,136 +863,35 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
             </div>
           </div>
         </div>
-      </div>
-      <!-- Card 8 -->
-      <div class="prop-card" data-location="jimbaran" onclick="window.location='/villa/'">
+      </div>      <!-- Sanur villa 3 -->
+      <div class="prop-card" data-location="sanur" data-beds="4" data-guests="8" data-type="villa" data-amenities="pool wifi kitchen work beach" onclick="window.location='/villa/sanur/villa-black-pool-4br-sanur/'">
         <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80&auto=format&fit=crop" alt="Villa">
-          <span class="badge">Jimbaran</span>
-          <span class="badge-type">Luxury</span>
+          <img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — Family 4BR Villa with Big Pool — Sanur villa">
+          <span class="badge">Sanur</span>
+          <span class="badge-type">Villa</span>
           <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Luxury 6BR Estate — Infinity Pool</p>
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Villa Black Pool — Family 4BR Villa with Big Pool</p>
           <div class="prop-meta" style="margin-bottom:10px">
-            <span>6 bed</span><span>6 bath</span><span>900 m²</span>
+            <span>4 bed</span><span>4 bath</span><span>8 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$12,000</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Chef</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 9 -->
-      <div class="prop-card" data-location="canggu" onclick="window.location='/villa/'">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80&auto=format&fit=crop" alt="Villa">
-          <span class="badge">Canggu</span>
-          <span class="badge-type">Apartment</span>
-          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">1BR Coworking Apt, Echo Beach</p>
-          <div class="prop-meta" style="margin-bottom:10px">
-            <span>1 bed</span><span>1 bath</span><span>65 m²</span>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$680</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-            <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Gym</span>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Card 10 -->
-      <div class="prop-card" data-location="kerobokan" onclick="window.location='/villa/'">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&auto=format&fit=crop" alt="Villa">
-          <span class="badge">Kerobokan</span>
-          <span class="badge-type">Villa</span>
-          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">4BR Tropical Villa — Garden & Pool</p>
-          <div class="prop-meta" style="margin-bottom:10px">
-            <span>4 bed</span><span>4 bath</span><span>350 m²</span>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$2,900</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 11 -->
-      <div class="prop-card" data-location="pererenan" onclick="window.location='/villa/'">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80&auto=format&fit=crop" alt="Villa">
-          <span class="badge">Pererenan</span>
-          <span class="badge-type">Villa</span>
-          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Rice Terrace Villa — Romantic Escape</p>
-          <div class="prop-meta" style="margin-bottom:10px">
-            <span>2 bed</span><span>2 bath</span><span>175 m²</span>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$1,600</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 12 -->
-      <div class="prop-card" data-location="nusa-dua" onclick="window.location='/villa/'">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&q=80&auto=format&fit=crop" alt="Villa">
-          <span class="badge">Nusa Dua</span>
-          <span class="badge-type">Luxury</span>
-          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Beachfront Penthouse — 5★ Resort</p>
-          <div class="prop-meta" style="margin-bottom:10px">
-            <span>3 bed</span><span>3 bath</span><span>240 m²</span>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$7,500</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Beach</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
+      </div>    </div>
 
     <!-- Load more -->
     <div style="text-align:center;margin-top:48px">
       <button class="btn-outline">Load more villas</button>
-      <p style="font-size:13px;color:#6b6b66;margin-top:12px">Showing 12 of 515 villas</p>
+      <p style="font-size:13px;color:#6b6b66;margin-top:12px">Showing 3 of 3 villas</p>
     </div>
   </div>
 </div>
@@ -1605,8 +1353,4 @@ function appendPrompt(text) {
 </script>
 </body>
 </html>
-
-
-
-
 
