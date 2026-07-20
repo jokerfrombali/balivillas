@@ -9,7 +9,7 @@
 import json, re, os, sys, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TPL = os.path.join(ROOT, "villa", "index.html")
+TPL = os.path.join(ROOT, "growth-engine", "rich-villa-template.html")
 DATA = os.path.join(ROOT, "growth-engine", "real-villas.json")
 ORIGIN = "https://balivillas.ai"
 WA = "6281239081021"
