@@ -605,7 +605,7 @@
   },
   {
     "id": "own-villa-black-pool",
-    "slug": "villa-black-pool-4br-sanur",
+    "slug": "sanur/villa-black-pool-4br-sanur",
     "name": "Villa Black Pool — Family 4BR Villa with Big Pool",
     "area": "Sanur",
     "areaSlug": "sanur",
@@ -902,5 +902,6 @@
     "updatedAt": "2026-07-20"
   }
 ]
+
 
 
