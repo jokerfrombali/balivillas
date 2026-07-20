@@ -37,7 +37,7 @@
     "bookingUrl": "https://booking.com/hotel/id/lucky-lily-villa.en.html",
     "photosSource": "https://disk.yandex.ru/d/MG99wwybZjViog",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "own-mudra-1",
@@ -77,7 +77,7 @@
     "bookingUrl": "https://booking.com/hotel/id/eco-private-1-br-pool-villa-ungasan.en.html",
     "photosSource": "https://disk.yandex.ru/d/ieZz-15cbQwzLw",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "own-mudra-2",
@@ -117,7 +117,7 @@
     "bookingUrl": "https://booking.com/hotel/id/eco-pool-2br-villa-in-ungasan.en.html",
     "photosSource": "https://disk.yandex.ru/d/mUxSz-yy6sfidQ",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "own-mudra-3",
@@ -157,7 +157,7 @@
     "bookingUrl": "https://booking.com/hotel/id/private-1br-pool-villa-ungasan.en.html",
     "photosSource": "https://disk.yandex.ru/d/JYAXCDdJA_x-MA",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "own-mudra-4",
@@ -195,7 +195,7 @@
     "bookingUrl": null,
     "photosSource": "https://disk.yandex.ru/d/JYAXCDdJA_x-MA",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "own-premier-umalas-16",
@@ -222,12 +222,12 @@
       "Iron and ironing board"
     ],
     "images": [
-        "/villa/assets/images/new_img_1.webp",
-        "/villa/assets/images/new_img_2.webp",
-        "/villa/assets/images/new_img_3.webp",
-        "/villa/assets/images/new_img_4.webp",
-        "/villa/assets/images/new_img_5.webp",
-        "/villa/assets/images/img_155.webp"
+      "/public-objects/images/premier-umalas-16-1.jpg",
+      "/public-objects/images/premier-umalas-16-2.jpg",
+      "/public-objects/images/premier-umalas-16-3.jpg",
+      "/public-objects/images/premier-umalas-16-4.jpg",
+      "/public-objects/images/premier-umalas-16-5.jpg",
+      "/public-objects/images/premier-umalas-16-6.jpg"
     ],
     "lat": null,
     "lng": null,
@@ -235,7 +235,7 @@
     "bookingUrl": "https://booking.com/hotel/id/stylish-3br-pool-wifi-400.en.html",
     "photosSource": "https://disk.yandex.ru/d/JL63DVhkgXqvkQ",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "own-premier-umalas-17",
@@ -273,7 +273,7 @@
     "bookingUrl": "https://booking.com/hotel/id/stylish-2br-private-pool-home-umalas.en.html",
     "photosSource": "https://disk.yandex.ru/d/9H9LQXun3AupFw",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "own-pungutan-1",
@@ -313,7 +313,7 @@
     "bookingUrl": "https://booking.com/hotel/id/stylish-2br-pool-townhouse-in-sanur.en.html",
     "photosSource": "https://disk.yandex.ru/d/lGnSbe9FFOmE8A",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "own-pungutan-2",
@@ -353,7 +353,7 @@
     "bookingUrl": "https://booking.com/hotel/id/stylish-2br-pool-townhouse-in-sanur-kota-denpasar.en.html",
     "photosSource": "https://disk.yandex.ru/d/RruzD007Xg8vFw",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "own-tanjung-sari-2",
@@ -394,7 +394,7 @@
     "bookingUrl": "https://booking.com/hotel/id/spacious-4br-family-pool-villa.en.html",
     "photosSource": "https://disk.yandex.ru/d/ijDjk_41AA0mIg",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "own-tanjung-sari-3",
@@ -435,7 +435,7 @@
     "bookingUrl": "https://booking.com/hotel/id/sanur-pool-villa-garden-family.en.html",
     "photosSource": "https://disk.yandex.ru/d/tf8ppdMTMhdM7g",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "own-the-wave",
@@ -475,7 +475,7 @@
     "bookingUrl": "https://booking.com/hotel/id/beachside-6br-villa-pool-berawa.en.html",
     "photosSource": "https://disk.yandex.ru/d/6481vpxpholY6g",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "own-villa-black-pool",
@@ -515,7 +515,7 @@
     "bookingUrl": "https://booking.com/hotel/id/luxury-4br-sanur-villa-big-pool.en.html",
     "photosSource": "https://disk.yandex.ru/d/mA_Uk4D0ZC-8xQ",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   },
   {
     "id": "own-villa-kesari-4",
@@ -554,6 +554,6 @@
     "bookingUrl": "https://booking.com/hotel/id/villa-kesari-trees-oasis-sanur.en.html",
     "photosSource": "https://disk.yandex.ru/d/BZc3g0hlgTF25w",
     "monthly": false,
-    "updatedAt": "2026-07-19"
+    "updatedAt": "2026-07-20"
   }
 ]
