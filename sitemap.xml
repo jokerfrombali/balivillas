@@ -144,5 +144,21 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://balivillas.ai/villa/premier-umalas-16-3br-pool-townhouse/gallery/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://balivillas.ai/villa/premier-umalas-17-2br-pool-home/gallery/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://balivillas.ai/villa/sanur/villa-black-pool-4br-sanur/gallery/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
 </urlset>
+
 

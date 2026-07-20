@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>BaliVillas admin — villa builder</title>
+  <style>
+    :root{--bg:#f7f3ea;--card:#fffdf8;--ink:#101010;--muted:#6d6a63;--line:#e5ddd0;--accent:#a7ff3d}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+    header{padding:28px 40px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;background:#fff}
+    h1{margin:0;font:700 32px/1.05 Georgia,serif} p{color:var(--muted);line-height:1.55}.wrap{max-width:1180px;margin:0 auto;padding:28px 24px 60px}
+    .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.75fr);gap:24px}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 12px 30px rgba(20,15,5,.06)}
+    label{display:block;margin:14px 0 6px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#57524a}
+    input,textarea,select{width:100%;border:1px solid var(--line);border-radius:14px;padding:13px 14px;background:#fff;font:inherit;color:var(--ink)} textarea{min-height:96px;resize:vertical}.row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    button{border:0;border-radius:999px;padding:13px 18px;font-weight:800;background:#090909;color:#fff;cursor:pointer} button.secondary{background:#fff;color:#111;border:1px solid var(--line)} .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    code,pre{background:#111;color:#eaffd0;border-radius:16px} pre{padding:18px;overflow:auto;max-height:520px;font-size:12px;line-height:1.45}.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:#fff;margin:4px 6px 4px 0;color:#333}.ok{background:var(--accent);color:#111}.small{font-size:13px;color:var(--muted)}
+    .list{display:grid;gap:10px;margin-top:12px}.villa{border:1px solid var(--line);border-radius:16px;padding:12px 14px;background:#fff}.villa b{display:block}.url{font-size:12px;color:#5b5b5b;word-break:break-all}
+    @media(max-width:900px){.grid,.row,.row3{grid-template-columns:1fr}header{padding:22px}}
+  </style>
+</head>
+<body>
+<header>
+  <div><h1>BaliVillas villa admin</h1><p>Static helper: create villa data, SEO URLs and gallery URL. It downloads/copies files; publishing still requires replacing files and pushing to GitHub.</p></div>
+  <a class="pill ok" href="/data/villas.json">Current data</a>
+</header>
+<main class="wrap">
+  <section class="grid">
+    <form class="card" id="form">
+      <div class="row">
+        <div><label>Villa name</label><input id="name" value="Villa Black Pool 4BR Sanur"></div>
+        <div><label>Slug</label><input id="slug" placeholder="villa-black-pool-4br-sanur"></div>
+      </div>
+      <div class="row3">
+        <div><label>Area</label><input id="area" value="Sanur"></div>
+        <div><label>Area slug</label><input id="areaSlug" value="sanur"></div>
+        <div><label>Status</label><select id="status"><option value="active">active</option><option value="draft">draft</option></select></div>
+      </div>
+      <div class="row3">
+        <div><label>Bedrooms</label><input id="bedrooms" type="number" min="0" value="4"></div>
+        <div><label>Bathrooms</label><input id="bathrooms" type="number" min="0" step="0.5" value="4"></div>
+        <div><label>Guests</label><input id="guests" type="number" min="1" value="8"></div>
+      </div>
+      <div class="row">
+        <div><label>Night price, USD</label><input id="priceNight" type="number" min="0"></div>
+        <div><label>Monthly price, USD</label><input id="priceMonth" type="number" min="0"></div>
+      </div>
+      <label>Short description</label><textarea id="description" placeholder="Private pool villa in Sanur..."></textarea>
+      <label>Amenities — one per line</label><textarea id="amenities">Private pool
+Fast Wi‑Fi
+Kitchen
+Air conditioning
+Parking</textarea>
+      <label>Photos — one URL/path per line</label><textarea id="images" placeholder="/public-objects/villas/example/photo-01.webp"></textarea>
+      <div class="row">
+        <div><label>Airbnb URL</label><input id="airbnb"></div>
+        <div><label>Booking URL</label><input id="booking"></div>
+      </div>
+      <div class="actions">
+        <button type="button" id="generate">Generate JSON</button>
+        <button type="button" class="secondary" id="copy">Copy JSON</button>
+        <button type="button" class="secondary" id="download">Download updated villas.json</button>
+      </div>
+      <p class="small">Rule: import Airbnb photos with all captions/groups, then use the existing villa page template and gallery template. Do not invent a new design.</p>
+    </form>
+    <aside class="card">
+      <h2>URLs</h2>
+      <div id="urls"></div>
+      <h2>Current villas</h2>
+      <div id="existing" class="list"><p class="small">Loading /data/villas.json...</p></div>
+    </aside>
+  </section>
+  <section class="card" style="margin-top:24px">
+    <h2>Generated villa JSON</h2>
+    <pre id="out">Press Generate JSON.</pre>
+  </section>
+</main>
+<script>
+const $=id=>document.getElementById(id); let current=[];
+const slugify=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+function lines(id){return $(id).value.split('\n').map(s=>s.trim()).filter(Boolean)}
+function villaUrl(v){return `/villa/${v.areaSlug ? v.areaSlug + '/' : ''}${v.slug}/`}
+function build(){
+  if(!$('slug').value.trim()) $('slug').value=slugify($('name').value);
+  if(!$('areaSlug').value.trim()) $('areaSlug').value=slugify($('area').value);
+  const v={id:$('slug').value.trim(),status:$('status').value,name:$('name').value.trim(),slug:$('slug').value.trim(),area:$('area').value.trim(),areaSlug:$('areaSlug').value.trim(),bedrooms:+$('bedrooms').value||0,bathrooms:+$('bathrooms').value||0,guests:+$('guests').value||0,priceNight:+$('priceNight').value||null,priceMonth:+$('priceMonth').value||null,description:$('description').value.trim(),amenities:lines('amenities'),images:lines('images'),sourceUrls:{airbnb:$('airbnb').value.trim(),booking:$('booking').value.trim()}};
+  v.url=villaUrl(v); v.galleryUrl=v.url+'gallery/'; return v;
+}
+function render(){const v=build(); $('urls').innerHTML=[['Villa',v.url],['Gallery',v.galleryUrl],['Area',`/villas/${v.areaSlug}/`]].map(x=>`<div class="villa"><b>${x[0]}</b><div class="url">${x[1]}</div></div>`).join(''); return v}
+function generate(){const v=render(); $('out').textContent=JSON.stringify(v,null,2); return v}
+$('generate').onclick=generate; $('copy').onclick=()=>navigator.clipboard.writeText($('out').textContent); $('download').onclick=()=>{const v=generate(); const next=current.filter(x=>(x.slug||x.id)!==v.slug); next.push(v); const blob=new Blob([JSON.stringify(next,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='villas.json'; a.click();};
+['name','slug','area','areaSlug'].forEach(id=>$(id).addEventListener('input',render)); render();
+fetch('/data/villas.json').then(r=>r.json()).then(data=>{current=Array.isArray(data)?data:(data.villas||[]); $('existing').innerHTML=current.map(v=>`<div class="villa"><b>${v.name||v.title||v.slug}</b><div class="url">${v.url||villaUrl(v)}</div></div>`).join('')||'<p class="small">No villas found.</p>';}).catch(()=>$('existing').innerHTML='<p class="small">Cannot load data. Open through local server, not file://.</p>');
+</script>
+</body>
+</html>
