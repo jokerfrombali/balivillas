@@ -968,7 +968,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
 
       <!-- Card 7 -->
-      <div class="prop-card" data-location="umalas" onclick="window.location='/villa/premier-umalas-16-3br-pool-townhouse/'">
+      <div class="prop-card" data-location="umalas" data-beds="3" data-guests="6" data-type="villa" data-amenities="pool wifi kitchen work" onclick="window.location='/villa/premier-umalas-16-3br-pool-townhouse/'">
         <div class="img-wrap">
           <img src="/villa/assets/images/new_img_1.webp" alt="Premier Umalas 16 villa in Umalas">
           <span class="badge">Umalas</span>
@@ -992,6 +992,31 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
         </div>
       </div>
 
+
+      <!-- Premier Umalas 17 -->
+      <div class="prop-card" data-location="umalas" data-beds="2" data-guests="4" data-type="villa" data-amenities="pool wifi kitchen work" onclick="window.location='/villa/premier-umalas-17-2br-pool-home/'">
+        <div class="img-wrap">
+          <img src="/public-objects/images/premier-umalas-17-24.jpg" alt="Premier Umalas 17 — 2BR private pool villa in Umalas">
+          <span class="badge">Umalas</span>
+          <span class="badge-type">Villa</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Premier Umalas 17 — Stylish 2BR Private Pool Home</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>2 bed</span><span>2.5 bath</span><span>4 guests</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Card 8 -->
       <div class="prop-card" data-location="jimbaran" onclick="window.location='/villa/'">
         <div class="img-wrap">
@@ -1343,24 +1368,42 @@ function setPrice(min, max) {
 }
 
 function applyUrlLocationFilter(location) {
-  var normalized = (location || '').toLowerCase();
+  var params = new URLSearchParams(window.location.search);
+  var normalized = (location || params.get('location') || '').toLowerCase();
+  var beds = (params.get('beds') || '').toLowerCase();
+  var amenity = (params.get('amenity') || '').toLowerCase();
   var cards = Array.from(document.querySelectorAll('.prop-card'));
   var visible = 0;
+
   cards.forEach(function(card) {
-    var matches = !normalized || card.dataset.location === normalized;
+    var cardAmenities = (card.dataset.amenities || '').split(/\s+/);
+    var locationMatch = !normalized || card.dataset.location === normalized;
+    var bedsMatch = !beds || beds === 'any' || (beds === '5' ? Number(card.dataset.beds || 0) >= 5 : card.dataset.beds === beds);
+    var amenityMatch = !amenity || cardAmenities.indexOf(amenity) !== -1;
+    var matches = locationMatch && bedsMatch && amenityMatch;
     card.style.display = matches ? '' : 'none';
     if (matches) visible++;
   });
 
   var title = document.getElementById('resultsTitle');
   if (title) {
-    title.textContent = normalized
-      ? visible + ' villas in ' + normalized.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); })
-      : '515 villas available';
+    var labelParts = [];
+    if (beds && beds !== 'any') labelParts.push(beds === '5' ? '5+ bedroom' : beds + ' bedroom');
+    if (normalized) labelParts.push(normalized.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); }));
+    if (amenity) labelParts.push(amenity.replace(/-/g, ' '));
+    title.textContent = labelParts.length ? visible + ' villas — ' + labelParts.join(' · ') : visible + ' villas available';
   }
 
   document.querySelectorAll('input[data-filter="location"]').forEach(function(input) {
     input.checked = normalized && input.value === normalized;
+  });
+  document.querySelectorAll('input[data-filter="beds"]').forEach(function(input) {
+    input.checked = beds ? input.value === beds : input.value === 'any';
+    input.closest('.f-chip')?.classList.toggle('active', input.checked);
+  });
+  document.querySelectorAll('input[data-filter="amenity"]').forEach(function(input) {
+    input.checked = amenity && input.value === amenity;
+    input.closest('.f-chip')?.classList.toggle('active', input.checked);
   });
   updateFilterCount();
 }
@@ -1564,3 +1607,5 @@ function appendPrompt(text) {
 </script>
 </body>
 </html>
+
+
