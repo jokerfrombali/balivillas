@@ -16,4 +16,5 @@
 - Area category pages such as /villas/sanur/ and /villas/umalas/ must stay focused on that area: no generic Bali/AI search blocks in the category header, default filters must match the area, counters/titles must name the current area, and cards must only include villas from that area.
 - For every villa, use the canonical villa page design and nested SEO gallery route: `/villa/.../gallery/`; old root gallery files are legacy only.
 - Admin helper lives at `/admin/villas/`; it must support visual photo ordering, first photo as card cover, first five photos as villa mosaic, and Airbnb-style photo groups/captions.
+- Villa admin category rules: each villa can be assigned to all-villas/property-rental, area page, bedroom page, monthly/yearly, new, luxury, and amenity filter tags; generated JSON must include `categories`, `filterTags`, and `seoSections`.
 
