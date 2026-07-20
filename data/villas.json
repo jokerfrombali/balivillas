@@ -620,12 +620,14 @@
       "Outdoor shower",
       "Lush tropical garden",
       "Wi-Fi 300 Mbps",
-      "Work desk",
+      "Work-friendly desk",
       "En-suite bathrooms",
       "Blackout curtains",
       "Fully equipped kitchen",
       "Outdoor lounge and dining",
-      "Housekeeping 2x/week"
+      "Housekeeping 2x/week",
+      "Walk to beach",
+      "Air conditioning"
     ],
     "images": [
       "/public-objects/images/villa-black-pool-1.jpg",
@@ -633,15 +635,232 @@
       "/public-objects/images/villa-black-pool-3.jpg",
       "/public-objects/images/villa-black-pool-4.jpg",
       "/public-objects/images/villa-black-pool-5.jpg",
-      "/public-objects/images/villa-black-pool-6.jpg"
+      "/public-objects/images/villa-black-pool-6.jpg",
+      "/public-objects/images/villa-black-pool-7.jpg",
+      "/public-objects/images/villa-black-pool-8.jpg",
+      "/public-objects/images/villa-black-pool-9.jpg",
+      "/public-objects/images/villa-black-pool-10.jpg",
+      "/public-objects/images/villa-black-pool-11.jpg",
+      "/public-objects/images/villa-black-pool-12.jpg",
+      "/public-objects/images/villa-black-pool-13.jpg",
+      "/public-objects/images/villa-black-pool-14.jpg",
+      "/public-objects/images/villa-black-pool-15.jpg",
+      "/public-objects/images/villa-black-pool-16.jpg",
+      "/public-objects/images/villa-black-pool-17.jpg",
+      "/public-objects/images/villa-black-pool-18.jpg",
+      "/public-objects/images/villa-black-pool-19.jpg",
+      "/public-objects/images/villa-black-pool-20.jpg",
+      "/public-objects/images/villa-black-pool-21.jpg",
+      "/public-objects/images/villa-black-pool-22.jpg",
+      "/public-objects/images/villa-black-pool-23.jpg",
+      "/public-objects/images/villa-black-pool-24.jpg",
+      "/public-objects/images/villa-black-pool-25.jpg",
+      "/public-objects/images/villa-black-pool-26.jpg",
+      "/public-objects/images/villa-black-pool-27.jpg",
+      "/public-objects/images/villa-black-pool-28.jpg",
+      "/public-objects/images/villa-black-pool-29.jpg",
+      "/public-objects/images/villa-black-pool-30.jpg",
+      "/public-objects/images/villa-black-pool-31.jpg",
+      "/public-objects/images/villa-black-pool-32.jpg",
+      "/public-objects/images/villa-black-pool-33.jpg",
+      "/public-objects/images/villa-black-pool-34.jpg",
+      "/public-objects/images/villa-black-pool-35.jpg",
+      "/public-objects/images/villa-black-pool-36.jpg",
+      "/public-objects/images/villa-black-pool-37.jpg",
+      "/public-objects/images/villa-black-pool-38.jpg",
+      "/public-objects/images/villa-black-pool-39.jpg",
+      "/public-objects/images/villa-black-pool-40.jpg",
+      "/public-objects/images/villa-black-pool-41.jpg",
+      "/public-objects/images/villa-black-pool-42.jpg",
+      "/public-objects/images/villa-black-pool-43.jpg",
+      "/public-objects/images/villa-black-pool-44.jpg",
+      "/public-objects/images/villa-black-pool-45.jpg",
+      "/public-objects/images/villa-black-pool-46.jpg",
+      "/public-objects/images/villa-black-pool-47.jpg",
+      "/public-objects/images/villa-black-pool-48.jpg",
+      "/public-objects/images/villa-black-pool-49.jpg",
+      "/public-objects/images/villa-black-pool-50.jpg",
+      "/public-objects/images/villa-black-pool-51.jpg",
+      "/public-objects/images/villa-black-pool-52.jpg",
+      "/public-objects/images/villa-black-pool-53.jpg",
+      "/public-objects/images/villa-black-pool-54.jpg",
+      "/public-objects/images/villa-black-pool-55.jpg",
+      "/public-objects/images/villa-black-pool-56.jpg",
+      "/public-objects/images/villa-black-pool-57.jpg",
+      "/public-objects/images/villa-black-pool-58.jpg",
+      "/public-objects/images/villa-black-pool-59.jpg",
+      "/public-objects/images/villa-black-pool-60.jpg",
+      "/public-objects/images/villa-black-pool-61.jpg",
+      "/public-objects/images/villa-black-pool-62.jpg",
+      "/public-objects/images/villa-black-pool-63.jpg",
+      "/public-objects/images/villa-black-pool-64.jpg",
+      "/public-objects/images/villa-black-pool-65.jpg"
     ],
     "lat": null,
     "lng": null,
     "airbnbUrl": "https://www.airbnb.com/rooms/1496048138640551505",
     "bookingUrl": "https://booking.com/hotel/id/luxury-4br-sanur-villa-big-pool.en.html",
-    "photosSource": "https://disk.yandex.ru/d/mA_Uk4D0ZC-8xQ",
+    "photosSource": "https://www.airbnb.com/rooms/1496048138640551505",
     "monthly": false,
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "photoGroups": [
+      {
+        "name": "Living room",
+        "airbnbLabel": "Гостиная",
+        "images": [
+          "/public-objects/images/villa-black-pool-54.jpg",
+          "/public-objects/images/villa-black-pool-48.jpg",
+          "/public-objects/images/villa-black-pool-5.jpg",
+          "/public-objects/images/villa-black-pool-46.jpg",
+          "/public-objects/images/villa-black-pool-47.jpg"
+        ]
+      },
+      {
+        "name": "Full kitchen",
+        "airbnbLabel": "Полноценная кухня",
+        "images": [
+          "/public-objects/images/villa-black-pool-49.jpg",
+          "/public-objects/images/villa-black-pool-30.jpg",
+          "/public-objects/images/villa-black-pool-43.jpg",
+          "/public-objects/images/villa-black-pool-25.jpg",
+          "/public-objects/images/villa-black-pool-55.jpg",
+          "/public-objects/images/villa-black-pool-21.jpg",
+          "/public-objects/images/villa-black-pool-60.jpg"
+        ]
+      },
+      {
+        "name": "Dining area",
+        "airbnbLabel": "Обеденная зона",
+        "images": [
+          "/public-objects/images/villa-black-pool-16.jpg",
+          "/public-objects/images/villa-black-pool-19.jpg",
+          "/public-objects/images/villa-black-pool-7.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 1",
+        "airbnbLabel": "Спальня 1",
+        "images": [
+          "/public-objects/images/villa-black-pool-26.jpg",
+          "/public-objects/images/villa-black-pool-45.jpg",
+          "/public-objects/images/villa-black-pool-34.jpg",
+          "/public-objects/images/villa-black-pool-36.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 2",
+        "airbnbLabel": "Спальня 2",
+        "images": [
+          "/public-objects/images/villa-black-pool-64.jpg",
+          "/public-objects/images/villa-black-pool-59.jpg",
+          "/public-objects/images/villa-black-pool-35.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 3",
+        "airbnbLabel": "Спальня 3",
+        "images": [
+          "/public-objects/images/villa-black-pool-15.jpg",
+          "/public-objects/images/villa-black-pool-33.jpg",
+          "/public-objects/images/villa-black-pool-31.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 4",
+        "airbnbLabel": "Спальня 4",
+        "images": [
+          "/public-objects/images/villa-black-pool-32.jpg",
+          "/public-objects/images/villa-black-pool-57.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 1",
+        "airbnbLabel": "Ванная с туалетом 1",
+        "images": [
+          "/public-objects/images/villa-black-pool-9.jpg",
+          "/public-objects/images/villa-black-pool-20.jpg",
+          "/public-objects/images/villa-black-pool-44.jpg",
+          "/public-objects/images/villa-black-pool-1.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 2",
+        "airbnbLabel": "Ванная с туалетом 2",
+        "images": [
+          "/public-objects/images/villa-black-pool-51.jpg",
+          "/public-objects/images/villa-black-pool-62.jpg",
+          "/public-objects/images/villa-black-pool-40.jpg",
+          "/public-objects/images/villa-black-pool-27.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 3",
+        "airbnbLabel": "Ванная с туалетом 3",
+        "images": [
+          "/public-objects/images/villa-black-pool-6.jpg",
+          "/public-objects/images/villa-black-pool-52.jpg",
+          "/public-objects/images/villa-black-pool-4.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 4",
+        "airbnbLabel": "Ванная с туалетом 4",
+        "images": [
+          "/public-objects/images/villa-black-pool-37.jpg",
+          "/public-objects/images/villa-black-pool-28.jpg"
+        ]
+      },
+      {
+        "name": "Workspace",
+        "airbnbLabel": "Место для работы",
+        "images": [
+          "/public-objects/images/villa-black-pool-61.jpg"
+        ]
+      },
+      {
+        "name": "Exterior",
+        "airbnbLabel": "Снаружи",
+        "images": [
+          "/public-objects/images/villa-black-pool-38.jpg",
+          "/public-objects/images/villa-black-pool-23.jpg",
+          "/public-objects/images/villa-black-pool-22.jpg",
+          "/public-objects/images/villa-black-pool-14.jpg",
+          "/public-objects/images/villa-black-pool-18.jpg",
+          "/public-objects/images/villa-black-pool-65.jpg"
+        ]
+      },
+      {
+        "name": "Pool",
+        "airbnbLabel": "Бассейн",
+        "images": [
+          "/public-objects/images/villa-black-pool-11.jpg",
+          "/public-objects/images/villa-black-pool-39.jpg",
+          "/public-objects/images/villa-black-pool-29.jpg",
+          "/public-objects/images/villa-black-pool-56.jpg",
+          "/public-objects/images/villa-black-pool-3.jpg",
+          "/public-objects/images/villa-black-pool-13.jpg"
+        ]
+      },
+      {
+        "name": "Additional photos",
+        "airbnbLabel": "Дополнительные фото",
+        "images": [
+          "/public-objects/images/villa-black-pool-24.jpg",
+          "/public-objects/images/villa-black-pool-50.jpg",
+          "/public-objects/images/villa-black-pool-8.jpg",
+          "/public-objects/images/villa-black-pool-2.jpg",
+          "/public-objects/images/villa-black-pool-10.jpg",
+          "/public-objects/images/villa-black-pool-58.jpg",
+          "/public-objects/images/villa-black-pool-17.jpg",
+          "/public-objects/images/villa-black-pool-42.jpg",
+          "/public-objects/images/villa-black-pool-12.jpg",
+          "/public-objects/images/villa-black-pool-53.jpg",
+          "/public-objects/images/villa-black-pool-41.jpg",
+          "/public-objects/images/villa-black-pool-63.jpg"
+        ]
+      }
+    ],
+    "description": "Spacious modern 4-bedroom villa in Sanur with a private black-tiled pool, tropical garden, open living spaces and walking distance to the beach, cafés and shops."
   },
   {
     "id": "own-villa-kesari-4",
@@ -683,3 +902,5 @@
     "updatedAt": "2026-07-20"
   }
 ]
+
+
