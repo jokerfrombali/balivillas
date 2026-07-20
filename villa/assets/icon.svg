@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="icon-chat" viewBox="0 0 100 100">
+    <path d="M18 24a25 25 0 0 1 25-25h14a25 25 0 0 1 25 25v14a25 25 0 0 1-25 25H42L22 82a4 4 0 0 1-7-3l4-20A25 25 0 0 1 18 24Z"/>
+  </symbol>
+  <symbol id="icon-search" viewBox="0 0 24 24">
+    <path d="M20.3 20.3 16 16m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-shield-check" viewBox="0 0 24 24">
+    <path d="M12 3 20 6v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V6l8-3Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="m8 12 2.5 2.5L16 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-house-rules-checkin" viewBox="0 0 24 24">
+    <path d="M4 10 12 4l8 6v9H4v-9Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="m9 13 2 2 4-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-house-rules-checkout" viewBox="0 0 24 24">
+    <path d="M4 10 12 4l8 6v9H4v-9Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M9 12h6m-2-2 2 2-2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-house-rules-events" viewBox="0 0 24 24">
+    <rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M8 3v4m8-4v4M4 10h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-house-rules-guests" viewBox="0 0 24 24">
+    <circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <circle cx="17" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M3 20a6 6 0 0 1 12 0m0 0a5 5 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-house-rules-no-smoking" viewBox="0 0 24 24">
+    <path d="M3 16h10v3H3zM17 16h4v3h-4zM5 5l14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-house-rules-pets" viewBox="0 0 24 24">
+    <path d="M12 12c4 0 7 4 5 7H7c-2-3 1-7 5-7Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <circle cx="6" cy="9" r="2"/><circle cx="10" cy="6" r="2"/><circle cx="14" cy="6" r="2"/><circle cx="18" cy="9" r="2"/>
+  </symbol>
+</svg>
