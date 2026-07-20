@@ -142,6 +142,19 @@ def build(v, tpl):
               f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n'
               f'<script type="application/ld+json">{json.dumps(crumbs, ensure_ascii=False)}</script>\n')
     h = h.replace("</head>", inject + "</head>", 1)
+
+    if v["id"] == "own-premier-umalas-16":
+        real_photos = {
+            "premier-umalas-16-1.jpg": "new_img_1.webp",
+            "premier-umalas-16-2.jpg": "new_img_2.webp",
+            "premier-umalas-16-3.jpg": "new_img_3.webp",
+            "premier-umalas-16-4.jpg": "new_img_4.webp",
+            "premier-umalas-16-5.jpg": "new_img_5.webp",
+            "premier-umalas-16-6.jpg": "img_155.webp",
+        }
+        for old_name, new_name in real_photos.items():
+            h = h.replace(f"/public-objects/images/{old_name}", f"/villa/assets/images/{new_name}")
+            h = h.replace(f"{ORIGIN}/public-objects/images/{old_name}", f"{ORIGIN}/villa/assets/images/{new_name}")
     return h
 
 def photo_prefix(v):
