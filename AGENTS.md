@@ -1,0 +1,11 @@
+# Project Instructions
+
+- Save tokens by default: give concise answers, avoid unnecessary scans, and do not explain obvious steps unless asked.
+- Prefer PowerShell commands for the user when a task can be done manually without risk.
+- Before doing work that the user can easily do by hand, provide the exact PowerShell command or manual step and wait only if user confirmation is required.
+- Use tools only when they materially reduce user effort, prevent mistakes, or verify important state.
+- Keep changes scoped to the current task and avoid unrelated refactors.
+- SEO structure matters for this project. For rental pages, prefer clean indexable URLs over query-only filters.
+- Query URLs such as `/property-rental/?location=umalas` are allowed for UI filtering, but SEO pages should use static paths such as `/villas/umalas/`.
+- Keep rental URL structure documented in `docs/seo-rental-url-structure.md` and update it before adding new filter page types.
+- Every indexable SEO rental page must include a short unique SEO article, matching villa cards, FAQ, breadcrumbs, canonical URL, and internal links to related rental pages.
