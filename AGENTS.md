@@ -15,4 +15,5 @@
 - Canonical area listing design reference: `/villas/umalas/`. For every `/villas/{area}/` page, clone/adapt this exact catalog design first, then replace the area copy and cards. Area pages must show only villas for that area unless the user explicitly asks for a mixed catalog.
 - Area category pages such as /villas/sanur/ and /villas/umalas/ must stay focused on that area: no generic Bali/AI search blocks in the category header, default filters must match the area, counters/titles must name the current area, and cards must only include villas from that area.
 - For every villa, use the canonical villa page design and nested SEO gallery route: `/villa/.../gallery/`; old root gallery files are legacy only.
+- Admin helper lives at `/admin/villas/`; it must support visual photo ordering, first photo as card cover, first five photos as villa mosaic, and Airbnb-style photo groups/captions.
 

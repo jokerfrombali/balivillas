@@ -4,93 +4,74 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>BaliVillas admin — villa builder</title>
+  <title>BaliVillas admin — villa page builder</title>
   <style>
-    :root{--bg:#f7f3ea;--card:#fffdf8;--ink:#101010;--muted:#6d6a63;--line:#e5ddd0;--accent:#a7ff3d}
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
-    header{padding:28px 40px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;background:#fff}
-    h1{margin:0;font:700 32px/1.05 Georgia,serif} p{color:var(--muted);line-height:1.55}.wrap{max-width:1180px;margin:0 auto;padding:28px 24px 60px}
-    .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.75fr);gap:24px}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 12px 30px rgba(20,15,5,.06)}
-    label{display:block;margin:14px 0 6px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#57524a}
-    input,textarea,select{width:100%;border:1px solid var(--line);border-radius:14px;padding:13px 14px;background:#fff;font:inherit;color:var(--ink)} textarea{min-height:96px;resize:vertical}.row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    button{border:0;border-radius:999px;padding:13px 18px;font-weight:800;background:#090909;color:#fff;cursor:pointer} button.secondary{background:#fff;color:#111;border:1px solid var(--line)} .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-    code,pre{background:#111;color:#eaffd0;border-radius:16px} pre{padding:18px;overflow:auto;max-height:520px;font-size:12px;line-height:1.45}.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:#fff;margin:4px 6px 4px 0;color:#333}.ok{background:var(--accent);color:#111}.small{font-size:13px;color:var(--muted)}
-    .list{display:grid;gap:10px;margin-top:12px}.villa{border:1px solid var(--line);border-radius:16px;padding:12px 14px;background:#fff}.villa b{display:block}.url{font-size:12px;color:#5b5b5b;word-break:break-all}
-    @media(max-width:900px){.grid,.row,.row3{grid-template-columns:1fr}header{padding:22px}}
+    :root{--bg:#f6f1e8;--panel:#fffdf8;--ink:#111;--muted:#706b61;--line:#e4d9c9;--soft:#f0e7da;--accent:#a8ff3e;--dark:#080808;--bad:#b84a31}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}.top{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:16px 28px;display:flex;justify-content:space-between;align-items:center;gap:18px}.brand{font:700 24px/1 Georgia,serif}.top p{margin:4px 0 0;color:var(--muted);font-size:13px}.wrap{max-width:1440px;margin:0 auto;padding:22px}.layout{display:grid;grid-template-columns:360px minmax(0,1fr) 360px;gap:18px;align-items:start}.card{background:var(--panel);border:1px solid var(--line);border-radius:24px;box-shadow:0 14px 34px rgba(24,18,8,.06);padding:20px}.card h2{margin:0 0 14px;font:700 22px/1.1 Georgia,serif}.step{display:flex;gap:10px;align-items:center;margin-bottom:14px}.num{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--dark);color:#fff;font-weight:800;font-size:13px}label{display:block;margin:12px 0 6px;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#5f594f}input,textarea,select{width:100%;border:1px solid var(--line);border-radius:14px;background:#fff;padding:12px 13px;font:inherit}textarea{min-height:88px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}button,.button{border:0;border-radius:999px;padding:11px 15px;background:var(--dark);color:#fff;font-weight:850;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}button.secondary,.button.secondary{background:#fff;color:#111;border:1px solid var(--line)}button.green{background:var(--accent);color:#111}.small{font-size:12px;color:var(--muted);line-height:1.45}.hint{background:#f7f0df;border:1px dashed #d4c6b2;border-radius:16px;padding:12px;margin-top:12px}.tabs{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}.tab{background:#fff;color:#111;border:1px solid var(--line)}.tab.active{background:var(--dark);color:#fff}.photoTools{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end;margin-bottom:14px}.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}.photo{border:1px solid var(--line);background:#fff;border-radius:18px;overflow:hidden;position:relative}.photo.dragging{opacity:.45}.photo img{width:100%;height:112px;object-fit:cover;display:block;background:#eee}.photoBody{padding:10px}.photo input,.photo select{padding:8px 9px;border-radius:10px;font-size:12px}.photo .badge{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.78);color:#fff;border-radius:999px;padding:5px 8px;font-size:11px;font-weight:800}.photo .cover{background:var(--accent);color:#111}.miniBtns{display:flex;gap:6px;margin-top:8px}.miniBtns button{padding:7px 9px;font-size:11px}.danger{background:#fff!important;color:var(--bad)!important;border:1px solid #efc7ba!important}.previewHero{border-radius:22px;overflow:hidden;background:#eee;border:1px solid var(--line)}.previewGrid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:130px 130px;gap:6px}.previewGrid img{width:100%;height:100%;object-fit:cover}.previewGrid img:first-child{grid-row:span 2}.villaCard{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;margin-top:16px}.villaCard img{width:100%;height:210px;object-fit:cover;background:#eee}.villaCard .body{padding:14px}.pill{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:7px 10px;background:#fff;margin:3px;font-size:12px}.urls .pill{display:flex;justify-content:space-between;gap:8px;word-break:break-all}.groups{display:grid;gap:10px}.group{border:1px solid var(--line);border-radius:16px;background:#fff;padding:12px}.group b{display:block}.group .thumbs{display:flex;gap:5px;margin-top:8px;overflow:hidden}.group img{width:46px;height:38px;object-fit:cover;border-radius:8px}.json{background:#101010;color:#dcffc1;border-radius:18px;padding:16px;max-height:360px;overflow:auto;font-size:12px;line-height:1.45}.toast{position:fixed;right:22px;bottom:22px;background:#111;color:#fff;padding:12px 16px;border-radius:14px;box-shadow:0 16px 30px rgba(0,0,0,.2);opacity:0;transform:translateY(10px);transition:.2s}.toast.show{opacity:1;transform:none}@media(max-width:1150px){.layout{grid-template-columns:1fr}.top{position:static}.photoTools{grid-template-columns:1fr}.previewGrid{grid-template-rows:100px 100px}}  
   </style>
 </head>
 <body>
-<header>
-  <div><h1>BaliVillas villa admin</h1><p>Static helper: create villa data, SEO URLs and gallery URL. It downloads/copies files; publishing still requires replacing files and pushing to GitHub.</p></div>
-  <a class="pill ok" href="/data/villas.json">Current data</a>
-</header>
-<main class="wrap">
-  <section class="grid">
-    <form class="card" id="form">
-      <div class="row">
-        <div><label>Villa name</label><input id="name" value="Villa Black Pool 4BR Sanur"></div>
-        <div><label>Slug</label><input id="slug" placeholder="villa-black-pool-4br-sanur"></div>
-      </div>
-      <div class="row3">
-        <div><label>Area</label><input id="area" value="Sanur"></div>
-        <div><label>Area slug</label><input id="areaSlug" value="sanur"></div>
-        <div><label>Status</label><select id="status"><option value="active">active</option><option value="draft">draft</option></select></div>
-      </div>
-      <div class="row3">
-        <div><label>Bedrooms</label><input id="bedrooms" type="number" min="0" value="4"></div>
-        <div><label>Bathrooms</label><input id="bathrooms" type="number" min="0" step="0.5" value="4"></div>
-        <div><label>Guests</label><input id="guests" type="number" min="1" value="8"></div>
-      </div>
-      <div class="row">
-        <div><label>Night price, USD</label><input id="priceNight" type="number" min="0"></div>
-        <div><label>Monthly price, USD</label><input id="priceMonth" type="number" min="0"></div>
-      </div>
-      <label>Short description</label><textarea id="description" placeholder="Private pool villa in Sanur..."></textarea>
+  <header class="top"><div><div class="brand">Bali Villas admin</div><p>Villa page builder: content, SEO URLs, photo order, card cover and Airbnb-style groups.</p></div><div class="btns"><button class="secondary" id="loadSample">Load existing villa</button><button class="green" id="saveDraft">Save draft</button><button id="downloadJson">Download villas.json</button></div></header>
+  <main class="wrap layout">
+    <section class="card">
+      <div class="step"><span class="num">1</span><h2>Villa details</h2></div>
+      <label>Villa name</label><input id="name" placeholder="Premier Umalas 18 — 3BR Pool Villa">
+      <div class="row"><div><label>Area</label><input id="area" placeholder="Umalas"></div><div><label>Area slug</label><input id="areaSlug" placeholder="umalas"></div></div>
+      <label>Slug</label><input id="slug" placeholder="premier-umalas-18-3br-pool-villa">
+      <div class="row3"><div><label>Beds</label><input id="bedrooms" type="number" min="0" value="3"></div><div><label>Baths</label><input id="bathrooms" type="number" min="0" step="0.5" value="3"></div><div><label>Guests</label><input id="guests" type="number" min="1" value="6"></div></div>
+      <div class="row"><div><label>Night USD</label><input id="priceNight" type="number" min="0"></div><div><label>Month USD</label><input id="priceMonth" type="number" min="0"></div></div>
+      <label>Description</label><textarea id="description" placeholder="Short SEO description for the villa page and cards."></textarea>
       <label>Amenities — one per line</label><textarea id="amenities">Private pool
 Fast Wi‑Fi
 Kitchen
 Air conditioning
 Parking</textarea>
-      <label>Photos — one URL/path per line</label><textarea id="images" placeholder="/public-objects/villas/example/photo-01.webp"></textarea>
-      <div class="row">
-        <div><label>Airbnb URL</label><input id="airbnb"></div>
-        <div><label>Booking URL</label><input id="booking"></div>
+      <div class="row"><div><label>Airbnb URL</label><input id="airbnbUrl"></div><div><label>Booking URL</label><input id="bookingUrl"></div></div>
+      <div class="hint small">URL правило: район в адресе нужен, если это Sanur или другой районный раздел. Галерея всегда внутри виллы: <b>/villa/area/slug/gallery/</b>.</div>
+    </section>
+
+    <section class="card">
+      <div class="step"><span class="num">2</span><h2>Photos layout</h2></div>
+      <div class="tabs"><button class="tab active" data-tab="photos">Photo manager</button><button class="tab" data-tab="json">JSON output</button></div>
+      <div id="photosTab">
+        <div class="photoTools"><div><label>Add photos: URL/path list, one per line</label><textarea id="photoInput" placeholder="/public-objects/images/new-villa-1.jpg"></textarea></div><div class="btns"><button id="addPhotos" type="button">Add photos</button><button id="clearPhotos" class="secondary" type="button">Clear</button></div></div>
+        <p class="small">Drag photos to reorder. First photo = main card cover. First 5 photos = villa page top mosaic. Set group labels exactly like Airbnb: Pool, Bedroom 1, Bathroom, Kitchen...</p>
+        <div id="photos" class="photos"></div>
       </div>
-      <div class="actions">
-        <button type="button" id="generate">Generate JSON</button>
-        <button type="button" class="secondary" id="copy">Copy JSON</button>
-        <button type="button" class="secondary" id="download">Download updated villas.json</button>
-      </div>
-      <p class="small">Rule: import Airbnb photos with all captions/groups, then use the existing villa page template and gallery template. Do not invent a new design.</p>
-    </form>
+      <div id="jsonTab" hidden><pre id="json" class="json"></pre><div class="btns"><button id="copyJson">Copy villa JSON</button><button class="secondary" id="copyPaths">Copy page paths</button></div></div>
+    </section>
+
     <aside class="card">
-      <h2>URLs</h2>
-      <div id="urls"></div>
-      <h2>Current villas</h2>
-      <div id="existing" class="list"><p class="small">Loading /data/villas.json...</p></div>
+      <div class="step"><span class="num">3</span><h2>Live preview</h2></div>
+      <div class="urls" id="urls"></div>
+      <h3>Villa page mosaic</h3><div class="previewHero"><div class="previewGrid" id="mosaic"></div></div>
+      <h3>Catalog card</h3><div class="villaCard"><img id="cardImg" alt=""><div class="body"><b id="cardTitle">Villa name</b><p class="small" id="cardMeta"></p><div id="cardAmenities"></div></div></div>
+      <h3>Gallery groups</h3><div id="groups" class="groups"></div>
     </aside>
-  </section>
-  <section class="card" style="margin-top:24px">
-    <h2>Generated villa JSON</h2>
-    <pre id="out">Press Generate JSON.</pre>
-  </section>
-</main>
+  </main>
+  <div class="toast" id="toast"></div>
 <script>
-const $=id=>document.getElementById(id); let current=[];
+const $=id=>document.getElementById(id); let villas=[]; let photos=[]; let dragIndex=null;
+const groupOptions=['Hero','Pool','Living room','Full kitchen','Dining area','Bedroom 1','Bedroom 2','Bedroom 3','Bedroom 4','Bathroom 1','Bathroom 2','Bathroom 3','Bathroom 4','Workspace','Exterior','Garden','Additional photos'];
 const slugify=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
-function lines(id){return $(id).value.split('\n').map(s=>s.trim()).filter(Boolean)}
-function villaUrl(v){return `/villa/${v.areaSlug ? v.areaSlug + '/' : ''}${v.slug}/`}
-function build(){
-  if(!$('slug').value.trim()) $('slug').value=slugify($('name').value);
-  if(!$('areaSlug').value.trim()) $('areaSlug').value=slugify($('area').value);
-  const v={id:$('slug').value.trim(),status:$('status').value,name:$('name').value.trim(),slug:$('slug').value.trim(),area:$('area').value.trim(),areaSlug:$('areaSlug').value.trim(),bedrooms:+$('bedrooms').value||0,bathrooms:+$('bathrooms').value||0,guests:+$('guests').value||0,priceNight:+$('priceNight').value||null,priceMonth:+$('priceMonth').value||null,description:$('description').value.trim(),amenities:lines('amenities'),images:lines('images'),sourceUrls:{airbnb:$('airbnb').value.trim(),booking:$('booking').value.trim()}};
-  v.url=villaUrl(v); v.galleryUrl=v.url+'gallery/'; return v;
-}
-function render(){const v=build(); $('urls').innerHTML=[['Villa',v.url],['Gallery',v.galleryUrl],['Area',`/villas/${v.areaSlug}/`]].map(x=>`<div class="villa"><b>${x[0]}</b><div class="url">${x[1]}</div></div>`).join(''); return v}
-function generate(){const v=render(); $('out').textContent=JSON.stringify(v,null,2); return v}
-$('generate').onclick=generate; $('copy').onclick=()=>navigator.clipboard.writeText($('out').textContent); $('download').onclick=()=>{const v=generate(); const next=current.filter(x=>(x.slug||x.id)!==v.slug); next.push(v); const blob=new Blob([JSON.stringify(next,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='villas.json'; a.click();};
-['name','slug','area','areaSlug'].forEach(id=>$(id).addEventListener('input',render)); render();
-fetch('/data/villas.json').then(r=>r.json()).then(data=>{current=Array.isArray(data)?data:(data.villas||[]); $('existing').innerHTML=current.map(v=>`<div class="villa"><b>${v.name||v.title||v.slug}</b><div class="url">${v.url||villaUrl(v)}</div></div>`).join('')||'<p class="small">No villas found.</p>';}).catch(()=>$('existing').innerHTML='<p class="small">Cannot load data. Open through local server, not file://.</p>');
+const lines=v=>String(v||'').split('\n').map(x=>x.trim()).filter(Boolean); const toast=t=>{const el=$('toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1800)};
+function cleanSlug(){if(!$('areaSlug').value.trim()) $('areaSlug').value=slugify($('area').value); if(!$('slug').value.trim()) $('slug').value=slugify($('name').value)}
+function villaPath(v){const slug=String(v.slug||'').replace(/^\/+|\/+$/g,''); if(slug.includes('/')) return '/villa/'+slug+'/'; return '/villa/'+(v.areaSlug? v.areaSlug.replace(/^\/+|\/+$/g,'')+'/':'')+slug+'/'}
+function build(){cleanSlug(); const v={id:'own-'+slugify($('slug').value),slug:$('slug').value.trim(),name:$('name').value.trim(),area:$('area').value.trim(),areaSlug:$('areaSlug').value.trim(),bedrooms:+$('bedrooms').value||0,bathrooms:+$('bathrooms').value||0,guests:+$('guests').value||0,priceNight:+$('priceNight').value||null,priceMonth:+$('priceMonth').value||null,currency:'USD',description:$('description').value.trim(),amenities:lines($('amenities').value),images:photos.map(p=>p.src),cardImage:(photos[0]||{}).src||'',topGallery:photos.slice(0,5).map(p=>p.src),photoGroups:makeGroups(),airbnbUrl:$('airbnbUrl').value.trim(),bookingUrl:$('bookingUrl').value.trim(),monthly:false,updatedAt:new Date().toISOString().slice(0,10)}; v.url=villaPath(v); v.galleryUrl=v.url+'gallery/'; return v}
+function makeGroups(){const map={}; photos.forEach(p=>{const g=p.group||'Additional photos'; if(!map[g]) map[g]=[]; map[g].push(p.src)}); return Object.entries(map).map(([name,images])=>({name,airbnbLabel:name,images}))}
+function renderPhotos(){const box=$('photos'); box.innerHTML=''; photos.forEach((p,i)=>{const el=document.createElement('article'); el.className='photo'; el.draggable=true; el.innerHTML=`<span class="badge ${i===0?'cover':''}">${i===0?'Card cover':'#'+(i+1)}</span><img src="${p.src}" onerror="this.style.opacity=.25"><div class="photoBody"><input value="${p.src.replace(/"/g,'&quot;')}" data-field="src" data-i="${i}"><label>Group</label><select data-field="group" data-i="${i}">${groupOptions.map(g=>`<option ${g===p.group?'selected':''}>${g}</option>`).join('')}</select><label>Caption</label><input value="${(p.caption||'').replace(/"/g,'&quot;')}" data-field="caption" data-i="${i}" placeholder="Pool view"><div class="miniBtns"><button data-act="up" data-i="${i}">↑</button><button data-act="down" data-i="${i}">↓</button><button class="danger" data-act="del" data-i="${i}">Delete</button></div></div>`; el.addEventListener('dragstart',()=>{dragIndex=i;el.classList.add('dragging')}); el.addEventListener('dragend',()=>el.classList.remove('dragging')); el.addEventListener('dragover',e=>e.preventDefault()); el.addEventListener('drop',e=>{e.preventDefault(); if(dragIndex===null||dragIndex===i)return; const [m]=photos.splice(dragIndex,1); photos.splice(i,0,m); dragIndex=null; render()}); box.appendChild(el)}); box.querySelectorAll('[data-field]').forEach(el=>el.oninput=e=>{const i=+e.target.dataset.i; photos[i][e.target.dataset.field]=e.target.value; render(false)}); box.querySelectorAll('[data-act]').forEach(el=>el.onclick=e=>{const i=+e.target.dataset.i, a=e.target.dataset.act; if(a==='del') photos.splice(i,1); if(a==='up'&&i>0) [photos[i-1],photos[i]]=[photos[i],photos[i-1]]; if(a==='down'&&i<photos.length-1) [photos[i+1],photos[i]]=[photos[i],photos[i+1]]; render()})}
+function renderPreview(v){$('urls').innerHTML=[['Villa',v.url],['Gallery',v.galleryUrl],['Area','/villas/'+v.areaSlug+'/']].map(x=>`<div class="pill"><b>${x[0]}</b><span>${x[1]}</span></div>`).join(''); const imgs=photos.slice(0,5); $('mosaic').innerHTML=(imgs.length?imgs:[{}]).map(p=>`<img src="${p.src||''}" alt="">`).join(''); $('cardImg').src=v.cardImage||''; $('cardTitle').textContent=v.name||'Villa name'; $('cardMeta').textContent=`${v.area||'Area'} · ${v.bedrooms||0} bedrooms · ${v.bathrooms||0} baths · ${v.guests||0} guests`; $('cardAmenities').innerHTML=v.amenities.slice(0,4).map(a=>`<span class="pill">${a}</span>`).join(''); $('groups').innerHTML=v.photoGroups.map(g=>`<div class="group"><b>${g.name}</b><span class="small">${g.images.length} photos</span><div class="thumbs">${g.images.slice(0,6).map(src=>`<img src="${src}">`).join('')}</div></div>`).join('')||'<p class="small">No groups yet.</p>'}
+function render(redraw=true){const v=build(); if(redraw) renderPhotos(); renderPreview(v); $('json').textContent=JSON.stringify(v,null,2); localStorage.setItem('balivillas_admin_autosave',JSON.stringify({fields:getFields(),photos}))}
+function getFields(){return ['name','area','areaSlug','slug','bedrooms','bathrooms','guests','priceNight','priceMonth','description','amenities','airbnbUrl','bookingUrl'].reduce((a,id)=>(a[id]=$(id).value,a),{})}
+function setFields(f){Object.entries(f||{}).forEach(([k,v])=>{$(k)&&($(k).value=v??'')})}
+function loadVilla(v){setFields({name:v.name,area:v.area,areaSlug:v.areaSlug,slug:String(v.slug||'').split('/').pop(),bedrooms:v.bedrooms,bathrooms:v.bathrooms,guests:v.guests,priceNight:v.priceNight,priceMonth:v.priceMonth,description:v.description,amenities:(v.amenities||[]).join('\n'),airbnbUrl:v.airbnbUrl,bookingUrl:v.bookingUrl}); const groupBy={}; (v.photoGroups||[]).forEach(g=>(g.images||[]).forEach(src=>groupBy[src]=g.name)); photos=(v.images||[]).map((src,i)=>({src,group:groupBy[src]||(i===0?'Hero':'Additional photos'),caption:''})); render()}
+$('addPhotos').onclick=()=>{const add=lines($('photoInput').value).map(src=>({src,group:photos.length?'Additional photos':'Hero',caption:''})); photos.push(...add); $('photoInput').value=''; render(); toast(add.length+' photos added')}; $('clearPhotos').onclick=()=>{if(confirm('Clear all photos?')){photos=[];render()}};
+$('copyJson').onclick=()=>navigator.clipboard.writeText($('json').textContent).then(()=>toast('Villa JSON copied')); $('copyPaths').onclick=()=>{const v=build(); navigator.clipboard.writeText([`Villa page folder: villa/${v.url.replace('/villa/','')}index.html`,`Gallery folder: villa/${v.url.replace('/villa/','')}gallery/index.html`,`Data file: data/villas.json`].join('\n')).then(()=>toast('Paths copied'))};
+$('downloadJson').onclick=()=>{const v=build(); const next=villas.filter(x=>(x.id!==v.id)&&((x.slug||'')!==v.slug)); next.push(v); const blob=new Blob([JSON.stringify(next,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='villas.json'; a.click()}; $('saveDraft').onclick=()=>{localStorage.setItem('balivillas_admin_draft',JSON.stringify({fields:getFields(),photos})); toast('Draft saved in browser')};
+$('loadSample').onclick=()=>{if(villas.length){const name=prompt('Type villa number:\n'+villas.map((v,i)=>`${i+1}. ${v.name}`).join('\n'),'1'); const i=(+name||1)-1; if(villas[i]) loadVilla(villas[i])}};
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); b.classList.add('active'); $('photosTab').hidden=b.dataset.tab!=='photos'; $('jsonTab').hidden=b.dataset.tab!=='json'; render(false)});
+['name','area','areaSlug','slug','bedrooms','bathrooms','guests','priceNight','priceMonth','description','amenities','airbnbUrl','bookingUrl'].forEach(id=>$(id).addEventListener('input',()=>render(false)));
+fetch('/data/villas.json').then(r=>r.json()).then(data=>{villas=Array.isArray(data)?data:(data.villas||[]); const saved=localStorage.getItem('balivillas_admin_draft')||localStorage.getItem('balivillas_admin_autosave'); if(saved){const d=JSON.parse(saved); setFields(d.fields); photos=d.photos||[]} else if(villas[0]) loadVilla(villas[0]); render()}).catch(()=>{const saved=localStorage.getItem('balivillas_admin_draft')||localStorage.getItem('balivillas_admin_autosave'); if(saved){const d=JSON.parse(saved); setFields(d.fields); photos=d.photos||[]} render(); toast('Open through localhost/server to load current villas')});
 </script>
 </body>
 </html>
