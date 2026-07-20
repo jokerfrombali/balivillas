@@ -9,3 +9,4 @@
 - Query URLs such as `/property-rental/?location=umalas` are allowed for UI filtering, but SEO pages should use static paths such as `/villas/umalas/`.
 - Keep rental URL structure documented in `docs/seo-rental-url-structure.md` and update it before adding new filter page types.
 - Every indexable SEO rental page must include a short unique SEO article, matching villa cards, FAQ, breadcrumbs, canonical URL, and internal links to related rental pages.
+- When importing villa photos from Airbnb, use the full Airbnb photo tour data when available: download every unique property photo, preserve `MediaTourStop` section names/categories, keep the Airbnb photo grouping/order, and use those labels for gallery sections, visible captions, image alt text, and structured villa data. Do not flatten Airbnb photos into an unlabeled image list unless Airbnb provides no labels.

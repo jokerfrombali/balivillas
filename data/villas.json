@@ -296,7 +296,110 @@
     "bookingUrl": "https://www.booking.com/hotel/id/stylish-2br-private-pool-home-umalas.en.html",
     "photosSource": "https://ru.airbnb.com/rooms/1631122907991519841",
     "monthly": false,
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "photoGroups": [
+      {
+        "name": "Living room",
+        "airbnbLabel": "Гостиная",
+        "images": [
+          "/public-objects/images/premier-umalas-17-28.jpg",
+          "/public-objects/images/premier-umalas-17-15.jpg",
+          "/public-objects/images/premier-umalas-17-3.jpg",
+          "/public-objects/images/premier-umalas-17-9.jpg"
+        ]
+      },
+      {
+        "name": "Full kitchen",
+        "airbnbLabel": "Полноценная кухня",
+        "images": [
+          "/public-objects/images/premier-umalas-17-21.jpg",
+          "/public-objects/images/premier-umalas-17-4.jpg"
+        ]
+      },
+      {
+        "name": "Dining area",
+        "airbnbLabel": "Обеденная зона",
+        "images": [
+          "/public-objects/images/premier-umalas-17-26.jpg",
+          "/public-objects/images/premier-umalas-17-8.jpg",
+          "/public-objects/images/premier-umalas-17-7.jpg",
+          "/public-objects/images/premier-umalas-17-17.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 1",
+        "airbnbLabel": "Спальня 1",
+        "images": [
+          "/public-objects/images/premier-umalas-17-10.jpg",
+          "/public-objects/images/premier-umalas-17-27.jpg",
+          "/public-objects/images/premier-umalas-17-29.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 2",
+        "airbnbLabel": "Спальня 2",
+        "images": [
+          "/public-objects/images/premier-umalas-17-12.jpg",
+          "/public-objects/images/premier-umalas-17-13.jpg",
+          "/public-objects/images/premier-umalas-17-25.jpg",
+          "/public-objects/images/premier-umalas-17-5.jpg",
+          "/public-objects/images/premier-umalas-17-18.jpg"
+        ]
+      },
+      {
+        "name": "Bathroom 1",
+        "airbnbLabel": "Ванная с туалетом 1",
+        "images": [
+          "/public-objects/images/premier-umalas-17-1.jpg"
+        ]
+      },
+      {
+        "name": "Bathroom 2",
+        "airbnbLabel": "Ванная с туалетом 2",
+        "images": [
+          "/public-objects/images/premier-umalas-17-23.jpg"
+        ]
+      },
+      {
+        "name": "Toilet",
+        "airbnbLabel": "Туалет",
+        "images": [
+          "/public-objects/images/premier-umalas-17-19.jpg"
+        ]
+      },
+      {
+        "name": "Workspace",
+        "airbnbLabel": "Место для работы",
+        "images": [
+          "/public-objects/images/premier-umalas-17-11.jpg",
+          "/public-objects/images/premier-umalas-17-14.jpg",
+          "/public-objects/images/premier-umalas-17-16.jpg",
+          "/public-objects/images/premier-umalas-17-20.jpg"
+        ]
+      },
+      {
+        "name": "Exterior",
+        "airbnbLabel": "Снаружи",
+        "images": [
+          "/public-objects/images/premier-umalas-17-2.jpg"
+        ]
+      },
+      {
+        "name": "Pool",
+        "airbnbLabel": "Бассейн",
+        "images": [
+          "/public-objects/images/premier-umalas-17-24.jpg"
+        ]
+      },
+      {
+        "name": "Additional photos",
+        "airbnbLabel": "Дополнительные фото",
+        "images": [
+          "/public-objects/images/premier-umalas-17-6.jpg",
+          "/public-objects/images/premier-umalas-17-22.jpg"
+        ]
+      }
+    ]
   },
   {
     "id": "own-pungutan-1",
