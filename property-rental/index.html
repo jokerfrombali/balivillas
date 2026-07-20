@@ -819,7 +819,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
     <div id="cardGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
 
       <!-- Card 1 -->
-      <div class="prop-card" onclick="window.location='/villa/'">
+      <div class="prop-card" data-location="canggu" onclick="window.location='/villa/'">
         <div class="img-wrap">
           <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80&auto=format&fit=crop" alt="Villa">
           <span class="badge">Canggu</span>
@@ -844,7 +844,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
 
       <!-- Card 2 -->
-      <div class="prop-card" onclick="window.location='/villa/'">
+      <div class="prop-card" data-location="ubud" onclick="window.location='/villa/'">
         <div class="img-wrap">
           <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80&auto=format&fit=crop" alt="Villa">
           <span class="badge">Ubud</span>
@@ -869,7 +869,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
 
       <!-- Card 3 -->
-      <div class="prop-card" onclick="window.location='/villa/'">
+      <div class="prop-card" data-location="seminyak" onclick="window.location='/villa/'">
         <div class="img-wrap">
           <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80&auto=format&fit=crop" alt="Villa">
           <span class="badge">Seminyak</span>
@@ -894,7 +894,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
 
       <!-- Card 4 -->
-      <div class="prop-card" onclick="window.location='/villa/'">
+      <div class="prop-card" data-location="uluwatu" onclick="window.location='/villa/'">
         <div class="img-wrap">
           <img src="https://images.unsplash.com/photo-1540541338537-0c4b94d7a37c?w=600&q=80&auto=format&fit=crop" alt="Villa">
           <span class="badge">Uluwatu</span>
@@ -918,7 +918,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
 
       <!-- Card 5 -->
-      <div class="prop-card" onclick="window.location='/villa/'">
+      <div class="prop-card" data-location="berawa" onclick="window.location='/villa/'">
         <div class="img-wrap">
           <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80&auto=format&fit=crop" alt="Villa">
           <span class="badge">Berawa</span>
@@ -943,7 +943,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
 
       <!-- Card 6 -->
-      <div class="prop-card" onclick="window.location='/villa/'">
+      <div class="prop-card" data-location="sanur" onclick="window.location='/villa/'">
         <div class="img-wrap">
           <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80&auto=format&fit=crop" alt="Villa" style="filter:hue-rotate(10deg)">
           <span class="badge">Sanur</span>
@@ -968,9 +968,9 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
 
       <!-- Card 7 -->
-      <div class="prop-card" onclick="window.location='/villa/'">
+      <div class="prop-card" data-location="umalas" onclick="window.location='/villa/premier-umalas-16-3br-pool-townhouse/'">
         <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=600&q=80&auto=format&fit=crop" alt="Villa">
+          <img src="/public-objects/images/premier-umalas-16-1.jpg" alt="Premier Umalas 16 villa in Umalas">
           <span class="badge">Umalas</span>
           <span class="badge-type">Villa</span>
           <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
@@ -978,12 +978,12 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
           </button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Tropical 2BR — Rice Field View</p>
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Premier Umalas 16 — Stylish 3BR Pool Townhouse</p>
           <div class="prop-meta" style="margin-bottom:10px">
-            <span>2 bed</span><span>2 bath</span><span>200 m²</span>
+            <span>3 bed</span><span>3 bath</span><span>6 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">$1,350</span><span style="font-size:12px;color:#6b6b66">/mo</span></div>
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
@@ -993,7 +993,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
 
       <!-- Card 8 -->
-      <div class="prop-card" onclick="window.location='/villa/'">
+      <div class="prop-card" data-location="jimbaran" onclick="window.location='/villa/'">
         <div class="img-wrap">
           <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80&auto=format&fit=crop" alt="Villa">
           <span class="badge">Jimbaran</span>
@@ -1018,7 +1018,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
 
       <!-- Card 9 -->
-      <div class="prop-card" onclick="window.location='/villa/'">
+      <div class="prop-card" data-location="canggu" onclick="window.location='/villa/'">
         <div class="img-wrap">
           <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80&auto=format&fit=crop" alt="Villa">
           <span class="badge">Canggu</span>
@@ -1043,7 +1043,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
 
       <!-- Card 10 -->
-      <div class="prop-card" onclick="window.location='/villa/'">
+      <div class="prop-card" data-location="kerobokan" onclick="window.location='/villa/'">
         <div class="img-wrap">
           <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&auto=format&fit=crop" alt="Villa">
           <span class="badge">Kerobokan</span>
@@ -1067,7 +1067,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
 
       <!-- Card 11 -->
-      <div class="prop-card" onclick="window.location='/villa/'">
+      <div class="prop-card" data-location="pererenan" onclick="window.location='/villa/'">
         <div class="img-wrap">
           <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80&auto=format&fit=crop" alt="Villa">
           <span class="badge">Pererenan</span>
@@ -1091,7 +1091,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
 
       <!-- Card 12 -->
-      <div class="prop-card" onclick="window.location='/villa/'">
+      <div class="prop-card" data-location="nusa-dua" onclick="window.location='/villa/'">
         <div class="img-wrap">
           <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&q=80&auto=format&fit=crop" alt="Villa">
           <span class="badge">Nusa Dua</span>
@@ -1334,12 +1334,38 @@ function clearAllFilters() {
   document.getElementById('priceMin').value = '';
   document.getElementById('priceMax').value = '';
   updateFilterCount();
+  applyUrlLocationFilter('');
 }
 
 function setPrice(min, max) {
   document.getElementById('priceMin').value = min;
   document.getElementById('priceMax').value = max === 99999 ? '' : max;
 }
+
+function applyUrlLocationFilter(location) {
+  var normalized = (location || '').toLowerCase();
+  var cards = Array.from(document.querySelectorAll('.prop-card'));
+  var visible = 0;
+  cards.forEach(function(card) {
+    var matches = !normalized || card.dataset.location === normalized;
+    card.style.display = matches ? '' : 'none';
+    if (matches) visible++;
+  });
+
+  var title = document.getElementById('resultsTitle');
+  if (title) {
+    title.textContent = normalized
+      ? visible + ' villas in ' + normalized.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); })
+      : '515 villas available';
+  }
+
+  document.querySelectorAll('input[data-filter="location"]').forEach(function(input) {
+    input.checked = normalized && input.value === normalized;
+  });
+  updateFilterCount();
+}
+
+applyUrlLocationFilter(new URLSearchParams(window.location.search).get('location'));
 
 /* View toggle */
 document.getElementById('viewGrid').addEventListener('click', function() {
