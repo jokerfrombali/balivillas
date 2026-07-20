@@ -265,13 +265,17 @@
       "/public-objects/images/premier-umalas-17-3.jpg",
       "/public-objects/images/premier-umalas-17-4.jpg",
       "/public-objects/images/premier-umalas-17-5.jpg",
-      "/public-objects/images/premier-umalas-17-6.jpg"
+      "/public-objects/images/premier-umalas-17-6.jpg",
+      "/public-objects/images/premier-umalas-17-7.jpg",
+      "/public-objects/images/premier-umalas-17-8.jpg",
+      "/public-objects/images/premier-umalas-17-9.jpg",
+      "/public-objects/images/premier-umalas-17-10.jpg"
     ],
     "lat": null,
     "lng": null,
     "airbnbUrl": "https://www.airbnb.com/rooms/1631122907991519841",
-    "bookingUrl": "https://booking.com/hotel/id/stylish-2br-private-pool-home-umalas.en.html",
-    "photosSource": "https://disk.yandex.ru/d/9H9LQXun3AupFw",
+    "bookingUrl": "https://www.booking.com/hotel/id/stylish-2br-private-pool-home-umalas.en.html",
+    "photosSource": "https://www.airbnb.com/rooms/1631122907991519841",
     "monthly": false,
     "updatedAt": "2026-07-20"
   },
