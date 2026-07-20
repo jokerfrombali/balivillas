@@ -222,12 +222,12 @@
       "Iron and ironing board"
     ],
     "images": [
-      "/public-objects/images/premier-umalas-16-1.jpg",
-      "/public-objects/images/premier-umalas-16-2.jpg",
-      "/public-objects/images/premier-umalas-16-3.jpg",
-      "/public-objects/images/premier-umalas-16-4.jpg",
-      "/public-objects/images/premier-umalas-16-5.jpg",
-      "/public-objects/images/premier-umalas-16-6.jpg"
+        "/villa/assets/images/new_img_1.webp",
+        "/villa/assets/images/new_img_2.webp",
+        "/villa/assets/images/new_img_3.webp",
+        "/villa/assets/images/new_img_4.webp",
+        "/villa/assets/images/new_img_5.webp",
+        "/villa/assets/images/img_155.webp"
     ],
     "lat": null,
     "lng": null,
