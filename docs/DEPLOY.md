@@ -1,6 +1,6 @@
 # Деплой TheBaliHost
 
-Статический сайт. Хостинг — Cloudflare Pages (бесплатный план), домен — `thehostbali.com`.
+Статический сайт. Хостинг — **Cloudflare Workers (Static Assets)**, домен — `thehostbali.com`.
 
 ## Параметры
 
@@ -8,39 +8,40 @@
 |---|---|
 | GitHub-репозиторий | `jokerfrombali/thebalihost` (приватный) |
 | Продакшн-ветка | `main` |
-| Хостинг | Cloudflare Pages, аккаунт `nevskiy50@gmail.com` |
-| Имя Pages-проекта | `thebalihost` |
+| Хостинг | Cloudflare Workers, аккаунт `nevskiy50@gmail.com` |
+| Имя Worker-проекта | `thebalihost` |
 | Домен | `thehostbali.com` + `www.thehostbali.com` |
 | Регистратор домена | Namecheap |
-| DNS | Cloudflare (NS переключены с Namecheap) |
-| Framework preset | None |
+| DNS | Cloudflare, NS `jack.ns.cloudflare.com` / `vida.ns.cloudflare.com` |
 | Build command | *(пусто)* |
-| Build output directory | `/` |
-| Root directory | *(пусто, корень репо)* |
+| Deploy command | `npx wrangler deploy` |
+| Конфиг | `wrangler.jsonc` в корне репозитория |
 
-Сборки нет — Pages просто раздаёт файлы из корня репозитория как есть.
+Сборки нет. `wrangler.jsonc` говорит отдавать содержимое корня репозитория как статику,
+`.assetsignore` исключает служебные папки из публичной выдачи.
+
+## Что НЕ публикуется (см. `.assetsignore`)
+
+`.github/`, `docs/`, `growth-engine/`, `imports/`, `tools/`, `AGENTS.md`,
+`Dockerfile`, `nginx.conf`, `cleanup-virtual-villas.ps1`, `balivillas_checklist.html`.
+
+`data/villas.json` публикуется — его подтягивают страницы вилл на лету.
 
 ## Рабочий цикл
 
 1. Claude правит файлы в локальной папке проекта.
 2. `git add` + `git commit` — история изменений остаётся в git.
 3. `git push` в `origin/main`.
-4. Cloudflare Pages ловит push и деплоит автоматически, обычно 1–2 минуты.
+4. Cloudflare ловит push и деплоит автоматически, обычно 1–2 минуты.
 
-Откат: в Cloudflare Pages → Deployments → нужный деплой → **Rollback**.
+Откат: Cloudflare → Workers → `thebalihost` → Deployments → нужная версия → Rollback.
 
 ## Ограничения бесплатного плана
 
-- Трафик и запросы — без лимита.
-- 500 сборок в месяц (одна сборка = один push в `main`).
-- Максимум 20 000 файлов в проекте (сейчас ~725) и 25 МиБ на файл.
+- Трафик и запросы к статике — без лимита.
+- 20 000 файлов в проекте (сейчас ~730) и 25 МиБ на файл.
   Самый большой файл — `video-header-manta.mp4`, 23.9 МиБ. **Впритык к лимиту** —
-  новые видео класть только меньше 25 МиБ либо выносить на R2/внешний хостинг.
-
-## Что Pages игнорирует
-
-`Dockerfile`, `nginx.conf`, `.dockerignore` — остатки прежней схемы деплоя,
-на Pages не используются. `sw.js` (service worker) раздаётся как обычный файл.
+  новые видео класть только меньше 25 МиБ либо выносить на R2.
 
 ## История
 

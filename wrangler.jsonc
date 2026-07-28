@@ -1,0 +1,9 @@
+{
+  "name": "thebalihost",
+  "compatibility_date": "2026-07-28",
+  "assets": {
+    "directory": "./",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  }
+}

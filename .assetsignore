@@ -1,0 +1,15 @@
+# Служебное — не должно попадать на публичный сайт
+.github/
+docs/
+growth-engine/
+imports/
+tools/
+AGENTS.md
+Dockerfile
+.dockerignore
+nginx.conf
+cleanup-virtual-villas.ps1
+balivillas_checklist.html
+wrangler.jsonc
+.assetsignore
+.gitignore
