@@ -1,5 +1,9 @@
 # Служебное — не должно попадать на публичный сайт
+.git/
 .github/
+.wrangler/
+node_modules/
+dist/
 docs/
 growth-engine/
 imports/
