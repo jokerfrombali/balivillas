@@ -18,7 +18,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT = process.env.OUT_DIR || path.join(__dirname, "dist");
-const ORIGIN = (process.env.SITE_ORIGIN || "https://balivillas.ai").replace(/\/$/, "");
+const ORIGIN = (process.env.SITE_ORIGIN || "https://thehostbali.com").replace(/\/$/, "");
 const KEY_FILE = path.join(__dirname, ".indexnow-key");
 const SEEN_FILE = path.join(__dirname, ".indexnow-seen.json");
 

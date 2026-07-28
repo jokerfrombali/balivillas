@@ -18,7 +18,7 @@
  *
  * Переменные окружения:
  *   API_BASE     — база API (ожидается GET {API_BASE}/api/villas)
- *   SITE_ORIGIN  — канонический домен (default: https://balivillas.ai)
+ *   SITE_ORIGIN  — канонический домен (default: https://thehostbali.com)
  *   WA_NUMBER    — WhatsApp для CTA (default: 6281918843134)
  *   OUT_DIR      — куда класть результат (default: ./dist)
  */
@@ -31,7 +31,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const CFG = {
   apiBase: process.env.API_BASE || "",
-  origin: (process.env.SITE_ORIGIN || "https://balivillas.ai").replace(/\/$/, ""),
+  origin: (process.env.SITE_ORIGIN || "https://thehostbali.com").replace(/\/$/, ""),
   wa: process.env.WA_NUMBER || "6281239081021",
   out: process.env.OUT_DIR || path.join(__dirname, "dist"),
   brand: "BaliVillas.ai",
@@ -150,7 +150,7 @@ function normalize(raw, i) {
 
 function waLink(v, context = "villa") {
   const text = encodeURIComponent(
-    `Hi! I'm interested in ${v ? v.name + " (" + v.area + ")" : "a villa in Bali"}. Is it available? [via balivillas.ai/${context}]`
+    `Hi! I'm interested in ${v ? v.name + " (" + v.area + ")" : "a villa in Bali"}. Is it available? [via thehostbali.com/${context}]`
   );
   return `https://wa.me/${CFG.wa}?text=${text}`;
 }
@@ -183,7 +183,6 @@ const orgLd = () => ({
   "@type": "Organization",
   name: CFG.brand,
   url: CFG.origin,
-  sameAs: ["https://mantavillas.com"],
 });
 
 function villaLd(v, url) {

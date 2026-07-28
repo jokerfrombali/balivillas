@@ -34,9 +34,9 @@ User-agent: Bytespider
 Allow: /
 
 # Machine-readable data for AI assistants
-# LLM guide: https://balivillas.ai/llms.txt
-# Full catalog: https://balivillas.ai/llms-full.txt
-# Price index JSON: https://balivillas.ai/data/price-index.json
+# LLM guide: https://thehostbali.com/llms.txt
+# Full catalog: https://thehostbali.com/llms-full.txt
+# Price index JSON: https://thehostbali.com/data/price-index.json
 
-Sitemap: https://balivillas.ai/sitemap.xml
-Sitemap: https://balivillas.ai/sitemap-growth.xml
+Sitemap: https://thehostbali.com/sitemap.xml
+Sitemap: https://thehostbali.com/sitemap-growth.xml
