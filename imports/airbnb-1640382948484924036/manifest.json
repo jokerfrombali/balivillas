@@ -1,0 +1,10 @@
+{
+  "roomId": "1640382948484924036",
+  "url": "https://www.airbnb.com/rooms/1640382948484924036",
+  "extractedAt": "2026-07-21T03:10:07.274911+00:00",
+  "photosFoundOnAirbnb": 32,
+  "photosDownloaded": 32,
+  "photoGroupsCount": 12,
+  "failures": [],
+  "notes": "Extraction completed. Amenities extracted best-effort from embedded HTML."
+}
