@@ -1427,5 +1427,296 @@
     "lat": -8.6977,
     "lng": 115.2596,
     "updatedAt": "2026-07-29"
+  },
+  {
+    "id": "own-the-wave-6br-beachside-villa-canggu",
+    "slug": "canggu/the-wave-6br-beachside-villa-canggu",
+    "name": "Villa The Wave — Beachside 6BR Villa in Canggu",
+    "area": "Canggu",
+    "areaSlug": "canggu",
+    "bedrooms": 6,
+    "bathrooms": 6.5,
+    "guests": 12,
+    "priceNight": null,
+    "priceMonth": null,
+    "currency": "USD",
+    "description": "Two-storey 341 m² villa built in 2023, a 2–5 minute walk from Berawa Beach in Canggu. Six bedrooms, each with a king bed, a TV and its own en-suite bathroom, plus a separate guest toilet. Open-plan living room with a Smart TV and fully equipped kitchen opening onto a large private pool through full-height glass doors; a wide first-floor balcony overlooks the garden. Fast Wi-Fi, a safe in every room and housekeeping three times a week are included. Sleeps up to 12 — suited to large families, groups of friends, weddings and company retreats.",
+    "amenities": [
+      "Large private pool",
+      "2–5 min walk to Berawa Beach",
+      "Six king bedrooms with en-suite bathrooms",
+      "Fast Wi-Fi",
+      "Dedicated workspace",
+      "Fully equipped kitchen",
+      "Smart TV in every bedroom",
+      "Air conditioning",
+      "Balcony with a view",
+      "Indoor and outdoor dining",
+      "Washing machine",
+      "Free parking on premises",
+      "Safe in every room",
+      "Private entrance",
+      "Housekeeping 3x/week",
+      "Suitable for groups and events"
+    ],
+    "images": [
+      "/public-objects/images/the-wave-canggu-01.jpg",
+      "/public-objects/images/the-wave-canggu-02.jpg",
+      "/public-objects/images/the-wave-canggu-03.jpg",
+      "/public-objects/images/the-wave-canggu-04.jpg",
+      "/public-objects/images/the-wave-canggu-05.jpg",
+      "/public-objects/images/the-wave-canggu-06.jpg",
+      "/public-objects/images/the-wave-canggu-07.jpg",
+      "/public-objects/images/the-wave-canggu-08.jpg",
+      "/public-objects/images/the-wave-canggu-09.jpg",
+      "/public-objects/images/the-wave-canggu-10.jpg",
+      "/public-objects/images/the-wave-canggu-11.jpg",
+      "/public-objects/images/the-wave-canggu-12.jpg",
+      "/public-objects/images/the-wave-canggu-13.jpg",
+      "/public-objects/images/the-wave-canggu-14.jpg",
+      "/public-objects/images/the-wave-canggu-15.jpg",
+      "/public-objects/images/the-wave-canggu-16.jpg",
+      "/public-objects/images/the-wave-canggu-17.jpg",
+      "/public-objects/images/the-wave-canggu-18.jpg",
+      "/public-objects/images/the-wave-canggu-19.jpg",
+      "/public-objects/images/the-wave-canggu-20.jpg",
+      "/public-objects/images/the-wave-canggu-21.jpg",
+      "/public-objects/images/the-wave-canggu-22.jpg",
+      "/public-objects/images/the-wave-canggu-23.jpg",
+      "/public-objects/images/the-wave-canggu-24.jpg",
+      "/public-objects/images/the-wave-canggu-25.jpg",
+      "/public-objects/images/the-wave-canggu-26.jpg",
+      "/public-objects/images/the-wave-canggu-27.jpg",
+      "/public-objects/images/the-wave-canggu-28.jpg",
+      "/public-objects/images/the-wave-canggu-29.jpg",
+      "/public-objects/images/the-wave-canggu-30.jpg",
+      "/public-objects/images/the-wave-canggu-31.jpg",
+      "/public-objects/images/the-wave-canggu-32.jpg",
+      "/public-objects/images/the-wave-canggu-33.jpg",
+      "/public-objects/images/the-wave-canggu-34.jpg",
+      "/public-objects/images/the-wave-canggu-35.jpg",
+      "/public-objects/images/the-wave-canggu-36.jpg",
+      "/public-objects/images/the-wave-canggu-37.jpg",
+      "/public-objects/images/the-wave-canggu-38.jpg",
+      "/public-objects/images/the-wave-canggu-39.jpg",
+      "/public-objects/images/the-wave-canggu-40.jpg",
+      "/public-objects/images/the-wave-canggu-41.jpg",
+      "/public-objects/images/the-wave-canggu-42.jpg",
+      "/public-objects/images/the-wave-canggu-43.jpg",
+      "/public-objects/images/the-wave-canggu-44.jpg",
+      "/public-objects/images/the-wave-canggu-45.jpg",
+      "/public-objects/images/the-wave-canggu-46.jpg",
+      "/public-objects/images/the-wave-canggu-47.jpg",
+      "/public-objects/images/the-wave-canggu-48.jpg",
+      "/public-objects/images/the-wave-canggu-49.jpg",
+      "/public-objects/images/the-wave-canggu-50.jpg",
+      "/public-objects/images/the-wave-canggu-51.jpg",
+      "/public-objects/images/the-wave-canggu-52.jpg",
+      "/public-objects/images/the-wave-canggu-53.jpg"
+    ],
+    "cardImage": "/public-objects/images/the-wave-canggu-01.jpg",
+    "topGallery": [
+      "/public-objects/images/the-wave-canggu-01.jpg",
+      "/public-objects/images/the-wave-canggu-02.jpg",
+      "/public-objects/images/the-wave-canggu-03.jpg",
+      "/public-objects/images/the-wave-canggu-04.jpg",
+      "/public-objects/images/the-wave-canggu-05.jpg"
+    ],
+    "photoGroups": [
+      {
+        "name": "Living room",
+        "airbnbLabel": "Living room",
+        "images": [
+          "/public-objects/images/the-wave-canggu-01.jpg"
+        ]
+      },
+      {
+        "name": "Full kitchen",
+        "airbnbLabel": "Full kitchen",
+        "images": [
+          "/public-objects/images/the-wave-canggu-02.jpg",
+          "/public-objects/images/the-wave-canggu-03.jpg",
+          "/public-objects/images/the-wave-canggu-04.jpg",
+          "/public-objects/images/the-wave-canggu-05.jpg"
+        ]
+      },
+      {
+        "name": "Dining area",
+        "airbnbLabel": "Dining area",
+        "images": [
+          "/public-objects/images/the-wave-canggu-06.jpg",
+          "/public-objects/images/the-wave-canggu-07.jpg",
+          "/public-objects/images/the-wave-canggu-08.jpg",
+          "/public-objects/images/the-wave-canggu-09.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 1",
+        "airbnbLabel": "Bedroom 1",
+        "images": [
+          "/public-objects/images/the-wave-canggu-10.jpg",
+          "/public-objects/images/the-wave-canggu-11.jpg",
+          "/public-objects/images/the-wave-canggu-12.jpg",
+          "/public-objects/images/the-wave-canggu-13.jpg",
+          "/public-objects/images/the-wave-canggu-14.jpg",
+          "/public-objects/images/the-wave-canggu-15.jpg",
+          "/public-objects/images/the-wave-canggu-16.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 2",
+        "airbnbLabel": "Bedroom 2",
+        "images": [
+          "/public-objects/images/the-wave-canggu-17.jpg",
+          "/public-objects/images/the-wave-canggu-18.jpg",
+          "/public-objects/images/the-wave-canggu-19.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 3",
+        "airbnbLabel": "Bedroom 3",
+        "images": [
+          "/public-objects/images/the-wave-canggu-20.jpg",
+          "/public-objects/images/the-wave-canggu-21.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 4",
+        "airbnbLabel": "Bedroom 4",
+        "images": [
+          "/public-objects/images/the-wave-canggu-22.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 5",
+        "airbnbLabel": "Bedroom 5",
+        "images": [
+          "/public-objects/images/the-wave-canggu-23.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 6",
+        "airbnbLabel": "Bedroom 6",
+        "images": [
+          "/public-objects/images/the-wave-canggu-24.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 1",
+        "airbnbLabel": "Full bathroom 1",
+        "images": [
+          "/public-objects/images/the-wave-canggu-25.jpg",
+          "/public-objects/images/the-wave-canggu-26.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 2",
+        "airbnbLabel": "Full bathroom 2",
+        "images": [
+          "/public-objects/images/the-wave-canggu-27.jpg",
+          "/public-objects/images/the-wave-canggu-28.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 3",
+        "airbnbLabel": "Full bathroom 3",
+        "images": [
+          "/public-objects/images/the-wave-canggu-29.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 4",
+        "airbnbLabel": "Full bathroom 4",
+        "images": [
+          "/public-objects/images/the-wave-canggu-30.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 5",
+        "airbnbLabel": "Full bathroom 5",
+        "images": [
+          "/public-objects/images/the-wave-canggu-31.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 6",
+        "airbnbLabel": "Full bathroom 6",
+        "images": [
+          "/public-objects/images/the-wave-canggu-32.jpg"
+        ]
+      },
+      {
+        "name": "Half bathroom",
+        "airbnbLabel": "Half bathroom",
+        "images": [
+          "/public-objects/images/the-wave-canggu-33.jpg",
+          "/public-objects/images/the-wave-canggu-34.jpg",
+          "/public-objects/images/the-wave-canggu-35.jpg",
+          "/public-objects/images/the-wave-canggu-36.jpg",
+          "/public-objects/images/the-wave-canggu-37.jpg",
+          "/public-objects/images/the-wave-canggu-38.jpg"
+        ]
+      },
+      {
+        "name": "Exterior",
+        "airbnbLabel": "Exterior",
+        "images": [
+          "/public-objects/images/the-wave-canggu-39.jpg",
+          "/public-objects/images/the-wave-canggu-40.jpg",
+          "/public-objects/images/the-wave-canggu-41.jpg",
+          "/public-objects/images/the-wave-canggu-42.jpg",
+          "/public-objects/images/the-wave-canggu-43.jpg",
+          "/public-objects/images/the-wave-canggu-44.jpg",
+          "/public-objects/images/the-wave-canggu-45.jpg",
+          "/public-objects/images/the-wave-canggu-46.jpg"
+        ]
+      },
+      {
+        "name": "Pool",
+        "airbnbLabel": "Pool",
+        "images": [
+          "/public-objects/images/the-wave-canggu-47.jpg",
+          "/public-objects/images/the-wave-canggu-48.jpg",
+          "/public-objects/images/the-wave-canggu-49.jpg",
+          "/public-objects/images/the-wave-canggu-50.jpg"
+        ]
+      },
+      {
+        "name": "Additional photos",
+        "airbnbLabel": "Additional photos",
+        "images": [
+          "/public-objects/images/the-wave-canggu-51.jpg",
+          "/public-objects/images/the-wave-canggu-52.jpg",
+          "/public-objects/images/the-wave-canggu-53.jpg"
+        ]
+      }
+    ],
+    "categories": [
+      "all-villas",
+      "property-rental",
+      "area:canggu",
+      "bedrooms:6",
+      "area-bedrooms:canggu:6",
+      "new-on-thehost",
+      "luxury-properties",
+      "filter:pool",
+      "filter:beach",
+      "filter:groups"
+    ],
+    "filterTags": [
+      "pool",
+      "beach",
+      "groups",
+      "workspace",
+      "luxury"
+    ],
+    "airbnbUrl": "https://www.airbnb.com/rooms/1701871105350258365",
+    "bookingUrl": "",
+    "monthly": false,
+    "url": "/villa/canggu/the-wave-6br-beachside-villa-canggu/",
+    "galleryUrl": "/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/",
+    "lat": -8.6675,
+    "lng": 115.1444,
+    "updatedAt": "2026-07-29"
   }
 ]
