@@ -1128,5 +1128,304 @@
       "newOnSite": true,
       "luxury": false
     }
+  },
+  {
+    "id": "own-villa-kesari-4-3br-pool-villa-sanur",
+    "slug": "sanur/villa-kesari-4-3br-pool-villa-sanur",
+    "name": "Villa Kesari 4 — Family 3BR Pool Villa in Sanur",
+    "area": "Sanur",
+    "areaSlug": "sanur",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "guests": 6,
+    "priceNight": null,
+    "priceMonth": null,
+    "currency": "USD",
+    "description": "Newly built 3-bedroom family villa on a quiet street in Sanur, a 10-minute walk from the beach. Private pool with a shallow area for children, tropical garden with sun loungers, and three en-suite bedrooms with A/C, blackout curtains and garden views. Open-plan living room with a dining area, fully equipped kitchen, 300 Mbps fibre Wi-Fi and a work-friendly desk. Housekeeping 3x a week, pool and garden care included. Free private parking with automatic gates; staff meet every guest in person.",
+    "amenities": [
+      "Private pool with shallow kids' area",
+      "Large tropical garden",
+      "Three en-suite bedrooms",
+      "Fast Wi-Fi 300 Mbps",
+      "Dedicated workspace",
+      "Fully equipped kitchen",
+      "Smart TV / Apple TV",
+      "Air conditioning",
+      "Blackout curtains",
+      "Outdoor shower",
+      "Washing machine",
+      "Dishwasher",
+      "Free private parking",
+      "Safe",
+      "Housekeeping 3x/week",
+      "Family friendly",
+      "Walk to beach"
+    ],
+    "images": [
+      "/public-objects/images/villa-kesari-4-sanur-01.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-02.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-03.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-04.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-05.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-06.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-07.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-08.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-09.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-10.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-11.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-12.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-13.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-14.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-15.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-16.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-17.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-18.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-19.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-20.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-21.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-22.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-23.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-24.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-25.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-26.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-27.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-28.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-29.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-30.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-31.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-32.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-33.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-34.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-35.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-36.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-37.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-38.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-39.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-40.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-41.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-42.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-43.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-44.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-45.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-46.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-47.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-48.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-49.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-50.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-51.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-52.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-53.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-54.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-55.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-56.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-57.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-58.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-59.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-60.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-61.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-62.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-63.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-64.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-65.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-66.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-67.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-68.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-69.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-70.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-71.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-72.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-73.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-74.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-75.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-76.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-77.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-78.jpg"
+    ],
+    "cardImage": "/public-objects/images/villa-kesari-4-sanur-01.jpg",
+    "topGallery": [
+      "/public-objects/images/villa-kesari-4-sanur-01.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-02.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-03.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-04.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-05.jpg"
+    ],
+    "photoGroups": [
+      {
+        "name": "Living room",
+        "airbnbLabel": "Living room",
+        "images": [
+          "/public-objects/images/villa-kesari-4-sanur-01.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-02.jpg"
+        ]
+      },
+      {
+        "name": "Full kitchen",
+        "airbnbLabel": "Full kitchen",
+        "images": [
+          "/public-objects/images/villa-kesari-4-sanur-03.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-04.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-05.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-06.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-07.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-08.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-09.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-10.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-11.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-12.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 1",
+        "airbnbLabel": "Bedroom 1",
+        "images": [
+          "/public-objects/images/villa-kesari-4-sanur-13.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-14.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-15.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-16.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-17.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 2",
+        "airbnbLabel": "Bedroom 2",
+        "images": [
+          "/public-objects/images/villa-kesari-4-sanur-18.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-19.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-20.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-21.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-22.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-23.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-24.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-25.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-26.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 3",
+        "airbnbLabel": "Bedroom 3",
+        "images": [
+          "/public-objects/images/villa-kesari-4-sanur-27.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-28.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-29.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-30.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-31.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 1",
+        "airbnbLabel": "Full bathroom 1",
+        "images": [
+          "/public-objects/images/villa-kesari-4-sanur-32.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-33.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-34.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-35.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 2",
+        "airbnbLabel": "Full bathroom 2",
+        "images": [
+          "/public-objects/images/villa-kesari-4-sanur-36.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-37.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-38.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-39.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 3",
+        "airbnbLabel": "Full bathroom 3",
+        "images": [
+          "/public-objects/images/villa-kesari-4-sanur-40.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-41.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-42.jpg"
+        ]
+      },
+      {
+        "name": "Courtyard",
+        "airbnbLabel": "Courtyard",
+        "images": [
+          "/public-objects/images/villa-kesari-4-sanur-43.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-44.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-45.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-46.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-47.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-48.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-49.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-50.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-51.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-52.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-53.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-54.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-55.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-56.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-57.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-58.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-59.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-60.jpg"
+        ]
+      },
+      {
+        "name": "Laundry area",
+        "airbnbLabel": "Laundry area",
+        "images": [
+          "/public-objects/images/villa-kesari-4-sanur-61.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-62.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-63.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-64.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-65.jpg"
+        ]
+      },
+      {
+        "name": "Exterior",
+        "airbnbLabel": "Exterior",
+        "images": [
+          "/public-objects/images/villa-kesari-4-sanur-66.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-67.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-68.jpg"
+        ]
+      },
+      {
+        "name": "Pool",
+        "airbnbLabel": "Pool",
+        "images": [
+          "/public-objects/images/villa-kesari-4-sanur-69.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-70.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-71.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-72.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-73.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-74.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-75.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-76.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-77.jpg",
+          "/public-objects/images/villa-kesari-4-sanur-78.jpg"
+        ]
+      }
+    ],
+    "categories": [
+      "all-villas",
+      "property-rental",
+      "area:sanur",
+      "bedrooms:3",
+      "area-bedrooms:sanur:3",
+      "new-on-thehost",
+      "filter:pool",
+      "filter:family",
+      "filter:garden"
+    ],
+    "filterTags": [
+      "pool",
+      "family",
+      "garden",
+      "workspace",
+      "beach"
+    ],
+    "airbnbUrl": "https://www.airbnb.com/rooms/1452800837393484431",
+    "bookingUrl": "",
+    "monthly": false,
+    "url": "/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/",
+    "galleryUrl": "/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/",
+    "lat": -8.6977,
+    "lng": 115.2596,
+    "updatedAt": "2026-07-29"
   }
 ]
