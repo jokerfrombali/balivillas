@@ -731,7 +731,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   <div class="results-bar">
     <div>
       <p style="font-size:12px;color:#6b6b66;text-transform:uppercase;letter-spacing:0.18em;font-weight:600;margin-bottom:3px">Bali Property Rental</p>
-      <p style="font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:700" id="resultsTitle">3 villas available</p>
+      <p style="font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:700" id="resultsTitle">6 villas available</p>
     </div>
     <div style="display:flex;align-items:center;gap:10px">
       <select class="sort-select" id="sortSelect">
@@ -942,6 +942,31 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
           </div>
         </div>
       </div>
+      <!-- Sanur villa 4 -->
+      <div class="prop-card" data-location="sanur" data-beds="3" data-guests="6" data-type="villa" data-amenities="pool wifi kitchen work garden bbq parking" onclick="window.location='/villa/sanur/lucky-lily-3br-pool-villa-sanur/'">
+        <div class="img-wrap">
+          <picture><source srcset="/public-objects/images/lucky-lily-sanur-3br-villa-01.avif" type="image/avif"><img src="/public-objects/images/lucky-lily-sanur-3br-villa-01.jpg" alt="Lucky Lily 3BR Pool Villa in Sanur — Sanur villa" loading="lazy" decoding="async" width="1200" height="800"></picture>
+          <span class="badge">Sanur</span>
+          <span class="badge-type">Villa</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Lucky Lily 3BR Pool Villa in Sanur</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>3 bed</span><span>3.5 bath</span><span>6 guests</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Garden</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
 
     <!-- Load more -->
