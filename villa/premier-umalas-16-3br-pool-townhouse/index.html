@@ -800,7 +800,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             // Find guest selector
-            const guestEl = card.querySelector('[class*="guest"], button:has-text("guest")');
+            const guestEl = card.querySelector('[class*="guest"]') || [...card.querySelectorAll('button')].find(b=>/guest/i.test(b.textContent));
             if (guestEl) {
                 guestEl.id = 'guestSelector';
                 setupGuestSelector(guestEl);
