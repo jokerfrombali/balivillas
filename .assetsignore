@@ -13,7 +13,7 @@ Dockerfile
 .dockerignore
 nginx.conf
 cleanup-virtual-villas.ps1
-balivillas_checklist.html
+thehost_checklist.html
 wrangler.jsonc
 .assetsignore
 .gitignore

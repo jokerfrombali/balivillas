@@ -292,7 +292,7 @@
       "area:sanur",
       "bedrooms:2",
       "area-bedrooms:sanur:2",
-      "new-on-balivillas",
+      "new-on-thehost",
       "filter:private-pool",
       "filter:fast-wifi",
       "filter:kitchen",
@@ -313,7 +313,7 @@
       "area": true,
       "bedroomPage": true,
       "monthly": false,
-      "newOnBaliVillas": true,
+      "newOnSite": true,
       "luxury": false
     }
   },
@@ -505,7 +505,7 @@
       "area:sanur",
       "bedrooms:2",
       "area-bedrooms:sanur:2",
-      "new-on-balivillas",
+      "new-on-thehost",
       "filter:private-pool",
       "filter:fast-wifi",
       "filter:kitchen",
@@ -526,7 +526,7 @@
       "area": true,
       "bedroomPage": true,
       "monthly": false,
-      "newOnBaliVillas": true,
+      "newOnSite": true,
       "luxury": false
     }
   },
@@ -736,7 +736,7 @@
       "area:sanur",
       "bedrooms:3",
       "area-bedrooms:sanur:3",
-      "new-on-balivillas",
+      "new-on-thehost",
       "filter:private-pool",
       "filter:fast-wifi",
       "filter:kitchen",
@@ -759,7 +759,7 @@
       "area": true,
       "bedroomPage": true,
       "monthly": false,
-      "newOnBaliVillas": true,
+      "newOnSite": true,
       "luxury": false
     }
   }

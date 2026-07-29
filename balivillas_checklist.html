@@ -577,6 +577,11 @@
     .actions { right: 12px; bottom: 12px; flex-direction: column; }
   }
 </style>
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<meta name="theme-color" content="#343537">
 </head>
 <body>
 <div class="container">
@@ -2337,7 +2342,7 @@ QUERIES LIST (50 запросов):
 
 PIPELINE на каждый запрос:
 1. Send query to each of 4 LLM APIs
-2. Parse response для mentions of thehostbali.com (URL, brand name, sometimes typo'd как "Bali Villas AI")
+2. Parse response для mentions of thehostbali.com (URL, brand name, sometimes typo'd как "The Host Bali")
 3. Detect type of mention:
    - Direct citation with link
    - Brand mention without link
@@ -2429,7 +2434,7 @@ COST CALCULATION:
 </div>
 
 <script>
-  const STORAGE_KEY = 'balivillas_checklist_v1';
+  const STORAGE_KEY = 'thehost_checklist_v1';
 
   // Load state
   function loadState() {
