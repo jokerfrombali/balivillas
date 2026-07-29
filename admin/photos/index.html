@@ -29,7 +29,10 @@ button:disabled{opacity:.4;cursor:not-allowed}
 .ph img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
 .ph .n{position:absolute;left:7px;top:7px;background:rgba(0,0,0,.72);color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:999px}
 .ph .cover{position:absolute;right:7px;top:7px;background:var(--sand);color:#1b1b1b;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:2px 7px;border-radius:999px;text-transform:uppercase}
-.ph .tools{position:absolute;inset:auto 0 0 0;display:flex;gap:4px;justify-content:center;padding:6px;background:linear-gradient(transparent,rgba(0,0,0,.6));opacity:0;transition:opacity .12s}
+.ph .tools{position:absolute;inset:auto 0 0 0;display:flex;flex-direction:column;gap:4px;align-items:center;padding:6px;background:linear-gradient(transparent,rgba(0,0,0,.72));opacity:0;transition:opacity .12s}
+.ph .row{display:flex;gap:4px;justify-content:center;flex-wrap:wrap}
+.ph .row.hero button{padding:2px 6px;font-size:11px;font-weight:700;background:rgba(255,255,255,.82)}
+.ph .row.hero button.on{background:var(--bronze);color:#fff}
 .ph:hover .tools{opacity:1}
 .ph .tools button{padding:3px 8px;font-size:12px;border-radius:8px;border:0;background:rgba(255,255,255,.92)}
 .ph.dragging{opacity:.35;cursor:grabbing}
@@ -41,7 +44,22 @@ button:disabled{opacity:.4;cursor:not-allowed}
 .dirty{color:var(--bad);font-weight:600}
 code{background:var(--soft);padding:1px 6px;border-radius:6px;font-size:12.5px}
 .note{background:#fff8e6;border:1px solid #e8d9a8;border-radius:14px;padding:12px 16px;font-size:13.5px;margin-bottom:18px}
-@media(max-width:640px){.grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}select{min-width:100%}}
+.heropanel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:16px 18px;margin-bottom:18px}
+.heropanel h3{margin:0 0 4px;font:700 17px/1.2 Georgia,serif}
+.heropanel .meta{color:var(--muted);font-size:12.5px;margin-bottom:12px}
+.heroGrid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:330px}
+.slot{position:relative;border-radius:14px;overflow:hidden;border:2px dashed var(--line);background:var(--soft);cursor:grab;display:flex;align-items:center;justify-content:center;transition:box-shadow .12s,border-color .12s}
+.slot:first-child{grid-row:1/3}
+.slot.filled{border-style:solid;border-color:transparent}
+.slot img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.slot .lab{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.78);color:#fff;font:800 11px/1 Inter,sans-serif;letter-spacing:.06em;padding:5px 9px;border-radius:999px;text-transform:uppercase}
+.slot:first-child .lab{background:var(--bronze)}
+.slot.over{border-color:var(--dark);border-style:solid;box-shadow:0 8px 22px rgba(0,0,0,.22)}
+.slot.dragging{opacity:.35;cursor:grabbing}
+.slot .empty{color:var(--muted);font-size:12px;padding:0 10px;text-align:center}
+.ph .hb{position:absolute;right:7px;top:7px;background:var(--bronze);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.05em;padding:2px 7px;border-radius:999px;text-transform:uppercase}
+.ph.inhero{border-color:var(--bronze)}
+@media(max-width:640px){.grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}select{min-width:100%}.heroGrid{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:auto}.slot{aspect-ratio:4/3}.slot:first-child{grid-row:auto;grid-column:1/3}}
 </style>
 </head>
 <body>
@@ -58,9 +76,17 @@ code{background:var(--soft);padding:1px 6px;border-radius:6px;font-size:12.5px}
 
 <div class="wrap">
   <div class="note">
-    Drag photos to reorder them — inside a group or from one group to another. The first photo of the
-    first group is the <strong>cover</strong>. Nothing is written to the site from here: press
-    <strong>Download villas.json</strong> and hand the file over, then the villa page and gallery get rebuilt from it.
+    <strong>Main photos</strong> — the five tiles at the top of the villa page: <code>main</code> (big one),
+    then <code>m2</code>, <code>m3</code>, <code>m4</code>, <code>m5</code>. Drag any photo from the groups
+    below onto a slot, or hover a photo and press <strong>main / m2 / m3 / m4 / m5</strong> to drop it straight into that slot.
+    Dragging one slot onto another swaps them. <code>main</code> is also the cover in the catalogue.
+    Below that you reorder photos inside the gallery groups. Nothing is written to the site from here:
+    press <strong>Download villas.json</strong> and hand the file over, then the villa page and gallery get rebuilt from it.
+  </div>
+  <div class="heropanel">
+    <h3>Main photos</h3>
+    <div class="meta">main &middot; m2 &middot; m3 &middot; m4 &middot; m5 &mdash; the hero grid on the villa page</div>
+    <div class="heroGrid" id="hero"></div>
   </div>
   <div id="groups"></div>
 </div>
@@ -114,8 +140,81 @@ function groupsOf(v){
   return gs;
 }
 
+var HERO_LABELS=['main','m2','m3','m4','m5'];
+
+/* hero = topGallery, дополненный началом images до 5 */
+function heroOf(v){
+  var flat=v.images||[], seen={}, h=[];
+  (v.topGallery||[]).forEach(function(p){ if(!seen[p] && flat.indexOf(p)>=0 && h.length<5){ seen[p]=1; h.push(p); } });
+  for(var i=0;i<flat.length && h.length<5;i++){ if(!seen[flat[i]]){ seen[flat[i]]=1; h.push(flat[i]); } }
+  return h;
+}
+
+function commitHero(v,h){
+  h=h.slice(0,5);
+  v.topGallery=h;
+  v.cardImage=h[0]||v.cardImage;
+  var rest=(v.images||[]).filter(function(p){ return h.indexOf(p)<0 });
+  v.images=h.concat(rest);
+  v.updatedAt=new Date().toISOString().slice(0,10);
+  dirty=true;
+  localStorage.setItem(LSKEY, JSON.stringify(DATA));
+  setStatus('Unsaved changes \u2014 download the file to apply them','dirty');
+  render();
+}
+
+function assignHero(src,i){
+  var v=villas()[cur], h=heroOf(v);
+  if(i>h.length) i=h.length;
+  var j=h.indexOf(src);
+  if(j===i) return;
+  if(j>=0){ var t=h[i]; h[i]=h[j]; h[j]=t; }
+  else { h[i]=src; }
+  commitHero(v,h);
+}
+
+function dropOnSlot(from,i){
+  var v=villas()[cur], h=heroOf(v), src=from.src;
+  if(!src) return;
+  assignHero(src,i);
+}
+
+function slotEl(src,i){
+  var d=document.createElement('div'); d.className='slot'+(src?' filled':'');
+  d.dataset.hero=i; if(src) d.dataset.src=src;
+  if(src){
+    d.draggable=true;
+    var im=document.createElement('img'); im.loading='lazy';
+    im.src=src.replace(/\.(jpg|jpeg|png)$/i,'.avif');
+    im.onerror=function(){ im.onerror=null; im.src=src; };
+    d.appendChild(im);
+    d.addEventListener('dragstart',function(e){ dragEl=d; d.classList.add('dragging'); e.dataTransfer.effectAllowed='move'; e.dataTransfer.setData('text/plain',src); });
+    d.addEventListener('dragend',function(){ d.classList.remove('dragging'); dragEl=null; });
+  } else {
+    var em=document.createElement('span'); em.className='empty'; em.textContent='drag a photo here';
+    d.appendChild(em);
+  }
+  var lab=document.createElement('span'); lab.className='lab'; lab.textContent=HERO_LABELS[i]||('m'+(i+1));
+  d.appendChild(lab);
+  d.addEventListener('dragover',function(e){ e.preventDefault(); d.classList.add('over'); });
+  d.addEventListener('dragleave',function(){ d.classList.remove('over'); });
+  d.addEventListener('drop',function(e){
+    e.preventDefault(); e.stopPropagation(); d.classList.remove('over');
+    if(!dragEl||dragEl===d) return;
+    dropOnSlot(dragEl.dataset, i);
+  });
+  return d;
+}
+
+function renderHero(){
+  var v=villas()[cur], h=heroOf(v), box=$('hero'); box.innerHTML='';
+  for(var i=0;i<5;i++) box.appendChild(slotEl(h[i]||null,i));
+}
+
 function render(){
   var v=villas()[cur]; if(!v) return;
+  renderHero();
+  var hero=heroOf(v);
   var gs=groupsOf(v), host=$('groups'); host.innerHTML='';
   gs.forEach(function(g,gi){
     var box=document.createElement('div'); box.className='group';
@@ -123,31 +222,40 @@ function render(){
     var meta=document.createElement('div'); meta.className='meta'; meta.textContent=g.images.length+' photos';
     var grid=document.createElement('div'); grid.className='grid'; grid.dataset.gi=gi;
     g.images.forEach(function(src,pi){
-      grid.appendChild(tile(src,gi,pi,gi===0&&pi===0));
+      grid.appendChild(tile(src,gi,pi,hero.indexOf(src)));
     });
     grid.addEventListener('dragover', function(e){ e.preventDefault(); grid.classList.add('dropzone'); });
     grid.addEventListener('dragleave', function(){ grid.classList.remove('dropzone'); });
     grid.addEventListener('drop', function(e){
       e.preventDefault(); grid.classList.remove('dropzone');
-      if(!dragEl) return;
+      if(!dragEl || dragEl.dataset.hero!==undefined) return;
       if(e.target===grid) dropOn(dragEl.dataset, gi, g.images.length);
     });
     box.appendChild(h); box.appendChild(meta); box.appendChild(grid); host.appendChild(box);
   });
 }
 
-function tile(src,gi,pi,isCover){
-  var d=document.createElement('div'); d.className='ph'; d.draggable=true;
+function tile(src,gi,pi,hi){
+  var d=document.createElement('div'); d.className='ph'+(hi>=0?' inhero':''); d.draggable=true;
   d.dataset.gi=gi; d.dataset.pi=pi; d.dataset.src=src;
   var im=document.createElement('img'); im.loading='lazy'; im.src=src.replace(/\.(jpg|jpeg|png)$/i,'.avif');
   im.onerror=function(){ im.onerror=null; im.src=src; };
   var n=document.createElement('span'); n.className='n'; n.textContent=pi+1;
   d.appendChild(im); d.appendChild(n);
-  if(isCover){ var c=document.createElement('span'); c.className='cover'; c.textContent='cover'; d.appendChild(c); }
+  if(hi>=0){ var c=document.createElement('span'); c.className='hb'; c.textContent=HERO_LABELS[hi]; d.appendChild(c); }
   var t=document.createElement('div'); t.className='tools';
-  t.appendChild(btn('←',function(e){e.stopPropagation(); moveAbs(gi,pi,gi,pi-1)}));
-  t.appendChild(btn('↑ first',function(e){e.stopPropagation(); moveAbs(gi,pi,0,0)}));
-  t.appendChild(btn('→',function(e){e.stopPropagation(); moveAbs(gi,pi,gi,pi+1)}));
+  var r1=document.createElement('div'); r1.className='row';
+  r1.appendChild(btn('←',function(e){e.stopPropagation(); moveAbs(gi,pi,gi,pi-1)}));
+  r1.appendChild(btn('↑ first',function(e){e.stopPropagation(); moveAbs(gi,pi,gi,0)}));
+  r1.appendChild(btn('→',function(e){e.stopPropagation(); moveAbs(gi,pi,gi,pi+1)}));
+  var r2=document.createElement('div'); r2.className='row hero';
+  HERO_LABELS.forEach(function(lab,si){
+    var b=btn(lab,function(e){ e.stopPropagation(); assignHero(src,si); });
+    if(si===hi) b.className='on';
+    b.title='Put this photo into slot '+lab;
+    r2.appendChild(b);
+  });
+  t.appendChild(r1); t.appendChild(r2);
   d.appendChild(t);
   d.addEventListener('dragstart',function(e){ dragEl=d; d.classList.add('dragging'); e.dataTransfer.effectAllowed='move'; e.dataTransfer.setData('text/plain',src); });
   d.addEventListener('dragend',function(){ d.classList.remove('dragging'); dragEl=null; document.querySelectorAll('.ph.over').forEach(function(x){x.classList.remove('over')}); });
@@ -161,6 +269,7 @@ function tile(src,gi,pi,isCover){
   return d;
 }
 function dropOn(from,tg,tp){
+  if(from.hero!==undefined) return;   /* слот hero не переставляет фото в группах */
   var fg=+from.gi, fp=+from.pi;
   if(fg===tg && fp<tp) tp--;      /* элемент изымается раньше цели — цель сдвигается влево */
   moveAbs(fg,fp,tg,tp);
@@ -184,9 +293,12 @@ function moveAbs(fg,fp,tg,tp){
 
 function writeBack(v,gs){
   var flat=[]; gs.forEach(function(g){ g.images.forEach(function(p){ if(flat.indexOf(p)<0) flat.push(p) }) });
-  v.images=flat;
-  v.cardImage=flat[0]||v.cardImage;
-  v.topGallery=flat.slice(0,5);
+  var h=heroOf(v).filter(function(p){ return flat.indexOf(p)>=0 });
+  for(var i=0;i<flat.length && h.length<5;i++){ if(h.indexOf(flat[i])<0) h.push(flat[i]); }
+  var rest=flat.filter(function(p){ return h.indexOf(p)<0 });
+  v.images=h.concat(rest);
+  v.topGallery=h;
+  v.cardImage=h[0]||v.cardImage;
   if(v.photoGroups && v.photoGroups.length){
     var named={}; gs.forEach(function(g){ named[g.name]=g.images });
     v.photoGroups.forEach(function(g){
