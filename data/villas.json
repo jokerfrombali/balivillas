@@ -1718,5 +1718,251 @@
     "lat": -8.6675,
     "lng": 115.1444,
     "updatedAt": "2026-07-29"
+  },
+  {
+    "id": "own-sanur-garden-pool-4br",
+    "slug": "sanur/garden-pool-villa-4br-sanur",
+    "name": "Sanur Garden Pool Villa — Family 4BR near Mertasari Beach",
+    "area": "Sanur",
+    "areaSlug": "sanur",
+    "bedrooms": 4,
+    "bathrooms": 4.5,
+    "guests": 8,
+    "priceNight": null,
+    "priceMonth": null,
+    "currency": "USD",
+    "description": "Two-storey 235 m² villa on a quiet lane in south Sanur, a short walk from local cafés and about a kilometre from Mertasari Beach. Four bedrooms — the master on the ground floor with a pool view, three more upstairs — each with a king bed and its own en-suite bathroom, plus a separate guest toilet. The enclosed living and kitchen area is air-conditioned, with a large sofa, Smart TV and a dining table for eight, and opens through sliding glass doors onto a 35 m² private pool with four sunbeds and a garden. Fast Wi-Fi, a dedicated workspace, filtered drinking water, private parking and housekeeping three times a week are included. Sleeps up to 8 — suited to families and to two or three families travelling together.",
+    "amenities": [
+      "Private 35 m² pool with four sunbeds",
+      "Tropical garden",
+      "Four king bedrooms, all en-suite",
+      "Guest toilet",
+      "Fast Wi-Fi",
+      "Dedicated workspace",
+      "Fully equipped kitchen",
+      "Smart TV with Netflix and Apple TV",
+      "Air conditioning throughout",
+      "Filtered drinking water",
+      "Indoor dining for eight",
+      "Free private parking",
+      "Housekeeping 3x per week",
+      "Baby cot on request",
+      "Laundry pick-up and delivery service",
+      "About 1 km to Mertasari Beach"
+    ],
+    "images": [
+      "/public-objects/images/sanur-garden-pool-4br-34.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-01.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-12.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-07.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-37.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-02.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-03.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-04.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-05.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-06.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-08.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-09.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-10.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-11.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-13.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-14.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-15.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-16.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-17.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-18.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-19.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-20.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-21.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-22.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-23.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-24.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-25.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-26.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-27.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-28.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-29.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-30.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-31.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-32.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-33.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-35.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-36.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-47.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-48.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-49.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-38.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-39.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-40.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-41.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-42.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-43.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-44.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-45.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-46.jpg"
+    ],
+    "cardImage": "/public-objects/images/sanur-garden-pool-4br-34.jpg",
+    "topGallery": [
+      "/public-objects/images/sanur-garden-pool-4br-34.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-01.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-12.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-07.jpg",
+      "/public-objects/images/sanur-garden-pool-4br-37.jpg"
+    ],
+    "photoGroups": [
+      {
+        "name": "Living room",
+        "airbnbLabel": "Living room",
+        "images": [
+          "/public-objects/images/sanur-garden-pool-4br-01.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-02.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-03.jpg"
+        ]
+      },
+      {
+        "name": "Full kitchen",
+        "airbnbLabel": "Full kitchen",
+        "images": [
+          "/public-objects/images/sanur-garden-pool-4br-04.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-05.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-06.jpg"
+        ]
+      },
+      {
+        "name": "Dining area",
+        "airbnbLabel": "Dining area",
+        "images": [
+          "/public-objects/images/sanur-garden-pool-4br-07.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-08.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-09.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 1",
+        "airbnbLabel": "Bedroom 1",
+        "images": [
+          "/public-objects/images/sanur-garden-pool-4br-10.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-11.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-12.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-13.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 2",
+        "airbnbLabel": "Bedroom 2",
+        "images": [
+          "/public-objects/images/sanur-garden-pool-4br-14.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-15.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-16.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 3",
+        "airbnbLabel": "Bedroom 3",
+        "images": [
+          "/public-objects/images/sanur-garden-pool-4br-17.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-18.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-19.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-20.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 4",
+        "airbnbLabel": "Bedroom 4",
+        "images": [
+          "/public-objects/images/sanur-garden-pool-4br-21.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 1",
+        "airbnbLabel": "Full bathroom 1",
+        "images": [
+          "/public-objects/images/sanur-garden-pool-4br-22.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-23.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-24.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 2",
+        "airbnbLabel": "Full bathroom 2",
+        "images": [
+          "/public-objects/images/sanur-garden-pool-4br-25.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-26.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 3",
+        "airbnbLabel": "Full bathroom 3",
+        "images": [
+          "/public-objects/images/sanur-garden-pool-4br-27.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-28.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-29.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 4",
+        "airbnbLabel": "Full bathroom 4",
+        "images": [
+          "/public-objects/images/sanur-garden-pool-4br-30.jpg"
+        ]
+      },
+      {
+        "name": "Pool & garden",
+        "airbnbLabel": "Pool & garden",
+        "images": [
+          "/public-objects/images/sanur-garden-pool-4br-31.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-32.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-33.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-34.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-35.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-36.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-37.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-47.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-48.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-49.jpg"
+        ]
+      },
+      {
+        "name": "Additional photos",
+        "airbnbLabel": "Additional photos",
+        "images": [
+          "/public-objects/images/sanur-garden-pool-4br-38.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-39.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-40.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-41.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-42.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-43.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-44.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-45.jpg",
+          "/public-objects/images/sanur-garden-pool-4br-46.jpg"
+        ]
+      }
+    ],
+    "categories": [
+      "all-villas",
+      "property-rental",
+      "area:sanur",
+      "bedrooms:4",
+      "area-bedrooms:sanur:4",
+      "new-on-thehost",
+      "filter:pool",
+      "filter:family",
+      "filter:garden"
+    ],
+    "filterTags": [
+      "pool",
+      "family",
+      "garden",
+      "workspace",
+      "beach"
+    ],
+    "airbnbUrl": "https://www.airbnb.com/rooms/1654968423240323582",
+    "bookingUrl": null,
+    "monthly": null,
+    "url": "/villa/sanur/garden-pool-villa-4br-sanur/",
+    "galleryUrl": "/villa/sanur/garden-pool-villa-4br-sanur/gallery/",
+    "lat": -8.70541,
+    "lng": 115.24634,
+    "updatedAt": "2026-07-29"
   }
 ]
