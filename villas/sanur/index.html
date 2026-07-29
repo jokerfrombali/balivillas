@@ -13,7 +13,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap"></noscript>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
@@ -442,6 +442,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <meta name="theme-color" content="#343537">
+<style>section[id^="section-"]:not(:first-of-type){content-visibility:auto;contain-intrinsic-size:auto 600px}</style>
 </head>
 <body>
 
@@ -775,7 +776,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       <!-- Sanur villa 1 -->
       <div class="prop-card" data-location="sanur" data-beds="4" data-guests="8" data-type="villa" data-amenities="pool wifi kitchen work beach" onclick="window.location='/villa/sanur/villa-black-pool-4br-sanur/'">
         <div class="img-wrap">
-          <img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — Family 4BR Villa with Big Pool — Sanur villa">
+          <img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — Family 4BR Villa with Big Pool — Sanur villa" loading="lazy" decoding="async">
           <span class="badge">Sanur</span>
           <span class="badge-type">Villa</span>
           <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
@@ -799,7 +800,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       <!-- Sanur villa 2 -->
       <div class="prop-card" data-location="sanur" data-beds="2" data-guests="4" data-type="villa" data-amenities="pool wifi kitchen work beach" onclick="window.location='/villa/sanur/stylish-2br-pool-townhouse-sanur/'">
         <div class="img-wrap">
-          <img src="/public-objects/images/sanur-2br-townhouse-29.jpg" alt="Stylish 2BR Pool Townhouse in Sanur — Sanur villa">
+          <img src="/public-objects/images/sanur-2br-townhouse-29.jpg" alt="Stylish 2BR Pool Townhouse in Sanur — Sanur villa" loading="lazy" decoding="async">
           <span class="badge">Sanur</span>
           <span class="badge-type">Townhouse</span>
           <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
@@ -823,7 +824,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       <!-- Sanur villa 3 -->
       <div class="prop-card" data-location="sanur" data-beds="2" data-guests="4" data-type="villa" data-amenities="pool wifi kitchen work beach parking" onclick="window.location='/villa/sanur/modern-2br-pool-townhouse-sanur/'">
         <div class="img-wrap">
-          <img src="/public-objects/images/sanur-modern-2br-townhouse-28.jpg" alt="Modern 2BR Pool Townhouse in Sanur — Sanur villa">
+          <img src="/public-objects/images/sanur-modern-2br-townhouse-28.jpg" alt="Modern 2BR Pool Townhouse in Sanur — Sanur villa" loading="lazy" decoding="async">
           <span class="badge">Sanur</span>
           <span class="badge-type">Townhouse</span>
           <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">

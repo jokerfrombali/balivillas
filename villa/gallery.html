@@ -215,6 +215,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <meta name="theme-color" content="#343537">
+<style>section[id^="section-"]:not(:first-of-type){content-visibility:auto;contain-intrinsic-size:auto 600px}</style>
 </head>
 <body>
     <div class="gallery-header" id="galleryHeader">
@@ -403,7 +404,7 @@
     <div class="fullscreen-viewer" id="fullscreenViewer">
         <button class="fullscreen-close" onclick="closeFullscreen()">×</button>
         <button class="fullscreen-nav fullscreen-prev" onclick="prevImage()">‹</button>
-        <img id="fullscreenImage" src="" alt="Photo">
+        <img id="fullscreenImage" src="" alt="Photo" loading="lazy" decoding="async">
         <button class="fullscreen-nav fullscreen-next" onclick="nextImage()">›</button>
         <div class="fullscreen-info">
             <div class="fullscreen-counter"><span id="currentIndex">1</span> / <span id="totalCount">48</span></div>

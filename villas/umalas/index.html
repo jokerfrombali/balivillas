@@ -13,7 +13,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap"></noscript>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
@@ -442,6 +442,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <meta name="theme-color" content="#343537">
+<style>section[id^="section-"]:not(:first-of-type){content-visibility:auto;contain-intrinsic-size:auto 600px}</style>
 </head>
 <body>
 
@@ -775,7 +776,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       <!-- Umalas villa 1 -->
       <div class="prop-card" data-location="umalas" data-beds="3" data-guests="6" data-type="villa" data-amenities="pool wifi kitchen work" onclick="window.location='/villa/premier-umalas-16-3br-pool-townhouse/'">
         <div class="img-wrap">
-          <img src="/villa/assets/images/new_img_1.webp" alt="Premier Umalas 16 — Stylish 3BR Pool Townhouse — Umalas villa">
+          <img src="/villa/assets/images/new_img_1.webp" alt="Premier Umalas 16 — Stylish 3BR Pool Townhouse — Umalas villa" loading="lazy" decoding="async">
           <span class="badge">Umalas</span>
           <span class="badge-type">Villa</span>
           <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
@@ -798,7 +799,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>      <!-- Umalas villa 2 -->
       <div class="prop-card" data-location="umalas" data-beds="2" data-guests="4" data-type="villa" data-amenities="pool wifi kitchen work" onclick="window.location='/villa/premier-umalas-17-2br-pool-home/'">
         <div class="img-wrap">
-          <img src="/public-objects/images/premier-umalas-17-24.jpg" alt="Premier Umalas 17 — Stylish 2BR Private Pool Home — Umalas villa">
+          <img src="/public-objects/images/premier-umalas-17-24.jpg" alt="Premier Umalas 17 — Stylish 2BR Private Pool Home — Umalas villa" loading="lazy" decoding="async">
           <span class="badge">Umalas</span>
           <span class="badge-type">Villa</span>
           <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">

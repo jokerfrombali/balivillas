@@ -1,0 +1,17 @@
+/brand/*
+  Cache-Control: public, max-age=31536000, immutable
+/public-objects/*
+  Cache-Control: public, max-age=31536000, immutable
+/villa/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/*.ico
+  Cache-Control: public, max-age=604800
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
