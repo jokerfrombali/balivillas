@@ -166,6 +166,7 @@ html { scroll-behavior: smooth; }
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <meta name="theme-color" content="#343537">
+<style>picture{display:contents}</style>
 <style>section[id^="section-"]:not(:first-of-type){content-visibility:auto;contain-intrinsic-size:auto 600px}</style>
 </head>
 <body>
@@ -330,7 +331,7 @@ html { scroll-behavior: smooth; }
     <div style="flex:1"></div>
     <!-- Map card (hover zoom) -->
     <div class="mega-featured mega-zoom" style="width:180px;flex-shrink:0;margin-right:16px">
-      <img src="/images/all-bali.jpg" alt="Map" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <picture><source srcset="/images/all-bali.avif" type="image/avif"><img src="/images/all-bali.jpg" alt="Map" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" width="736" height="920"></picture>
       <div class="mega-featured-overlay"></div>
       <div class="mega-featured-content">
         <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:700;line-height:1.25;margin-bottom:6px">All of Bali,<br>on the map</p>
@@ -343,7 +344,7 @@ html { scroll-behavior: smooth; }
     </div>
     <!-- Featured playlist card (hover zoom + auto-slideshow) -->
     <div id="megaSlide" class="mega-featured mega-zoom" style="width:180px;flex-shrink:0">
-      <img id="megaSlideImg" src="/images/ubud.jpg" alt="" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 0.6s">
+      <picture><source srcset="/images/ubud.avif" type="image/avif"><img id="megaSlideImg" src="/images/ubud.jpg" alt="" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 0.6s" width="460" height="460"></picture>
       <div class="mega-featured-overlay"></div>
       <!-- Progress bar -->
       <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.2);z-index:2">
@@ -511,7 +512,7 @@ html { scroll-behavior: smooth; }
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       <a href="#matches" class="group card-hover relative rounded-3xl overflow-hidden aspect-[3/4] bg-ink block">
-        <img src="/images/romantic.jpg" alt="Romantic Escape" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async">
+        <picture><source srcset="/images/romantic.avif" type="image/avif"><img src="/images/romantic.jpg" alt="Romantic Escape" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" width="1080" height="1350"></picture>
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
         <div class="absolute top-5 right-5 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center backdrop-blur-sm">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -544,7 +545,7 @@ html { scroll-behavior: smooth; }
         </div>
       </a>
       <a href="#matches" class="group card-hover relative rounded-3xl overflow-hidden aspect-[3/4] bg-ink block">
-        <img src="/images/work-bali.jpg" alt="Work & Live" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async">
+        <picture><source srcset="/images/work-bali.avif" type="image/avif"><img src="/images/work-bali.jpg" alt="Work & Live" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" width="1920" height="1280"></picture>
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
         <div class="absolute top-5 right-5 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
@@ -579,7 +580,7 @@ html { scroll-behavior: smooth; }
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <a href="/villa/premier-umalas-16-3br-pool-townhouse/" class="card-hover block">
         <div class="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4">
-          <img src="/villa/assets/images/new_img_1.webp" alt="Premier Umalas 16 — Stylish 3BR Pool Townhouse" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <img src="/villa/assets/images/new_img_1.webp" alt="Premier Umalas 16 — Stylish 3BR Pool Townhouse" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1280" height="1706">
           <span class="absolute top-4 left-4 bg-white text-ink text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Umalas</span>
         </div>
         <div class="px-1">
@@ -594,7 +595,7 @@ html { scroll-behavior: smooth; }
         </div>
       </a>      <a href="/villa/premier-umalas-17-2br-pool-home/" class="card-hover block">
         <div class="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4">
-          <img src="/public-objects/images/premier-umalas-17-24.jpg" alt="Premier Umalas 17 — Stylish 2BR Private Pool Home" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <picture><source srcset="/public-objects/images/premier-umalas-17-24.avif" type="image/avif"><img src="/public-objects/images/premier-umalas-17-24.jpg" alt="Premier Umalas 17 — Stylish 2BR Private Pool Home" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1200" height="800"></picture>
           <span class="absolute top-4 left-4 bg-white text-ink text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Umalas</span>
         </div>
         <div class="px-1">
@@ -609,7 +610,7 @@ html { scroll-behavior: smooth; }
         </div>
       </a>      <a href="/villa/sanur/villa-black-pool-4br-sanur/" class="card-hover block">
         <div class="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4">
-          <img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — Family 4BR Villa with Big Pool" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <picture><source srcset="/public-objects/images/villa-black-pool-11.avif" type="image/avif"><img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — Family 4BR Villa with Big Pool" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1200" height="800"></picture>
           <span class="absolute top-4 left-4 bg-white text-ink text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Sanur</span>
         </div>
         <div class="px-1">
@@ -686,7 +687,7 @@ html { scroll-behavior: smooth; }
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
       <!-- All Bali -->
       <a href="#" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
-        <img src="/images/all-bali.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="All Bali" loading="lazy" decoding="async">
+        <picture><source srcset="/images/all-bali.avif" type="image/avif"><img src="/images/all-bali.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="All Bali" loading="lazy" decoding="async" width="736" height="920"></picture>
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
         <div class="absolute top-4 left-4">
           <span class="text-[10px] font-semibold tracking-widest text-white/70 uppercase">All areas</span>
@@ -708,7 +709,7 @@ html { scroll-behavior: smooth; }
       </a>
       <!-- Uluwatu: dramatic coastal cliffs -->
       <a href="#" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
-        <img src="/images/uluwatu.webp" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Uluwatu" loading="lazy" decoding="async">
+        <img src="/images/uluwatu.webp" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Uluwatu" loading="lazy" decoding="async" width="500" height="750">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
         <div class="absolute bottom-5 left-5 right-5 text-white">
           <p class="font-display text-[22px] leading-none">Uluwatu</p>
@@ -717,7 +718,7 @@ html { scroll-behavior: smooth; }
       </a>
       <!-- Ubud: Tegallalang rice terraces -->
       <a href="#" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
-        <img src="/images/ubud.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Ubud" loading="lazy" decoding="async">
+        <picture><source srcset="/images/ubud.avif" type="image/avif"><img src="/images/ubud.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Ubud" loading="lazy" decoding="async" width="460" height="460"></picture>
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
         <div class="absolute bottom-5 left-5 right-5 text-white">
           <p class="font-display text-[22px] leading-none">Ubud</p>
@@ -726,7 +727,7 @@ html { scroll-behavior: smooth; }
       </a>
       <!-- Seminyak: sunset beach -->
       <a href="#" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
-        <img src="/images/seminyak.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Seminyak" loading="lazy" decoding="async">
+        <picture><source srcset="/images/seminyak.avif" type="image/avif"><img src="/images/seminyak.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Seminyak" loading="lazy" decoding="async" width="1080" height="1427"></picture>
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
         <div class="absolute bottom-5 left-5 right-5 text-white">
           <p class="font-display text-[22px] leading-none">Seminyak</p>
@@ -735,7 +736,7 @@ html { scroll-behavior: smooth; }
       </a>
       <!-- Sanur: calm beach -->
       <a href="#" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
-        <img src="/images/sanur.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Sanur" loading="lazy" decoding="async">
+        <picture><source srcset="/images/sanur.avif" type="image/avif"><img src="/images/sanur.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Sanur" loading="lazy" decoding="async" width="1080" height="1347"></picture>
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
         <div class="absolute bottom-5 left-5 right-5 text-white">
           <p class="font-display text-[22px] leading-none">Sanur</p>

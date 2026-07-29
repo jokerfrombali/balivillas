@@ -442,6 +442,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <meta name="theme-color" content="#343537">
+<style>picture{display:contents}</style>
 <style>section[id^="section-"]:not(:first-of-type){content-visibility:auto;contain-intrinsic-size:auto 600px}</style>
 </head>
 <body>
@@ -560,7 +561,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
     </div>
     <div style="flex:1"></div>
     <div class="mega-featured mega-zoom" style="width:180px;flex-shrink:0;margin-right:16px">
-      <img src="/images/all-bali.jpg" alt="Map" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <picture><source srcset="/images/all-bali.avif" type="image/avif"><img src="/images/all-bali.jpg" alt="Map" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" width="736" height="920"></picture>
       <div class="mega-featured-overlay"></div>
       <div class="mega-featured-content">
         <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:700;line-height:1.25;margin-bottom:6px">All of Bali,<br>on the map</p>
@@ -572,7 +573,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
     </div>
     <div id="megaSlide" class="mega-featured mega-zoom" style="width:180px;flex-shrink:0">
-      <img id="megaSlideImg" src="/images/ubud.jpg" alt="" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 0.6s">
+      <picture><source srcset="/images/ubud.avif" type="image/avif"><img id="megaSlideImg" src="/images/ubud.jpg" alt="" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 0.6s" width="460" height="460"></picture>
       <div class="mega-featured-overlay"></div>
       <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.2);z-index:2">
         <div id="megaSlideBar" style="height:100%;background:white;width:100%;transition:none;transform-origin:left"></div>
@@ -776,7 +777,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       <!-- Sanur villa 1 -->
       <div class="prop-card" data-location="sanur" data-beds="4" data-guests="8" data-type="villa" data-amenities="pool wifi kitchen work beach" onclick="window.location='/villa/sanur/villa-black-pool-4br-sanur/'">
         <div class="img-wrap">
-          <img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — Family 4BR Villa with Big Pool — Sanur villa" loading="lazy" decoding="async">
+          <picture><source srcset="/public-objects/images/villa-black-pool-11.avif" type="image/avif"><img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — Family 4BR Villa with Big Pool — Sanur villa" loading="lazy" decoding="async" width="1200" height="800"></picture>
           <span class="badge">Sanur</span>
           <span class="badge-type">Villa</span>
           <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
@@ -800,7 +801,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       <!-- Sanur villa 2 -->
       <div class="prop-card" data-location="sanur" data-beds="2" data-guests="4" data-type="villa" data-amenities="pool wifi kitchen work beach" onclick="window.location='/villa/sanur/stylish-2br-pool-townhouse-sanur/'">
         <div class="img-wrap">
-          <img src="/public-objects/images/sanur-2br-townhouse-29.jpg" alt="Stylish 2BR Pool Townhouse in Sanur — Sanur villa" loading="lazy" decoding="async">
+          <picture><source srcset="/public-objects/images/sanur-2br-townhouse-29.avif" type="image/avif"><img src="/public-objects/images/sanur-2br-townhouse-29.jpg" alt="Stylish 2BR Pool Townhouse in Sanur — Sanur villa" loading="lazy" decoding="async" width="1200" height="800"></picture>
           <span class="badge">Sanur</span>
           <span class="badge-type">Townhouse</span>
           <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
@@ -824,7 +825,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       <!-- Sanur villa 3 -->
       <div class="prop-card" data-location="sanur" data-beds="2" data-guests="4" data-type="villa" data-amenities="pool wifi kitchen work beach parking" onclick="window.location='/villa/sanur/modern-2br-pool-townhouse-sanur/'">
         <div class="img-wrap">
-          <img src="/public-objects/images/sanur-modern-2br-townhouse-28.jpg" alt="Modern 2BR Pool Townhouse in Sanur — Sanur villa" loading="lazy" decoding="async">
+          <picture><source srcset="/public-objects/images/sanur-modern-2br-townhouse-28.avif" type="image/avif"><img src="/public-objects/images/sanur-modern-2br-townhouse-28.jpg" alt="Modern 2BR Pool Townhouse in Sanur — Sanur villa" loading="lazy" decoding="async" width="1200" height="900"></picture>
           <span class="badge">Sanur</span>
           <span class="badge-type">Townhouse</span>
           <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
