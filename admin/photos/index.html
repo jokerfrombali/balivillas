@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Host Bali admin — photo order</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+<style>
+:root{--bg:#f6f1e8;--panel:#fffdf8;--ink:#111;--muted:#706b61;--line:#e4d9c9;--soft:#f0e7da;--dark:#343537;--sand:#C1B59D;--bronze:#5F5340;--bad:#b84a31;--ok:#2f7d4f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+.top{position:sticky;top:0;z-index:30;background:rgba(255,253,248,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font:700 21px/1 Georgia,serif;display:flex;align-items:center;gap:9px}
+.brand small{display:block;font:400 12px/1.3 Inter,sans-serif;color:var(--muted)}
+.wrap{max-width:1500px;margin:0 auto;padding:20px 24px 80px}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+select,button,.btn{font:inherit;border-radius:999px;border:1px solid var(--line);background:var(--panel);padding:9px 16px;cursor:pointer}
+select{padding:9px 12px;min-width:280px}
+button.primary,.btn.primary{background:var(--dark);color:#fff;border-color:var(--dark);font-weight:600}
+button.ghost{background:transparent}
+button:disabled{opacity:.4;cursor:not-allowed}
+.hint{color:var(--muted);font-size:13px}
+.group{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:16px 18px;margin-bottom:16px}
+.group h3{margin:0 0 4px;font:700 17px/1.2 Georgia,serif;display:flex;align-items:center;gap:10px}
+.group .meta{color:var(--muted);font-size:12.5px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;min-height:60px}
+.ph{position:relative;border-radius:14px;overflow:hidden;border:2px solid transparent;background:var(--soft);cursor:grab;aspect-ratio:4/3;transition:transform .12s,box-shadow .12s,opacity .12s}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.ph .n{position:absolute;left:7px;top:7px;background:rgba(0,0,0,.72);color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:999px}
+.ph .cover{position:absolute;right:7px;top:7px;background:var(--sand);color:#1b1b1b;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:2px 7px;border-radius:999px;text-transform:uppercase}
+.ph .tools{position:absolute;inset:auto 0 0 0;display:flex;gap:4px;justify-content:center;padding:6px;background:linear-gradient(transparent,rgba(0,0,0,.6));opacity:0;transition:opacity .12s}
+.ph:hover .tools{opacity:1}
+.ph .tools button{padding:3px 8px;font-size:12px;border-radius:8px;border:0;background:rgba(255,255,255,.92)}
+.ph.dragging{opacity:.35;cursor:grabbing}
+.ph.over{border-color:var(--dark);transform:scale(1.04);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.grid.dropzone{outline:2px dashed var(--sand);outline-offset:4px;border-radius:12px}
+.foot{position:fixed;left:0;right:0;bottom:0;background:rgba(255,253,248,.96);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:12px 24px;display:flex;gap:12px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.foot .status{margin-right:auto;font-size:13px;color:var(--muted)}
+.saved{color:var(--ok);font-weight:600}
+.dirty{color:var(--bad);font-weight:600}
+code{background:var(--soft);padding:1px 6px;border-radius:6px;font-size:12.5px}
+.note{background:#fff8e6;border:1px solid #e8d9a8;border-radius:14px;padding:12px 16px;font-size:13.5px;margin-bottom:18px}
+@media(max-width:640px){.grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}select{min-width:100%}}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="brand">
+    <svg width="30" height="24" viewBox="0 0 536 420" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M25.0,301.0 25.0,399.0 58.0,400.0 59.0,364.0 58.0,301.0Z M0.0,410.0 0.0,419.5 3.5,420.5 533.5,420.0 533.5,417.5 449.0,417.0 448.0,416.0 448.0,398.0 427.5,393.5 425.5,387.0 391.5,381.0 391.0,283.0 190.0,283.0 189.5,399.5 425.0,399.5 426.0,400.5 425.5,409.5Z M325.5,312.5 360.0,312.5 361.0,313.5 361.0,366.5 359.5,368.5 327.0,368.5 325.0,366.5Z M273.5,312.5 308.5,312.0 309.5,313.0 309.5,367.0 308.5,368.0 274.0,368.5 273.0,367.5Z M259.0,312.5 259.5,367.0 258.5,368.0 222.0,368.0 221.0,367.0 221.5,313.0Z M58.5,265.5 47.0,269.5 8.0,288.0 7.0,291.5 9.0,293.5 12.5,293.5 58.5,272.5Z M402.5,268.0 304.0,217.5 298.0,213.0 270.0,213.0 270.0,165.5 297.5,165.0 299.0,163.5 299.0,160.0 170.5,106.0 167.0,106.0 43.5,160.0 45.0,165.0 239.0,164.5 260.5,165.0 262.0,166.0 262.0,209.0 261.0,213.0 222.0,213.5 182.0,233.5 178.5,233.0 179.0,172.5 68.0,172.5 68.0,399.5 96.5,400.0 96.5,321.0 97.5,313.5 103.5,303.0 114.0,295.5 122.5,293.5 134.0,295.0 142.0,299.5 149.5,308.0 152.5,315.5 153.0,399.5 178.5,399.5 178.5,274.5 180.0,272.5 400.0,272.5 402.5,270.5Z M369.5,262.0 369.0,265.0 143.0,264.5 143.0,262.0 225.5,221.5 290.0,220.5Z M106.0,192.5 137.0,192.5 138.5,194.0 137.0,239.0 107.5,239.5 105.5,238.5Z M69.5,156.0 160.0,117.0 170.0,114.0 270.5,155.5 271.0,158.5 254.0,159.5 70.0,159.0Z M473.5,2.5 463.0,2.5 451.0,5.0 437.0,13.0 430.0,20.0 416.0,39.0 408.5,57.0 405.0,57.5 395.5,31.5 388.5,21.5 379.5,12.0 371.5,6.0 362.5,2.0 351.5,0.0 336.0,0.0 335.5,3.0 349.0,12.0 356.0,14.5 356.0,17.0 352.0,17.5 352.0,20.0 356.5,24.5 381.0,36.5 380.5,39.5 370.0,39.5 370.0,42.0 380.0,48.0 387.0,55.0 392.5,63.0 392.5,66.0 389.0,66.5 376.5,58.0 360.0,51.5 349.0,49.0 326.5,47.5 316.0,48.5 297.0,54.0 283.0,61.0 275.0,67.0 275.0,70.0 278.5,70.0 299.5,65.0 308.5,64.5 309.0,67.5 305.5,70.5 305.5,73.0 310.0,73.0 325.0,67.5 330.5,67.0 331.0,70.0 328.0,72.0 328.0,74.5 364.0,77.0 374.5,80.0 385.5,85.5 385.0,88.5 366.5,89.0 350.0,93.0 339.5,97.5 323.0,108.0 312.0,119.0 305.5,129.0 297.0,146.5 297.0,151.5 298.5,154.0 302.0,154.0 314.0,137.0 316.5,137.0 317.0,142.0 319.5,142.0 330.0,127.0 333.0,127.5 333.5,131.5 337.0,131.5 353.0,117.5 356.0,118.0 356.0,123.0 359.0,123.0 381.5,108.5 390.0,105.0 394.5,105.5 394.5,108.0 384.0,128.5 380.5,141.0 379.0,153.0 378.5,238.5 380.5,246.5 386.5,251.0 393.0,251.5 394.5,246.5 392.5,187.0 395.5,147.5 402.5,125.0 410.0,114.5 412.5,114.5 416.0,118.0 421.5,127.0 433.0,163.0 436.0,162.5 439.0,155.0 442.0,155.5 443.5,180.0 445.0,183.5 447.5,183.5 448.5,179.0 452.0,179.0 458.5,206.5 461.0,206.5 466.5,191.0 467.5,167.0 466.0,156.5 457.5,134.0 444.0,117.0 444.5,114.0 447.0,114.0 466.5,129.5 469.5,129.5 469.0,121.5 472.0,121.0 493.5,144.5 496.0,144.5 494.5,133.5 497.5,133.0 508.0,148.0 520.5,170.0 523.5,169.5 523.0,151.0 517.5,133.5 509.5,120.0 497.0,107.5 478.5,97.0 460.5,91.0 443.0,89.0 426.5,89.0 427.0,86.0 437.0,83.0 471.5,82.0 471.5,79.5 468.5,77.5 469.0,74.5 493.5,77.5 493.5,75.0 491.0,71.5 491.5,68.5 495.0,69.0 510.0,78.0 512.5,78.0 511.5,72.0 515.0,71.5 533.0,82.0 536.5,82.5 533.0,73.0 517.5,58.5 502.5,51.5 488.0,48.0 470.0,48.0 456.5,51.0 439.5,58.0 425.5,68.0 422.5,67.5 422.5,65.0 431.5,53.0 447.5,40.0 447.5,37.5 438.0,37.5 437.5,34.5 464.5,20.5 464.5,18.0 459.0,18.0 458.5,15.0 473.0,5.5Z"/></svg>
+    <span>Photo order<small>The Host Bali admin</small></span>
+  </div>
+  <div class="bar" style="margin:0">
+    <select id="villaSel"></select>
+    <button class="ghost" id="reload" title="Reload data from the site">Reload</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="note">
+    Drag photos to reorder them — inside a group or from one group to another. The first photo of the
+    first group is the <strong>cover</strong>. Nothing is written to the site from here: press
+    <strong>Download villas.json</strong> and hand the file over, then the villa page and gallery get rebuilt from it.
+  </div>
+  <div id="groups"></div>
+</div>
+
+<div class="foot">
+  <div class="status" id="status">Loading…</div>
+  <button class="ghost" id="revert">Revert changes</button>
+  <button class="ghost" id="copy">Copy JSON</button>
+  <button class="primary" id="download">Download villas.json</button>
+</div>
+
+<script>
+(function(){
+'use strict';
+var DATA=null, ORIG=null, cur=0, dragEl=null, dirty=false;
+var $=function(id){return document.getElementById(id)};
+var LSKEY='thehost_photo_order_draft';
+
+function villas(){ return Array.isArray(DATA)?DATA:(DATA.villas||[]); }
+function setStatus(t,cls){ var s=$('status'); s.textContent=t; s.className='status '+(cls||''); }
+
+function load(force){
+  var draft=localStorage.getItem(LSKEY);
+  fetch('/data/villas.json?ts='+Date.now()).then(function(r){return r.json()}).then(function(j){
+    ORIG=JSON.parse(JSON.stringify(j));
+    if(draft && !force){
+      try{ DATA=JSON.parse(draft); dirty=true; setStatus('Unsaved draft restored from this browser','dirty'); }
+      catch(e){ DATA=j; }
+    } else { DATA=j; localStorage.removeItem(LSKEY); dirty=false; setStatus('Loaded '+villas().length+' villas'); }
+    fillSelect(); render();
+  }).catch(function(e){ setStatus('Could not load /data/villas.json — open this page through the site, not from disk','dirty'); });
+}
+
+function fillSelect(){
+  var sel=$('villaSel'); sel.innerHTML='';
+  villas().forEach(function(v,i){
+    var o=document.createElement('option');
+    o.value=i; o.textContent=(v.name||v.slug)+'  ('+((v.images||[]).length)+' photos)';
+    sel.appendChild(o);
+  });
+  sel.value=cur;
+}
+
+/* группы: photoGroups + «Ungrouped» для остальных */
+function groupsOf(v){
+  var gs=(v.photoGroups||[]).map(function(g){return {name:g.name||g.airbnbLabel||'Group', images:(g.images||[]).slice()}});
+  var used={}; gs.forEach(function(g){g.images.forEach(function(p){used[p]=1})});
+  var rest=(v.images||[]).filter(function(p){return !used[p]});
+  if(rest.length) gs.push({name:'Ungrouped', images:rest});
+  if(!gs.length) gs=[{name:'All photos', images:(v.images||[]).slice()}];
+  return gs;
+}
+
+function render(){
+  var v=villas()[cur]; if(!v) return;
+  var gs=groupsOf(v), host=$('groups'); host.innerHTML='';
+  gs.forEach(function(g,gi){
+    var box=document.createElement('div'); box.className='group';
+    var h=document.createElement('h3'); h.textContent=g.name;
+    var meta=document.createElement('div'); meta.className='meta'; meta.textContent=g.images.length+' photos';
+    var grid=document.createElement('div'); grid.className='grid'; grid.dataset.gi=gi;
+    g.images.forEach(function(src,pi){
+      grid.appendChild(tile(src,gi,pi,gi===0&&pi===0));
+    });
+    grid.addEventListener('dragover', function(e){ e.preventDefault(); grid.classList.add('dropzone'); });
+    grid.addEventListener('dragleave', function(){ grid.classList.remove('dropzone'); });
+    grid.addEventListener('drop', function(e){
+      e.preventDefault(); grid.classList.remove('dropzone');
+      if(!dragEl) return;
+      if(e.target===grid) dropOn(dragEl.dataset, gi, g.images.length);
+    });
+    box.appendChild(h); box.appendChild(meta); box.appendChild(grid); host.appendChild(box);
+  });
+}
+
+function tile(src,gi,pi,isCover){
+  var d=document.createElement('div'); d.className='ph'; d.draggable=true;
+  d.dataset.gi=gi; d.dataset.pi=pi; d.dataset.src=src;
+  var im=document.createElement('img'); im.loading='lazy'; im.src=src.replace(/\.(jpg|jpeg|png)$/i,'.avif');
+  im.onerror=function(){ im.onerror=null; im.src=src; };
+  var n=document.createElement('span'); n.className='n'; n.textContent=pi+1;
+  d.appendChild(im); d.appendChild(n);
+  if(isCover){ var c=document.createElement('span'); c.className='cover'; c.textContent='cover'; d.appendChild(c); }
+  var t=document.createElement('div'); t.className='tools';
+  t.appendChild(btn('←',function(e){e.stopPropagation(); moveAbs(gi,pi,gi,pi-1)}));
+  t.appendChild(btn('↑ first',function(e){e.stopPropagation(); moveAbs(gi,pi,0,0)}));
+  t.appendChild(btn('→',function(e){e.stopPropagation(); moveAbs(gi,pi,gi,pi+1)}));
+  d.appendChild(t);
+  d.addEventListener('dragstart',function(e){ dragEl=d; d.classList.add('dragging'); e.dataTransfer.effectAllowed='move'; e.dataTransfer.setData('text/plain',src); });
+  d.addEventListener('dragend',function(){ d.classList.remove('dragging'); dragEl=null; document.querySelectorAll('.ph.over').forEach(function(x){x.classList.remove('over')}); });
+  d.addEventListener('dragover',function(e){ e.preventDefault(); d.classList.add('over'); });
+  d.addEventListener('dragleave',function(){ d.classList.remove('over'); });
+  d.addEventListener('drop',function(e){
+    e.preventDefault(); e.stopPropagation(); d.classList.remove('over');
+    if(!dragEl||dragEl===d) return;
+    dropOn(dragEl.dataset, +d.dataset.gi, +d.dataset.pi);
+  });
+  return d;
+}
+function dropOn(from,tg,tp){
+  var fg=+from.gi, fp=+from.pi;
+  if(fg===tg && fp<tp) tp--;      /* элемент изымается раньше цели — цель сдвигается влево */
+  moveAbs(fg,fp,tg,tp);
+}
+function btn(label,fn){ var b=document.createElement('button'); b.type='button'; b.textContent=label; b.addEventListener('click',fn); return b; }
+
+/* перемещение внутри модели + запись обратно в villa */
+/* moveAbs: tp — индекс в массиве ПОСЛЕ изъятия элемента */
+function moveAbs(fg,fp,tg,tp){
+  var v=villas()[cur], gs=groupsOf(v);
+  if(!gs[fg]||!gs[tg]) return;
+  var item=gs[fg].images.splice(fp,1)[0];
+  if(item===undefined) return;
+  tp=Math.max(0,Math.min(tp,gs[tg].images.length));
+  gs[tg].images.splice(tp,0,item);
+  writeBack(v,gs); dirty=true;
+  localStorage.setItem(LSKEY, JSON.stringify(DATA));
+  setStatus('Unsaved changes — download the file to apply them','dirty');
+  render();
+}
+
+function writeBack(v,gs){
+  var flat=[]; gs.forEach(function(g){ g.images.forEach(function(p){ if(flat.indexOf(p)<0) flat.push(p) }) });
+  v.images=flat;
+  v.cardImage=flat[0]||v.cardImage;
+  v.topGallery=flat.slice(0,5);
+  if(v.photoGroups && v.photoGroups.length){
+    var named={}; gs.forEach(function(g){ named[g.name]=g.images });
+    v.photoGroups.forEach(function(g){
+      var key=g.name||g.airbnbLabel;
+      if(named[key]) g.images=named[key];
+    });
+  }
+  v.updatedAt=new Date().toISOString().slice(0,10);
+}
+
+$('villaSel').addEventListener('change',function(e){ cur=+e.target.value; render(); });
+$('reload').addEventListener('click',function(){ if(!dirty||confirm('Discard unsaved changes and reload?')) load(true); });
+$('revert').addEventListener('click',function(){
+  if(!confirm('Revert this villa to the version currently on the site?')) return;
+  var o=(Array.isArray(ORIG)?ORIG:ORIG.villas)[cur];
+  villas()[cur]=JSON.parse(JSON.stringify(o));
+  localStorage.setItem(LSKEY, JSON.stringify(DATA)); render(); setStatus('Villa reverted','dirty');
+});
+$('download').addEventListener('click',function(){
+  var blob=new Blob([JSON.stringify(DATA,null,2)],{type:'application/json'});
+  var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='villas.json'; a.click();
+  setStatus('villas.json downloaded — hand it over to apply','saved');
+});
+$('copy').addEventListener('click',function(){
+  navigator.clipboard.writeText(JSON.stringify(DATA,null,2)).then(function(){ setStatus('JSON copied to clipboard','saved') });
+});
+window.addEventListener('beforeunload',function(e){ if(dirty){ e.preventDefault(); e.returnValue=''; } });
+load(false);
+})();
+</script>
+</body>
+</html>
