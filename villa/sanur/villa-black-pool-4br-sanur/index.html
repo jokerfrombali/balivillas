@@ -34,29 +34,20 @@
       button[class*="bg-button-primary"], a[class*="bg-button-primary"],
       [data-slot="button"][data-variant="primary"] { background: var(--ink) !important; color: #fff !important; border-radius: 999px !important; }
 
-      .villa-floating-back {
-        position: fixed;
-        top: 88px;
-        left: 24px;
-        z-index: 9999;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 11px 16px;
-        border: 1px solid rgba(10,10,10,.12);
-        border-radius: 999px;
-        background: rgba(255,255,255,.94);
-        color: #0a0a0a;
-        box-shadow: 0 10px 30px rgba(0,0,0,.10);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        font: 700 14px/1 Inter, system-ui, -apple-system, sans-serif;
-        text-decoration: none;
-        cursor: pointer;
+      .villa-floating-back { /* thbBackV2 */
+        position: fixed; top: 88px; left: 24px; z-index: 60;
+        display: inline-flex; align-items: center; gap: 8px;
+        height: 44px; padding: 0 18px 0 15px; box-sizing: border-box;
+        background: rgba(255,255,255,.92); border: 1.5px solid #e6e3dc; border-radius: 999px;
+        backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 4px 14px rgba(0,0,0,.08);
+        font: 600 14px/1 Inter, system-ui, -apple-system, sans-serif; color: #0a0a0a;
+        text-decoration: none; cursor: pointer;
+        transition: border-color .16s, box-shadow .16s, transform .16s;
       }
-      .villa-floating-back:hover { background: #fff; transform: translateY(-1px); }
+      .villa-floating-back:hover { border-color: #0a0a0a; background: #fff; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.12); }
       @media (max-width: 768px) {
-        .villa-floating-back { top: 78px; left: 14px; padding: 10px 13px; font-size: 13px; }
+        .villa-floating-back { top: 82px; left: 16px; height: 40px; padding: 0 15px 0 13px; font-size: 13px; }
       }
     </style>
     <link rel="stylesheet" href="/villa/assets/css/main.css">
