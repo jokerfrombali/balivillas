@@ -1604,8 +1604,8 @@ function appendPrompt(text) {
 <div id="thbWaPill">
   <span class="ava" aria-hidden="true"></span>
   <p>Dream villa in Bali? Ask AI or a real host.</p>
-  <button type="button" class="wa-ai" onclick="thbAskAI()" aria-label="Ask AI">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2 5.4 5.4 2-5.4 2-2 5.4-2-5.4-5.4-2 5.4-2 2-5.4z"/><path d="M19 14.6l.9 2.5 2.5.9-2.5.9-.9 2.5-.9-2.5-2.5-.9 2.5-.9.9-2.5z"/></svg>
+  <button type="button" class="wa-ai" onclick="thbAskAI()" aria-label="Ask AI by voice or text">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><path d="M12 18v4"/><path d="M8 22h8"/></svg>
     AI
   </button>
   <a class="wa-go" href="https://wa.me/6281239081021?text=Hi%20The%20Host%20Bali!%20I%27m%20looking%20for%20a%20villa%20in%20Bali." rel="noopener" aria-label="Chat on WhatsApp with a human">
@@ -1639,6 +1639,101 @@ try{if(new URLSearchParams(location.search).get('ai')&&document.getElementById('
       if(t){var w=vis===1?' villa':' villas';t.textContent=a?vis+w+' \u2014 '+a.charAt(0).toUpperCase()+a.slice(1):vis+w+' available';}
     });
   });
+})();
+</script>
+<style id="thb-aivoice-css">
+#thbAio{position:fixed;inset:0;z-index:90;display:none;align-items:flex-end;justify-content:center;background:rgba(10,10,10,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font-family:'Inter',sans-serif}
+#thbAio.open{display:flex}
+#thbAio .aio-card{width:100%;max-width:560px;background:#fafaf7;border-radius:26px 26px 0 0;padding:22px 20px calc(20px + env(safe-area-inset-bottom));box-shadow:0 -18px 60px rgba(0,0,0,.3)}
+@media(min-width:640px){#thbAio{align-items:center}#thbAio .aio-card{border-radius:26px;margin:0 16px}}
+#thbAio .aio-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+#thbAio .aio-hd p{margin:0;font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700;color:#0a0a0a}
+#thbAio .aio-x{width:38px;height:38px;border-radius:999px;border:1px solid #e6e3dc;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+#thbAio .aio-orb{width:86px;height:86px;border-radius:50%;background:#0a0a0a;color:#fff;display:flex;align-items:center;justify-content:center;margin:6px auto 10px;border:none;cursor:pointer;position:relative;transition:transform .15s}
+#thbAio .aio-orb svg{width:34px;height:34px}
+#thbAio .aio-orb.rec{background:#16a34a}
+#thbAio .aio-orb.rec::after{content:'';position:absolute;inset:-9px;border-radius:50%;border:2.5px solid rgba(34,197,94,.55);animation:thbPulse 1.2s ease-out infinite}
+@keyframes thbPulse{0%{transform:scale(.85);opacity:1}100%{transform:scale(1.25);opacity:0}}
+#thbAio .aio-st{text-align:center;font-size:12.5px;color:#6b6b66;margin:0 0 14px;min-height:17px}
+#thbAio .aio-row{display:flex;gap:8px}
+#thbAio .aio-in{flex:1;border:1.5px solid #e6e3dc;border-radius:14px;padding:12px 14px;font-size:16px;font-family:'Inter',sans-serif;color:#0a0a0a;background:#fff;outline:none;min-height:48px}
+#thbAio .aio-in:focus{border-color:#0a0a0a}
+#thbAio .aio-go{background:#0a0a0a;color:#fff;border:none;border-radius:14px;padding:0 20px;font-size:14.5px;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;flex-shrink:0}
+#thbAio .aio-hint{margin:12px 0 0;font-size:11.5px;color:#8a877f;text-align:center}
+#thbAiBar{display:flex;align-items:center;gap:10px;max-width:1300px;margin:14px auto 0;padding:11px 16px;background:#0a0a0a;color:#fff;border-radius:14px;font-family:'Inter',sans-serif;font-size:13px}
+#thbAiBar b{font-weight:700}
+#thbAiBar button{margin-left:auto;background:rgba(255,255,255,.14);border:none;color:#fff;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif}
+</style>
+<div id="thbAio" role="dialog" aria-modal="true" aria-label="Ask AI">
+  <div class="aio-card">
+    <div class="aio-hd"><p>Ask AI</p><button class="aio-x" aria-label="Close" onclick="thbAioClose()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+    <button class="aio-orb" id="thbAioOrb" aria-label="Microphone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><path d="M12 18v4"/><path d="M8 22h8"/></svg>
+    </button>
+    <p class="aio-st" id="thbAioSt"></p>
+    <div class="aio-row">
+      <input class="aio-in" id="thbAioIn" type="text" placeholder="e.g. 3 bedroom villa in Sanur with pool" autocomplete="off">
+      <button class="aio-go" onclick="thbAioApply()">Show</button>
+    </div>
+    <p class="aio-hint">Speak or type &mdash; I&rsquo;ll match villas by area, bedrooms, guests and amenities</p>
+  </div>
+</div>
+<script>
+(function(){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition, rec=null, on=false;
+  var o=document.getElementById('thbAio'), orb=document.getElementById('thbAioOrb'),
+      st=document.getElementById('thbAioSt'), inp=document.getElementById('thbAioIn');
+  function setSt(t){st.textContent=t;}
+  function stopRec(){if(rec){try{rec.stop();}catch(e){}}on=false;orb.classList.remove('rec');}
+  function startRec(){
+    if(!SR){setSt('Voice not supported here \u2014 just type your question');inp.focus();return;}
+    try{
+      rec=new SR();rec.lang=(navigator.language&&navigator.language.indexOf('ru')===0)?'ru-RU':'en-US';
+      rec.interimResults=true;rec.continuous=false;
+      rec.onresult=function(e){var t='';for(var i=0;i<e.results.length;i++)t+=e.results[i][0].transcript;inp.value=t;};
+      rec.onend=function(){on=false;orb.classList.remove('rec');setSt(inp.value?'Tap Show \u2014 or edit the text':'Tap the mic and speak');};
+      rec.onerror=function(){on=false;orb.classList.remove('rec');setSt('Mic unavailable \u2014 just type your question');inp.focus();};
+      rec.start();on=true;orb.classList.add('rec');setSt('Listening\u2026 tell me what you need');
+    }catch(e){setSt('Just type your question');inp.focus();}
+  }
+  orb.addEventListener('click',function(){on?stopRec():startRec();});
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter')thbAioApply();});
+  window.thbAioOpen=function(){o.classList.add('open');document.body.style.overflow='hidden';startRec();};
+  window.thbAioClose=function(){stopRec();o.classList.remove('open');document.body.style.overflow='';};
+  o.addEventListener('click',function(e){if(e.target===o)thbAioClose();});
+  var AREAS={sanur:['sanur','санур'],canggu:['canggu','чангу','чанг'],umalas:['umalas','умалас'],ungasan:['ungasan','унгасан']};
+  var AMEN={pool:['pool','бассейн'],wifi:['wifi','wi-fi','вай'],kitchen:['kitchen','кухн'],parking:['parking','парк'],beach:['beach','пляж'],family:['family','семь','дет'],ac:['air con','aircon','конди'],work:['work','работ'],eco:['eco','эко']};
+  window.thbAioApply=function(){
+    var q=(inp.value||'').toLowerCase().trim();
+    if(!q){setSt('Say or type what you\u2019re looking for');return;}
+    var area='',beds=0,guests=0,keys=[];
+    for(var a in AREAS){AREAS[a].forEach(function(w){if(q.indexOf(w)>-1)area=a;});}
+    var mb=q.match(/(\d+)\s*(?:bed|br\b|спал)/);if(mb)beds=parseInt(mb[1],10);
+    var mg=q.match(/(\d+)\s*(?:guest|people|persons|чел|гост)/);if(mg)guests=parseInt(mg[1],10);
+    for(var k in AMEN){AMEN[k].forEach(function(w){if(q.indexOf(w)>-1&&keys.indexOf(k)<0)keys.push(k);});}
+    var vis=0;
+    document.querySelectorAll('.prop-card').forEach(function(c){
+      var ok=true;
+      if(area&&c.dataset.location!==area)ok=false;
+      if(beds&&Number(c.dataset.beds||0)<beds)ok=false;
+      if(guests&&Number(c.dataset.guests||0)<guests)ok=false;
+      if(ok&&keys.length){var am=' '+(c.dataset.amenities||'')+' ';keys.forEach(function(k){if(am.indexOf(' '+k+' ')<0)ok=false;});}
+      c.style.display=ok?'':'none'; if(ok)vis++;
+    });
+    var none=vis===0;
+    if(none){document.querySelectorAll('.prop-card').forEach(function(c){c.style.display='';});vis=document.querySelectorAll('.prop-card').length;}
+    var grid=document.getElementById('cardGrid');
+    var bar=document.getElementById('thbAiBar');
+    if(!bar){bar=document.createElement('div');bar.id='thbAiBar';grid.parentNode.insertBefore(bar,grid);}
+    bar.innerHTML='<b>AI:</b>&nbsp;'+(none?('no exact match for \u201c'+q+'\u201d \u2014 showing all '+vis):(vis+(vis===1?' villa':' villas')+' for \u201c'+q+'\u201d'))+'<button type="button" onclick="thbAioReset()">Reset</button>';
+    thbAioClose();
+    bar.scrollIntoView({behavior:'smooth',block:'start'});
+  };
+  window.thbAioReset=function(){
+    document.querySelectorAll('.prop-card').forEach(function(c){c.style.display='';});
+    var bar=document.getElementById('thbAiBar');if(bar)bar.remove();
+  };
+  window.thbAskAI=function(){thbAioOpen();};
 })();
 </script>
 </body>

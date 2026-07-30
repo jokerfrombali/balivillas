@@ -439,13 +439,13 @@ html { scroll-behavior: smooth; }
               <p class="text-ink/60 text-[13px] leading-relaxed">Off-market homes from the owners we already work with</p></div>
             </a>
           </div>
-          <div class="flex items-center justify-between gap-3 px-2 sm:px-3 pt-3 pb-1">
+          <div style="display:none"><!-- Prefer-to-ask строка: скрыта 2026-07-31, микрофон есть в шапке --><div class="flex items-center justify-between gap-3 px-2 sm:px-3 pt-3 pb-1">
             <p class="text-[13px] text-ink/55">Prefer to just ask? Tap the mic and say what you need.</p>
             <div class="flex items-center gap-3 shrink-0">
               <button data-ai-open class="text-[13px] font-semibold text-ink/70 hover:text-ink underline underline-offset-4">AI search</button>
               <button aria-label="Voice" class="w-12 h-12 rounded-full bg-ink text-white flex items-center justify-center hover:bg-ink/90 transition shrink-0"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></button>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
       <div id="aiSearchPanel" class="hidden">
@@ -1107,8 +1107,8 @@ html { scroll-behavior: smooth; }
 <div id="thbWaPill">
   <span class="ava" aria-hidden="true"></span>
   <p>Dream villa in Bali? Ask AI or a real host.</p>
-  <button type="button" class="wa-ai" onclick="thbAskAI()" aria-label="Ask AI">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2 5.4 5.4 2-5.4 2-2 5.4-2-5.4-5.4-2 5.4-2 2-5.4z"/><path d="M19 14.6l.9 2.5 2.5.9-2.5.9-.9 2.5-.9-2.5-2.5-.9 2.5-.9.9-2.5z"/></svg>
+  <button type="button" class="wa-ai" onclick="thbAskAI()" aria-label="Ask AI by voice or text">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><path d="M12 18v4"/><path d="M8 22h8"/></svg>
     AI
   </button>
   <a class="wa-go" href="https://wa.me/6281239081021?text=Hi%20The%20Host%20Bali!%20I%27m%20looking%20for%20a%20villa%20in%20Bali." rel="noopener" aria-label="Chat on WhatsApp with a human">
