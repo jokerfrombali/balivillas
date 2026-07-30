@@ -3,9 +3,7 @@ https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/
 https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/
 https://thehostbali.com/villas/
 https://thehostbali.com/villas/sanur/
-https://thehostbali.com/villas/sanur/4-bedroom/
 https://thehostbali.com/villas/ungasan/
-https://thehostbali.com/villas/ungasan/1-bedroom/
 https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/
 https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/
 https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/
@@ -17,3 +15,7 @@ https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/
 https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/
 https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/
 https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/gallery/
+https://thehostbali.com/villas/canggu/
+https://thehostbali.com/villas/umalas/
+https://thehostbali.com/terms/
+https://thehostbali.com/privacy/

@@ -371,6 +371,14 @@
           "/public-objects/images/premier-umalas-17-22.jpg"
         ]
       }
+    ],
+    "cardImage": "/public-objects/images/premier-umalas-17-24.jpg",
+    "topGallery": [
+      "/public-objects/images/premier-umalas-17-1.jpg",
+      "/public-objects/images/premier-umalas-17-2.jpg",
+      "/public-objects/images/premier-umalas-17-3.jpg",
+      "/public-objects/images/premier-umalas-17-4.jpg",
+      "/public-objects/images/premier-umalas-17-5.jpg"
     ]
   },
   {
@@ -632,7 +640,15 @@
         ]
       }
     ],
-    "description": "Spacious modern 4-bedroom villa in Sanur with a private black-tiled pool, tropical garden, open living spaces and walking distance to the beach, cafés and shops."
+    "description": "Spacious modern 4-bedroom villa in Sanur with a private black-tiled pool, tropical garden, open living spaces and walking distance to the beach, cafés and shops.",
+    "cardImage": "/public-objects/images/villa-black-pool-11.jpg",
+    "topGallery": [
+      "/public-objects/images/villa-black-pool-1.jpg",
+      "/public-objects/images/villa-black-pool-2.jpg",
+      "/public-objects/images/villa-black-pool-3.jpg",
+      "/public-objects/images/villa-black-pool-4.jpg",
+      "/public-objects/images/villa-black-pool-5.jpg"
+    ]
   },
   {
     "id": "own-sanur-2br-townhouse",
