@@ -181,7 +181,7 @@ html { scroll-behavior: smooth; }
 }
 </style>
 <style id="thb-arow-css">
-.thb-arow{display:flex;gap:14px;overflow-x:auto;padding:2px 24px 10px;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.thb-arow{display:flex;gap:14px;overflow-x:auto;padding:2px 24px 10px;scroll-snap-type:x mandatory;scroll-padding:0 24px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .thb-arow::-webkit-scrollbar{display:none}
 .thb-acard{flex:0 0 76vw;max-width:300px;scroll-snap-align:start;background:#fff;border:1px solid #e6e3dc;border-radius:22px;overflow:hidden;text-decoration:none;color:#0a0a0a;transition:transform .18s,box-shadow .18s}
 .thb-acard:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.09)}
@@ -197,7 +197,7 @@ html { scroll-behavior: smooth; }
 .thb-arh svg{flex:0 0 auto;transition:transform .15s}
 .thb-arh:hover svg{transform:translateX(3px)}
 .thb-arh .cnt{font-family:'Inter',sans-serif;font-size:12.5px;color:#6b6b66;font-weight:500}
-@media(min-width:1024px){.thb-arow{padding:2px 40px 10px}.thb-acard{flex-basis:300px}}
+@media(min-width:1024px){.thb-arow{padding:2px 40px 10px;scroll-padding:0 40px}.thb-acard{flex-basis:300px}}
 </style>
 <style id="thb-wapill-css">
 #thbWaPill{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #e6e3dc;border-radius:999px;box-shadow:0 14px 44px rgba(0,0,0,.20);padding:7px 7px 7px 9px;width:min(92vw,400px);font-family:'Inter',sans-serif}
@@ -561,6 +561,77 @@ html { scroll-behavior: smooth; }
   </div>
 </section>
 
+<!-- =============== AI MATCHES (ряд как районы) =============== -->
+<section id="matches" class="bg-off py-16 lg:py-20 border-t border-line">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+      <div>
+        <p class="kicker mb-3">AI matches for you</p>
+        <h2 class="font-display text-[40px] lg:text-[56px] leading-[1] tracking-tightest">Your perfect<br><span class="italic">matches.</span></h2>
+      </div>
+      <a href="/property-rental/" class="btn-outline inline-flex items-center gap-2">View all villas
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="max-w-[1400px] mx-auto"><div class="thb-arow">
+    <a class="thb-acard" href="/villa/canggu/the-wave-6br-beachside-villa-canggu/">
+      <img src="/public-objects/images/the-wave-canggu-01.jpg" alt="Villa The Wave — Beachside 6BR Villa in Canggu" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Villa The Wave — Beachside 6BR Villa in Canggu</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Canggu, Bali</p>
+        <p class="m">6 bed &middot; 6.5 bath &middot; 12 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+    <a class="thb-acard" href="/villa/sanur/villa-black-pool-4br-sanur/">
+      <img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — Family 4BR Villa with Big Pool" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Villa Black Pool — Family 4BR Villa with Big Pool</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Sanur, Bali</p>
+        <p class="m">4 bed &middot; 4 bath &middot; 8 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+    <a class="thb-acard" href="/villa/sanur/garden-pool-villa-4br-sanur/">
+      <img src="/public-objects/images/sanur-garden-pool-4br-34.jpg" alt="Sanur Garden Pool Villa — Family 4BR near Mertasari Beach" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Sanur Garden Pool Villa — Family 4BR near Mertasari Beach</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Sanur, Bali</p>
+        <p class="m">4 bed &middot; 4.5 bath &middot; 8 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+    <a class="thb-acard" href="/villa/premier-umalas-16-3br-pool-townhouse/">
+      <img src="/public-objects/images/premier-umalas-16-08.jpg" alt="Premier Umalas 16 — Stylish 3BR Pool Townhouse" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Premier Umalas 16 — Stylish 3BR Pool Townhouse</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Umalas, Bali</p>
+        <p class="m">3 bed &middot; 3 bath &middot; 6 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+    <a class="thb-acard" href="/villa/sanur/lucky-lily-3br-pool-villa-sanur/">
+      <img src="/public-objects/images/lucky-lily-sanur-3br-villa-01.jpg" alt="Lucky Lily 3BR Pool Villa in Sanur" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Lucky Lily 3BR Pool Villa in Sanur</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Sanur, Bali</p>
+        <p class="m">3 bed &middot; 3.5 bath &middot; 6 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+    <a class="thb-acard" href="/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/">
+      <img src="/public-objects/images/villa-kesari-4-sanur-01.jpg" alt="Villa Kesari 4 — Family 3BR Pool Villa in Sanur" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Villa Kesari 4 — Family 3BR Pool Villa in Sanur</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Sanur, Bali</p>
+        <p class="m">3 bed &middot; 3 bath &middot; 6 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+  </div></div>
+</section>
+
 <!-- =============== LOCATIONS (сразу после hero) =============== -->
 <section id="locations" class="bg-off py-16 lg:py-20 border-t border-line">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
@@ -769,72 +840,7 @@ html { scroll-behavior: smooth; }
 </section>
 
 <!-- =============== AI MATCHES =============== -->
-<section id="matches" class="bg-off py-24 border-t border-line">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-    <div class="flex items-end justify-between mb-12 flex-wrap gap-6">
-      <div>
-        <p class="kicker mb-3">AI matches for you</p>
-        <h2 class="font-display text-[44px] lg:text-[60px] leading-[1] tracking-tightest">Your perfect matches.</h2>
-        <p class="text-ink/60 mt-3 text-[15px]">Based on your search</p>
-      </div>
-      <div class="flex items-center gap-6">
-        <a href="#" class="text-sm font-semibold underline underline-offset-4 hover:no-underline">View all matches</a>
-        <div class="flex gap-2">
-          <button class="w-11 h-11 rounded-full border border-line hover:border-ink flex items-center justify-center transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-          <button class="w-11 h-11 rounded-full border border-line hover:border-ink flex items-center justify-center transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
-        </div>
-      </div>
-    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <a href="/villa/premier-umalas-16-3br-pool-townhouse/" class="card-hover block">
-        <div class="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4">
-          <img src="/villa/assets/images/new_img_1.webp" alt="Premier Umalas 16 — Stylish 3BR Pool Townhouse" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1280" height="1706">
-          <span class="absolute top-4 left-4 bg-white text-ink text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Umalas</span>
-        </div>
-        <div class="px-1">
-          <div class="flex items-start justify-between mb-1">
-            <h3 class="font-display text-[22px] leading-tight">Premier Umalas 16 — Stylish 3BR Pool Townhouse</h3>
-            <p class="text-sm font-semibold">On request</p>
-          </div>
-          <p class="text-sm text-ink/60 mb-3">Umalas, Bali</p>
-          <div class="flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink/70">
-            <span>3 Bed</span><span>·</span><span>3 Bath</span><span>·</span><span>Pool</span><span>·</span><span>Wi-Fi</span>
-          </div>
-        </div>
-      </a>      <a href="/villa/premier-umalas-17-2br-pool-home/" class="card-hover block">
-        <div class="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4">
-          <picture><source srcset="/public-objects/images/premier-umalas-17-24.avif" type="image/avif"><img src="/public-objects/images/premier-umalas-17-24.jpg" alt="Premier Umalas 17 — Stylish 2BR Private Pool Home" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1200" height="800"></picture>
-          <span class="absolute top-4 left-4 bg-white text-ink text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Umalas</span>
-        </div>
-        <div class="px-1">
-          <div class="flex items-start justify-between mb-1">
-            <h3 class="font-display text-[22px] leading-tight">Premier Umalas 17 — Stylish 2BR Private Pool Home</h3>
-            <p class="text-sm font-semibold">On request</p>
-          </div>
-          <p class="text-sm text-ink/60 mb-3">Umalas, Bali</p>
-          <div class="flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink/70">
-            <span>2 Bed</span><span>·</span><span>2 Bath</span><span>·</span><span>Pool</span><span>·</span><span>Wi-Fi</span>
-          </div>
-        </div>
-      </a>      <a href="/villa/sanur/villa-black-pool-4br-sanur/" class="card-hover block">
-        <div class="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4">
-          <picture><source srcset="/public-objects/images/villa-black-pool-11.avif" type="image/avif"><img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — Family 4BR Villa with Big Pool" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1200" height="800"></picture>
-          <span class="absolute top-4 left-4 bg-white text-ink text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Sanur</span>
-        </div>
-        <div class="px-1">
-          <div class="flex items-start justify-between mb-1">
-            <h3 class="font-display text-[22px] leading-tight">Villa Black Pool — Family 4BR Villa with Big Pool</h3>
-            <p class="text-sm font-semibold">On request</p>
-          </div>
-          <p class="text-sm text-ink/60 mb-3">Sanur, Bali</p>
-          <div class="flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink/70">
-            <span>4 Bed</span><span>·</span><span>4 Bath</span><span>·</span><span>Pool</span><span>·</span><span>Wi-Fi</span>
-          </div>
-        </div>
-      </a>    </div>
-  </div>
-</section>
 
 <!-- =============== LONG-TERM + MANAGEMENT =============== -->
 <section id="longterm" class="bg-off py-16 border-t border-line">

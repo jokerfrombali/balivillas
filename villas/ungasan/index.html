@@ -518,6 +518,20 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
 #thbWaPill>a svg{width:17px;height:17px}
 @media(max-width:380px){#thbWaPill p{font-size:11.5px}}
 </style>
+<style id="thb-qchips-css">
+#thbAreaChips{display:flex;gap:8px;align-items:center;flex:1;flex-wrap:wrap;min-width:0}
+.thb-qchip{display:inline-flex;align-items:center;gap:6px;border:1.5px solid #e0ddd4;background:#fff;border-radius:999px;padding:9px 16px;font-family:'Inter',sans-serif;font-size:13.5px;font-weight:500;color:#0a0a0a;cursor:pointer;white-space:nowrap;transition:border-color .15s,background .15s}
+.thb-qchip:hover{border-color:#0a0a0a}
+.thb-qchip b{font-weight:400;font-size:11.5px;color:#8a877f}
+.thb-qchip.on{background:#0a0a0a;color:#fff;border-color:#0a0a0a}
+.thb-qchip.on b{color:rgba(255,255,255,.65)}
+.pills-inner .filters-btn{margin-left:auto}
+@media(max-width:1023px){
+  .pills-inner{flex-wrap:wrap}
+  #thbAreaChips{flex:1 1 100%;order:3;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:1px}
+  #thbAreaChips::-webkit-scrollbar{display:none}
+}
+</style>
 </head>
 <body>
 
@@ -694,6 +708,13 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         <span style="min-width:0"><span class="tsp-t" style="display:block">Where in Bali?</span><span class="tsp-s" style="display:block">Any dates &middot; Any guests</span></span>
       </button>
+      <div id="thbAreaChips" aria-label="Quick area filter">
+        <button class="thb-qchip" data-area="">All Bali <b>12</b></button>
+        <button class="thb-qchip" data-area="sanur">Sanur <b>6</b></button>
+        <button class="thb-qchip" data-area="canggu">Canggu <b>1</b></button>
+        <button class="thb-qchip" data-area="umalas">Umalas <b>2</b></button>
+        <button class="thb-qchip on" data-area="ungasan">Ungasan <b>3</b></button>
+      </div>
       <div class="pills-scroll" id="pillsScroll" style="display:none">
         <button class="pill active" data-amenity="all" onclick="setPill(this)">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
@@ -1583,6 +1604,25 @@ function appendPrompt(text) {
     Chat
   </a>
 </div>
+<script>
+(function(){
+  var IS_CAT=false, CUR='ungasan';
+  var chips=document.querySelectorAll('.thb-qchip'); if(!chips.length)return;
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      var a=c.dataset.area;
+      if(!IS_CAT){ if(a!==CUR){ window.location=a?'/villas/'+a+'/':'/property-rental/'; } return; }
+      chips.forEach(function(k){k.classList.toggle('on',k===c);});
+      var vis=0;
+      document.querySelectorAll('.prop-card').forEach(function(k){
+        var ok=!a||k.dataset.location===a; k.style.display=ok?'':'none'; if(ok)vis++;
+      });
+      var t=document.getElementById('resultsTitle');
+      if(t){var w=vis===1?' villa':' villas';t.textContent=a?vis+w+' \u2014 '+a.charAt(0).toUpperCase()+a.slice(1):vis+w+' available';}
+    });
+  });
+})();
+</script>
 </body>
 </html>
 
