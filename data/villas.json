@@ -1964,5 +1964,157 @@
     "lat": -8.70541,
     "lng": 115.24634,
     "updatedAt": "2026-07-29"
+  },
+  {
+    "id": "own-eco-private-1br-ungasan",
+    "slug": "ungasan/eco-private-1br-pool-villa-ungasan",
+    "name": "Eco Private — Teak 1BR Pool Villa in Ungasan",
+    "area": "Ungasan",
+    "areaSlug": "ungasan",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "guests": 2,
+    "priceNight": null,
+    "priceMonth": null,
+    "currency": "USD",
+    "description": "A one-bedroom villa in Ungasan on the Bukit peninsula, built almost entirely from natural teak and wrapped in tropical planting. Step out of the bedroom and you are at a private pool set in a garden; the air-conditioned living area with a Smart TV runs into a kitchen with a bar counter, and the bathroom has its own garden outlook and a free-standing tub. Wi-Fi runs at 200 Mbps and there is a desk by the window, so the villa works for remote work as much as for a slow holiday. Scooter parking, housekeeping three times a week and a laundry pick-up service are included; the beaches of the south coast are around ten minutes away. Sleeps 2 — made for couples, solo travellers and long stays.",
+    "amenities": [
+      "Private pool with tropical garden",
+      "Built from natural teak",
+      "One bedroom with a double bed",
+      "Bathroom with garden view and free-standing tub",
+      "Wi-Fi 200 Mbps",
+      "Desk by the window",
+      "Air conditioning",
+      "Kitchen with bar counter",
+      "Smart TV",
+      "Fridge, induction hob and microwave",
+      "Coffee maker and kettle",
+      "Covered terrace",
+      "Scooter parking",
+      "Housekeeping 3x per week",
+      "Laundry pick-up and delivery service",
+      "About 10 minutes to the beach"
+    ],
+    "images": [
+      "/public-objects/images/eco-private-ungasan-01.jpg",
+      "/public-objects/images/eco-private-ungasan-12.jpg",
+      "/public-objects/images/eco-private-ungasan-14.jpg",
+      "/public-objects/images/eco-private-ungasan-16.jpg",
+      "/public-objects/images/eco-private-ungasan-02.jpg",
+      "/public-objects/images/eco-private-ungasan-06.jpg",
+      "/public-objects/images/eco-private-ungasan-09.jpg",
+      "/public-objects/images/eco-private-ungasan-20.jpg",
+      "/public-objects/images/eco-private-ungasan-07.jpg",
+      "/public-objects/images/eco-private-ungasan-10.jpg",
+      "/public-objects/images/eco-private-ungasan-19.jpg",
+      "/public-objects/images/eco-private-ungasan-03.jpg",
+      "/public-objects/images/eco-private-ungasan-11.jpg",
+      "/public-objects/images/eco-private-ungasan-05.jpg",
+      "/public-objects/images/eco-private-ungasan-13.jpg",
+      "/public-objects/images/eco-private-ungasan-17.jpg",
+      "/public-objects/images/eco-private-ungasan-15.jpg",
+      "/public-objects/images/eco-private-ungasan-18.jpg",
+      "/public-objects/images/eco-private-ungasan-08.jpg",
+      "/public-objects/images/eco-private-ungasan-04.jpg"
+    ],
+    "cardImage": "/public-objects/images/eco-private-ungasan-01.jpg",
+    "topGallery": [
+      "/public-objects/images/eco-private-ungasan-01.jpg",
+      "/public-objects/images/eco-private-ungasan-12.jpg",
+      "/public-objects/images/eco-private-ungasan-14.jpg",
+      "/public-objects/images/eco-private-ungasan-16.jpg",
+      "/public-objects/images/eco-private-ungasan-02.jpg"
+    ],
+    "photoGroups": [
+      {
+        "name": "Pool & garden",
+        "airbnbLabel": "Pool & garden",
+        "images": [
+          "/public-objects/images/eco-private-ungasan-01.jpg",
+          "/public-objects/images/eco-private-ungasan-02.jpg",
+          "/public-objects/images/eco-private-ungasan-06.jpg",
+          "/public-objects/images/eco-private-ungasan-09.jpg",
+          "/public-objects/images/eco-private-ungasan-20.jpg",
+          "/public-objects/images/eco-private-ungasan-07.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom",
+        "airbnbLabel": "Bedroom",
+        "images": [
+          "/public-objects/images/eco-private-ungasan-10.jpg",
+          "/public-objects/images/eco-private-ungasan-12.jpg",
+          "/public-objects/images/eco-private-ungasan-19.jpg",
+          "/public-objects/images/eco-private-ungasan-03.jpg"
+        ]
+      },
+      {
+        "name": "Living room",
+        "airbnbLabel": "Living room",
+        "images": [
+          "/public-objects/images/eco-private-ungasan-11.jpg",
+          "/public-objects/images/eco-private-ungasan-14.jpg"
+        ]
+      },
+      {
+        "name": "Kitchen",
+        "airbnbLabel": "Kitchen",
+        "images": [
+          "/public-objects/images/eco-private-ungasan-05.jpg",
+          "/public-objects/images/eco-private-ungasan-13.jpg",
+          "/public-objects/images/eco-private-ungasan-17.jpg"
+        ]
+      },
+      {
+        "name": "Workspace",
+        "airbnbLabel": "Workspace",
+        "images": [
+          "/public-objects/images/eco-private-ungasan-15.jpg"
+        ]
+      },
+      {
+        "name": "Bathroom",
+        "airbnbLabel": "Bathroom",
+        "images": [
+          "/public-objects/images/eco-private-ungasan-16.jpg",
+          "/public-objects/images/eco-private-ungasan-18.jpg",
+          "/public-objects/images/eco-private-ungasan-08.jpg"
+        ]
+      },
+      {
+        "name": "Terrace",
+        "airbnbLabel": "Terrace",
+        "images": [
+          "/public-objects/images/eco-private-ungasan-04.jpg"
+        ]
+      }
+    ],
+    "categories": [
+      "all-villas",
+      "property-rental",
+      "area:ungasan",
+      "bedrooms:1",
+      "area-bedrooms:ungasan:1",
+      "new-on-thehost",
+      "filter:pool",
+      "filter:garden",
+      "filter:workspace"
+    ],
+    "filterTags": [
+      "pool",
+      "garden",
+      "workspace",
+      "fast-wifi",
+      "couples"
+    ],
+    "airbnbUrl": "https://www.airbnb.com/rooms/1654997556202660566",
+    "bookingUrl": null,
+    "monthly": null,
+    "url": "/villa/ungasan/eco-private-1br-pool-villa-ungasan/",
+    "galleryUrl": "/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/",
+    "lat": -8.81994,
+    "lng": 115.17511,
+    "updatedAt": "2026-07-30"
   }
 ]
