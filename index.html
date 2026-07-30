@@ -212,6 +212,24 @@ html { scroll-behavior: smooth; }
 #thbWaPill .wa-go svg{width:15px;height:15px}
 @media(max-width:400px){#thbWaPill p{font-size:11.5px}#thbWaPill .wa-ai{padding:0 11px}#thbWaPill .wa-go{padding:0 12px}}
 </style>
+<style id="thb-trust-css">
+.thb-trust{position:relative;margin-top:34px;padding:88px 24px;background:linear-gradient(rgba(8,9,12,.40),rgba(8,9,12,.62)),url('https://images.unsplash.com/photo-1544984243-ec57ea16fe25?q=80&w=2400&auto=format&fit=crop') center/cover no-repeat,url('/public-objects/images/the-wave-canggu-01.jpg') center/cover no-repeat #14161a}
+.thb-trust-in{max-width:1200px;margin:0 auto;text-align:center}
+.tt-kick{font-family:'Inter',sans-serif;font-weight:600;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.88);margin:0 0 38px;text-shadow:0 1px 12px rgba(0,0,0,.35)}
+.tt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tt-card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:28px 18px 24px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:background .2s,transform .2s}
+.tt-card:hover{background:rgba(255,255,255,.16);transform:translateY(-3px)}
+.tt-h{font-family:'Fraunces',Georgia,serif;font-size:25px;font-weight:600;letter-spacing:-.01em;color:#fff;margin:0 0 7px}
+.tt-s{font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.78);margin:0}
+@media(max-width:900px){.thb-trust{padding:56px 16px;margin-top:26px}.tt-grid{grid-template-columns:repeat(2,1fr);gap:12px}.tt-card{padding:22px 14px 19px}.tt-h{font-size:20px}.tt-kick{margin-bottom:26px;font-size:11px}}
+</style>
+<style id="thb-tap-css">
+a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-action:manipulation;-webkit-tap-highlight-color:rgba(10,10,10,.06)}
+@media(hover:none){
+  .prop-card:hover,.thb-acard:hover,.thb-qchip:hover,.tt-card:hover,.card-hover:hover,.villa-floating-back:hover{transform:none!important;box-shadow:none!important}
+  .cat-card:hover::after{opacity:0!important}
+}
+</style>
 </head>
 <body>
 
@@ -540,28 +558,18 @@ html { scroll-behavior: smooth; }
         p.scrollIntoView({behavior:'smooth',block:'start'});
         var t=p.querySelector('textarea, input[type=text]');if(t)setTimeout(function(){t.focus()},450);});});
       </script>
-      <!-- Trust strip -->
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 pt-5 pb-10">
-    <p class="kicker text-center mb-3">Every villa here is run by our own team in Bali</p>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
-      <div class="flex items-center gap-3 justify-center">
-        <span class="text-2xl">★</span>
-        <div><p class="font-semibold">Direct booking</p><p class="text-ink/60 text-xs">no OTA commission</p></div>
-      </div>
-      <div class="flex items-center gap-3 justify-center">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        <div><p class="font-semibold">12 villas</p><p class="text-ink/60 text-xs">all managed by us</p></div>
-      </div>
-      <div class="flex items-center gap-3 justify-center">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <div><p class="font-semibold">Minutes</p><p class="text-ink/60 text-xs">not hours of searching</p></div>
-      </div>
-      <div class="flex items-center gap-3">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        <div><p class="font-semibold">Verified</p><p class="text-ink/60 text-xs">&amp; trusted properties</p></div>
-      </div>
+      <!-- Trust strip: вилла с видом на океан фоном -->
+<div class="thb-trust">
+  <div class="thb-trust-in">
+    <p class="tt-kick">Every villa here is run by our own team in Bali</p>
+    <div class="tt-grid">
+      <div class="tt-card"><p class="tt-h">Direct booking</p><p class="tt-s">no OTA commission</p></div>
+      <div class="tt-card"><p class="tt-h">12 villas</p><p class="tt-s">all managed by us</p></div>
+      <div class="tt-card"><p class="tt-h">Minutes</p><p class="tt-s">not hours of searching</p></div>
+      <div class="tt-card"><p class="tt-h">Verified</p><p class="tt-s">&amp; trusted properties</p></div>
     </div>
   </div>
+</div>
 </section>
 
 <!-- =============== AI MATCHES (ряд как районы) =============== -->
@@ -1106,7 +1114,7 @@ html { scroll-behavior: smooth; }
 <!-- =============== FLOATING WHATSAPP =============== -->
 <div id="thbWaPill">
   <span class="ava" aria-hidden="true"></span>
-  <p>Dream villa in Bali? Ask AI or a real host.</p>
+  <p>Your Bali villa is one question away &mdash; ask us anything.</p>
   <button type="button" class="wa-ai" onclick="thbAskAI()" aria-label="Ask AI by voice or text">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><path d="M12 18v4"/><path d="M8 22h8"/></svg>
     AI

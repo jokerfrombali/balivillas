@@ -639,6 +639,13 @@ section:has(#availability) {
 <style>picture{display:contents}</style>
 <style>section[id^="section-"]:not(:first-of-type){content-visibility:auto;contain-intrinsic-size:auto 600px}</style>
 <style>@media (max-width:479.98px){.thb-navlink{display:none}}</style>
+<style id="thb-tap-css">
+a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-action:manipulation;-webkit-tap-highlight-color:rgba(10,10,10,.06)}
+@media(hover:none){
+  .prop-card:hover,.thb-acard:hover,.thb-qchip:hover,.tt-card:hover,.card-hover:hover,.villa-floating-back:hover{transform:none!important;box-shadow:none!important}
+  .cat-card:hover::after{opacity:0!important}
+}
+</style>
 </head>
 <body>
 <button type="button" class="villa-floating-back" onclick="villaSmartBack()" aria-label="Back"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
