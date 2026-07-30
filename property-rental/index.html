@@ -451,6 +451,42 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   .promo-title{font-size:28px!important}
 }
 </style>
+<style id="thb-sheet-css">
+#thbSearchPill{display:none}
+@media(max-width:1023px){
+  #thbSearchPill{flex:1;display:flex;align-items:center;gap:10px;background:#fff;border:1.5px solid #dcd8cf;border-radius:999px;padding:12px 16px;box-shadow:0 4px 16px rgba(0,0,0,.07);font-family:'Inter',sans-serif;cursor:pointer;min-width:0;text-align:left}
+  #thbSearchPill svg{flex:0 0 auto;color:#0a0a0a}
+  #thbSearchPill .tsp-t{font-size:14px;font-weight:600;color:#0a0a0a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #thbSearchPill .tsp-s{font-size:12px;color:#8a877f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pills-inner{padding:10px 0;gap:10px}
+  .promo-search{display:none!important}
+}
+#thbSheet{position:fixed;inset:0;z-index:80;background:#fafaf7;display:none;flex-direction:column;font-family:'Inter',sans-serif}
+#thbSheet.open{display:flex}
+#thbSheet .tsh-hd{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #e6e3dc;flex-shrink:0}
+#thbSheet .tsh-hd p{font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700;color:#0a0a0a;margin:0}
+#thbSheet .tsh-x{width:38px;height:38px;border-radius:999px;border:1px solid #e6e3dc;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+#thbSheet .tsh-bd{flex:1;overflow-y:auto;padding:20px;-webkit-overflow-scrolling:touch}
+#thbSheet .tsh-lbl{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8a877f;margin:0 0 12px}
+#thbSheet .tsh-sec{background:#fff;border:1px solid #e6e3dc;border-radius:20px;padding:18px;margin-bottom:14px}
+#thbSheet .tsh-chips{display:flex;flex-wrap:wrap;gap:8px}
+#thbSheet .tsh-chip{display:inline-flex;align-items:center;gap:7px;border:1.5px solid #e6e3dc;background:#fff;border-radius:999px;padding:10px 16px;font-size:14px;font-weight:500;color:#0a0a0a;cursor:pointer;font-family:'Inter',sans-serif}
+#thbSheet .tsh-chip b{font-weight:400;font-size:12px;color:#8a877f}
+#thbSheet .tsh-chip.on{background:#0a0a0a;color:#fff;border-color:#0a0a0a}
+#thbSheet .tsh-chip.on b{color:rgba(255,255,255,.6)}
+#thbSheet .tsh-dates{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#thbSheet .tsh-dates label{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#0a0a0a;margin:0 0 6px}
+#thbSheet .tsh-dates input{width:100%;border:1.5px solid #e6e3dc;border-radius:12px;padding:11px 12px;font-size:16px;font-family:'Inter',sans-serif;color:#0a0a0a;background:#fff;-webkit-appearance:none;appearance:none;min-height:46px}
+#thbSheet .tsh-guests{display:flex;align-items:center;justify-content:space-between}
+#thbSheet .tsh-guests p{margin:0;font-size:14px;font-weight:500;color:#0a0a0a}
+#thbSheet .tsh-step{display:flex;align-items:center;gap:14px}
+#thbSheet .tsh-step button{width:38px;height:38px;border-radius:999px;border:1.5px solid #dcd8cf;background:#fff;font-size:19px;line-height:1;color:#0a0a0a;cursor:pointer}
+#thbSheet .tsh-step button:disabled{opacity:.3}
+#thbSheet .tsh-step span{min-width:20px;text-align:center;font-size:16px;font-weight:600}
+#thbSheet .tsh-ft{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 20px calc(14px + env(safe-area-inset-bottom));border-top:1px solid #e6e3dc;background:#fafaf7}
+#thbSheet .tsh-clear{background:none;border:none;font-size:14px;font-weight:600;color:#0a0a0a;text-decoration:underline;text-underline-offset:3px;cursor:pointer;font-family:'Inter',sans-serif;padding:10px 4px}
+#thbSheet .tsh-apply{flex:1;background:#0a0a0a;color:#fff;border:none;border-radius:999px;padding:15px 22px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer}
+</style>
 </head>
 <body>
 
@@ -694,6 +730,10 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   <!-- AMENITY PILLS + FILTERS -->
   <div class="pills-bar">
     <div class="pills-inner">
+      <button id="thbSearchPill" aria-label="Search by area and dates">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <span style="min-width:0"><span class="tsp-t" style="display:block">Where in Bali?</span><span class="tsp-s" style="display:block">Any dates &middot; Any guests</span></span>
+      </button>
       <div class="pills-scroll" id="pillsScroll" style="display:none">
         <button class="pill active" data-amenity="all" onclick="setPill(this)">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
@@ -1401,7 +1441,7 @@ document.querySelectorAll('.f-chip input').forEach(function(inp) {
   });
 });
 function updateFilterCount() {
-  var n = document.querySelectorAll('.f-chip.active').length;
+  var n = Array.prototype.filter.call(document.querySelectorAll('.f-chip.active'), function(c){var i=c.querySelector('input');if(!i)return true;var v=(i.value||'').toLowerCase();return !(i.dataset.filter==='period'||v==='all'||v==='any');}).length;
   var badge = document.getElementById('filterCountBadge');
   if (n > 0) { badge.style.display = 'inline'; badge.textContent = n; } else { badge.style.display = 'none'; }
 }
@@ -1656,6 +1696,114 @@ function appendPrompt(text) {
   document.getElementById('voiceCancel').addEventListener('click', closeVoice);
   document.getElementById('voiceDone').addEventListener('click', applyText);
   overlay.addEventListener('click', function(e) { if (e.target === overlay) closeVoice(); });
+})();
+</script>
+<div id="thbSheet" role="dialog" aria-modal="true" aria-label="Search villas">
+  <div class="tsh-hd"><p>Search villas</p><button class="tsh-x" aria-label="Close" onclick="thbSheetClose()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+  <div class="tsh-bd">
+    <div class="tsh-sec"><p class="tsh-lbl">Where in Bali?</p><div class="tsh-chips" id="thbSheetAreas"><button class="tsh-chip on" data-area="">All Bali <b>12</b></button>
+<button class="tsh-chip" data-area="sanur">Sanur <b>6</b></button>
+<button class="tsh-chip" data-area="canggu">Canggu <b>1</b></button>
+<button class="tsh-chip" data-area="umalas">Umalas <b>2</b></button>
+<button class="tsh-chip" data-area="ungasan">Ungasan <b>3</b></button></div></div>
+    <div class="tsh-sec"><p class="tsh-lbl">When?</p>
+      <div class="tsh-dates">
+        <div><label for="thbCi">Check in</label><input type="date" id="thbCi"></div>
+        <div><label for="thbCo">Check out</label><input type="date" id="thbCo"></div>
+      </div>
+    </div>
+    <div class="tsh-sec"><p class="tsh-lbl">Who?</p>
+      <div class="tsh-guests"><p>Guests</p>
+        <div class="tsh-step"><button id="thbGm" aria-label="Fewer guests">&minus;</button><span id="thbGn">Any</span><button id="thbGp" aria-label="More guests">+</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="tsh-ft"><button class="tsh-clear" onclick="thbSheetClear()">Clear all</button><button class="tsh-apply" id="thbSheetApply">Show villas</button></div>
+</div>
+<script>
+(function(){
+  var q={area:'',ci:'',co:'',g:0}, IS_CAT=true;
+  var sheet=document.getElementById('thbSheet'); if(!sheet) return;
+  var pill=document.getElementById('thbSearchPill');
+  function fmt(d){if(!d)return'';var p=d.split('-');return p[2]+'.'+p[1];}
+  function pillText(){
+    var t=document.querySelector('#thbSearchPill .tsp-t'), st=document.querySelector('#thbSearchPill .tsp-s');
+    var names={'':'All Bali','sanur':'Sanur','canggu':'Canggu','umalas':'Umalas','ungasan':'Ungasan'};
+    if(t)t.textContent=names[q.area]||'All Bali';
+    var bits=[];
+    if(q.ci&&q.co)bits.push(fmt(q.ci)+' \u2013 '+fmt(q.co)); else bits.push('Any dates');
+    bits.push(q.g?q.g+' guests':'Any guests');
+    if(st)st.textContent=bits.join(' \u00b7 ');
+  }
+  function matches(card){
+    var la=!q.area||card.dataset.location===q.area;
+    var lg=!q.g||Number(card.dataset.guests||0)>=q.g;
+    return la&&lg;
+  }
+  function countMatch(){var c=0;document.querySelectorAll('.prop-card').forEach(function(k){if(matches(k))c++;});return c;}
+  function updApply(){
+    var b=document.getElementById('thbSheetApply');
+    if(IS_CAT||q.area===''){var n=countMatch();b.textContent='Show '+n+(n===1?' villa':' villas');}
+    else{var m={'':12,'sanur':6,'canggu':1,'umalas':2,'ungasan':3};var n2=m[q.area]||0;b.textContent='Show '+n2+(n2===1?' villa':' villas');}
+  }
+  window.thbSheetOpen=function(){sheet.classList.add('open');document.body.style.overflow='hidden';updApply();};
+  window.thbSheetClose=function(){sheet.classList.remove('open');document.body.style.overflow='';};
+  window.thbSheetClear=function(){
+    q.area='';q.ci='';q.co='';q.g=0;
+    document.getElementById('thbCi').value='';document.getElementById('thbCo').value='';
+    document.getElementById('thbGn').textContent='Any';
+    sheet.querySelectorAll('.tsh-chip').forEach(function(c){c.classList.toggle('on',c.dataset.area==='');});
+    updApply();
+  };
+  if(pill)pill.addEventListener('click',thbSheetOpen);
+  sheet.querySelectorAll('.tsh-chip').forEach(function(c){
+    c.addEventListener('click',function(){
+      sheet.querySelectorAll('.tsh-chip').forEach(function(k){k.classList.remove('on');});
+      c.classList.add('on'); q.area=c.dataset.area; updApply();
+    });
+  });
+  var ci=document.getElementById('thbCi'),co=document.getElementById('thbCo');
+  ci.addEventListener('change',function(){q.ci=ci.value;if(co.value&&co.value<=ci.value)co.value='';co.min=ci.value;updApply();});
+  co.addEventListener('change',function(){q.co=co.value;updApply();});
+  document.getElementById('thbGm').addEventListener('click',function(){if(q.g>0)q.g--;document.getElementById('thbGn').textContent=q.g||'Any';updApply();});
+  document.getElementById('thbGp').addEventListener('click',function(){if(q.g<16)q.g++;document.getElementById('thbGn').textContent=q.g;updApply();});
+  document.getElementById('thbSheetApply').addEventListener('click',function(){
+    if(!IS_CAT&&q.area!==''){
+      var base=q.area?'/villas/'+q.area+'/':'/property-rental/';
+      var ps=new URLSearchParams();
+      if(q.ci)ps.set('checkin',q.ci); if(q.co)ps.set('checkout',q.co); if(q.g)ps.set('guests',q.g);
+      var qs=ps.toString(); window.location=base+(qs?'?'+qs:''); return;
+    }
+    document.querySelectorAll('.prop-card').forEach(function(k){k.style.display=matches(k)?'':'none';});
+    var title=document.getElementById('resultsTitle');
+    if(title){var n=countMatch(),w=n===1?' villa':' villas',lbl=[];
+      if(q.area)lbl.push(q.area.charAt(0).toUpperCase()+q.area.slice(1));
+      if(q.g)lbl.push(q.g+'+ guests');
+      title.textContent=lbl.length?n+w+' \u2014 '+lbl.join(' \u00b7 '):n+w+' available';}
+    pillText(); thbSheetClose();
+    var rb=document.querySelector('.results-bar'); if(rb)rb.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  // прокинуть выбранные даты/гостей в карточки вилл
+  var grid=document.getElementById('cardGrid');
+  if(grid)grid.addEventListener('click',function(e){
+    if(!q.ci&&!q.g)return;
+    if(e.target.closest('.heart-btn'))return;
+    var card=e.target.closest('.prop-card'); if(!card)return;
+    var oc=card.getAttribute('onclick')||''; var m=oc.match(/window\.location='([^']+)'/); if(!m)return;
+    e.stopPropagation(); e.preventDefault();
+    var ps=new URLSearchParams();
+    if(q.ci)ps.set('checkin',q.ci); if(q.co)ps.set('checkout',q.co); if(q.g)ps.set('guests',q.g);
+    window.location=m[1]+'?'+ps.toString();
+  },true);
+  // подхват параметров из URL (переход с другой страницы)
+  try{
+    var up=new URLSearchParams(location.search);
+    if(up.get('checkin')){q.ci=up.get('checkin');ci.value=q.ci;}
+    if(up.get('checkout')){q.co=up.get('checkout');co.value=q.co;}
+    if(up.get('guests')){q.g=parseInt(up.get('guests'),10)||0;if(q.g)document.getElementById('thbGn').textContent=q.g;}
+    if(q.g){document.querySelectorAll('.prop-card').forEach(function(k){k.style.display=matches(k)?'':'none';});}
+    pillText();
+  }catch(err){}
 })();
 </script>
 </body>
