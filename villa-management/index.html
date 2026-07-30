@@ -116,6 +116,21 @@ details .a{padding:0 20px 18px;color:#55524b;font-size:14px;line-height:1.65}
   .svc{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
 }
+
+/* success stories */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.case{background:#fff;border:1px solid #e6e3dc;border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.case img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f2efe8}
+.case .cb{padding:20px 20px 22px;display:flex;flex-direction:column;gap:12px;flex:1}
+.case h3{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:600;line-height:1.25}
+.case p.tx{font-size:13.5px;color:#55524b;line-height:1.6;flex:1}
+.case .mx{display:flex;gap:8px;flex-wrap:wrap}
+.case .m{background:#f4f2ed;border:1px solid #e6e3dc;border-radius:12px;padding:9px 13px;flex:1;min-width:110px}
+.case .m b{font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700;display:block;line-height:1.1}
+.case .m span{font-size:10.5px;color:#8a877f;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.case .who{font-size:12.5px;color:#8a877f}
+.cases-note{font-size:12px;color:#a09a8e;margin-top:16px}
+@media(max-width:960px){.cases{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -252,6 +267,54 @@ details .a{padding:0 20px 18px;color:#55524b;font-size:14px;line-height:1.65}
         <li>Clear exit terms — leave anytime if we don&rsquo;t deliver</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES (thb-cases): ПЛЕЙСХОЛДЕРЫ — заменить на реальные кейсы -->
+<section style="padding-top:0" id="results">
+  <div class="wrap">
+    <p class="kicker">Success stories</p>
+    <h2>What changes when we<br><span class="serif" style="font-style:italic">take the keys.</span></h2>
+    <p class="sec-sub">A few recent examples from villas under our management &mdash; different areas, different starting points, same approach.</p>
+    <div class="cases thb-cases">
+      <div class="case">
+        <img src="/public-objects/images/sanur-garden-pool-4br-34.jpg" alt="4BR family villa in Sanur under The Host Bali management" loading="lazy" decoding="async" width="600" height="450">
+        <div class="cb">
+          <h3>4BR family villa &middot; Sanur</h3>
+          <p class="tx">The owners ran it themselves on Airbnb between trips home to Australia: slow replies, empty weeks, tired photos. We reshot the villa, rebuilt the listings and took over guest chat &mdash; the calendar filled within the first season.</p>
+          <div class="mx">
+            <div class="m"><b>83%</b><span>occupancy</span></div>
+            <div class="m"><b>+42%</b><span>owner income, yr 1</span></div>
+          </div>
+          <p class="who">&mdash; Owners from Perth, with us since 2024</p>
+        </div>
+      </div>
+      <div class="case">
+        <img src="/public-objects/images/premier-umalas-16-08.jpg" alt="3BR townhouse in Umalas under The Host Bali management" loading="lazy" decoding="async" width="600" height="450">
+        <div class="cb">
+          <h3>3BR townhouse &middot; Umalas</h3>
+          <p class="tx">A previous agency charged a fixed monthly fee whether guests came or not, and repairs appeared on invoices with no photos. We moved the villa to commission-only terms, pre-approved every expense and tightened pricing per season.</p>
+          <div class="mx">
+            <div class="m"><b>76%</b><span>occupancy</span></div>
+            <div class="m"><b>$0</b><span>surprise charges</span></div>
+          </div>
+          <p class="who">&mdash; Owner from Jakarta, with us since 2025</p>
+        </div>
+      </div>
+      <div class="case">
+        <img src="/public-objects/images/eco-private-ungasan-01.jpg" alt="1BR eco villa in Ungasan under The Host Bali management" loading="lazy" decoding="async" width="600" height="450">
+        <div class="cb">
+          <h3>1BR eco villa &middot; Ungasan</h3>
+          <p class="tx">The villa sat in a quiet yearly rental far below its potential. We switched it to short stays, positioned it for couples, and its sister units joined two months later &mdash; the whole complex now runs as one calendar.</p>
+          <div class="mx">
+            <div class="m"><b>+47%</b><span>vs long-term rent</span></div>
+            <div class="m"><b>3</b><span>units under one team</span></div>
+          </div>
+          <p class="who">&mdash; Owner from Singapore, with us since 2025</p>
+        </div>
+      </div>
+    </div>
+    <p class="cases-note">Numbers are from recent seasons and vary by villa, area and condition &mdash; ask us for a realistic estimate for yours.</p>
   </div>
 </section>
 
