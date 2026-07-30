@@ -731,7 +731,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   <div class="results-bar">
     <div>
       <p style="font-size:12px;color:#6b6b66;text-transform:uppercase;letter-spacing:0.18em;font-weight:600;margin-bottom:3px">Bali Property Rental</p>
-      <p style="font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:700" id="resultsTitle">10 villas available</p>
+      <p style="font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:700" id="resultsTitle">12 villas available</p>
     </div>
     <div style="display:flex;align-items:center;gap:10px">
       <select class="sort-select" id="sortSelect">
@@ -1060,6 +1060,50 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
           </div>
         </div>
       </div>
+      <div class="prop-card" data-location="ungasan" data-beds="2" data-guests="4" data-type="villa" data-amenities="pool wifi kitchen work garden parking" onclick="window.location='/villa/ungasan/eco-teak-2br-pool-villa-ungasan/'">
+        <div class="img-wrap">
+          <picture><source srcset="/public-objects/images/eco-teak-2br-ungasan-23.avif" type="image/avif"><img src="/public-objects/images/eco-teak-2br-ungasan-23.jpg" alt="Eco Teak — 2BR Pool Villa in Ungasan — Ungasan villa" loading="lazy" decoding="async" width="1200" height="900"></picture>
+          <span class="badge">Ungasan</span>
+          <span class="badge-type">Villa</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Eco Teak — 2BR Pool Villa in Ungasan</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>2 bed</span><span>2 bath</span><span>4 guests</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span><span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Eco</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="prop-card" data-location="ungasan" data-beds="1" data-guests="2" data-type="villa" data-amenities="pool wifi kitchen work garden parking" onclick="window.location='/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/'">
+        <div class="img-wrap">
+          <picture><source srcset="/public-objects/images/exclusive-1br-ungasan-12.avif" type="image/avif"><img src="/public-objects/images/exclusive-1br-ungasan-12.jpg" alt="Eco Exclusive — Teak 1BR Pool Villa in Ungasan — Ungasan villa" loading="lazy" decoding="async" width="1200" height="900"></picture>
+          <span class="badge">Ungasan</span>
+          <span class="badge-type">Villa</span>
+          <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div style="padding:14px">
+          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Eco Exclusive — Teak 1BR Pool Villa in Ungasan</p>
+          <div class="prop-meta" style="margin-bottom:10px">
+            <span>1 bed</span><span>1 bath</span><span>2 guests</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div style="display:flex;gap:4px">
+              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span><span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Eco</span>
+            </div>
+          </div>
+        </div>
+      </div>
       
       
       
@@ -1068,7 +1112,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
     <!-- Load more -->
     <div style="text-align:center;margin-top:48px">
       <button class="btn-outline">Load more villas</button>
-      <p style="font-size:13px;color:#6b6b66;margin-top:12px">Showing 10 of 10 villas</p>
+      <p style="font-size:13px;color:#6b6b66;margin-top:12px">Showing 12 of 12 villas</p>
     </div>
   </div>
 </div>
@@ -1182,7 +1226,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
           <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px"><span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="sanur" style="accent-color:#0a0a0a"> Sanur</span><span style="font-size:12px;color:#b0ada6">6</span></label>
               <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px"><span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="umalas" style="accent-color:#0a0a0a"> Umalas</span><span style="font-size:12px;color:#b0ada6">2</span></label>
               <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px"><span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="canggu" style="accent-color:#0a0a0a"> Canggu</span><span style="font-size:12px;color:#b0ada6">1</span></label>
-              <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px"><span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="ungasan" style="accent-color:#0a0a0a"> Ungasan</span><span style="font-size:12px;color:#b0ada6">1</span></label>
+              <label style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;cursor:pointer;font-size:13.5px"><span style="display:flex;align-items:center;gap:8px"><input type="checkbox" data-filter="location" value="ungasan" style="accent-color:#0a0a0a"> Ungasan</span><span style="font-size:12px;color:#b0ada6">3</span></label>
               </div>
       </div>
     </div>

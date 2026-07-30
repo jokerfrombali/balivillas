@@ -2116,5 +2116,317 @@
     "lat": -8.81994,
     "lng": 115.17511,
     "updatedAt": "2026-07-30"
+  },
+  {
+    "id": "own-eco-teak-2br-ungasan",
+    "slug": "ungasan/eco-teak-2br-pool-villa-ungasan",
+    "name": "Eco Teak — 2BR Pool Villa in Ungasan",
+    "area": "Ungasan",
+    "areaSlug": "ungasan",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "guests": 4,
+    "priceNight": null,
+    "priceMonth": null,
+    "currency": "USD",
+    "description": "A two-bedroom villa in Ungasan built from natural teak, with its own pool, a lawn and two covered verandas. Both bedrooms have extra-wide two-metre beds, air conditioning and their own bathroom; the enclosed living room and fully equipped kitchen are air-conditioned as well, and the dining table looks straight out at the water. Wi-Fi runs at 200 Mbps, so the villa suits remote work as much as a family holiday. Self check-in with a code lock, free scooter parking and housekeeping three times a week are included, and the beaches of the Bukit are about ten minutes away. Sleeps 4.",
+    "amenities": [
+      "Private pool with tropical garden",
+      "Built from natural teak",
+      "Two bedrooms with 2 m wide beds",
+      "Two en-suite bathrooms",
+      "Wi-Fi 200 Mbps",
+      "Air conditioning in bedrooms and living room",
+      "Fully equipped kitchen",
+      "Smart TV",
+      "Dining area facing the pool",
+      "Two covered verandas",
+      "Fridge, hob and microwave",
+      "Coffee maker and kettle",
+      "Self check-in with a code lock",
+      "Free scooter parking",
+      "Housekeeping 3x per week",
+      "About 10 minutes to the beach"
+    ],
+    "categories": [
+      "all-villas",
+      "property-rental",
+      "area:ungasan",
+      "bedrooms:2",
+      "area-bedrooms:ungasan:2",
+      "new-on-thehost",
+      "filter:pool",
+      "filter:garden",
+      "filter:family"
+    ],
+    "filterTags": [
+      "pool",
+      "garden",
+      "family",
+      "workspace",
+      "fast-wifi"
+    ],
+    "airbnbUrl": "https://www.airbnb.com/rooms/1653393582551292568",
+    "bookingUrl": null,
+    "monthly": null,
+    "url": "/villa/ungasan/eco-teak-2br-pool-villa-ungasan/",
+    "galleryUrl": "/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/",
+    "lat": -8.8186,
+    "lng": 115.1766,
+    "updatedAt": "2026-07-30",
+    "images": [
+      "/public-objects/images/eco-teak-2br-ungasan-23.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-07.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-01.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-05.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-26.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-02.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-03.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-04.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-06.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-08.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-09.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-10.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-11.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-12.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-13.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-14.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-15.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-16.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-17.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-18.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-19.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-20.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-21.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-22.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-24.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-25.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-27.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-28.jpg"
+    ],
+    "cardImage": "/public-objects/images/eco-teak-2br-ungasan-23.jpg",
+    "topGallery": [
+      "/public-objects/images/eco-teak-2br-ungasan-23.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-07.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-01.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-05.jpg",
+      "/public-objects/images/eco-teak-2br-ungasan-26.jpg"
+    ],
+    "photoGroups": [
+      {
+        "name": "Living room",
+        "airbnbLabel": "Living room",
+        "images": [
+          "/public-objects/images/eco-teak-2br-ungasan-01.jpg"
+        ]
+      },
+      {
+        "name": "Kitchen",
+        "airbnbLabel": "Kitchen",
+        "images": [
+          "/public-objects/images/eco-teak-2br-ungasan-02.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-03.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-04.jpg"
+        ]
+      },
+      {
+        "name": "Dining area",
+        "airbnbLabel": "Dining area",
+        "images": [
+          "/public-objects/images/eco-teak-2br-ungasan-05.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-06.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 1",
+        "airbnbLabel": "Bedroom 1",
+        "images": [
+          "/public-objects/images/eco-teak-2br-ungasan-07.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-08.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-09.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 2",
+        "airbnbLabel": "Bedroom 2",
+        "images": [
+          "/public-objects/images/eco-teak-2br-ungasan-10.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-11.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-12.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-13.jpg"
+        ]
+      },
+      {
+        "name": "Bathroom 1",
+        "airbnbLabel": "Bathroom 1",
+        "images": [
+          "/public-objects/images/eco-teak-2br-ungasan-14.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-15.jpg"
+        ]
+      },
+      {
+        "name": "Bathroom 2",
+        "airbnbLabel": "Bathroom 2",
+        "images": [
+          "/public-objects/images/eco-teak-2br-ungasan-16.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-17.jpg"
+        ]
+      },
+      {
+        "name": "Verandas",
+        "airbnbLabel": "Verandas",
+        "images": [
+          "/public-objects/images/eco-teak-2br-ungasan-18.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-19.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-20.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-21.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-22.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-23.jpg"
+        ]
+      },
+      {
+        "name": "Exterior",
+        "airbnbLabel": "Exterior",
+        "images": [
+          "/public-objects/images/eco-teak-2br-ungasan-24.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-25.jpg"
+        ]
+      },
+      {
+        "name": "Pool",
+        "airbnbLabel": "Pool",
+        "images": [
+          "/public-objects/images/eco-teak-2br-ungasan-26.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-27.jpg",
+          "/public-objects/images/eco-teak-2br-ungasan-28.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "own-eco-exclusive-1br-ungasan",
+    "slug": "ungasan/eco-exclusive-1br-pool-villa-ungasan",
+    "name": "Eco Exclusive — Teak 1BR Pool Villa in Ungasan",
+    "area": "Ungasan",
+    "areaSlug": "ungasan",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "guests": 2,
+    "priceNight": null,
+    "priceMonth": null,
+    "currency": "USD",
+    "description": "A one-bedroom teak villa in a quiet Ungasan compound, with a private pool, a lawn and a bright open-plan interior. Bedroom, living area and the kitchen with its breakfast bar all sit under one pitched teak roof; the bathroom opens onto greenery and has a free-standing tub and a rain shower. Wi-Fi runs at 200 Mbps and there is a workspace and an in-room safe. Housekeeping three times a week, scooter parking and self check-in are included, and the beaches of the Bukit are about ten minutes away. Sleeps 2 — made for couples, solo travellers and long stays.",
+    "amenities": [
+      "Private pool with tropical garden",
+      "Built from natural teak",
+      "Bedroom with a double bed",
+      "Bathroom with garden view and free-standing tub",
+      "Wi-Fi 200 Mbps",
+      "Dedicated workspace",
+      "Air conditioning",
+      "Kitchen with breakfast bar",
+      "Smart TV",
+      "Fridge, hob and microwave",
+      "Coffee maker",
+      "In-room safe",
+      "Scooter parking",
+      "Housekeeping 3x per week",
+      "Hair dryer and toiletries",
+      "About 10 minutes to the beach"
+    ],
+    "categories": [
+      "all-villas",
+      "property-rental",
+      "area:ungasan",
+      "bedrooms:1",
+      "area-bedrooms:ungasan:1",
+      "new-on-thehost",
+      "filter:pool",
+      "filter:garden",
+      "filter:workspace"
+    ],
+    "filterTags": [
+      "pool",
+      "garden",
+      "workspace",
+      "fast-wifi",
+      "couples"
+    ],
+    "airbnbUrl": "https://www.airbnb.com/rooms/1725821715148501102",
+    "bookingUrl": null,
+    "monthly": null,
+    "url": "/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/",
+    "galleryUrl": "/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/",
+    "lat": -8.8185,
+    "lng": 115.1767,
+    "updatedAt": "2026-07-30",
+    "images": [
+      "/public-objects/images/exclusive-1br-ungasan-12.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-05.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-04.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-07.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-11.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-01.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-02.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-03.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-06.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-08.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-09.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-10.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-13.jpg"
+    ],
+    "cardImage": "/public-objects/images/exclusive-1br-ungasan-12.jpg",
+    "topGallery": [
+      "/public-objects/images/exclusive-1br-ungasan-12.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-05.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-04.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-07.jpg",
+      "/public-objects/images/exclusive-1br-ungasan-11.jpg"
+    ],
+    "photoGroups": [
+      {
+        "name": "Living & dining",
+        "airbnbLabel": "Living & dining",
+        "images": [
+          "/public-objects/images/exclusive-1br-ungasan-01.jpg",
+          "/public-objects/images/exclusive-1br-ungasan-02.jpg",
+          "/public-objects/images/exclusive-1br-ungasan-03.jpg",
+          "/public-objects/images/exclusive-1br-ungasan-04.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom",
+        "airbnbLabel": "Bedroom",
+        "images": [
+          "/public-objects/images/exclusive-1br-ungasan-05.jpg",
+          "/public-objects/images/exclusive-1br-ungasan-06.jpg"
+        ]
+      },
+      {
+        "name": "Bathroom",
+        "airbnbLabel": "Bathroom",
+        "images": [
+          "/public-objects/images/exclusive-1br-ungasan-07.jpg",
+          "/public-objects/images/exclusive-1br-ungasan-08.jpg",
+          "/public-objects/images/exclusive-1br-ungasan-09.jpg",
+          "/public-objects/images/exclusive-1br-ungasan-10.jpg"
+        ]
+      },
+      {
+        "name": "Pool & garden",
+        "airbnbLabel": "Pool & garden",
+        "images": [
+          "/public-objects/images/exclusive-1br-ungasan-11.jpg",
+          "/public-objects/images/exclusive-1br-ungasan-12.jpg"
+        ]
+      },
+      {
+        "name": "Entrance",
+        "airbnbLabel": "Entrance",
+        "images": [
+          "/public-objects/images/exclusive-1br-ungasan-13.jpg"
+        ]
+      }
+    ]
   }
 ]
