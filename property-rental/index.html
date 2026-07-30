@@ -446,6 +446,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   #cardGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
 }
 @media(max-width:639px){
+  .promo-search input,.promo-search-field input{font-size:16px!important}
   #cardGrid{grid-template-columns:1fr!important;gap:18px!important}
   .promo-title{font-size:28px!important}
 }
@@ -1277,7 +1278,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
     </div>
 
     <!-- Price -->
-    <div class="filter-section">
+    <div class="filter-section" style="display:none"><!-- скрыто: цен в villas.json пока нет; вернуть при появлении -->
       <div class="filter-title" onclick="toggleFilter(this)">
         Price per month
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
@@ -1353,7 +1354,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
 
     <!-- Apply -->
     <div style="padding:20px 28px;position:sticky;bottom:0;background:#fafaf7;border-top:1px solid #e6e3dc">
-      <button class="btn-primary" style="width:100%;justify-content:center;font-size:15px" onclick="closeFilters()">Show 515 villas</button>
+      <button class="btn-primary" style="width:100%;justify-content:center;font-size:15px" onclick="closeFilters()">Show 12 villas</button>
     </div>
   </div>
 </div>
