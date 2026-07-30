@@ -672,7 +672,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
         </button>
         <button class="pill" data-amenity="beach" onclick="setPill(this)">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0-4.4-3.6-8-8-8s-8 3.6-8 8"/><path d="M12 2v20"/><path d="M4 10h16"/><path d="M3 20h18"/></svg>
-          <span class="pill-label">Beachfront</span>
+          <span class="pill-label">Near beach</span>
         </button>
         </div>
       <div class="pills-sep"></div>
@@ -710,7 +710,8 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   </div>
 
   <!-- CATEGORY CARDS -->
-  <div class="cat-grid" style="padding-top:20px">
+  <div style="display:none"><!-- Collections cards: скрыто по решению пользователя 2026-07-30 -->
+<div class="cat-grid" style="padding-top:20px">
     <!-- New listings -->
     <div class="cat-card" onclick="openFilters()">
       <div class="cat-icon">
@@ -777,6 +778,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
       </div>
     </div>
   </div>
+</div>
 
   <!-- CARDS GRID -->
   <div class="cards-wrap">
