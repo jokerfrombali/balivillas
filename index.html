@@ -196,7 +196,8 @@ html { scroll-behavior: smooth; }
         <div class="mega-trigger">
           <a href="/property-rental/" class="nav-link flex items-center gap-1">Villas <svg class="w-3 h-3 opacity-60 mega-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
         </div>
-        <a href="#locations" class="nav-link flex items-center gap-1">Destinations <svg class="w-3 h-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+        <a href="#" data-ai-open class="nav-link">AI Search</a>
+            <a href="#locations" class="nav-link flex items-center gap-1">Destinations <svg class="w-3 h-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
         <a href="#longterm" class="nav-link">Monthly &amp; Yearly</a>
         <a href="#management" class="nav-link">Villa Management</a>
         <a href="/about/" class="nav-link">About</a>
@@ -243,10 +244,7 @@ html { scroll-behavior: smooth; }
         <button aria-label="Favorites" class="w-10 h-10 hidden sm:flex items-center justify-center rounded-full hover:bg-paper transition">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </button>
-        <a href="https://wa.me/6281239081021?text=Hi%20The%20Host%20Bali!%20I%27m%20looking%20for%20a%20villa%20in%20Bali." class="btn-primary hidden sm:inline-flex items-center gap-2">
-          Contact Concierge
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-        </a>
+        <a href="#management" class="btn-primary mobile-menu-link hidden sm:inline-flex items-center gap-2"> List your property <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg> </a>
         <!-- Mobile burger -->
         <button id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full hover:bg-paper transition">
           <svg id="burgerIcon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
@@ -259,12 +257,13 @@ html { scroll-behavior: smooth; }
   <div id="mobileMenu" class="hidden lg:hidden bg-off border-t border-line px-6 py-6">
     <div class="flex flex-col gap-1 text-[16px] font-medium">
       <a href="/property-rental/" class="py-3 border-b border-line">Villas</a>
-      <a href="#locations" class="py-3 border-b border-line mobile-menu-link">Destinations</a>
+      <a href="#" data-ai-open class="py-3 border-b border-line">AI Search</a>
+        <a href="#locations" class="py-3 border-b border-line mobile-menu-link">Destinations</a>
       <a href="#longterm" class="py-3 border-b border-line mobile-menu-link">Monthly &amp; Yearly</a>
       <a href="#management" class="py-3 border-b border-line mobile-menu-link">Villa Management</a>
       <a href="/about/" class="py-3 border-b border-line">About</a>
       <a href="/contacts/" class="py-3 border-b border-line">Contacts</a>
-      <a href="https://wa.me/6281239081021?text=Hi%20The%20Host%20Bali!%20I%27m%20looking%20for%20a%20villa%20in%20Bali." class="btn-primary text-center mt-5">Contact Concierge</a>
+      <a href="#management" class="btn-primary text-center mt-5">List your property</a>
     </div>
   </div>
 </nav>
@@ -374,7 +373,7 @@ html { scroll-behavior: smooth; }
 <section class="relative bg-off">
   <!-- Full-bleed image with overlay -->
   <div class="relative h-[68vh] min-h-[560px] max-h-[700px] w-full overflow-hidden">
-    <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=2200&q=90&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover hero-img" loading="lazy" decoding="async">
+    <picture><source srcset="/public-objects/images/sanur-garden-pool-4br-34.avif" type="image/avif"><img src="/public-objects/images/sanur-garden-pool-4br-34.jpg" alt="Private pool villa in Sanur managed by The Host Bali" class="absolute inset-0 w-full h-full object-cover hero-img" width="1200" height="800" loading="eager" fetchpriority="high" decoding="async"></picture>
     <!-- Multi-layer overlay: top fade for navbar, left-bottom dark zone for text legibility, bottom fade into search card -->
     <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 18%, rgba(0,0,0,0) 60%, rgba(10,10,10,0.7) 100%);"></div>
     <div class="absolute inset-0" style="background: linear-gradient(100deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 35%, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0) 80%);"></div>
@@ -384,21 +383,50 @@ html { scroll-behavior: smooth; }
       <div class="max-w-[1400px] mx-auto w-full">
         <div class="inline-flex items-center gap-2 mb-6 text-white/85 text-[11px] font-semibold tracking-[0.22em] uppercase">
           <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-          AI-powered villa finder · Bali
+          Villas run by our own team · Bali
         </div>
         <h1 class="hero-title font-display text-white text-[44px] sm:text-[60px] lg:text-[84px] leading-[0.92] tracking-tightest font-normal mb-5">
-          Find your perfect<br>
-          Bali villa <span class="italic font-light">in seconds.</span>
+          Find your perfect<br> <span class="italic font-light">Bali villa.</span>
         </h1>
         <p class="hero-sub text-white/90 text-[15px] lg:text-[17px] max-w-xl">
-          Talk or type — our AI matches handpicked villas across Bali.
+          Rent, buy — or hand your villa over to the team that runs every home on this site.
         </p>
       </div>
     </div>
   </div>
 
-  <!-- AI-first search — conversational, prompt-led -->
-  <div class="relative -mt-32 lg:-mt-40 z-20 max-w-[900px] mx-auto px-4 lg:px-10">
+  <!-- Directions panel -->
+      <div class="relative -mt-28 lg:-mt-36 z-20 max-w-[1080px] mx-auto px-4 lg:px-10">
+        <div class="bg-white rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.18)] p-3 sm:p-4">
+          <div class="grid sm:grid-cols-3 gap-3">
+            <a href="/property-rental/" class="group rounded-[20px] bg-ink text-white p-6 flex flex-col justify-between min-h-[170px] transition hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)]">
+              <div class="flex items-center justify-between mb-6"><span class="text-[11px] font-semibold tracking-[0.18em] uppercase text-white/55">Stay</span><svg class="w-4 h-4 opacity-70 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div>
+              <div><p class="font-display text-[24px] leading-tight mb-1.5">Rent a villa</p>
+              <p class="text-white/65 text-[13px] leading-relaxed">12 private pool villas · Sanur, Canggu, Umalas &amp; Ungasan</p></div>
+            </a>
+            <a href="#management" class="mobile-menu-link group rounded-[20px] bg-paper border border-line p-6 flex flex-col justify-between min-h-[170px] transition hover:border-ink">
+              <div class="flex items-center justify-between mb-6"><span class="text-[11px] font-semibold tracking-[0.18em] uppercase text-ink/45">Owners</span><svg class="w-4 h-4 opacity-70 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div>
+              <div><p class="font-display text-[24px] leading-tight mb-1.5">Villa management</p>
+              <p class="text-ink/60 text-[13px] leading-relaxed">Hand your villa to our team — full service, transparent reporting</p></div>
+            </a>
+            <a href="https://wa.me/6281239081021?text=Hi%20The%20Host%20Bali%21%20I%27m%20interested%20in%20buying%20a%20villa%20in%20Bali." rel="noopener" class="group rounded-[20px] bg-paper border border-line p-6 flex flex-col justify-between min-h-[170px] transition hover:border-ink">
+              <div class="flex items-center justify-between mb-6"><span class="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.18em] uppercase text-ink/45">Buy <span class="bg-ink text-white text-[9px] px-1.5 py-0.5 rounded-full font-bold tracking-normal">Soon</span></span><svg class="w-4 h-4 opacity-70 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div>
+              <div><p class="font-display text-[24px] leading-tight mb-1.5">Villas for sale</p>
+              <p class="text-ink/60 text-[13px] leading-relaxed">Off-market homes from the owners we already work with</p></div>
+            </a>
+          </div>
+          <div class="flex items-center justify-between gap-3 px-2 sm:px-3 pt-3 pb-1">
+            <p class="text-[13px] text-ink/55">Prefer to just ask? Tap the mic and say what you need.</p>
+            <div class="flex items-center gap-3 shrink-0">
+              <button data-ai-open class="text-[13px] font-semibold text-ink/70 hover:text-ink underline underline-offset-4">AI search</button>
+              <button aria-label="Voice" class="w-12 h-12 rounded-full bg-ink text-white flex items-center justify-center hover:bg-ink/90 transition shrink-0"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="aiSearchPanel" class="hidden">
+      <!-- AI-first search — conversational, prompt-led -->
+  <div class="relative mt-10 z-20 max-w-[900px] mx-auto px-4 lg:px-10">
     <div class="bg-white rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.18)] overflow-hidden">
       <!-- Mode toggle (AI ↔ Classic) -->
       <div class="flex items-center justify-between px-5 pt-4 pb-3 border-b border-line">
@@ -480,7 +508,15 @@ html { scroll-behavior: smooth; }
     </div>
   </div>
 
-  <!-- Trust strip -->
+  
+      </div>
+      <script>
+      document.querySelectorAll('[data-ai-open]').forEach(function(b){b.addEventListener('click',function(e){
+        e.preventDefault();var p=document.getElementById('aiSearchPanel');p.classList.remove('hidden');
+        p.scrollIntoView({behavior:'smooth',block:'start'});
+        var t=p.querySelector('textarea, input[type=text]');if(t)setTimeout(function(){t.focus()},450);});});
+      </script>
+      <!-- Trust strip -->
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10 pt-5 pb-10">
     <p class="kicker text-center mb-3">Every villa here is run by our own team in Bali</p>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
@@ -528,7 +564,7 @@ html { scroll-behavior: smooth; }
         </div>
       </a>
       <a href="#matches" class="group card-hover relative rounded-3xl overflow-hidden aspect-[3/4] bg-ink block">
-        <img src="https://images.unsplash.com/photo-1502933691298-84fc14542831?w=700&q=80&auto=format&fit=crop" alt="Surf & Friends" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async">
+        <img src="/public-objects/images/the-wave-canggu-01.jpg" alt="Surf & Friends" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async">
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
         <div class="absolute top-5 right-5 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -539,7 +575,7 @@ html { scroll-behavior: smooth; }
         </div>
       </a>
       <a href="#matches" class="group card-hover relative rounded-3xl overflow-hidden aspect-[3/4] bg-ink block">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80&auto=format&fit=crop" alt="Family Retreat" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async">
+        <img src="/public-objects/images/lucky-lily-sanur-3br-villa-01.jpg" alt="Family Retreat" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async">
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
         <div class="absolute top-5 right-5 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
@@ -649,7 +685,7 @@ html { scroll-behavior: smooth; }
         <button class="bg-white text-ink hover:bg-paper rounded-full px-6 py-3.5 font-semibold text-sm transition">Explore long-term villas →</button>
       </div>
       <div class="absolute right-0 top-0 bottom-0 w-2/5 opacity-80 hidden lg:block">
-        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=85&auto=format&fit=crop" class="w-full h-full object-cover" alt="" loading="lazy" decoding="async">
+        <img src="/public-objects/images/premier-umalas-17-24.jpg" class="w-full h-full object-cover" alt="" loading="lazy" decoding="async">
         <div class="absolute inset-0 bg-gradient-to-l from-transparent to-ink"></div>
       </div>
     </div>
@@ -669,7 +705,7 @@ html { scroll-behavior: smooth; }
         <button class="btn-outline">Learn about management →</button>
       </div>
       <div class="absolute -right-8 top-1/2 -translate-y-1/2 w-56 hidden lg:block">
-        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&q=85&auto=format&fit=crop" class="w-full rounded-2xl shadow-2xl" alt="Dashboard" loading="lazy" decoding="async">
+        <img src="/public-objects/images/eco-teak-2br-ungasan-23.jpg" class="w-full rounded-2xl shadow-2xl" alt="Dashboard" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -744,51 +780,7 @@ html { scroll-behavior: smooth; }
   </div>
 </section>
 
-<!-- =============== TESTIMONIALS =============== -->
-<section class="bg-ink text-white py-24 relative overflow-hidden">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-    <div class="flex items-end justify-between mb-14 flex-wrap gap-4">
-      <div>
-        <p class="kicker !text-white/60 mb-3">Trusted by travelers</p>
-        <h2 class="font-display text-[44px] lg:text-[60px] leading-[1] tracking-tightest">Loved by guests<br><span class="italic">around the world.</span></h2>
-        <div class="flex items-center gap-2 mt-4 text-sm">
-          <span>★★★★★</span><span class="text-white/70">4.9/5 average rating</span>
-        </div>
-      </div>
-      <div class="flex gap-2">
-        <button class="w-11 h-11 rounded-full border border-white/30 hover:border-white flex items-center justify-center transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-        <button class="w-11 h-11 rounded-full border border-white/30 hover:border-white flex items-center justify-center transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
-      </div>
-    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-      <figure class="bg-white/[0.06] border border-white/10 rounded-3xl p-8">
-        <svg class="w-8 h-8 text-white/25 mb-5" viewBox="0 0 32 32" fill="currentColor"><path d="M10 8c-3 0-5 2.5-5 5.5S7 19 10 19h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5zm12 0c-3 0-5 2.5-5 5.5s2 5.5 5 5.5h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5z"/></svg>
-        <p class="font-display text-[22px] leading-snug mb-8">Found our dream villa in 2 minutes. Way better than Airbnb.</p>
-        <figcaption class="flex items-center gap-3 pt-5 border-t border-white/10">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80&auto=format&fit=crop" class="w-11 h-11 rounded-full object-cover" alt="" loading="lazy" decoding="async">
-          <div><p class="font-semibold text-sm">Sarah J.</p><p class="text-xs text-white/60">Australia</p></div>
-        </figcaption>
-      </figure>
-      <figure class="bg-white/[0.06] border border-white/10 rounded-3xl p-8">
-        <svg class="w-8 h-8 text-white/25 mb-5" viewBox="0 0 32 32" fill="currentColor"><path d="M10 8c-3 0-5 2.5-5 5.5S7 19 10 19h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5zm12 0c-3 0-5 2.5-5 5.5s2 5.5 5 5.5h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5z"/></svg>
-        <p class="font-display text-[22px] leading-snug mb-8">Amazing service and beautiful villas. Highly recommended.</p>
-        <figcaption class="flex items-center gap-3 pt-5 border-t border-white/10">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80&auto=format&fit=crop" class="w-11 h-11 rounded-full object-cover" alt="" loading="lazy" decoding="async">
-          <div><p class="font-semibold text-sm">Michael T.</p><p class="text-xs text-white/60">United Kingdom</p></div>
-        </figcaption>
-      </figure>
-      <figure class="bg-white/[0.06] border border-white/10 rounded-3xl p-8">
-        <svg class="w-8 h-8 text-white/25 mb-5" viewBox="0 0 32 32" fill="currentColor"><path d="M10 8c-3 0-5 2.5-5 5.5S7 19 10 19h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5zm12 0c-3 0-5 2.5-5 5.5s2 5.5 5 5.5h1c0 2-2 4-5 4v3c5 0 9-4 9-9V13c0-2.8-2.2-5-5-5z"/></svg>
-        <p class="font-display text-[22px] leading-snug mb-8">The team helped us find the perfect long-term home.</p>
-        <figcaption class="flex items-center gap-3 pt-5 border-t border-white/10">
-          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80&auto=format&fit=crop" class="w-11 h-11 rounded-full object-cover" alt="" loading="lazy" decoding="async">
-          <div><p class="font-semibold text-sm">Emma L.</p><p class="text-xs text-white/60">Indonesia</p></div>
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
 
 <!-- =============== HOW IT WORKS + VOICE =============== -->
 <section class="bg-off py-24 border-t border-line">
@@ -903,7 +895,7 @@ html { scroll-behavior: smooth; }
     <p class="kicker mb-5">Ready to find your villa?</p>
     <h2 class="font-display text-[56px] lg:text-[88px] leading-[0.95] tracking-tightest mb-8">Stop searching.<br><span class="italic">Start experiencing.</span></h2>
     <p class="text-ink/60 text-[17px] max-w-xl mx-auto mb-10">Your perfect Bali villa is one prompt away.</p>
-    <a href="#" class="btn-primary inline-flex items-center gap-2 !px-8 !py-4 !text-base">
+    <a href="/property-rental/" class="btn-primary inline-flex items-center gap-2 !px-8 !py-4 !text-base">
       Find my villa now
       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
     </a>
