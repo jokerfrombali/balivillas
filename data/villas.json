@@ -13,23 +13,71 @@
     "currency": "USD",
     "amenities": [
       "Private pool",
+      "Planted courtyard and terrace",
+      "Three bedrooms, all en-suite",
+      "Desk in every bedroom",
       "Wi-Fi 200 Mbps",
-      "Workspaces",
+      "Air conditioning throughout",
+      "Kitchen with island",
       "Smart TV",
-      "Fully equipped kitchen",
+      "Fridge, hob and microwave",
+      "Coffee maker and kettle",
       "Washing machine",
       "Safe",
-      "Air conditioning",
-      "Three balcony bedrooms",
-      "Iron and ironing board"
+      "Iron and ironing board",
+      "Private parking",
+      "About 10 minutes to Berawa Beach",
+      "15 minutes to Seminyak"
     ],
     "images": [
-      "/public-objects/images/premier-umalas-16-1.jpg",
-      "/public-objects/images/premier-umalas-16-2.jpg",
-      "/public-objects/images/premier-umalas-16-3.jpg",
-      "/public-objects/images/premier-umalas-16-4.jpg",
-      "/public-objects/images/premier-umalas-16-5.jpg",
-      "/public-objects/images/premier-umalas-16-6.jpg"
+      "/public-objects/images/premier-umalas-16-08.jpg",
+      "/public-objects/images/premier-umalas-16-30.jpg",
+      "/public-objects/images/premier-umalas-16-03.jpg",
+      "/public-objects/images/premier-umalas-16-05.jpg",
+      "/public-objects/images/premier-umalas-16-33.jpg",
+      "/public-objects/images/premier-umalas-16-01.jpg",
+      "/public-objects/images/premier-umalas-16-09.jpg",
+      "/public-objects/images/premier-umalas-16-13.jpg",
+      "/public-objects/images/premier-umalas-16-15.jpg",
+      "/public-objects/images/premier-umalas-16-22.jpg",
+      "/public-objects/images/premier-umalas-16-23.jpg",
+      "/public-objects/images/premier-umalas-16-28.jpg",
+      "/public-objects/images/premier-umalas-16-07.jpg",
+      "/public-objects/images/premier-umalas-16-25.jpg",
+      "/public-objects/images/premier-umalas-16-29.jpg",
+      "/public-objects/images/premier-umalas-16-32.jpg",
+      "/public-objects/images/premier-umalas-16-37.jpg",
+      "/public-objects/images/premier-umalas-16-40.jpg",
+      "/public-objects/images/premier-umalas-16-43.jpg",
+      "/public-objects/images/premier-umalas-16-35.jpg",
+      "/public-objects/images/premier-umalas-16-39.jpg",
+      "/public-objects/images/premier-umalas-16-04.jpg",
+      "/public-objects/images/premier-umalas-16-06.jpg",
+      "/public-objects/images/premier-umalas-16-16.jpg",
+      "/public-objects/images/premier-umalas-16-19.jpg",
+      "/public-objects/images/premier-umalas-16-24.jpg",
+      "/public-objects/images/premier-umalas-16-36.jpg",
+      "/public-objects/images/premier-umalas-16-41.jpg",
+      "/public-objects/images/premier-umalas-16-45.jpg",
+      "/public-objects/images/premier-umalas-16-46.jpg",
+      "/public-objects/images/premier-umalas-16-47.jpg",
+      "/public-objects/images/premier-umalas-16-11.jpg",
+      "/public-objects/images/premier-umalas-16-18.jpg",
+      "/public-objects/images/premier-umalas-16-10.jpg",
+      "/public-objects/images/premier-umalas-16-12.jpg",
+      "/public-objects/images/premier-umalas-16-14.jpg",
+      "/public-objects/images/premier-umalas-16-21.jpg",
+      "/public-objects/images/premier-umalas-16-26.jpg",
+      "/public-objects/images/premier-umalas-16-27.jpg",
+      "/public-objects/images/premier-umalas-16-34.jpg",
+      "/public-objects/images/premier-umalas-16-42.jpg",
+      "/public-objects/images/premier-umalas-16-44.jpg",
+      "/public-objects/images/premier-umalas-16-02.jpg",
+      "/public-objects/images/premier-umalas-16-17.jpg",
+      "/public-objects/images/premier-umalas-16-38.jpg",
+      "/public-objects/images/premier-umalas-16-20.jpg",
+      "/public-objects/images/premier-umalas-16-31.jpg",
+      "/public-objects/images/premier-umalas-16-48.jpg"
     ],
     "lat": null,
     "lng": null,
@@ -37,9 +85,127 @@
     "guestyListingId": null,
     "guestyBookingUrl": null,
     "bookingUrl": "https://booking.com/hotel/id/stylish-3br-pool-wifi-400.en.html",
-    "photosSource": "https://disk.yandex.ru/d/JL63DVhkgXqvkQ",
     "monthly": false,
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-30",
+    "description": "Premier Umalas 16 is a three-bedroom townhouse in the quiet lanes of Umalas, between Canggu and Seminyak, finished in dark stone and warm wood. Each bedroom has its own en-suite bathroom and a desk by the window; the enclosed living room and the kitchen with its island are air-conditioned, and glass doors open onto a private pool and a small planted courtyard. Wi-Fi runs at 200 Mbps, and with three separate workspaces the house is set up for people staying for months as much as for a holiday. Washing machine, safe and iron are on site. Sleeps 6.",
+    "cardImage": "/public-objects/images/premier-umalas-16-08.jpg",
+    "topGallery": [
+      "/public-objects/images/premier-umalas-16-08.jpg",
+      "/public-objects/images/premier-umalas-16-30.jpg",
+      "/public-objects/images/premier-umalas-16-03.jpg",
+      "/public-objects/images/premier-umalas-16-05.jpg",
+      "/public-objects/images/premier-umalas-16-33.jpg"
+    ],
+    "photoGroups": [
+      {
+        "name": "Living room",
+        "airbnbLabel": "Living room",
+        "images": [
+          "/public-objects/images/premier-umalas-16-01.jpg",
+          "/public-objects/images/premier-umalas-16-08.jpg",
+          "/public-objects/images/premier-umalas-16-09.jpg",
+          "/public-objects/images/premier-umalas-16-13.jpg",
+          "/public-objects/images/premier-umalas-16-15.jpg",
+          "/public-objects/images/premier-umalas-16-22.jpg",
+          "/public-objects/images/premier-umalas-16-23.jpg",
+          "/public-objects/images/premier-umalas-16-28.jpg",
+          "/public-objects/images/premier-umalas-16-07.jpg"
+        ]
+      },
+      {
+        "name": "Kitchen & dining",
+        "airbnbLabel": "Kitchen & dining",
+        "images": [
+          "/public-objects/images/premier-umalas-16-03.jpg",
+          "/public-objects/images/premier-umalas-16-25.jpg",
+          "/public-objects/images/premier-umalas-16-29.jpg",
+          "/public-objects/images/premier-umalas-16-32.jpg",
+          "/public-objects/images/premier-umalas-16-37.jpg",
+          "/public-objects/images/premier-umalas-16-40.jpg",
+          "/public-objects/images/premier-umalas-16-43.jpg"
+        ]
+      },
+      {
+        "name": "Bedrooms",
+        "airbnbLabel": "Bedrooms",
+        "images": [
+          "/public-objects/images/premier-umalas-16-30.jpg",
+          "/public-objects/images/premier-umalas-16-35.jpg",
+          "/public-objects/images/premier-umalas-16-39.jpg",
+          "/public-objects/images/premier-umalas-16-04.jpg",
+          "/public-objects/images/premier-umalas-16-06.jpg",
+          "/public-objects/images/premier-umalas-16-16.jpg",
+          "/public-objects/images/premier-umalas-16-19.jpg",
+          "/public-objects/images/premier-umalas-16-24.jpg",
+          "/public-objects/images/premier-umalas-16-36.jpg",
+          "/public-objects/images/premier-umalas-16-41.jpg",
+          "/public-objects/images/premier-umalas-16-45.jpg",
+          "/public-objects/images/premier-umalas-16-46.jpg",
+          "/public-objects/images/premier-umalas-16-47.jpg",
+          "/public-objects/images/premier-umalas-16-11.jpg",
+          "/public-objects/images/premier-umalas-16-18.jpg"
+        ]
+      },
+      {
+        "name": "Bathrooms",
+        "airbnbLabel": "Bathrooms",
+        "images": [
+          "/public-objects/images/premier-umalas-16-05.jpg",
+          "/public-objects/images/premier-umalas-16-10.jpg",
+          "/public-objects/images/premier-umalas-16-12.jpg",
+          "/public-objects/images/premier-umalas-16-14.jpg",
+          "/public-objects/images/premier-umalas-16-21.jpg",
+          "/public-objects/images/premier-umalas-16-26.jpg",
+          "/public-objects/images/premier-umalas-16-27.jpg",
+          "/public-objects/images/premier-umalas-16-34.jpg",
+          "/public-objects/images/premier-umalas-16-42.jpg",
+          "/public-objects/images/premier-umalas-16-44.jpg"
+        ]
+      },
+      {
+        "name": "Terrace & garden",
+        "airbnbLabel": "Terrace & garden",
+        "images": [
+          "/public-objects/images/premier-umalas-16-02.jpg",
+          "/public-objects/images/premier-umalas-16-17.jpg",
+          "/public-objects/images/premier-umalas-16-33.jpg",
+          "/public-objects/images/premier-umalas-16-38.jpg"
+        ]
+      },
+      {
+        "name": "Entrance",
+        "airbnbLabel": "Entrance",
+        "images": [
+          "/public-objects/images/premier-umalas-16-20.jpg",
+          "/public-objects/images/premier-umalas-16-31.jpg"
+        ]
+      },
+      {
+        "name": "Distances",
+        "airbnbLabel": "Distances",
+        "images": [
+          "/public-objects/images/premier-umalas-16-48.jpg"
+        ]
+      }
+    ],
+    "categories": [
+      "all-villas",
+      "property-rental",
+      "area:umalas",
+      "bedrooms:3",
+      "area-bedrooms:umalas:3",
+      "filter:pool",
+      "filter:workspace",
+      "filter:family"
+    ],
+    "filterTags": [
+      "pool",
+      "workspace",
+      "family",
+      "fast-wifi"
+    ],
+    "url": "/villa/premier-umalas-16-3br-pool-townhouse/",
+    "galleryUrl": "/villa/premier-umalas-16-3br-pool-townhouse/gallery/"
   },
   {
     "id": "own-premier-umalas-17",

@@ -1,557 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premier Umalas 16 photo tour | The Host Bali</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premier Umalas 16 — Photo gallery | The Host Bali</title>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/gallery/">
-    
-    
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; }
-
-        .gallery-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: #fff;
-            z-index: 100;
-            border-bottom: 1px solid #e5e5e5;
-            transition: box-shadow 0.3s;
-        }
-        .gallery-header.scrolled { box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
-
-        .header-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 16px 24px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        .back-btn {
-            width: 40px; height: 40px;
-            border: 1px solid #e5e5e5;
-            border-radius: 50%;
-            background: #fff;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s;
-        }
-        .back-btn:hover { background: #f5f5f5; transform: scale(1.05); }
-        .back-btn svg { width: 20px; height: 20px; }
-
-        .header-center { display: flex; flex-direction: column; align-items: center; }
-        .property-title { font-size: 18px; font-weight: 600; color: #1a1a1a; }
-        .photo-counter { font-size: 13px; color: #666; margin-top: 2px; }
-
-        .header-actions { display: flex; gap: 12px; align-items: center; }
-        .icon-btn {
-            width: 40px; height: 40px;
-            border: none; background: transparent;
-            cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
-            border-radius: 50%;
-            transition: all 0.2s;
-        }
-        .icon-btn:hover { background: #f5f5f5; }
-        .icon-btn svg { width: 24px; height: 24px; stroke: #1a1a1a; fill: none; }
-
-        .add-dates-btn {
-            padding: 10px 20px;
-            background: #1a1a1a; color: #fff;
-            border: none; border-radius: 24px;
-            font-size: 14px; font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .add-dates-btn:hover { background: #333; }
-
-        .category-tabs {
-            display: flex; gap: 8px;
-            padding: 12px 24px;
-            max-width: 1400px;
-            margin: 0 auto;
-            overflow-x: auto;
-            scrollbar-width: none;
-        }
-        .category-tabs::-webkit-scrollbar { display: none; }
-
-        .tab {
-            padding: 8px 16px;
-            font-size: 14px; color: #666;
-            cursor: pointer;
-            white-space: nowrap;
-            border-radius: 20px;
-            background: #f5f5f5;
-            transition: all 0.3s;
-        }
-        .tab:hover { color: #1a1a1a; background: #eee; }
-        .tab.active { color: #fff; background: #1a1a1a; font-weight: 500; }
-
-        .gallery-content {
-            padding-top: 140px;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding-left: 24px;
-            padding-right: 24px;
-            padding-bottom: 60px;
-        }
-
-        .category-section {
-            margin-bottom: 60px;
-            opacity: 0;
-            transform: translateY(15px);
-            transition: opacity 0.4s ease, transform 0.4s ease;
-        }
-        .category-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #eee;
-        }
-        .section-title { font-size: 22px; font-weight: 600; color: #1a1a1a; }
-        .section-count { font-size: 14px; color: #888; }
-
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-        }
-        .photo-item {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            cursor: pointer;
-            aspect-ratio: 4/3;
-            background: #f0f0f0;
-        }
-        .photo-item img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease, opacity 0.4s;
-            opacity: 0;
-        }
-        .photo-item img.loaded { opacity: 1; }
-        .photo-item:hover img { transform: scale(1.05); }
-
-        .photo-grid .photo-item:first-child {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .fullscreen-viewer {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.95);
-            z-index: 200;
-            align-items: center;
-            justify-content: center;
-        }
-        .fullscreen-viewer.active { display: flex; }
-        .fullscreen-viewer img {
-            max-width: 90%; max-height: 90%;
-            object-fit: contain;
-            border-radius: 8px;
-        }
-        .fullscreen-close {
-            position: absolute;
-            top: 20px; right: 20px;
-            width: 48px; height: 48px;
-            background: rgba(255,255,255,0.1);
-            border: none; border-radius: 50%;
-            cursor: pointer;
-            color: #fff; font-size: 28px;
-            transition: all 0.2s;
-        }
-        .fullscreen-close:hover { background: rgba(255,255,255,0.2); }
-        .fullscreen-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 56px; height: 56px;
-            background: rgba(255,255,255,0.9);
-            border: none; border-radius: 50%;
-            cursor: pointer; font-size: 24px;
-            transition: all 0.2s;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .fullscreen-nav:hover { background: #fff; transform: translateY(-50%) scale(1.1); }
-        .fullscreen-prev { left: 24px; }
-        .fullscreen-next { right: 24px; }
-        .fullscreen-info {
-            position: absolute;
-            bottom: 30px; left: 50%;
-            transform: translateX(-50%);
-            color: #fff; text-align: center;
-        }
-        .fullscreen-counter { font-size: 16px; font-weight: 500; }
-        .fullscreen-category { font-size: 13px; color: #aaa; margin-top: 4px; }
-
-        @media (max-width: 1024px) {
-            .photo-grid { grid-template-columns: repeat(2, 1fr); }
-            .photo-grid .photo-item:first-child { grid-column: span 2; grid-row: span 1; }
-        }
-        @media (max-width: 768px) {
-            .photo-grid { grid-template-columns: 1fr; gap: 8px; }
-            .photo-grid .photo-item:first-child { grid-column: span 1; }
-            .property-title { display: none; }
-            .gallery-content { padding: 130px 16px 40px; }
-        }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+  <style>*{box-sizing:border-box}body{margin:0;background:#fafaf7;color:#0a0a0a;font-family:Inter,system-ui,-apple-system,sans-serif}.gallery-header{position:sticky;top:0;background:rgba(250,250,247,.95);backdrop-filter:blur(16px);border-bottom:1px solid #e6e3dc;z-index:10}.header-top{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 28px}.back-btn,.icon-btn{width:44px;height:44px;border-radius:999px;border:1px solid #e6e3dc;background:white;display:flex;align-items:center;justify-content:center;cursor:pointer}.back-btn svg,.icon-btn svg{width:20px;height:20px;fill:none;stroke:currentColor}.header-center{text-align:center}.property-title{display:block;font-family:Fraunces,Georgia,serif;font-size:21px;font-weight:700}.photo-counter{display:block;font-size:12px;color:#6b6b66;margin-top:3px}.header-actions{display:flex;gap:10px;align-items:center}.book-btn{height:44px;border:0;border-radius:999px;background:#0a0a0a;color:white;padding:0 20px;font-weight:800;cursor:pointer}.category-tabs{display:flex;gap:10px;overflow-x:auto;padding:0 28px 14px}.tab{white-space:nowrap;padding:9px 14px;border-radius:999px;background:white;border:1px solid #e6e3dc;font-size:13px;font-weight:700;cursor:pointer}.tab.active{background:#0a0a0a;color:white;border-color:#0a0a0a}.gallery-content{max-width:1180px;margin:0 auto;padding:30px 24px 80px}.category-section{scroll-margin-top:140px;margin-bottom:48px}.section-header{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:16px}.section-title{font-family:Fraunces,Georgia,serif;font-size:30px;margin:0}.section-count{font-size:13px;color:#6b6b66}.photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.photo-item{position:relative;border-radius:18px;overflow:hidden;background:#ddd;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.06)}.photo-item img{width:100%;height:270px;object-fit:cover;display:block;transition:transform .25s}.photo-item:hover img{transform:scale(1.03)}.photo-caption{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.72);color:white;border-radius:999px;padding:7px 11px;font-size:12px;font-weight:800}.fullscreen-viewer{display:none;position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:100;align-items:center;justify-content:center}.fullscreen-viewer.active{display:flex}.fullscreen-viewer img{max-width:90vw;max-height:82vh;object-fit:contain}.fullscreen-close,.fullscreen-nav{position:absolute;border:0;background:rgba(255,255,255,.12);color:white;border-radius:999px;cursor:pointer}.fullscreen-close{right:24px;top:24px;width:46px;height:46px;font-size:28px}.fullscreen-nav{top:50%;transform:translateY(-50%);width:54px;height:54px;font-size:40px}.fullscreen-prev{left:24px}.fullscreen-next{right:24px}.fullscreen-info{position:absolute;left:24px;bottom:24px;color:white;font-weight:700}.fullscreen-category{font-size:12px;color:rgba(255,255,255,.7);margin-top:5px}@media(max-width:900px){.photo-grid{grid-template-columns:1fr 1fr}.photo-item img{height:220px}.header-actions .icon-btn{display:none}}@media(max-width:560px){.photo-grid{grid-template-columns:1fr}.header-top{padding:0 14px}.book-btn{display:none}.section-header{display:block}.section-count{display:block;margin-top:6px}}</style>
 
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <meta name="theme-color" content="#343537">
-<style>picture{display:contents}</style>
 <style>section[id^="section-"]:not(:first-of-type){content-visibility:auto;contain-intrinsic-size:auto 600px}</style>
 </head>
 <body>
-    <div class="gallery-header" id="galleryHeader">
-        <div class="header-top">
-            <button class="back-btn" onclick="gallerySmartBack()" aria-label="Back to villa">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-            </button>
-            <div class="header-center">
-                <span class="property-title">Umalas Premier Villa</span>
-                <span class="photo-counter" id="photoCounter">1 / 48 photos</span>
-            </div>
-            <div class="header-actions">
-                <button class="icon-btn" title="Save"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-                <button class="icon-btn" title="Share"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></button>
-                <button class="add-dates-btn">Забронировать</button>
-            </div>
-        </div>
-        <div class="category-tabs" id="categoryTabs">
-            <div class="tab active" data-category="showcase">Showcase</div>
-            <div class="tab" data-category="exterior">Exterior</div>
-            <div class="tab" data-category="living">Living Room</div>
-            <div class="tab" data-category="dining">Dining Room</div>
-            <div class="tab" data-category="kitchen">Kitchen</div>
-            <div class="tab" data-category="bedroom1">Bedroom 1</div>
-            <div class="tab" data-category="bedroom2">Bedroom 2</div>
-            <div class="tab" data-category="bedroom3">Bedroom 3</div>
-            <div class="tab" data-category="bathroom1">Bathroom 1</div>
-            <div class="tab" data-category="bathroom2">Bathroom 2</div>
-            <div class="tab" data-category="bathroom3">Bathroom 3</div>
-        </div>
-    </div>
-
-    <div class="gallery-content">
-        <div class="category-section" data-section="showcase">
-            <div class="section-header">
-                <h2 class="section-title">Showcase</h2>
-                <span class="section-count">6 photos</span>
-            </div>
-            <div class="photo-grid">
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/mainfoto.webp" alt="Showcase" width="1440" height="960"></div>
-                <div class="photo-item"><picture><source srcset="/villa/assets/images/photo_1.avif" type="image/avif"><img loading="lazy" src="/villa/assets/images/photo_1.jpeg" alt="Showcase" width="1440" height="960"></picture></div>
-                <div class="photo-item"><picture><source srcset="/villa/assets/images/photo_2.avif" type="image/avif"><img loading="lazy" src="/villa/assets/images/photo_2.jpeg" alt="Showcase" width="1440" height="960"></picture></div>
-                <div class="photo-item"><picture><source srcset="/villa/assets/images/photo_7.avif" type="image/avif"><img loading="lazy" src="/villa/assets/images/photo_7.jpeg" alt="Showcase" width="1440" height="960"></picture></div>
-                <div class="photo-item"><picture><source srcset="/villa/assets/images/photo_27.avif" type="image/avif"><img loading="lazy" src="/villa/assets/images/photo_27.jpeg" alt="Showcase" width="1440" height="960"></picture></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_10.webp" alt="Showcase" width="1440" height="960"></div>
-            </div>
-        </div>
-
-        <div class="category-section" data-section="exterior">
-            <div class="section-header">
-                <h2 class="section-title">Exterior</h2>
-                <span class="section-count">9 photos</span>
-            </div>
-            <div class="photo-grid">
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_25.webp" alt="Exterior" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_19.webp" alt="Exterior" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_11.webp" alt="Exterior" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_6.webp" alt="Exterior" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_32.webp" alt="Exterior" width="1440" height="960"></div>
-                <div class="photo-item"><picture><source srcset="/villa/assets/images/photo_16.avif" type="image/avif"><img loading="lazy" src="/villa/assets/images/photo_16.jpeg" alt="Exterior" width="1440" height="960"></picture></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_14.webp" alt="Exterior" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_36.webp" alt="Exterior" width="1440" height="960"></div>
-                <div class="photo-item"><picture><source srcset="/villa/assets/images/photo_3.avif" type="image/avif"><img loading="lazy" src="/villa/assets/images/photo_3.jpeg" alt="Exterior" width="1440" height="960"></picture></div>
-            </div>
-        </div>
-
-        <div class="category-section" data-section="living">
-            <div class="section-header">
-                <h2 class="section-title">Living Room</h2>
-                <span class="section-count">6 photos</span>
-            </div>
-            <div class="photo-grid">
-                <div class="photo-item"><picture><source srcset="/villa/assets/images/photo_2.avif" type="image/avif"><img loading="lazy" src="/villa/assets/images/photo_2.jpeg" alt="Living Room" width="1440" height="960"></picture></div>
-                <div class="photo-item"><picture><source srcset="/villa/assets/images/photo_7.avif" type="image/avif"><img loading="lazy" src="/villa/assets/images/photo_7.jpeg" alt="Living Room" width="1440" height="960"></picture></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_3.webp" alt="Living Room" width="1440" height="960"></div>
-                <div class="photo-item"><picture><source srcset="/villa/assets/images/photo_1.avif" type="image/avif"><img loading="lazy" src="/villa/assets/images/photo_1.jpeg" alt="Living Room" width="1440" height="960"></picture></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_9.webp" alt="Living Room" width="1200" height="800"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_17.webp" alt="Living Room" width="1440" height="960"></div>
-            </div>
-        </div>
-
-        <div class="category-section" data-section="dining">
-            <div class="section-header">
-                <h2 class="section-title">Dining Room</h2>
-                <span class="section-count">4 photos</span>
-            </div>
-            <div class="photo-grid">
-                <div class="photo-item"><picture><source srcset="/villa/assets/images/photo_26.avif" type="image/avif"><img loading="lazy" src="/villa/assets/images/photo_26.jpeg" alt="Dining Room" width="1440" height="960"></picture></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_35.webp" alt="Dining Room" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_39.webp" alt="Dining Room" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_22.webp" alt="Dining Room" width="1440" height="960"></div>
-            </div>
-        </div>
-
-        <div class="category-section" data-section="kitchen">
-            <div class="section-header">
-                <h2 class="section-title">Kitchen</h2>
-                <span class="section-count">2 photos</span>
-            </div>
-            <div class="photo-grid">
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_23.webp" alt="Kitchen" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_31.webp" alt="Kitchen" width="1440" height="960"></div>
-            </div>
-        </div>
-
-        <div class="category-section" data-section="bedroom1">
-            <div class="section-header">
-                <h2 class="section-title">Bedroom 1</h2>
-                <span class="section-count">5 photos</span>
-            </div>
-            <div class="photo-grid">
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_10.webp" alt="Bedroom 1" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_24.webp" alt="Bedroom 1" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_13.webp" alt="Bedroom 1" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_29.webp" alt="Bedroom 1" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_30.webp" alt="Bedroom 1" width="1440" height="960"></div>
-            </div>
-        </div>
-
-        <div class="category-section" data-section="bedroom2">
-            <div class="section-header">
-                <h2 class="section-title">Bedroom 2</h2>
-                <span class="section-count">2 photos</span>
-            </div>
-            <div class="photo-grid">
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_33.webp" alt="Bedroom 2" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_4.webp" alt="Bedroom 2" width="1440" height="960"></div>
-            </div>
-        </div>
-
-        <div class="category-section" data-section="bedroom3">
-            <div class="section-header">
-                <h2 class="section-title">Bedroom 3</h2>
-                <span class="section-count">9 photos</span>
-            </div>
-            <div class="photo-grid">
-                <div class="photo-item"><picture><source srcset="/villa/assets/images/photo_45.avif" type="image/avif"><img loading="lazy" src="/villa/assets/images/photo_45.jpeg" alt="Bedroom 3" width="1440" height="960"></picture></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_46.webp" alt="Bedroom 3" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_44.webp" alt="Bedroom 3" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_37.webp" alt="Bedroom 3" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_43.webp" alt="Bedroom 3" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_34.webp" alt="Bedroom 3" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_18.webp" alt="Bedroom 3" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_41.webp" alt="Bedroom 3" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_12.webp" alt="Bedroom 3" width="1440" height="960"></div>
-            </div>
-        </div>
-
-        <div class="category-section" data-section="bathroom1">
-            <div class="section-header">
-                <h2 class="section-title">Ensuite Bathroom 1</h2>
-                <span class="section-count">4 photos</span>
-            </div>
-            <div class="photo-grid">
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_5.webp" alt="Bathroom 1" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_21.webp" alt="Bathroom 1" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_20.webp" alt="Bathroom 1" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_38.webp" alt="Bathroom 1" width="1440" height="960"></div>
-            </div>
-        </div>
-
-        <div class="category-section" data-section="bathroom2">
-            <div class="section-header">
-                <h2 class="section-title">Ensuite Bathroom 2</h2>
-                <span class="section-count">3 photos</span>
-            </div>
-            <div class="photo-grid">
-                <div class="photo-item"><picture><source srcset="/villa/assets/images/photo_15.avif" type="image/avif"><img loading="lazy" src="/villa/assets/images/photo_15.jpeg" alt="Bathroom 2" width="1440" height="960"></picture></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_42.webp" alt="Bathroom 2" width="1440" height="960"></div>
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_28.webp" alt="Bathroom 2" width="1440" height="960"></div>
-            </div>
-        </div>
-
-        <div class="category-section" data-section="bathroom3">
-            <div class="section-header">
-                <h2 class="section-title">Ensuite Bathroom 3</h2>
-                <span class="section-count">2 photos</span>
-            </div>
-            <div class="photo-grid">
-                <div class="photo-item"><img loading="lazy" src="/villa/assets/images/photo_40.webp" alt="Bathroom 3" width="1440" height="960"></div>
-                <div class="photo-item"><picture><source srcset="/villa/assets/images/photo_8.avif" type="image/avif"><img loading="lazy" src="/villa/assets/images/photo_8.jpeg" alt="Bathroom 3" width="1440" height="960"></picture></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="fullscreen-viewer" id="fullscreenViewer">
-        <button class="fullscreen-close" onclick="closeFullscreen()">×</button>
-        <button class="fullscreen-nav fullscreen-prev" onclick="prevImage()">‹</button>
-        <img id="fullscreenImage" src="" alt="Photo" loading="lazy" decoding="async">
-        <button class="fullscreen-nav fullscreen-next" onclick="nextImage()">›</button>
-        <div class="fullscreen-info">
-            <div class="fullscreen-counter"><span id="currentIndex">1</span> / <span id="totalCount">48</span></div>
-            <div class="fullscreen-category" id="currentCategory">Showcase</div>
-        </div>
-    </div>
-
-    <script>
-        const DEFAULT_VILLA_URL='/villa/premier-umalas-16-3br-pool-townhouse/';
-
-        function getSafeReturnUrl() {
-            const params = new URLSearchParams(window.location.search);
-            const returnTo = params.get('returnTo');
-            if (returnTo && returnTo.startsWith('/') && !returnTo.startsWith('//')) return returnTo;
-            return DEFAULT_VILLA_URL;
-        }
-
-        function gallerySmartBack() {
-            const fallback = getSafeReturnUrl();
-            const referrer = document.referrer ? new URL(document.referrer, window.location.origin) : null;
-            if (referrer && referrer.origin === window.location.origin && referrer.pathname !== window.location.pathname && window.history.length > 1) {
-                window.history.back();
-                setTimeout(function() {
-                    if (window.location.pathname.endsWith('/gallery.html')) window.location.href = fallback;
-                }, 350);
-                return;
-            }
-            window.location.href = fallback;
-        }
-
-        const allImages = [];
-        const imageCategories = [];
-        document.querySelectorAll('.photo-item img').forEach(img => {
-            allImages.push(img.src);
-            imageCategories.push(img.alt);
-        });
-
-        let currentImageIndex = 0;
-        const totalPhotos = allImages.length;
-        document.getElementById('totalCount').textContent = totalPhotos;
-        document.getElementById('photoCounter').textContent = `1 / ${totalPhotos} photos`;
-
-        // Intersection Observer - auto reveal sections on scroll
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    const sectionId = entry.target.dataset.section;
-                    updateActiveTab(sectionId);
-
-                    const firstImg = entry.target.querySelector('.photo-item');
-                    if (firstImg) {
-                        const imgs = document.querySelectorAll('.photo-item');
-                        const idx = Array.from(imgs).indexOf(firstImg) + 1;
-                        document.getElementById('photoCounter').textContent = `${idx} / ${totalPhotos} photos`;
-                    }
-                }
-            });
-        }, { threshold: 0.01, rootMargin: '500px 0px 500px 0px' });
-
-        document.querySelectorAll('.category-section').forEach(section => {
-            sectionObserver.observe(section);
-        });
-
-        // Image lazy load
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    if (img.complete) img.classList.add('loaded');
-                    else img.onload = () => img.classList.add('loaded');
-                    imageObserver.unobserve(img);
-                }
-            });
-        }, { rootMargin: '600px' });
-
-        document.querySelectorAll('.photo-item img').forEach(img => imageObserver.observe(img));
-
-        function updateActiveTab(categoryId) {
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.toggle('active', tab.dataset.category === categoryId);
-            });
-            const activeTab = document.querySelector(`.tab[data-category="${categoryId}"]`);
-            if (activeTab) activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        }
-
-        // Tab click - scroll to section
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', function() {
-                const section = document.querySelector(`[data-section="${this.dataset.category}"]`);
-                if (section) {
-                    const headerHeight = document.getElementById('galleryHeader').offsetHeight;
-                    window.scrollTo({ top: section.offsetTop - headerHeight - 20, behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Header shadow
-        window.addEventListener('scroll', () => {
-            document.getElementById('galleryHeader').classList.toggle('scrolled', window.scrollY > 10);
-        });
-
-        // Photo click
-        document.querySelectorAll('.photo-item').forEach((item, index) => {
-            item.addEventListener('click', () => openFullscreen(index));
-        });
-
-        function openFullscreen(index) {
-            currentImageIndex = index;
-            updateFullscreenImage();
-            document.getElementById('fullscreenViewer').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeFullscreen() {
-            document.getElementById('fullscreenViewer').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function updateFullscreenImage() {
-            document.getElementById('fullscreenImage').src = allImages[currentImageIndex];
-            document.getElementById('currentIndex').textContent = currentImageIndex + 1;
-            document.getElementById('currentCategory').textContent = imageCategories[currentImageIndex];
-        }
-
-        function nextImage() { currentImageIndex = (currentImageIndex + 1) % allImages.length; updateFullscreenImage(); }
-        function prevImage() { currentImageIndex = (currentImageIndex - 1 + allImages.length) % allImages.length; updateFullscreenImage(); }
-
-        document.addEventListener('keydown', e => {
-            if (!document.getElementById('fullscreenViewer').classList.contains('active')) return;
-            if (e.key === 'Escape') closeFullscreen();
-            if (e.key === 'ArrowRight') nextImage();
-            if (e.key === 'ArrowLeft') prevImage();
-        });
-
-        document.getElementById('fullscreenViewer').addEventListener('click', e => {
-            if (e.target.id === 'fullscreenViewer') closeFullscreen();
-        });
-
-        // Show first 3 sections immediately (no white space on load)
-        document.querySelectorAll('.category-section').forEach((section, index) => {
-            if (index < 3) section.classList.add('visible');
-        });
-    </script>
+  <header class="gallery-header"><div class="header-top"><button class="back-btn" onclick="gallerySmartBack()" aria-label="Back to villa"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button><div class="header-center"><span class="property-title">Premier Umalas 16</span><span class="photo-counter" id="photoCounter">1 / 53 photos</span></div><div class="header-actions"><button class="icon-btn" title="Save"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></button><button class="book-btn" onclick="location.href='https://wa.me/6281239081021?text=Hi!%20I%27m%20interested%20in%20Villa%20Black%20Pool%204BR%20in%20Umalas.%20Is%20it%20available%3F'">WhatsApp</button></div></div><nav class="category-tabs"><span class='tab active' data-target='living-room'>Living room</span><span class='tab' data-target='kitchen-and-dining'>Kitchen & dining</span><span class='tab' data-target='bedrooms'>Bedrooms</span><span class='tab' data-target='bathrooms'>Bathrooms</span><span class='tab' data-target='terrace-and-garden'>Terrace & garden</span><span class='tab' data-target='entrance'>Entrance</span><span class='tab' data-target='distances'>Distances</span></nav></header>
+  <main class="gallery-content">
+<section class='category-section' id='living-room'><div class='section-header'><h2 class='section-title'>Living room</h2><span class='section-count'>9 photos</span></div><div class='photo-grid'>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-01.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-01.jpg' alt='Premier Umalas 16 — Living room photo 1'></picture><span class='photo-caption'>Living room</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-08.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-08.jpg' alt='Premier Umalas 16 — Living room photo 2'></picture><span class='photo-caption'>Living room</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-09.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-09.jpg' alt='Premier Umalas 16 — Living room photo 3'></picture><span class='photo-caption'>Living room</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-13.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-13.jpg' alt='Premier Umalas 16 — Living room photo 4'></picture><span class='photo-caption'>Living room</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-15.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-15.jpg' alt='Premier Umalas 16 — Living room photo 5'></picture><span class='photo-caption'>Living room</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-22.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-22.jpg' alt='Premier Umalas 16 — Living room photo 6'></picture><span class='photo-caption'>Living room</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-23.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-23.jpg' alt='Premier Umalas 16 — Living room photo 7'></picture><span class='photo-caption'>Living room</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-28.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-28.jpg' alt='Premier Umalas 16 — Living room photo 8'></picture><span class='photo-caption'>Living room</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-07.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-07.jpg' alt='Premier Umalas 16 — Living room photo 9'></picture><span class='photo-caption'>Living room</span></div>
+</div></section>
+<section class='category-section' id='kitchen-and-dining'><div class='section-header'><h2 class='section-title'>Kitchen & dining</h2><span class='section-count'>7 photos</span></div><div class='photo-grid'>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-03.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-03.jpg' alt='Premier Umalas 16 — Kitchen & dining photo 1'></picture><span class='photo-caption'>Kitchen & dining</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-25.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-25.jpg' alt='Premier Umalas 16 — Kitchen & dining photo 2'></picture><span class='photo-caption'>Kitchen & dining</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-29.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-29.jpg' alt='Premier Umalas 16 — Kitchen & dining photo 3'></picture><span class='photo-caption'>Kitchen & dining</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-32.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-32.jpg' alt='Premier Umalas 16 — Kitchen & dining photo 4'></picture><span class='photo-caption'>Kitchen & dining</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-37.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-37.jpg' alt='Premier Umalas 16 — Kitchen & dining photo 5'></picture><span class='photo-caption'>Kitchen & dining</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-40.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-40.jpg' alt='Premier Umalas 16 — Kitchen & dining photo 6'></picture><span class='photo-caption'>Kitchen & dining</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-43.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-43.jpg' alt='Premier Umalas 16 — Kitchen & dining photo 7'></picture><span class='photo-caption'>Kitchen & dining</span></div>
+</div></section>
+<section class='category-section' id='bedrooms'><div class='section-header'><h2 class='section-title'>Bedrooms</h2><span class='section-count'>15 photos</span></div><div class='photo-grid'>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-30.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-30.jpg' alt='Premier Umalas 16 — Bedrooms photo 1'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-35.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-35.jpg' alt='Premier Umalas 16 — Bedrooms photo 2'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-39.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-39.jpg' alt='Premier Umalas 16 — Bedrooms photo 3'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-04.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-04.jpg' alt='Premier Umalas 16 — Bedrooms photo 4'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-06.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-06.jpg' alt='Premier Umalas 16 — Bedrooms photo 5'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-16.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-16.jpg' alt='Premier Umalas 16 — Bedrooms photo 6'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-19.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-19.jpg' alt='Premier Umalas 16 — Bedrooms photo 7'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-24.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-24.jpg' alt='Premier Umalas 16 — Bedrooms photo 8'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-36.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-36.jpg' alt='Premier Umalas 16 — Bedrooms photo 9'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-41.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-41.jpg' alt='Premier Umalas 16 — Bedrooms photo 10'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-45.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-45.jpg' alt='Premier Umalas 16 — Bedrooms photo 11'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-46.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-46.jpg' alt='Premier Umalas 16 — Bedrooms photo 12'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-47.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-47.jpg' alt='Premier Umalas 16 — Bedrooms photo 13'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-11.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-11.jpg' alt='Premier Umalas 16 — Bedrooms photo 14'></picture><span class='photo-caption'>Bedrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-18.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-18.jpg' alt='Premier Umalas 16 — Bedrooms photo 15'></picture><span class='photo-caption'>Bedrooms</span></div>
+</div></section>
+<section class='category-section' id='bathrooms'><div class='section-header'><h2 class='section-title'>Bathrooms</h2><span class='section-count'>10 photos</span></div><div class='photo-grid'>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-05.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-05.jpg' alt='Premier Umalas 16 — Bathrooms photo 1'></picture><span class='photo-caption'>Bathrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-10.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-10.jpg' alt='Premier Umalas 16 — Bathrooms photo 2'></picture><span class='photo-caption'>Bathrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-12.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-12.jpg' alt='Premier Umalas 16 — Bathrooms photo 3'></picture><span class='photo-caption'>Bathrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-14.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-14.jpg' alt='Premier Umalas 16 — Bathrooms photo 4'></picture><span class='photo-caption'>Bathrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-21.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-21.jpg' alt='Premier Umalas 16 — Bathrooms photo 5'></picture><span class='photo-caption'>Bathrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-26.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-26.jpg' alt='Premier Umalas 16 — Bathrooms photo 6'></picture><span class='photo-caption'>Bathrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-27.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-27.jpg' alt='Premier Umalas 16 — Bathrooms photo 7'></picture><span class='photo-caption'>Bathrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-34.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-34.jpg' alt='Premier Umalas 16 — Bathrooms photo 8'></picture><span class='photo-caption'>Bathrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-42.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-42.jpg' alt='Premier Umalas 16 — Bathrooms photo 9'></picture><span class='photo-caption'>Bathrooms</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-44.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-44.jpg' alt='Premier Umalas 16 — Bathrooms photo 10'></picture><span class='photo-caption'>Bathrooms</span></div>
+</div></section>
+<section class='category-section' id='terrace-and-garden'><div class='section-header'><h2 class='section-title'>Terrace & garden</h2><span class='section-count'>4 photos</span></div><div class='photo-grid'>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-02.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-02.jpg' alt='Premier Umalas 16 — Terrace & garden photo 1'></picture><span class='photo-caption'>Terrace & garden</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-17.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-17.jpg' alt='Premier Umalas 16 — Terrace & garden photo 2'></picture><span class='photo-caption'>Terrace & garden</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-33.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-33.jpg' alt='Premier Umalas 16 — Terrace & garden photo 3'></picture><span class='photo-caption'>Terrace & garden</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-38.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-38.jpg' alt='Premier Umalas 16 — Terrace & garden photo 4'></picture><span class='photo-caption'>Terrace & garden</span></div>
+</div></section>
+<section class='category-section' id='entrance'><div class='section-header'><h2 class='section-title'>Entrance</h2><span class='section-count'>2 photos</span></div><div class='photo-grid'>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-20.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-20.jpg' alt='Premier Umalas 16 — Entrance photo 1'></picture><span class='photo-caption'>Entrance</span></div>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-31.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-31.jpg' alt='Premier Umalas 16 — Entrance photo 2'></picture><span class='photo-caption'>Entrance</span></div>
+</div></section>
+<section class='category-section' id='distances'><div class='section-header'><h2 class='section-title'>Distances</h2><span class='section-count'>1 photos</span></div><div class='photo-grid'>
+<div class='photo-item'><picture><source srcset='/public-objects/images/premier-umalas-16-48.avif' type='image/avif'><img loading='lazy' decoding='async' width='1200' height='900' src='/public-objects/images/premier-umalas-16-48.jpg' alt='Premier Umalas 16 — Distances photo 1'></picture><span class='photo-caption'>Distances</span></div>
+</div></section></main>
+  <div class="fullscreen-viewer" id="fullscreenViewer"><button class="fullscreen-close" onclick="closeFullscreen()">×</button><button class="fullscreen-nav fullscreen-prev" onclick="prevImage()">‹</button><img id="fullscreenImage" src="" alt="Photo" loading="lazy" decoding="async"><button class="fullscreen-nav fullscreen-next" onclick="nextImage()">›</button><div class="fullscreen-info"><div><span id="currentIndex">1</span> / <span id="totalCount">65</span></div><div class="fullscreen-category" id="currentCategory">Premier Umalas 16</div></div></div>
+  <script>const DEFAULT_VILLA_URL='/villa/premier-umalas-16-3br-pool-townhouse/';function getSafeReturnUrl(){const p=new URLSearchParams(window.location.search);const r=p.get('returnTo');if(r&&r.startsWith('/')&&!r.startsWith('//'))return r;return DEFAULT_VILLA_URL}function gallerySmartBack(){const f=getSafeReturnUrl();try{const r=document.referrer?new URL(document.referrer,window.location.origin):null;if(r&&r.origin===window.location.origin&&r.pathname!==window.location.pathname&&window.history.length>1){window.history.back();setTimeout(function(){if(window.location.pathname.includes('/gallery/'))window.location.href=f},350);return}}catch(e){}window.location.href=f}const images=Array.from(document.querySelectorAll('.photo-item img'));const viewer=document.getElementById('fullscreenViewer');const viewerImage=document.getElementById('fullscreenImage');let currentImageIndex=0;document.getElementById('totalCount').textContent=images.length;document.getElementById('photoCounter').textContent='1 / '+images.length+' photos';images.forEach((img,index)=>{img.closest('.photo-item').addEventListener('click',()=>openFullscreen(index))});document.querySelectorAll('.tab').forEach((tab,index)=>{if(index===0)tab.classList.add('active');tab.addEventListener('click',()=>{document.getElementById(tab.dataset.target).scrollIntoView({behavior:'smooth',block:'start'})})});const sectionObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(!entry.isIntersecting)return;document.querySelectorAll('.tab').forEach(tab=>tab.classList.toggle('active',tab.dataset.target===entry.target.id));const first=entry.target.querySelector('.photo-item img');const index=images.indexOf(first);if(index>=0)document.getElementById('photoCounter').textContent=(index+1)+' / '+images.length+' photos'})},{threshold:.25});document.querySelectorAll('.category-section').forEach(s=>sectionObserver.observe(s));function openFullscreen(index){currentImageIndex=index;updateFullscreen();viewer.classList.add('active');document.body.style.overflow='hidden'}function closeFullscreen(){viewer.classList.remove('active');document.body.style.overflow=''}function updateFullscreen(){const img=images[currentImageIndex];viewerImage.src=img.src;document.getElementById('currentIndex').textContent=currentImageIndex+1;document.getElementById('currentCategory').textContent=img.alt}function nextImage(){currentImageIndex=(currentImageIndex+1)%images.length;updateFullscreen()}function prevImage(){currentImageIndex=(currentImageIndex-1+images.length)%images.length;updateFullscreen()}document.addEventListener('keydown',e=>{if(!viewer.classList.contains('active'))return;if(e.key==='Escape')closeFullscreen();if(e.key==='ArrowRight')nextImage();if(e.key==='ArrowLeft')prevImage()});</script>
 </body>
 </html>
+
+
 
