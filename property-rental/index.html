@@ -541,6 +541,54 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
   .cat-card:hover::after{opacity:0!important}
 }
 </style>
+<style id="thb-hsearch-css">
+#thbHeroSearch{overflow:visible!important;position:relative;z-index:60;max-width:780px;margin:0 auto;border-radius:20px}
+.promo-banner{overflow:visible!important;position:relative;z-index:5}
+.hs-row{display:flex;align-items:stretch;padding:7px;gap:2px}
+.hs-seg{flex:1 1 0;position:relative;padding:11px 18px 12px;border-radius:14px;cursor:pointer;text-align:left;min-width:0;border:none;background:transparent;font-family:'Inter',sans-serif;transition:background .14s}
+.hs-seg:hover,.hs-seg.act{background:#f4f2ed}
+.hs-seg .hs-lab{display:block;font-weight:700;font-size:10px;line-height:1;letter-spacing:.12em;text-transform:uppercase;color:#0a0a0a;margin-bottom:5px}
+.hs-seg .hs-val{font-weight:500;font-size:14px;line-height:1.2;color:#8a877f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.hs-seg .hs-val.set{color:#0a0a0a;font-weight:600}
+.hs-div{width:1px;background:#e6e3dc;margin:10px 0;flex:0 0 1px}
+.hs-btn{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;background:#0a0a0a;color:#fff;border:none;border-radius:14px;padding:0 24px;font:600 14.5px 'Inter',sans-serif;cursor:pointer;transition:background .15s;margin-left:4px}
+.hs-btn:hover{background:#2b2b28}
+.hs-pop{position:absolute;top:calc(100% + 10px);background:#fff;border:1px solid #e6e3dc;border-radius:18px;box-shadow:0 24px 64px rgba(0,0,0,.2);padding:12px;display:none;z-index:70;font-family:'Inter',sans-serif}
+.hs-pop.open{display:block}
+#hsPopWhere{left:0;width:280px;padding:8px}
+.hs-opt{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:12px 14px;border:none;background:transparent;border-radius:12px;cursor:pointer;font:500 14.5px 'Inter',sans-serif;color:#0a0a0a;text-align:left;transition:background .12s}
+.hs-opt:hover{background:#f4f2ed}
+.hs-opt b{font-weight:400;font-size:12px;color:#8a877f;background:#f2efe8;border-radius:999px;padding:2px 9px}
+.hs-opt.sel{background:#0a0a0a;color:#fff}
+.hs-opt.sel b{background:rgba(255,255,255,.16);color:#fff}
+#hsPopCal{left:50%;transform:translateX(-50%);padding:18px 20px 14px}
+.cal-wrap{display:flex;gap:26px}
+.cal-m{width:252px}
+.cal-hd{display:flex;align-items:center;justify-content:center;position:relative;margin-bottom:10px}
+.cal-hd p{font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin:0}
+.cal-nav{position:absolute;top:-2px;width:30px;height:30px;border-radius:999px;border:1px solid #e6e3dc;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;color:#0a0a0a}
+.cal-nav:hover{border-color:#0a0a0a}
+#calPrev{left:0}#calNext{right:0}
+.cal-g{display:grid;grid-template-columns:repeat(7,36px)}
+.cal-dow{font-size:10.5px;font-weight:600;color:#8a877f;text-transform:uppercase;letter-spacing:.05em;text-align:center;padding:4px 0 6px}
+.cal-d{width:36px;height:36px;border:none;background:transparent;border-radius:999px;font:500 13px 'Inter',sans-serif;color:#0a0a0a;cursor:pointer;position:relative}
+.cal-d:hover:not(:disabled){box-shadow:inset 0 0 0 1.5px #0a0a0a}
+.cal-d:disabled{color:#c9c5bc;cursor:default}
+.cal-d.rng{background:#f2efe8;border-radius:0}
+.cal-d.sel{background:#0a0a0a;color:#fff;border-radius:999px}
+.cal-ft{display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding-top:10px;border-top:1px solid #eeece6}
+.cal-ft p{font-size:12.5px;color:#8a877f;margin:0}
+.cal-ft button{background:none;border:none;font:600 13px 'Inter',sans-serif;color:#0a0a0a;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+#hsPopGuests{right:0;width:250px;padding:16px}
+.hs-step{display:flex;align-items:center;justify-content:space-between}
+.hs-step p{margin:0;font-size:14px;font-weight:600}
+.hs-step small{display:block;font-size:12px;color:#8a877f;font-weight:400}
+.hs-step .ctr{display:flex;align-items:center;gap:13px}
+.hs-step .ctr button{width:34px;height:34px;border-radius:999px;border:1.5px solid #dcd8cf;background:#fff;font-size:17px;line-height:1;cursor:pointer;color:#0a0a0a}
+.hs-step .ctr button:disabled{opacity:.3}
+.hs-step .ctr span{min-width:18px;text-align:center;font-weight:600;font-size:15px}
+@media(max-width:1023px){#thbHeroSearch{display:none!important}}
+</style>
 </head>
 <body>
 
@@ -702,38 +750,31 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <div class="promo-tag">🌴 Book direct</div>
         <h1 class="promo-title">Villas in <em>Bali</em></h1>
         <p class="promo-subtitle">12 private pool villas run by our own team — Sanur, Canggu, Umalas, Ungasan</p>
-        <div class="promo-search">
-          <div class="promo-search-top">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <input type="text" placeholder="Where in Bali? — Sanur, Canggu, Umalas, Ungasan…">
-          </div>
-          <div class="promo-search-bottom">
-            <div class="promo-search-field">
-              <div>
-                <div style="font-size:10px;font-weight:700;color:#0a0a0a;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px">Check in</div>
-                <input type="text" placeholder="Add dates">
-              </div>
-            </div>
-            <div class="promo-search-divider"></div>
-            <div class="promo-search-field">
-              <div>
-                <div style="font-size:10px;font-weight:700;color:#0a0a0a;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px">Check out</div>
-                <input type="text" placeholder="Add dates">
-              </div>
-            </div>
-            <div class="promo-search-divider"></div>
-            <div class="promo-search-field">
-              <div>
-                <div style="font-size:10px;font-weight:700;color:#0a0a0a;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px">Guests</div>
-                <input type="text" placeholder="Add guests">
-              </div>
-            </div>
-            <button class="promo-search-btn">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-              Search
-            </button>
-          </div>
-        </div>
+        <div class="promo-search" id="thbHeroSearch">
+  <div class="hs-row">
+    <button type="button" class="hs-seg" id="hsWhere"><span class="hs-lab">Where</span><span class="hs-val" id="hsWhereVal">All Bali</span></button>
+    <div class="hs-div"></div>
+    <button type="button" class="hs-seg" id="hsIn"><span class="hs-lab">Check in</span><span class="hs-val" id="hsInVal">Add date</span></button>
+    <div class="hs-div"></div>
+    <button type="button" class="hs-seg" id="hsOut"><span class="hs-lab">Check out</span><span class="hs-val" id="hsOutVal">Add date</span></button>
+    <div class="hs-div"></div>
+    <button type="button" class="hs-seg" id="hsGuests"><span class="hs-lab">Guests</span><span class="hs-val" id="hsGuestsVal">Any</span></button>
+    <button type="button" class="hs-btn" id="hsGo">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      Search
+    </button>
+  </div>
+  <div class="hs-pop" id="hsPopWhere" role="listbox"></div>
+  <div class="hs-pop" id="hsPopCal">
+    <div class="cal-wrap" id="calWrap"></div>
+    <div class="cal-ft"><p id="calHint">Select check-in date</p><button type="button" id="calClear">Clear dates</button></div>
+  </div>
+  <div class="hs-pop" id="hsPopGuests">
+    <div class="hs-step"><p>Guests<small>How many people</small></p>
+      <div class="ctr"><button type="button" id="hsGm">&minus;</button><span id="hsGn">Any</span><button type="button" id="hsGp">+</button></div>
+    </div>
+  </div>
+</div>
         <p style="color:rgba(255,255,255,0.4);font-size:11.5px;margin-top:10px">*5% any stay &nbsp;•&nbsp; 10% weekly &nbsp;•&nbsp; 15% monthly</p>
       </div>
 
@@ -2000,6 +2041,128 @@ try{if(new URLSearchParams(location.search).get('ai')&&document.getElementById('
     var bar=document.getElementById('thbAiBar');if(bar)bar.remove();
   };
   window.thbAskAI=function(){thbAioOpen();};
+})();
+</script>
+<script>
+(function(){
+  var root=document.getElementById('thbHeroSearch'); if(!root)return;
+  var AREAS=[['','All Bali',12],['sanur','Sanur',6],['canggu','Canggu',1],['umalas','Umalas',2],['ungasan','Ungasan',3]];
+  var MN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var q={area:'',ci:'',co:'',g:0};
+  var today=new Date(); today.setHours(0,0,0,0);
+  var view=new Date(today.getFullYear(),today.getMonth(),1);
+  function iso(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}
+  function nice(s){if(!s)return'';var p=s.split('-');return p[2].replace(/^0/,'')+' '+MN[parseInt(p[1],10)-1].slice(0,3);}
+  var pops={hsPopWhere:'hsWhere',hsPopCal:null,hsPopGuests:'hsGuests'};
+  function closeAll(){['hsPopWhere','hsPopCal','hsPopGuests'].forEach(function(id){document.getElementById(id).classList.remove('open');});
+    root.querySelectorAll('.hs-seg').forEach(function(s){s.classList.remove('act');});}
+  function open(id,segs){var el=document.getElementById(id);var was=el.classList.contains('open');closeAll();
+    if(!was){el.classList.add('open');segs.forEach(function(x){document.getElementById(x).classList.add('act');});}}
+  // WHERE
+  function drawWhere(){
+    var w=document.getElementById('hsPopWhere');w.innerHTML='';
+    AREAS.forEach(function(a){
+      var b=document.createElement('button');b.type='button';b.className='hs-opt'+(q.area===a[0]?' sel':'');
+      b.innerHTML=a[1]+' <b>'+a[2]+'</b>';
+      b.addEventListener('click',function(e){e.stopPropagation();q.area=a[0];
+        var v=document.getElementById('hsWhereVal');v.textContent=a[1];v.classList.toggle('set',true);
+        closeAll();});
+      w.appendChild(b);
+    });
+  }
+  document.getElementById('hsWhere').addEventListener('click',function(e){e.stopPropagation();drawWhere();open('hsPopWhere',['hsWhere']);});
+  // CALENDAR
+  function drawCal(){
+    var wrap=document.getElementById('calWrap');wrap.innerHTML='';
+    for(var k=0;k<2;k++){
+      var m=new Date(view.getFullYear(),view.getMonth()+k,1);
+      var div=document.createElement('div');div.className='cal-m';
+      var hd=document.createElement('div');hd.className='cal-hd';
+      hd.innerHTML='<p>'+MN[m.getMonth()]+' '+m.getFullYear()+'</p>';
+      if(k===0){var pv=document.createElement('button');pv.type='button';pv.className='cal-nav';pv.id='calPrev';pv.textContent='\u2039';
+        pv.addEventListener('click',function(e){e.stopPropagation();view=new Date(view.getFullYear(),view.getMonth()-1,1);drawCal();});hd.appendChild(pv);}
+      if(k===1){var nx=document.createElement('button');nx.type='button';nx.className='cal-nav';nx.id='calNext';nx.textContent='\u203a';
+        nx.addEventListener('click',function(e){e.stopPropagation();view=new Date(view.getFullYear(),view.getMonth()+1,1);drawCal();});hd.appendChild(nx);}
+      div.appendChild(hd);
+      var g=document.createElement('div');g.className='cal-g';
+      ['Mo','Tu','We','Th','Fr','Sa','Su'].forEach(function(d){var c=document.createElement('div');c.className='cal-dow';c.textContent=d;g.appendChild(c);});
+      var first=(m.getDay()+6)%7;
+      for(var i=0;i<first;i++){g.appendChild(document.createElement('div'));}
+      var days=new Date(m.getFullYear(),m.getMonth()+1,0).getDate();
+      for(var d=1;d<=days;d++){
+        (function(d){
+          var dt=new Date(m.getFullYear(),m.getMonth(),d);var s=iso(dt);
+          var b=document.createElement('button');b.type='button';b.className='cal-d';b.textContent=d;
+          if(dt<today)b.disabled=true;
+          if(q.ci&&q.co&&s>q.ci&&s<q.co)b.classList.add('rng');
+          if(s===q.ci||s===q.co)b.classList.add('sel');
+          b.addEventListener('click',function(e){e.stopPropagation();
+            if(!q.ci||(q.ci&&q.co)){q.ci=s;q.co='';}
+            else if(s<=q.ci){q.ci=s;q.co='';}
+            else{q.co=s;}
+            syncDates();drawCal();
+            if(q.ci&&q.co){setTimeout(closeAll,350);}
+          });
+          g.appendChild(b);
+        })(d);
+      }
+      div.appendChild(g);wrap.appendChild(div);
+    }
+    document.getElementById('calHint').textContent=!q.ci?'Select check-in date':(q.co?nice(q.ci)+' \u2192 '+nice(q.co):'Select check-out date');
+  }
+  function syncDates(){
+    var vi=document.getElementById('hsInVal'),vo=document.getElementById('hsOutVal');
+    vi.textContent=q.ci?nice(q.ci):'Add date';vi.classList.toggle('set',!!q.ci);
+    vo.textContent=q.co?nice(q.co):'Add date';vo.classList.toggle('set',!!q.co);
+  }
+  function openCal(e){e.stopPropagation();drawCal();open('hsPopCal',['hsIn','hsOut']);}
+  document.getElementById('hsIn').addEventListener('click',openCal);
+  document.getElementById('hsOut').addEventListener('click',openCal);
+  document.getElementById('calClear').addEventListener('click',function(e){e.stopPropagation();q.ci='';q.co='';syncDates();drawCal();});
+  document.getElementById('hsPopCal').addEventListener('click',function(e){e.stopPropagation();});
+  // GUESTS
+  function syncG(){var v=document.getElementById('hsGuestsVal');
+    v.textContent=q.g?q.g+' guest'+(q.g>1?'s':''):'Any';v.classList.toggle('set',!!q.g);
+    document.getElementById('hsGn').textContent=q.g||'Any';
+    document.getElementById('hsGm').disabled=!q.g;}
+  document.getElementById('hsGuests').addEventListener('click',function(e){e.stopPropagation();open('hsPopGuests',['hsGuests']);});
+  document.getElementById('hsPopGuests').addEventListener('click',function(e){e.stopPropagation();});
+  document.getElementById('hsGm').addEventListener('click',function(){if(q.g>0)q.g--;syncG();});
+  document.getElementById('hsGp').addEventListener('click',function(){if(q.g<16)q.g++;syncG();});
+  document.addEventListener('click',closeAll);
+  // SEARCH
+  document.getElementById('hsGo').addEventListener('click',function(e){
+    e.stopPropagation();closeAll();
+    var vis=0;
+    document.querySelectorAll('.prop-card').forEach(function(c){
+      var ok=(!q.area||c.dataset.location===q.area)&&(!q.g||Number(c.dataset.guests||0)>=q.g);
+      c.style.display=ok?'':'none';if(ok)vis++;
+    });
+    var chips=document.querySelectorAll('.thb-qchip');
+    chips.forEach(function(k){k.classList.toggle('on',k.dataset.area===q.area);});
+    var t=document.getElementById('resultsTitle');
+    if(t){var w=vis===1?' villa':' villas',lbl=[];
+      if(q.area)lbl.push(q.area.charAt(0).toUpperCase()+q.area.slice(1));
+      if(q.g)lbl.push(q.g+'+ guests');
+      if(q.ci&&q.co)lbl.push(nice(q.ci)+' \u2192 '+nice(q.co));
+      t.textContent=lbl.length?vis+w+' \u2014 '+lbl.join(' \u00b7 '):vis+w+' available';}
+    window.thbHeroQ=q;
+    var grid=document.getElementById('cardGrid');
+    if(grid&&!grid.dataset.hsBound){grid.dataset.hsBound='1';
+      grid.addEventListener('click',function(ev){
+        var hq=window.thbHeroQ;
+if(!hq||(!hq.ci&&!hq.g))return;
+        if(ev.target.closest('.heart-btn'))return;
+        var card=ev.target.closest('.prop-card');if(!card)return;
+        var oc=card.getAttribute('onclick')||'';var mm=oc.match(/window\.location='([^']+)'/);if(!mm)return;
+        ev.stopPropagation();ev.preventDefault();
+        var ps=new URLSearchParams();
+        if(hq.ci)ps.set('checkin',hq.ci);if(hq.co)ps.set('checkout',hq.co);if(hq.g)ps.set('guests',hq.g);
+        window.location=mm[1]+'?'+ps.toString();
+      },true);}
+    var rb=document.querySelector('.results-bar')||grid;
+    if(rb)rb.scrollIntoView({behavior:'smooth',block:'start'});
+  });
 })();
 </script>
 </body>
