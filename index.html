@@ -180,12 +180,41 @@ html { scroll-behavior: smooth; }
   nav .w-12{width:2.5rem;height:2.5rem}
 }
 </style>
+<style id="thb-arow-css">
+.thb-arow{display:flex;gap:14px;overflow-x:auto;padding:2px 24px 10px;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.thb-arow::-webkit-scrollbar{display:none}
+.thb-acard{flex:0 0 76vw;max-width:300px;scroll-snap-align:start;background:#fff;border:1px solid #e6e3dc;border-radius:22px;overflow:hidden;text-decoration:none;color:#0a0a0a;transition:transform .18s,box-shadow .18s}
+.thb-acard:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.09)}
+.thb-acard img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f2efe8}
+.thb-acard .in{padding:13px 15px 15px;font-family:'Inter',sans-serif}
+.thb-acard .t{font-family:'Fraunces',Georgia,serif;font-size:16.5px;font-weight:600;line-height:1.25;margin:0 0 5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.thb-acard .a{display:flex;align-items:center;gap:5px;font-size:12.5px;color:#6b6b66;margin:0 0 7px}
+.thb-acard .m{font-size:12.5px;color:#6b6b66;margin:0 0 9px}
+.thb-acard .p{font-family:'Fraunces',Georgia,serif;font-size:15px;font-weight:700;margin:0}
+.thb-acard .p span{font-family:'Inter',sans-serif;font-size:11.5px;font-weight:400;color:#6b6b66}
+.thb-arh{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 14px;text-decoration:none;color:#0a0a0a}
+.thb-arh h3{font-family:'Fraunces',Georgia,serif;font-size:clamp(21px,2.6vw,28px);font-weight:600;letter-spacing:-0.01em;margin:0;display:flex;align-items:center;gap:9px}
+.thb-arh svg{flex:0 0 auto;transition:transform .15s}
+.thb-arh:hover svg{transform:translateX(3px)}
+.thb-arh .cnt{font-family:'Inter',sans-serif;font-size:12.5px;color:#6b6b66;font-weight:500}
+@media(min-width:1024px){.thb-arow{padding:2px 40px 10px}.thb-acard{flex-basis:300px}}
+</style>
+<style id="thb-wapill-css">
+#thbWaPill{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #e6e3dc;border-radius:999px;box-shadow:0 14px 44px rgba(0,0,0,.20);padding:7px 7px 7px 9px;width:min(92vw,400px);font-family:'Inter',sans-serif}
+#thbWaPill .ava{position:relative;width:42px;height:42px;flex:0 0 42px;border-radius:50%;background:#f2efe8 url('/brand/thehost-badge.svg') center/68% no-repeat;border:1px solid #e6e3dc}
+#thbWaPill .ava::after{content:'';position:absolute;right:-1px;bottom:-1px;width:12px;height:12px;border-radius:50%;background:#22c55e;border:2.5px solid #fff}
+#thbWaPill p{margin:0;font-size:12.5px;line-height:1.3;font-weight:600;color:#0a0a0a;flex:1;min-width:0}
+#thbWaPill>a{display:inline-flex;align-items:center;gap:7px;background:#22c55e;color:#fff;font-weight:700;font-size:14px;padding:11px 16px;border-radius:999px;text-decoration:none;flex:0 0 auto;transition:background .15s}
+#thbWaPill>a:hover{background:#16a34a}
+#thbWaPill>a svg{width:17px;height:17px}
+@media(max-width:380px){#thbWaPill p{font-size:11.5px}}
+</style>
 </head>
 <body>
 
 <div id="villasBackdrop"></div>
 <!-- =============== NAVBAR =============== -->
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-off/80 backdrop-blur-md border-b border-line">
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-off/80 backdrop-blur-md border-b border-line" style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,250,247,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid #e6e3dc">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
     <div class="flex items-center justify-between h-[72px]">
       <a href="/" data-hostpill class="flex items-center text-ink border-[1.5px] border-ink/30 rounded-full px-3.5 py-1" aria-label="The Host Bali">
@@ -533,72 +562,150 @@ html { scroll-behavior: smooth; }
 </section>
 
 <!-- =============== LOCATIONS (сразу после hero) =============== -->
-<section id="locations" class="bg-off py-24 border-t border-line">
+<section id="locations" class="bg-off py-16 lg:py-20 border-t border-line">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-    <div class="flex items-end justify-between mb-12 flex-wrap gap-4">
+    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
       <div>
         <p class="kicker mb-3">Explore Bali by location</p>
-        <h2 class="font-display text-[44px] lg:text-[60px] leading-[1] tracking-tightest">Where would you<br><span class="italic">like to stay?</span></h2>
+        <h2 class="font-display text-[40px] lg:text-[56px] leading-[1] tracking-tightest">Where would you<br><span class="italic">like to stay?</span></h2>
       </div>
-      <a href="/property-rental/" class="btn-outline inline-flex items-center gap-2">
-        All villas
+      <a href="/property-rental/" class="btn-outline inline-flex items-center gap-2">All villas
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
       </a>
     </div>
-
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
-      <!-- All Bali -->
-      <a href="/property-rental/" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
-        <picture><source srcset="/images/all-bali.avif" type="image/avif"><img src="/images/all-bali.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="All Bali" loading="lazy" decoding="async" width="736" height="920"></picture>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-        <div class="absolute top-4 left-4">
-          <span class="text-[10px] font-semibold tracking-widest text-white/70 uppercase">All areas</span>
-        </div>
-        <div class="absolute bottom-5 left-5 right-5 text-white">
-          <p class="font-display text-[22px] leading-none">All Bali</p>
-          <p class="text-[12px] text-white/80 mt-1">12 villas</p>
-          <p class="text-[11px] text-white/50 mt-1.5 flex items-center gap-1">Browse all areas <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
-        </div>
-      </a>
-          <!-- Sanur: calm east coast -->
-      <a href="/villas/sanur/" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
-        <picture><source srcset="/images/sanur.avif" type="image/avif"><img src="/images/sanur.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Sanur" loading="lazy" decoding="async" width="1080" height="1347"></picture>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-        <div class="absolute bottom-5 left-5 right-5 text-white">
-          <p class="font-display text-[22px] leading-none">Sanur</p>
-          <p class="text-[12px] text-white/80 mt-1">6 villas</p>
-        </div>
-      </a>
-          <!-- Canggu: surf & beach clubs -->
-      <a href="/villas/canggu/" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
-        <picture><source srcset="/images/sanur.avif" type="image/avif"><img src="/images/canggu.jpg?v=2" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Canggu" loading="lazy" decoding="async" width="1080" height="1347"></picture>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-        <div class="absolute bottom-5 left-5 right-5 text-white">
-          <p class="font-display text-[22px] leading-none">Canggu</p>
-          <p class="text-[12px] text-white/80 mt-1">1 villa</p>
-        </div>
-      </a>
-          <!-- Umalas: quiet lanes between Canggu and Seminyak -->
-      <a href="/villas/umalas/" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
-        <picture><source srcset="/images/sanur.avif" type="image/avif"><img src="/public-objects/images/premier-umalas-16-33.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Umalas" loading="lazy" decoding="async" width="1080" height="1347"></picture>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-        <div class="absolute bottom-5 left-5 right-5 text-white">
-          <p class="font-display text-[22px] leading-none">Umalas</p>
-          <p class="text-[12px] text-white/80 mt-1">2 villas</p>
-        </div>
-      </a>
-          <!-- Ungasan: Bukit plateau -->
-      <a href="/villas/ungasan/" class="card-hover group relative aspect-[3/4] rounded-3xl overflow-hidden">
-        <picture><source srcset="/images/sanur.avif" type="image/avif"><img src="/public-objects/images/exclusive-1br-ungasan-12.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Ungasan" loading="lazy" decoding="async" width="1080" height="1347"></picture>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-        <div class="absolute bottom-5 left-5 right-5 text-white">
-          <p class="font-display text-[22px] leading-none">Ungasan</p>
-          <p class="text-[12px] text-white/80 mt-1">3 villas</p>
-        </div>
-      </a>
-    </div>
-
   </div>
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <a href="/villas/sanur/" class="thb-arh"><h3>Popular villas in Sanur <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></h3><span class="cnt">6 villas</span></a>
+  </div>
+  <div class="max-w-[1400px] mx-auto"><div class="thb-arow">
+    <a class="thb-acard" href="/villa/sanur/villa-black-pool-4br-sanur/">
+      <img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — Family 4BR Villa with Big Pool" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Villa Black Pool — Family 4BR Villa with Big Pool</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Sanur, Bali</p>
+        <p class="m">4 bed &middot; 4 bath &middot; 8 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+    <a class="thb-acard" href="/villa/sanur/stylish-2br-pool-townhouse-sanur/">
+      <img src="/public-objects/images/sanur-2br-townhouse-29.jpg" alt="Stylish 2BR Pool Townhouse in Sanur" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Stylish 2BR Pool Townhouse in Sanur</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Sanur, Bali</p>
+        <p class="m">2 bed &middot; 2.5 bath &middot; 4 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+    <a class="thb-acard" href="/villa/sanur/modern-2br-pool-townhouse-sanur/">
+      <img src="/public-objects/images/sanur-modern-2br-townhouse-28.jpg" alt="Modern 2BR Pool Townhouse in Sanur" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Modern 2BR Pool Townhouse in Sanur</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Sanur, Bali</p>
+        <p class="m">2 bed &middot; 2.5 bath &middot; 4 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+    <a class="thb-acard" href="/villa/sanur/lucky-lily-3br-pool-villa-sanur/">
+      <img src="/public-objects/images/lucky-lily-sanur-3br-villa-01.jpg" alt="Lucky Lily 3BR Pool Villa in Sanur" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Lucky Lily 3BR Pool Villa in Sanur</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Sanur, Bali</p>
+        <p class="m">3 bed &middot; 3.5 bath &middot; 6 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+    <a class="thb-acard" href="/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/">
+      <img src="/public-objects/images/villa-kesari-4-sanur-01.jpg" alt="Villa Kesari 4 — Family 3BR Pool Villa in Sanur" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Villa Kesari 4 — Family 3BR Pool Villa in Sanur</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Sanur, Bali</p>
+        <p class="m">3 bed &middot; 3 bath &middot; 6 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+    <a class="thb-acard" href="/villa/sanur/garden-pool-villa-4br-sanur/">
+      <img src="/public-objects/images/sanur-garden-pool-4br-34.jpg" alt="Sanur Garden Pool Villa — Family 4BR near Mertasari Beach" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Sanur Garden Pool Villa — Family 4BR near Mertasari Beach</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Sanur, Bali</p>
+        <p class="m">4 bed &middot; 4.5 bath &middot; 8 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+  </div></div>
+  <div style="height:26px"></div>
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <a href="/villas/ungasan/" class="thb-arh"><h3>Popular villas in Ungasan <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></h3><span class="cnt">3 villas</span></a>
+  </div>
+  <div class="max-w-[1400px] mx-auto"><div class="thb-arow">
+    <a class="thb-acard" href="/villa/ungasan/eco-private-1br-pool-villa-ungasan/">
+      <img src="/public-objects/images/eco-private-ungasan-01.jpg" alt="Eco Private — Teak 1BR Pool Villa in Ungasan" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Eco Private — Teak 1BR Pool Villa in Ungasan</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Ungasan, Bali</p>
+        <p class="m">1 bed &middot; 1 bath &middot; 2 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+    <a class="thb-acard" href="/villa/ungasan/eco-teak-2br-pool-villa-ungasan/">
+      <img src="/public-objects/images/eco-teak-2br-ungasan-23.jpg" alt="Eco Teak — 2BR Pool Villa in Ungasan" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Eco Teak — 2BR Pool Villa in Ungasan</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Ungasan, Bali</p>
+        <p class="m">2 bed &middot; 2 bath &middot; 4 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+    <a class="thb-acard" href="/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/">
+      <img src="/public-objects/images/exclusive-1br-ungasan-12.jpg" alt="Eco Exclusive — Teak 1BR Pool Villa in Ungasan" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Eco Exclusive — Teak 1BR Pool Villa in Ungasan</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Ungasan, Bali</p>
+        <p class="m">1 bed &middot; 1 bath &middot; 2 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+  </div></div>
+  <div style="height:26px"></div>
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <a href="/villas/umalas/" class="thb-arh"><h3>Popular villas in Umalas <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></h3><span class="cnt">2 villas</span></a>
+  </div>
+  <div class="max-w-[1400px] mx-auto"><div class="thb-arow">
+    <a class="thb-acard" href="/villa/premier-umalas-16-3br-pool-townhouse/">
+      <img src="/public-objects/images/premier-umalas-16-08.jpg" alt="Premier Umalas 16 — Stylish 3BR Pool Townhouse" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Premier Umalas 16 — Stylish 3BR Pool Townhouse</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Umalas, Bali</p>
+        <p class="m">3 bed &middot; 3 bath &middot; 6 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+    <a class="thb-acard" href="/villa/premier-umalas-17-2br-pool-home/">
+      <img src="/public-objects/images/premier-umalas-17-24.jpg" alt="Premier Umalas 17 — Stylish 2BR Private Pool Home" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Premier Umalas 17 — Stylish 2BR Private Pool Home</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Umalas, Bali</p>
+        <p class="m">2 bed &middot; 2 bath &middot; 4 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+  </div></div>
+  <div style="height:26px"></div>
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <a href="/villas/canggu/" class="thb-arh"><h3>Popular villas in Canggu <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></h3><span class="cnt">1 villa</span></a>
+  </div>
+  <div class="max-w-[1400px] mx-auto"><div class="thb-arow">
+    <a class="thb-acard" href="/villa/canggu/the-wave-6br-beachside-villa-canggu/">
+      <img src="/public-objects/images/the-wave-canggu-01.jpg" alt="Villa The Wave — Beachside 6BR Villa in Canggu" loading="lazy" decoding="async" width="600" height="450">
+      <div class="in">
+        <p class="t">Villa The Wave — Beachside 6BR Villa in Canggu</p>
+        <p class="a"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Canggu, Bali</p>
+        <p class="m">6 bed &middot; 6.5 bath &middot; 12 guests</p>
+        <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
+      </div>
+    </a>
+  </div></div>
+  <div style="height:26px"></div>
 </section>
 
 <!-- =============== VIBE SELECTOR =============== -->
@@ -988,10 +1095,14 @@ html { scroll-behavior: smooth; }
 </footer>
 
 <!-- =============== FLOATING WHATSAPP =============== -->
-<a href="https://wa.me/6281239081021?text=Hi%20The%20Host%20Bali!%20I%27m%20looking%20for%20a%20villa%20in%20Bali." class="fixed bottom-6 right-6 z-40 bg-ink hover:bg-ink/90 text-white px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-2 font-semibold text-sm transition">
-  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-  Chat
-</a>
+<div id="thbWaPill">
+  <span class="ava" aria-hidden="true"></span>
+  <p>Looking for your dream villa in Bali? Let&rsquo;s find it&hellip;</p>
+  <a href="https://wa.me/6281239081021?text=Hi%20The%20Host%20Bali!%20I%27m%20looking%20for%20a%20villa%20in%20Bali." rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2C6.6 2.2 2.2 6.6 2.2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm5.5 12.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.1 3.3 5.2 4.5 3.1 1.2 3.5 1 4.1.9.6-.1 2-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.2-.6-.4z"/></svg>
+    Chat
+  </a>
+</div>
 
 <script>
 /* Language switcher dropdown */
