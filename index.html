@@ -67,6 +67,8 @@
   ]
 }
 </script>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="preload" as="image" fetchpriority="high" imagesrcset="https://images.unsplash.com/photo-1759661323897-f48700499b33?w=640&q=68&auto=format&fit=crop&crop=entropy 640w, https://images.unsplash.com/photo-1759661323897-f48700499b33?w=960&q=68&auto=format&fit=crop&crop=entropy 960w, https://images.unsplash.com/photo-1759661323897-f48700499b33?w=1280&q=68&auto=format&fit=crop&crop=entropy 1280w, https://images.unsplash.com/photo-1759661323897-f48700499b33?w=1600&q=68&auto=format&fit=crop&crop=entropy 1600w, https://images.unsplash.com/photo-1759661323897-f48700499b33?w=2000&q=68&auto=format&fit=crop&crop=entropy 2000w" imagesizes="100vw" href="https://images.unsplash.com/photo-1759661323897-f48700499b33?w=1600&q=68&auto=format&fit=crop&crop=entropy">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap"></noscript>
@@ -157,7 +159,7 @@ html { scroll-behavior: smooth; }
 @keyframes scrollLine { 0% { transform: translateY(-100%); } 100% { transform: translateY(250%); } }
 @keyframes navMicPulse { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.9); opacity: 0; } }
 .text-stroke { -webkit-text-stroke: 1px rgba(255,255,255,0.9); color: transparent; }
-.hero-img { filter: brightness(0.82) saturate(1.05); }
+.hero-img { filter: brightness(0.82) saturate(1.05); background:#123040; }
 .hero-title { text-shadow: 0 2px 24px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.35); }
 .hero-sub { text-shadow: 0 1px 10px rgba(0,0,0,0.6); }
 </style>
@@ -408,7 +410,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 <section class="relative bg-off">
   <!-- Full-bleed image with overlay -->
   <div class="absolute inset-0 w-full overflow-hidden">
-    <img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=2200&q=90&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover hero-img" loading="eager" fetchpriority="high" decoding="async">
+    <img src="https://images.unsplash.com/photo-1759661323897-f48700499b33?w=1600&q=68&auto=format&fit=crop&crop=entropy" srcset="https://images.unsplash.com/photo-1759661323897-f48700499b33?w=640&q=68&auto=format&fit=crop&crop=entropy 640w, https://images.unsplash.com/photo-1759661323897-f48700499b33?w=960&q=68&auto=format&fit=crop&crop=entropy 960w, https://images.unsplash.com/photo-1759661323897-f48700499b33?w=1280&q=68&auto=format&fit=crop&crop=entropy 1280w, https://images.unsplash.com/photo-1759661323897-f48700499b33?w=1600&q=68&auto=format&fit=crop&crop=entropy 1600w, https://images.unsplash.com/photo-1759661323897-f48700499b33?w=2000&q=68&auto=format&fit=crop&crop=entropy 2000w" sizes="100vw" alt="Cliffside villa with infinity pool overlooking the ocean in Bali" class="absolute inset-0 w-full h-full object-cover hero-img" width="2000" height="1333" loading="eager" fetchpriority="high" decoding="async">
     <!-- Multi-layer overlay: top fade for navbar, left-bottom dark zone for text legibility, bottom fade into search card -->
     <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 18%, rgba(0,0,0,0) 60%, rgba(10,10,10,0.7) 100%);"></div>
     <div class="absolute inset-0" style="background: linear-gradient(100deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 35%, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0) 80%);"></div>
