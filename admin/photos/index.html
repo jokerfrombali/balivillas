@@ -60,6 +60,27 @@ code{background:var(--soft);padding:1px 6px;border-radius:6px;font-size:12.5px}
 .ph .hb{position:absolute;right:7px;top:7px;background:var(--bronze);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.05em;padding:2px 7px;border-radius:999px;text-transform:uppercase}
 .ph.inhero{border-color:var(--bronze)}
 @media(max-width:640px){.grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}select{min-width:100%}.heroGrid{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:auto}.slot{aspect-ratio:4/3}.slot:first-child{grid-row:auto;grid-column:1/3}}
+
+/* --- вкладки --- */
+.tabs{display:inline-flex;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:3px;gap:3px}
+.tabs button{border:0;background:transparent;border-radius:999px;padding:8px 18px;font-weight:600;color:var(--muted)}
+.tabs button.on{background:var(--panel);color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+[hidden]{display:none!important}
+/* --- доска слайд-шоу --- */
+.hsGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.hsCard{position:relative;border-radius:16px;overflow:hidden;border:2px solid transparent;background:var(--soft);cursor:grab;aspect-ratio:3/2;transition:transform .12s,box-shadow .12s,opacity .12s}
+.hsCard img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.hsCard.dragging{opacity:.35;cursor:grabbing}
+.hsCard.over{border-color:var(--dark);transform:scale(1.04);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.hsCard .n{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.75);color:#fff;font:700 12px/1 Inter,sans-serif;padding:5px 9px;border-radius:999px}
+.hsCard .first{position:absolute;right:8px;top:8px;background:var(--bronze);color:#fff;font:800 10.5px/1 Inter,sans-serif;letter-spacing:.06em;padding:5px 9px;border-radius:999px;text-transform:uppercase}
+.hsCard .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;background:linear-gradient(transparent,rgba(0,0,0,.8));color:#fff;font-size:11.5px;line-height:1.35}
+.hsCard .tools{position:absolute;inset:auto 0 0 0;display:flex;gap:5px;justify-content:center;padding:8px;background:linear-gradient(transparent,rgba(0,0,0,.75));opacity:0;transition:opacity .12s}
+.hsCard:hover .tools{opacity:1}
+.hsCard .tools button{padding:4px 10px;font-size:12px;border-radius:8px;border:0;background:rgba(255,255,255,.92)}
+.hsPreview{position:relative;border-radius:20px;overflow:hidden;height:230px;background:#1b2a22;margin-bottom:14px}
+.hsPreview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hsPreview .lab{position:absolute;left:14px;top:12px;background:rgba(0,0,0,.6);color:#fff;font:700 11px/1 Inter,sans-serif;letter-spacing:.06em;padding:6px 11px;border-radius:999px;text-transform:uppercase;z-index:2}
 </style>
 </head>
 <body>
@@ -69,12 +90,16 @@ code{background:var(--soft);padding:1px 6px;border-radius:6px;font-size:12.5px}
     <span>Photo order<small>The Host Bali admin</small></span>
   </div>
   <div class="bar" style="margin:0">
+    <div class="tabs" id="tabs">
+      <button type="button" data-tab="villas" class="on">Villas</button>
+      <button type="button" data-tab="slides">Home slideshow</button>
+    </div>
     <select id="villaSel"></select>
     <button class="ghost" id="reload" title="Reload data from the site">Reload</button>
   </div>
 </div>
 
-<div class="wrap">
+<div class="wrap" id="viewVillas">
   <div class="note">
     <strong>Main photos</strong> — the five tiles at the top of the villa page: <code>main</code> (big one),
     then <code>m2</code>, <code>m3</code>, <code>m4</code>, <code>m5</code>. Drag any photo from the groups
@@ -91,11 +116,30 @@ code{background:var(--soft);padding:1px 6px;border-radius:6px;font-size:12.5px}
   <div id="groups"></div>
 </div>
 
+<div class="wrap" id="viewSlides" hidden>
+  <div class="note">
+    <strong>Home slideshow</strong> &mdash; the ten photos on the first screen of the homepage.
+    The first one loads instantly and is what everybody sees before the slideshow starts moving,
+    so put your strongest shot there. Drag the cards to reorder, or hover one and use
+    <strong>&larr;</strong> / <strong>first</strong> / <strong>&rarr;</strong>.
+    Same rule as the villas: nothing is written to the site from here &mdash; press
+    <strong>Download hero-slides.json</strong> and hand the file over, then the homepage is rebuilt from it.
+  </div>
+  <div class="heropanel">
+    <h3>First frame</h3>
+    <div class="meta">what a visitor sees the moment the page opens</div>
+    <div class="hsPreview" id="hsPreview"><span class="lab">First frame</span></div>
+    <div class="hsGrid" id="hsBoard"></div>
+  </div>
+</div>
+
 <div class="foot">
   <div class="status" id="status">Loading…</div>
   <button class="ghost" id="revert">Revert changes</button>
   <button class="ghost" id="copy">Copy JSON</button>
   <button class="primary" id="download">Download villas.json</button>
+  <button class="ghost" id="hsRevert" hidden>Revert slideshow</button>
+  <button class="primary" id="hsDownload" hidden>Download hero-slides.json</button>
 </div>
 
 <script>
@@ -325,8 +369,116 @@ $('download').addEventListener('click',function(){
 $('copy').addEventListener('click',function(){
   navigator.clipboard.writeText(JSON.stringify(DATA,null,2)).then(function(){ setStatus('JSON copied to clipboard','saved') });
 });
-window.addEventListener('beforeunload',function(e){ if(dirty){ e.preventDefault(); e.returnValue=''; } });
+window.addEventListener('beforeunload',function(e){ if(dirty||hsDirty){ e.preventDefault(); e.returnValue=''; } });
 load(false);
+
+/* ================= вкладка «Home slideshow» ================= */
+var HS=null, HSORIG=null, hsDrag=null, hsDirty=false;
+var HSKEY='thehost_hero_slides_draft';
+var HSDIR='/public-objects/hero/';
+
+function hsList(){ return (HS && HS.slides) ? HS.slides : []; }
+function hsThumb(id){ return HSDIR+id+'-640.avif'; }
+function hsFull(id){ return HSDIR+id+'-1200.jpg'; }
+
+function hsLoad(force){
+  var draft=localStorage.getItem(HSKEY);
+  fetch('/data/hero-slides.json?ts='+Date.now()).then(function(r){return r.json()}).then(function(j){
+    HSORIG=JSON.parse(JSON.stringify(j));
+    if(draft && !force){
+      try{ HS=JSON.parse(draft); hsDirty=true; }catch(e){ HS=j; }
+    } else { HS=j; localStorage.removeItem(HSKEY); hsDirty=false; }
+    hsRender();
+  }).catch(function(){
+    var b=$('hsBoard');
+    if(b) b.innerHTML='<p class="hint">Could not load /data/hero-slides.json &mdash; open this page through the site, not from disk.</p>';
+  });
+}
+
+function hsCommit(msg){
+  HS.updatedAt=new Date().toISOString().slice(0,10);
+  hsDirty=true;
+  localStorage.setItem(HSKEY, JSON.stringify(HS));
+  setStatus(msg||'Unsaved slideshow changes \u2014 download the file to apply them','dirty');
+  hsRender();
+}
+
+function hsMove(from,to){
+  var a=hsList();
+  if(to<0) to=0;
+  if(to>a.length-1) to=a.length-1;
+  if(from===to) return;
+  a.splice(to,0,a.splice(from,1)[0]);
+  hsCommit();
+}
+
+function hsCard(sl,i){
+  var d=document.createElement('div');
+  d.className='hsCard'; d.draggable=true; d.dataset.i=i;
+  var img=document.createElement('img');
+  img.src=hsThumb(sl.id); img.alt=sl.alt||sl.id; img.loading='lazy';
+  img.addEventListener('error',function(){ img.src=hsFull(sl.id); });
+  d.appendChild(img);
+  var n=document.createElement('span'); n.className='n'; n.textContent=(i+1); d.appendChild(n);
+  if(i===0){ var f=document.createElement('span'); f.className='first'; f.textContent='first'; d.appendChild(f); }
+  var cap=document.createElement('span'); cap.className='cap'; cap.textContent=sl.alt||sl.id; d.appendChild(cap);
+  var t=document.createElement('div'); t.className='tools';
+  t.appendChild(btn('\u2190', function(){ hsMove(i,i-1) }));
+  t.appendChild(btn('first', function(){ hsMove(i,0) }));
+  t.appendChild(btn('\u2192', function(){ hsMove(i,i+1) }));
+  d.appendChild(t);
+  d.addEventListener('dragstart',function(e){ hsDrag=i; d.classList.add('dragging'); e.dataTransfer.effectAllowed='move'; try{e.dataTransfer.setData('text/plain',String(i))}catch(err){} });
+  d.addEventListener('dragend',function(){ hsDrag=null; d.classList.remove('dragging'); });
+  d.addEventListener('dragover',function(e){ e.preventDefault(); d.classList.add('over'); });
+  d.addEventListener('dragleave',function(){ d.classList.remove('over'); });
+  d.addEventListener('drop',function(e){ e.preventDefault(); d.classList.remove('over'); if(hsDrag!==null) hsMove(hsDrag,i); });
+  return d;
+}
+
+function hsRender(){
+  var b=$('hsBoard'); if(!b) return;
+  b.innerHTML='';
+  hsList().forEach(function(sl,i){ b.appendChild(hsCard(sl,i)); });
+  var pv=$('hsPreview'), first=hsList()[0];
+  if(pv){
+    var old=pv.querySelector('img'); if(old) old.remove();
+    if(first){
+      var im=document.createElement('img');
+      im.src=hsFull(first.id); im.alt=first.alt||first.id;
+      pv.appendChild(im);
+    }
+  }
+  if(hsDirty) setStatus('Unsaved slideshow changes \u2014 download the file to apply them','dirty');
+  else setStatus('Slideshow: '+hsList().length+' frames');
+}
+
+function showTab(t){
+  var villas=(t!=='slides');
+  $('viewVillas').hidden=!villas;
+  $('viewSlides').hidden=villas;
+  $('villaSel').hidden=!villas;
+  $('revert').hidden=!villas; $('copy').hidden=!villas; $('download').hidden=!villas;
+  $('hsRevert').hidden=villas; $('hsDownload').hidden=villas;
+  [].forEach.call($('tabs').children,function(b){ b.classList.toggle('on', b.dataset.tab===t) });
+  try{ localStorage.setItem('thehost_admin_tab', t); }catch(e){}
+  if(villas){ render(); } else { if(!HS) hsLoad(false); else hsRender(); }
+}
+
+$('tabs').addEventListener('click',function(e){
+  var b=e.target.closest('button[data-tab]'); if(b) showTab(b.dataset.tab);
+});
+$('hsRevert').addEventListener('click',function(){
+  if(!confirm('Revert the slideshow to the order currently on the site?')) return;
+  HS=JSON.parse(JSON.stringify(HSORIG)); hsDirty=false;
+  localStorage.removeItem(HSKEY); hsRender(); setStatus('Slideshow reverted','saved');
+});
+$('hsDownload').addEventListener('click',function(){
+  var blob=new Blob([JSON.stringify(HS,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='hero-slides.json'; a.click();
+  setStatus('hero-slides.json downloaded \u2014 hand it over to apply','saved');
+});
+try{ if(localStorage.getItem('thehost_admin_tab')==='slides') showTab('slides'); }catch(e){}
+
 })();
 </script>
 </body>

@@ -1,0 +1,46 @@
+{
+  "note": "Order of the slides in the homepage hero slideshow. Edit at /admin/photos/ (Home slideshow tab), download and hand the file over — index.html is rebuilt from it.",
+  "updatedAt": "2026-07-31",
+  "slides": [
+    {
+      "id": "slide-01",
+      "alt": "Bali villa terrace at sunrise with volcano view"
+    },
+    {
+      "id": "slide-02",
+      "alt": "Jungle villa with infinity pool in Bali"
+    },
+    {
+      "id": "slide-03",
+      "alt": "Bali villa living room open to the ocean"
+    },
+    {
+      "id": "slide-04",
+      "alt": "Bali villa with lit arches and pool at dusk"
+    },
+    {
+      "id": "slide-05",
+      "alt": "White arched villa with turquoise pool in Bali"
+    },
+    {
+      "id": "slide-06",
+      "alt": "Modern black villas among palms at sunset in Bali"
+    },
+    {
+      "id": "slide-07",
+      "alt": "Poolside loungers at a Bali villa"
+    },
+    {
+      "id": "slide-08",
+      "alt": "Sunken lounge by the pool at a Bali villa in the evening"
+    },
+    {
+      "id": "slide-09",
+      "alt": "Covered terrace over a tropical garden in Bali"
+    },
+    {
+      "id": "slide-10",
+      "alt": "Bali villa garden and pool at twilight"
+    }
+  ]
+}
