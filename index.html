@@ -232,6 +232,22 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 .hs-slide.is-on img{transform:scale(1)}
 @media(prefers-reduced-motion:reduce){.hs-slide,.hs-slide img{transition:none}}
 </style>
+<style id="thb-hero-fit">
+/* первый разворот целиком под фото — на 24"/27" и больше */
+@media(min-width:1024px){
+  #thbHero{min-height:100svh;display:flex;flex-direction:column}
+  #thbHero .thb-hero-txt{height:auto!important;min-height:0!important;max-height:none!important;flex:1 1 auto;padding-top:118px}
+  #thbHero .thb-hero-panel{padding-bottom:clamp(26px,4.6vh,60px)}
+}
+@supports not (height:100svh){@media(min-width:1024px){#thbHero{min-height:100vh}}}
+/* стеклянная панель направлений */
+.thb-glass-card{background:rgba(255,255,255,.60);backdrop-filter:blur(26px) saturate(1.35);-webkit-backdrop-filter:blur(26px) saturate(1.35);border:1px solid rgba(255,255,255,.55)}
+.thb-glass-card .bg-ink{background:rgba(12,12,12,.82)!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.thb-glass-card .bg-paper{background:rgba(255,255,255,.46)!important;border:1px solid rgba(255,255,255,.5)}
+/* стеклянная шапка, пока мы на первом развороте */
+#navbar{background:rgba(250,250,247,.58)!important;-webkit-backdrop-filter:blur(22px) saturate(1.5);backdrop-filter:blur(22px) saturate(1.5);border-bottom:1px solid rgba(255,255,255,.35)!important;transition:background .25s ease,border-color .25s ease}
+#navbar.thb-solid{background:rgba(250,250,247,.92)!important;border-bottom:1px solid #e6e3dc!important}
+</style>
 </head>
 <body>
 
@@ -418,7 +434,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 </div>
 
 <!-- =============== HERO =============== -->
-<section class="relative bg-off">
+<section id="thbHero" class="relative bg-off">
   <!-- Full-bleed image with overlay -->
   <div class="absolute inset-0 w-full overflow-hidden">
     <div class="hs-show" aria-label="Bali villas we manage"><picture class="hs-slide is-on" data-i="0"><source type="image/avif" sizes="100vw" srcset="/public-objects/hero/slide-01-640.avif 640w, /public-objects/hero/slide-01-960.avif 960w, /public-objects/hero/slide-01-1200.avif 1200w"><img src="/public-objects/hero/slide-01-1200.jpg" alt="Bali villa terrace at sunrise with volcano view" width="1200" height="800" loading="eager" fetchpriority="high" decoding="async"></picture><picture class="hs-slide" data-i="1"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-02-640.avif 640w, /public-objects/hero/slide-02-960.avif 960w, /public-objects/hero/slide-02-1200.avif 1200w"><img data-src="/public-objects/hero/slide-02-1200.jpg" alt="Jungle villa with infinity pool in Bali" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="2"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-03-640.avif 640w, /public-objects/hero/slide-03-960.avif 960w, /public-objects/hero/slide-03-1200.avif 1200w"><img data-src="/public-objects/hero/slide-03-1200.jpg" alt="Bali villa living room open to the ocean" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="3"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-04-640.avif 640w, /public-objects/hero/slide-04-960.avif 960w, /public-objects/hero/slide-04-1200.avif 1200w"><img data-src="/public-objects/hero/slide-04-1200.jpg" alt="Bali villa with lit arches and pool at dusk" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="4"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-05-640.avif 640w, /public-objects/hero/slide-05-960.avif 960w, /public-objects/hero/slide-05-1200.avif 1200w"><img data-src="/public-objects/hero/slide-05-1200.jpg" alt="White arched villa with turquoise pool in Bali" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="5"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-06-640.avif 640w, /public-objects/hero/slide-06-960.avif 960w, /public-objects/hero/slide-06-1200.avif 1200w"><img data-src="/public-objects/hero/slide-06-1200.jpg" alt="Modern black villas among palms at sunset in Bali" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="6"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-07-640.avif 640w, /public-objects/hero/slide-07-960.avif 960w, /public-objects/hero/slide-07-1200.avif 1200w"><img data-src="/public-objects/hero/slide-07-1200.jpg" alt="Poolside loungers at a Bali villa" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="7"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-08-640.avif 640w, /public-objects/hero/slide-08-960.avif 960w, /public-objects/hero/slide-08-1200.avif 1200w"><img data-src="/public-objects/hero/slide-08-1200.jpg" alt="Sunken lounge by the pool at a Bali villa in the evening" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="8"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-09-640.avif 640w, /public-objects/hero/slide-09-960.avif 960w, /public-objects/hero/slide-09-1200.avif 1200w"><img data-src="/public-objects/hero/slide-09-1200.jpg" alt="Covered terrace over a tropical garden in Bali" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="9"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-10-640.avif 640w, /public-objects/hero/slide-10-960.avif 960w, /public-objects/hero/slide-10-1200.avif 1200w"><img data-src="/public-objects/hero/slide-10-1200.jpg" alt="Bali villa garden and pool at twilight" width="1200" height="800" loading="lazy" decoding="async"></picture></div>
@@ -429,7 +445,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
     <!-- Hero text — single proportional stack -->
     
   </div>
-  <div class="relative z-10 h-[58vh] min-h-[470px] max-h-[620px] pt-[92px] pb-6 px-6 lg:px-10 flex items-center">
+  <div class="thb-hero-txt relative z-10 h-[58vh] min-h-[470px] max-h-[620px] pt-[92px] pb-6 px-6 lg:px-10 flex items-center">
       <div class="max-w-[1400px] mx-auto w-full text-center">
         <h1 class="hero-title font-display text-white text-[44px] sm:text-[60px] lg:text-[84px] leading-[0.92] tracking-tightest font-normal mb-5">
           Find your perfect<br> <span class="italic font-light">Bali villa.</span>
@@ -442,8 +458,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 
 
   <!-- Directions panel -->
-      <div class="relative z-20 max-w-[1080px] mx-auto px-4 lg:px-10 pb-12 lg:pb-16">
-        <div class="bg-white rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.18)] p-3 sm:p-4">
+      <div class="thb-hero-panel relative z-20 max-w-[1080px] mx-auto px-4 lg:px-10 pb-12 lg:pb-16">
+        <div class="thb-glass-card rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.22)] p-3 sm:p-4">
           <div class="grid sm:grid-cols-3 gap-3">
             <a href="/property-rental/" class="group rounded-[20px] bg-ink text-white p-6 flex flex-col justify-between min-h-[170px] transition hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)]">
               <div class="flex items-center justify-between mb-6"><span class="text-[11px] font-semibold tracking-[0.18em] uppercase text-white/55">Stay</span><svg class="w-4 h-4 opacity-70 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div>
@@ -1508,6 +1524,11 @@ try{if(new URLSearchParams(location.search).get('ai')&&document.getElementById('
   setTimeout(function(){ load(1); setInterval(next, HOLD); }, 1800);
   document.addEventListener('visibilitychange',function(){});
 })();
+</script>
+<script>
+(function(){var nb=document.getElementById('navbar');if(!nb)return;
+ function up(){nb.classList.toggle('thb-solid', window.scrollY>window.innerHeight*0.72);}
+ up();window.addEventListener('scroll',up,{passive:true});})();
 </script>
 </body>
 </html>
