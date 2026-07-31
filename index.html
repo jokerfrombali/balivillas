@@ -67,7 +67,7 @@
   ]
 }
 </script>
-<link rel="preload" as="image" fetchpriority="high" type="image/avif" imagesrcset="/public-objects/images/hero-bali-bedroom-640.avif 640w, /public-objects/images/hero-bali-bedroom-960.avif 960w, /public-objects/images/hero-bali-bedroom-1200.avif 1200w" imagesizes="100vw" href="/public-objects/images/hero-bali-bedroom-1200.avif">
+<link rel="preload" as="image" fetchpriority="high" type="image/avif" imagesrcset="/public-objects/hero/slide-01-640.avif 640w, /public-objects/hero/slide-01-960.avif 960w, /public-objects/hero/slide-01-1200.avif 1200w" imagesizes="100vw" href="/public-objects/hero/slide-01-1200.avif">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap"></noscript>
@@ -158,7 +158,9 @@ html { scroll-behavior: smooth; }
 @keyframes scrollLine { 0% { transform: translateY(-100%); } 100% { transform: translateY(250%); } }
 @keyframes navMicPulse { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.9); opacity: 0; } }
 .text-stroke { -webkit-text-stroke: 1px rgba(255,255,255,0.9); color: transparent; }
-.hero-img { filter: brightness(0.74) saturate(1.04); background:#1d2b25; }
+.hero-img{filter:none}
+    .hero-title{text-shadow:0 2px 26px rgba(0,0,0,.55),0 1px 4px rgba(0,0,0,.35)}
+    .hero-sub{text-shadow:0 2px 16px rgba(0,0,0,.5)}
 .hero-title { text-shadow: 0 2px 24px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.35); }
 .hero-sub { text-shadow: 0 1px 10px rgba(0,0,0,0.6); }
 </style>
@@ -219,6 +221,16 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
   .prop-card:hover,.thb-acard:hover,.thb-qchip:hover,.tt-card:hover,.card-hover:hover,.villa-floating-back:hover{transform:none!important;box-shadow:none!important}
   .cat-card:hover::after{opacity:0!important}
 }
+</style>
+<style id="thb-hero-show">
+.hs-show{position:absolute;inset:0;overflow:hidden;background:#1b2a22}
+.hs-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.8s ease-in-out}
+.hs-slide.is-on{opacity:1}
+.hs-slide img{width:100%;height:100%;object-fit:cover;display:block;
+  filter:brightness(1.02) saturate(1.08) contrast(1.02);
+  transform:scale(1.04);transition:transform 9s linear}
+.hs-slide.is-on img{transform:scale(1)}
+@media(prefers-reduced-motion:reduce){.hs-slide,.hs-slide img{transition:none}}
 </style>
 </head>
 <body>
@@ -371,7 +383,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
     <div style="flex:1"></div>
     <!-- Map card (hover zoom) -->
     <div class="mega-featured mega-zoom" style="width:180px;flex-shrink:0;margin-right:16px">
-      <picture><source srcset="/images/all-bali.avif" type="image/avif"><img src="/images/all-bali.jpg" alt="Map" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" width="736" height="920"></picture>
+      <div class="hs-show" aria-label="Bali villas we manage"><picture class="hs-slide is-on" data-i="0"><source type="image/avif" sizes="100vw" srcset="/public-objects/hero/slide-01-640.avif 640w, /public-objects/hero/slide-01-960.avif 960w, /public-objects/hero/slide-01-1200.avif 1200w"><img src="/public-objects/hero/slide-01-1200.jpg" alt="Bali villa terrace at sunrise with volcano view" width="1200" height="800" loading="eager" fetchpriority="high" decoding="async"></picture><picture class="hs-slide" data-i="1"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-02-640.avif 640w, /public-objects/hero/slide-02-960.avif 960w, /public-objects/hero/slide-02-1200.avif 1200w"><img data-src="/public-objects/hero/slide-02-1200.jpg" alt="Jungle villa with infinity pool in Bali" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="2"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-03-640.avif 640w, /public-objects/hero/slide-03-960.avif 960w, /public-objects/hero/slide-03-1200.avif 1200w"><img data-src="/public-objects/hero/slide-03-1200.jpg" alt="Bali villa living room open to the ocean" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="3"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-04-640.avif 640w, /public-objects/hero/slide-04-960.avif 960w, /public-objects/hero/slide-04-1200.avif 1200w"><img data-src="/public-objects/hero/slide-04-1200.jpg" alt="Bali villa with lit arches and pool at dusk" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="4"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-05-640.avif 640w, /public-objects/hero/slide-05-960.avif 960w, /public-objects/hero/slide-05-1200.avif 1200w"><img data-src="/public-objects/hero/slide-05-1200.jpg" alt="White arched villa with turquoise pool in Bali" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="5"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-06-640.avif 640w, /public-objects/hero/slide-06-960.avif 960w, /public-objects/hero/slide-06-1200.avif 1200w"><img data-src="/public-objects/hero/slide-06-1200.jpg" alt="Modern black villas among palms at sunset in Bali" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="6"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-07-640.avif 640w, /public-objects/hero/slide-07-960.avif 960w, /public-objects/hero/slide-07-1200.avif 1200w"><img data-src="/public-objects/hero/slide-07-1200.jpg" alt="Poolside loungers at a Bali villa" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="7"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-08-640.avif 640w, /public-objects/hero/slide-08-960.avif 960w, /public-objects/hero/slide-08-1200.avif 1200w"><img data-src="/public-objects/hero/slide-08-1200.jpg" alt="Sunken lounge by the pool at a Bali villa in the evening" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="8"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-09-640.avif 640w, /public-objects/hero/slide-09-960.avif 960w, /public-objects/hero/slide-09-1200.avif 1200w"><img data-src="/public-objects/hero/slide-09-1200.jpg" alt="Covered terrace over a tropical garden in Bali" width="1200" height="800" loading="lazy" decoding="async"></picture><picture class="hs-slide" data-i="9"><source type="image/avif" sizes="100vw" data-srcset="/public-objects/hero/slide-10-640.avif 640w, /public-objects/hero/slide-10-960.avif 960w, /public-objects/hero/slide-10-1200.avif 1200w"><img data-src="/public-objects/hero/slide-10-1200.jpg" alt="Bali villa garden and pool at twilight" width="1200" height="800" loading="lazy" decoding="async"></picture></div>
       <div class="mega-featured-overlay"></div>
       <div class="mega-featured-content">
         <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:700;line-height:1.25;margin-bottom:6px">All of Bali,<br>on the map</p>
@@ -415,8 +427,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
       <img src="/public-objects/images/hero-bali-bedroom-1200.jpg" alt="Bali villa bedroom with canopy bed opening to a private pool and tropical garden" class="absolute inset-0 w-full h-full object-cover hero-img" width="1200" height="800" loading="eager" fetchpriority="high" decoding="async">
     </picture>
     <!-- Multi-layer overlay: top fade for navbar, left-bottom dark zone for text legibility, bottom fade into search card -->
-    <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 18%, rgba(0,0,0,0) 60%, rgba(10,10,10,0.7) 100%);"></div>
-    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.28) 45%, rgba(0,0,0,0.12) 75%);"></div>
+    <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0.10) 20%, rgba(0,0,0,0) 58%, rgba(10,10,10,0.55) 100%);"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 46%, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.16) 48%, rgba(0,0,0,0) 78%);"></div>
 
     <!-- Hero text — single proportional stack -->
     
@@ -1474,6 +1486,31 @@ try{if(new URLSearchParams(location.search).get('ai')&&document.getElementById('
     setter: function (s) { prompt.setAttribute('placeholder', s); },
     pauseIf: function () { return document.activeElement === prompt || !!prompt.value; }
   });
+})();
+</script>
+<script>
+(function(){
+  var box=document.querySelector('.hs-show'); if(!box)return;
+  var sl=box.querySelectorAll('.hs-slide'); if(sl.length<2)return;
+  var i=0, HOLD=6500;
+  function load(n){
+    var p=sl[n]; if(!p||p.dataset.ready) return;
+    var src=p.querySelector('source'), img=p.querySelector('img');
+    if(src&&src.dataset.srcset){src.srcset=src.dataset.srcset;}
+    if(img&&img.dataset.src){img.src=img.dataset.src;}
+    p.dataset.ready='1';
+  }
+  function next(){
+    var n=(i+1)%sl.length;
+    load(n);
+    sl[i].classList.remove('is-on');
+    sl[n].classList.add('is-on');
+    i=n;
+    load((n+1)%sl.length);
+  }
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  setTimeout(function(){ load(1); setInterval(next, HOLD); }, 1800);
+  document.addEventListener('visibilitychange',function(){});
 })();
 </script>
 </body>
