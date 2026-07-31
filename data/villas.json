@@ -230,35 +230,35 @@
       "En-suite bathrooms"
     ],
     "images": [
-      "/public-objects/images/premier-umalas-17-1.jpg",
+      "/public-objects/images/premier-umalas-17-24.jpg",
       "/public-objects/images/premier-umalas-17-2.jpg",
       "/public-objects/images/premier-umalas-17-3.jpg",
       "/public-objects/images/premier-umalas-17-4.jpg",
       "/public-objects/images/premier-umalas-17-5.jpg",
-      "/public-objects/images/premier-umalas-17-6.jpg",
-      "/public-objects/images/premier-umalas-17-7.jpg",
-      "/public-objects/images/premier-umalas-17-8.jpg",
+      "/public-objects/images/premier-umalas-17-1.jpg",
+      "/public-objects/images/premier-umalas-17-28.jpg",
+      "/public-objects/images/premier-umalas-17-15.jpg",
       "/public-objects/images/premier-umalas-17-9.jpg",
+      "/public-objects/images/premier-umalas-17-21.jpg",
+      "/public-objects/images/premier-umalas-17-26.jpg",
+      "/public-objects/images/premier-umalas-17-8.jpg",
+      "/public-objects/images/premier-umalas-17-7.jpg",
+      "/public-objects/images/premier-umalas-17-17.jpg",
       "/public-objects/images/premier-umalas-17-10.jpg",
-      "/public-objects/images/premier-umalas-17-11.jpg",
+      "/public-objects/images/premier-umalas-17-27.jpg",
+      "/public-objects/images/premier-umalas-17-29.jpg",
       "/public-objects/images/premier-umalas-17-12.jpg",
       "/public-objects/images/premier-umalas-17-13.jpg",
-      "/public-objects/images/premier-umalas-17-14.jpg",
-      "/public-objects/images/premier-umalas-17-15.jpg",
-      "/public-objects/images/premier-umalas-17-16.jpg",
-      "/public-objects/images/premier-umalas-17-17.jpg",
-      "/public-objects/images/premier-umalas-17-18.jpg",
-      "/public-objects/images/premier-umalas-17-19.jpg",
-      "/public-objects/images/premier-umalas-17-20.jpg",
-      "/public-objects/images/premier-umalas-17-21.jpg",
-      "/public-objects/images/premier-umalas-17-22.jpg",
-      "/public-objects/images/premier-umalas-17-23.jpg",
-      "/public-objects/images/premier-umalas-17-24.jpg",
       "/public-objects/images/premier-umalas-17-25.jpg",
-      "/public-objects/images/premier-umalas-17-26.jpg",
-      "/public-objects/images/premier-umalas-17-27.jpg",
-      "/public-objects/images/premier-umalas-17-28.jpg",
-      "/public-objects/images/premier-umalas-17-29.jpg"
+      "/public-objects/images/premier-umalas-17-18.jpg",
+      "/public-objects/images/premier-umalas-17-23.jpg",
+      "/public-objects/images/premier-umalas-17-19.jpg",
+      "/public-objects/images/premier-umalas-17-11.jpg",
+      "/public-objects/images/premier-umalas-17-14.jpg",
+      "/public-objects/images/premier-umalas-17-16.jpg",
+      "/public-objects/images/premier-umalas-17-20.jpg",
+      "/public-objects/images/premier-umalas-17-6.jpg",
+      "/public-objects/images/premier-umalas-17-22.jpg"
     ],
     "lat": null,
     "lng": null,
@@ -268,7 +268,7 @@
     "bookingUrl": "https://www.booking.com/hotel/id/stylish-2br-private-pool-home-umalas.en.html",
     "photosSource": "https://ru.airbnb.com/rooms/1631122907991519841",
     "monthly": false,
-    "updatedAt": "2026-07-20",
+    "updatedAt": "2026-07-31",
     "photoGroups": [
       {
         "name": "Living room",
@@ -374,7 +374,7 @@
     ],
     "cardImage": "/public-objects/images/premier-umalas-17-24.jpg",
     "topGallery": [
-      "/public-objects/images/premier-umalas-17-1.jpg",
+      "/public-objects/images/premier-umalas-17-24.jpg",
       "/public-objects/images/premier-umalas-17-2.jpg",
       "/public-objects/images/premier-umalas-17-3.jpg",
       "/public-objects/images/premier-umalas-17-4.jpg",
@@ -408,17 +408,17 @@
       "Air conditioning"
     ],
     "images": [
-      "/public-objects/images/villa-black-pool-1.jpg",
+      "/public-objects/images/villa-black-pool-11.jpg",
       "/public-objects/images/villa-black-pool-2.jpg",
       "/public-objects/images/villa-black-pool-3.jpg",
       "/public-objects/images/villa-black-pool-4.jpg",
       "/public-objects/images/villa-black-pool-5.jpg",
+      "/public-objects/images/villa-black-pool-1.jpg",
       "/public-objects/images/villa-black-pool-6.jpg",
       "/public-objects/images/villa-black-pool-7.jpg",
       "/public-objects/images/villa-black-pool-8.jpg",
       "/public-objects/images/villa-black-pool-9.jpg",
       "/public-objects/images/villa-black-pool-10.jpg",
-      "/public-objects/images/villa-black-pool-11.jpg",
       "/public-objects/images/villa-black-pool-12.jpg",
       "/public-objects/images/villa-black-pool-13.jpg",
       "/public-objects/images/villa-black-pool-14.jpg",
@@ -482,7 +482,7 @@
     "bookingUrl": "https://booking.com/hotel/id/luxury-4br-sanur-villa-big-pool.en.html",
     "photosSource": "https://www.airbnb.com/rooms/1496048138640551505",
     "monthly": false,
-    "updatedAt": "2026-07-20",
+    "updatedAt": "2026-07-31",
     "photoGroups": [
       {
         "name": "Living room",
@@ -643,7 +643,7 @@
     "description": "Spacious modern 4-bedroom villa in Sanur with a private black-tiled pool, tropical garden, open living spaces and walking distance to the beach, cafés and shops.",
     "cardImage": "/public-objects/images/villa-black-pool-11.jpg",
     "topGallery": [
-      "/public-objects/images/villa-black-pool-1.jpg",
+      "/public-objects/images/villa-black-pool-11.jpg",
       "/public-objects/images/villa-black-pool-2.jpg",
       "/public-objects/images/villa-black-pool-3.jpg",
       "/public-objects/images/villa-black-pool-4.jpg",
@@ -900,7 +900,11 @@
       "Motorbike parking"
     ],
     "images": [
+      "/public-objects/images/sanur-modern-2br-townhouse-27.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-01.jpg",
+      "/public-objects/images/sanur-modern-2br-townhouse-09.jpg",
+      "/public-objects/images/sanur-modern-2br-townhouse-12.jpg",
+      "/public-objects/images/sanur-modern-2br-townhouse-28.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-02.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-03.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-04.jpg",
@@ -908,10 +912,8 @@
       "/public-objects/images/sanur-modern-2br-townhouse-06.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-07.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-08.jpg",
-      "/public-objects/images/sanur-modern-2br-townhouse-09.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-10.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-11.jpg",
-      "/public-objects/images/sanur-modern-2br-townhouse-12.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-13.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-14.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-15.jpg",
@@ -926,20 +928,18 @@
       "/public-objects/images/sanur-modern-2br-townhouse-24.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-25.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-26.jpg",
-      "/public-objects/images/sanur-modern-2br-townhouse-27.jpg",
-      "/public-objects/images/sanur-modern-2br-townhouse-28.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-29.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-30.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-31.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-32.jpg"
     ],
-    "cardImage": "/public-objects/images/sanur-modern-2br-townhouse-28.jpg",
+    "cardImage": "/public-objects/images/sanur-modern-2br-townhouse-27.jpg",
     "topGallery": [
-      "/public-objects/images/sanur-modern-2br-townhouse-28.jpg",
+      "/public-objects/images/sanur-modern-2br-townhouse-27.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-01.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-09.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-12.jpg",
-      "/public-objects/images/sanur-modern-2br-townhouse-27.jpg"
+      "/public-objects/images/sanur-modern-2br-townhouse-28.jpg"
     ],
     "lat": -8.69035,
     "lng": 115.25893,
@@ -949,7 +949,7 @@
     "bookingUrl": null,
     "photosSource": "https://ru.airbnb.com/rooms/1640382948484924036",
     "monthly": false,
-    "updatedAt": "2026-07-21",
+    "updatedAt": "2026-07-31",
     "photoGroups": [
       {
         "name": "Living room",
@@ -1115,10 +1115,14 @@
       "Housekeeping 2x/week"
     ],
     "images": [
+      "/public-objects/images/lucky-lily-sanur-3br-villa-04.jpg",
+      "/public-objects/images/lucky-lily-sanur-3br-villa-13.jpg",
+      "/public-objects/images/lucky-lily-sanur-3br-villa-22.jpg",
+      "/public-objects/images/lucky-lily-sanur-3br-villa-31.jpg",
+      "/public-objects/images/lucky-lily-sanur-3br-villa-49.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-01.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-02.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-03.jpg",
-      "/public-objects/images/lucky-lily-sanur-3br-villa-04.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-05.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-06.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-07.jpg",
@@ -1127,7 +1131,6 @@
       "/public-objects/images/lucky-lily-sanur-3br-villa-10.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-11.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-12.jpg",
-      "/public-objects/images/lucky-lily-sanur-3br-villa-13.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-14.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-15.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-16.jpg",
@@ -1136,7 +1139,6 @@
       "/public-objects/images/lucky-lily-sanur-3br-villa-19.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-20.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-21.jpg",
-      "/public-objects/images/lucky-lily-sanur-3br-villa-22.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-23.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-24.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-25.jpg",
@@ -1145,7 +1147,6 @@
       "/public-objects/images/lucky-lily-sanur-3br-villa-28.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-29.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-30.jpg",
-      "/public-objects/images/lucky-lily-sanur-3br-villa-31.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-32.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-33.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-34.jpg",
@@ -1163,15 +1164,14 @@
       "/public-objects/images/lucky-lily-sanur-3br-villa-46.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-47.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-48.jpg",
-      "/public-objects/images/lucky-lily-sanur-3br-villa-49.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-50.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-51.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-52.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-53.jpg"
     ],
-    "cardImage": "/public-objects/images/lucky-lily-sanur-3br-villa-01.jpg",
+    "cardImage": "/public-objects/images/lucky-lily-sanur-3br-villa-04.jpg",
     "topGallery": [
-      "/public-objects/images/lucky-lily-sanur-3br-villa-01.jpg",
+      "/public-objects/images/lucky-lily-sanur-3br-villa-04.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-13.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-22.jpg",
       "/public-objects/images/lucky-lily-sanur-3br-villa-31.jpg",
@@ -1185,7 +1185,7 @@
     "bookingUrl": null,
     "photosSource": "https://ru.airbnb.com/rooms/818499008540108336",
     "monthly": false,
-    "updatedAt": "2026-07-22",
+    "updatedAt": "2026-07-31",
     "photoGroups": [
       {
         "name": "Living room",
@@ -1356,11 +1356,12 @@
       "Walk to beach"
     ],
     "images": [
-      "/public-objects/images/villa-kesari-4-sanur-01.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-76.jpg",
       "/public-objects/images/villa-kesari-4-sanur-02.jpg",
       "/public-objects/images/villa-kesari-4-sanur-03.jpg",
       "/public-objects/images/villa-kesari-4-sanur-04.jpg",
       "/public-objects/images/villa-kesari-4-sanur-05.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-01.jpg",
       "/public-objects/images/villa-kesari-4-sanur-06.jpg",
       "/public-objects/images/villa-kesari-4-sanur-07.jpg",
       "/public-objects/images/villa-kesari-4-sanur-08.jpg",
@@ -1431,13 +1432,12 @@
       "/public-objects/images/villa-kesari-4-sanur-73.jpg",
       "/public-objects/images/villa-kesari-4-sanur-74.jpg",
       "/public-objects/images/villa-kesari-4-sanur-75.jpg",
-      "/public-objects/images/villa-kesari-4-sanur-76.jpg",
       "/public-objects/images/villa-kesari-4-sanur-77.jpg",
       "/public-objects/images/villa-kesari-4-sanur-78.jpg"
     ],
-    "cardImage": "/public-objects/images/villa-kesari-4-sanur-01.jpg",
+    "cardImage": "/public-objects/images/villa-kesari-4-sanur-76.jpg",
     "topGallery": [
-      "/public-objects/images/villa-kesari-4-sanur-01.jpg",
+      "/public-objects/images/villa-kesari-4-sanur-76.jpg",
       "/public-objects/images/villa-kesari-4-sanur-02.jpg",
       "/public-objects/images/villa-kesari-4-sanur-03.jpg",
       "/public-objects/images/villa-kesari-4-sanur-04.jpg",
@@ -1622,7 +1622,7 @@
     "galleryUrl": "/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/",
     "lat": -8.6977,
     "lng": 115.2596,
-    "updatedAt": "2026-07-29"
+    "updatedAt": "2026-07-31"
   },
   {
     "id": "own-the-wave-6br-beachside-villa-canggu",
@@ -1656,11 +1656,12 @@
       "Suitable for groups and events"
     ],
     "images": [
-      "/public-objects/images/the-wave-canggu-01.jpg",
+      "/public-objects/images/the-wave-canggu-47.jpg",
       "/public-objects/images/the-wave-canggu-02.jpg",
       "/public-objects/images/the-wave-canggu-03.jpg",
       "/public-objects/images/the-wave-canggu-04.jpg",
       "/public-objects/images/the-wave-canggu-05.jpg",
+      "/public-objects/images/the-wave-canggu-01.jpg",
       "/public-objects/images/the-wave-canggu-06.jpg",
       "/public-objects/images/the-wave-canggu-07.jpg",
       "/public-objects/images/the-wave-canggu-08.jpg",
@@ -1702,7 +1703,6 @@
       "/public-objects/images/the-wave-canggu-44.jpg",
       "/public-objects/images/the-wave-canggu-45.jpg",
       "/public-objects/images/the-wave-canggu-46.jpg",
-      "/public-objects/images/the-wave-canggu-47.jpg",
       "/public-objects/images/the-wave-canggu-48.jpg",
       "/public-objects/images/the-wave-canggu-49.jpg",
       "/public-objects/images/the-wave-canggu-50.jpg",
@@ -1710,9 +1710,9 @@
       "/public-objects/images/the-wave-canggu-52.jpg",
       "/public-objects/images/the-wave-canggu-53.jpg"
     ],
-    "cardImage": "/public-objects/images/the-wave-canggu-01.jpg",
+    "cardImage": "/public-objects/images/the-wave-canggu-47.jpg",
     "topGallery": [
-      "/public-objects/images/the-wave-canggu-01.jpg",
+      "/public-objects/images/the-wave-canggu-47.jpg",
       "/public-objects/images/the-wave-canggu-02.jpg",
       "/public-objects/images/the-wave-canggu-03.jpg",
       "/public-objects/images/the-wave-canggu-04.jpg",
@@ -1915,7 +1915,7 @@
     "galleryUrl": "/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/",
     "lat": -8.6675,
     "lng": 115.1444,
-    "updatedAt": "2026-07-29"
+    "updatedAt": "2026-07-31"
   },
   {
     "id": "own-sanur-garden-pool-4br",
@@ -2197,11 +2197,11 @@
       "About 10 minutes to the beach"
     ],
     "images": [
-      "/public-objects/images/eco-private-ungasan-01.jpg",
+      "/public-objects/images/eco-private-ungasan-02.jpg",
       "/public-objects/images/eco-private-ungasan-12.jpg",
       "/public-objects/images/eco-private-ungasan-14.jpg",
       "/public-objects/images/eco-private-ungasan-16.jpg",
-      "/public-objects/images/eco-private-ungasan-02.jpg",
+      "/public-objects/images/eco-private-ungasan-01.jpg",
       "/public-objects/images/eco-private-ungasan-06.jpg",
       "/public-objects/images/eco-private-ungasan-09.jpg",
       "/public-objects/images/eco-private-ungasan-20.jpg",
@@ -2218,13 +2218,13 @@
       "/public-objects/images/eco-private-ungasan-08.jpg",
       "/public-objects/images/eco-private-ungasan-04.jpg"
     ],
-    "cardImage": "/public-objects/images/eco-private-ungasan-01.jpg",
+    "cardImage": "/public-objects/images/eco-private-ungasan-02.jpg",
     "topGallery": [
-      "/public-objects/images/eco-private-ungasan-01.jpg",
+      "/public-objects/images/eco-private-ungasan-02.jpg",
       "/public-objects/images/eco-private-ungasan-12.jpg",
       "/public-objects/images/eco-private-ungasan-14.jpg",
       "/public-objects/images/eco-private-ungasan-16.jpg",
-      "/public-objects/images/eco-private-ungasan-02.jpg"
+      "/public-objects/images/eco-private-ungasan-01.jpg"
     ],
     "photoGroups": [
       {
@@ -2317,7 +2317,7 @@
     "galleryUrl": "/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/",
     "lat": -8.81994,
     "lng": 115.17511,
-    "updatedAt": "2026-07-30"
+    "updatedAt": "2026-07-31"
   },
   {
     "id": "own-eco-teak-2br-ungasan",
