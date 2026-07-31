@@ -73,6 +73,25 @@ h1 .it{font-style:italic;font-weight:400}
 .ft-in a:hover{text-decoration:underline;text-underline-offset:3px}
 .ft-nav{display:flex;gap:18px;flex-wrap:wrap}
 </style>
+<style id="thb-fav-css">
+.thb-fav{position:absolute;top:10px;right:10px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.92);border:none;border-radius:50%;cursor:pointer;padding:0;z-index:4;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 2px 8px rgba(0,0,0,.13);touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:background .18s,transform .18s}
+.thb-fav svg{width:17px;height:17px;fill:none;stroke:#0a0a0a;stroke-width:2;transition:fill .18s,stroke .18s,transform .18s}
+@media(hover:hover){.thb-fav:hover{background:#fff;transform:scale(1.08)}}
+.thb-fav[aria-pressed="true"] svg{fill:#e11d48;stroke:#e11d48}
+.thb-fav.thb-pop svg{animation:thbHeartPop .38s cubic-bezier(.2,.9,.3,1.4)}
+@keyframes thbHeartPop{0%{transform:scale(1)}42%{transform:scale(1.42)}100%{transform:scale(1)}}
+.thb-acw{position:relative;display:flex;flex:0 0 76vw;max-width:300px;scroll-snap-align:start}
+.thb-acw>.thb-acard{flex:1 1 auto;max-width:none}
+@media(min-width:640px){.thb-acw{flex:0 0 300px}}
+[data-fav-link]{position:relative;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:inherit}
+[data-fav-badge]{position:absolute;top:-1px;right:-1px;min-width:17px;height:17px;padding:0 4px;box-sizing:border-box;border-radius:999px;background:#e11d48;color:#fff;font-family:Inter,system-ui,sans-serif;font-size:10.5px;font-weight:700;line-height:17px;text-align:center;border:2px solid #fafaf7;display:none}
+[data-fav-link].thb-has svg{fill:#e11d48!important;stroke:#e11d48!important}
+[data-fav-link].thb-has [data-fav-badge]{display:block}
+#thbSavedToast{position:fixed;left:50%;transform:translateX(-50%) translateY(18px);bottom:calc(20px + env(safe-area-inset-bottom));z-index:95;display:flex;align-items:center;gap:12px;background:#0a0a0a;color:#fff;border-radius:999px;padding:11px 12px 11px 18px;font-family:Inter,system-ui,sans-serif;font-size:13.5px;font-weight:600;box-shadow:0 14px 40px rgba(0,0,0,.3);opacity:0;visibility:hidden;transition:opacity .22s ease,transform .22s ease,visibility .22s;max-width:92vw}
+#thbSavedToast.on{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+#thbSavedToast a{background:#fff;color:#0a0a0a;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;text-decoration:none;white-space:nowrap}
+@media(prefers-reduced-motion:reduce){.thb-fav.thb-pop svg{animation:none}#thbSavedToast{transition:none}}
+</style>
 </head>
 <body>
 
