@@ -17,3 +17,6 @@ thehost_checklist.html
 wrangler.jsonc
 .assetsignore
 .gitignore
+_to_delete/
+brand/_v*
+brand/_vm*
