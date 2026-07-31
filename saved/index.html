@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saved villas | The Host Bali</title>
+<meta name="description" content="Your shortlist of Bali villas managed by The Host Bali. Save the ones you like and send the whole list to our team on WhatsApp.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://thehostbali.com/saved/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#fafaf7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#0a0a0a;--off:#fafaf7;--paper:#f4f2ed;--line:#e6e3dc;--mut:#6b6b66;--rose:#e11d48}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--off);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+/* header */
+.hd{position:sticky;top:0;z-index:50;background:rgba(250,250,247,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd-in{max-width:1200px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.hostpill{display:inline-flex;align-items:center;border:1.5px solid rgba(10,10,10,.28);border-radius:999px;padding:7px 16px;font-family:'Fraunces',Georgia,serif;font-size:19px;text-decoration:none;white-space:nowrap}
+.hostpill em{font-style:italic;font-weight:400}
+.hostpill b{font-weight:700;letter-spacing:.09em}
+.hd nav{display:flex;align-items:center;gap:22px}
+.hm{font-size:14px;font-weight:500;text-decoration:none;color:var(--ink);white-space:nowrap}
+.hm:hover{text-decoration:underline;text-underline-offset:4px}
+.cta{height:44px;display:inline-flex;align-items:center;gap:8px;background:#22c55e;color:#fff;border-radius:999px;padding:0 18px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap}
+.cta:hover{background:#16a34a}
+@media(max-width:720px){.hd nav a.hm{display:none}.hd nav{gap:10px}.cta{padding:0 14px}}
+/* hero */
+.hero{padding:44px 0 22px}
+.kicker{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#a8a49b;margin-bottom:12px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(30px,5.6vw,50px);font-weight:700;letter-spacing:-.02em;line-height:1.08}
+h1 .it{font-style:italic;font-weight:400}
+.lead{margin-top:14px;font-size:16px;color:var(--mut);max-width:620px}
+/* toolbar */
+.tools{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:26px 0 20px}
+.btn-wa{display:inline-flex;align-items:center;gap:9px;background:#22c55e;color:#fff;border:none;border-radius:999px;padding:13px 22px;font-family:'Inter',sans-serif;font-size:14.5px;font-weight:700;cursor:pointer;text-decoration:none}
+.btn-wa:hover{background:#16a34a}
+.btn-ghost{background:none;border:none;color:var(--mut);font-family:'Inter',sans-serif;font-size:14px;font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:12px 4px}
+.btn-ghost:hover{color:var(--ink)}
+.cnt{font-size:14px;color:var(--mut);margin-right:auto}
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding-bottom:64px}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
+@media(max-width:600px){.grid{grid-template-columns:1fr;gap:16px}}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;text-decoration:none;color:var(--ink);display:block;transition:box-shadow .18s,transform .18s}
+@media(hover:hover){.card:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.09)}}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--paper)}
+.card .in{padding:15px 16px 17px}
+.card .t{font-family:'Fraunces',Georgia,serif;font-size:16.5px;font-weight:600;line-height:1.25;margin-bottom:7px}
+.card .a{font-size:12.5px;color:var(--mut);margin-bottom:4px}
+.card .m{font-size:13px;color:var(--mut)}
+.rm{position:absolute;top:10px;right:10px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.94);border:none;border-radius:50%;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.14);z-index:3;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.rm svg{width:17px;height:17px;fill:var(--rose);stroke:var(--rose);stroke-width:2}
+@media(hover:hover){.rm:hover{background:#fff;transform:scale(1.08)}}
+/* empty */
+.empty{border:1.5px dashed var(--line);border-radius:26px;padding:56px 28px;text-align:center;margin-bottom:64px;background:#fff}
+.empty svg{width:46px;height:46px;fill:none;stroke:#cfcbc2;stroke-width:1.6;margin-bottom:18px}
+.empty h2{font-family:'Fraunces',Georgia,serif;font-size:24px;font-weight:700;margin-bottom:10px}
+.empty p{color:var(--mut);font-size:15px;max-width:430px;margin:0 auto 22px}
+.empty a.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;border-radius:999px;padding:13px 24px;font-size:14.5px;font-weight:700;text-decoration:none}
+.empty a.btn:hover{background:#2b2b28}
+/* footer */
+.ft{border-top:1px solid var(--line);background:#f4f2ed}
+.ft-in{max-width:1200px;margin:0 auto;padding:26px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.ft-in a{text-decoration:none}
+.ft-in a:hover{text-decoration:underline;text-underline-offset:3px}
+.ft-nav{display:flex;gap:18px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="hd">
+  <div class="hd-in">
+    <a href="/" data-hostpill class="hostpill" aria-label="The Host Bali"><em>The</em>&nbsp;<b>HOST</b></a>
+    <nav>
+      <a href="/property-rental/" class="hm">Villas</a>
+      <a href="/villa-management/" class="hm">Villa Management</a>
+      <a href="/about/" class="hm">About</a>
+      <a href="/contacts/" class="hm">Contacts</a>
+      <a href="/saved/" data-fav-link aria-label="Saved villas" style="width:40px;height:40px;border-radius:50%;flex-shrink:0">
+        <svg style="width:20px;height:20px;fill:none;stroke:#0a0a0a;stroke-width:1.8" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span data-fav-badge>0</span>
+      </a>
+      <a class="cta" href="https://wa.me/6281239081021" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2C6.6 2.2 2.2 6.6 2.2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm5.5 12.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.1 3.3 5.2 4.5 3.1 1.2 3.5 1 4.1.9.6-.1 2-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.2-.6-.4z"/></svg>
+        WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <p class="kicker">Your shortlist</p>
+  <h1>Saved villas,<br><span class="it">all in one place.</span></h1>
+  <p class="lead">Tap the heart on any villa and it lands here. Nothing is sent anywhere &mdash; the list lives in this browser until you decide to share it with us.</p>
+</div>
+
+<div class="wrap">
+  <div class="tools" id="tools" hidden>
+    <span class="cnt" id="cnt"></span>
+    <a class="btn-wa" id="waBtn" href="#" rel="noopener">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2C6.6 2.2 2.2 6.6 2.2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm5.5 12.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.1 3.3 5.2 4.5 3.1 1.2 3.5 1 4.1.9.6-.1 2-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.2-.6-.4z"/></svg>
+      Send this list to our team
+    </a>
+    <button class="btn-ghost" id="clearBtn" type="button">Clear all</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="empty" id="empty" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <h2>Nothing saved yet</h2>
+    <p>Browse the villas and tap the heart on the ones you like. They&rsquo;ll show up here so you can compare them side by side and send the whole shortlist to us in one message.</p>
+    <a class="btn" href="/property-rental/">Browse all villas
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</div>
+
+<footer class="ft">
+  <div class="ft-in">
+    <span>&copy; <span id="yr">2026</span> The Host Bali &middot; villas we run ourselves in Bali</span>
+    <nav class="ft-nav">
+      <a href="/property-rental/">All villas</a>
+      <a href="/villa-management/">Villa management</a>
+      <a href="/about/">About</a>
+      <a href="/contacts/">Contacts</a>
+      <a href="/terms/">Terms</a>
+      <a href="/privacy/">Privacy</a>
+    </nav>
+  </div>
+</footer>
+
+<script defer src="/thb-fav.js"></script>
+<script>
+(function(){
+  var WA = 'https://wa.me/6281239081021?text=';
+  var grid = document.getElementById('grid'),
+      empty = document.getElementById('empty'),
+      tools = document.getElementById('tools'),
+      cnt = document.getElementById('cnt'),
+      waBtn = document.getElementById('waBtn'),
+      clearBtn = document.getElementById('clearBtn');
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  function card(v){
+    var img = v.i ? '<img src="'+esc(v.i)+'" alt="'+esc(v.t)+'" loading="lazy" decoding="async" width="600" height="450">'
+                  : '<div style="width:100%;aspect-ratio:4/3;background:#f4f2ed"></div>';
+    return '<div class="card-wrap" style="position:relative">'
+      + '<a class="card" href="'+esc(v.u)+'">' + img
+      + '<div class="in"><p class="t">'+esc(v.t)+'</p>'
+      + (v.a ? '<p class="a">'+esc(v.a)+', Bali</p>' : '')
+      + (v.m ? '<p class="m">'+esc(v.m)+'</p>' : '')
+      + '</div></a>'
+      + '<button class="rm" type="button" data-rm="'+esc(v.u)+'" aria-label="Remove from saved">'
+      + '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+      + '</button></div>';
+  }
+
+  function render(){
+    var list = (window.THBSaved ? window.THBSaved.all() : []);
+    var n = list.length;
+    grid.innerHTML = list.map(card).join('');
+    empty.hidden = n > 0;
+    tools.hidden = n === 0;
+    cnt.textContent = n + (n === 1 ? ' villa saved' : ' villas saved');
+    var lines = list.map(function(v, k){
+      return (k+1) + '. ' + v.t + ' — https://thehostbali.com' + v.u;
+    }).join('\n');
+    waBtn.href = WA + encodeURIComponent(
+      'Hi The Host Bali! These are the villas on my shortlist:\n\n' + lines +
+      '\n\nCould you check availability and pricing?');
+  }
+
+  grid.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-rm]') : null;
+    if (!b) return;
+    e.preventDefault(); e.stopPropagation();
+    if (window.THBSaved) window.THBSaved.remove(b.getAttribute('data-rm'));
+    render();
+  });
+
+  clearBtn.addEventListener('click', function(){
+    if (!window.THBSaved) return;
+    if (window.confirm('Remove all saved villas?')) { window.THBSaved.clear(); render(); }
+  });
+
+  document.addEventListener('thb-saved-change', render);
+  window.addEventListener('pageshow', render);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render);
+  else render();
+})();
+</script>
+</body>
+</html>

@@ -326,9 +326,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           </svg>
           <span id="navMicRing" style="display:none;position:absolute;inset:-4px;border-radius:50%;border:2px solid #0a0a0a;animation:navMicPulse 1s ease-out infinite;opacity:0.5"></span>
         </button>
-        <button aria-label="Favorites" class="w-10 h-10 hidden sm:flex items-center justify-center rounded-full hover:bg-paper transition">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </button>
+        <a href="/saved/" data-fav-link aria-label="Saved villas" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-paper transition"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span data-fav-badge>0</span></a>
         <a href="/villa-management/" class="btn-primary mobile-menu-link hidden sm:inline-flex items-center gap-2"> List your property <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg> </a>
         <!-- Mobile burger -->
         <button id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full hover:bg-paper transition">
@@ -341,6 +339,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
   <!-- Mobile menu panel -->
   <div id="mobileMenu" class="hidden lg:hidden bg-off border-t border-line px-6 py-6">
     <div class="flex flex-col gap-1 text-[16px] font-medium">
+<a href="/saved/" class="thb-saved-item py-3 border-b border-line" style="display:flex;align-items:center;justify-content:space-between;color:#e11d48">Saved villas <span data-fav-count style="display:none;background:#e11d48;color:#fff;border-radius:999px;min-width:20px;height:20px;line-height:20px;text-align:center;font-size:11.5px;font-weight:700;padding:0 6px"></span></a>
       <a href="/property-rental/" class="py-3 border-b border-line">Villas</a>
       <a href="#" data-ai-open class="py-3 border-b border-line">AI Search</a>
         <a href="/villa-management/" class="py-3 border-b border-line mobile-menu-link">Villa Management</a>
@@ -619,7 +618,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
     <a href="/property-rental/" class="thb-arh"><h3>Your perfect matches <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></h3><span class="cnt">6 villas</span></a>
   </div>
   <div class="max-w-[1400px] mx-auto"><div class="thb-arow">
-    <a class="thb-acard" href="/villa/canggu/the-wave-6br-beachside-villa-canggu/">
+    <div class="thb-acw"><a class="thb-acard" href="/villa/canggu/the-wave-6br-beachside-villa-canggu/">
       <img src="/public-objects/images/the-wave-canggu-01.jpg" alt="Villa The Wave — Beachside 6BR Villa in Canggu" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Villa The Wave — Beachside 6BR Villa in Canggu</p>
@@ -627,8 +626,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">6 bed &middot; 6.5 bath &middot; 12 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
-    <a class="thb-acard" href="/villa/sanur/villa-black-pool-4br-sanur/">
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/canggu/the-wave-6br-beachside-villa-canggu/" data-t="Villa The Wave — Beachside 6BR Villa in Canggu" data-i="/public-objects/images/the-wave-canggu-01.jpg" data-m="6 bed · 6.5 bath · 12 guests" data-a="Canggu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="thb-acw"><a class="thb-acard" href="/villa/sanur/villa-black-pool-4br-sanur/">
       <img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — Family 4BR Villa with Big Pool" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Villa Black Pool — Family 4BR Villa with Big Pool</p>
@@ -636,8 +635,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">4 bed &middot; 4 bath &middot; 8 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
-    <a class="thb-acard" href="/villa/sanur/garden-pool-villa-4br-sanur/">
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/villa-black-pool-4br-sanur/" data-t="Villa Black Pool — Family 4BR Villa with Big Pool" data-i="/public-objects/images/villa-black-pool-11.jpg" data-m="4 bed · 4 bath · 8 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="thb-acw"><a class="thb-acard" href="/villa/sanur/garden-pool-villa-4br-sanur/">
       <img src="/public-objects/images/sanur-garden-pool-4br-34.jpg" alt="Sanur Garden Pool Villa — Family 4BR near Mertasari Beach" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Sanur Garden Pool Villa — Family 4BR near Mertasari Beach</p>
@@ -645,8 +644,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">4 bed &middot; 4.5 bath &middot; 8 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
-    <a class="thb-acard" href="/villa/premier-umalas-16-3br-pool-townhouse/">
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/garden-pool-villa-4br-sanur/" data-t="Sanur Garden Pool Villa — Family 4BR near Mertasari Beach" data-i="/public-objects/images/sanur-garden-pool-4br-34.jpg" data-m="4 bed · 4.5 bath · 8 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="thb-acw"><a class="thb-acard" href="/villa/premier-umalas-16-3br-pool-townhouse/">
       <img src="/public-objects/images/premier-umalas-16-08.jpg" alt="Premier Umalas 16 — Stylish 3BR Pool Townhouse" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Premier Umalas 16 — Stylish 3BR Pool Townhouse</p>
@@ -654,8 +653,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">3 bed &middot; 3 bath &middot; 6 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
-    <a class="thb-acard" href="/villa/sanur/lucky-lily-3br-pool-villa-sanur/">
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/premier-umalas-16-3br-pool-townhouse/" data-t="Premier Umalas 16 — Stylish 3BR Pool Townhouse" data-i="/public-objects/images/premier-umalas-16-08.jpg" data-m="3 bed · 3 bath · 6 guests" data-a="Umalas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="thb-acw"><a class="thb-acard" href="/villa/sanur/lucky-lily-3br-pool-villa-sanur/">
       <img src="/public-objects/images/lucky-lily-sanur-3br-villa-01.jpg" alt="Lucky Lily 3BR Pool Villa in Sanur" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Lucky Lily 3BR Pool Villa in Sanur</p>
@@ -663,8 +662,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">3 bed &middot; 3.5 bath &middot; 6 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
-    <a class="thb-acard" href="/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/">
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/lucky-lily-3br-pool-villa-sanur/" data-t="Lucky Lily 3BR Pool Villa in Sanur" data-i="/public-objects/images/lucky-lily-sanur-3br-villa-01.jpg" data-m="3 bed · 3.5 bath · 6 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="thb-acw"><a class="thb-acard" href="/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/">
       <img src="/public-objects/images/villa-kesari-4-sanur-01.jpg" alt="Villa Kesari 4 — Family 3BR Pool Villa in Sanur" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Villa Kesari 4 — Family 3BR Pool Villa in Sanur</p>
@@ -672,14 +671,14 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">3 bed &middot; 3 bath &middot; 6 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/" data-t="Villa Kesari 4 — Family 3BR Pool Villa in Sanur" data-i="/public-objects/images/villa-kesari-4-sanur-01.jpg" data-m="3 bed · 3 bath · 6 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
   </div></div>
   <div style="height:26px"></div>
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
     <a href="/villas/sanur/" class="thb-arh"><h3>Popular villas in Sanur <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></h3><span class="cnt">6 villas</span></a>
   </div>
   <div class="max-w-[1400px] mx-auto"><div class="thb-arow">
-    <a class="thb-acard" href="/villa/sanur/villa-black-pool-4br-sanur/">
+    <div class="thb-acw"><a class="thb-acard" href="/villa/sanur/villa-black-pool-4br-sanur/">
       <img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — Family 4BR Villa with Big Pool" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Villa Black Pool — Family 4BR Villa with Big Pool</p>
@@ -687,8 +686,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">4 bed &middot; 4 bath &middot; 8 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
-    <a class="thb-acard" href="/villa/sanur/stylish-2br-pool-townhouse-sanur/">
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/villa-black-pool-4br-sanur/" data-t="Villa Black Pool — Family 4BR Villa with Big Pool" data-i="/public-objects/images/villa-black-pool-11.jpg" data-m="4 bed · 4 bath · 8 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="thb-acw"><a class="thb-acard" href="/villa/sanur/stylish-2br-pool-townhouse-sanur/">
       <img src="/public-objects/images/sanur-2br-townhouse-29.jpg" alt="Stylish 2BR Pool Townhouse in Sanur" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Stylish 2BR Pool Townhouse in Sanur</p>
@@ -696,8 +695,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">2 bed &middot; 2.5 bath &middot; 4 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
-    <a class="thb-acard" href="/villa/sanur/modern-2br-pool-townhouse-sanur/">
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/stylish-2br-pool-townhouse-sanur/" data-t="Stylish 2BR Pool Townhouse in Sanur" data-i="/public-objects/images/sanur-2br-townhouse-29.jpg" data-m="2 bed · 2.5 bath · 4 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="thb-acw"><a class="thb-acard" href="/villa/sanur/modern-2br-pool-townhouse-sanur/">
       <img src="/public-objects/images/sanur-modern-2br-townhouse-28.jpg" alt="Modern 2BR Pool Townhouse in Sanur" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Modern 2BR Pool Townhouse in Sanur</p>
@@ -705,8 +704,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">2 bed &middot; 2.5 bath &middot; 4 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
-    <a class="thb-acard" href="/villa/sanur/lucky-lily-3br-pool-villa-sanur/">
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/modern-2br-pool-townhouse-sanur/" data-t="Modern 2BR Pool Townhouse in Sanur" data-i="/public-objects/images/sanur-modern-2br-townhouse-28.jpg" data-m="2 bed · 2.5 bath · 4 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="thb-acw"><a class="thb-acard" href="/villa/sanur/lucky-lily-3br-pool-villa-sanur/">
       <img src="/public-objects/images/lucky-lily-sanur-3br-villa-01.jpg" alt="Lucky Lily 3BR Pool Villa in Sanur" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Lucky Lily 3BR Pool Villa in Sanur</p>
@@ -714,8 +713,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">3 bed &middot; 3.5 bath &middot; 6 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
-    <a class="thb-acard" href="/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/">
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/lucky-lily-3br-pool-villa-sanur/" data-t="Lucky Lily 3BR Pool Villa in Sanur" data-i="/public-objects/images/lucky-lily-sanur-3br-villa-01.jpg" data-m="3 bed · 3.5 bath · 6 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="thb-acw"><a class="thb-acard" href="/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/">
       <img src="/public-objects/images/villa-kesari-4-sanur-01.jpg" alt="Villa Kesari 4 — Family 3BR Pool Villa in Sanur" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Villa Kesari 4 — Family 3BR Pool Villa in Sanur</p>
@@ -723,8 +722,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">3 bed &middot; 3 bath &middot; 6 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
-    <a class="thb-acard" href="/villa/sanur/garden-pool-villa-4br-sanur/">
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/" data-t="Villa Kesari 4 — Family 3BR Pool Villa in Sanur" data-i="/public-objects/images/villa-kesari-4-sanur-01.jpg" data-m="3 bed · 3 bath · 6 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="thb-acw"><a class="thb-acard" href="/villa/sanur/garden-pool-villa-4br-sanur/">
       <img src="/public-objects/images/sanur-garden-pool-4br-34.jpg" alt="Sanur Garden Pool Villa — Family 4BR near Mertasari Beach" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Sanur Garden Pool Villa — Family 4BR near Mertasari Beach</p>
@@ -732,14 +731,14 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">4 bed &middot; 4.5 bath &middot; 8 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/garden-pool-villa-4br-sanur/" data-t="Sanur Garden Pool Villa — Family 4BR near Mertasari Beach" data-i="/public-objects/images/sanur-garden-pool-4br-34.jpg" data-m="4 bed · 4.5 bath · 8 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
   </div></div>
   <div style="height:26px"></div>
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
     <a href="/villas/ungasan/" class="thb-arh"><h3>Popular villas in Ungasan <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></h3><span class="cnt">3 villas</span></a>
   </div>
   <div class="max-w-[1400px] mx-auto"><div class="thb-arow">
-    <a class="thb-acard" href="/villa/ungasan/eco-private-1br-pool-villa-ungasan/">
+    <div class="thb-acw"><a class="thb-acard" href="/villa/ungasan/eco-private-1br-pool-villa-ungasan/">
       <img src="/public-objects/images/eco-private-ungasan-01.jpg" alt="Eco Private — Teak 1BR Pool Villa in Ungasan" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Eco Private — Teak 1BR Pool Villa in Ungasan</p>
@@ -747,8 +746,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">1 bed &middot; 1 bath &middot; 2 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
-    <a class="thb-acard" href="/villa/ungasan/eco-teak-2br-pool-villa-ungasan/">
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/ungasan/eco-private-1br-pool-villa-ungasan/" data-t="Eco Private — Teak 1BR Pool Villa in Ungasan" data-i="/public-objects/images/eco-private-ungasan-01.jpg" data-m="1 bed · 1 bath · 2 guests" data-a="Ungasan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="thb-acw"><a class="thb-acard" href="/villa/ungasan/eco-teak-2br-pool-villa-ungasan/">
       <img src="/public-objects/images/eco-teak-2br-ungasan-23.jpg" alt="Eco Teak — 2BR Pool Villa in Ungasan" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Eco Teak — 2BR Pool Villa in Ungasan</p>
@@ -756,8 +755,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">2 bed &middot; 2 bath &middot; 4 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
-    <a class="thb-acard" href="/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/">
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/ungasan/eco-teak-2br-pool-villa-ungasan/" data-t="Eco Teak — 2BR Pool Villa in Ungasan" data-i="/public-objects/images/eco-teak-2br-ungasan-23.jpg" data-m="2 bed · 2 bath · 4 guests" data-a="Ungasan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="thb-acw"><a class="thb-acard" href="/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/">
       <img src="/public-objects/images/exclusive-1br-ungasan-12.jpg" alt="Eco Exclusive — Teak 1BR Pool Villa in Ungasan" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Eco Exclusive — Teak 1BR Pool Villa in Ungasan</p>
@@ -765,14 +764,14 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">1 bed &middot; 1 bath &middot; 2 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/" data-t="Eco Exclusive — Teak 1BR Pool Villa in Ungasan" data-i="/public-objects/images/exclusive-1br-ungasan-12.jpg" data-m="1 bed · 1 bath · 2 guests" data-a="Ungasan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
   </div></div>
   <div style="height:26px"></div>
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
     <a href="/villas/umalas/" class="thb-arh"><h3>Popular villas in Umalas <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></h3><span class="cnt">2 villas</span></a>
   </div>
   <div class="max-w-[1400px] mx-auto"><div class="thb-arow">
-    <a class="thb-acard" href="/villa/premier-umalas-16-3br-pool-townhouse/">
+    <div class="thb-acw"><a class="thb-acard" href="/villa/premier-umalas-16-3br-pool-townhouse/">
       <img src="/public-objects/images/premier-umalas-16-08.jpg" alt="Premier Umalas 16 — Stylish 3BR Pool Townhouse" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Premier Umalas 16 — Stylish 3BR Pool Townhouse</p>
@@ -780,8 +779,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">3 bed &middot; 3 bath &middot; 6 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
-    <a class="thb-acard" href="/villa/premier-umalas-17-2br-pool-home/">
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/premier-umalas-16-3br-pool-townhouse/" data-t="Premier Umalas 16 — Stylish 3BR Pool Townhouse" data-i="/public-objects/images/premier-umalas-16-08.jpg" data-m="3 bed · 3 bath · 6 guests" data-a="Umalas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="thb-acw"><a class="thb-acard" href="/villa/premier-umalas-17-2br-pool-home/">
       <img src="/public-objects/images/premier-umalas-17-24.jpg" alt="Premier Umalas 17 — Stylish 2BR Private Pool Home" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Premier Umalas 17 — Stylish 2BR Private Pool Home</p>
@@ -789,14 +788,14 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">2 bed &middot; 2 bath &middot; 4 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/premier-umalas-17-2br-pool-home/" data-t="Premier Umalas 17 — Stylish 2BR Private Pool Home" data-i="/public-objects/images/premier-umalas-17-24.jpg" data-m="2 bed · 2 bath · 4 guests" data-a="Umalas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
   </div></div>
   <div style="height:26px"></div>
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
     <a href="/villas/canggu/" class="thb-arh"><h3>Popular villas in Canggu <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></h3><span class="cnt">1 villa</span></a>
   </div>
   <div class="max-w-[1400px] mx-auto"><div class="thb-arow">
-    <a class="thb-acard" href="/villa/canggu/the-wave-6br-beachside-villa-canggu/">
+    <div class="thb-acw"><a class="thb-acard" href="/villa/canggu/the-wave-6br-beachside-villa-canggu/">
       <img src="/public-objects/images/the-wave-canggu-01.jpg" alt="Villa The Wave — Beachside 6BR Villa in Canggu" loading="lazy" decoding="async" width="600" height="450">
       <div class="in">
         <p class="t">Villa The Wave — Beachside 6BR Villa in Canggu</p>
@@ -804,7 +803,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="m">6 bed &middot; 6.5 bath &middot; 12 guests</p>
         <p class="p">On request <span>&middot; fast reply on WhatsApp</span></p>
       </div>
-    </a>
+    </a><button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/canggu/the-wave-6br-beachside-villa-canggu/" data-t="Villa The Wave — Beachside 6BR Villa in Canggu" data-i="/public-objects/images/the-wave-canggu-01.jpg" data-m="6 bed · 6.5 bath · 12 guests" data-a="Canggu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
   </div></div>
   <div style="height:26px"></div>
 </section>
@@ -1554,6 +1553,7 @@ try{if(new URLSearchParams(location.search).get('ai')&&document.getElementById('
  function up(){pill.classList.toggle('thb-pill-on', window.scrollY > window.innerHeight*0.6);}
  up();window.addEventListener('scroll',up,{passive:true});})();
 </script>
+<script defer src="/thb-fav.js"></script>
 </body>
 </html>
 

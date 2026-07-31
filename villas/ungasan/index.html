@@ -609,9 +609,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <span id="navMicRing" style="display:none;position:absolute;inset:-4px;border-radius:50%;border:2px solid #0a0a0a;animation:navMicPulse 1s ease-out infinite;opacity:0.5"></span>
       </button>
       <!-- Favorites -->
-      <button style="width:40px;height:40px;border-radius:50%;background:transparent;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center">
-        <svg style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-      </button>
+      <a href="/saved/" data-fav-link aria-label="Saved villas" style="width:40px;height:40px;border-radius:50%;flex-shrink:0"><svg style="width:20px;height:20px;fill:none;stroke:#0a0a0a;stroke-width:1.8" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span data-fav-badge>0</span></a>
       <!-- CTA -->
       <a href="https://wa.me/6281239081021" class="btn-primary" style="font-size:13px;padding:10px 20px">
         Contact Concierge
@@ -621,6 +619,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
   </div>
 </nav>
 <div id="thbMobileMenu" hidden>
+  <a href="/saved/" class="thb-saved-item" style="color:#e11d48">Saved villas <span data-fav-count style="display:none"></span></a>
+  
   <a href="/property-rental/">All villas <span>12</span></a>
   <a href="/villas/sanur/">Sanur <span>6</span></a>
   <a href="/villas/canggu/">Canggu <span>1</span></a>
@@ -888,7 +888,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
             <picture><source srcset="/public-objects/images/eco-teak-2br-ungasan-23.avif" type="image/avif"><img src="/public-objects/images/eco-teak-2br-ungasan-23.jpg" alt="Eco Teak — 2BR Pool Villa in Ungasan — Ungasan villa" loading="lazy" decoding="async" width="1200" height="800"></picture>
             <span class="badge">Ungasan</span>
             <span class="badge-type">Villa</span>
-            <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/ungasan/eco-teak-2br-pool-villa-ungasan/" data-t="Eco Teak — 2BR Pool Villa in Ungasan" data-i="/public-objects/images/eco-teak-2br-ungasan-23.jpg" data-m="2 bed · 2 bath · 4 guests" data-a="Ungasan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
           <div style="padding:14px">
             <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Eco Teak — 2BR Pool Villa in Ungasan</p>
@@ -906,7 +906,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
             <picture><source srcset="/public-objects/images/eco-private-ungasan-01.avif" type="image/avif"><img src="/public-objects/images/eco-private-ungasan-01.jpg" alt="Eco Private — Teak 1BR Pool Villa in Ungasan — Ungasan villa" loading="lazy" decoding="async" width="1200" height="800"></picture>
             <span class="badge">Ungasan</span>
             <span class="badge-type">Villa</span>
-            <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/ungasan/eco-private-1br-pool-villa-ungasan/" data-t="Eco Private — Teak 1BR Pool Villa in Ungasan" data-i="/public-objects/images/eco-private-ungasan-01.jpg" data-m="1 bed · 1 bath · 2 guests" data-a="Ungasan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
           <div style="padding:14px">
             <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Eco Private — Teak 1BR Pool Villa in Ungasan</p>
@@ -924,7 +924,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
             <picture><source srcset="/public-objects/images/exclusive-1br-ungasan-12.avif" type="image/avif"><img src="/public-objects/images/exclusive-1br-ungasan-12.jpg" alt="Eco Exclusive — Teak 1BR Pool Villa in Ungasan — Ungasan villa" loading="lazy" decoding="async" width="1200" height="800"></picture>
             <span class="badge">Ungasan</span>
             <span class="badge-type">Villa</span>
-            <button class="heart-btn" onclick="event.stopPropagation();this.classList.toggle('liked')"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/" data-t="Eco Exclusive — Teak 1BR Pool Villa in Ungasan" data-i="/public-objects/images/exclusive-1br-ungasan-12.jpg" data-m="1 bed · 1 bath · 2 guests" data-a="Ungasan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
           <div style="padding:14px">
             <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Eco Exclusive — Teak 1BR Pool Villa in Ungasan</p>
@@ -1761,6 +1761,11 @@ try{if(new URLSearchParams(location.search).get('ai')&&document.getElementById('
   window.thbAskAI=function(){thbAioOpen();};
 })();
 </script>
+<style id="thb-savedmenu-css">
+#thbMobileMenu .thb-saved-item{display:flex;align-items:center;justify-content:space-between}
+#thbMobileMenu .thb-saved-item [data-fav-count]{background:#e11d48;color:#fff;border-radius:999px;min-width:20px;height:20px;line-height:20px;text-align:center;font-size:11.5px;font-weight:700;padding:0 6px;margin:0}
+</style>
+<script defer src="/thb-fav.js"></script>
 </body>
 </html>
 
