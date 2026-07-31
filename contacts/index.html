@@ -93,9 +93,49 @@ h1 .it{font-style:italic;color:#5F5340}
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2C6.6 2.2 2.2 6.6 2.2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm5.5 12.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.1 3.3 5.2 4.5 3.1 1.2 3.5 1 4.1.9.6-.1 2-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.2-.6-.4z"/></svg>
         WhatsApp
       </a>
-    </nav>
+    <button id="thbBurger" type="button" aria-label="Open menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="thb-b1" d="M4 7h16"/><path class="thb-b2" d="M4 12h16"/><path class="thb-b3" d="M4 17h16"/></svg></button>
+</nav>
   </div>
 </header>
+<style id="thb-vmenu-css">
+#thbBurger{display:none;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:1px solid #e6e3dc;background:rgba(255,255,255,.92);color:#0a0a0a;cursor:pointer;flex-shrink:0;padding:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+@media(max-width:720px){#thbBurger{display:inline-flex}}
+#thbBurger svg path{transition:transform .22s ease,opacity .18s ease;transform-origin:center}
+#thbBurger[aria-expanded="true"] .thb-b1{transform:translateY(5px) rotate(45deg)}
+#thbBurger[aria-expanded="true"] .thb-b2{opacity:0}
+#thbBurger[aria-expanded="true"] .thb-b3{transform:translateY(-5px) rotate(-45deg)}
+#thbMenuBackdrop{position:fixed;inset:0;top:68px;background:rgba(10,10,10,.34);z-index:69;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+#thbMobileMenu{position:fixed;top:68px;left:0;right:0;z-index:70;background:#fafaf7;border-bottom:1px solid #e6e3dc;box-shadow:0 20px 44px rgba(0,0,0,.16);max-height:calc(100dvh - 68px);overflow-y:auto;-webkit-overflow-scrolling:touch;font-family:'Inter',sans-serif}
+#thbMobileMenu[hidden],#thbMenuBackdrop[hidden]{display:none}
+#thbMobileMenu a{display:block;padding:15px 22px;border-bottom:1px solid #eeece6;font-size:15px;font-weight:600;color:#0a0a0a;text-decoration:none}
+#thbMobileMenu a:last-child{border-bottom:none}
+#thbMobileMenu a span{color:#b0ada6;font-weight:400;font-size:13px;margin-left:6px}
+body.thb-menu-open{overflow:hidden}
+</style>
+<div id="thbMenuBackdrop" hidden></div>
+<div id="thbMobileMenu" hidden>
+  <a href="/property-rental/">All villas <span>12</span></a>
+  <a href="/villas/sanur/">Sanur <span>6</span></a>
+  <a href="/villas/canggu/">Canggu <span>1</span></a>
+  <a href="/villas/umalas/">Umalas <span>2</span></a>
+  <a href="/villas/ungasan/">Ungasan <span>3</span></a>
+  <a href="/villa-management/">Villa management</a>
+  <a href="/about/">About us</a>
+  <a href="/contacts/">Contacts</a>
+  <a href="https://wa.me/6281239081021" rel="noopener" style="color:#0a7d43">WhatsApp &mdash; Contact Concierge</a>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('thbBurger'),m=document.getElementById('thbMobileMenu'),bd=document.getElementById('thbMenuBackdrop');
+  if(!b||!m||!bd)return;
+  function set(open){m.hidden=!open;bd.hidden=!open;b.setAttribute('aria-expanded',open?'true':'false');document.body.classList.toggle('thb-menu-open',open);}
+  b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();set(m.hidden);});
+  bd.addEventListener('click',function(){set(false);});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)set(false);});
+})();
+</script>
+
 
 <div class="hero">
   <div class="wrap">

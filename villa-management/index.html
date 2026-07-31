@@ -145,9 +145,49 @@ details .a{padding:0 20px 18px;color:#55524b;font-size:14px;line-height:1.65}
       <a class="cta" href="https://wa.me/6281239081021?text=Hi!%20I%20own%20a%20villa%20in%20Bali%20and%20want%20to%20discuss%20management." rel="noopener">List your property
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
       </a>
-    </nav>
+    <button id="thbBurger" type="button" aria-label="Open menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="thb-b1" d="M4 7h16"/><path class="thb-b2" d="M4 12h16"/><path class="thb-b3" d="M4 17h16"/></svg></button>
+</nav>
   </div>
 </header>
+<style id="thb-vmenu-css">
+#thbBurger{display:none;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:1px solid #e6e3dc;background:rgba(255,255,255,.92);color:#0a0a0a;cursor:pointer;flex-shrink:0;padding:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+@media(max-width:720px){#thbBurger{display:inline-flex}}
+#thbBurger svg path{transition:transform .22s ease,opacity .18s ease;transform-origin:center}
+#thbBurger[aria-expanded="true"] .thb-b1{transform:translateY(5px) rotate(45deg)}
+#thbBurger[aria-expanded="true"] .thb-b2{opacity:0}
+#thbBurger[aria-expanded="true"] .thb-b3{transform:translateY(-5px) rotate(-45deg)}
+#thbMenuBackdrop{position:fixed;inset:0;top:68px;background:rgba(10,10,10,.34);z-index:69;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+#thbMobileMenu{position:fixed;top:68px;left:0;right:0;z-index:70;background:#fafaf7;border-bottom:1px solid #e6e3dc;box-shadow:0 20px 44px rgba(0,0,0,.16);max-height:calc(100dvh - 68px);overflow-y:auto;-webkit-overflow-scrolling:touch;font-family:'Inter',sans-serif}
+#thbMobileMenu[hidden],#thbMenuBackdrop[hidden]{display:none}
+#thbMobileMenu a{display:block;padding:15px 22px;border-bottom:1px solid #eeece6;font-size:15px;font-weight:600;color:#0a0a0a;text-decoration:none}
+#thbMobileMenu a:last-child{border-bottom:none}
+#thbMobileMenu a span{color:#b0ada6;font-weight:400;font-size:13px;margin-left:6px}
+body.thb-menu-open{overflow:hidden}
+</style>
+<div id="thbMenuBackdrop" hidden></div>
+<div id="thbMobileMenu" hidden>
+  <a href="/property-rental/">All villas <span>12</span></a>
+  <a href="/villas/sanur/">Sanur <span>6</span></a>
+  <a href="/villas/canggu/">Canggu <span>1</span></a>
+  <a href="/villas/umalas/">Umalas <span>2</span></a>
+  <a href="/villas/ungasan/">Ungasan <span>3</span></a>
+  <a href="/villa-management/">Villa management</a>
+  <a href="/about/">About us</a>
+  <a href="/contacts/">Contacts</a>
+  <a href="https://wa.me/6281239081021" rel="noopener" style="color:#0a7d43">WhatsApp &mdash; Contact Concierge</a>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('thbBurger'),m=document.getElementById('thbMobileMenu'),bd=document.getElementById('thbMenuBackdrop');
+  if(!b||!m||!bd)return;
+  function set(open){m.hidden=!open;bd.hidden=!open;b.setAttribute('aria-expanded',open?'true':'false');document.body.classList.toggle('thb-menu-open',open);}
+  b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();set(m.hidden);});
+  bd.addEventListener('click',function(){set(false);});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)set(false);});
+})();
+</script>
+
 
 <!-- HERO + VIDEO -->
 <div class="hero">
