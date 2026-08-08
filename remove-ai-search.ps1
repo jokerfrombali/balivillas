@@ -1,4 +1,4 @@
-# remove-ai-search.ps1
+﻿# remove-ai-search.ps1
 # Удаляет AI-поиск с сайта thebalihost:
 #  - панель aiSearchPanel (с переключателем AI/Classic)
 #  - ссылки и кнопки с data-ai-open
