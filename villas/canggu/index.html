@@ -434,7 +434,6 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
 .mega-trigger { position:relative; }
 .mega-chevron { transition:transform 0.25s; }
 .mega-chevron.open { transform:rotate(180deg); }
-@keyframes navMicPulse { 0% { transform:scale(1); opacity:0.6; } 100% { transform:scale(1.9); opacity:0; } }
 @keyframes vorbPulse { 0% { transform:scale(1); opacity:0.7; } 100% { transform:scale(2.1); opacity:0; } }
 </style>
 
@@ -623,17 +622,10 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         </div>
       </div>
       <!-- Mic -->
-      <button id="navMicBtn" title="Voice search" style="position:relative;width:40px;height:40px;border-radius:50%;background:#0a0a0a;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform 0.15s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-        <span id="navMicRing" style="display:none;position:absolute;inset:-4px;border-radius:50%;border:2px solid #0a0a0a;animation:navMicPulse 1s ease-out infinite;opacity:0.5"></span>
-      </button>
       <!-- Favorites -->
       <a href="/saved/" data-fav-link aria-label="Saved villas" style="width:40px;height:40px;border-radius:50%;flex-shrink:0"><svg style="width:20px;height:20px;fill:none;stroke:#0a0a0a;stroke-width:1.8" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span data-fav-badge>0</span></a>
       <!-- CTA -->
-      <a href="https://wa.me/6282314491635" class="btn-primary" style="font-size:13px;padding:10px 20px">
-        Contact Concierge
-        <svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-      </a> <button id="thbBurger" aria-label="Menu" aria-expanded="false"><svg style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+ <button id="thbBurger" aria-label="Menu" aria-expanded="false"><svg style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
 </nav>
@@ -647,7 +639,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
   <a href="/villas/ungasan/">Ungasan <span>3</span></a>
   <a href="/about/">About us</a>
   <a href="/contacts/">Contacts</a>
-  <a href="https://wa.me/6282314491635" rel="noopener" style="color:#0a7d43">WhatsApp — Contact Concierge</a>
+  <a href="https://wa.me/6282314491635" rel="noopener" style="color:#0a7d43">WhatsApp</a>
 </div>
 <script>(function(){var b=document.getElementById('thbBurger'),m=document.getElementById('thbMobileMenu');if(!b||!m)return;b.addEventListener('click',function(){m.hidden=!m.hidden;b.setAttribute('aria-expanded',!m.hidden)});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.hidden=true})})})();</script>
 
@@ -1201,293 +1193,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
   </div>
 </div>
 
-<script>
-/* Pill toggle */
-function setPill(el) {
-  document.querySelectorAll('.pill').forEach(function(p) { p.classList.remove('active'); });
-  el.classList.add('active');
-}
-
-/* Filter drawer */
-function openFilters() {
-  document.getElementById('filterDrawer').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeFilters() {
-  document.getElementById('filterDrawer').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-/* Collapsible filter sections */
-function toggleFilter(titleEl) {
-  titleEl.classList.toggle('collapsed');
-  var body = titleEl.nextElementSibling;
-  if (titleEl.classList.contains('collapsed')) {
-    body.style.maxHeight = '0';
-  } else {
-    body.style.maxHeight = body.scrollHeight + 'px';
-  }
-}
-document.querySelectorAll('.filter-body').forEach(function(b) {
-  b.style.maxHeight = b.scrollHeight + 'px';
-});
-
-/* Filter chip toggle + count badge */
-document.querySelectorAll('.f-chip input').forEach(function(inp) {
-  inp.closest('.f-chip').addEventListener('click', function() {
-    this.classList.toggle('active');
-    updateFilterCount();
-  });
-});
-function updateFilterCount() {
-  var n = Array.prototype.filter.call(document.querySelectorAll('.f-chip.active'), function(c){var i=c.querySelector('input');if(!i)return true;var v=(i.value||'').toLowerCase();return !(i.dataset.filter==='period'||v==='all'||v==='any');}).length;
-  var badge = document.getElementById('filterCountBadge');
-  if (n > 0) { badge.style.display = 'inline'; badge.textContent = n; } else { badge.style.display = 'none'; }
-}
-
-function clearAllFilters() {
-  document.querySelectorAll('.f-chip').forEach(function(c) { c.classList.remove('active'); });
-  document.getElementById('priceMin').value = '';
-  document.getElementById('priceMax').value = '';
-  updateFilterCount();
-  applyUrlLocationFilter('canggu');
-}
-
-function setPrice(min, max) {
-  document.getElementById('priceMin').value = min;
-  document.getElementById('priceMax').value = max === 99999 ? '' : max;
-}
-
-function applyUrlLocationFilter(location) {
-  var params = new URLSearchParams(window.location.search);
-  var normalized = (location || params.get('location') || '').toLowerCase();
-  var beds = (params.get('beds') || '').toLowerCase();
-  var amenity = (params.get('amenity') || '').toLowerCase();
-  var cards = Array.from(document.querySelectorAll('.prop-card'));
-  var visible = 0;
-
-  cards.forEach(function(card) {
-    var cardAmenities = (card.dataset.amenities || '').split(/\s+/);
-    var locationMatch = !normalized || card.dataset.location === normalized;
-    var bedsMatch = !beds || beds === 'any' || (beds === '5' ? Number(card.dataset.beds || 0) >= 5 : card.dataset.beds === beds);
-    var amenityMatch = !amenity || cardAmenities.indexOf(amenity) !== -1;
-    var matches = locationMatch && bedsMatch && amenityMatch;
-    card.style.display = matches ? '' : 'none';
-    if (matches) visible++;
-  });
-
-  var title = document.getElementById('resultsTitle');
-  if (title) {
-    var labelParts = [];
-    if (beds && beds !== 'any') labelParts.push(beds === '5' ? '5+ bedroom' : beds + ' bedroom');
-    if (normalized) labelParts.push(normalized.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); }));
-    if (amenity) labelParts.push(amenity.replace(/-/g, ' '));
-    var _w = visible === 1 ? ' villa' : ' villas'; title.textContent = labelParts.length ? visible + _w + ' — ' + labelParts.join(' · ') : visible + _w + ' available';
-  }
-
-  document.querySelectorAll('input[data-filter="location"]').forEach(function(input) {
-    input.checked = normalized && input.value === normalized;
-  });
-  document.querySelectorAll('input[data-filter="beds"]').forEach(function(input) {
-    input.checked = beds ? input.value === beds : input.value === 'any';
-    input.closest('.f-chip')?.classList.toggle('active', input.checked);
-  });
-  document.querySelectorAll('input[data-filter="amenity"]').forEach(function(input) {
-    input.checked = amenity && input.value === amenity;
-    input.closest('.f-chip')?.classList.toggle('active', input.checked);
-  });
-  updateFilterCount();
-}
-
-applyUrlLocationFilter(new URLSearchParams(window.location.search).get('location') || 'canggu');
-
-
-
-/* Close drawer on Escape */
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') { closeFilters(); closeVoice(); closeMega(); }
-});
-
-/* ── MEGA-MENU ── */
-(function() {
-  var panel = document.getElementById('villasPanel');
-  var backdrop = document.getElementById('villasBackdrop');
-  var trigger = document.querySelector('.mega-trigger');
-  var chevron = trigger ? trigger.querySelector('.mega-chevron') : null;
-  var open = false;
-
-  function openMega() {
-    if (open) return;
-    open = true;
-    panel.classList.add('open');
-    backdrop.classList.add('open');
-    if (chevron) chevron.classList.add('open');
-  }
-  function closeMega() {
-    if (!open) return;
-    open = false;
-    panel.classList.remove('open');
-    backdrop.classList.remove('open');
-    if (chevron) chevron.classList.remove('open');
-  }
-  window.closeMega = closeMega;
-
-  if (trigger) trigger.addEventListener('mouseenter', openMega);
-  backdrop.addEventListener('click', closeMega);
-
-  /* Close when mouse crosses below the panel bottom boundary */
-  document.addEventListener('mousemove', function(e) {
-    if (!open) return;
-    var panelRect = panel.getBoundingClientRect();
-    if (e.clientY > panelRect.bottom) closeMega();
-  });
-
-  /* Language menu */
-  var lt = document.getElementById('langToggle');
-  var lm = document.getElementById('langMenu');
-  if (lt && lm) {
-    lt.addEventListener('click', function(e) {
-      e.stopPropagation();
-      lm.style.display = lm.style.display === 'block' ? 'none' : 'block';
-    });
-    document.addEventListener('click', function() { if (lm) lm.style.display = 'none'; });
-  }
-
-  /* Mega-menu mic — reuse same voice overlay */
-  var micBtn = document.getElementById('navMicBtn');
-  if (micBtn) micBtn.addEventListener('click', function() {
-    if (typeof openVoice === 'function') openVoice();
-  });
-
-  /* Slideshow */
-  var slides = [
-      { img:'/images/sanur.jpg', title:'Sanur', desc:'Private pool villas near Sanur beach, cafes and restaurant', btn:'Explore Sanur \u2192', link:'/villas/sanur/' },
-      { img:'/images/canggu.jpg', title:'Canggu', desc:'Beachside villas minutes from Berawa, Batu Bolong and the ', btn:'Explore Canggu \u2192', link:'/villas/canggu/' },
-      { img:'/public-objects/images/premier-umalas-16-33.jpg', title:'Umalas', desc:'Private pool homes in the quiet lanes between Canggu and S', btn:'Explore Umalas \u2192', link:'/villas/umalas/' },
-      { img:'/public-objects/images/eco-exclusive-1br-ungasan-12.jpg', title:'Ungasan', desc:'Teak eco-villas with private pools on the Bukit peninsula', btn:'Explore Ungasan \u2192', link:'/villas/ungasan/' },
-    ];
-  var cur = 0, barStart = null, barDur = 10000, paused = false;
-  var barEl = document.getElementById('megaSlideBar');
-  var imgEl = document.getElementById('megaSlideImg');
-  var titleEl = document.getElementById('megaSlideTitle');
-  var descEl = document.getElementById('megaSlideDesc');
-  var btnEl = document.getElementById('megaSlideBtn');
-  var slideCard = document.getElementById('megaSlide');
-
-  function setSlide(i) {
-    cur = i;
-    var s = slides[cur];
-    imgEl.style.opacity = 0;
-    setTimeout(function() { imgEl.src = s.img; imgEl.style.opacity = 1; }, 200);
-    if (titleEl) titleEl.innerHTML = s.title;
-    if (descEl) descEl.textContent = s.desc;
-    if (btnEl) { btnEl.textContent = s.btn; btnEl.href = s.link; }
-    document.querySelectorAll('.sdot').forEach(function(d) { d.style.opacity = +d.dataset.i === cur ? '1' : '0.35'; });
-    barStart = null;
-    if (barEl) { barEl.style.transition = 'none'; barEl.style.width = '0%'; }
-    requestAnimationFrame(function() { requestAnimationFrame(animBar); });
-  }
-
-  function animBar(ts) {
-    if (paused) { requestAnimationFrame(animBar); return; }
-    if (!barStart) barStart = ts;
-    var pct = Math.min((ts - barStart) / barDur * 100, 100);
-    if (barEl) { barEl.style.transition = 'none'; barEl.style.width = pct + '%'; }
-    if (pct < 100) { requestAnimationFrame(animBar); }
-    else { setTimeout(function() { setSlide((cur + 1) % slides.length); }, 100); }
-  }
-
-  if (slideCard) {
-    slideCard.addEventListener('mouseenter', function() { paused = true; });
-    slideCard.addEventListener('mouseleave', function() { paused = false; barStart = null; });
-  }
-  setSlide(0);
-})();
-
-/* Quick chip helper */
-function appendPrompt(text) {
-  var ta = document.getElementById('aiPrompt');
-  if (!ta) return;
-  ta.value = ta.value ? ta.value.trimEnd() + ', ' + text : text;
-  ta.focus();
-}
-
-/* ===== Voice Search ===== */
-(function () {
-  /* overlay */
-  var overlay = document.createElement('div');
-  overlay.id = 'voiceOverlay';
-  overlay.innerHTML = '<div id="voiceCard"><div id="voiceOrb"><div class="vorb-ring r1"></div><div class="vorb-ring r2"></div><div class="vorb-ring r3"></div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div><p id="voiceStatus">Listening…</p><p id="voiceTranscript">Start speaking</p><div style="display:flex;gap:12px;margin-top:28px"><button id="voiceCancel">Cancel</button><button id="voiceDone">Use this text →</button></div></div>';
-  document.body.appendChild(overlay);
-
-  var style = document.createElement('style');
-  style.textContent = '#voiceOverlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,0.82);backdrop-filter:blur(18px);align-items:center;justify-content:center;flex-direction:column}#voiceOverlay.open{display:flex}#voiceCard{display:flex;flex-direction:column;align-items:center;padding:48px 40px;border-radius:28px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);max-width:460px;width:90%}#voiceOrb{position:relative;width:100px;height:100px;border-radius:50%;background:#0a0a0a;display:flex;align-items:center;justify-content:center;margin-bottom:28px;flex-shrink:0}.vorb-ring{position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255,255,255,0.3);animation:vorbPulse 2s ease-out infinite}.vorb-ring.r2{animation-delay:.55s}.vorb-ring.r3{animation-delay:1.1s}@keyframes vorbPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.1);opacity:0}}#voiceStatus{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}#voiceTranscript{font-family:"Fraunces",Georgia,serif;font-size:22px;font-weight:600;color:white;text-align:center;line-height:1.35;min-height:60px;max-width:340px}#voiceTranscript.interim{color:rgba(255,255,255,.5)}#voiceCancel{padding:11px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:transparent;color:rgba(255,255,255,.7);font-size:14px;font-weight:500;cursor:pointer}#voiceDone{padding:11px 26px;border-radius:999px;background:white;color:#0a0a0a;font-size:14px;font-weight:600;border:none;cursor:pointer;display:none}';
-  document.head.appendChild(style);
-
-  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  var recognition = SR ? new SR() : null;
-  var finalText = '', interimText = '';
-
-  if (recognition) {
-    recognition.continuous = true;
-    recognition.interimResults = true;
-    recognition.lang = 'en-US';
-    recognition.onresult = function(e) {
-      finalText = ''; interimText = '';
-      for (var i = 0; i < e.results.length; i++) {
-        if (e.results[i].isFinal) finalText += e.results[i][0].transcript;
-        else interimText += e.results[i][0].transcript;
-      }
-      var t = document.getElementById('voiceTranscript');
-      t.textContent = (finalText + interimText) || 'Start speaking';
-      t.className = (interimText && !finalText) ? 'interim' : '';
-      var d = document.getElementById('voiceDone');
-      if (d) d.style.display = finalText ? 'block' : 'none';
-    };
-    recognition.onerror = function(e) {
-      var s = document.getElementById('voiceStatus');
-      if (s) s.textContent = e.error === 'not-allowed' ? 'Microphone denied' : 'Error — try again';
-    };
-    recognition.onend = function() {
-      var s = document.getElementById('voiceStatus');
-      if (s && overlay.classList.contains('open')) s.textContent = 'Done — review your text';
-      var o = document.getElementById('voiceOrb');
-      if (o) o.classList.remove('listening');
-    };
-  }
-
-  function openVoice() {
-    finalText = ''; interimText = '';
-    document.getElementById('voiceTranscript').textContent = 'Start speaking';
-    document.getElementById('voiceTranscript').className = '';
-    document.getElementById('voiceStatus').textContent = 'Listening…';
-    document.getElementById('voiceDone').style.display = 'none';
-    document.getElementById('voiceOrb').classList.add('listening');
-    overlay.classList.add('open');
-    if (recognition) { try { recognition.start(); } catch(e){} }
-  }
-
-  function closeVoice() {
-    overlay.classList.remove('open');
-    if (recognition) { try { recognition.stop(); } catch(e){} }
-  }
-  window.closeVoice = closeVoice;
-
-  function applyText() {
-    var text = (finalText || interimText).trim();
-    closeVoice();
-    if (!text) return;
-    var ta = document.getElementById('aiPrompt');
-    if (ta) { ta.value = text; ta.focus(); }
-  }
-
-  var voiceMicBtn = document.getElementById('voiceMicBtn');
-  if (voiceMicBtn) voiceMicBtn.addEventListener('click', openVoice);
-  document.getElementById('voiceCancel').addEventListener('click', closeVoice);
-  document.getElementById('voiceDone').addEventListener('click', applyText);
-  overlay.addEventListener('click', function(e) { if (e.target === overlay) closeVoice(); });
-})();
-</script>
 <div id="thbSheet" role="dialog" aria-modal="true" aria-label="Search villas">
   <div class="tsh-hd"><p>Search villas</p><button class="tsh-x" aria-label="Close" onclick="thbSheetClose()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
   <div class="tsh-bd">
@@ -1599,24 +1304,11 @@ function appendPrompt(text) {
 <div id="thbWaPill">
   <span class="ava" aria-hidden="true"></span>
   <p>Not sure which villa? Tell us what you need.</p>
-  <button type="button" class="wa-ai" onclick="thbAskAI()" aria-label="Ask AI by voice or text">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><path d="M12 18v4"/><path d="M8 22h8"/></svg>
-    AI
-  </button>
   <a class="wa-go" href="https://wa.me/6282314491635?text=Hi%20The%20Host%20Bali!%20I%27m%20looking%20for%20a%20villa%20in%20Bali." rel="noopener" aria-label="Chat on WhatsApp with a human">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2C6.6 2.2 2.2 6.6 2.2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm5.5 12.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.1 3.3 5.2 4.5 3.1 1.2 3.5 1 4.1.9.6-.1 2-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.2-.6-.4z"/></svg>
     WhatsApp
   </a>
 </div>
-<script>
-function thbAskAI(){
-  var p=document.getElementById('aiSearchPanel');
-  if(p){p.classList.remove('hidden');setTimeout(function(){p.scrollIntoView({behavior:'smooth',block:'center'});},60);return;}
-  if(typeof openVoice==='function'){openVoice();return;}
-  window.location='/?ai=1';
-}
-try{if(new URLSearchParams(location.search).get('ai')&&document.getElementById('aiSearchPanel'))thbAskAI();}catch(e){}
-</script>
 <script>
 (function(){
   var IS_CAT=false, CUR='canggu';
@@ -1636,29 +1328,6 @@ try{if(new URLSearchParams(location.search).get('ai')&&document.getElementById('
   });
 })();
 </script>
-<style id="thb-aivoice-css">
-#thbAio{position:fixed;inset:0;z-index:90;display:none;align-items:flex-end;justify-content:center;background:rgba(10,10,10,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font-family:'Inter',sans-serif}
-#thbAio.open{display:flex}
-#thbAio .aio-card{width:100%;max-width:560px;background:#fafaf7;border-radius:26px 26px 0 0;padding:22px 20px calc(20px + env(safe-area-inset-bottom));box-shadow:0 -18px 60px rgba(0,0,0,.3)}
-@media(min-width:640px){#thbAio{align-items:center}#thbAio .aio-card{border-radius:26px;margin:0 16px}}
-#thbAio .aio-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-#thbAio .aio-hd p{margin:0;font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700;color:#0a0a0a}
-#thbAio .aio-x{width:38px;height:38px;border-radius:999px;border:1px solid #e6e3dc;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
-#thbAio .aio-orb{width:86px;height:86px;border-radius:50%;background:#0a0a0a;color:#fff;display:flex;align-items:center;justify-content:center;margin:6px auto 10px;border:none;cursor:pointer;position:relative;transition:transform .15s}
-#thbAio .aio-orb svg{width:34px;height:34px}
-#thbAio .aio-orb.rec{background:#16a34a}
-#thbAio .aio-orb.rec::after{content:'';position:absolute;inset:-9px;border-radius:50%;border:2.5px solid rgba(34,197,94,.55);animation:thbPulse 1.2s ease-out infinite}
-@keyframes thbPulse{0%{transform:scale(.85);opacity:1}100%{transform:scale(1.25);opacity:0}}
-#thbAio .aio-st{text-align:center;font-size:12.5px;color:#6b6b66;margin:0 0 14px;min-height:17px}
-#thbAio .aio-row{display:flex;gap:8px}
-#thbAio .aio-in{flex:1;border:1.5px solid #e6e3dc;border-radius:14px;padding:12px 14px;font-size:16px;font-family:'Inter',sans-serif;color:#0a0a0a;background:#fff;outline:none;min-height:48px}
-#thbAio .aio-in:focus{border-color:#0a0a0a}
-#thbAio .aio-go{background:#0a0a0a;color:#fff;border:none;border-radius:14px;padding:0 20px;font-size:14.5px;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;flex-shrink:0}
-#thbAio .aio-hint{margin:12px 0 0;font-size:11.5px;color:#8a877f;text-align:center}
-#thbAiBar{display:flex;align-items:center;gap:10px;max-width:1300px;margin:14px auto 0;padding:11px 16px;background:#0a0a0a;color:#fff;border-radius:14px;font-family:'Inter',sans-serif;font-size:13px}
-#thbAiBar b{font-weight:700}
-#thbAiBar button{margin-left:auto;background:rgba(255,255,255,.14);border:none;color:#fff;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif}
-</style>
 <div id="thbAio" role="dialog" aria-modal="true" aria-label="Ask AI">
   <div class="aio-card">
     <div class="aio-hd"><p>Ask AI</p><button class="aio-x" aria-label="Close" onclick="thbAioClose()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
@@ -1673,64 +1342,6 @@ try{if(new URLSearchParams(location.search).get('ai')&&document.getElementById('
     <p class="aio-hint">Speak or type &mdash; I&rsquo;ll match villas by area, bedrooms, guests and amenities</p>
   </div>
 </div>
-<script>
-(function(){
-  var SR=window.SpeechRecognition||window.webkitSpeechRecognition, rec=null, on=false;
-  var o=document.getElementById('thbAio'), orb=document.getElementById('thbAioOrb'),
-      st=document.getElementById('thbAioSt'), inp=document.getElementById('thbAioIn');
-  function setSt(t){st.textContent=t;}
-  function stopRec(){if(rec){try{rec.stop();}catch(e){}}on=false;orb.classList.remove('rec');}
-  function startRec(){
-    if(!SR){setSt('Voice not supported here \u2014 just type your question');inp.focus();return;}
-    try{
-      rec=new SR();rec.lang=(navigator.language&&navigator.language.indexOf('ru')===0)?'ru-RU':'en-US';
-      rec.interimResults=true;rec.continuous=false;
-      rec.onresult=function(e){var t='';for(var i=0;i<e.results.length;i++)t+=e.results[i][0].transcript;inp.value=t;};
-      rec.onend=function(){on=false;orb.classList.remove('rec');setSt(inp.value?'Tap Show \u2014 or edit the text':'Tap the mic and speak');};
-      rec.onerror=function(){on=false;orb.classList.remove('rec');setSt('Mic unavailable \u2014 just type your question');inp.focus();};
-      rec.start();on=true;orb.classList.add('rec');setSt('Listening\u2026 tell me what you need');
-    }catch(e){setSt('Just type your question');inp.focus();}
-  }
-  orb.addEventListener('click',function(){on?stopRec():startRec();});
-  inp.addEventListener('keydown',function(e){if(e.key==='Enter')thbAioApply();});
-  window.thbAioOpen=function(){o.classList.add('open');document.body.style.overflow='hidden';startRec();};
-  window.thbAioClose=function(){stopRec();o.classList.remove('open');document.body.style.overflow='';};
-  o.addEventListener('click',function(e){if(e.target===o)thbAioClose();});
-  var AREAS={sanur:['sanur','санур'],canggu:['canggu','чангу','чанг'],umalas:['umalas','умалас'],ungasan:['ungasan','унгасан']};
-  var AMEN={pool:['pool','бассейн'],wifi:['wifi','wi-fi','вай'],kitchen:['kitchen','кухн'],parking:['parking','парк'],beach:['beach','пляж'],family:['family','семь','дет'],ac:['air con','aircon','конди'],work:['work','работ'],eco:['eco','эко']};
-  window.thbAioApply=function(){
-    var q=(inp.value||'').toLowerCase().trim();
-    if(!q){setSt('Say or type what you\u2019re looking for');return;}
-    var area='',beds=0,guests=0,keys=[];
-    for(var a in AREAS){AREAS[a].forEach(function(w){if(q.indexOf(w)>-1)area=a;});}
-    var mb=q.match(/(\d+)\s*(?:bed|br\b|спал)/);if(mb)beds=parseInt(mb[1],10);
-    var mg=q.match(/(\d+)\s*(?:guest|people|persons|чел|гост)/);if(mg)guests=parseInt(mg[1],10);
-    for(var k in AMEN){AMEN[k].forEach(function(w){if(q.indexOf(w)>-1&&keys.indexOf(k)<0)keys.push(k);});}
-    var vis=0;
-    document.querySelectorAll('.prop-card').forEach(function(c){
-      var ok=true;
-      if(area&&c.dataset.location!==area)ok=false;
-      if(beds&&Number(c.dataset.beds||0)<beds)ok=false;
-      if(guests&&Number(c.dataset.guests||0)<guests)ok=false;
-      if(ok&&keys.length){var am=' '+(c.dataset.amenities||'')+' ';keys.forEach(function(k){if(am.indexOf(' '+k+' ')<0)ok=false;});}
-      c.style.display=ok?'':'none'; if(ok)vis++;
-    });
-    var none=vis===0;
-    if(none){document.querySelectorAll('.prop-card').forEach(function(c){c.style.display='';});vis=document.querySelectorAll('.prop-card').length;}
-    var grid=document.getElementById('cardGrid');
-    var bar=document.getElementById('thbAiBar');
-    if(!bar){bar=document.createElement('div');bar.id='thbAiBar';grid.parentNode.insertBefore(bar,grid);}
-    bar.innerHTML='<b>AI:</b>&nbsp;'+(none?('no exact match for \u201c'+q+'\u201d \u2014 showing all '+vis):(vis+(vis===1?' villa':' villas')+' for \u201c'+q+'\u201d'))+'<button type="button" onclick="thbAioReset()">Reset</button>';
-    thbAioClose();
-    bar.scrollIntoView({behavior:'smooth',block:'start'});
-  };
-  window.thbAioReset=function(){
-    document.querySelectorAll('.prop-card').forEach(function(c){c.style.display='';});
-    var bar=document.getElementById('thbAiBar');if(bar)bar.remove();
-  };
-  window.thbAskAI=function(){thbAioOpen();};
-})();
-</script>
 <style id="thb-savedmenu-css">
 #thbMobileMenu .thb-saved-item{display:flex;align-items:center;justify-content:space-between}
 #thbMobileMenu .thb-saved-item [data-fav-count]{background:#e11d48;color:#fff;border-radius:999px;min-width:20px;height:20px;line-height:20px;text-align:center;font-size:11.5px;font-weight:700;padding:0 6px;margin:0}
