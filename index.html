@@ -199,17 +199,14 @@ html { scroll-behavior: smooth; }
 @media(min-width:1024px){.thb-arow{padding:2px 40px 10px;scroll-padding:0 40px}.thb-acard{flex-basis:300px}}
 </style>
 <style id="thb-wapill-css">
-#thbWaPill{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #e6e3dc;border-radius:999px;box-shadow:0 14px 44px rgba(0,0,0,.20);padding:7px 7px 7px 9px;width:min(94vw,430px);font-family:'Inter',sans-serif;box-sizing:border-box}
-#thbWaPill .ava{position:relative;width:40px;height:40px;flex:0 0 40px;border-radius:50%;background:#f2efe8 url('/brand/thehost-badge.svg') center/68% no-repeat;border:1px solid #e6e3dc}
-#thbWaPill .ava::after{content:'';position:absolute;right:-1px;bottom:-1px;width:11px;height:11px;border-radius:50%;background:#22c55e;border:2.5px solid #fff}
-#thbWaPill p{margin:0;font-size:12.5px;line-height:1.28;font-weight:600;color:#0a0a0a;flex:1;min-width:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-#thbWaPill .wa-ai{display:inline-flex;align-items:center;gap:6px;height:40px;box-sizing:border-box;background:#0a0a0a;color:#fff;font-weight:700;font-size:13px;padding:0 13px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;flex:0 0 auto;transition:background .15s}
-#thbWaPill .wa-ai:hover{background:#2b2b28}
-#thbWaPill .wa-ai svg{width:14px;height:14px}
-#thbWaPill .wa-go{display:inline-flex;align-items:center;gap:6px;height:40px;box-sizing:border-box;background:#22c55e;color:#fff;font-weight:700;font-size:13px;padding:0 14px;border-radius:999px;text-decoration:none;flex:0 0 auto;transition:background .15s}
-#thbWaPill .wa-go:hover{background:#16a34a}
-#thbWaPill .wa-go svg{width:15px;height:15px}
-@media(max-width:400px){#thbWaPill p{font-size:11.5px}#thbWaPill .wa-ai{padding:0 11px}#thbWaPill .wa-go{padding:0 12px}}
+/* the green WhatsApp button on its own, bottom-right — no avatar, no pitch */
+#thbWaPill{position:fixed;left:auto;right:20px;transform:none;bottom:calc(20px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;background:none;border:0;box-shadow:none;padding:0;width:auto;font-family:'Inter',sans-serif;box-sizing:border-box}
+#thbWaPill .ava,#thbWaPill p,#thbWaPill .wa-ai{display:none}
+#thbWaPill .wa-go{display:inline-flex;align-items:center;gap:8px;height:48px;box-sizing:border-box;background:#22c55e;color:#fff;font-weight:700;font-size:14.5px;padding:0 20px;border-radius:999px;text-decoration:none;flex:0 0 auto;box-shadow:0 12px 28px -10px rgba(22,163,74,.6),0 2px 8px rgba(0,0,0,.14);transition:background .15s,transform .16s,box-shadow .16s}
+#thbWaPill .wa-go:hover{background:#16a34a;transform:translateY(-1px);box-shadow:0 16px 32px -10px rgba(22,163,74,.66),0 2px 10px rgba(0,0,0,.16)}
+#thbWaPill .wa-go svg{width:19px;height:19px}
+@media(max-width:600px){#thbWaPill{right:14px;bottom:calc(16px + env(safe-area-inset-bottom))}#thbWaPill .wa-go{height:46px;padding:0 17px;font-size:14px}}
+@media print{#thbWaPill{display:none}}
 </style>
 <style id="thb-tap-css">
 a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-action:manipulation;-webkit-tap-highlight-color:rgba(10,10,10,.06)}
@@ -219,9 +216,9 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 }
 
 /* --- 1) пилюля WhatsApp не лезет на панель: появляется после первого экрана --- */
-#thbWaPill{opacity:0;visibility:hidden;transform:translateX(-50%) translateY(14px);
+#thbWaPill{opacity:0;visibility:hidden;transform:translateY(14px);
   transition:opacity .3s ease,transform .3s ease,visibility .3s}
-#thbWaPill.thb-pill-on{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+#thbWaPill.thb-pill-on{opacity:1;visibility:visible;transform:translateY(0)}
 /* --- 2) локальная подложка строго под текстом: фото по краям остаётся ярким --- */
 #thbHero .thb-hero-txt{position:relative}
 #thbHero .thb-hero-txt>div{position:relative;z-index:1}
@@ -243,9 +240,9 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 .hs-slide.is-on{opacity:1}
 .hs-slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;
   filter:brightness(1.02) saturate(1.08) contrast(1.02);
-  transform:scale(1.04);transition:transform 9s linear}
-.hs-slide.is-on img{transform:scale(1)}
-@media(prefers-reduced-motion:reduce){.hs-slide,.hs-slide img{transition:none}}
+  transform:scale(1.045);transform-origin:50% 50%;will-change:transform;backface-visibility:hidden;
+  transition:transform 11s linear}
+@media(prefers-reduced-motion:reduce){.hs-slide,.hs-slide img{transition:none!important;transform:none!important}}
 </style>
 <style id="thb-hero-fit">
 /* первый разворот целиком под фото — на 24"/27" и больше */
@@ -1043,6 +1040,22 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
   var box=document.querySelector('.hs-show'); if(!box)return;
   var sl=box.querySelectorAll('.hs-slide'); if(sl.length<2)return;
   var i=0, HOLD=6500;
+
+  /* slow ken-burns: each slide drifts for longer than it is on screen, so it
+     never freezes mid-view. Direction alternates, origin shifts a little. */
+  var ZOOM=[1,1.09], ZOOM_S=11, ORIGINS=['50% 50%','54% 46%','47% 53%','50% 44%'];
+  function ken(n){
+    var img=sl[n].querySelector('img'); if(!img) return;
+    var inward=n%2===0;
+    var from=inward?ZOOM[0]:ZOOM[1], to=inward?ZOOM[1]:ZOOM[0];
+    img.style.transformOrigin=ORIGINS[n%ORIGINS.length];
+    img.style.transition='none';
+    img.style.transform='scale('+from+')';
+    void img.offsetWidth;
+    img.style.transition='transform '+ZOOM_S+'s linear';
+    img.style.transform='scale('+to+')';
+  }
+
   function load(n){
     var p=sl[n]; if(!p||p.dataset.ready) return;
     var src=p.querySelector('source'), img=p.querySelector('img');
@@ -1055,10 +1068,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
     load(n);
     sl[i].classList.remove('is-on');
     sl[n].classList.add('is-on');
+    ken(n);
     i=n;
     load((n+1)%sl.length);
   }
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  ken(0);   /* the first slide is on screen the longest — it drifts too */
   setTimeout(function(){ load(1); setInterval(next, HOLD); }, 1800);
   document.addEventListener('visibilitychange',function(){});
 })();

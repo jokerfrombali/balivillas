@@ -1564,28 +1564,76 @@ body.thb-menu-open #thbFavFloat{display:none!important}
 #thbSecNav.is-on{transform:none;opacity:1;visibility:visible}
 #thbSecNav .tsn-in{max-width:1832px;margin:0 auto;padding:0 24px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
 #thbSecNav .tsn-in::-webkit-scrollbar{display:none}
-#thbSecNav a{flex:none;padding:14px 12px;font-size:14px;font-weight:500;color:#6b6b66;text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .2s ease,border-color .2s ease}
+#thbSecNav a{flex:none;padding:14px 12px;font-size:14px;font-weight:500;color:#6b6b66;text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .2s ease,border-color .2s ease,background .2s ease}
 #thbSecNav a:hover{color:var(--ink)}
 #thbSecNav a.is-active{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
+
+/* in the header line: no bar of its own, active item becomes a pill */
+body.thb-secnav-inline #thbSecNav{position:static;flex:1 1 auto;min-width:0;margin:0 16px;background:none;-webkit-backdrop-filter:none;backdrop-filter:none;border:0;box-shadow:none;transform:none;transition:opacity .22s ease,visibility .22s}
+body.thb-secnav-inline #thbSecNav .tsn-in{max-width:none;margin:0;padding:0;gap:0;justify-content:center}
+body.thb-secnav-inline #thbSecNav a{padding:7px 10px;font-size:13.5px;border-bottom:0;border-radius:999px}
+body.thb-secnav-inline #thbSecNav a.is-active{color:var(--ink);background:rgba(10,10,10,.07);border-bottom:0}
+@media(max-width:1400px){body.thb-secnav-inline #thbSecNav a{padding:7px 9px;font-size:13px}}
+
+/* scrolled: the wordmark folds away, the round H badge takes over */
+#thbHBadge{display:none}
+body.thb-secnav-inline [data-thb-headleft] [data-hostpill]{overflow:hidden;white-space:nowrap;transition:opacity .2s ease,max-width .32s cubic-bezier(.22,.61,.36,1),padding .28s ease,margin .28s ease}
+body.thb-secnav-inline [data-thb-headleft] .thb-navlink{transition:margin .28s ease,font-weight .2s ease}
+/* scrolled: only the wordmark folds away, All villas stays and firms up */
+body.thb-secnav-inline.thb-secnav-on [data-thb-headleft] [data-hostpill]{max-width:0!important;opacity:0;padding-left:0!important;padding-right:0!important;border-width:0!important;margin:0!important;pointer-events:none}
+body.thb-secnav-inline.thb-secnav-on [data-thb-headleft] .thb-navlink{margin-left:10px!important;font-weight:600!important}
+body.thb-secnav-inline #thbHBadge{flex:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:40px;height:40px;max-width:0;margin:0;padding:0;overflow:hidden;border:0 solid rgba(10,10,10,.28);border-radius:999px;color:var(--ink);text-decoration:none;font-family:Lora,Georgia,serif;font-weight:700;font-size:18px;line-height:1;letter-spacing:0;opacity:0;transform:scale(.82);pointer-events:none;transition:opacity .22s ease,max-width .3s cubic-bezier(.22,.61,.36,1),transform .3s cubic-bezier(.22,1,.36,1),margin-right .3s,border-color .16s,background .16s}
+body.thb-secnav-inline.thb-secnav-on #thbHBadge{max-width:40px;border-width:1.5px;margin-right:2px;opacity:1;transform:none;pointer-events:auto}
+body.thb-secnav-inline.thb-secnav-on #thbHBadge:hover{border-color:var(--ink);background:rgba(10,10,10,.04)}
+
 #section-photos,#section-summary,#section-about,#section-sleep,#section-amenities,#section-availability,#section-location,#section-rules{scroll-margin-top:132px}
+@media(min-width:1024px){#section-photos,#section-summary,#section-about,#section-sleep,#section-amenities,#section-availability,#section-location,#section-rules{scroll-margin-top:96px}}
 @media(max-width:1023px){#thbSecNav .tsn-in{padding:0 16px}#thbSecNav a{padding:12px 10px;font-size:13.5px}}
 .villa-floating-back,#thbFavFloat{transition:top .26s cubic-bezier(.22,.61,.36,1),border-color .16s,box-shadow .16s,transform .16s,background .18s}
-body.thb-secnav-on .villa-floating-back,body.thb-secnav-on #thbFavFloat{top:132px}
-@media(max-width:768px){body.thb-secnav-on .villa-floating-back,body.thb-secnav-on #thbFavFloat{top:128px}}
-@media print{#thbSecNav{display:none}}
+body.thb-secnav-on:not(.thb-secnav-inline) .villa-floating-back,body.thb-secnav-on:not(.thb-secnav-inline) #thbFavFloat{top:132px}
+@media(max-width:768px){body.thb-secnav-on:not(.thb-secnav-inline) .villa-floating-back,body.thb-secnav-on:not(.thb-secnav-inline) #thbFavFloat{top:128px}}
+@media print{#thbSecNav,#thbHBadge{display:none}}
 </style>
-<div id="thbSecNav" aria-label="Sections of this villa page" role="navigation"><div class="tsn-in"><a href="#section-photos">Photos</a><a href="#section-summary">Overview</a><a href="#section-about">About</a><a href="#section-sleep">Bedrooms</a><a href="#section-amenities">Amenities</a><a href="#section-availability">Availability</a><a href="#section-location">Location</a><a href="#section-rules">Things to know</a></div></div><script>(function(){
+<div id="thbSecNav" aria-label="Sections of this villa page" role="navigation"><div class="tsn-in"><a href="#section-photos">Photos</a><a href="#section-summary">Overview</a><a href="#section-about">About</a><a href="#section-sleep">Bedrooms</a><a href="#section-amenities">Amenities</a><a href="#section-availability">Availability</a><a href="#section-location">Location</a><a href="#section-rules">Things to know</a></div></div>
+<script id="thb-secnav-js">(function(){
   var nav=document.getElementById('thbSecNav');if(!nav)return;
   var box=nav.querySelector('.tsn-in');
   var links=[].slice.call(nav.querySelectorAll('a[href^="#"]'));
   var secs=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
   var trigger=document.getElementById('section-summary');
-  var active=-1,ticking=false;
-  function offset(){return 72+nav.offsetHeight+10;}
+  var active=-1,ticking=false,inline=false;
+
+  /* wide screens: sit in the header row. narrow: own bar below it
+     (the header has a backdrop-filter, so a fixed child there would be trapped) */
+  function place(){
+    var row=document.querySelector('.site-header .col-span-full');
+    var wide=window.innerWidth>=1024&&!!row;
+    if(wide&&nav.parentElement!==row){
+      if(row.children[0])row.children[0].setAttribute('data-thb-headleft','');
+      if(!document.getElementById('thbHBadge')){
+        var b=document.createElement('a');
+        b.id='thbHBadge';
+        b.href='/';
+        b.setAttribute('aria-label','The Host Bali \u2014 home');
+        b.textContent='H';
+        row.insertBefore(b,row.firstChild);
+      }
+      row.insertBefore(nav,row.children[2]||null);
+      document.body.classList.add('thb-secnav-inline');
+    }else if(!wide&&nav.parentElement!==document.body){
+      document.body.appendChild(nav);
+      document.body.classList.remove('thb-secnav-inline');
+    }
+    inline=document.body.classList.contains('thb-secnav-inline');
+  }
+  function offset(){return 72+(inline?14:nav.offsetHeight+10);}
+
   function apply(){
     ticking=false;
+    place();
     var on=trigger?trigger.getBoundingClientRect().top<=110:window.pageYOffset>520;
-    nav.classList.toggle('is-on',on);document.body.classList.toggle('thb-secnav-on',on);
+    nav.classList.toggle('is-on',on);
+    document.body.classList.toggle('thb-secnav-on',on);
     if(!on)return;
     var idx=0;
     for(var i=0;i<secs.length;i++){if(secs[i]&&secs[i].getBoundingClientRect().top<=offset()+40)idx=i;}
@@ -1600,7 +1648,9 @@ body.thb-secnav-on .villa-floating-back,body.thb-secnav-on #thbFavFloat{top:132p
       try{box.scrollTo({left:Math.max(0,a.offsetLeft-(box.clientWidth-a.offsetWidth)/2),behavior:'smooth'});}catch(e){}
     }
   }
-  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(apply);}}
+  /* rAF plus a timer: a throttled rAF must not leave the nav stuck */
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(apply);setTimeout(apply,40);}}
+
   links.forEach(function(a){a.addEventListener('click',function(e){
     var el=document.getElementById(a.getAttribute('href').slice(1));if(!el)return;
     e.preventDefault();

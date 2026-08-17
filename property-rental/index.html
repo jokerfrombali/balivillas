@@ -285,7 +285,6 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
 .prop-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.5s cubic-bezier(0.2,0.6,0.2,1); }
 .prop-card:hover img { transform: scale(1.04); }
 .badge { position: absolute; top: 12px; left: 12px; background: rgba(10,10,10,0.72); backdrop-filter: blur(6px); color: white; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 999px; }
-.badge-type { position: absolute; top: 12px; right: 44px; background: rgba(250,250,247,0.92); color: #0a0a0a; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 999px; }
 .heart-btn { position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; background: rgba(250,250,247,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: none; cursor: pointer; transition: all 0.2s; }
 .heart-btn:hover { background: white; transform: scale(1.1); }
 .heart-btn.liked svg { fill: #e33; stroke: #e33; }
@@ -487,17 +486,14 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
 #thbSheet .tsh-apply{flex:1;background:#0a0a0a;color:#fff;border:none;border-radius:999px;padding:15px 22px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer}
 </style>
 <style id="thb-wapill-css">
-#thbWaPill{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #e6e3dc;border-radius:999px;box-shadow:0 14px 44px rgba(0,0,0,.20);padding:7px 7px 7px 9px;width:min(94vw,430px);font-family:'Inter',sans-serif;box-sizing:border-box}
-#thbWaPill .ava{position:relative;width:40px;height:40px;flex:0 0 40px;border-radius:50%;background:#f2efe8 url('/brand/thehost-badge.svg') center/68% no-repeat;border:1px solid #e6e3dc}
-#thbWaPill .ava::after{content:'';position:absolute;right:-1px;bottom:-1px;width:11px;height:11px;border-radius:50%;background:#22c55e;border:2.5px solid #fff}
-#thbWaPill p{margin:0;font-size:12.5px;line-height:1.28;font-weight:600;color:#0a0a0a;flex:1;min-width:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-#thbWaPill .wa-ai{display:inline-flex;align-items:center;gap:6px;height:40px;box-sizing:border-box;background:#0a0a0a;color:#fff;font-weight:700;font-size:13px;padding:0 13px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;flex:0 0 auto;transition:background .15s}
-#thbWaPill .wa-ai:hover{background:#2b2b28}
-#thbWaPill .wa-ai svg{width:14px;height:14px}
-#thbWaPill .wa-go{display:inline-flex;align-items:center;gap:6px;height:40px;box-sizing:border-box;background:#22c55e;color:#fff;font-weight:700;font-size:13px;padding:0 14px;border-radius:999px;text-decoration:none;flex:0 0 auto;transition:background .15s}
-#thbWaPill .wa-go:hover{background:#16a34a}
-#thbWaPill .wa-go svg{width:15px;height:15px}
-@media(max-width:400px){#thbWaPill p{font-size:11.5px}#thbWaPill .wa-ai{padding:0 11px}#thbWaPill .wa-go{padding:0 12px}}
+/* the green WhatsApp button on its own, bottom-right — no avatar, no pitch */
+#thbWaPill{position:fixed;left:auto;right:20px;transform:none;bottom:calc(20px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;background:none;border:0;box-shadow:none;padding:0;width:auto;font-family:'Inter',sans-serif;box-sizing:border-box}
+#thbWaPill .ava,#thbWaPill p,#thbWaPill .wa-ai{display:none}
+#thbWaPill .wa-go{display:inline-flex;align-items:center;gap:8px;height:48px;box-sizing:border-box;background:#22c55e;color:#fff;font-weight:700;font-size:14.5px;padding:0 20px;border-radius:999px;text-decoration:none;flex:0 0 auto;box-shadow:0 12px 28px -10px rgba(22,163,74,.6),0 2px 8px rgba(0,0,0,.14);transition:background .15s,transform .16s,box-shadow .16s}
+#thbWaPill .wa-go:hover{background:#16a34a;transform:translateY(-1px);box-shadow:0 16px 32px -10px rgba(22,163,74,.66),0 2px 10px rgba(0,0,0,.16)}
+#thbWaPill .wa-go svg{width:19px;height:19px}
+@media(max-width:600px){#thbWaPill{right:14px;bottom:calc(16px + env(safe-area-inset-bottom))}#thbWaPill .wa-go{height:46px;padding:0 17px;font-size:14px}}
+@media print{#thbWaPill{display:none}}
 </style>
 <style id="thb-qchips-css">
 .pills-bar{padding:0}
@@ -610,6 +606,28 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 <style id="thb-display-tracking">
 /* Lora has prominent serifs: negative tracking makes them run into each other */
 .font-display,.hero-title,[data-slot="property-title"],[data-slot="section-header"],[style*="Lora"]{letter-spacing:0!important}
+</style>
+<style id="thb-tools-css">
+/* Filters + sort as one group, same shape as the district chips */
+.thb-tools{display:flex;align-items:center;gap:10px;margin-left:auto;flex-shrink:0}
+.pills-inner .filters-btn{margin-left:0}
+.thb-tools .filters-btn{height:42px;box-sizing:border-box;padding:0 16px;border:1.5px solid #e6e3dc;border-radius:999px;font-size:13.5px;font-weight:600;gap:8px;background:#fff}
+.thb-tools .filters-btn:hover{border-color:#0a0a0a}
+.thb-sortwrap{position:relative;flex-shrink:0}
+.thb-sortwrap .sort-select{height:42px;box-sizing:border-box;padding:0 38px 0 16px;border:1.5px solid #e6e3dc;border-radius:999px;font-size:13.5px;font-weight:600;color:#0a0a0a;background:#fff;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer;font-family:'Inter',sans-serif;transition:border-color .15s}
+.thb-sortwrap .sort-select:hover{border-color:#0a0a0a}
+.thb-sortwrap .sort-select:focus-visible{border-color:#0a0a0a;outline:none;box-shadow:0 0 0 3px rgba(10,10,10,.07)}
+.thb-sortchev{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:13px;height:13px;pointer-events:none;color:#6b6b66}
+@media(max-width:1023px){
+  .thb-tools{gap:8px}
+  .pills-inner .thb-tools .filters-btn{height:44px;padding:0 15px;font-size:13px;border-radius:999px}
+  .thb-sortwrap .sort-select{height:44px;font-size:13px;padding:0 34px 0 14px}
+}
+@media(max-width:560px){
+  .thb-tools{flex:1 1 100%;margin-left:0}
+  .pills-inner .thb-tools .filters-btn,.thb-sortwrap{flex:1 1 50%}
+  .thb-sortwrap .sort-select{width:100%}
+}
 </style>
 </head>
 <body>
@@ -842,11 +860,22 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         </button>
         </div>
       <div class="pills-sep" style="display:none"></div>
-      <button class="filters-btn" onclick="openFilters()">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
-        Filters
-        <span class="filter-count-badge" id="filterCountBadge">0</span>
-      </button>
+      <div class="thb-tools">
+        <button class="filters-btn" onclick="openFilters()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+          Filters
+          <span class="filter-count-badge" id="filterCountBadge">0</span>
+        </button>
+              <div class="thb-sortwrap">
+        <select class="sort-select" id="sortSelect" aria-label="Sort the villas">
+          <option value="rec">Recommended</option>
+          <option value="beds-desc">Bedrooms: most first</option>
+          <option value="beds-asc">Bedrooms: fewest first</option>
+          <option value="guests-desc">Guests: most first</option>
+        </select>
+        <svg class="thb-sortchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      </div>
     </div>
   </div>
 
@@ -855,16 +884,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
     <div>
       <p style="font-size:12px;color:#6b6b66;text-transform:uppercase;letter-spacing:0.18em;font-weight:600;margin-bottom:3px">Bali Property Rental</p>
       <p style="font-family:'Lora',Georgia,serif;font-size:26px;font-weight:700" id="resultsTitle">12 villas available</p>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px">
-      <select class="sort-select" id="sortSelect">
-        <option>Recommended</option>
-        <option>Price: Low to High</option>
-        <option>Price: High to Low</option>
-        <option>Newest</option>
-        <option>Most popular</option>
-      </select>
-      
     </div>
   </div>
 
@@ -947,7 +966,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <div class="img-wrap">
           <img src="/public-objects/images/premier-umalas-16-08.jpg" alt="Premier Umalas 16 — Stylish 3BR Pool Townhouse — Umalas villa" loading="lazy" decoding="async" width="1280" height="1706">
           <span class="badge">Umalas</span>
-          <span class="badge-type">Villa</span>
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/premier-umalas-16-3br-pool-townhouse/" data-t="Premier Umalas 16 — Stylish 3BR Pool Townhouse" data-i="/public-objects/images/premier-umalas-16-08.jpg" data-m="3 bed · 3 bath · 6 guests" data-a="Umalas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
@@ -957,10 +975,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
-            </div>
           </div>
         </div>
       </div>      <!-- Umalas villa 2 -->
@@ -968,7 +982,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <div class="img-wrap">
           <picture><source srcset="/public-objects/images/premier-umalas-17-24.avif" type="image/avif"><img src="/public-objects/images/premier-umalas-17-24.jpg" alt="Premier Umalas 17 — Stylish 2BR Private Pool Home — Umalas villa" loading="lazy" decoding="async" width="1200" height="800"></picture>
           <span class="badge">Umalas</span>
-          <span class="badge-type">Villa</span>
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/premier-umalas-17-2br-pool-home/" data-t="Premier Umalas 17 — Stylish 2BR Private Pool Home" data-i="/public-objects/images/premier-umalas-17-24.jpg" data-m="2 bed · 2 bath · 4 guests" data-a="Umalas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
@@ -978,10 +991,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
-            </div>
           </div>
         </div>
       </div>      <!-- Sanur villa 3 -->
@@ -989,7 +998,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <div class="img-wrap">
           <picture><source srcset="/public-objects/images/villa-black-pool-11.avif" type="image/avif"><img src="/public-objects/images/villa-black-pool-11.jpg" alt="Villa Black Pool — Family 4BR Villa with Big Pool — Sanur villa" loading="lazy" decoding="async" width="1200" height="800"></picture>
           <span class="badge">Sanur</span>
-          <span class="badge-type">Villa</span>
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/villa-black-pool-4br-sanur/" data-t="Villa Black Pool — Family 4BR Villa with Big Pool" data-i="/public-objects/images/villa-black-pool-11.jpg" data-m="4 bed · 4 bath · 8 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
@@ -999,10 +1007,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
-            </div>
           </div>
         </div>
       </div>
@@ -1011,7 +1015,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <div class="img-wrap">
           <picture><source srcset="/public-objects/images/sanur-2br-townhouse-29.avif" type="image/avif"><img src="/public-objects/images/sanur-2br-townhouse-29.jpg" alt="Stylish 2BR Pool Townhouse in Sanur — Sanur villa" loading="lazy" decoding="async" width="1200" height="800"></picture>
           <span class="badge">Sanur</span>
-          <span class="badge-type">Townhouse</span>
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/stylish-2br-pool-townhouse-sanur/" data-t="Stylish 2BR Pool Townhouse in Sanur" data-i="/public-objects/images/sanur-2br-townhouse-29.jpg" data-m="2 bed · 2.5 bath · 4 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
@@ -1021,10 +1024,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
-            </div>
           </div>
         </div>
       </div>
@@ -1033,7 +1032,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <div class="img-wrap">
           <picture><source srcset="/public-objects/images/sanur-modern-2br-townhouse-27.avif" type="image/avif"><img src="/public-objects/images/sanur-modern-2br-townhouse-27.jpg" alt="Modern 2BR Pool Townhouse in Sanur — Sanur villa" loading="lazy" decoding="async" width="1200" height="900"></picture>
           <span class="badge">Sanur</span>
-          <span class="badge-type">Townhouse</span>
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/modern-2br-pool-townhouse-sanur/" data-t="Modern 2BR Pool Townhouse in Sanur" data-i="/public-objects/images/sanur-modern-2br-townhouse-27.jpg" data-m="2 bed · 2.5 bath · 4 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
@@ -1043,10 +1041,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
-            </div>
           </div>
         </div>
       </div>
@@ -1055,7 +1049,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <div class="img-wrap">
           <picture><source srcset="/public-objects/images/lucky-lily-sanur-3br-villa-04.avif" type="image/avif"><img src="/public-objects/images/lucky-lily-sanur-3br-villa-04.jpg" alt="Lucky Lily 3BR Pool Villa in Sanur — Sanur villa" loading="lazy" decoding="async" width="1200" height="800"></picture>
           <span class="badge">Sanur</span>
-          <span class="badge-type">Villa</span>
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/lucky-lily-3br-pool-villa-sanur/" data-t="Lucky Lily 3BR Pool Villa in Sanur" data-i="/public-objects/images/lucky-lily-sanur-3br-villa-04.jpg" data-m="3 bed · 3.5 bath · 6 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
@@ -1065,10 +1058,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Garden</span>
-            </div>
           </div>
         </div>
       </div>
@@ -1077,7 +1066,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <div class="img-wrap">
           <picture><source srcset="/public-objects/images/villa-kesari-4-sanur-76.avif" type="image/avif"><img src="/public-objects/images/villa-kesari-4-sanur-76.jpg" alt="Villa Kesari 4 — Family 3BR Pool Villa in Sanur — Sanur villa" loading="lazy" decoding="async" width="1200" height="800"></picture>
           <span class="badge">Sanur</span>
-          <span class="badge-type">Villa</span>
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/" data-t="Villa Kesari 4 — Family 3BR Pool Villa in Sanur" data-i="/public-objects/images/villa-kesari-4-sanur-76.jpg" data-m="3 bed · 3 bath · 6 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
@@ -1087,10 +1075,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Family</span>
-            </div>
           </div>
         </div>
       </div>
@@ -1098,7 +1082,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <div class="img-wrap">
           <picture><source srcset="/public-objects/images/sanur-garden-pool-4br-34.avif" type="image/avif"><img src="/public-objects/images/sanur-garden-pool-4br-34.jpg" alt="Sanur Garden Pool Villa — Family 4BR near Mertasari Beach — Sanur villa" loading="lazy" decoding="async" width="1200" height="900"></picture>
           <span class="badge">Sanur</span>
-          <span class="badge-type">Villa</span>
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/garden-pool-villa-4br-sanur/" data-t="Sanur Garden Pool Villa — Family 4BR near Mertasari Beach" data-i="/public-objects/images/sanur-garden-pool-4br-34.jpg" data-m="4 bed · 4.5 bath · 8 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
@@ -1108,10 +1091,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Garden</span>
-            </div>
           </div>
         </div>
       </div>
@@ -1120,7 +1099,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <div class="img-wrap">
           <picture><source srcset="/public-objects/images/the-wave-canggu-47.avif" type="image/avif"><img src="/public-objects/images/the-wave-canggu-47.jpg" alt="Villa The Wave — Beachside 6BR Villa in Canggu — Canggu villa" loading="lazy" decoding="async" width="1200" height="900"></picture>
           <span class="badge">Canggu</span>
-          <span class="badge-type">Villa</span>
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/canggu/the-wave-6br-beachside-villa-canggu/" data-t="Villa The Wave — Beachside 6BR Villa in Canggu" data-i="/public-objects/images/the-wave-canggu-47.jpg" data-m="6 bed · 6.5 bath · 12 guests" data-a="Canggu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
@@ -1130,10 +1108,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Beach</span>
-            </div>
           </div>
         </div>
       </div>
@@ -1141,7 +1115,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <div class="img-wrap">
           <picture><source srcset="/public-objects/images/eco-private-ungasan-02.avif" type="image/avif"><img src="/public-objects/images/eco-private-ungasan-02.jpg" alt="Eco Private — Teak 1BR Pool Villa in Ungasan — Ungasan villa" loading="lazy" decoding="async" width="1200" height="900"></picture>
           <span class="badge">Ungasan</span>
-          <span class="badge-type">Villa</span>
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/ungasan/eco-private-1br-pool-villa-ungasan/" data-t="Eco Private — Teak 1BR Pool Villa in Ungasan" data-i="/public-objects/images/eco-private-ungasan-02.jpg" data-m="1 bed · 1 bath · 2 guests" data-a="Ungasan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
@@ -1151,10 +1124,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Eco</span>
-            </div>
           </div>
         </div>
       </div>
@@ -1162,7 +1131,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <div class="img-wrap">
           <picture><source srcset="/public-objects/images/eco-teak-2br-ungasan-23.avif" type="image/avif"><img src="/public-objects/images/eco-teak-2br-ungasan-23.jpg" alt="Eco Teak — 2BR Pool Villa in Ungasan — Ungasan villa" loading="lazy" decoding="async" width="1200" height="900"></picture>
           <span class="badge">Ungasan</span>
-          <span class="badge-type">Villa</span>
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/ungasan/eco-teak-2br-pool-villa-ungasan/" data-t="Eco Teak — 2BR Pool Villa in Ungasan" data-i="/public-objects/images/eco-teak-2br-ungasan-23.jpg" data-m="2 bed · 2 bath · 4 guests" data-a="Ungasan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
@@ -1172,9 +1140,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span><span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Eco</span>
-            </div>
           </div>
         </div>
       </div>
@@ -1182,7 +1147,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <div class="img-wrap">
           <picture><source srcset="/public-objects/images/exclusive-1br-ungasan-12.avif" type="image/avif"><img src="/public-objects/images/exclusive-1br-ungasan-12.jpg" alt="Eco Exclusive — Teak 1BR Pool Villa in Ungasan — Ungasan villa" loading="lazy" decoding="async" width="1200" height="900"></picture>
           <span class="badge">Ungasan</span>
-          <span class="badge-type">Villa</span>
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/" data-t="Eco Exclusive — Teak 1BR Pool Villa in Ungasan" data-i="/public-objects/images/exclusive-1br-ungasan-12.jpg" data-m="1 bed · 1 bath · 2 guests" data-a="Ungasan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
@@ -1192,9 +1156,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
-            <div style="display:flex;gap:4px">
-              <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span><span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Eco</span>
-            </div>
           </div>
         </div>
       </div>
@@ -1767,6 +1728,25 @@ if(!hq||(!hq.ci&&!hq.g))return;
 })();
 </script>
 <script defer src="/thb-totop.js"></script>
+<script id="thb-sort-js">(function(){
+  var sel=document.getElementById('sortSelect'),grid=document.getElementById('cardGrid');
+  if(!sel||!grid)return;
+  var cards=[].slice.call(grid.querySelectorAll('.prop-card'));
+  cards.forEach(function(c,i){c.setAttribute('data-thb-i',i);});
+  function n(c,k){return parseInt(c.getAttribute('data-'+k)||'0',10)||0;}
+  function orig(c){return parseInt(c.getAttribute('data-thb-i'),10)||0;}
+  sel.addEventListener('change',function(){
+    var v=sel.value,list=cards.slice();
+    if(v==='beds-desc')list.sort(function(a,b){return n(b,'beds')-n(a,'beds')||n(b,'guests')-n(a,'guests');});
+    else if(v==='beds-asc')list.sort(function(a,b){return n(a,'beds')-n(b,'beds')||n(a,'guests')-n(b,'guests');});
+    else if(v==='guests-desc')list.sort(function(a,b){return n(b,'guests')-n(a,'guests')||n(b,'beds')-n(a,'beds');});
+    else list.sort(function(a,b){return orig(a)-orig(b);});
+    var frag=document.createDocumentFragment();
+    list.forEach(function(c){frag.appendChild(c);});
+    grid.appendChild(frag);
+  });
+})();</script>
+<script defer src="/thb-filters.js"></script>
 </body>
 </html>
 
