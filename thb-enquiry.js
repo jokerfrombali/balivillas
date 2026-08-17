@@ -25,7 +25,7 @@
   var CSS = [
     '#thbEnq,#thbEnqScrim{position:fixed;inset:0;z-index:120}',
     '#thbEnqScrim{background:rgba(10,10,10,.42);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;transition:opacity .28s ease}',
-    '#thbEnq{display:flex;align-items:center;justify-content:center;padding:24px;pointer-events:none}',
+    '#thbEnq{display:flex;align-items:center;justify-content:center;padding:24px;pointer-events:none;max-width:100vw;overflow-x:hidden}',
     '#thbEnq[hidden],#thbEnqScrim[hidden]{display:none}',
     '.thb-enq-card{position:relative;pointer-events:auto;width:100%;max-width:452px;max-height:calc(100vh - 48px);display:flex;flex-direction:column;',
     'background:#fdfdfb;border:1px solid rgba(10,10,10,.08);border-radius:24px;box-shadow:0 24px 60px -12px rgba(10,10,10,.32),0 2px 8px rgba(10,10,10,.06);',
@@ -109,10 +109,18 @@
     '.thb-enq-or{display:flex;align-items:center;gap:10px;margin:1px 0;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#a8a59d}',
     '.thb-enq-or::before,.thb-enq-or::after{content:"";height:1px;flex:1;background:#eae7e0}',
     '#thbBookBar .thb-enq-bar{display:flex;align-items:center;gap:8px;flex:none}',
-    '#thbBookBar .thb-enq-bar .thb-enq-send{width:auto;padding:14px 18px;font-size:15px}',
-    '#thbBookBar .thb-enq-bar .thb-enq-wa{width:46px;height:46px;padding:0;border-radius:999px;flex:none}',
-    '#thbBookBar .thb-enq-bar .thb-enq-wa svg{width:20px;height:20px}',
+    '#thbBookBar .thb-enq-bar .thb-enq-send{width:auto;padding:14px 24px;font-size:15px;letter-spacing:.04em}',
+    /* WhatsApp lives in the header now, right-aligned next to the menu */
+    '#thbHdrWa{flex:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;',
+    'border-radius:999px;background:#22c55e;color:#fff;text-decoration:none;',
+    'box-shadow:0 6px 16px -6px rgba(22,163,74,.6);transition:background .16s ease,transform .16s ease}',
+    '#thbHdrWa:hover{background:#16a34a;transform:translateY(-1px)}',
+    '#thbHdrWa svg{width:20px;height:20px;fill:currentColor}',
+    '@media(max-width:1023px){#thbHdrWa{width:38px;height:38px}#thbHdrWa svg{width:19px;height:19px}}',
 
+    /* iOS Safari zooms the whole page when a focused field is under 16px —
+       that is what shifted the sheet sideways on the phone */
+    '@media(max-width:900px){.thb-enq-f input,.thb-enq-f textarea,.thb-enq-f select{font-size:16px}}',
     '@media(max-width:600px){',
     '#thbEnq{padding:0;align-items:flex-end}',
     '.thb-enq-card{max-width:none;border-radius:24px 24px 0 0;max-height:92vh;transform:translateY(26px)}',
@@ -488,12 +496,28 @@
     var old = bar.querySelector('a[href*="wa.me"]');
     var group = document.createElement('div');
     group.className = 'thb-enq-bar';
-    group.innerHTML =
-      '<button type="button" class="thb-enq-send">Request</button>' +
-      '<button type="button" class="thb-enq-wa" aria-label="WhatsApp us now">' + waSvg() + '</button>';
+    group.innerHTML = '<button type="button" class="thb-enq-send">BOOKING</button>';
     if (old) old.parentNode.replaceChild(group, old); else bar.appendChild(group);
     group.querySelector('.thb-enq-send').onclick = open;
-    group.querySelector('.thb-enq-wa').onclick = quickWa;
+  }
+
+  /* WhatsApp button in the header, hard right next to the menu */
+  function mountHeaderWa() {
+    if (document.getElementById('thbHdrWa')) return;
+    var row = document.querySelector('.site-header .col-span-full');
+    var group = row && row.lastElementChild;
+    if (!group) return;
+    var d = dates(), text = "Hi The Host Bali! I'd like to book " + villaName() + '.';
+    if (d.start && d.end) text += '\nCheck-in: ' + fmt(d.start) + '\nCheck-out: ' + fmt(d.end);
+    text += '\nLink: ' + villaUrl();
+    var a = document.createElement('a');
+    a.id = 'thbHdrWa';
+    a.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(text);
+    a.rel = 'noopener';
+    a.target = '_blank';
+    a.setAttribute('aria-label', 'Chat with us on WhatsApp');
+    a.innerHTML = waSvg();
+    group.insertBefore(a, group.firstChild);
   }
 
   function mount() {
@@ -501,6 +525,7 @@
     if (!document.getElementById('thb-enquiry-css')) build();
     mountPanel();
     mountBar();
+    mountHeaderWa();
     var label = document.getElementById('selectedDateRange');
     if (label && window.MutationObserver) {
       new MutationObserver(paintDates).observe(label, { childList: true, characterData: true, subtree: true });

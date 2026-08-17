@@ -1351,19 +1351,30 @@ body.thb-menu-open #thbFavFloat{display:none!important}
 </style>
 <script defer src="/thb-fav.js"></script>
 <style id="thb-cal-css">
+#section-availability{position:relative}
 #section-availability .flex-nowrap{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none;-ms-overflow-style:none;scroll-padding-left:0}
 #section-availability .flex-nowrap::-webkit-scrollbar{display:none}
 #section-availability .calendar-month{flex:none;scroll-snap-align:start}
+#section-availability .thb-cal-next{display:none;position:absolute;right:0;width:38px;height:38px;padding:0;box-sizing:border-box;
+  border:1px solid var(--line);border-radius:999px;background:#fff;box-shadow:0 4px 14px rgba(10,10,10,.12);color:var(--ink);
+  cursor:pointer;align-items:center;justify-content:center;z-index:2;transition:opacity .2s ease,border-color .16s ease,transform .16s ease}
+#section-availability .thb-cal-next svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+#section-availability .thb-cal-next:active{border-color:#0a0a0a;transform:scale(.94)}
+#section-availability .thb-cal-next.is-hint svg{animation:thbCalNudge 1.5s ease-in-out 3}
+@keyframes thbCalNudge{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
+@media(prefers-reduced-motion:reduce){#section-availability .thb-cal-next.is-hint svg{animation:none}}
 @media(max-width:1023px){
-#section-availability .flex-nowrap{gap:16px;padding-bottom:2px}
-#section-availability .calendar-month{width:92%;min-width:0}
+#section-availability .flex-nowrap{gap:16px;padding-bottom:2px;margin-right:46px}
+#section-availability .calendar-month{width:100%;min-width:0}
 #section-availability .calendar-month .month-title{font-size:16px}
+#section-availability .thb-cal-next{display:inline-flex}
 }
 </style>
 <script id="thb-cal-swipe">(function(){
   var sec=document.getElementById('section-availability');if(!sec)return;
   var row=sec.querySelector('.flex-nowrap');if(!row)return;
   var MAX_MONTHS=24,ticking=false;
+
   function addMonth(){
     var months=sec.querySelectorAll('.calendar-month');
     var last=months[months.length-1];
@@ -1391,9 +1402,40 @@ body.thb-menu-open #thbFavFloat{display:none!important}
       guard++;
     }
   }
-  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(check);}}
+
+  /* swipe hint: a chevron in its own gutter to the right of the strip */
+  var next=document.createElement('button');
+  next.type='button';
+  next.className='thb-cal-next is-hint';
+  next.setAttribute('aria-label','Next month');
+  next.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
+  sec.appendChild(next);
+
+  function step(){
+    var m=sec.querySelector('.calendar-month');
+    if(!m)return row.clientWidth;
+    var gap=parseFloat(getComputedStyle(row).columnGap||getComputedStyle(row).gap||0)||0;
+    return m.getBoundingClientRect().width+gap;
+  }
+  function place(){
+    var r=row.getBoundingClientRect(),s=sec.getBoundingClientRect();
+    next.style.top=Math.round(r.top-s.top+r.height/2-19)+'px';
+    var atEnd=row.scrollLeft+row.clientWidth>=row.scrollWidth-6;
+    next.style.opacity=atEnd?'0':'1';
+    next.style.pointerEvents=atEnd?'none':'auto';
+  }
+  next.addEventListener('click',function(){
+    next.classList.remove('is-hint');
+    try{row.scrollBy({left:step(),behavior:'smooth'});}catch(e){row.scrollLeft+=step();}
+  });
+  row.addEventListener('touchstart',function(){next.classList.remove('is-hint');},{passive:true});
+
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(check);}place();}
   row.addEventListener('scroll',onScroll,{passive:true});
   addEventListener('resize',onScroll);
+  addEventListener('load',place);
+  setTimeout(place,300);
+  place();
 })();</script>
 <style id="thb-checkavail-css">
 @keyframes thbNudge{0%,100%{transform:translateX(0)}18%{transform:translateX(-7px)}36%{transform:translateX(7px)}56%{transform:translateX(-4px)}76%{transform:translateX(4px)}}
