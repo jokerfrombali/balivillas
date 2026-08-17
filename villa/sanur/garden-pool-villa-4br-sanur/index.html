@@ -1426,7 +1426,11 @@ body.thb-menu-open #thbFavFloat{display:none!important}
   }
   next.addEventListener('click',function(){
     next.classList.remove('is-hint');
-    try{row.scrollBy({left:step(),behavior:'smooth'});}catch(e){row.scrollLeft+=step();}
+    var from=row.scrollLeft;
+    var to=Math.min(row.scrollWidth-row.clientWidth,from+step());
+    try{row.scrollTo({left:to,behavior:'smooth'});}catch(e){row.scrollLeft=to;}
+    /* some browsers ignore programmatic smooth scrolling — make sure it still moves */
+    setTimeout(function(){if(Math.abs(row.scrollLeft-from)<2)row.scrollLeft=to;},280);
   });
   row.addEventListener('touchstart',function(){next.classList.remove('is-hint');},{passive:true});
 
