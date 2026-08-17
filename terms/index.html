@@ -67,14 +67,14 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"></noscript>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
       colors: { ink: '#0a0a0a', off: '#fafaf7', paper: '#f4f2ed', stone: '#9a9a94', line: '#e6e3dc' },
-      fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], display: ['Fraunces', 'Georgia', 'serif'] },
+      fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], display: ['Lora', 'Georgia', 'serif'] },
       letterSpacing: { tightest: '-0.045em', 'extra-wide': '0.22em' }
     }
   }
@@ -82,7 +82,7 @@ tailwind.config = {
 </script>
 <style>
 body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -webkit-font-smoothing: antialiased; overflow-x: clip; }
-.font-display { font-family: 'Fraunces', Georgia, serif; }
+.font-display { font-family: 'Lora', Georgia, serif; }
 html { scroll-behavior: smooth; }
 .kicker { text-transform: uppercase; letter-spacing: 0.22em; font-size: 11px; font-weight: 600; color: #6b6b66; }
 .btn-primary { background: #0a0a0a; color: #fff; border-radius: 999px; padding: 14px 24px; font-weight: 600; font-size: 14px; transition: transform 0.15s, background 0.2s; }
@@ -108,6 +108,10 @@ html { scroll-behavior: smooth; }
 
 <meta name="theme-color" content="#343537">
 <style>section[id^="section-"]:not(:first-of-type){content-visibility:auto;contain-intrinsic-size:auto 600px}</style>
+<style id="thb-display-tracking">
+/* Lora has prominent serifs: negative tracking makes them run into each other */
+.font-display,.hero-title,[data-slot="property-title"],[data-slot="section-header"],[style*="Lora"]{letter-spacing:0!important}
+</style>
 </head>
 <body>
 
@@ -170,13 +174,13 @@ html { scroll-behavior: smooth; }
 .thb-ft .thb-ft-in{max-width:1280px;margin:0 auto;padding:56px 24px 0}
 .thb-ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:40px}
 .thb-ft-brand img{height:64px;width:64px;display:block;margin-bottom:16px}
-.thb-ft-name{font-family:Fraunces,Georgia,"Times New Roman",serif;font-size:21px;font-weight:600;letter-spacing:.01em;margin:0 0 10px;color:#fff}
+.thb-ft-name{font-family:'Lora',Georgia,"Times New Roman",serif;font-size:21px;font-weight:600;letter-spacing:.01em;margin:0 0 10px;color:#fff}
 .thb-ft-lead{color:#a9a29a;margin:0 0 20px;max-width:34ch}
 .thb-ft-soc{display:flex;gap:10px;flex-wrap:wrap}
 .thb-ft-soc a{display:inline-flex;align-items:center;gap:7px;border:1px solid #3d3c39;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:500;color:#e9e4da;transition:background .15s,border-color .15s}
 .thb-ft-soc a:hover{background:#2e2d2b;border-color:#5F5340}
 .thb-ft-soc svg{width:15px;height:15px;flex:0 0 auto}
-.thb-ft h4{font-family:Fraunces,Georgia,"Times New Roman",serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C1B59D;margin:0 0 16px}
+.thb-ft h4{font-family:'Lora',Georgia,"Times New Roman",serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C1B59D;margin:0 0 16px}
 .thb-ft ul{list-style:none;margin:0;padding:0}
 .thb-ft li{margin:0 0 10px}
 .thb-ft li a{color:#d6d0c6;transition:color .15s;display:inline-block;padding:5px 0}
@@ -277,5 +281,6 @@ html { scroll-behavior: smooth; }
   els.forEach(function (e) { io.observe(e); });
 })();
 </script>
+<script defer src="/thb-totop.js"></script>
 </body>
 </html>

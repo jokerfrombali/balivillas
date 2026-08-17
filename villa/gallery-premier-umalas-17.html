@@ -123,5 +123,62 @@
     function gallerySmartBack(){const f=getSafeReturnUrl();try{const r=document.referrer?new URL(document.referrer,window.location.origin):null;if(r&&r.origin===window.location.origin&&r.pathname!==window.location.pathname&&window.history.length>1){window.history.back();setTimeout(function(){if(window.location.pathname.includes('gallery-premier-umalas-17.html'))window.location.href=f},350);return}}catch(e){}window.location.href=f}
     const images=Array.from(document.querySelectorAll('.photo-item img'));const viewer=document.getElementById('fullscreenViewer');const viewerImage=document.getElementById('fullscreenImage');let currentImageIndex=0;document.getElementById('totalCount').textContent=images.length;document.getElementById('photoCounter').textContent=`1 / ${images.length} photos`;images.forEach((img,index)=>{img.closest('.photo-item').addEventListener('click',()=>openFullscreen(index))});document.querySelectorAll('.tab').forEach((tab,index)=>{if(index===0)tab.classList.add('active');tab.addEventListener('click',()=>{document.getElementById(tab.dataset.target).scrollIntoView({behavior:'smooth',block:'start'})})});const sectionObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(!entry.isIntersecting)return;document.querySelectorAll('.tab').forEach(tab=>tab.classList.toggle('active',tab.dataset.target===entry.target.id));const first=entry.target.querySelector('.photo-item img');const index=images.indexOf(first);if(index>=0)document.getElementById('photoCounter').textContent=`${index+1} / ${images.length} photos`})},{threshold:.25});document.querySelectorAll('.category-section').forEach(s=>sectionObserver.observe(s));function openFullscreen(index){currentImageIndex=index;updateFullscreen();viewer.classList.add('active');document.body.style.overflow='hidden'}function closeFullscreen(){viewer.classList.remove('active');document.body.style.overflow=''}function updateFullscreen(){const img=images[currentImageIndex];viewerImage.src=img.src;document.getElementById('currentIndex').textContent=currentImageIndex+1;document.getElementById('currentCategory').textContent=img.alt}function nextImage(){currentImageIndex=(currentImageIndex+1)%images.length;updateFullscreen()}function prevImage(){currentImageIndex=(currentImageIndex-1+images.length)%images.length;updateFullscreen()}document.addEventListener('keydown',e=>{if(!viewer.classList.contains('active'))return;if(e.key==='Escape')closeFullscreen();if(e.key==='ArrowRight')nextImage();if(e.key==='ArrowLeft')prevImage()});
   </script>
+<script defer src="/thb-totop.js"></script>
+<style id="thb-tabs-css">
+.category-tabs{scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.category-tabs::-webkit-scrollbar{display:none}
+</style>
+<script id="thb-tabs-js">(function(){
+  var tabs=document.querySelector('.category-tabs');if(!tabs)return;
+
+  /* wheel over the strip scrolls the page, not the chips */
+  tabs.addEventListener('wheel',function(e){
+    if(Math.abs(e.deltaX)>Math.abs(e.deltaY))return;
+    if(!e.deltaY)return;
+    e.preventDefault();
+    var step=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?window.innerHeight:1);
+    window.scrollBy(0,step);
+  },{passive:false});
+
+  /* keep the active chip in view as sections pass by */
+  var queued=false;
+  function centre(){
+    queued=false;
+    var a=tabs.querySelector('.tab.active');if(!a)return;
+    if(tabs.scrollWidth<=tabs.clientWidth+4)return;
+    var left=a.offsetLeft-(tabs.clientWidth-a.offsetWidth)/2;
+    left=Math.max(0,Math.min(left,tabs.scrollWidth-tabs.clientWidth));
+    if(Math.abs(left-tabs.scrollLeft)<8)return;
+    try{tabs.scrollTo({left:left,behavior:'smooth'});}catch(err){tabs.scrollLeft=left;}
+  }
+  function queue(){if(!queued){queued=true;requestAnimationFrame(centre);}}
+  var mo=new MutationObserver(queue);
+  [].forEach.call(tabs.querySelectorAll('.tab'),function(t){mo.observe(t,{attributes:true,attributeFilter:['class']});});
+  queue();
+})();</script>
+<script id="thb-photo-deeplink-js">(function(){
+  var want=new URLSearchParams(location.search).get('photo');
+  if(!want)return;
+  function boot(){
+    var imgs=[].slice.call(document.querySelectorAll('.photo-item img'));
+    if(!imgs.length)return;
+    var idx=-1;
+    if(/^\d+$/.test(want)){idx=parseInt(want,10)-1;}
+    else{
+      for(var i=0;i<imgs.length;i++){
+        var b=(imgs[i].getAttribute('src')||imgs[i].src||'').split('/').pop().replace(/\.[a-z0-9]+$/i,'');
+        if(b===want){idx=i;break;}
+      }
+    }
+    if(idx<0||idx>=imgs.length)return;
+    if(typeof window.openFullscreen==='function')window.openFullscreen(idx);
+    else{
+      var item=imgs[idx].closest('.photo-item');
+      if(item)item.scrollIntoView({block:'center'});
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
+  else boot();
+})();</script>
 </body>
 </html>

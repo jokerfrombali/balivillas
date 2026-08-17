@@ -71,7 +71,7 @@
 <link rel="preload" as="image" fetchpriority="high" type="image/avif" imagesrcset="/public-objects/hero/slide-05-640.avif 640w, /public-objects/hero/slide-05-960.avif 960w, /public-objects/hero/slide-05-1200.avif 1200w" imagesizes="100vw" href="/public-objects/hero/slide-05-1200.avif">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"></noscript>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
@@ -86,7 +86,7 @@ tailwind.config = {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Fraunces', 'Georgia', 'serif']
+        display: ['Lora', 'Georgia', 'serif']
       },
       letterSpacing: {
         tightest: '-0.045em',
@@ -98,7 +98,7 @@ tailwind.config = {
 </script>
 <style>
 body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -webkit-font-smoothing: antialiased; overflow-x: clip; }
-.font-display { font-family: 'Fraunces', Georgia, serif; }
+.font-display { font-family: 'Lora', Georgia, serif; }
 html { scroll-behavior: smooth; }
 .kicker { text-transform: uppercase; letter-spacing: 0.22em; font-size: 11px; font-weight: 600; color: #6b6b66; }
 .btn-primary { background: #0a0a0a; color: #fff; border-radius: 999px; padding: 14px 24px; font-weight: 600; font-size: 14px; transition: transform 0.15s, background 0.2s; }
@@ -186,13 +186,13 @@ html { scroll-behavior: smooth; }
 .thb-acard:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.09)}
 .thb-acard img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f2efe8}
 .thb-acard .in{padding:13px 15px 15px;font-family:'Inter',sans-serif}
-.thb-acard .t{font-family:'Fraunces',Georgia,serif;font-size:16.5px;font-weight:600;line-height:1.25;margin:0 0 5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.thb-acard .t{font-family:'Lora',Georgia,serif;font-size:16.5px;font-weight:600;line-height:1.25;margin:0 0 5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .thb-acard .a{display:flex;align-items:center;gap:5px;font-size:12.5px;color:#6b6b66;margin:0 0 7px}
 .thb-acard .m{font-size:12.5px;color:#6b6b66;margin:0 0 9px}
-.thb-acard .p{font-family:'Fraunces',Georgia,serif;font-size:15px;font-weight:700;margin:0}
+.thb-acard .p{font-family:'Lora',Georgia,serif;font-size:15px;font-weight:700;margin:0}
 .thb-acard .p span{font-family:'Inter',sans-serif;font-size:11.5px;font-weight:400;color:#6b6b66}
 .thb-arh{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 14px;text-decoration:none;color:#0a0a0a}
-.thb-arh h3{font-family:'Fraunces',Georgia,serif;font-size:clamp(21px,2.6vw,28px);font-weight:600;letter-spacing:-0.01em;margin:0;display:flex;align-items:center;gap:9px}
+.thb-arh h3{font-family:'Lora',Georgia,serif;font-size:clamp(21px,2.6vw,28px);font-weight:600;letter-spacing:-0.01em;margin:0;display:flex;align-items:center;gap:9px}
 .thb-arh svg{flex:0 0 auto;transition:transform .15s}
 .thb-arh:hover svg{transform:translateX(3px)}
 .thb-arh .cnt{font-family:'Inter',sans-serif;font-size:12.5px;color:#6b6b66;font-weight:500}
@@ -281,6 +281,10 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 #thbSavedToast.on{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
 #thbSavedToast a{background:#fff;color:#0a0a0a;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;text-decoration:none;white-space:nowrap}
 @media(prefers-reduced-motion:reduce){.thb-fav.thb-pop svg{animation:none}#thbSavedToast{transition:none}}
+</style>
+<style id="thb-display-tracking">
+/* Lora has prominent serifs: negative tracking makes them run into each other */
+.font-display,.hero-title,[data-slot="property-title"],[data-slot="section-header"],[style*="Lora"]{letter-spacing:0!important}
 </style>
 </head>
 <body>
@@ -423,7 +427,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
       <picture><source srcset="/images/all-bali.avif" type="image/avif"><img src="/images/all-bali.jpg" alt="Map" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" width="736" height="920"></picture>
       <div class="mega-featured-overlay"></div>
       <div class="mega-featured-content">
-        <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:700;line-height:1.25;margin-bottom:6px">All of Bali,<br>on the map</p>
+        <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;line-height:1.25;margin-bottom:6px">All of Bali,<br>on the map</p>
         <p style="font-size:11px;opacity:0.75;margin-bottom:12px">Browse villas by location interactively</p>
         <a href="/property-rental/" style="font-size:12px;font-weight:600;background:white;color:#0a0a0a;border-radius:999px;padding:6px 14px;text-decoration:none;display:inline-flex;align-items:center;gap:5px">
           <svg style="width:11px;height:11px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -446,7 +450,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <span class="sdot" data-i="2" style="width:6px;height:6px;border-radius:50%;background:white;opacity:0.35;transition:opacity 0.3s"></span>
       </div>
       <div class="mega-featured-content" id="megaSlideContent">
-        <p id="megaSlideTitle" style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:700;line-height:1.25;margin-bottom:6px;transition:opacity 0.4s">Art, Culture<br>& Tranquility</p>
+        <p id="megaSlideTitle" style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;line-height:1.25;margin-bottom:6px;transition:opacity 0.4s">Art, Culture<br>& Tranquility</p>
         <p id="megaSlideDesc" style="font-size:11px;opacity:0.75;margin-bottom:12px;transition:opacity 0.4s">Sanur — 6 villas by the quiet east coast</p>
         <a id="megaSlideBtn" href="#locations" style="font-size:12px;font-weight:600;background:white;color:#0a0a0a;border-radius:999px;padding:6px 14px;text-decoration:none">Explore Sanur →</a>
       </div>
@@ -936,13 +940,13 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 .thb-ft .thb-ft-in{max-width:1280px;margin:0 auto;padding:56px 24px 0}
 .thb-ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:40px}
 .thb-ft-brand img{height:64px;width:64px;display:block;margin-bottom:16px}
-.thb-ft-name{font-family:Fraunces,Georgia,"Times New Roman",serif;font-size:21px;font-weight:600;letter-spacing:.01em;margin:0 0 10px;color:#fff}
+.thb-ft-name{font-family:'Lora',Georgia,"Times New Roman",serif;font-size:21px;font-weight:600;letter-spacing:.01em;margin:0 0 10px;color:#fff}
 .thb-ft-lead{color:#a9a29a;margin:0 0 20px;max-width:34ch}
 .thb-ft-soc{display:flex;gap:10px;flex-wrap:wrap}
 .thb-ft-soc a{display:inline-flex;align-items:center;gap:7px;border:1px solid #3d3c39;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:500;color:#e9e4da;transition:background .15s,border-color .15s}
 .thb-ft-soc a:hover{background:#2e2d2b;border-color:#5F5340}
 .thb-ft-soc svg{width:15px;height:15px;flex:0 0 auto}
-.thb-ft h4{font-family:Fraunces,Georgia,"Times New Roman",serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C1B59D;margin:0 0 16px}
+.thb-ft h4{font-family:'Lora',Georgia,"Times New Roman",serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C1B59D;margin:0 0 16px}
 .thb-ft ul{list-style:none;margin:0;padding:0}
 .thb-ft li{margin:0 0 10px}
 .thb-ft li a{color:#d6d0c6;transition:color .15s;display:inline-block;padding:5px 0}
@@ -1125,6 +1129,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
   });
 })();
 </script>
+<script defer src="/thb-totop.js"></script>
 </body>
 </html>
 

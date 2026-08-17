@@ -550,5 +550,62 @@
             if (index < 3) section.classList.add('visible');
         });
     </script>
+<script defer src="/thb-totop.js"></script>
+<style id="thb-tabs-css">
+.category-tabs{scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.category-tabs::-webkit-scrollbar{display:none}
+</style>
+<script id="thb-tabs-js">(function(){
+  var tabs=document.querySelector('.category-tabs');if(!tabs)return;
+
+  /* wheel over the strip scrolls the page, not the chips */
+  tabs.addEventListener('wheel',function(e){
+    if(Math.abs(e.deltaX)>Math.abs(e.deltaY))return;
+    if(!e.deltaY)return;
+    e.preventDefault();
+    var step=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?window.innerHeight:1);
+    window.scrollBy(0,step);
+  },{passive:false});
+
+  /* keep the active chip in view as sections pass by */
+  var queued=false;
+  function centre(){
+    queued=false;
+    var a=tabs.querySelector('.tab.active');if(!a)return;
+    if(tabs.scrollWidth<=tabs.clientWidth+4)return;
+    var left=a.offsetLeft-(tabs.clientWidth-a.offsetWidth)/2;
+    left=Math.max(0,Math.min(left,tabs.scrollWidth-tabs.clientWidth));
+    if(Math.abs(left-tabs.scrollLeft)<8)return;
+    try{tabs.scrollTo({left:left,behavior:'smooth'});}catch(err){tabs.scrollLeft=left;}
+  }
+  function queue(){if(!queued){queued=true;requestAnimationFrame(centre);}}
+  var mo=new MutationObserver(queue);
+  [].forEach.call(tabs.querySelectorAll('.tab'),function(t){mo.observe(t,{attributes:true,attributeFilter:['class']});});
+  queue();
+})();</script>
+<script id="thb-photo-deeplink-js">(function(){
+  var want=new URLSearchParams(location.search).get('photo');
+  if(!want)return;
+  function boot(){
+    var imgs=[].slice.call(document.querySelectorAll('.photo-item img'));
+    if(!imgs.length)return;
+    var idx=-1;
+    if(/^\d+$/.test(want)){idx=parseInt(want,10)-1;}
+    else{
+      for(var i=0;i<imgs.length;i++){
+        var b=(imgs[i].getAttribute('src')||imgs[i].src||'').split('/').pop().replace(/\.[a-z0-9]+$/i,'');
+        if(b===want){idx=i;break;}
+      }
+    }
+    if(idx<0||idx>=imgs.length)return;
+    if(typeof window.openFullscreen==='function')window.openFullscreen(idx);
+    else{
+      var item=imgs[idx].closest('.photo-item');
+      if(item)item.scrollIntoView({block:'center'});
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
+  else boot();
+})();</script>
 </body>
 </html>

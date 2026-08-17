@@ -7,14 +7,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600;700&display=swap"></noscript>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
       colors: { ink:'#0a0a0a', off:'#fafaf7', paper:'#f2efe8', line:'#e6e3dc' },
-      fontFamily: { display:['Fraunces','Georgia','serif'], sans:['Inter','sans-serif'] }
+      fontFamily: { display:['Lora','Georgia','serif'], sans:['Inter','sans-serif'] }
     }
   }
 }
@@ -71,7 +71,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   letter-spacing: 0.04em;
 }
 .promo-title {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 44px;
   font-weight: 800;
   color: white;
@@ -385,7 +385,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
   transition: transform 0.25s cubic-bezier(0.2,0.6,0.2,1);
 }
 .cat-card:hover .cat-icon { transform: scale(1.06) rotate(-2deg); }
-.cat-card h3 { font-family: 'Fraunces', Georgia, serif; font-size: 17px; font-weight: 700; margin: 0 0 4px; letter-spacing: -0.01em; }
+.cat-card h3 { font-family: 'Lora', Georgia, serif; font-size: 17px; font-weight: 700; margin: 0 0 4px; letter-spacing: -0.01em; }
 .cat-card p { font-size: 12.5px; color: #6b6b66; margin: 0; line-height: 1.4; }
 
 /* BTN */
@@ -463,7 +463,7 @@ body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -w
 #thbSheet{position:fixed;inset:0;z-index:80;background:#fafaf7;display:none;flex-direction:column;font-family:'Inter',sans-serif}
 #thbSheet.open{display:flex}
 #thbSheet .tsh-hd{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #e6e3dc;flex-shrink:0}
-#thbSheet .tsh-hd p{font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:700;color:#0a0a0a;margin:0}
+#thbSheet .tsh-hd p{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:700;color:#0a0a0a;margin:0}
 #thbSheet .tsh-x{width:38px;height:38px;border-radius:999px;border:1px solid #e6e3dc;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
 #thbSheet .tsh-bd{flex:1;overflow-y:auto;padding:20px;-webkit-overflow-scrolling:touch}
 #thbSheet .tsh-lbl{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8a877f;margin:0 0 12px}
@@ -564,7 +564,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 .cal-wrap{display:flex;gap:26px}
 .cal-m{width:252px}
 .cal-hd{display:flex;align-items:center;justify-content:center;position:relative;margin-bottom:10px}
-.cal-hd p{font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin:0}
+.cal-hd p{font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;margin:0}
 .cal-nav{position:absolute;top:-2px;width:30px;height:30px;border-radius:999px;border:1px solid #e6e3dc;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;color:#0a0a0a}
 .cal-nav:hover{border-color:#0a0a0a}
 #calPrev{left:0}#calNext{right:0}
@@ -607,6 +607,10 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 #thbSavedToast a{background:#fff;color:#0a0a0a;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;text-decoration:none;white-space:nowrap}
 @media(prefers-reduced-motion:reduce){.thb-fav.thb-pop svg{animation:none}#thbSavedToast{transition:none}}
 </style>
+<style id="thb-display-tracking">
+/* Lora has prominent serifs: negative tracking makes them run into each other */
+.font-display,.hero-title,[data-slot="property-title"],[data-slot="section-header"],[style*="Lora"]{letter-spacing:0!important}
+</style>
 </head>
 <body>
 
@@ -616,7 +620,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 <nav id="navbar" style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,250,247,0.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #e6e3dc">
   <div style="max-width:1400px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:72px">
     <!-- Logo -->
-    <a href="/" data-hostpill style="border:1.5px solid rgba(10,10,10,.28);border-radius:999px;padding:7px 16px;text-decoration:none;color:#0a0a0a;font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:600;letter-spacing:-0.025em;flex-shrink:0">
+    <a href="/" data-hostpill style="border:1.5px solid rgba(10,10,10,.28);border-radius:999px;padding:7px 16px;text-decoration:none;color:#0a0a0a;font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;letter-spacing:-0.025em;flex-shrink:0">
       <span style="font-style:italic;font-weight:400">The</span>&nbsp;<span style="font-weight:700;letter-spacing:0.09em">HOST</span>
     </a>
     
@@ -722,7 +726,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
       <picture><source srcset="/images/all-bali.avif" type="image/avif"><img src="/images/all-bali.jpg" alt="Map" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" width="736" height="920"></picture>
       <div class="mega-featured-overlay"></div>
       <div class="mega-featured-content">
-        <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:700;line-height:1.25;margin-bottom:6px">All of Bali,<br>on the map</p>
+        <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;line-height:1.25;margin-bottom:6px">All of Bali,<br>on the map</p>
         <p style="font-size:11px;opacity:0.75;margin-bottom:12px">Browse villas by location interactively</p>
         <a href="/property-rental/" style="font-size:12px;font-weight:600;background:white;color:#0a0a0a;border-radius:999px;padding:6px 14px;text-decoration:none;display:inline-flex;align-items:center;gap:5px">
           <svg style="width:11px;height:11px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -742,7 +746,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <span class="sdot" data-i="2" style="width:6px;height:6px;border-radius:50%;background:white;opacity:0.35;transition:opacity 0.3s"></span>
       </div>
       <div class="mega-featured-content">
-        <p id="megaSlideTitle" style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:700;line-height:1.25;margin-bottom:6px;transition:opacity 0.4s">Calm Seas<br>&amp; Coral Reefs</p>
+        <p id="megaSlideTitle" style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;line-height:1.25;margin-bottom:6px;transition:opacity 0.4s">Calm Seas<br>&amp; Coral Reefs</p>
         <p id="megaSlideDesc" style="font-size:11px;opacity:0.75;margin-bottom:12px;transition:opacity 0.4s">Sanur — 6 villas by the quiet east coast</p>
         <a id="megaSlideBtn" href="/villas/sanur/" style="font-size:12px;font-weight:600;background:white;color:#0a0a0a;border-radius:999px;padding:6px 14px;text-decoration:none">Explore Sanur →</a>
       </div>
@@ -850,7 +854,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
   <div class="results-bar">
     <div>
       <p style="font-size:12px;color:#6b6b66;text-transform:uppercase;letter-spacing:0.18em;font-weight:600;margin-bottom:3px">Bali Property Rental</p>
-      <p style="font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:700" id="resultsTitle">12 villas available</p>
+      <p style="font-family:'Lora',Georgia,serif;font-size:26px;font-weight:700" id="resultsTitle">12 villas available</p>
     </div>
     <div style="display:flex;align-items:center;gap:10px">
       <select class="sort-select" id="sortSelect">
@@ -947,12 +951,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/premier-umalas-16-3br-pool-townhouse/" data-t="Premier Umalas 16 — Stylish 3BR Pool Townhouse" data-i="/public-objects/images/premier-umalas-16-08.jpg" data-m="3 bed · 3 bath · 6 guests" data-a="Umalas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Premier Umalas 16 — Stylish 3BR Pool Townhouse</p>
+          <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Premier Umalas 16 — Stylish 3BR Pool Townhouse</p>
           <div class="prop-meta" style="margin-bottom:10px">
             <span>3 bed</span><span>3 bath</span><span>6 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
@@ -968,12 +972,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/premier-umalas-17-2br-pool-home/" data-t="Premier Umalas 17 — Stylish 2BR Private Pool Home" data-i="/public-objects/images/premier-umalas-17-24.jpg" data-m="2 bed · 2 bath · 4 guests" data-a="Umalas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Premier Umalas 17 — Stylish 2BR Private Pool Home</p>
+          <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Premier Umalas 17 — Stylish 2BR Private Pool Home</p>
           <div class="prop-meta" style="margin-bottom:10px">
             <span>2 bed</span><span>2 bath</span><span>4 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
@@ -989,12 +993,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/villa-black-pool-4br-sanur/" data-t="Villa Black Pool — Family 4BR Villa with Big Pool" data-i="/public-objects/images/villa-black-pool-11.jpg" data-m="4 bed · 4 bath · 8 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Villa Black Pool — Family 4BR Villa with Big Pool</p>
+          <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Villa Black Pool — Family 4BR Villa with Big Pool</p>
           <div class="prop-meta" style="margin-bottom:10px">
             <span>4 bed</span><span>4 bath</span><span>8 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
@@ -1011,12 +1015,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/stylish-2br-pool-townhouse-sanur/" data-t="Stylish 2BR Pool Townhouse in Sanur" data-i="/public-objects/images/sanur-2br-townhouse-29.jpg" data-m="2 bed · 2.5 bath · 4 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Stylish 2BR Pool Townhouse in Sanur</p>
+          <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Stylish 2BR Pool Townhouse in Sanur</p>
           <div class="prop-meta" style="margin-bottom:10px">
             <span>2 bed</span><span>2.5 bath</span><span>4 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
@@ -1033,12 +1037,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/modern-2br-pool-townhouse-sanur/" data-t="Modern 2BR Pool Townhouse in Sanur" data-i="/public-objects/images/sanur-modern-2br-townhouse-27.jpg" data-m="2 bed · 2.5 bath · 4 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Modern 2BR Pool Townhouse in Sanur</p>
+          <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Modern 2BR Pool Townhouse in Sanur</p>
           <div class="prop-meta" style="margin-bottom:10px">
             <span>2 bed</span><span>2.5 bath</span><span>4 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Wi-Fi</span>
@@ -1055,12 +1059,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/lucky-lily-3br-pool-villa-sanur/" data-t="Lucky Lily 3BR Pool Villa in Sanur" data-i="/public-objects/images/lucky-lily-sanur-3br-villa-04.jpg" data-m="3 bed · 3.5 bath · 6 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Lucky Lily 3BR Pool Villa in Sanur</p>
+          <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Lucky Lily 3BR Pool Villa in Sanur</p>
           <div class="prop-meta" style="margin-bottom:10px">
             <span>3 bed</span><span>3.5 bath</span><span>6 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Garden</span>
@@ -1077,12 +1081,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/" data-t="Villa Kesari 4 — Family 3BR Pool Villa in Sanur" data-i="/public-objects/images/villa-kesari-4-sanur-76.jpg" data-m="3 bed · 3 bath · 6 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Villa Kesari 4 — Family 3BR Pool Villa in Sanur</p>
+          <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Villa Kesari 4 — Family 3BR Pool Villa in Sanur</p>
           <div class="prop-meta" style="margin-bottom:10px">
             <span>3 bed</span><span>3 bath</span><span>6 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Family</span>
@@ -1098,12 +1102,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/sanur/garden-pool-villa-4br-sanur/" data-t="Sanur Garden Pool Villa — Family 4BR near Mertasari Beach" data-i="/public-objects/images/sanur-garden-pool-4br-34.jpg" data-m="4 bed · 4.5 bath · 8 guests" data-a="Sanur"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Sanur Garden Pool Villa — Family 4BR near Mertasari Beach</p>
+          <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Sanur Garden Pool Villa — Family 4BR near Mertasari Beach</p>
           <div class="prop-meta" style="margin-bottom:10px">
             <span>4 bed</span><span>4.5 bath</span><span>8 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Garden</span>
@@ -1120,12 +1124,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/canggu/the-wave-6br-beachside-villa-canggu/" data-t="Villa The Wave — Beachside 6BR Villa in Canggu" data-i="/public-objects/images/the-wave-canggu-47.jpg" data-m="6 bed · 6.5 bath · 12 guests" data-a="Canggu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Villa The Wave — Beachside 6BR Villa in Canggu</p>
+          <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Villa The Wave — Beachside 6BR Villa in Canggu</p>
           <div class="prop-meta" style="margin-bottom:10px">
             <span>6 bed</span><span>6.5 bath</span><span>12 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Beach</span>
@@ -1141,12 +1145,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/ungasan/eco-private-1br-pool-villa-ungasan/" data-t="Eco Private — Teak 1BR Pool Villa in Ungasan" data-i="/public-objects/images/eco-private-ungasan-02.jpg" data-m="1 bed · 1 bath · 2 guests" data-a="Ungasan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Eco Private — Teak 1BR Pool Villa in Ungasan</p>
+          <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Eco Private — Teak 1BR Pool Villa in Ungasan</p>
           <div class="prop-meta" style="margin-bottom:10px">
             <span>1 bed</span><span>1 bath</span><span>2 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span>
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Eco</span>
@@ -1162,12 +1166,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/ungasan/eco-teak-2br-pool-villa-ungasan/" data-t="Eco Teak — 2BR Pool Villa in Ungasan" data-i="/public-objects/images/eco-teak-2br-ungasan-23.jpg" data-m="2 bed · 2 bath · 4 guests" data-a="Ungasan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Eco Teak — 2BR Pool Villa in Ungasan</p>
+          <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Eco Teak — 2BR Pool Villa in Ungasan</p>
           <div class="prop-meta" style="margin-bottom:10px">
             <span>2 bed</span><span>2 bath</span><span>4 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span><span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Eco</span>
             </div>
@@ -1182,12 +1186,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
           <button type="button" class="thb-fav" data-fav-btn aria-pressed="false" aria-label="Save this villa" data-u="/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/" data-t="Eco Exclusive — Teak 1BR Pool Villa in Ungasan" data-i="/public-objects/images/exclusive-1br-ungasan-12.jpg" data-m="1 bed · 1 bath · 2 guests" data-a="Ungasan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div style="padding:14px">
-          <p style="font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Eco Exclusive — Teak 1BR Pool Villa in Ungasan</p>
+          <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.2">Eco Exclusive — Teak 1BR Pool Villa in Ungasan</p>
           <div class="prop-meta" style="margin-bottom:10px">
             <span>1 bed</span><span>1 bath</span><span>2 guests</span>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between">
-            <div><span style="font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
+            <div><span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:700">On request</span></div>
             <div style="display:flex;gap:4px">
               <span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Pool</span><span style="font-size:11px;background:#f2efe8;padding:3px 8px;border-radius:999px">Eco</span>
             </div>
@@ -1215,13 +1219,13 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 .thb-ft .thb-ft-in{max-width:1280px;margin:0 auto;padding:56px 24px 0}
 .thb-ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:40px}
 .thb-ft-brand img{height:64px;width:64px;display:block;margin-bottom:16px}
-.thb-ft-name{font-family:Fraunces,Georgia,"Times New Roman",serif;font-size:21px;font-weight:600;letter-spacing:.01em;margin:0 0 10px;color:#fff}
+.thb-ft-name{font-family:'Lora',Georgia,"Times New Roman",serif;font-size:21px;font-weight:600;letter-spacing:.01em;margin:0 0 10px;color:#fff}
 .thb-ft-lead{color:#a9a29a;margin:0 0 20px;max-width:34ch}
 .thb-ft-soc{display:flex;gap:10px;flex-wrap:wrap}
 .thb-ft-soc a{display:inline-flex;align-items:center;gap:7px;border:1px solid #3d3c39;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:500;color:#e9e4da;transition:background .15s,border-color .15s}
 .thb-ft-soc a:hover{background:#2e2d2b;border-color:#5F5340}
 .thb-ft-soc svg{width:15px;height:15px;flex:0 0 auto}
-.thb-ft h4{font-family:Fraunces,Georgia,"Times New Roman",serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C1B59D;margin:0 0 16px}
+.thb-ft h4{font-family:'Lora',Georgia,"Times New Roman",serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C1B59D;margin:0 0 16px}
 .thb-ft ul{list-style:none;margin:0;padding:0}
 .thb-ft li{margin:0 0 10px}
 .thb-ft li a{color:#d6d0c6;transition:color .15s;display:inline-block;padding:5px 0}
@@ -1309,7 +1313,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
   <div id="filterPanel">
     <!-- Header -->
     <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 28px 16px;border-bottom:1px solid #e6e3dc;position:sticky;top:0;background:#fafaf7;z-index:1">
-      <span style="font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:700">Filters</span>
+      <span style="font-family:'Lora',Georgia,serif;font-size:18px;font-weight:700">Filters</span>
       <div style="display:flex;align-items:center;gap:12px">
         <button onclick="clearAllFilters()" style="font-size:12px;color:#6b6b66;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:underline">Clear all</button>
         <button onclick="closeFilters()" style="width:32px;height:32px;border-radius:50%;border:1.5px solid #e6e3dc;background:white;cursor:pointer;display:flex;align-items:center;justify-content:center">
@@ -1762,6 +1766,7 @@ if(!hq||(!hq.ci&&!hq.g))return;
   });
 })();
 </script>
+<script defer src="/thb-totop.js"></script>
 </body>
 </html>
 
