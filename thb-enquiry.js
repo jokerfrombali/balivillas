@@ -8,7 +8,7 @@
    handed to WhatsApp as a prefilled message, so nothing is ever lost.
 */
 (function () {
-  var ENDPOINT = '';                 // e.g. '/api/enquiry' — see note above
+  var ENDPOINT = '/api/lead';        // Cloudflare Worker -> Telegram (worker/index.js)
   var WA = '6285746499697';
   var TERMS = '/terms/';
 
@@ -376,6 +376,7 @@
           : 'Thanks, ' + (p.name.split(' ')[0] || 'friend') + '! We are checking the dates for ' + p.villa + ' and will come back to you shortly.';
       }
 
+      window.__thbLeadSent = Date.now();   /* thb-bot.js: do not double count */
       if (!ENDPOINT) { waSend(p); done(true); return; }
 
       btn.disabled = true;

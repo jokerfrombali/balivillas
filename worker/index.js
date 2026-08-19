@@ -1,0 +1,298 @@
+/* The Host Bali — site backend on Cloudflare Workers.
+ *
+ * Serves the static site (ASSETS binding) and adds a small API that talks to the
+ * Telegram admin chat:
+ *
+ *   POST /api/lead    a request from the site form, or a WhatsApp click with the
+ *                     exact text the guest is about to send. Gets a ticket
+ *                     number and lands in the "leads" topic.
+ *   POST /api/hit     anonymous pageview counter (no cookies, no IP stored).
+ *   POST /api/alert   a JavaScript error caught in the browser -> "ops" topic.
+ *   GET  /api/health  cheap endpoint for external uptime monitors.
+ *   cron              uptime check every run + daily digest at 08:xx WITA.
+ *
+ * The bot token lives in the TELEGRAM_TOKEN secret, never in the repo.
+ */
+
+const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
+
+/* ---------- helpers ---------- */
+
+function wita(d) {
+  const t = new Date(d.getTime() + TZ_OFFSET_MIN * 60000);
+  const p = (n) => String(n).padStart(2, '0');
+  return {
+    date: t.getUTCFullYear() + '-' + p(t.getUTCMonth() + 1) + '-' + p(t.getUTCDate()),
+    time: p(t.getUTCHours()) + ':' + p(t.getUTCMinutes()),
+    human: p(t.getUTCDate()) + '.' + p(t.getUTCMonth() + 1) + '.' + t.getUTCFullYear() +
+           ' ' + p(t.getUTCHours()) + ':' + p(t.getUTCMinutes()) + ' WITA'
+  };
+}
+
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function json(data, status) {
+  return new Response(JSON.stringify(data), {
+    status: status || 200,
+    headers: { 'content-type': 'application/json', 'cache-control': 'no-store' }
+  });
+}
+
+async function tg(env, text, topic) {
+  if (!env.TELEGRAM_TOKEN) return { ok: false, skipped: 'no token' };
+  const body = {
+    chat_id: env.TG_CHAT || '-1003961611036',
+    text: text,
+    parse_mode: 'HTML',
+    disable_web_page_preview: true
+  };
+  if (topic) body.message_thread_id = Number(topic);
+  try {
+    const r = await fetch('https://api.telegram.org/bot' + env.TELEGRAM_TOKEN + '/sendMessage', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    return await r.json();
+  } catch (e) {
+    return { ok: false, error: String(e) };
+  }
+}
+
+/* KV counter. At this volume a lost increment now and then is acceptable. */
+async function bump(env, key, by, ttlDays) {
+  if (!env.THB_STATS) return 0;
+  const cur = Number(await env.THB_STATS.get(key)) || 0;
+  const next = cur + (by || 1);
+  await env.THB_STATS.put(key, String(next), { expirationTtl: (ttlDays || 120) * 86400 });
+  return next;
+}
+
+/* per-IP throttle, so nobody can flood the chat through the endpoint */
+async function tooFast(env, ip, bucket, limit, windowSec) {
+  if (!env.THB_STATS) return false;
+  const key = 'rl:' + bucket + ':' + ip + ':' + Math.floor(Date.now() / (windowSec * 1000));
+  const n = Number(await env.THB_STATS.get(key)) || 0;
+  if (n >= limit) return true;
+  await env.THB_STATS.put(key, String(n + 1), { expirationTtl: windowSec * 2 });
+  return false;
+}
+
+async function ticket(env) {
+  if (!env.THB_STATS) return null;
+  const n = await bump(env, 'seq:lead', 1, 3650);
+  return String(n).padStart(4, '0');
+}
+
+/* ---------- API ---------- */
+
+async function handleLead(req, env) {
+  const ip = req.headers.get('cf-connecting-ip') || '0.0.0.0';
+  if (await tooFast(env, ip, 'lead', 6, 60)) return json({ ok: false, error: 'rate' }, 429);
+
+  let d = {};
+  try { d = await req.json(); } catch (e) { return json({ ok: false, error: 'bad json' }, 400); }
+
+  const t = wita(new Date());
+  const no = await ticket(env);
+  const cf = req.cf || {};
+  const source = d.source === 'whatsapp' ? 'WhatsApp' : 'Форма на сайте';
+
+  const rows = [];
+  if (d.villa) rows.push(['Вилла', d.villa]);
+  if (d.checkin) rows.push(['Заезд', d.checkin]);
+  if (d.checkout) rows.push(['Выезд', d.checkout]);
+  if (d.nights) rows.push(['Ночей', d.nights]);
+  if (d.adults || d.children) {
+    rows.push(['Гостей', (d.adults || 1) + ' взр.' + (d.children ? ' + ' + d.children + ' дет.' : '')]);
+  } else if (d.guests) {
+    rows.push(['Гостей', d.guests]);
+  }
+  if (d.name) rows.push(['Имя', d.name]);
+  if (d.email) rows.push(['Email', d.email]);
+  if (d.phone) rows.push(['Телефон', d.phone]);
+  if (d.note) rows.push(['Комментарий', d.note]);
+
+  const lines = [
+    '🏝 <b>Заявка ' + (no ? '#' + no : '') + '</b> · ' + esc(source),
+    '🕒 ' + esc(t.human),
+    ''
+  ];
+  rows.forEach(function (r) { lines.push('<b>' + esc(r[0]) + ':</b> ' + esc(r[1])); });
+
+  if (d.text) {
+    lines.push('', '<b>Текст обращения:</b>', '<code>' + esc(String(d.text).slice(0, 1500)) + '</code>');
+  }
+  const where = d.page || d.url;
+  if (where) lines.push('', '🔗 ' + esc(where));
+  const geo = [cf.city, cf.country].filter(Boolean).join(', ');
+  if (geo) lines.push('📍 ' + esc(geo));
+
+  const res = await tg(env, lines.join('\n'), env.TG_TOPIC_LEADS || 2);
+  await bump(env, 'd:' + t.date + ':leads');
+  if (d.source === 'whatsapp') await bump(env, 'd:' + t.date + ':wa');
+
+  return json({ ok: !!res.ok, ticket: no });
+}
+
+async function handleHit(req, env) {
+  const ip = req.headers.get('cf-connecting-ip') || '0.0.0.0';
+  if (await tooFast(env, ip, 'hit', 90, 60)) return new Response(null, { status: 204 });
+
+  let d = {};
+  try { d = await req.json(); } catch (e) {}
+  const t = wita(new Date());
+  const path = String(d.path || '/').slice(0, 120);
+  await bump(env, 'd:' + t.date + ':views');
+  await bump(env, 'd:' + t.date + ':p:' + path);
+
+  let src = 'direct';
+  try {
+    if (d.ref) {
+      const h = new URL(d.ref).hostname.replace(/^www\./, '');
+      if (h && h !== 'thehostbali.com') src = h.slice(0, 60);
+    }
+  } catch (e) {}
+  await bump(env, 'd:' + t.date + ':s:' + src);
+
+  return new Response(null, { status: 204 });
+}
+
+async function handleAlert(req, env) {
+  const ip = req.headers.get('cf-connecting-ip') || '0.0.0.0';
+  if (await tooFast(env, ip, 'alert', 3, 300)) return new Response(null, { status: 204 });
+
+  let d = {};
+  try { d = await req.json(); } catch (e) {}
+  const msg = String(d.message || 'unknown error').slice(0, 400);
+
+  /* one alert per unique error per hour — a render loop must not spam the chat */
+  if (env.THB_STATS) {
+    let h = 0;
+    for (let i = 0; i < msg.length; i++) h = (h * 31 + msg.charCodeAt(i)) | 0;
+    const key = 'alert:' + h;
+    if (await env.THB_STATS.get(key)) return new Response(null, { status: 204 });
+    await env.THB_STATS.put(key, '1', { expirationTtl: 3600 });
+  }
+
+  const t = wita(new Date());
+  const parts = [
+    '🛠 <b>Ошибка на сайте</b>',
+    '🕒 ' + esc(t.human),
+    '',
+    '<code>' + esc(msg) + '</code>'
+  ];
+  if (d.page) parts.push('', '🔗 ' + esc(d.page));
+  if (d.ua) parts.push(esc(String(d.ua).slice(0, 120)));
+
+  await tg(env, parts.join('\n'), env.TG_TOPIC_OPS || 4);
+  return new Response(null, { status: 204 });
+}
+
+/* ---------- cron: uptime + daily digest ---------- */
+
+async function topKeys(env, prefix, top) {
+  if (!env.THB_STATS) return [];
+  const names = [];
+  let cursor;
+  do {
+    const page = await env.THB_STATS.list({ prefix: prefix, cursor: cursor });
+    page.keys.forEach(function (k) { names.push(k.name); });
+    cursor = page.list_complete ? null : page.cursor;
+  } while (cursor);
+
+  const rows = [];
+  for (const name of names.slice(0, 200)) {
+    rows.push([name.slice(prefix.length), Number(await env.THB_STATS.get(name)) || 0]);
+  }
+  return rows.sort(function (a, b) { return b[1] - a[1]; }).slice(0, top);
+}
+
+async function digest(env) {
+  const y = wita(new Date(Date.now() - 86400000));
+  const get = async (k) => Number(await env.THB_STATS.get(k)) || 0;
+
+  const views = await get('d:' + y.date + ':views');
+  const leads = await get('d:' + y.date + ':leads');
+  const wa = await get('d:' + y.date + ':wa');
+  const pages = await topKeys(env, 'd:' + y.date + ':p:', 5);
+  const srcs = await topKeys(env, 'd:' + y.date + ':s:', 4);
+
+  const lines = [
+    '📊 <b>Сайт за ' + esc(y.date) + '</b>',
+    '',
+    'Просмотров: <b>' + views + '</b>',
+    'Заявок: <b>' + leads + '</b>' + (wa ? ' (из них WhatsApp: ' + wa + ')' : '')
+  ];
+  if (pages.length) {
+    lines.push('', '<b>Страницы:</b>');
+    pages.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
+  }
+  if (srcs.length) {
+    lines.push('', '<b>Источники:</b>');
+    srcs.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
+  }
+  if (!views && !leads) lines.push('', 'Активности не было.');
+
+  await tg(env, lines.join('\n'), env.TG_TOPIC_OPS || 4);
+}
+
+async function uptime(env) {
+  const urls = [
+    'https://thehostbali.com/',
+    'https://thehostbali.com/property-rental/',
+    'https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/'
+  ];
+  const bad = [];
+  for (const u of urls) {
+    try {
+      const r = await fetch(u, { cf: { cacheTtl: 0 } });
+      if (!r.ok) bad.push(r.status + ' — ' + u);
+    } catch (e) {
+      bad.push('нет ответа — ' + u);
+    }
+  }
+  if (bad.length) {
+    await tg(env, ['🚨 <b>Сайт отвечает с ошибкой</b>', ''].concat(bad.map(esc)).join('\n'),
+             env.TG_TOPIC_OPS || 4);
+  }
+  return bad;
+}
+
+/* ---------- entry ---------- */
+
+export default {
+  async fetch(req, env) {
+    const url = new URL(req.url);
+
+    if (url.pathname.indexOf('/api/') === 0) {
+      if (req.method === 'OPTIONS') return new Response(null, { status: 204 });
+      if (url.pathname === '/api/health') return json({ ok: true, ts: Date.now() });
+      if (req.method !== 'POST') return json({ ok: false, error: 'POST only' }, 405);
+
+      /* only our own pages may post here */
+      const origin = req.headers.get('origin') || '';
+      if (origin && !/^https?:\/\/(www\.)?thehostbali\.com$|^http:\/\/localhost(:\d+)?$/.test(origin)) {
+        return json({ ok: false, error: 'forbidden' }, 403);
+      }
+
+      if (url.pathname === '/api/lead') return handleLead(req, env);
+      if (url.pathname === '/api/hit') return handleHit(req, env);
+      if (url.pathname === '/api/alert') return handleAlert(req, env);
+      return json({ ok: false, error: 'unknown endpoint' }, 404);
+    }
+
+    return env.ASSETS.fetch(req);
+  },
+
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil((async function () {
+      await uptime(env);
+      const h = wita(new Date());
+      if (h.time.indexOf('08:') === 0) await digest(env);
+    })());
+  }
+};
