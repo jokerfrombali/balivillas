@@ -40,22 +40,40 @@ robots.txt почищен.
 Связка двух источников и даёт материал для решений: какие районы и виллы
 дописывать, какие страницы переписывать под запросы, где ломается путь к заявке.
 
-## 3. Bing Webmaster Tools (бесплатный трафик + ChatGPT Search)
+## 3. Bing Webmaster Tools — сделано 19.08.2026
 
-https://www.bing.com/webmasters → Import from Google Search Console (одной кнопкой).
+Сайт `thehostbali.com` уже был добавлен и подтверждён. Дополнительно:
 
-## 4. Google Business Profile
+- отправлены обе карты сайта (`sitemap.xml`, `sitemap-growth.xml`), ошибок 0;
+- через URL Submission отправлены 20 ключевых URL (главная, каталог, 4 страницы
+  районов, контакты, 12 вилл) — квота 100 URL в сутки, при добавлении новых вилл
+  их полезно отправлять так же.
 
-https://business.google.com → создать профиль:
-- Название: The Host Bali
-- Категория: Villa rental agency (+ Property management company)
-- Телефон: +62 857 4649 9697
-- Адрес: Jalan Pasekan Gang Batu Ngonjol 10 No. 8, Batubulan Kangin,
-  Sukawati, Gianyar, Bali 80582
-- Сайт: https://thehostbali.com
-- Фото вилл из /public-objects/images/
-Подтверждение обычно видео-звонком или открыткой. После публикации профиля
-просить гостей оставлять отзывы — это главный фактор карт.
+Bing питает не только свой поиск, но и ChatGPT Search — это отдельный канал.
+
+## 4. Google Business Profile — начат 19.08.2026, нужен ваш шаг
+
+Проверил: профиля «The Host Bali» в Google не существует (дубля не будет).
+Черновик заведён на вашем аккаунте: название **The Host Bali**, категория
+**Vacation home rental agency**, «клиенты могут прийти по адресу» — да.
+
+Дальше форма просит вписать адрес — ввод адреса в чужую форму мне запрещён
+политикой, это делаете вы. Значения (ровно как на /contacts/, совпадение
+адреса на сайте и в профиле само по себе плюс для карт):
+
+```
+Street address : Jalan Pasekan Gang Batu Ngonjol 10 No. 8, Batubulan Kangin
+City           : Sukawati
+Province       : Bali
+Postal code    : 80582
+Телефон        : +62 857 4649 9697
+Сайт           : https://thehostbali.com
+```
+
+После адреса Google предложит зоны обслуживания (Sanur, Canggu, Umalas,
+Ungasan, Denpasar), телефон и сайт, затем подтверждение — обычно видео-звонок.
+Дальше: добавить фото вилл из /public-objects/images/ и просить гостей
+оставлять отзывы — отзывы главный фактор в картах.
 
 ## 5. www -> apex (осталось)
 
