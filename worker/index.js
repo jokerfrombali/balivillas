@@ -8,6 +8,7 @@
  *                     number and lands in the "leads" topic.
  *   POST /api/hit     anonymous pageview counter (no cookies, no IP stored).
  *   POST /api/alert   a JavaScript error caught in the browser -> "ops" topic.
+ *   POST /api/tg      Telegram webhook: /stats, /stats вчера, /health
  *   GET  /api/health  cheap endpoint for external uptime monitors.
  *   cron              asset health check every run + daily digest at 08:xx WITA.
  *
@@ -211,18 +212,18 @@ async function topKeys(env, prefix, top) {
   return rows.sort(function (a, b) { return b[1] - a[1]; }).slice(0, top);
 }
 
-async function digest(env) {
-  const y = wita(new Date(Date.now() - 86400000));
+async function statsText(env, dayOffsetDays, title) {
+  const d = wita(new Date(Date.now() - dayOffsetDays * 86400000));
   const get = async (k) => Number(await env.THB_STATS.get(k)) || 0;
 
-  const views = await get('d:' + y.date + ':views');
-  const leads = await get('d:' + y.date + ':leads');
-  const wa = await get('d:' + y.date + ':wa');
-  const pages = await topKeys(env, 'd:' + y.date + ':p:', 5);
-  const srcs = await topKeys(env, 'd:' + y.date + ':s:', 4);
+  const views = await get('d:' + d.date + ':views');
+  const leads = await get('d:' + d.date + ':leads');
+  const wa = await get('d:' + d.date + ':wa');
+  const pages = await topKeys(env, 'd:' + d.date + ':p:', 5);
+  const srcs = await topKeys(env, 'd:' + d.date + ':s:', 4);
 
   const lines = [
-    '📊 <b>Сайт за ' + esc(y.date) + '</b>',
+    '📊 <b>' + esc(title) + ' ' + esc(d.date) + '</b>',
     '',
     'Просмотров: <b>' + views + '</b>',
     'Заявок: <b>' + leads + '</b>' + (wa ? ' (из них WhatsApp: ' + wa + ')' : '')
@@ -235,9 +236,49 @@ async function digest(env) {
     lines.push('', '<b>Источники:</b>');
     srcs.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
   }
-  if (!views && !leads) lines.push('', 'Активности не было.');
+  if (!views && !leads) lines.push('', 'Активности пока не было.');
+  return lines.join('\n');
+}
 
-  await tg(env, lines.join('\n'), env.TG_TOPIC_OPS || 4);
+async function digest(env) {
+  await tg(env, await statsText(env, 1, 'Сайт за'), env.TG_TOPIC_OPS || 4);
+}
+
+/* The bot answers commands in the chat: /stats, /stats yesterday, /health */
+async function handleTgHook(req, env) {
+  if (env.TG_HOOK_SECRET &&
+      req.headers.get('x-telegram-bot-api-secret-token') !== env.TG_HOOK_SECRET) {
+    return new Response(null, { status: 403 });
+  }
+  let u = {};
+  try { u = await req.json(); } catch (e) { return new Response(null, { status: 204 }); }
+  const msg = u.message || u.edited_message;
+  const text = ((msg && msg.text) || '').trim().toLowerCase();
+  if (!msg || !text || text.charAt(0) !== '/') return new Response(null, { status: 204 });
+
+  const topic = msg.message_thread_id || env.TG_TOPIC_OPS || 4;
+  const cmd = text.replace(/@[a-z0-9_]+/g, '');
+
+  if (cmd.indexOf('/stats') === 0) {
+    const yesterday = /yesterday|вчера/.test(cmd);
+    await tg(env, await statsText(env, yesterday ? 1 : 0,
+             yesterday ? 'Сайт за' : 'Сайт сегодня,'), topic);
+  } else if (cmd.indexOf('/health') === 0) {
+    const res = await probe(env);
+    const okAll = res.every(function (r) { return r.ok; });
+    const lines = [okAll ? '✅ <b>Сайт в порядке</b>' : '🚨 <b>Есть проблемы</b>', ''];
+    res.forEach(function (r) {
+      lines.push((r.ok ? '✔' : '✖') + ' ' + r.status + ' · ' + esc(r.path));
+    });
+    await tg(env, lines.join('\n'), topic);
+  } else if (cmd.indexOf('/help') === 0 || cmd.indexOf('/start') === 0) {
+    await tg(env, ['<b>Команды</b>', '',
+                   '/stats — сегодняшние цифры',
+                   '/stats вчера — за прошлые сутки',
+                   '/health — доступны ли ключевые страницы',
+                   '', 'Сводка за сутки приходит сама в 08:xx WITA.'].join('\n'), topic);
+  }
+  return new Response(null, { status: 204 });
 }
 
 /* Health of the asset store, checked through the ASSETS binding.
@@ -306,13 +347,15 @@ export default {
 
       /* only our own pages may post here */
       const origin = req.headers.get('origin') || '';
-      if (origin && !/^https?:\/\/(www\.)?thehostbali\.com$|^http:\/\/localhost(:\d+)?$/.test(origin)) {
+      if (url.pathname !== '/api/tg' && origin &&
+          !/^https?:\/\/(www\.)?thehostbali\.com$|^http:\/\/localhost(:\d+)?$/.test(origin)) {
         return json({ ok: false, error: 'forbidden' }, 403);
       }
 
       if (url.pathname === '/api/lead') return handleLead(req, env);
       if (url.pathname === '/api/hit') return handleHit(req, env);
       if (url.pathname === '/api/alert') return handleAlert(req, env);
+      if (url.pathname === '/api/tg') return handleTgHook(req, env);
       return json({ ok: false, error: 'unknown endpoint' }, 404);
     }
 
