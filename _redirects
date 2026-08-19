@@ -1,5 +1,6 @@
-# www -> apex (canonical host)
-https://www.thehostbali.com/* https://thehostbali.com/:splat 301
+# www -> apex is a Cloudflare Redirect Rule (dashboard), not _redirects:
+# absolute URLs are not valid here and break the Workers build.
+# See docs/SEO-CHECKLIST.md step 4.
 
 # Старые пути реальных вилл
 /villa/lucky-lily-villa-sanur/ /villa/sanur/lucky-lily-3br-pool-villa-sanur/ 301
