@@ -424,13 +424,21 @@
     }
   }
 
-  var lastFocus = null;
+  var lastFocus = null, lockY = 0;
   function open() {
     if (!card) build();
     paintDates();
     lastFocus = document.activeElement;
     scrim.hidden = false;
     wrap.hidden = false;
+    /* real iOS scroll lock: overflow:hidden alone is ignored by Safari, so the
+       page behind the sheet crept downwards while typing */
+    lockY = window.pageYOffset || 0;
+    document.body.style.position = 'fixed';
+    document.body.style.top = -lockY + 'px';
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
     document.body.style.overflow = 'hidden';
     var reveal = function () {
       scrim.classList.add('is-on');
@@ -446,7 +454,13 @@
     if (!card) return;
     scrim.classList.remove('is-on');
     wrap.classList.remove('is-on');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
     document.body.style.overflow = '';
+    window.scrollTo(0, lockY);
     setTimeout(function () { scrim.hidden = true; wrap.hidden = true; }, 260);
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }

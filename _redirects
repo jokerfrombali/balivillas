@@ -1,3 +1,6 @@
+# www -> apex (canonical host)
+https://www.thehostbali.com/* https://thehostbali.com/:splat 301
+
 # Старые пути реальных вилл
 /villa/lucky-lily-villa-sanur/ /villa/sanur/lucky-lily-3br-pool-villa-sanur/ 301
 /villa/lucky-lily-villa-sanur /villa/sanur/lucky-lily-3br-pool-villa-sanur/ 301

@@ -36,7 +36,6 @@ Allow: /
 # Machine-readable data for AI assistants
 # LLM guide: https://thehostbali.com/llms.txt
 # Full catalog: https://thehostbali.com/llms-full.txt
-# Price index JSON: https://thehostbali.com/data/price-index.json
 
 Sitemap: https://thehostbali.com/sitemap.xml
 Sitemap: https://thehostbali.com/sitemap-growth.xml
