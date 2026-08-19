@@ -52,7 +52,7 @@ idden">
 
   villa\sanur\garden-pool-villa-4br-sanur\index.html:706:  <a href="/about/">About us</a>
   villa\sanur\garden-pool-villa-4br-sanur\index.html:707:  <a href="/contacts/">Contacts</a>
-> villa\sanur\garden-pool-villa-4br-sanur\index.html:708:  <a href="https://wa.me/6282314491635" rel="noopener" style="
+> villa\sanur\garden-pool-villa-4br-sanur\index.html:708:  <a href="https://wa.me/6285746499697" rel="noopener" style="
 color:#0a7d43">WhatsApp &mdash; Contact Concierge</a>
   villa\sanur\garden-pool-villa-4br-sanur\index.html:709:</div>
   villa\sanur\garden-pool-villa-4br-sanur\index.html:710:<script>
@@ -65,7 +65,7 @@ mentById('thbMobileMenu'),bd=document.getElementById('thbMenuBackdrop');
 
 
   villas\sanur\index.html:632:      <!-- CTA -->
-  villas\sanur\index.html:633:      <a href="https://wa.me/6282314491635" class="btn-primary" style="font-size:13px;pad
+  villas\sanur\index.html:633:      <a href="https://wa.me/6285746499697" class="btn-primary" style="font-size:13px;pad
 ding:10px 20px">
 > villas\sanur\index.html:634:        Contact Concierge
   villas\sanur\index.html:635:        <svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="curre
@@ -79,7 +79,7 @@ M4 7h16M4 12h16M4 17h16"/></svg></button>
   villas\sanur\index.html:640:<div id="thbMobileMenu" hidden>
   villas\sanur\index.html:648:  <a href="/about/">About us</a>
   villas\sanur\index.html:649:  <a href="/contacts/">Contacts</a>
-> villas\sanur\index.html:650:  <a href="https://wa.me/6282314491635" rel="noopener" style="color:#0a7d43">WhatsApp — C
+> villas\sanur\index.html:650:  <a href="https://wa.me/6285746499697" rel="noopener" style="color:#0a7d43">WhatsApp — C
 ontact Concierge</a>
   villas\sanur\index.html:651:</div>
   villas\sanur\index.html:652:<script>(function(){var b=document.getElementById('thbBurger'),m=document.getElementById(

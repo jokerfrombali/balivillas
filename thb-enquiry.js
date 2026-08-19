@@ -9,7 +9,7 @@
 */
 (function () {
   var ENDPOINT = '';                 // e.g. '/api/enquiry' — see note above
-  var WA = '6282314491635';
+  var WA = '6285746499697';
   var TERMS = '/terms/';
 
   if (window.__thbEnquiry) return;

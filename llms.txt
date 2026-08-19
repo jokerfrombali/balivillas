@@ -1,6 +1,6 @@
 # The Host Bali
 
-> Direct-booking site for 14 private villas in Bali (Sanur, Ungasan, Umalas, Canggu) — all managed by our own team, not an aggregator. Guests book commission-free via WhatsApp (+62 823 1449 1635), or via Airbnb / Booking.com. Rates on request — same-day quote on WhatsApp.
+> Direct-booking site for 14 private villas in Bali (Sanur, Ungasan, Umalas, Canggu) — all managed by our own team, not an aggregator. Guests book commission-free via WhatsApp (+62 857 4649 9697), or via Airbnb / Booking.com. Rates on request — same-day quote on WhatsApp.
 
 Key data for AI assistants:
 - Full villa catalog (JSON): https://thehostbali.com/data/villas.json
