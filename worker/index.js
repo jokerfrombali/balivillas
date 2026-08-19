@@ -6,7 +6,7 @@
  *   POST /api/lead    a request from the site form, or a WhatsApp click with the
  *                     exact text the guest is about to send. Gets a ticket
  *                     number and lands in the "leads" topic.
- *   POST /api/hit     anonymous pageview counter (no cookies, no IP stored).
+ *   POST /api/hit     anonymous pageview counter (no cookies, no address kept).
  *   POST /api/alert   a JavaScript error caught in the browser -> "ops" topic.
  *   POST /api/tg      Telegram webhook: /stats, /stats вчера, /health
  *   GET  /api/health  cheap endpoint for external uptime monitors.
@@ -72,10 +72,18 @@ async function bump(env, key, by, ttlDays) {
   return next;
 }
 
-/* per-IP throttle, so nobody can flood the chat through the endpoint */
+/* Throttle per visitor, so nobody can flood the chat through the endpoint.
+ * The address is hashed, never written down: a rate-limit bucket only needs to
+ * tell requests apart, not to identify anyone. */
+function fingerprint(ip) {
+  let h = 5381;
+  for (let i = 0; i < ip.length; i++) h = ((h * 33) ^ ip.charCodeAt(i)) | 0;
+  return (h >>> 0).toString(36);
+}
+
 async function tooFast(env, ip, bucket, limit, windowSec) {
   if (!env.THB_STATS) return false;
-  const key = 'rl:' + bucket + ':' + ip + ':' + Math.floor(Date.now() / (windowSec * 1000));
+  const key = 'rl:' + bucket + ':' + fingerprint(ip) + ':' + Math.floor(Date.now() / (windowSec * 1000));
   const n = Number(await env.THB_STATS.get(key)) || 0;
   if (n >= limit) return true;
   await env.THB_STATS.put(key, String(n + 1), { expirationTtl: windowSec * 2 });
