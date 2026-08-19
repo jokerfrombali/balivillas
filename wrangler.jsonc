@@ -24,7 +24,10 @@
   "vars": {
     "TG_CHAT": "-1003961611036",
     "TG_TOPIC_LEADS": "2",
-    "TG_TOPIC_OPS": "4"
+    "TG_TOPIC_OPS": "4",
+    // GA4 property with the G-PF1FJQN7ME stream; the service-account key is in
+    // the GA_SA_KEY secret
+    "GA_PROPERTY_ID": "550710445"
   },
 
   // uptime check every 30 min; daily digest at 08:xx WITA (00:xx UTC)

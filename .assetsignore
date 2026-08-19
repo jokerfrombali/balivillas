@@ -25,3 +25,7 @@ brand/_vm*
 worker/
 package.json
 package-lock.json
+ga-key.json
+thehostbali-*.json
+*.pem
+*.key

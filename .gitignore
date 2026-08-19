@@ -3,3 +3,5 @@
 _gitlock_trash/
 *.lock
 .wrangler/
+ga-key.json
+thehostbali-*.json
