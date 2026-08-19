@@ -2,3 +2,4 @@
 **/.DS_Store
 _gitlock_trash/
 *.lock
+.wrangler/

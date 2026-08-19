@@ -1,10 +1,32 @@
 {
   "name": "thebalihost",
   "compatibility_date": "2026-07-28",
+
+  // Worker serves /api/* (leads -> Telegram, stats, alerts) and hands
+  // everything else to the static assets. See worker/index.js
+  "main": "worker/index.js",
+
   "assets": {
     "directory": "./",
+    "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
     // unknown paths get /404.html with a real 404 status
     "not_found_handling": "404-page"
-  }
+  },
+
+  // ticket counter + daily view counters
+  "kv_namespaces": [
+    { "binding": "THB_STATS", "id": "8a6553c66b67411ea2c2093702734ef5" }
+  ],
+
+  // chat coordinates are not secret; the bot token lives in the
+  // TELEGRAM_TOKEN secret and never in this file
+  "vars": {
+    "TG_CHAT": "-1003961611036",
+    "TG_TOPIC_LEADS": "2",
+    "TG_TOPIC_OPS": "4"
+  },
+
+  // uptime check every 30 min; daily digest at 08:xx WITA (00:xx UTC)
+  "triggers": { "crons": ["*/30 * * * *"] }
 }

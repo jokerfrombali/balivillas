@@ -20,3 +20,8 @@ wrangler.jsonc
 _to_delete/
 brand/_v*
 brand/_vm*
+.claude/
+*.bak
+worker/
+package.json
+package-lock.json
