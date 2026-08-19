@@ -387,6 +387,10 @@ export default {
   async fetch(req, env) {
     const url = new URL(req.url);
 
+    /* www -> apex is NOT done here on purpose: HTML paths are served straight
+       from the asset store and never reach this handler, so a redirect here
+       would silently do nothing. It belongs in a Cloudflare Redirect Rule. */
+
     if (url.pathname.indexOf('/api/') === 0) {
       if (req.method === 'OPTIONS') return new Response(null, { status: 204 });
       if (url.pathname === '/api/health') {

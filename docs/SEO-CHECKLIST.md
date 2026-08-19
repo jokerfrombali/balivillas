@@ -2,25 +2,49 @@
 
 Код-часть сделана 2026-08-19: OG/Twitter-карточки на 53 страницах, VacationRental
 JSON-LD на виллах, ItemList на каталоге, description/canonical на /property-rental/,
-www-редирект в _redirects, robots.txt почищен.
+robots.txt почищен.
 
-## 1. Google Search Console — главное
+## 1. Google Search Console — сделано 19.08.2026
 
-1. https://search.google.com/search-console → Add property → **Domain** → `thehostbali.com`.
-2. Google даст TXT-запись → Cloudflare → thehostbali.com → DNS → Add record:
-   Type TXT, Name `@`, Content — строка от Google → Verify.
-3. Sitemaps → добавить обе:
-   - `https://thehostbali.com/sitemap.xml`
-   - `https://thehostbali.com/sitemap-growth.xml`
-4. URL Inspection → вставить главную и 2-3 виллы → Request indexing.
-5. Через неделю смотреть: Pages (что проиндексировано), Enhancements
+Ресурс `https://thehostbali.com/` (тип «с префиксом в URL») создан и **подтверждён
+автоматически** — по тегу Google Аналитики, который уже стоит на страницах.
+Поэтому важно: не удалять gtag.js со страниц, иначе подтверждение слетит.
+
+- Sitemap `https://thehostbali.com/sitemap.xml` — статус «Успешно», 49 страниц.
+- Sitemap `https://thehostbali.com/sitemap-growth.xml` — «Успешно», 13 страниц.
+- GA4 ↔ Search Console связаны: в Отчётах GA4 появились «Запросы» и «Обычный
+  поисковый трафик» — там будет видно, по каким запросам приходят из Google.
+
+Что осталось руками:
+
+1. URL Inspection → главная и 2–3 виллы → **Request indexing** (ускоряет первый обход).
+2. Через неделю смотреть Pages (что проиндексировано), Enhancements
    (подтянулся ли VacationRental), Core Web Vitals.
+3. По желанию — добавить ещё и **доменный** ресурс `thehostbali.com`
+   (покрывает www и http): Add property → Domain → TXT-запись в Cloudflare DNS.
 
-## 2. Bing Webmaster Tools (бесплатный трафик + ChatGPT Search)
+## 2. Google Analytics 4 — сделано 19.08.2026
+
+Ресурс `550710445`, поток «сайт», `G-PF1FJQN7ME`, сбор данных идёт.
+
+- Хранение данных о событиях: **14 месяцев** (было 2 — дефолт, из-за которого
+  нельзя сравнивать сезон с сезоном).
+- Ключевые события (конверсии): `whatsapp_click`, `booking_submit`.
+- Специальные параметры: `spot` (CTA spot), `page_name` (Villa page),
+  `has_dates` (Dates chosen) — без них параметры собираются, но не видны в отчётах.
+- Улучшенная статистика включена (прокрутка, исходящие клики и т.д.).
+
+Честно про «двигать в топ»: GA4 не влияет на позиции. Позиции показывает и
+объясняет Search Console (запросы, показы, CTR, средняя позиция), а GA4
+показывает, что эти визиты делают дальше — дошли ли до WhatsApp и заявки.
+Связка двух источников и даёт материал для решений: какие районы и виллы
+дописывать, какие страницы переписывать под запросы, где ломается путь к заявке.
+
+## 3. Bing Webmaster Tools (бесплатный трафик + ChatGPT Search)
 
 https://www.bing.com/webmasters → Import from Google Search Console (одной кнопкой).
 
-## 3. Google Business Profile
+## 4. Google Business Profile
 
 https://business.google.com → создать профиль:
 - Название: The Host Bali
@@ -33,14 +57,20 @@ https://business.google.com → создать профиль:
 Подтверждение обычно видео-звонком или открыткой. После публикации профиля
 просить гостей оставлять отзывы — это главный фактор карт.
 
-## 4. Если www-редирект из _redirects не заработал
+## 5. www -> apex (осталось)
 
 Cloudflare → thehostbali.com → Rules → Redirect Rules → Create:
 - When: Hostname equals `www.thehostbali.com`
 - Then: Dynamic redirect, expression
   `concat("https://thehostbali.com", http.request.uri.path)`, 301, preserve query.
 
-## 5. Дальше по контенту (по желанию)
+В воркере это сделать нельзя: HTML отдаётся напрямую из хранилища статики и до
+кода воркера не доходит — редирект там просто не сработал бы. Сейчас
+`www.thehostbali.com` отвечает 200, то есть сайт доступен по двум адресам;
+критично это не ломает (canonical на всех страницах указывает на apex), но
+правило лучше поставить.
+
+## 6. Дальше по контенту (по желанию)
 
 - Раз в месяц дописывать тексты районов (Ungasan сейчас нормальный, но короче Sanur).
 - Блог-страницы под запросы «bali villa with private pool <район>» — по одной в месяц.
