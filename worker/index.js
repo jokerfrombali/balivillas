@@ -9,7 +9,7 @@
  *   POST /api/hit     anonymous pageview counter (no cookies, no IP stored).
  *   POST /api/alert   a JavaScript error caught in the browser -> "ops" topic.
  *   GET  /api/health  cheap endpoint for external uptime monitors.
- *   cron              uptime check every run + daily digest at 08:xx WITA.
+ *   cron              asset health check every run + daily digest at 08:xx WITA.
  *
  * The bot token lives in the TELEGRAM_TOKEN secret, never in the repo.
  */
@@ -240,26 +240,54 @@ async function digest(env) {
   await tg(env, lines.join('\n'), env.TG_TOPIC_OPS || 4);
 }
 
-async function uptime(env) {
-  const urls = [
-    'https://thehostbali.com/',
-    'https://thehostbali.com/property-rental/',
-    'https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/'
-  ];
-  const bad = [];
-  for (const u of urls) {
+/* Health of the asset store, checked through the ASSETS binding.
+ * Fetching our own public hostname from inside the Worker loops back into the
+ * edge and returns 522 — that produced false "site is down" alerts. */
+async function probe(env) {
+  const paths = ['/', '/property-rental/', '/villa/sanur/villa-black-pool-4br-sanur/'];
+  const out = [];
+  for (const p of paths) {
     try {
-      const r = await fetch(u, { cf: { cacheTtl: 0 } });
-      if (!r.ok) bad.push(r.status + ' — ' + u);
+      const r = await env.ASSETS.fetch(new Request('https://thehostbali.com' + p));
+      const body = await r.text();
+      out.push({ path: p, status: r.status, bytes: body.length, ok: r.status === 200 && body.length > 2000 });
     } catch (e) {
-      bad.push('нет ответа — ' + u);
+      out.push({ path: p, status: 0, bytes: 0, ok: false, error: String(e).slice(0, 120) });
     }
   }
-  if (bad.length) {
-    await tg(env, ['🚨 <b>Сайт отвечает с ошибкой</b>', ''].concat(bad.map(esc)).join('\n'),
-             env.TG_TOPIC_OPS || 4);
+  return out;
+}
+
+/* Alert on the transition into trouble, then at most once an hour, and once more
+ * when it clears — so a long outage cannot flood the chat. */
+async function watch(env) {
+  const res = await probe(env);
+  const bad = res.filter(function (r) { return !r.ok; });
+  const now = Date.now();
+  const stateKey = 'ops:down';
+  let prev = null;
+  if (env.THB_STATS) {
+    try { prev = JSON.parse(await env.THB_STATS.get(stateKey) || 'null'); } catch (e) {}
   }
-  return bad;
+
+  if (bad.length) {
+    const quiet = prev && (now - prev.at) < 3600000;
+    if (!quiet) {
+      const lines = ['🚨 <b>Страницы сайта отдают ошибку</b>', ''];
+      bad.forEach(function (r) {
+        lines.push(esc(r.status ? r.status + ' — ' + r.path : 'нет ответа — ' + r.path));
+      });
+      lines.push('', 'Проверено изнутри воркера, через хранилище файлов.');
+      await tg(env, lines.join('\n'), env.TG_TOPIC_OPS || 4);
+    }
+    if (env.THB_STATS) {
+      await env.THB_STATS.put(stateKey, JSON.stringify({ at: quiet ? prev.at : now }), { expirationTtl: 86400 });
+    }
+  } else if (prev) {
+    await tg(env, '✅ <b>Сайт снова в порядке</b>\nВсе проверяемые страницы отвечают.', env.TG_TOPIC_OPS || 4);
+    if (env.THB_STATS) await env.THB_STATS.delete(stateKey);
+  }
+  return res;
 }
 
 /* ---------- entry ---------- */
@@ -270,7 +298,10 @@ export default {
 
     if (url.pathname.indexOf('/api/') === 0) {
       if (req.method === 'OPTIONS') return new Response(null, { status: 204 });
-      if (url.pathname === '/api/health') return json({ ok: true, ts: Date.now() });
+      if (url.pathname === '/api/health') {
+        const res = await probe(env);
+        return json({ ok: res.every(function (r) { return r.ok; }), ts: Date.now(), pages: res });
+      }
       if (req.method !== 'POST') return json({ ok: false, error: 'POST only' }, 405);
 
       /* only our own pages may post here */
@@ -290,7 +321,7 @@ export default {
 
   async scheduled(event, env, ctx) {
     ctx.waitUntil((async function () {
-      await uptime(env);
+      await watch(env);
       const h = wita(new Date());
       if (h.time.indexOf('08:') === 0) await digest(env);
     })());
