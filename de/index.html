@@ -6,6 +6,12 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  /* Consent Mode v2: measured by default, but nothing is stored in the EEA/UK/CH
+     until the visitor agrees in the cookie banner (thb-consent.js). */
+  gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});
+  gtag('consent','default',{region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+  try{var c=localStorage.getItem('thb_consent_v1');
+      if(c)gtag('consent','update',{analytics_storage:c==='granted'?'granted':'denied'});}catch(e){}
   gtag('js', new Date());
   gtag('config', 'G-97KLMXPHP7');
 </script>
@@ -362,5 +368,6 @@ footer p{font-size:13px;color:rgba(255,255,255,.45)}
 
 <script defer src="/thb-totop.js"></script>
 <script defer src="/thb-events.js"></script>
+<script defer src="/thb-consent.js"></script>
 </body>
 </html>
