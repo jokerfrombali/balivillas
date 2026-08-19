@@ -129,16 +129,35 @@ Webhook зарегистрирован на `https://thehostbali.com/api/tg` и 
 Это **не замена GA4**: считаются просмотры, а не уникальные посетители, и нет
 поведенческих метрик. Зато работает без внешних ключей и доступов.
 
-### Если нужны настоящие данные GA4 в чате
+### Подключение GA4 (код готов, нужны доступы)
 
-Тогда нужен доступ к Google Analytics Data API, и от вас потребуется:
+Когда в окружении появятся `GA_SA_KEY` и `GA_PROPERTY_ID`, сводка и команда
+`/stats` автоматически начнут показывать данные Google Analytics: посетителей,
+сеансы, среднее время на сайте, каналы привлечения и события
+(`whatsapp_click`, `booking_open`, `booking_submit`, `dates_selected`,
+`phone_click`). Без них всё работает на собственных счётчиках — переключение
+происходит само, ничего править не нужно. В конце сообщения всегда написано,
+откуда цифры.
 
-1. Google Cloud → создать проект → включить **Google Analytics Data API**.
-2. Создать **service account** → выпустить JSON-ключ.
-3. В GA4: Admin → Property access management → добавить e-mail этого
-   service account с ролью **Viewer**.
-4. Прислать: JSON-ключ (я положу в секрет Cloudflare) и **Property ID** —
-   число из GA4 Admin → Property details, не `G-...`.
+Что нужно сделать:
 
-После этого сводка сможет показывать пользователей, сеансы, источники,
-конверсии `whatsapp_click` и `booking_submit` — ровно как в интерфейсе GA4.
+1. **Google Cloud** → console.cloud.google.com → создать проект (любое имя).
+2. В нём: **APIs & Services → Library** → найти **Google Analytics Data API** →
+   **Enable**.
+3. **APIs & Services → Credentials → Create credentials → Service account** →
+   имя, например `thehostbali-stats` → Create → роли не нужны → Done.
+4. Открыть созданный service account → вкладка **Keys** → **Add key → Create new
+   key → JSON** → скачается файл.
+5. Скопировать **e-mail** этого service account (вида
+   `thehostbali-stats@…iam.gserviceaccount.com`).
+6. **GA4** → Admin → **Property access management** → «+» → вставить этот e-mail
+   → роль **Viewer** → без приглашения по почте.
+7. **GA4** → Admin → **Property details** → скопировать **Property ID** —
+   это число (например `550733087`), не `G-PF1FJQN7ME`.
+
+Прислать мне: содержимое JSON-файла и Property ID. JSON положу в секрет
+`GA_SA_KEY`, число — в переменную `GA_PROPERTY_ID`.
+
+JSON-ключ — это доступ на **чтение** статистики, не на управление аккаунтом.
+Отозвать можно в любой момент: удалить ключ в Google Cloud или убрать
+service account из доступов GA4.

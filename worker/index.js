@@ -9,11 +9,14 @@
  *   POST /api/hit     anonymous pageview counter (no cookies, no address kept).
  *   POST /api/alert   a JavaScript error caught in the browser -> "ops" topic.
  *   POST /api/tg      Telegram webhook: /stats, /stats вчера, /health
+ *                     numbers come from GA4 when GA_SA_KEY is set, else from KV
  *   GET  /api/health  cheap endpoint for external uptime monitors.
  *   cron              asset health check every run + daily digest at 08:xx WITA.
  *
  * The bot token lives in the TELEGRAM_TOKEN secret, never in the repo.
  */
+
+import { gaDay } from './ga.js';
 
 const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
 
@@ -220,31 +223,70 @@ async function topKeys(env, prefix, top) {
   return rows.sort(function (a, b) { return b[1] - a[1]; }).slice(0, top);
 }
 
+function fmtDur(sec) {
+  if (!sec) return '0 сек';
+  const m = Math.floor(sec / 60), r = sec % 60;
+  return m ? (m + ' мин ' + r + ' сек') : (r + ' сек');
+}
+
 async function statsText(env, dayOffsetDays, title) {
   const d = wita(new Date(Date.now() - dayOffsetDays * 86400000));
   const get = async (k) => Number(await env.THB_STATS.get(k)) || 0;
 
-  const views = await get('d:' + d.date + ':views');
   const leads = await get('d:' + d.date + ':leads');
   const wa = await get('d:' + d.date + ':wa');
-  const pages = await topKeys(env, 'd:' + d.date + ':p:', 5);
-  const srcs = await topKeys(env, 'd:' + d.date + ':s:', 4);
 
-  const lines = [
-    '📊 <b>' + esc(title) + ' ' + esc(d.date) + '</b>',
-    '',
-    'Просмотров: <b>' + views + '</b>',
-    'Заявок: <b>' + leads + '</b>' + (wa ? ' (из них WhatsApp: ' + wa + ')' : '')
-  ];
-  if (pages.length) {
-    lines.push('', '<b>Страницы:</b>');
-    pages.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
+  /* Real GA4 numbers when the service account is configured, otherwise the
+     Worker's own counters. */
+  const ga = await gaDay(env, dayOffsetDays);
+
+  const lines = ['📊 <b>' + esc(title) + ' ' + esc(d.date) + '</b>', ''];
+
+  if (ga) {
+    lines.push('Посетителей: <b>' + ga.users + '</b>');
+    lines.push('Сеансов: <b>' + ga.sessions + '</b> · просмотров: <b>' + ga.views + '</b>');
+    lines.push('Среднее время на сайте: ' + esc(fmtDur(ga.avgSec)));
+    lines.push('Заявок в чат: <b>' + leads + '</b>' + (wa ? ' (из них WhatsApp: ' + wa + ')' : ''));
+
+    if (ga.events.length) {
+      lines.push('', '<b>Действия:</b>');
+      const names = {
+        whatsapp_click: 'клики в WhatsApp',
+        booking_open: 'открыли форму',
+        booking_submit: 'отправили заявку',
+        dates_selected: 'выбрали даты',
+        phone_click: 'клики по телефону'
+      };
+      ga.events.forEach(function (r) { lines.push(r[1] + ' · ' + esc(names[r[0]] || r[0])); });
+    }
+    if (ga.pages.length) {
+      lines.push('', '<b>Страницы:</b>');
+      ga.pages.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
+    }
+    if (ga.channels.length) {
+      lines.push('', '<b>Источники:</b>');
+      ga.channels.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
+    }
+    lines.push('', '<i>данные Google Analytics</i>');
+  } else {
+    const views = await get('d:' + d.date + ':views');
+    const pages = await topKeys(env, 'd:' + d.date + ':p:', 5);
+    const srcs = await topKeys(env, 'd:' + d.date + ':s:', 4);
+
+    lines.push('Просмотров: <b>' + views + '</b>');
+    lines.push('Заявок: <b>' + leads + '</b>' + (wa ? ' (из них WhatsApp: ' + wa + ')' : ''));
+    if (pages.length) {
+      lines.push('', '<b>Страницы:</b>');
+      pages.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
+    }
+    if (srcs.length) {
+      lines.push('', '<b>Источники:</b>');
+      srcs.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
+    }
+    if (!views && !leads) lines.push('', 'Активности пока не было.');
+    lines.push('', '<i>счётчик сайта; GA4 не подключён</i>');
   }
-  if (srcs.length) {
-    lines.push('', '<b>Источники:</b>');
-    srcs.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
-  }
-  if (!views && !leads) lines.push('', 'Активности пока не было.');
+
   return lines.join('\n');
 }
 
