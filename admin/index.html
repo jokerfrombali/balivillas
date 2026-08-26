@@ -162,6 +162,10 @@ tr:last-child td{border-bottom:0}
 .tag.recover{background:#fdeee9;color:#a03a22}
 .tag.ctr{background:#fdf4e3;color:#8a6412}
 .tag.rank{background:#eef2fb;color:#2b4a8a}
+.tag.gap{background:#efe9f7;color:#5b3a8a}
+.tag.owner{background:#e9f6ee;color:#1f6440}
+.tag.money{background:#fdf0e3;color:#8a5412}
+.task .val{font-size:12px;color:var(--muted);margin-top:2px}
 
 /* ---------- экран входа ---------- */
 #gate{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;padding:24px}
@@ -630,12 +634,7 @@ $('leadsBody').addEventListener('change',function(e){
 });
 
 /* ================= SEO: очередь задач ================= */
-var TASK_RU={recover:'вернуть',ctr:'сниппет',rank:'дотянуть'};
-var TASK_HINT={
-  recover:'Клики были и пропали — самое срочное.',
-  ctr:'Мы на первой странице, но кликают хуже нормы. Лечится текстом, не ссылками.',
-  rank:'Позиция 5–20: до первой страницы близко.'
-};
+var TASK_RU={recover:'вернуть',ctr:'сниппет',rank:'дотянуть',gap:'нет страницы'};
 
 function loadOpportunities(){
   if($('oppBody').dataset.done) return;
@@ -648,16 +647,22 @@ function loadOpportunities(){
     }
     var d=j.data, h=[];
 
+    var owner=(d.byIntent||[]).filter(function(x){return x.key==='owner'})[0];
     h.push('<div class="kpis" style="margin-bottom:14px">');
     h.push(kpi('Задач в очереди', d.tasks.length,
-      d.counts.recover+' вернуть · '+d.counts.ctr+' сниппет · '+d.counts.rank+' дотянуть'));
+      d.counts.recover+' вернуть · '+d.counts.gap+' нет страницы · '+
+      d.counts.ctr+' сниппет · '+d.counts.rank+' дотянуть'));
+    h.push(kpi('Запросы владельцев', owner?owner.count:0,
+      'самый дорогой контакт — управление виллой', owner&&owner.count?'good':''));
     h.push(kpi('Потенциал', '+'+num(d.totalGain),
       'кликов в месяц, если сделать всё', d.totalGain?'good':''));
     h.push(kpi('Каннибализация', d.cannibal.length,
       'запросов, где мы конкурируем сами с собой', d.cannibal.length?'alert':'good'));
-    h.push(kpi('Окно', d.window.from.slice(5)+' — '+d.window.to.slice(5),
-      'сравнение с '+d.compare.from.slice(5)+' — '+d.compare.to.slice(5)));
     h.push('</div>');
+    h.push('<p class="small" style="margin:0 0 14px">Окно '+esc(d.window.from)+' — '+
+      esc(d.window.to)+', сравнение с '+esc(d.compare.from)+' — '+esc(d.compare.to)+
+      '. В индексе '+d.pagesIndexed+' '+plural(d.pagesIndexed,'страница','страницы','страниц')+
+      ' из карт сайта. Очередь отсортирована по коммерческому приоритету, а не по кликам.</p>');
 
     if(!d.tasks.length && !d.cannibal.length){
       h.push('<div class="ok-box">Значимых возможностей не найдено. При текущем объёме показов '+
@@ -667,7 +672,10 @@ function loadOpportunities(){
 
     d.tasks.forEach(function(t){
       h.push('<div class="task'+(t.urgent?' urgent':'')+'">');
+      var icls = t.intent==='owner' ? 'owner'
+               : (t.intent==='book'||t.intent==='book_geo') ? 'money' : '';
       h.push('<div class="hd"><span class="tag '+t.type+'">'+esc(TASK_RU[t.type]||t.type)+'</span>'+
+        (t.intentLabel?'<span class="tag '+icls+'">'+esc(t.intentLabel)+'</span>':'')+
         '<span class="q">'+esc(t.query)+'</span>'+
         '<span class="gain">+'+t.gain+'<small>кликов/мес</small></span></div>');
       h.push('<div class="why">'+esc(t.why)+'</div>');
@@ -699,10 +707,14 @@ function loadOpportunities(){
       });
     }
 
-    h.push('<p class="small" style="margin-top:12px">Оценка «+кликов» — это разница между '+
-      'нынешним CTR и обычным для этой позиции, умноженная на показы. Это ориентир для '+
-      'приоритета, а не обещание. В расчёт не берутся запросы слабее '+d.minImpressions+
-      ' показов — на меньших числах отличить сигнал от случайности нельзя.</p>');
+    h.push('<p class="small" style="margin-top:12px">«+кликов» — разница между нынешним CTR '+
+      'и обычным для этой позиции, умноженная на показы: ориентир для приоритета, а не '+
+      'обещание. Порядок задач считается как эти клики × ценность намерения '+
+      '(владелец дороже брони, бронь дороже просмотра) — веса выставлены на глаз, '+
+      'а не измерены, их можно менять в коде. Запросы слабее '+d.minImpressions+
+      ' показов отброшены. Тип «нет страницы» определяется по словам в адресах '+
+      'страниц — для общих запросов может ошибаться в сторону «нет», поэтому рядом '+
+      'показаны процент совпадения и ближайшая страница: решайте сами.</p>');
 
     $('oppBody').innerHTML=h.join('');
   }).catch(function(){ $('oppBody').innerHTML='<p class="loading">Не удалось посчитать.</p>'; });

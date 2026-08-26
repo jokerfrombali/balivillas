@@ -6,7 +6,6 @@
 <url><loc>https://thehostbali.com/villas/</loc><lastmod>2026-08-19</lastmod></url>
 <url><loc>https://thehostbali.com/villas/umalas/</loc><lastmod>2026-08-19</lastmod></url>
 <url><loc>https://thehostbali.com/villas/sanur/</loc><lastmod>2026-08-19</lastmod></url>
-<url><loc>https://thehostbali.com/villas/sanur/4-bedroom/</loc><lastmod>2026-07-21</lastmod></url>
   <url>
     <loc>https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/gallery/</loc>
     <changefreq>weekly</changefreq>
@@ -29,11 +28,6 @@
   </url>
   <url>
     <loc>https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://thehostbali.com/villas/sanur/2-bedroom/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
