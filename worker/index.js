@@ -11,12 +11,12 @@
  *   POST /api/tg      Telegram webhook: /stats, /stats вчера, /health
  *                     numbers come from GA4 when GA_SA_KEY is set, else from KV
  *   GET  /api/health  cheap endpoint for external uptime monitors.
- *   cron              asset health check every run + daily digest at 08:xx WITA.
+ *   cron              asset health check every run + weekly digest, Mon 08:00 WITA.
  *
  * The bot token lives in the TELEGRAM_TOKEN secret, never in the repo.
  */
 
-import { gaDay } from './ga.js';
+import { gaDay, gaWeek } from './ga.js';
 
 const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
 
@@ -28,6 +28,7 @@ function wita(d) {
   return {
     date: t.getUTCFullYear() + '-' + p(t.getUTCMonth() + 1) + '-' + p(t.getUTCDate()),
     time: p(t.getUTCHours()) + ':' + p(t.getUTCMinutes()),
+    dow: t.getUTCDay(),            // 0 = Sunday .. 6 = Saturday, already shifted to WITA
     human: p(t.getUTCDate()) + '.' + p(t.getUTCMonth() + 1) + '.' + t.getUTCFullYear() +
            ' ' + p(t.getUTCHours()) + ':' + p(t.getUTCMinutes()) + ' WITA'
   };
@@ -290,8 +291,89 @@ async function statsText(env, dayOffsetDays, title) {
   return lines.join('\n');
 }
 
+/* Same key, summed over the last N full days (ending yesterday). */
+async function weekSum(env, days, suffix) {
+  const get = async (k) => Number(await env.THB_STATS.get(k)) || 0;
+  let total = 0;
+  for (let i = 1; i <= days; i++) {
+    const d = wita(new Date(Date.now() - i * 86400000));
+    total += await get('d:' + d.date + ':' + suffix);
+  }
+  return total;
+}
+
+/* topKeys() per day, merged across the last N days — only hit when GA4 is off. */
+async function topKeysWeek(env, days, kind, top) {
+  const totals = {};
+  for (let i = 1; i <= days; i++) {
+    const d = wita(new Date(Date.now() - i * 86400000));
+    (await topKeys(env, 'd:' + d.date + ':' + kind + ':', 200)).forEach(function (r) {
+      totals[r[0]] = (totals[r[0]] || 0) + r[1];
+    });
+  }
+  return Object.entries(totals).sort(function (a, b) { return b[1] - a[1]; }).slice(0, top);
+}
+
+async function weeklyStatsText(env) {
+  const days = 7;
+  const end = wita(new Date(Date.now() - 86400000));
+  const start = wita(new Date(Date.now() - days * 86400000));
+  const leads = await weekSum(env, days, 'leads');
+  const wa = await weekSum(env, days, 'wa');
+
+  const ga = await gaWeek(env, days);
+  const lines = ['📊 <b>Сайт за неделю</b> ' + esc(start.date) + ' – ' + esc(end.date), ''];
+
+  if (ga) {
+    lines.push('Посетителей: <b>' + ga.users + '</b>');
+    lines.push('Сеансов: <b>' + ga.sessions + '</b> · просмотров: <b>' + ga.views + '</b>');
+    lines.push('Среднее время на сайте: ' + esc(fmtDur(ga.avgSec)));
+    lines.push('Заявок в чат: <b>' + leads + '</b>' + (wa ? ' (из них WhatsApp: ' + wa + ')' : ''));
+
+    if (ga.events.length) {
+      lines.push('', '<b>Действия:</b>');
+      const names = {
+        whatsapp_click: 'клики в WhatsApp',
+        booking_open: 'открыли форму',
+        booking_submit: 'отправили заявку',
+        dates_selected: 'выбрали даты',
+        phone_click: 'клики по телефону'
+      };
+      ga.events.forEach(function (r) { lines.push(r[1] + ' · ' + esc(names[r[0]] || r[0])); });
+    }
+    if (ga.pages.length) {
+      lines.push('', '<b>Страницы:</b>');
+      ga.pages.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
+    }
+    if (ga.channels.length) {
+      lines.push('', '<b>Источники:</b>');
+      ga.channels.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
+    }
+    lines.push('', '<i>данные Google Analytics</i>');
+  } else {
+    const views = await weekSum(env, days, 'views');
+    const pages = await topKeysWeek(env, days, 'p', 5);
+    const srcs = await topKeysWeek(env, days, 's', 4);
+
+    lines.push('Просмотров: <b>' + views + '</b>');
+    lines.push('Заявок: <b>' + leads + '</b>' + (wa ? ' (из них WhatsApp: ' + wa + ')' : ''));
+    if (pages.length) {
+      lines.push('', '<b>Страницы:</b>');
+      pages.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
+    }
+    if (srcs.length) {
+      lines.push('', '<b>Источники:</b>');
+      srcs.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
+    }
+    if (!views && !leads) lines.push('', 'Активности пока не было.');
+    lines.push('', '<i>счётчик сайта; GA4 не подключён</i>');
+  }
+
+  return lines.join('\n');
+}
+
 async function digest(env) {
-  await tg(env, await statsText(env, 1, 'Сайт за'), env.TG_TOPIC_OPS || 4);
+  await tg(env, await weeklyStatsText(env), env.TG_TOPIC_OPS || 4);
 }
 
 /* The bot answers commands in the chat: /stats, /stats yesterday, /health */
@@ -326,7 +408,7 @@ async function handleTgHook(req, env) {
                    '/stats — сегодняшние цифры',
                    '/stats вчера — за прошлые сутки',
                    '/health — доступны ли ключевые страницы',
-                   '', 'Сводка за сутки приходит сама в 08:xx WITA.'].join('\n'), topic);
+                   '', 'Сводка за неделю приходит сама по понедельникам в 08:00 WITA.'].join('\n'), topic);
   }
   return new Response(null, { status: 204 });
 }
@@ -420,7 +502,9 @@ export default {
     ctx.waitUntil((async function () {
       await watch(env);
       const h = wita(new Date());
-      if (h.time.indexOf('08:') === 0) await digest(env);
+      /* exact match, not a prefix: the 30-min cron also fires at 08:30, a prefix
+         match on "08:" sent the digest twice. Monday only -> once a week. */
+      if (h.time === '08:00' && h.dow === 1) await digest(env);
     })());
   }
 };

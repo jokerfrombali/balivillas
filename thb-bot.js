@@ -3,7 +3,7 @@
    Sends three things to /api/* (the Worker, which holds the bot token):
      - every WhatsApp click as a numbered lead, with the exact text the guest is
        about to send, the villa and the picked dates;
-     - an anonymous pageview ping for the daily digest;
+     - an anonymous pageview ping for the weekly digest;
      - JavaScript errors, so a broken page reaches the chat instead of nobody.
 
    If the API is not deployed yet, the first call fails and everything goes quiet
@@ -19,8 +19,10 @@
     if (off) return;
     var body = JSON.stringify(data);
     try {
-      if (beacon && navigator.sendBeacon) {
-        navigator.sendBeacon(path, new Blob([body], { type: 'application/json' }));
+      /* a blocked/failed beacon (ad/tracker blockers drop these) falls back to fetch,
+         instead of silently losing whatever was being sent */
+      if (beacon && navigator.sendBeacon &&
+          navigator.sendBeacon(path, new Blob([body], { type: 'application/json' }))) {
         return;
       }
       fetch(path, {
@@ -85,7 +87,10 @@
     var g = guests();
     if (g) payload.guests = g;
 
-    post('/api/lead', payload, true);
+    /* fetch, not sendBeacon: a lead is worth money, and ad/tracker blockers
+       (Brave Shields, several privacy extensions) silently drop beacons —
+       the WhatsApp chat still opens fine, so nobody notices the lead vanished. */
+    post('/api/lead', payload, false);
   }, true);
 
   /* ---- pageview ping for the daily digest ---- */

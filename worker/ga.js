@@ -95,11 +95,18 @@ function rows(report) {
 
 /* One day of numbers. dayOffset 0 = today, 1 = yesterday. */
 export async function gaDay(env, dayOffset) {
+  const day = dayOffset === 0 ? 'today' : (dayOffset === 1 ? 'yesterday' : dayOffset + 'daysAgo');
+  return gaRange(env, [{ startDate: day, endDate: day }]);
+}
+
+/* Last N full days, ending yesterday — for the weekly digest. */
+export async function gaWeek(env, days) {
+  return gaRange(env, [{ startDate: (days || 7) + 'daysAgo', endDate: 'yesterday' }]);
+}
+
+async function gaRange(env, range) {
   const token = await accessToken(env);
   if (!token) return null;
-
-  const day = dayOffset === 0 ? 'today' : (dayOffset === 1 ? 'yesterday' : dayOffset + 'daysAgo');
-  const range = [{ startDate: day, endDate: day }];
 
   const [totals, pages, sources, events] = await Promise.all([
     runReport(env, token, {

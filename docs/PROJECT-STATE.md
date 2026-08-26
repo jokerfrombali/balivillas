@@ -32,7 +32,7 @@ Gianyar, Bali 80582. Контакт: +62 857 4649 9697 (он же WhatsApp).
 `POST /api/lead` — заявка → Telegram, сквозной номер из KV `seq:lead`.
 `POST /api/hit` — счётчик просмотров. `POST /api/alert` — JS-ошибки.
 `POST /api/tg` — вебхук бота (команды /stats, /health, /help).
-`GET /api/health` — проверка страниц. Cron: аптайм + дневная сводка 08:xx WITA.
+`GET /api/health` — проверка страниц. Cron: аптайм + недельная сводка пн 08:00 WITA.
 www→apex редирект в воркере сделать НЕЛЬЗЯ (HTML отдаётся мимо него) —
 нужен Cloudflare Redirect Rule, до сих пор не поставлен.
 
