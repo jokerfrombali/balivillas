@@ -24,8 +24,11 @@ Gianyar, Bali 80582. Контакт: +62 857 4649 9697 (он же WhatsApp).
   Перед деплоем: `python tools/update-lastmod.py`; после пуша:
   `python tools/indexnow.py`.
 - **Секреты воркера** (Cloudflare → Workers → thebalihost → Variables):
-  `TELEGRAM_TOKEN`, `TG_HOOK_SECRET`, `GA_SA_KEY`, `ADMIN_PASSWORD`.
+  `TELEGRAM_TOKEN`, `TG_HOOK_SECRET`, `GA_SA_KEY`, `ADMIN_PASSWORD`,
+  `SC_CLIENT_ID`, `SC_CLIENT_SECRET`, `SC_REFRESH_TOKEN`.
   Значения — только там. Без `ADMIN_PASSWORD` панель `/admin/` никого не пускает.
+  Три `SC_*` — для Search Console: сервисный аккаунт она не принимает
+  («не найден адрес»), поэтому там OAuth от myhostbali@gmail.com, см. `docs/ADMIN.md`.
 - **Что не публикуется**: см. `.assetsignore` (worker/, docs/, tools/ и т.д.).
 
 ## Worker API (worker/index.js)

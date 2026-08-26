@@ -1,12 +1,19 @@
-/* Google Analytics 4 Data API client for the Worker.
+/* Google API client for the Worker: GA4 Data API + Search Console.
  *
- * Turns the service-account key into an access token (RS256 JWT signed with
- * WebCrypto, no libraries) and runs the reports the daily digest needs.
+ * Two different auth paths on purpose, because the two products disagree about
+ * service accounts:
  *
- * Needs two things in the environment, otherwise every call returns null and the
- * digest falls back to the Worker's own counters:
- *   GA_SA_KEY       secret  — the service account JSON, verbatim
- *   GA_PROPERTY_ID  var     — numeric property id from GA4 Admin (not "G-...")
+ *   GA4            — service account (RS256 JWT signed with WebCrypto, no libs).
+ *                    GA_SA_KEY (secret) + GA_PROPERTY_ID (var, numeric, not "G-").
+ *   Search Console — OAuth refresh token of a real account. Search Console
+ *                    refuses to add a service account as a user at all
+ *                    ("email address not found"), so the service account can
+ *                    never read it. SC_CLIENT_ID + SC_CLIENT_SECRET +
+ *                    SC_REFRESH_TOKEN (all secrets).
+ *
+ * Anything missing → the call returns null and the caller degrades honestly:
+ * the digest falls back to the Worker's own counters, the panel says
+ * "not connected" instead of showing zeros as if they were real.
  */
 
 function b64url(bytes) {
@@ -26,12 +33,54 @@ function pemToDer(pem) {
 const GA_SCOPE = 'https://www.googleapis.com/auth/analytics.readonly';
 const SC_SCOPE = 'https://www.googleapis.com/auth/webmasters.readonly';
 
+/* Search Console через refresh-токен обычного аккаунта.
+ *
+ * Сервисный аккаунт сюда не подошёл: Search Console трижды отказалась его
+ * добавлять («не найден адрес электронной почты») — она не резолвит
+ * service-account адреса как аккаунты Google. Поэтому GA4 читает по-прежнему
+ * сервисный аккаунт (там он принят и работает), а Search Console — OAuth от
+ * myhostbali@gmail.com, который является владельцем ресурса.
+ *
+ * Нужны три секрета: SC_CLIENT_ID, SC_CLIENT_SECRET, SC_REFRESH_TOKEN.
+ * Приложение опубликовано (In production), иначе refresh-токен протухал бы
+ * через 7 дней. Область одна и только на чтение: webmasters.readonly.
+ */
+async function oauthToken(env) {
+  if (!env.SC_CLIENT_ID || !env.SC_CLIENT_SECRET || !env.SC_REFRESH_TOKEN) return null;
+
+  if (env.THB_STATS) {
+    const cached = await env.THB_STATS.get('ga:token:sc');
+    if (cached) return cached;
+  }
+
+  try {
+    const r = await fetch('https://oauth2.googleapis.com/token', {
+      method: 'POST',
+      headers: { 'content-type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        client_id: env.SC_CLIENT_ID,
+        client_secret: env.SC_CLIENT_SECRET,
+        refresh_token: env.SC_REFRESH_TOKEN,
+        grant_type: 'refresh_token'
+      }).toString()
+    });
+    const j = await r.json();
+    if (!j.access_token) return null;
+    if (env.THB_STATS) {
+      await env.THB_STATS.put('ga:token:sc', j.access_token, { expirationTtl: 3000 });
+    }
+    return j.access_token;
+  } catch (e) { return null; }
+}
+
 async function accessToken(env, scope) {
+  /* Search Console идёт по OAuth, аналитика — по сервисному аккаунту */
+  if (scope === SC_SCOPE) return oauthToken(env);
+
   if (!env.GA_SA_KEY) return null;
   scope = scope || GA_SCOPE;
 
-  /* cached per scope: one token cannot stand in for the other */
-  const cacheKey = 'ga:token:' + (scope === SC_SCOPE ? 'sc' : 'ga');
+  const cacheKey = 'ga:token:ga';
   if (env.THB_STATS) {
     const cached = await env.THB_STATS.get(cacheKey);
     if (cached) return cached;
