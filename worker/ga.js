@@ -207,6 +207,17 @@ function scDate(daysAgo) {
   return d.getUTCFullYear() + '-' + p(d.getUTCMonth() + 1) + '-' + p(d.getUTCDate());
 }
 
+/* Даты для Search Console, ISO. daysAgo считается от сегодня. */
+export function scDateAgo(daysAgo) { return scDate(daysAgo); }
+
+/* Один произвольный запрос к Search Console — нужен движку возможностей,
+   которому требуются свои срезы (query+page, два периода подряд). */
+export async function searchConsoleRaw(env, body) {
+  const token = await accessToken(env, SC_SCOPE);
+  if (!token) return null;
+  return scQuery(env, token, body);
+}
+
 async function scQuery(env, token, body) {
   const site = env.SC_SITE_URL || 'https://thehostbali.com/';
   try {

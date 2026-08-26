@@ -18,6 +18,7 @@ import { gaDay, gaWeek, gaSeries, searchConsole } from './ga.js';
 import { isAdmin, adminConfigured, handleLogin, handleLogout } from './auth.js';
 import { listLeads, updateLead, summarise, STATUSES } from './leads.js';
 import { auditBatch, sitemapPaths } from './seo.js';
+import { opportunities } from './opportunities.js';
 
 const INDEXNOW_KEY = 'd9136b4b49643e1de42472f8c7cc1cf0';
 
@@ -185,6 +186,11 @@ export async function handleAdmin(req, env, path) {
   if (sub === 'search') {
     const sc = await searchConsole(env, days);
     return json({ ok: true, data: sc, connected: !!sc });
+  }
+
+  if (sub === 'opportunities') {
+    const op = await opportunities(env, days);
+    return json({ ok: true, data: op, connected: !!op });
   }
 
   if (sub === 'health') return json({ ok: true, pages: await health(env) });

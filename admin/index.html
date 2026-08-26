@@ -66,6 +66,11 @@ code{background:var(--soft);padding:1px 6px;border-radius:6px;font-size:12.5px}
 .fstep.last .fill{background:linear-gradient(90deg,#2f7d4f,#6fae86)}
 
 /* ---------- таблицы / списки ---------- */
+/* широкая таблица скроллится внутри себя, страница по горизонтали — никогда */
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+/* внутри скролл-контейнера таблица имеет право быть шире него — иначе
+   overflow-x никогда не срабатывает и распирает страницу */
+.tw table{width:auto;min-width:100%}
 table{width:100%;border-collapse:collapse;font-size:13.5px}
 th{text-align:left;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
   color:#5f594f;padding:0 10px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
@@ -77,6 +82,9 @@ tr:last-child td{border-bottom:0}
 .rank .bar i{display:block;height:100%;background:var(--sand);border-radius:999px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+/* grid-колонка по умолчанию не сжимается ниже min-content своего содержимого,
+   и таблица с nowrap-заголовками распирала сетку за пределы экрана */
+.two>*,.three>*{min-width:0}
 
 /* ---------- график ---------- */
 .chart{height:130px;width:100%;display:block}
@@ -137,6 +145,23 @@ tr:last-child td{border-bottom:0}
 .tool b{display:block;font:700 16px/1.2 Georgia,serif;margin-bottom:4px}
 
 .loading{color:var(--muted);padding:20px 0;font-size:14px}
+
+/* ---------- очередь задач ---------- */
+.task{border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:14px 16px;margin-bottom:10px}
+.task.urgent{border-color:#e8bfb2;background:#fff8f5}
+.task .hd{display:flex;gap:9px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+.task .q{font-weight:700;font-size:15px}
+.task .gain{margin-left:auto;font:700 15px/1 Georgia,serif;white-space:nowrap}
+.task .gain small{font:400 11.5px/1 Inter,sans-serif;color:var(--muted);display:block;text-align:right;margin-top:3px}
+.task .why{font-size:13px;color:#4b4a45;margin:4px 0}
+.task .act{font-size:13px;background:var(--soft);border-radius:11px;padding:8px 11px;margin-top:8px}
+.task .pg{font-size:12.5px;margin-top:7px}
+.task .pg a{color:var(--bronze);word-break:break-all}
+.tag{display:inline-block;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:800;
+  letter-spacing:.04em;text-transform:uppercase}
+.tag.recover{background:#fdeee9;color:#a03a22}
+.tag.ctr{background:#fdf4e3;color:#8a6412}
+.tag.rank{background:#eef2fb;color:#2b4a8a}
 
 /* ---------- экран входа ---------- */
 #gate{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;padding:24px}
@@ -235,6 +260,9 @@ body.locked .top,body.locked .wrap{filter:blur(3px);pointer-events:none;user-sel
 
   <!-- ============ SEO ============ -->
   <section id="vSeo" hidden>
+    <h2 class="sec">Что делать: очередь задач</h2>
+    <div id="oppBody"><p class="loading">Считаю возможности по Search Console…</p></div>
+
     <h2 class="sec">Поисковые запросы</h2>
     <div id="scBody"><p class="loading">Проверяю Search Console…</p></div>
 
@@ -348,7 +376,7 @@ function show(t){
   [].forEach.call($('nav').children,function(b){ b.classList.toggle('on', b.dataset.t===t); });
   try{ localStorage.setItem('thb_admin_tab',t); }catch(e){}
   if(t==='leads' && !LEADS) loadLeads();
-  if(t==='seo') loadSearchConsole();
+  if(t==='seo'){ loadOpportunities(); loadSearchConsole(); }
   if(t==='tools') loadHealth();
 }
 $('nav').addEventListener('click',function(e){
@@ -598,6 +626,85 @@ $('leadsBody').addEventListener('change',function(e){
   });
 });
 
+/* ================= SEO: очередь задач ================= */
+var TASK_RU={recover:'вернуть',ctr:'сниппет',rank:'дотянуть'};
+var TASK_HINT={
+  recover:'Клики были и пропали — самое срочное.',
+  ctr:'Мы на первой странице, но кликают хуже нормы. Лечится текстом, не ссылками.',
+  rank:'Позиция 5–20: до первой страницы близко.'
+};
+
+function loadOpportunities(){
+  if($('oppBody').dataset.done) return;
+  api('opportunities?days='+DAYS).then(function(j){
+    $('oppBody').dataset.done='1';
+    if(!j.connected){
+      $('oppBody').innerHTML='<div class="note">Очередь задач считается по Search Console — '+
+        'подключите её ниже, и здесь появится список конкретных дел с оценкой в кликах.</div>';
+      return;
+    }
+    var d=j.data, h=[];
+
+    h.push('<div class="kpis" style="margin-bottom:14px">');
+    h.push(kpi('Задач в очереди', d.tasks.length,
+      d.counts.recover+' вернуть · '+d.counts.ctr+' сниппет · '+d.counts.rank+' дотянуть'));
+    h.push(kpi('Потенциал', '+'+num(d.totalGain),
+      'кликов в месяц, если сделать всё', d.totalGain?'good':''));
+    h.push(kpi('Каннибализация', d.cannibal.length,
+      'запросов, где мы конкурируем сами с собой', d.cannibal.length?'alert':'good'));
+    h.push(kpi('Окно', d.window.from.slice(5)+' — '+d.window.to.slice(5),
+      'сравнение с '+d.compare.from.slice(5)+' — '+d.compare.to.slice(5)));
+    h.push('</div>');
+
+    if(!d.tasks.length && !d.cannibal.length){
+      h.push('<div class="ok-box">Значимых возможностей не найдено. При текущем объёме показов '+
+        'это нормально: данных пока мало, чтобы отличить сигнал от шума '+
+        '(в расчёт берутся запросы от '+d.minImpressions+' показов).</div>');
+    }
+
+    d.tasks.forEach(function(t){
+      h.push('<div class="task'+(t.urgent?' urgent':'')+'">');
+      h.push('<div class="hd"><span class="tag '+t.type+'">'+esc(TASK_RU[t.type]||t.type)+'</span>'+
+        '<span class="q">'+esc(t.query)+'</span>'+
+        '<span class="gain">+'+t.gain+'<small>кликов/мес</small></span></div>');
+      h.push('<div class="why">'+esc(t.why)+'</div>');
+      if(t.page){
+        var path=t.page; try{ path=new URL(t.page).pathname; }catch(e){}
+        h.push('<div class="pg">Страница: <a href="'+esc(path)+'" target="_blank" rel="noopener">'+
+          esc(path)+'</a></div>');
+      }
+      h.push('<div class="act">'+esc(t.action)+'</div>');
+      h.push('</div>');
+    });
+
+    if(d.cannibal.length){
+      h.push('<h2 class="sec">Конкурируем сами с собой</h2>');
+      h.push('<div class="note">За один запрос отвечают несколько наших страниц. '+
+        'Google не понимает, какую показывать, и обе получают меньше, чем получила бы одна. '+
+        'Решение: оставить одну целевую страницу, с остальных поставить на неё ссылку '+
+        'или свести их вместе.</div>');
+      d.cannibal.forEach(function(c){
+        h.push('<div class="task"><div class="hd"><span class="q">'+esc(c.query)+'</span>'+
+          '<span class="gain">'+num(c.total)+'<small>показов</small></span></div>'+
+          '<div class="tw" style="margin-top:8px"><table><thead><tr><th>Страница</th><th>Показы</th>'+
+          '<th>Клики</th><th>Позиция</th></tr></thead><tbody>'+
+          c.pages.map(function(p){
+            return '<tr><td><a href="'+esc(p.path)+'" target="_blank" rel="noopener">'+
+              esc(p.path)+'</a></td><td>'+num(p.impressions)+'</td><td>'+p.clicks+
+              '</td><td>'+p.position+'</td></tr>';
+          }).join('')+'</tbody></table></div></div>');
+      });
+    }
+
+    h.push('<p class="small" style="margin-top:12px">Оценка «+кликов» — это разница между '+
+      'нынешним CTR и обычным для этой позиции, умноженная на показы. Это ориентир для '+
+      'приоритета, а не обещание. В расчёт не берутся запросы слабее '+d.minImpressions+
+      ' показов — на меньших числах отличить сигнал от случайности нельзя.</p>');
+
+    $('oppBody').innerHTML=h.join('');
+  }).catch(function(){ $('oppBody').innerHTML='<p class="loading">Не удалось посчитать.</p>'; });
+}
+
 /* ================= SEO ================= */
 function loadSearchConsole(){
   if($('scBody').dataset.done) return;
@@ -629,13 +736,13 @@ function loadSearchConsole(){
 }
 function scTable(rows,isUrl){
   if(!rows||!rows.length) return '<p class="small">Пока нет данных — сайт молодой, это нормально.</p>';
-  return '<table><thead><tr><th>'+(isUrl?'Страница':'Запрос')+'</th><th>Клики</th>'+
+  return '<div class="tw"><table><thead><tr><th>'+(isUrl?'Страница':'Запрос')+'</th><th>Клики</th>'+
     '<th>Показы</th><th>Позиция</th></tr></thead><tbody>'+
     rows.map(function(r){
       var label=isUrl? (function(){ try{return new URL(r.key).pathname}catch(e){return r.key} })() : r.key;
       return '<tr><td>'+esc(label)+'</td><td><b>'+r.clicks+'</b></td><td>'+num(r.impressions)+
         '</td><td>'+r.position+'</td></tr>';
-    }).join('')+'</tbody></table>';
+    }).join('')+'</tbody></table></div>';
 }
 
 function runSeo(){
@@ -764,12 +871,12 @@ function loadHealth(){
     $('healthBody').innerHTML='<div class="card">'+
       (ok? '<div class="ok-box" style="margin-bottom:12px">Все ключевые страницы отвечают нормально.</div>'
          : '<div class="note" style="margin-bottom:12px"><b>Есть страницы с проблемой</b> — смотрите таблицу.</div>')+
-      '<table><thead><tr><th>Страница</th><th>Код</th><th>Размер</th></tr></thead><tbody>'+
+      '<div class="tw"><table><thead><tr><th>Страница</th><th>Код</th><th>Размер</th></tr></thead><tbody>'+
       j.pages.map(function(p){
         return '<tr><td><a href="'+esc(p.path)+'" target="_blank" rel="noopener">'+esc(p.path)+'</a></td>'+
           '<td><span class="pill '+(p.ok?'booked':'new')+'">'+p.status+'</span></td>'+
           '<td>'+p.kb+' КБ</td></tr>';
-      }).join('')+'</tbody></table>'+
+      }).join('')+'</tbody></table></div>'+
       '<p class="small" style="margin:12px 0 0">Проверено изнутри воркера, через хранилище файлов — '+
       'так проверка не зависит от кеша и внешней сети.</p></div>';
   }).catch(function(){ $('healthBody').innerHTML='<p class="loading">Не удалось проверить.</p>'; });
@@ -779,15 +886,16 @@ function loadHealth(){
 $('days').addEventListener('change',function(){
   DAYS=+this.value;
   $('scBody').dataset.done=''; $('scBody').innerHTML='<p class="loading">Проверяю Search Console…</p>';
+  $('oppBody').dataset.done=''; $('oppBody').innerHTML='<p class="loading">Считаю возможности…</p>';
   loadOverview();
-  if(TAB==='seo') loadSearchConsole();
+  if(TAB==='seo'){ loadOpportunities(); loadSearchConsole(); }
 });
 $('refresh').addEventListener('click',function(){
   LEADS=null;
-  $('scBody').dataset.done=''; $('healthBody').dataset.done='';
+  $('scBody').dataset.done=''; $('healthBody').dataset.done=''; $('oppBody').dataset.done='';
   loadOverview();
   if(TAB==='leads') loadLeads();
-  if(TAB==='seo') loadSearchConsole();
+  if(TAB==='seo'){ loadOpportunities(); loadSearchConsole(); }
   if(TAB==='tools') loadHealth();
 });
 $('logout').addEventListener('click',function(){

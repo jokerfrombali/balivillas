@@ -19,6 +19,7 @@
 import { gaDay, gaWeek } from './ga.js';
 import { handleAdmin } from './admin.js';
 import { saveLead } from './leads.js';
+import { opportunities } from './opportunities.js';
 
 const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
 
@@ -377,8 +378,43 @@ async function weeklyStatsText(env) {
   return lines.join('\n');
 }
 
+/* Топ SEO-задач в недельную сводку: цифры без «что делать» никто не открывает
+   второй раз. Полная очередь — в панели, здесь три самых выгодных. */
+async function seoDigestText(env) {
+  let op = null;
+  try { op = await opportunities(env, 28); } catch (e) { return ''; }
+  if (!op || !op.tasks.length) return '';
+
+  const names = { recover: 'вернуть', ctr: 'сниппет', rank: 'дотянуть' };
+  /* «+3 кликов» режет глаз в строке — в панели число стоит отдельным блоком,
+     а здесь оно инлайн, поэтому склоняем */
+  const clicks = (n) => {
+    const a = Math.abs(n) % 100, b = a % 10;
+    if (a > 10 && a < 20) return n + ' кликов';
+    if (b > 1 && b < 5) return n + ' клика';
+    if (b === 1) return n + ' клик';
+    return n + ' кликов';
+  };
+  const lines = ['', '🔎 <b>SEO: что сделать</b>'];
+  op.tasks.slice(0, 3).forEach(function (t) {
+    lines.push('');
+    lines.push('<b>' + esc(t.query) + '</b> · +' + clicks(t.gain) + '/мес · ' +
+               esc(names[t.type] || t.type));
+    lines.push(esc(t.why));
+  });
+  if (op.tasks.length > 3) {
+    lines.push('', 'Ещё ' + (op.tasks.length - 3) + ' в панели: thehostbali.com/admin/');
+  }
+  if (op.cannibal.length) {
+    lines.push('', '⚠ Запросов, где мы конкурируем сами с собой: ' + op.cannibal.length);
+  }
+  return lines.join('\n');
+}
+
 async function digest(env) {
-  await tg(env, await weeklyStatsText(env), env.TG_TOPIC_OPS || 4);
+  const stats = await weeklyStatsText(env);
+  const seo = await seoDigestText(env);
+  await tg(env, stats + seo, env.TG_TOPIC_OPS || 4);
 }
 
 /* The bot answers commands in the chat: /stats, /stats yesterday, /health */
@@ -408,12 +444,20 @@ async function handleTgHook(req, env) {
       lines.push((r.ok ? '✔' : '✖') + ' ' + r.status + ' · ' + esc(r.path));
     });
     await tg(env, lines.join('\n'), topic);
+  } else if (cmd.indexOf('/seo') === 0) {
+    const t = await seoDigestText(env);
+    await tg(env, t
+      ? '📊 <b>SEO-задачи на сейчас</b>' + t
+      : 'Значимых SEO-задач не нашлось. Либо Search Console ещё не подключена к панели, ' +
+        'либо показов пока мало, чтобы отличить сигнал от шума.', topic);
   } else if (cmd.indexOf('/help') === 0 || cmd.indexOf('/start') === 0) {
     await tg(env, ['<b>Команды</b>', '',
                    '/stats — сегодняшние цифры',
                    '/stats вчера — за прошлые сутки',
+                   '/seo — что сделать для поиска прямо сейчас',
                    '/health — доступны ли ключевые страницы',
-                   '', 'Сводка за неделю приходит сама по понедельникам в 08:00 WITA.'].join('\n'), topic);
+                   '', 'Панель: thehostbali.com/admin/',
+                   'Сводка за неделю приходит сама по понедельникам в 08:00 WITA.'].join('\n'), topic);
   }
   return new Response(null, { status: 204 });
 }
