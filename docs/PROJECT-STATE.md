@@ -37,7 +37,9 @@ Gianyar, Bali 80582. Контакт: +62 857 4649 9697 (он же WhatsApp).
 `/api/admin/*` — панель управления за cookie-сессией, см. `docs/ADMIN.md`
 (модули `worker/admin.js`, `auth.js`, `leads.js`, `seo.js`).
 www→apex редирект в воркере сделать НЕЛЬЗЯ (HTML отдаётся мимо него) —
-нужен Cloudflare Redirect Rule, до сих пор не поставлен.
+он стоит Cloudflare Redirect Rule'ом: `https://www.*` → `https://${1}`, 301,
+с сохранением query string. Поставлен 26.08.2026, проверен: один прыжок,
+метки (utm) переживают редирект.
 
 ## Telegram
 
@@ -65,7 +67,7 @@ www→apex редирект в воркере сделать НЕЛЬЗЯ (HTML 
 VacationRental/ItemList/BreadcrumbList/FAQPage/LocalBusiness JSON-LD,
 шрифты локально в /fonts/, llms.txt, hreflang (главная ↔ 16 языковых).
 
-Осталось (владелец): www→apex 301 в Cloudflare; Google Business Profile —
+Осталось (владелец): Google Business Profile —
 черновик создан (The Host Bali, Vacation home rental agency), нужен ввод
 адреса + видео-подтверждение (инструкция в SEO-CHECKLIST §4); фото для GBP
 подготовлены в `D:\Projects\thebalihost-gbp-photos`. Через 7–10 дней после

@@ -108,18 +108,31 @@ Google подтверждает профиль одним видео **без м
 Фото офиса для профиля не обязательны — гости выбирают по виллам. Но одно фото
 команды или рабочего места повышает доверие и заодно пригодится для видео.
 
-## 5. www -> apex (осталось)
+## 5. www -> apex (сделано 26.08.2026)
 
-Cloudflare → thehostbali.com → Rules → Redirect Rules → Create:
-- When: Hostname equals `www.thehostbali.com`
-- Then: Dynamic redirect, expression
-  `concat("https://thehostbali.com", http.request.uri.path)`, 301, preserve query.
+Cloudflare → thehostbali.com → Rules → Redirect Rules, правило
+«Redirect from WWW to root» из шаблона:
+- Wildcard pattern, Request URL `https://www.*`
+- Target URL `https://${1}`, статус **301**
+- **Preserve query string включён** — в шаблоне он выключен по умолчанию, и без
+  него на редиректе терялись бы метки вроде `?utm_source=chatgpt.com`, то есть
+  ломалась бы атрибуция в GA4.
 
 В воркере это сделать нельзя: HTML отдаётся напрямую из хранилища статики и до
-кода воркера не доходит — редирект там просто не сработал бы. Сейчас
-`www.thehostbali.com` отвечает 200, то есть сайт доступен по двум адресам;
-критично это не ломает (canonical на всех страницах указывает на apex), но
-правило лучше поставить.
+кода воркера не доходит — редирект там просто не сработал бы.
+
+При деплое Cloudflare предупреждает «This rule may not apply to your traffic —
+DNS may not be proxying www». Предупреждение ложное: www проксируется, правило
+работает. Проверено — ровно один прыжок, петель нет, query string сохраняется:
+
+```bash
+curl -s -o /dev/null -w "%{http_code} -> %{redirect_url}
+" "https://www.thehostbali.com/?utm_source=chatgpt.com"
+```
+
+Мелочь: `www/robots.txt` отдаётся напрямую, без редиректа — Cloudflare
+подмешивает свой managed-блок раньше правила. Вреда нет: содержимое то же, а все
+карты сайта внутри указывают на apex.
 
 ## 6. Дальше по контенту (по желанию)
 
