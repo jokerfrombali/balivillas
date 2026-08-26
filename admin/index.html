@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Host Bali — панель управления</title>
+<link rel="icon" type="image/png" href="/favicon.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#343537">
+<style>
+:root{
+  --bg:#f6f1e8;--panel:#fffdf8;--ink:#111;--muted:#706b61;--line:#e4d9c9;--soft:#f0e7da;
+  --dark:#343537;--sand:#C1B59D;--bronze:#5F5340;--bad:#b84a31;--ok:#2f7d4f;--warn:#a8761c;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+
+/* ---------- шапка ---------- */
+.top{position:sticky;top:0;z-index:30;background:rgba(255,253,248,.95);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);padding:12px 22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{font:700 20px/1 Georgia,serif;display:flex;align-items:center;gap:9px;flex:none}
+.brand small{display:block;font:400 11.5px/1.3 Inter,sans-serif;color:var(--muted)}
+.nav{display:flex;gap:4px;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:3px;flex-wrap:wrap}
+.nav button{border:0;background:transparent;border-radius:999px;padding:8px 15px;font:inherit;font-weight:650;
+  color:var(--muted);cursor:pointer;white-space:nowrap}
+.nav button.on{background:var(--panel);color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.nav .dot{display:inline-block;min-width:18px;padding:0 5px;margin-left:6px;border-radius:999px;
+  background:var(--bad);color:#fff;font-size:11px;font-weight:800;line-height:18px;text-align:center}
+.spacer{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+select,.btn{font:inherit;border-radius:999px;border:1px solid var(--line);background:var(--panel);
+  padding:8px 14px;cursor:pointer;color:inherit}
+.btn.primary{background:var(--dark);color:#fff;border-color:var(--dark);font-weight:650}
+.btn:disabled{opacity:.45;cursor:default}
+a.btn{text-decoration:none}
+
+.wrap{max-width:1420px;margin:0 auto;padding:22px 22px 70px}
+[hidden]{display:none!important}
+h2.sec{margin:26px 0 12px;font:700 19px/1.2 Georgia,serif}
+h2.sec:first-child{margin-top:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px 20px}
+.muted{color:var(--muted)}
+.small{font-size:12.5px;color:var(--muted);line-height:1.45}
+code{background:var(--soft);padding:1px 6px;border-radius:6px;font-size:12.5px}
+
+/* ---------- KPI ---------- */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:15px 17px}
+.kpi .k{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#5f594f}
+.kpi .v{font:700 27px/1.15 Georgia,serif;margin-top:5px}
+.kpi .d{font-size:12.5px;color:var(--muted);margin-top:3px}
+.kpi.alert{border-color:#e8bfb2;background:#fff7f4}
+.kpi.alert .v{color:var(--bad)}
+.kpi.good .v{color:var(--ok)}
+
+/* ---------- воронка ---------- */
+.funnel{display:grid;gap:9px}
+.fstep{display:grid;grid-template-columns:170px 1fr 108px;gap:12px;align-items:center}
+.fstep .lab{font-size:13px;font-weight:650}
+.fstep .track{background:var(--soft);border-radius:999px;height:30px;position:relative;overflow:hidden}
+.fstep .fill{position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,var(--bronze),var(--sand));
+  border-radius:999px;min-width:3px;transition:width .5s cubic-bezier(.22,1,.36,1)}
+.fstep .num{position:absolute;left:11px;top:0;line-height:30px;font-weight:800;font-size:13px;color:#fff;
+  text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.fstep .conv{font-size:12.5px;color:var(--muted);text-align:right}
+.fstep.last .fill{background:linear-gradient(90deg,#2f7d4f,#6fae86)}
+
+/* ---------- таблицы / списки ---------- */
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  color:#5f594f;padding:0 10px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px;border-bottom:1px solid var(--soft);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.rank{display:grid;gap:7px}
+.rank .r{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;font-size:13.5px}
+.rank .bar{grid-column:1/3;height:6px;border-radius:999px;background:var(--soft);overflow:hidden}
+.rank .bar i{display:block;height:100%;background:var(--sand);border-radius:999px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+
+/* ---------- график ---------- */
+.chart{height:130px;width:100%;display:block}
+.chart .ln{fill:none;stroke:var(--bronze);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.chart .ar{fill:rgba(193,181,157,.28)}
+.chart .gl{stroke:var(--line);stroke-width:1}
+
+/* ---------- статусы ---------- */
+.pill{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:4px 10px;
+  font-size:11.5px;font-weight:750;white-space:nowrap;border:1px solid transparent}
+.pill.new{background:#fdeee9;color:#a03a22;border-color:#f0cabc}
+.pill.working{background:#fdf4e3;color:#8a6412;border-color:#ecdcb4}
+.pill.booked{background:#e9f6ee;color:#1f6440;border-color:#bfe3cd}
+.pill.lost{background:#f0eee8;color:#6b6b66;border-color:#e0dcd2}
+.pill.wa{background:#e9f7ef;color:#0a7d43;border-color:#bfe6cf}
+.pill.form{background:#eef2fb;color:#2b4a8a;border-color:#c9d6ef}
+
+.lead{border:1px solid var(--line);border-radius:18px;background:var(--panel);padding:14px 16px;margin-bottom:11px}
+.lead.isnew{border-color:#e8bfb2;box-shadow:0 0 0 3px rgba(184,74,49,.05)}
+.lead .hd{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:9px}
+.lead .no{font:700 15px/1 Georgia,serif}
+.lead .when{font-size:12.5px;color:var(--muted)}
+.lead .villa{font-weight:650;font-size:14.5px}
+.lead .facts{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:#3f3d38;margin:7px 0}
+.lead .facts b{font-weight:700}
+.lead .txt{background:var(--soft);border-radius:12px;padding:9px 12px;font-size:12.5px;
+  white-space:pre-wrap;margin:8px 0;max-height:130px;overflow:auto;line-height:1.45}
+.lead .acts{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.lead .acts button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;
+  font:inherit;font-size:12.5px;cursor:pointer}
+.lead .acts button.on{background:var(--dark);color:#fff;border-color:var(--dark);font-weight:650}
+.lead textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:9px 11px;font:inherit;
+  font-size:13px;min-height:38px;resize:vertical;margin-top:9px;background:#fff}
+.lead a.wa{text-decoration:none;background:#e9f7ef;color:#0a7d43;border:1px solid #bfe6cf;
+  border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:650}
+
+/* ---------- SEO ---------- */
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.prog{height:7px;background:var(--soft);border-radius:999px;overflow:hidden;margin:12px 0}
+.prog i{display:block;height:100%;background:var(--bronze);border-radius:999px;transition:width .25s}
+.issue{border:1px solid var(--line);border-radius:16px;background:var(--panel);margin-bottom:10px;overflow:hidden}
+.issue summary{padding:12px 16px;cursor:pointer;display:flex;gap:10px;align-items:center;font-weight:650;font-size:14px}
+.issue summary::-webkit-details-marker{display:none}
+.issue summary .cnt{margin-left:auto;font-size:12px;color:var(--muted);font-weight:600}
+.issue .body{padding:0 16px 14px;font-size:13px}
+.issue .body a{color:var(--bronze);word-break:break-all}
+.issue .body li{margin-bottom:5px}
+.lvl{width:9px;height:9px;border-radius:50%;flex:none}
+.lvl.error{background:var(--bad)}
+.lvl.warn{background:var(--warn)}
+.ok-box{background:#e9f6ee;border:1px solid #bfe3cd;border-radius:16px;padding:14px 16px;color:#1f6440;font-weight:600}
+.note{background:#fff8e6;border:1px solid #e8d9a8;border-radius:14px;padding:12px 15px;font-size:13px;
+  line-height:1.5;color:#5c4b1e;margin-bottom:14px}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.tool{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px 18px;
+  text-decoration:none;color:inherit;display:block}
+.tool:hover{border-color:var(--dark)}
+.tool b{display:block;font:700 16px/1.2 Georgia,serif;margin-bottom:4px}
+
+.loading{color:var(--muted);padding:20px 0;font-size:14px}
+
+/* ---------- экран входа ---------- */
+#gate{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;padding:24px}
+#gate .box{width:100%;max-width:370px;background:var(--panel);border:1px solid var(--line);
+  border-radius:24px;padding:30px 28px;box-shadow:0 18px 40px rgba(24,18,8,.08)}
+#gate h1{margin:0 0 4px;font:700 23px/1.15 Georgia,serif}
+#gate p.sub{margin:0 0 22px;color:var(--muted);font-size:13.5px}
+#gate label{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  color:#5f594f;margin-bottom:7px}
+#gate input{width:100%;border:1px solid var(--line);border-radius:14px;background:#fff;padding:13px 14px;font:inherit}
+#gate input:focus{outline:none;border-color:var(--dark);box-shadow:0 0 0 3px rgba(52,53,55,.08)}
+#gate button{width:100%;margin-top:14px;border:0;border-radius:999px;background:var(--dark);color:#fff;
+  padding:14px;font:inherit;font-weight:700;cursor:pointer}
+#gate button:disabled{opacity:.55;cursor:default}
+#gate .err{margin:14px 0 0;color:var(--bad);font-size:13.5px;font-weight:600;min-height:20px}
+body.locked{overflow:hidden}
+body.locked .top,body.locked .wrap{filter:blur(3px);pointer-events:none;user-select:none}
+@media(max-width:900px){
+  .two,.three{grid-template-columns:1fr}
+  .fstep{grid-template-columns:120px 1fr;gap:8px}
+  .fstep .conv{grid-column:2;text-align:left}
+  .wrap{padding:16px 14px 60px}
+  .top{padding:10px 14px}
+}
+</style>
+</head>
+<body class="locked">
+
+<!-- Экран входа. Панель — пустая оболочка: все цифры приходят из /api/admin/*,
+     а он без cookie-сессии не отдаёт ничего. -->
+<div id="gate">
+  <div class="box">
+    <h1>The Host Bali</h1>
+    <p class="sub">Панель управления сайтом</p>
+    <div id="gateWarn" hidden class="note" style="margin:0 0 20px">
+      <b>Пароль ещё не задан.</b><br>
+      Cloudflare → Workers &amp; Pages → <b>thebalihost</b> → Settings →
+      Variables and Secrets → Add → тип <b>Secret</b>, имя
+      <code>ADMIN_PASSWORD</code>, ваш пароль → Deploy.
+    </div>
+    <form id="gateForm">
+      <label for="gatePass">Пароль</label>
+      <input id="gatePass" type="password" autocomplete="current-password">
+      <button id="gateBtn" type="submit">Войти</button>
+      <p class="err" id="gateErr"></p>
+    </form>
+  </div>
+</div>
+
+<div class="top">
+  <div class="brand">
+    <svg width="26" height="21" viewBox="0 0 536 420" fill="currentColor" aria-hidden="true"><path d="M25 301v98l33 1 1-36-1-63zM0 410v9.5l3.5 1 530-.5v-2.5l-84.5-.5-1-1v-18l-20.5-4.5-2-6.5-34-6v-98H190l-.5 116.5H425l1 1-.5 9.5z"/></svg>
+    <span>Панель<small>The Host Bali</small></span>
+  </div>
+
+  <div class="nav" id="nav">
+    <button data-t="dash" class="on">Дашборд</button>
+    <button data-t="leads">Заявки<span class="dot" id="navNew" hidden>0</span></button>
+    <button data-t="seo">SEO</button>
+    <button data-t="tools">Инструменты</button>
+  </div>
+
+  <div class="spacer">
+    <select id="days">
+      <option value="7">7 дней</option>
+      <option value="28" selected>28 дней</option>
+      <option value="90">90 дней</option>
+    </select>
+    <button class="btn" id="refresh">Обновить</button>
+    <button class="btn" id="logout">Выйти</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ ДАШБОРД ============ -->
+  <section id="vDash">
+    <div id="dashBody"><p class="loading">Загружаю цифры…</p></div>
+  </section>
+
+  <!-- ============ ЗАЯВКИ ============ -->
+  <section id="vLeads" hidden>
+    <div class="bar">
+      <strong style="font:700 19px/1.2 Georgia,serif">Заявки</strong>
+      <select id="fStatus">
+        <option value="">Все статусы</option>
+        <option value="new">Только новые</option>
+        <option value="working">В работе</option>
+        <option value="booked">Забронировано</option>
+        <option value="lost">Потеряно</option>
+      </select>
+      <span class="small" id="leadsCount"></span>
+    </div>
+    <div id="leadsBody"><p class="loading">Загружаю заявки…</p></div>
+  </section>
+
+  <!-- ============ SEO ============ -->
+  <section id="vSeo" hidden>
+    <h2 class="sec">Поисковые запросы</h2>
+    <div id="scBody"><p class="loading">Проверяю Search Console…</p></div>
+
+    <h2 class="sec">Аудит страниц</h2>
+    <div class="note">
+      Проверяю каждую страницу из карт сайта: title, description, canonical, Open Graph
+      (как ссылка выглядит в WhatsApp), <code>h1</code>, микроразметку, alt у картинок и вес страницы.
+      Читаю страницы изнутри воркера — на посетителей и на статистику это не влияет.
+    </div>
+    <div class="bar">
+      <button class="btn primary" id="runSeo">Запустить аудит</button>
+      <button class="btn" id="pingIndexNow" disabled>Сообщить Bing об изменениях</button>
+      <span class="small" id="seoStatus"></span>
+    </div>
+    <div class="prog" id="seoProg" hidden><i style="width:0"></i></div>
+    <div id="seoBody"></div>
+  </section>
+
+  <!-- ============ ИНСТРУМЕНТЫ ============ -->
+  <section id="vTools" hidden>
+    <h2 class="sec">Контент</h2>
+    <div class="tools">
+      <a class="tool" href="/admin/photos/">
+        <b>Порядок фото</b>
+        <span class="small">Главные 5 фото на странице виллы, порядок в галереях и слайдшоу на главной.</span>
+      </a>
+      <a class="tool" href="/admin/villas/">
+        <b>Конструктор виллы</b>
+        <span class="small">Карточка виллы: тексты, цены, удобства, SEO-адреса, группы фото.</span>
+      </a>
+    </div>
+
+    <h2 class="sec">Состояние сайта</h2>
+    <div id="healthBody"><p class="loading">Проверяю страницы…</p></div>
+
+    <h2 class="sec">Внешние панели</h2>
+    <div class="tools">
+      <a class="tool" href="https://analytics.google.com/analytics/web/#/p550710445" target="_blank" rel="noopener">
+        <b>Google Analytics</b><span class="small">Полная статистика, отчёты, реалтайм.</span></a>
+      <a class="tool" href="https://search.google.com/search-console?resource_id=https://thehostbali.com/" target="_blank" rel="noopener">
+        <b>Search Console</b><span class="small">Индексация, запросы, ошибки Google.</span></a>
+      <a class="tool" href="https://www.bing.com/webmasters" target="_blank" rel="noopener">
+        <b>Bing Webmaster</b><span class="small">Карты сайта и IndexNow.</span></a>
+      <a class="tool" href="https://dash.cloudflare.com" target="_blank" rel="noopener">
+        <b>Cloudflare</b><span class="small">Хостинг, деплои, секреты, откат версий.</span></a>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function(){
+'use strict';
+
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+  .replace(/>/g,'&gt;').replace(/"/g,'&quot;')};
+var num=function(n){return String(n==null?0:n).replace(/\B(?=(\d{3})+(?!\d))/g,' ')};
+/* русские склонения: plural(2,'страница','страницы','страниц') */
+function plural(n,one,few,many){
+  var a=Math.abs(n)%100, b=a%10;
+  if(a>10&&a<20) return many;
+  if(b>1&&b<5) return few;
+  if(b===1) return one;
+  return many;
+}
+
+/* Обобщённый заголовок группы: внутри группы у страниц свои числа
+   («3 из 31 без alt» и «1 из 8 без alt»), и брать формулировку первой
+   страницы как название группы — врать про остальные. */
+var ISSUE_LABEL={
+  status:'Страница отвечает не 200',
+  fetch:'Страница не читается',
+  title:'Нет title',
+  title_long:'Title слишком длинный — обрежется в выдаче',
+  title_short:'Title слишком короткий',
+  desc:'Нет meta description',
+  desc_long:'Description слишком длинный — обрежется',
+  desc_short:'Description слишком короткий',
+  canonical:'Нет canonical',
+  canonical_other:'Canonical ведёт на другую страницу',
+  noindex:'Закрыта от индексации, но лежит в карте сайта',
+  og_title:'Нет og:title — ссылка в WhatsApp без заголовка',
+  og_image:'Нет og:image — ссылка в WhatsApp без картинки',
+  h1_none:'Нет заголовка h1',
+  h1_many:'Больше одного h1',
+  schema_none:'Нет микроразметки JSON-LD',
+  schema_broken:'Битая JSON-LD разметка — Google её не прочитает',
+  img_alt:'Картинки без alt — теряем поиск по картинкам',
+  heavy:'Тяжёлая страница — медленно на мобильных'
+};
+
+var TAB='dash', DAYS=28, OVERVIEW=null, LEADS=null, SEOROWS=[], seoRunning=false;
+
+/* ---------- сеть ---------- */
+function api(path, body){
+  var opt={headers:{'content-type':'application/json'},cache:'no-store'};
+  if(body){ opt.method='POST'; opt.body=JSON.stringify(body); }
+  return fetch('/api/admin/'+path, opt).then(function(r){
+    if(r.status===401||r.status===503){ location.reload(); throw new Error('auth'); }
+    return r.json();
+  });
+}
+
+/* ---------- вкладки ---------- */
+function show(t){
+  TAB=t;
+  ['dash','leads','seo','tools'].forEach(function(k){
+    $('v'+k.charAt(0).toUpperCase()+k.slice(1)).hidden = (k!==t);
+  });
+  [].forEach.call($('nav').children,function(b){ b.classList.toggle('on', b.dataset.t===t); });
+  try{ localStorage.setItem('thb_admin_tab',t); }catch(e){}
+  if(t==='leads' && !LEADS) loadLeads();
+  if(t==='seo') loadSearchConsole();
+  if(t==='tools') loadHealth();
+}
+$('nav').addEventListener('click',function(e){
+  var b=e.target.closest('button[data-t]'); if(b) show(b.dataset.t);
+});
+
+/* ================= ДАШБОРД ================= */
+function sparkline(series){
+  if(!series || series.length<2) return '';
+  var w=760,h=130,pad=6;
+  var max=Math.max.apply(null,series.map(function(d){return d.users}))||1;
+  var step=(w-pad*2)/(series.length-1);
+  var pts=series.map(function(d,i){
+    return [pad+i*step, h-pad-(d.users/max)*(h-pad*2-14)];
+  });
+  var line=pts.map(function(p,i){return (i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)}).join(' ');
+  var area=line+' L'+pts[pts.length-1][0].toFixed(1)+' '+(h-pad)+' L'+pad+' '+(h-pad)+' Z';
+  var first=series[0].date.slice(5), last=series[series.length-1].date.slice(5);
+  return '<svg class="chart" viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none" role="img" '+
+    'aria-label="Посетители по дням">'+
+    '<line class="gl" x1="'+pad+'" y1="'+(h-pad)+'" x2="'+(w-pad)+'" y2="'+(h-pad)+'"/>'+
+    '<path class="ar" d="'+area+'"/><path class="ln" d="'+line+'"/></svg>'+
+    '<div class="small" style="display:flex;justify-content:space-between">'+
+    '<span>'+esc(first)+'</span><span>пик '+max+' чел./день</span><span>'+esc(last)+'</span></div>';
+}
+
+/* Только реально последовательные шаги. «Выбрали даты» и «открыли форму» —
+   это параллельные пути к обращению, а не ступени: гость может нажать WhatsApp
+   прямо в шапке, ни разу не открыв календарь. Держим их в «Действиях на сайте»,
+   иначе полосы в воронке идут вниз-вверх-вниз и она просто врёт. */
+function funnelHtml(f){
+  var steps=[
+    ['Посетители',       f.visitors, ''],
+    ['Нажали WhatsApp',  f.waClicks, 'visits'],
+    ['Заявка дошла',     f.leads,    'visits'],
+    ['Забронировано',    f.booked,   'leads']
+  ];
+  var base=f.visitors||1;
+  var h='<div class="funnel">'+steps.map(function(s,i){
+    var pct = Math.min(100, s[1]/base*100);
+    var conv='';
+    if(s[2]==='visits' && f.visitors) conv=(s[1]/f.visitors*100).toFixed(1)+'% визитов';
+    if(s[2]==='leads' && f.leads) conv=(s[1]/f.leads*100).toFixed(0)+'% заявок';
+    return '<div class="fstep'+(i===steps.length-1?' last':'')+'">'+
+      '<span class="lab">'+esc(s[0])+'</span>'+
+      '<span class="track"><i class="fill" style="width:'+Math.max(pct,s[1]?2:0)+'%"></i>'+
+      '<span class="num">'+num(s[1])+'</span></span>'+
+      '<span class="conv">'+esc(conv)+'</span></div>';
+  }).join('')+'</div>';
+
+  /* Каждый клик по WhatsApp должен создавать заявку. Если кликов заметно больше —
+     часть заявок не доходит (блокировщики, обрыв сети), и это надо видеть. */
+  if(f.waClicks >= 5 && f.leads < f.waClicks*0.7){
+    h+='<div class="note" style="margin:14px 0 0"><b>Кликов в WhatsApp больше, чем заявок:</b> '+
+      f.waClicks+' против '+f.leads+'. Каждый клик должен создавать заявку — значит часть '+
+      'не доходит. Обычная причина: блокировщик рекламы у гостя или обрыв сети. '+
+      'Сам переход в WhatsApp при этом работает, поэтому гость мог написать вам напрямую — '+
+      'проверьте чат WhatsApp за этот период.</div>';
+  }
+  return h;
+}
+
+function rankHtml(rows, unit){
+  if(!rows || !rows.length) return '<p class="small">Пока нет данных.</p>';
+  var max=rows[0][1]||1;
+  return '<div class="rank">'+rows.map(function(r){
+    return '<div class="r"><span>'+esc(r[0])+'</span><b>'+num(r[1])+(unit||'')+'</b>'+
+      '<span class="bar"><i style="width:'+(r[1]/max*100)+'%"></i></span></div>';
+  }).join('')+'</div>';
+}
+
+function renderDash(){
+  var d=OVERVIEW; if(!d){ $('dashBody').innerHTML='<p class="loading">Нет данных.</p>'; return; }
+  var ga=d.ga, lp=d.leads.period, h=[];
+
+  if(!d.gaConnected){
+    h.push('<div class="note">Google Analytics не отвечает — цифры посещаемости пустые. '+
+      'Проверьте секрет <code>GA_SA_KEY</code> в Cloudflare. Заявки при этом считаются независимо, им ничего не мешает.</div>');
+  }
+
+  /* --- KPI --- */
+  h.push('<div class="kpis">');
+  h.push(kpi('Заявок за период', num(lp.total),
+    lp.bySource.whatsapp+' через WhatsApp · '+lp.bySource.form+' через форму'));
+  h.push(kpi('Не обработано', num(d.leads.unanswered),
+    d.leads.unanswered? 'ждут ответа — займитесь' : 'все разобраны',
+    d.leads.unanswered? 'alert' : 'good'));
+  h.push(kpi('Забронировано', num(lp.byStatus.booked),
+    d.funnel.bookRate+'% от заявок', lp.byStatus.booked?'good':''));
+  h.push(kpi('Посетителей', ga?num(ga.users):'—',
+    ga? ga.sessions+' сеансов · '+ga.views+' просмотров' : 'GA4 недоступна'));
+  h.push(kpi('Заявок со 100 визитов', ga&&ga.users? (d.funnel.leads/ga.users*100).toFixed(1) : '—',
+    'конверсия сайта в обращение'));
+  h.push(kpi('Сегодня', d.kvToday? num(d.kvToday.leads)+' заявок' : '—',
+    d.kvToday? d.kvToday.views+' просмотров' : ''));
+  h.push('</div>');
+
+  /* --- воронка --- */
+  h.push('<h2 class="sec">Путь гостя за '+DAYS+' дней</h2>');
+  h.push('<div class="card">'+funnelHtml(d.funnel)+
+    '<p class="small" style="margin:14px 0 0">Только последовательные шаги: зашёл → написал → '+
+    'заявка дошла до чата → забронировал. Где полоса резко короче предыдущей — там теряются гости. '+
+    'Календарь и форма — это параллельные пути к обращению, они ниже в «Действиях на сайте».</p></div>');
+
+  /* --- график --- */
+  if(d.series && d.series.length>1){
+    h.push('<h2 class="sec">Посетители по дням</h2><div class="card">'+sparkline(d.series)+'</div>');
+  }
+
+  /* --- виллы --- */
+  h.push('<h2 class="sec">Что спрашивают</h2><div class="two">');
+  h.push('<div class="card"><b>Виллы по числу заявок</b><p class="small" style="margin:2px 0 12px">'+
+    'за всё время — что реально просят гости</p>'+rankHtml(d.leads.allTime.topVillas)+'</div>');
+  h.push('<div class="card"><b>Популярные страницы</b><p class="small" style="margin:2px 0 12px">'+
+    'по просмотрам за период</p>'+rankHtml(ga?ga.pages:null)+'</div>');
+  h.push('</div>');
+
+  /* --- источники и действия --- */
+  h.push('<div class="two" style="margin-top:14px">');
+  h.push('<div class="card"><b>Откуда приходят</b><p class="small" style="margin:2px 0 12px">'+
+    'каналы за период</p>'+rankHtml(ga?ga.channels:null)+'</div>');
+  var evNames={whatsapp_click:'Клики в WhatsApp',booking_open:'Открыли форму',
+    booking_submit:'Отправили заявку',dates_selected:'Выбрали даты',phone_click:'Клики по телефону'};
+  var evRows=(ga&&ga.events?ga.events:[]).map(function(r){return [evNames[r[0]]||r[0], r[1]]});
+  h.push('<div class="card"><b>Действия на сайте</b><p class="small" style="margin:2px 0 12px">'+
+    'сигналы интереса за период</p>'+rankHtml(evRows)+'</div>');
+  h.push('</div>');
+
+  $('dashBody').innerHTML=h.join('');
+}
+
+function kpi(k,v,d,cls){
+  return '<div class="kpi'+(cls?' '+cls:'')+'"><div class="k">'+esc(k)+'</div>'+
+    '<div class="v">'+v+'</div><div class="d">'+esc(d||'')+'</div></div>';
+}
+
+function loadOverview(){
+  $('dashBody').innerHTML='<p class="loading">Загружаю цифры…</p>';
+  api('overview?days='+DAYS).then(function(j){
+    OVERVIEW=j.data; renderDash(); paintNewBadge();
+  }).catch(function(){ $('dashBody').innerHTML='<p class="loading">Не удалось загрузить.</p>'; });
+}
+
+/* ================= ЗАЯВКИ ================= */
+var STATUS_RU={new:'Новая',working:'В работе',booked:'Забронировано',lost:'Потеряно'};
+
+function waLink(phone){
+  var digits=String(phone||'').replace(/\D/g,'');
+  return digits.length>=8 ? 'https://wa.me/'+digits : '';
+}
+function when(ts){
+  var d=new Date(ts+8*3600000);
+  var p=function(n){return String(n).padStart(2,'0')};
+  return p(d.getUTCDate())+'.'+p(d.getUTCMonth()+1)+'.'+d.getUTCFullYear()+
+    ' '+p(d.getUTCHours())+':'+p(d.getUTCMinutes());
+}
+
+function leadHtml(l){
+  var h=[];
+  h.push('<div class="lead'+(l.status==='new'?' isnew':'')+'" data-no="'+esc(l.no)+'">');
+  h.push('<div class="hd"><span class="no">#'+esc(l.no)+'</span>');
+  h.push('<span class="pill '+esc(l.source)+'">'+(l.source==='whatsapp'?'WhatsApp':'Форма')+'</span>');
+  h.push('<span class="pill '+esc(l.status)+'">'+esc(STATUS_RU[l.status]||l.status)+'</span>');
+  h.push('<span class="when">'+esc(when(l.ts))+' WITA</span>');
+  if(l.city||l.country) h.push('<span class="when">· '+esc([l.city,l.country].filter(Boolean).join(', '))+'</span>');
+  h.push('</div>');
+
+  if(l.villa) h.push('<div class="villa">'+esc(l.villa)+'</div>');
+
+  var facts=[];
+  if(l.checkin) facts.push('<span><b>Заезд:</b> '+esc(l.checkin)+'</span>');
+  if(l.checkout) facts.push('<span><b>Выезд:</b> '+esc(l.checkout)+'</span>');
+  if(l.nights) facts.push('<span><b>Ночей:</b> '+esc(l.nights)+'</span>');
+  var g = l.adults ? (l.adults+' взр.'+(l.children?' + '+l.children+' дет.':'')) : (l.guests||'');
+  if(g) facts.push('<span><b>Гостей:</b> '+esc(g)+'</span>');
+  if(facts.length) h.push('<div class="facts">'+facts.join('')+'</div>');
+
+  var c=[];
+  if(l.name) c.push('<span><b>Имя:</b> '+esc(l.name)+'</span>');
+  if(l.phone) c.push('<span><b>Телефон:</b> '+esc(l.phone)+'</span>');
+  if(l.email) c.push('<span><b>Email:</b> '+esc(l.email)+'</span>');
+  if(c.length) h.push('<div class="facts">'+c.join('')+'</div>');
+  if(l.note) h.push('<div class="facts"><span><b>Комментарий гостя:</b> '+esc(l.note)+'</span></div>');
+
+  if(l.text) h.push('<div class="txt">'+esc(l.text)+'</div>');
+
+  h.push('<div class="acts">');
+  ['new','working','booked','lost'].forEach(function(s){
+    h.push('<button data-st="'+s+'"'+(l.status===s?' class="on"':'')+'>'+esc(STATUS_RU[s])+'</button>');
+  });
+  var wa=waLink(l.phone);
+  if(wa) h.push('<a class="wa" href="'+esc(wa)+'" target="_blank" rel="noopener">Написать в WhatsApp</a>');
+  if(l.page) h.push('<a class="wa" style="background:#f0eee8;color:#3f3d38;border-color:#e0dcd2" href="'+
+    esc(l.page)+'" target="_blank" rel="noopener">Страница</a>');
+  h.push('</div>');
+
+  h.push('<textarea data-note placeholder="Заметка для себя: о чём договорились, когда перезвонить…">'+
+    esc(l.adminNote||'')+'</textarea>');
+  h.push('</div>');
+  return h.join('');
+}
+
+function renderLeads(){
+  var f=$('fStatus').value;
+  var rows=(LEADS||[]).filter(function(l){ return !f || l.status===f; });
+  $('leadsCount').textContent = rows.length + ' из ' + (LEADS||[]).length;
+  $('leadsBody').innerHTML = rows.length
+    ? rows.map(leadHtml).join('')
+    : '<div class="card"><p class="small" style="margin:0">'+
+      (LEADS&&LEADS.length? 'С этим статусом заявок нет.'
+        : 'Заявок пока нет. Они появятся здесь автоматически — каждая заявка с сайта и каждый клик по WhatsApp.')+
+      '</p></div>';
+}
+
+function loadLeads(){
+  $('leadsBody').innerHTML='<p class="loading">Загружаю заявки…</p>';
+  api('leads?limit=300').then(function(j){
+    LEADS=j.leads||[]; renderLeads(); paintNewBadge();
+  }).catch(function(){ $('leadsBody').innerHTML='<p class="loading">Не удалось загрузить.</p>'; });
+}
+
+function paintNewBadge(){
+  var n = LEADS ? LEADS.filter(function(l){return l.status==='new'}).length
+                : (OVERVIEW? OVERVIEW.leads.unanswered : 0);
+  var el=$('navNew');
+  el.hidden = !n; el.textContent = n;
+}
+
+$('fStatus').addEventListener('change', renderLeads);
+
+/* статусы и заметки */
+$('leadsBody').addEventListener('click',function(e){
+  var b=e.target.closest('button[data-st]'); if(!b) return;
+  var box=b.closest('.lead'), no=box.dataset.no, st=b.dataset.st;
+  api('lead',{no:no,status:st}).then(function(j){
+    if(!j.ok) return;
+    LEADS=LEADS.map(function(l){ return l.no===no? j.lead : l; });
+    renderLeads(); paintNewBadge();
+    if(OVERVIEW) loadOverview();
+  });
+});
+$('leadsBody').addEventListener('change',function(e){
+  var t=e.target; if(!t.hasAttribute || !t.hasAttribute('data-note')) return;
+  var no=t.closest('.lead').dataset.no;
+  api('lead',{no:no,adminNote:t.value}).then(function(j){
+    if(j.ok) LEADS=LEADS.map(function(l){ return l.no===no? j.lead : l; });
+  });
+});
+
+/* ================= SEO ================= */
+function loadSearchConsole(){
+  if($('scBody').dataset.done) return;
+  api('search?days='+DAYS).then(function(j){
+    $('scBody').dataset.done='1';
+    if(!j.connected){
+      $('scBody').innerHTML='<div class="note"><b>Search Console пока не подключена к панели.</b><br>'+
+        'Чтобы запросы и позиции показывались здесь, откройте Search Console → Настройки → '+
+        'Пользователи и разрешения → добавить пользователя с правом «Просмотр», и укажите '+
+        'e-mail сервисного аккаунта (тот же, что уже читает Google Analytics — его видно в файле ключа, '+
+        'поле <code>client_email</code>). Пока не подключено, аудит страниц ниже работает без неё.</div>';
+      return;
+    }
+    var d=j.data, h=[];
+    h.push('<div class="kpis">');
+    h.push(kpi('Клики из поиска', num(d.clicks), 'период '+d.from+' — '+d.to));
+    h.push(kpi('Показы', num(d.impressions), 'сколько раз видели в выдаче'));
+    h.push(kpi('CTR', d.ctr+'%', 'кликают из показов'));
+    h.push(kpi('Средняя позиция', d.position||'—', 'чем меньше, тем выше'));
+    h.push('</div>');
+    h.push('<div class="two" style="margin-top:14px">');
+    h.push('<div class="card"><b>Запросы</b><p class="small" style="margin:2px 0 10px">'+
+      'по каким словам вас находят</p>'+scTable(d.queries)+'</div>');
+    h.push('<div class="card"><b>Страницы в поиске</b><p class="small" style="margin:2px 0 10px">'+
+      'какие страницы приводят людей</p>'+scTable(d.pages,true)+'</div>');
+    h.push('</div>');
+    $('scBody').innerHTML=h.join('');
+  }).catch(function(){ $('scBody').innerHTML='<p class="loading">Не удалось проверить.</p>'; });
+}
+function scTable(rows,isUrl){
+  if(!rows||!rows.length) return '<p class="small">Пока нет данных — сайт молодой, это нормально.</p>';
+  return '<table><thead><tr><th>'+(isUrl?'Страница':'Запрос')+'</th><th>Клики</th>'+
+    '<th>Показы</th><th>Позиция</th></tr></thead><tbody>'+
+    rows.map(function(r){
+      var label=isUrl? (function(){ try{return new URL(r.key).pathname}catch(e){return r.key} })() : r.key;
+      return '<tr><td>'+esc(label)+'</td><td><b>'+r.clicks+'</b></td><td>'+num(r.impressions)+
+        '</td><td>'+r.position+'</td></tr>';
+    }).join('')+'</tbody></table>';
+}
+
+function runSeo(){
+  if(seoRunning) return;
+  seoRunning=true; SEOROWS=[];
+  $('runSeo').disabled=true; $('pingIndexNow').disabled=true;
+  $('seoProg').hidden=false; $('seoBody').innerHTML='';
+  step(0);
+
+  function step(offset){
+    api('seo?offset='+offset+'&limit=12').then(function(j){
+      var d=j.data;
+      SEOROWS=SEOROWS.concat(d.rows);
+      var done=SEOROWS.length, total=d.total||1;
+      $('seoProg').firstElementChild.style.width=(done/total*100)+'%';
+      $('seoStatus').textContent='проверено '+done+' из '+total;
+      if(!d.done){ step(offset+d.count); return; }
+      seoRunning=false;
+      $('runSeo').disabled=false; $('pingIndexNow').disabled=false;
+      $('seoProg').hidden=true;
+      renderSeo();
+    }).catch(function(){
+      seoRunning=false; $('runSeo').disabled=false; $('seoProg').hidden=true;
+      $('seoStatus').textContent='аудит прервался';
+    });
+  }
+}
+$('runSeo').addEventListener('click',runSeo);
+
+function renderSeo(){
+  var rows=SEOROWS, h=[];
+  var errors=0, warns=0;
+  rows.forEach(function(r){ errors+=r.errors||0; warns+=r.warnings||0; });
+
+  /* дубли title и description — их видно только по всем страницам сразу */
+  var dupT=dups(rows,'title'), dupD=dups(rows,'description');
+
+  h.push('<div class="kpis" style="margin-bottom:16px">');
+  h.push(kpi('Страниц проверено', rows.length, 'из карт сайта'));
+  h.push(kpi('Ошибок', errors, errors? 'мешают попасть в поиск':'ничего критичного', errors?'alert':'good'));
+  h.push(kpi('Замечаний', warns, 'можно улучшить'));
+  h.push(kpi('Дублей', dupT.length+dupD.length, 'одинаковые title/description',
+    (dupT.length+dupD.length)?'alert':'good'));
+  h.push('</div>');
+
+  /* группируем по типу проблемы: так понятно, что чинить пачкой */
+  var byCode={};
+  rows.forEach(function(r){
+    (r.issues||[]).forEach(function(i){
+      if(!byCode[i.code]) byCode[i.code]={level:i.level,text:i.text,pages:[]};
+      byCode[i.code].pages.push({path:r.path,text:i.text});
+    });
+  });
+
+  var codes=Object.keys(byCode).sort(function(a,b){
+    var A=byCode[a],B=byCode[b];
+    if(A.level!==B.level) return A.level==='error'?-1:1;
+    return B.pages.length-A.pages.length;
+  });
+
+  if(dupT.length) h.push(dupBlock('Одинаковый title на разных страницах',dupT,
+    'Google не понимает, какую из них показывать — они конкурируют между собой.'));
+  if(dupD.length) h.push(dupBlock('Одинаковый description',dupD,
+    'Сниппет в выдаче будет одинаковым, кликать будут хуже.'));
+
+  if(!codes.length && !dupT.length && !dupD.length){
+    h.push('<div class="ok-box">Замечаний нет — по проверяемым пунктам все страницы в порядке.</div>');
+  }
+
+  codes.forEach(function(c){
+    var g=byCode[c];
+    var label=ISSUE_LABEL[c]||g.text;
+    h.push('<details class="issue"><summary><span class="lvl '+g.level+'"></span>'+
+      esc(label)+'<span class="cnt">'+g.pages.length+' '+
+      plural(g.pages.length,'страница','страницы','страниц')+'</span></summary>'+
+      '<div class="body"><ul>'+g.pages.map(function(p){
+        return '<li><a href="'+esc(p.path)+'" target="_blank" rel="noopener">'+esc(p.path)+'</a>'+
+          (p.text!==label? ' — '+esc(p.text) : '')+'</li>';
+      }).join('')+'</ul></div></details>');
+  });
+
+  $('seoBody').innerHTML=h.join('');
+}
+
+function dups(rows,field){
+  var map={};
+  rows.forEach(function(r){
+    var v=(r[field]||'').trim();
+    if(!v) return;
+    (map[v]=map[v]||[]).push(r.path);
+  });
+  return Object.keys(map).filter(function(v){return map[v].length>1})
+    .map(function(v){ return {value:v, paths:map[v]}; });
+}
+
+function dupBlock(title,list,why){
+  return '<details class="issue"><summary><span class="lvl error"></span>'+esc(title)+
+    '<span class="cnt">'+list.length+' '+plural(list.length,'повтор','повтора','повторов')+
+    '</span></summary><div class="body">'+
+    '<p class="small" style="margin:0 0 10px">'+esc(why)+'</p>'+
+    list.map(function(d){
+      return '<p style="margin:0 0 4px"><b>'+esc(d.value.slice(0,90))+'</b></p><ul>'+
+        d.paths.map(function(p){ return '<li><a href="'+esc(p)+'" target="_blank" rel="noopener">'+
+          esc(p)+'</a></li>'; }).join('')+'</ul>';
+    }).join('')+'</div></details>';
+}
+
+/* IndexNow — сообщить Bing о страницах, где аудит что-то менял или которые важны */
+$('pingIndexNow').addEventListener('click',function(){
+  var paths=SEOROWS.map(function(r){return r.path}).slice(0,100);
+  if(!paths.length) return;
+  if(!confirm('Сообщить Bing о '+paths.length+' страницах? Это говорит «загляните заново», ничего не меняя на сайте.')) return;
+  var b=$('pingIndexNow'); b.disabled=true;
+  api('indexnow',{paths:paths}).then(function(j){
+    $('seoStatus').textContent = j.ok? ('Bing принял '+j.sent+' адресов') : 'Bing не принял запрос';
+    b.disabled=false;
+  }).catch(function(){ b.disabled=false; });
+});
+
+/* ================= СОСТОЯНИЕ ================= */
+function loadHealth(){
+  if($('healthBody').dataset.done) return;
+  api('health').then(function(j){
+    $('healthBody').dataset.done='1';
+    var ok=j.pages.every(function(p){return p.ok});
+    $('healthBody').innerHTML='<div class="card">'+
+      (ok? '<div class="ok-box" style="margin-bottom:12px">Все ключевые страницы отвечают нормально.</div>'
+         : '<div class="note" style="margin-bottom:12px"><b>Есть страницы с проблемой</b> — смотрите таблицу.</div>')+
+      '<table><thead><tr><th>Страница</th><th>Код</th><th>Размер</th></tr></thead><tbody>'+
+      j.pages.map(function(p){
+        return '<tr><td><a href="'+esc(p.path)+'" target="_blank" rel="noopener">'+esc(p.path)+'</a></td>'+
+          '<td><span class="pill '+(p.ok?'booked':'new')+'">'+p.status+'</span></td>'+
+          '<td>'+p.kb+' КБ</td></tr>';
+      }).join('')+'</tbody></table>'+
+      '<p class="small" style="margin:12px 0 0">Проверено изнутри воркера, через хранилище файлов — '+
+      'так проверка не зависит от кеша и внешней сети.</p></div>';
+  }).catch(function(){ $('healthBody').innerHTML='<p class="loading">Не удалось проверить.</p>'; });
+}
+
+/* ================= общее ================= */
+$('days').addEventListener('change',function(){
+  DAYS=+this.value;
+  $('scBody').dataset.done=''; $('scBody').innerHTML='<p class="loading">Проверяю Search Console…</p>';
+  loadOverview();
+  if(TAB==='seo') loadSearchConsole();
+});
+$('refresh').addEventListener('click',function(){
+  LEADS=null;
+  $('scBody').dataset.done=''; $('healthBody').dataset.done='';
+  loadOverview();
+  if(TAB==='leads') loadLeads();
+  if(TAB==='seo') loadSearchConsole();
+  if(TAB==='tools') loadHealth();
+});
+$('logout').addEventListener('click',function(){
+  fetch('/api/admin/logout',{method:'POST'}).then(function(){ location.reload(); });
+});
+
+/* ================= вход ================= */
+function unlock(){
+  document.body.classList.remove('locked');
+  $('gate').hidden=true;
+  try{
+    var t=localStorage.getItem('thb_admin_tab');
+    if(t && ['dash','leads','seo','tools'].indexOf(t)>=0) show(t);
+  }catch(e){}
+  loadOverview();
+  if(TAB==='leads') loadLeads();
+}
+
+function lock(notConfigured){
+  document.body.classList.add('locked');
+  $('gate').hidden=false;
+  $('gateWarn').hidden=!notConfigured;
+  $('gatePass').disabled=!!notConfigured;
+  $('gateBtn').disabled=!!notConfigured;
+  if(!notConfigured) $('gatePass').focus();
+}
+
+$('gateForm').addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var p=$('gatePass'), b=$('gateBtn'), e=$('gateErr');
+  e.textContent=''; b.disabled=true;
+  fetch('/api/admin/login',{method:'POST',headers:{'content-type':'application/json'},
+    body:JSON.stringify({password:p.value})})
+    .then(function(r){ return r.json().then(function(j){ return {s:r.status,j:j}; }); })
+    .then(function(o){
+      if(o.j && o.j.ok){ p.value=''; unlock(); return; }
+      b.disabled=false; p.value=''; p.focus();
+      if(o.s===429) e.textContent='Слишком много попыток — подождите 10 минут';
+      else if(o.s===503) e.textContent='Пароль не задан в Cloudflare';
+      else e.textContent='Неверный пароль';
+    })
+    .catch(function(){ b.disabled=false; e.textContent='Сеть недоступна'; });
+});
+
+/* уже есть живая сессия? */
+fetch('/api/admin/me',{cache:'no-store'})
+  .then(function(r){ return r.json().then(function(j){ return {s:r.status,j:j}; }); })
+  .then(function(o){
+    if(o.j && o.j.ok) unlock();
+    else lock(o.s===503 || (o.j && o.j.error==='not_configured'));
+  })
+  .catch(function(){ lock(false); });
+
+})();
+</script>
+</body>
+</html>

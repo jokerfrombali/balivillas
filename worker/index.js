@@ -17,6 +17,8 @@
  */
 
 import { gaDay, gaWeek } from './ga.js';
+import { handleAdmin } from './admin.js';
+import { saveLead } from './leads.js';
 
 const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
 
@@ -147,6 +149,9 @@ async function handleLead(req, env) {
   const res = await tg(env, lines.join('\n'), env.TG_TOPIC_LEADS || 2);
   await bump(env, 'd:' + t.date + ':leads');
   if (d.source === 'whatsapp') await bump(env, 'd:' + t.date + ':wa');
+
+  /* keep the lead itself, not just the counter — the admin panel needs history */
+  await saveLead(env, no, Object.assign({}, d, { city: cf.city, country: cf.country }));
 
   return json({ ok: !!res.ok, ticket: no });
 }
@@ -473,12 +478,31 @@ export default {
        from the asset store and never reach this handler, so a redirect here
        would silently do nothing. It belongs in a Cloudflare Redirect Rule. */
 
+    /* The admin panel is NOT gated here on purpose. Static assets are served
+       before this handler runs, and forcing the Worker first (run_worker_first)
+       would also take over /api/*, whose fall-through behaviour we depend on for
+       leads. So /admin/ ships as an empty shell: it holds no data and asks for
+       the password itself, and every number in it comes from /api/admin/*, which
+       does check the session cookie. */
+
     if (url.pathname.indexOf('/api/') === 0) {
       if (req.method === 'OPTIONS') return new Response(null, { status: 204 });
       if (url.pathname === '/api/health') {
         const res = await probe(env);
         return json({ ok: res.every(function (r) { return r.ok; }), ts: Date.now(), pages: res });
       }
+
+      if (url.pathname.indexOf('/api/admin') === 0) {
+        /* brute force protection sits here, before any password is compared */
+        if (url.pathname === '/api/admin/login') {
+          const ip = req.headers.get('cf-connecting-ip') || '0.0.0.0';
+          if (await tooFast(env, ip, 'login', 8, 600)) {
+            return json({ ok: false, error: 'too_many_attempts' }, 429);
+          }
+        }
+        return handleAdmin(req, env, url.pathname);
+      }
+
       if (req.method !== 'POST') return json({ ok: false, error: 'POST only' }, 405);
 
       /* only our own pages may post here */

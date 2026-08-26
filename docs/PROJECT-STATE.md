@@ -24,15 +24,18 @@ Gianyar, Bali 80582. Контакт: +62 857 4649 9697 (он же WhatsApp).
   Перед деплоем: `python tools/update-lastmod.py`; после пуша:
   `python tools/indexnow.py`.
 - **Секреты воркера** (Cloudflare → Workers → thebalihost → Variables):
-  `TELEGRAM_TOKEN`, `TG_HOOK_SECRET`, `GA_SA_KEY`. Значения — только там.
+  `TELEGRAM_TOKEN`, `TG_HOOK_SECRET`, `GA_SA_KEY`, `ADMIN_PASSWORD`.
+  Значения — только там. Без `ADMIN_PASSWORD` панель `/admin/` никого не пускает.
 - **Что не публикуется**: см. `.assetsignore` (worker/, docs/, tools/ и т.д.).
 
 ## Worker API (worker/index.js)
 
-`POST /api/lead` — заявка → Telegram, сквозной номер из KV `seq:lead`.
-`POST /api/hit` — счётчик просмотров. `POST /api/alert` — JS-ошибки.
+`POST /api/lead` — заявка → Telegram + архив в KV `lead:NNNNNN`, сквозной номер
+из KV `seq:lead`. `POST /api/hit` — счётчик просмотров. `POST /api/alert` — JS-ошибки.
 `POST /api/tg` — вебхук бота (команды /stats, /health, /help).
 `GET /api/health` — проверка страниц. Cron: аптайм + недельная сводка пн 08:00 WITA.
+`/api/admin/*` — панель управления за cookie-сессией, см. `docs/ADMIN.md`
+(модули `worker/admin.js`, `auth.js`, `leads.js`, `seo.js`).
 www→apex редирект в воркере сделать НЕЛЬЗЯ (HTML отдаётся мимо него) —
 нужен Cloudflare Redirect Rule, до сих пор не поставлен.
 

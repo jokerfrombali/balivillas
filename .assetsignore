@@ -29,3 +29,5 @@ ga-key.json
 thehostbali-*.json
 *.pem
 *.key
+.dev.vars
+.dev.vars.*

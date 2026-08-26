@@ -23,11 +23,17 @@ function pemToDer(pem) {
   return out;
 }
 
-async function accessToken(env) {
-  if (!env.GA_SA_KEY || !env.GA_PROPERTY_ID) return null;
+const GA_SCOPE = 'https://www.googleapis.com/auth/analytics.readonly';
+const SC_SCOPE = 'https://www.googleapis.com/auth/webmasters.readonly';
 
+async function accessToken(env, scope) {
+  if (!env.GA_SA_KEY) return null;
+  scope = scope || GA_SCOPE;
+
+  /* cached per scope: one token cannot stand in for the other */
+  const cacheKey = 'ga:token:' + (scope === SC_SCOPE ? 'sc' : 'ga');
   if (env.THB_STATS) {
-    const cached = await env.THB_STATS.get('ga:token');
+    const cached = await env.THB_STATS.get(cacheKey);
     if (cached) return cached;
   }
 
@@ -42,7 +48,7 @@ async function accessToken(env) {
     part({ alg: 'RS256', typ: 'JWT' }) + '.' +
     part({
       iss: sa.client_email,
-      scope: 'https://www.googleapis.com/auth/analytics.readonly',
+      scope: scope,
       aud: 'https://oauth2.googleapis.com/token',
       exp: now + 3600,
       iat: now
@@ -68,7 +74,7 @@ async function accessToken(env) {
     const j = await r.json();
     if (!j.access_token) return null;
     if (env.THB_STATS) {
-      await env.THB_STATS.put('ga:token', j.access_token, { expirationTtl: 3000 });
+      await env.THB_STATS.put(cacheKey, j.access_token, { expirationTtl: 3000 });
     }
     return j.access_token;
   } catch (e) { return null; }
@@ -105,7 +111,8 @@ export async function gaWeek(env, days) {
 }
 
 async function gaRange(env, range) {
-  const token = await accessToken(env);
+  if (!env.GA_PROPERTY_ID) return null;
+  const token = await accessToken(env, GA_SCOPE);
   if (!token) return null;
 
   const [totals, pages, sources, events] = await Promise.all([
@@ -161,5 +168,97 @@ async function gaRange(env, range) {
     pages: pair(pages),
     channels: pair(sources),
     events: pair(events)
+  };
+}
+
+/* Day-by-day users, for the trend line in the panel. */
+export async function gaSeries(env, days) {
+  if (!env.GA_PROPERTY_ID) return null;
+  const token = await accessToken(env, GA_SCOPE);
+  if (!token) return null;
+
+  const rep = await runReport(env, token, {
+    dateRanges: [{ startDate: (days || 28) + 'daysAgo', endDate: 'yesterday' }],
+    dimensions: [{ name: 'date' }],
+    metrics: [{ name: 'activeUsers' }, { name: 'sessions' }],
+    orderBys: [{ dimension: { dimensionName: 'date' } }],
+    limit: 100
+  });
+  if (!rep) return null;
+
+  return rows(rep).map(function (x) {
+    const d = x.dimensionValues[0].value;              // YYYYMMDD
+    return {
+      date: d.slice(0, 4) + '-' + d.slice(4, 6) + '-' + d.slice(6, 8),
+      users: Number(x.metricValues[0].value),
+      sessions: Number(x.metricValues[1].value)
+    };
+  });
+}
+
+/* ---------- Search Console ----------
+ * Same service account, a second scope. Returns null unless the account was
+ * also added as a user on the Search Console property — the panel then just
+ * shows the "not connected" hint instead of failing. */
+
+function scDate(daysAgo) {
+  const d = new Date(Date.now() - daysAgo * 86400000);
+  const p = (n) => String(n).padStart(2, '0');
+  return d.getUTCFullYear() + '-' + p(d.getUTCMonth() + 1) + '-' + p(d.getUTCDate());
+}
+
+async function scQuery(env, token, body) {
+  const site = env.SC_SITE_URL || 'https://thehostbali.com/';
+  try {
+    const r = await fetch(
+      'https://searchconsole.googleapis.com/webmasters/v3/sites/' +
+        encodeURIComponent(site) + '/searchAnalytics/query',
+      {
+        method: 'POST',
+        headers: { authorization: 'Bearer ' + token, 'content-type': 'application/json' },
+        body: JSON.stringify(body)
+      }
+    );
+    const j = await r.json();
+    return j.error ? null : j;
+  } catch (e) { return null; }
+}
+
+/* Queries and pages from organic search. Search Console data lags ~2 days, so
+   the window ends three days back to avoid showing a half-empty last day. */
+export async function searchConsole(env, days) {
+  const token = await accessToken(env, SC_SCOPE);
+  if (!token) return null;
+
+  const range = { startDate: scDate((days || 28) + 3), endDate: scDate(3) };
+
+  const [queries, pages, totals] = await Promise.all([
+    scQuery(env, token, Object.assign({}, range, { dimensions: ['query'], rowLimit: 25 })),
+    scQuery(env, token, Object.assign({}, range, { dimensions: ['page'], rowLimit: 15 })),
+    scQuery(env, token, Object.assign({}, range, { rowLimit: 1 }))
+  ]);
+
+  if (!queries && !pages && !totals) return null;
+
+  const map = (j, cut) => ((j && j.rows) || []).map(function (r) {
+    return {
+      key: (r.keys && r.keys[0]) || '',
+      clicks: r.clicks || 0,
+      impressions: r.impressions || 0,
+      ctr: Math.round((r.ctr || 0) * 1000) / 10,
+      position: Math.round((r.position || 0) * 10) / 10
+    };
+  }).slice(0, cut);
+
+  const t = (totals && totals.rows && totals.rows[0]) || {};
+  return {
+    from: range.startDate,
+    to: range.endDate,
+    clicks: t.clicks || 0,
+    impressions: t.impressions || 0,
+    ctr: Math.round((t.ctr || 0) * 1000) / 10,
+    position: Math.round((t.position || 0) * 10) / 10,
+    queries: map(queries, 25),
+    pages: map(pages, 15)
   };
 }

@@ -5,3 +5,6 @@ _gitlock_trash/
 .wrangler/
 ga-key.json
 thehostbali-*.json
+# local worker secrets for `wrangler dev` — never commit, never deploy
+.dev.vars
+.dev.vars.*
