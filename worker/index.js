@@ -20,6 +20,7 @@ import { gaDay, gaWeek } from './ga.js';
 import { handleAdmin } from './admin.js';
 import { saveLead } from './leads.js';
 import { opportunities } from './opportunities.js';
+import { takeSnapshot } from './snapshots.js';
 
 const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
 
@@ -573,6 +574,11 @@ export default {
       /* exact match, not a prefix: the 30-min cron also fires at 08:30, a prefix
          match on "08:" sent the digest twice. Monday only -> once a week. */
       if (h.time === '08:00' && h.dow === 1) await digest(env);
+
+      /* Снимок Search Console. Пробуем на каждом запуске, но takeSnapshot сам
+         пишет не чаще раза в ISO-неделю — так пропущенный из-за деплоя
+         понедельник не стоит нам недели истории. */
+      try { await takeSnapshot(env); } catch (e) { /* история не критична */ }
     })());
   }
 };

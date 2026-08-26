@@ -263,6 +263,9 @@ body.locked .top,body.locked .wrap{filter:blur(3px);pointer-events:none;user-sel
     <h2 class="sec">Что делать: очередь задач</h2>
     <div id="oppBody"><p class="loading">Считаю возможности по Search Console…</p></div>
 
+    <h2 class="sec">Что изменилось</h2>
+    <div id="histBody"><p class="loading">Смотрю историю…</p></div>
+
     <h2 class="sec">Поисковые запросы</h2>
     <div id="scBody"><p class="loading">Проверяю Search Console…</p></div>
 
@@ -376,7 +379,7 @@ function show(t){
   [].forEach.call($('nav').children,function(b){ b.classList.toggle('on', b.dataset.t===t); });
   try{ localStorage.setItem('thb_admin_tab',t); }catch(e){}
   if(t==='leads' && !LEADS) loadLeads();
-  if(t==='seo'){ loadOpportunities(); loadSearchConsole(); }
+  if(t==='seo'){ loadOpportunities(); loadHistory(); loadSearchConsole(); }
   if(t==='tools') loadHealth();
 }
 $('nav').addEventListener('click',function(e){
@@ -705,6 +708,104 @@ function loadOpportunities(){
   }).catch(function(){ $('oppBody').innerHTML='<p class="loading">Не удалось посчитать.</p>'; });
 }
 
+/* ================= SEO: история и «помогло ли» ================= */
+function dv(d,unit,inverse){
+  /* inverse=true для позиции: там меньше = лучше, знак уже перевёрнут в воркере */
+  if(d===0||d==null) return '<span class="muted">без изменений</span>';
+  var good=d>0;
+  return '<span style="color:'+(good?'var(--ok)':'var(--bad)')+';font-weight:700">'+
+    (d>0?'+':'')+d+(unit||'')+'</span>';
+}
+
+function loadHistory(){
+  if($('histBody').dataset.done) return;
+  api('history?back=4').then(function(j){
+    $('histBody').dataset.done='1';
+    var h=[];
+
+    if(!j.count){
+      $('histBody').innerHTML='<div class="note"><b>История ещё не набрана.</b><br>'+
+        'Раз в неделю сайт сам сохраняет снимок Search Console, и по этим снимкам '+
+        'считается «помогло ли». Задним числом историю собрать нельзя — первый снимок '+
+        'появится в ближайший запуск, сравнивать станет с чем через 2–3 недели.</div>';
+      return;
+    }
+
+    if(!j.diff){
+      h.push('<div class="note">Снимок пока один ('+esc(j.series[0].week)+'). '+
+        'Сравнивать не с чем — вернитесь через неделю, тогда здесь появится '+
+        '«стало лучше / стало хуже».</div>');
+    } else {
+      var d=j.diff;
+      h.push('<div class="kpis" style="margin-bottom:14px">');
+      h.push(kpi('Клики', num(d.clicks.now), 'было '+d.clicks.was+' · '+
+        (d.clicks.d>0?'+':'')+d.clicks.d, d.clicks.d>0?'good':(d.clicks.d<0?'alert':'')));
+      h.push(kpi('Показы', num(d.impressions.now), 'было '+num(d.impressions.was)+' · '+
+        (d.impressions.d>0?'+':'')+d.impressions.d,
+        d.impressions.d>0?'good':(d.impressions.d<0?'alert':'')));
+      h.push(kpi('CTR', d.ctr.now+'%', 'было '+d.ctr.was+'% · '+
+        (d.ctr.d>0?'+':'')+d.ctr.d+' п.п.', d.ctr.d>0?'good':(d.ctr.d<0?'alert':'')));
+      h.push(kpi('Средняя позиция', d.position.now, 'было '+d.position.was+' · '+
+        (d.position.d>0?'выше на '+d.position.d:(d.position.d<0?'ниже на '+(-d.position.d):'без изменений')),
+        d.position.d>0?'good':(d.position.d<0?'alert':'')));
+      h.push('</div>');
+      h.push('<p class="small" style="margin:0 0 14px">Сравнение недели '+esc(d.to.week)+
+        ' с '+esc(d.from.week)+' — это '+d.weeksApart+' '+
+        plural(d.weeksApart,'неделя','недели','недель')+' назад. '+
+        'Позиция: «выше» значит ближе к первому месту.</p>');
+
+      if(d.up.length||d.down.length){
+        h.push('<div class="two">');
+        h.push('<div class="card"><b>Выросли</b><p class="small" style="margin:2px 0 10px">'+
+          'запросы, где кликов стало больше</p>'+qMoveTable(d.up)+'</div>');
+        h.push('<div class="card"><b>Просели</b><p class="small" style="margin:2px 0 10px">'+
+          'сюда стоит смотреть в первую очередь</p>'+qMoveTable(d.down)+'</div>');
+        h.push('</div>');
+      }
+    }
+
+    if(j.series.length>1){
+      h.push('<h2 class="sec" style="margin-top:20px">Клики по неделям</h2>');
+      h.push('<div class="card">'+weekChart(j.series)+'</div>');
+    }
+    h.push('<p class="small" style="margin-top:12px">Снимков в истории: '+j.count+
+      '. Снимок берётся автоматически раз в неделю и хранится два года.</p>');
+
+    $('histBody').innerHTML=h.join('');
+  }).catch(function(){ $('histBody').innerHTML='<p class="loading">Не удалось загрузить историю.</p>'; });
+}
+
+function qMoveTable(rows){
+  if(!rows||!rows.length) return '<p class="small">Пусто.</p>';
+  return '<div class="tw"><table><thead><tr><th>Запрос</th><th>Клики</th><th>Позиция</th>'+
+    '</tr></thead><tbody>'+rows.map(function(r){
+      return '<tr><td>'+esc(r.key)+'</td>'+
+        '<td>'+r.clicks+' <span class="muted">('+(r.dClicks>0?'+':'')+r.dClicks+')</span></td>'+
+        '<td>'+r.position+' '+dv(r.dPosition,'')+'</td></tr>';
+    }).join('')+'</tbody></table></div>';
+}
+
+function weekChart(series){
+  var w=760,h=140,pad=8;
+  var max=Math.max.apply(null,series.map(function(s){return s.clicks}))||1;
+  var n=series.length;
+  var bw=Math.max(4,(w-pad*2)/n-4);
+  var bars=series.map(function(s,i){
+    var bh=Math.max(1,(s.clicks/max)*(h-pad*2-16));
+    var x=pad+i*((w-pad*2)/n), y=h-pad-bh;
+    return '<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+bw.toFixed(1)+
+      '" height="'+bh.toFixed(1)+'" rx="2" fill="var(--bronze)"><title>'+
+      esc(s.week)+': '+s.clicks+' кликов</title></rect>';
+  }).join('');
+  return '<svg class="chart" style="height:140px" viewBox="0 0 '+w+' '+h+
+    '" preserveAspectRatio="none" role="img" aria-label="Клики по неделям">'+
+    '<line class="gl" x1="'+pad+'" y1="'+(h-pad)+'" x2="'+(w-pad)+'" y2="'+(h-pad)+'"/>'+
+    bars+'</svg>'+
+    '<div class="small" style="display:flex;justify-content:space-between">'+
+    '<span>'+esc(series[0].week)+'</span><span>пик '+max+' кликов/нед</span>'+
+    '<span>'+esc(series[series.length-1].week)+'</span></div>';
+}
+
 /* ================= SEO ================= */
 function loadSearchConsole(){
   if($('scBody').dataset.done) return;
@@ -887,15 +988,17 @@ $('days').addEventListener('change',function(){
   DAYS=+this.value;
   $('scBody').dataset.done=''; $('scBody').innerHTML='<p class="loading">Проверяю Search Console…</p>';
   $('oppBody').dataset.done=''; $('oppBody').innerHTML='<p class="loading">Считаю возможности…</p>';
+  $('histBody').dataset.done='';
   loadOverview();
-  if(TAB==='seo'){ loadOpportunities(); loadSearchConsole(); }
+  if(TAB==='seo'){ loadOpportunities(); loadHistory(); loadSearchConsole(); }
 });
 $('refresh').addEventListener('click',function(){
   LEADS=null;
   $('scBody').dataset.done=''; $('healthBody').dataset.done=''; $('oppBody').dataset.done='';
+  $('histBody').dataset.done='';
   loadOverview();
   if(TAB==='leads') loadLeads();
-  if(TAB==='seo'){ loadOpportunities(); loadSearchConsole(); }
+  if(TAB==='seo'){ loadOpportunities(); loadHistory(); loadSearchConsole(); }
   if(TAB==='tools') loadHealth();
 });
 $('logout').addEventListener('click',function(){

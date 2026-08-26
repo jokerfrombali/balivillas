@@ -19,6 +19,7 @@ import { isAdmin, adminConfigured, handleLogin, handleLogout } from './auth.js';
 import { listLeads, updateLead, summarise, STATUSES } from './leads.js';
 import { auditBatch, sitemapPaths } from './seo.js';
 import { opportunities } from './opportunities.js';
+import { takeSnapshot, listSnapshots, compare } from './snapshots.js';
 
 const INDEXNOW_KEY = 'd9136b4b49643e1de42472f8c7cc1cf0';
 
@@ -194,6 +195,26 @@ export async function handleAdmin(req, env, path) {
   }
 
   if (sub === 'health') return json({ ok: true, pages: await health(env) });
+
+  if (sub === 'history') {
+    const snaps = await listSnapshots(env, 60);
+    const back = Number(url.searchParams.get('back')) || 4;
+    return json({
+      ok: true,
+      count: snaps.length,
+      /* сам снимок тяжёлый — наружу отдаём только то, что рисуем */
+      series: snaps.slice().reverse().map(function (s) {
+        return { week: s.week, to: s.to, clicks: s.clicks,
+                 impressions: s.impressions, ctr: s.ctr, position: s.position };
+      }),
+      diff: compare(snaps, back)
+    });
+  }
+
+  if (sub === 'snapshot') {
+    if (req.method !== 'POST') return json({ ok: false, error: 'POST only' }, 405);
+    return json(await takeSnapshot(env, true));
+  }
 
   if (sub === 'indexnow') {
     if (req.method !== 'POST') return json({ ok: false, error: 'POST only' }, 405);
