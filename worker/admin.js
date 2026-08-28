@@ -10,6 +10,8 @@
  *   GET  search?days=N         Search Console queries and pages
  *   POST indexnow              {paths} — tell Bing these pages changed
  *   GET  health                are the key pages up right now
+ *   GET  hostfully             state of every site villa <-> Hostfully link
+ *   POST hostfully/sync        re-poll the Hostfully calendars right now
  *
  * Reads never mutate; the two writes (lead status, IndexNow) are explicit.
  */
@@ -20,6 +22,7 @@ import { listLeads, updateLead, summarise, STATUSES } from './leads.js';
 import { auditBatch, sitemapPaths } from './seo.js';
 import { opportunities } from './opportunities.js';
 import { takeSnapshot, listSnapshots, compare } from './snapshots.js';
+import { status as hostfullyStatus, syncAll as hostfullySync } from './hostfully.js';
 
 const INDEXNOW_KEY = 'd9136b4b49643e1de42472f8c7cc1cf0';
 
@@ -195,6 +198,16 @@ export async function handleAdmin(req, env, path) {
   }
 
   if (sub === 'health') return json({ ok: true, pages: await health(env) });
+
+  /* Связки с Hostfully: что с чем сцеплено и живо ли. Чтение, ничего не меняет. */
+  if (sub === 'hostfully') return json({ ok: true, data: await hostfullyStatus(env) });
+
+  /* Кнопка «Проверить сейчас» — форсируем обход, минуя интервал. */
+  if (sub === 'hostfully/sync') {
+    if (req.method !== 'POST') return json({ ok: false, error: 'POST only' }, 405);
+    const run = await hostfullySync(env, true);
+    return json({ ok: true, run, data: await hostfullyStatus(env) });
+  }
 
   if (sub === 'history') {
     const snaps = await listSnapshots(env, 60);

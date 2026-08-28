@@ -11,7 +11,11 @@
  *   POST /api/tg      Telegram webhook: /stats, /stats вчера, /health
  *                     numbers come from GA4 when GA_SA_KEY is set, else from KV
  *   GET  /api/health  cheap endpoint for external uptime monitors.
- *   cron              asset health check every run + weekly digest, Mon 08:00 WITA.
+ *   GET  /api/availability?villa=<id>&from=&to=
+ *                     booked nights for one villa, read from the Hostfully
+ *                     mirror in KV. Dates only — no guest data ever leaves here.
+ *   cron              asset health check every run + weekly digest, Mon 08:00 WITA
+ *                     + Hostfully calendar sync (see hostfully.js).
  *
  * The bot token lives in the TELEGRAM_TOKEN secret, never in the repo.
  */
@@ -21,6 +25,7 @@ import { handleAdmin } from './admin.js';
 import { saveLead } from './leads.js';
 import { opportunities } from './opportunities.js';
 import { takeSnapshot } from './snapshots.js';
+import { syncAll as hostfullySync, busyNights } from './hostfully.js';
 
 const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
 
@@ -548,6 +553,20 @@ export default {
         return handleAdmin(req, env, url.pathname);
       }
 
+      /* Занятые даты для календаря на странице виллы. Читаем только зеркало в
+         KV: Hostfully не должен получать по запросу на каждый просмотр. */
+      if (url.pathname === '/api/availability') {
+        const villa = (url.searchParams.get('villa') || '').slice(0, 80);
+        const data = villa ? await busyNights(env, villa,
+                                              url.searchParams.get('from'),
+                                              url.searchParams.get('to')) : null;
+        if (!data) return json({ ok: false, error: 'unknown villa' }, 404);
+        return new Response(JSON.stringify({ ok: true, ...data }), {
+          headers: { 'content-type': 'application/json',
+                     'cache-control': 'public, max-age=300' }
+        });
+      }
+
       if (req.method !== 'POST') return json({ ok: false, error: 'POST only' }, 405);
 
       /* only our own pages may post here */
@@ -579,6 +598,10 @@ export default {
          пишет не чаще раза в ISO-неделю — так пропущенный из-за деплоя
          понедельник не стоит нам недели истории. */
       try { await takeSnapshot(env); } catch (e) { /* история не критична */ }
+
+      /* Обход календарей Hostfully. syncAll сам решает, пора ли: cron будит нас
+         каждые 30 минут, а опрашивать чаще, чем раз в SYNC_EVERY_MIN, незачем. */
+      try { await hostfullySync(env, false); } catch (e) { /* следующий заход подберёт */ }
     })());
   }
 };
