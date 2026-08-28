@@ -550,3 +550,20 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount);
   else mount();
 })();
+
+/* Календарь занятости из Hostfully — отдельным файлом thb-avail.js.
+ * Грузим только там, где на странице есть сам календарь, то есть на
+ * страницах вилл. На остальных условие просто не срабатывает.
+ */
+(function () {
+  function load() {
+    if (!document.getElementById('section-availability')) return;
+    var s = document.createElement('script');
+    s.src = '/thb-avail.js';
+    s.defer = true;
+    document.head.appendChild(s);
+  }
+  /* тем же способом, что и mount() выше: разметки может ещё не быть */
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', load);
+  else load();
+})();
