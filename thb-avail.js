@@ -21,16 +21,21 @@
 
   /* ---------- стиль ---------- */
   var st = document.createElement('style');
+  /* Занятое и прошедшее должны отличаться с первого взгляда. У прошедших дат
+     на странице виллы стоит color:#d1d5db без линии — если занятые сделать
+     таким же серым, они читаются как "уже прошло", а не "занято". Поэтому
+     песочная подложка + перечёркивание терракотой из палитры бренда. */
   st.textContent =
-    '.calendar-day.booked{color:#c9c5bd;cursor:default;text-decoration:line-through;' +
-      'text-decoration-thickness:1.5px;background:transparent}' +
-    '.calendar-day.booked:hover{background:transparent}' +
+    '.calendar-day.booked{color:#8a8378;cursor:default;background:#f0e7da;' +
+      'text-decoration:line-through;text-decoration-color:#b84a31;' +
+      'text-decoration-thickness:2px}' +
+    '.calendar-day.booked:hover{background:#f0e7da}' +
     '.thb-avail-note{margin-top:10px;font-size:13px;color:#706b61;display:flex;' +
       'align-items:center;gap:8px;flex-wrap:wrap}' +
-    '.thb-avail-note i{width:14px;height:14px;border-radius:50%;background:#ece7de;' +
+    '.thb-avail-note i{width:14px;height:14px;border-radius:50%;background:#f0e7da;' +
       'display:inline-block;position:relative;flex:none}' +
     '.thb-avail-note i::after{content:"";position:absolute;left:1px;right:1px;top:6px;' +
-      'height:1.5px;background:#c9c5bd}' +
+      'height:2px;background:#b84a31}' +
     '.thb-avail-warn{color:#b84a31}';
   document.head.appendChild(st);
 
