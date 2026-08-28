@@ -101,13 +101,37 @@
     }
   }
 
-  /* Календарь перерисовывается при смене месяца и свайпе — красим следом. */
-  var origRender = window.renderCalendars;
-  window.renderCalendars = function () {
-    var out = origRender.apply(this, arguments);
-    try { paint(); } catch (e) {}
-    return out;
-  };
+  /* Календарь пересобирается при выборе даты, смене месяца и свайпе, и каждый
+     раз grid.innerHTML очищается — покраска пропадает вместе с ячейками.
+     Обёртку на window.renderCalendars ставить бесполезно: selectDate,
+     prevMonth и nextMonth на странице виллы зовут внутреннюю функцию из
+     замыкания, а не ту, что лежит в window. Поэтому смотрим на саму разметку:
+     любая перестройка сетки — повод покрасить заново.
+
+     paint() только добавляет класс и снимает onclick, то есть childList не
+     меняет, — на свои же правки наблюдатель не сработает, цикла нет. */
+  var repainting = false;
+  function schedulePaint() {
+    if (repainting) return;
+    repainting = true;
+    Promise.resolve().then(function () {
+      repainting = false;
+      try { paint(); } catch (e) {}
+    });
+  }
+
+  new MutationObserver(schedulePaint).observe(sec, { childList: true, subtree: true });
+
+  /* На случай, если календарь перерисуют через window.renderCalendars
+     (так делает свайп-скрипт, добавляя месяцы) — оставляем и обёртку. */
+  if (typeof window.renderCalendars === 'function') {
+    var origRender = window.renderCalendars;
+    window.renderCalendars = function () {
+      var out = origRender.apply(this, arguments);
+      schedulePaint();
+      return out;
+    };
+  }
 
   /* ---------- защита от диапазона поверх занятых ночей ---------- */
   /* Занятый день кликнуть нельзя, но выбрать «до» и «после» — можно, и тогда
