@@ -379,13 +379,23 @@ function linkOf(villa) {
   return LINKS.filter((l) => l.villa === villa && l.uid)[0] || null;
 }
 
-/* Базовая цена из зеркала. Не ходим в Hostfully на каждый просмотр страницы. */
+/* Базовая цена из зеркала. Не ходим в Hostfully на каждый просмотр страницы.
+   Если зеркало пустое — первый деплой, чистый KV, вытесненный ключ — берём
+   цену разово сами и кладём в зеркало, чтобы карточка не осталась без цены. */
 export async function basePrice(env, villa) {
   const link = linkOf(villa);
   if (!link) return null;
+
   try {
     const rec = JSON.parse(await env.THB_STATS.get(priceKey(villa)) || 'null');
-    return rec && rec.ok ? rec : null;
+    if (rec && rec.ok) return rec;
+  } catch (e) {}
+
+  try {
+    const b = await fetchBase(link.uid);
+    const rec = { ok: true, ...b, ts: Date.now() };
+    await env.THB_STATS.put(priceKey(villa), JSON.stringify(rec));
+    return rec;
   } catch (e) { return null; }
 }
 
