@@ -554,6 +554,7 @@
 /* Дополнения для страниц вилл, каждое отдельным файлом:
  *   thb-avail.js  — занятые даты из Hostfully в календаре
  *   thb-guests.js — починка выбора числа гостей в карточке брони
+ *   thb-map.js    — карта района в секции «Where you'll be»
  * Грузим только там, где соответствующий блок есть на странице.
  */
 (function () {
@@ -565,6 +566,7 @@
       add('/thb-avail.js');
       add('/thb-guests.js');
     }
+    if (document.getElementById('section-location')) add('/thb-map.js');
   }
   function add(src) {
     var s = document.createElement('script');
