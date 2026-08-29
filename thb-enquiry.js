@@ -565,6 +565,7 @@
     if (document.getElementById('section-availability')) {
       add('/thb-avail.js');
       add('/thb-guests.js');
+      add('/thb-price.js');
     }
     if (document.getElementById('section-location')) add('/thb-map.js');
   }
