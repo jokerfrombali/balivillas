@@ -558,8 +558,13 @@
  */
 (function () {
   function load() {
-    if (document.getElementById('section-availability')) add('/thb-avail.js');
-    if (document.getElementById('guestSelector')) add('/thb-guests.js');
+    /* #guestSelector появляется позже, поэтому цепляемся за календарь: он есть
+       в разметке сразу и означает, что это страница виллы. Ждать кнопку —
+       забота самого thb-guests.js. */
+    if (document.getElementById('section-availability')) {
+      add('/thb-avail.js');
+      add('/thb-guests.js');
+    }
   }
   function add(src) {
     var s = document.createElement('script');
