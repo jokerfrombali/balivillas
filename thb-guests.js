@@ -1,32 +1,37 @@
-/* Починка выбора гостей в карточке бронирования на странице виллы.
+/* Гости в карточке бронирования: счётчик прямо в поле, без выпадашки.
  *
- * Замерено на боевой странице Villa Kesari 4:
+ * Как было (замерено на боевой странице Villa Kesari 4):
+ *   — кнопка открывала .guest-dropdown, но та стояла position:absolute;top:100%
+ *     относительно всей карточки, а не кнопки: кнопка кончается на 854px,
+ *     выпадашка появлялась на 1133px. У карточки overflow:clip и низ на 1134px,
+ *     поэтому её срезало целиком и выбрать гостей было нельзя;
+ *   — нажатие «+» затирало разметку кнопки: до нажатия внутри два span
+ *     и шеврон, после — голый текст «2 guests», подпись «Guests» и стрелка
+ *     пропадали;
+ *   — во всех виллах стояло «Maximum 8 guests», хотя в data/villas.json
+ *     у Villa Kesari 4 указано guests: 6.
  *
- * 1. Выпадашку не видно. `.guest-dropdown` стоит position:absolute; top:100%,
- *    но ближайший позиционированный предок — не обёртка кнопки, а вся карточка
- *    брони. Поэтому «100%» отсчитывалось от низа карточки: кнопка кончается на
- *    854px, выпадашка появлялась на 1133px. А у карточки overflow:clip и низ на
- *    1134px — эти 100px срезало целиком.
- * 2. Нажатие «+» или «−» уничтожает разметку кнопки. До нажатия внутри
- *    <div><span>Guests</span><span>1 guest</span></div> и шеврон, после —
- *    голый текст «2 guests», ноль span-ов: подпись «Guests» и стрелка пропадают.
- * 3. У всех вилл «Maximum 8 guests», хотя в data/villas.json у Villa Kesari 4
- *    стоит guests: 6.
+ * Теперь вместо кнопки-раскрывашки — обычное поле в один ряд с Check-in и
+ * Check-out: слева «Guests» и вместимость, справа «−  N  +». Ничего не
+ * открывается и не закрывается, нечему и срезаться.
  *
- * Кнопку и её обработчики не трогаем: открытие, закрытие и сам счёт остаются
- * страничными. Мы только ставим выпадашку на место, чиним разметку кнопки
- * после каждого пересчёта и не даём выбрать больше, чем вилла вмещает.
+ * Родные #guestMinus / #guestNumber / #guestPlus переносим как есть, вместе
+ * с их обработчиками, — счёт остаётся страничным. Саму кнопку и выпадашку
+ * не удаляем, а прячем: код страницы продолжает писать в них и не падает.
  *
- * Элементы карточки появляются позже DOMContentLoaded, поэтому сначала ждём их.
+ * Разметка карточки появляется позже DOMContentLoaded, поэтому сначала ждём.
  */
 (function () {
   'use strict';
 
+  var DONE = 'thbGuestsInline';
+
   waitFor(function () {
-    return document.getElementById('guestSelector') && document.querySelector('.guest-dropdown');
+    return document.getElementById('guestSelector') &&
+           document.getElementById('guestNumber') &&
+           document.querySelector('.guest-dropdown');
   }, start, 15000);
 
-  /* ---------- ожидание разметки ---------- */
   function waitFor(ready, run, limitMs) {
     if (ready()) { run(); return; }
     var obs = new MutationObserver(function () {
@@ -39,82 +44,95 @@
   }
 
   function start() {
+    if (document.documentElement.dataset[DONE]) return;
+    document.documentElement.dataset[DONE] = '1';
+
     var btn = document.getElementById('guestSelector');
     var drop = document.querySelector('.guest-dropdown');
     var num = document.getElementById('guestNumber');
+    var minus = document.getElementById('guestMinus');
     var plus = document.getElementById('guestPlus');
+    if (!btn || !drop || !num || !minus || !plus) return;
 
-    /* Разметка кнопки до первого нажатия — она и есть эталон, к которому
-       возвращаемся, когда страничный обработчик её затирает. */
-    var template = btn.innerHTML;
+    /* ---------- стили ---------- */
+    var st = document.createElement('style');
+    st.textContent = [
+      /* прячем и кнопку, и выпадашку: код страницы продолжает с ними работать */
+      '#guestSelector,.guest-dropdown{display:none!important}',
+      '.thb-guests{display:flex;align-items:center;justify-content:space-between;gap:12px;',
+      '  height:68px;padding:0 16px;border:1px solid rgba(0,0,0,.078);border-radius:8px}',
+      '.thb-guests .thb-g-text{display:flex;flex-direction:column;gap:2px;min-width:0}',
+      '.thb-guests .thb-g-cap{font-size:13px;line-height:1.3;color:#6b6b6b}',
+      '.thb-guests .thb-g-max{font-size:12px;line-height:1.3;color:#8a8a8a}',
+      '.thb-guests .thb-g-ctl{display:flex;align-items:center;gap:12px;flex:none}',
+      '.thb-guests .thb-g-ctl button{width:34px;height:34px;border-radius:50%;',
+      '  border:1px solid rgba(0,0,0,.18);background:transparent;font-size:18px;line-height:1;',
+      '  color:#111;cursor:pointer;display:flex;align-items:center;justify-content:center;',
+      '  transition:border-color .15s,opacity .15s}',
+      '.thb-guests .thb-g-ctl button:hover:not(:disabled){border-color:#111}',
+      '.thb-guests .thb-g-ctl button:disabled{opacity:.35;cursor:default}',
+      '.thb-guests .thb-g-num{min-width:22px;text-align:center;font-size:16px;color:#111}'
+    ].join('\n');
+    document.head.appendChild(st);
 
-    /* ---------- 1: ставим выпадашку под кнопку ---------- */
-    /* offsetParent у кнопки и у выпадашки один и тот же (карточка брони), так
-       что координаты кнопки внутри карточки годятся напрямую. Поднятая под
-       кнопку выпадашка помещается в карточку целиком, и overflow:clip её уже
-       не режет — костыли вроде position:fixed не нужны. */
-    function place() {
-      if (btn.offsetParent !== drop.offsetParent) return;   /* вёрстку поменяли — не лезем */
-      drop.style.top = (btn.offsetTop + btn.offsetHeight + 8) + 'px';
-      drop.style.left = btn.offsetLeft + 'px';
-      drop.style.right = 'auto';
-      drop.style.width = btn.offsetWidth + 'px';
+    /* ---------- поле ---------- */
+    var field = document.createElement('div');
+    field.className = 'thb-guests';
+
+    var text = document.createElement('div');
+    text.className = 'thb-g-text';
+    var cap = document.createElement('span');
+    cap.className = 'thb-g-cap';
+    cap.textContent = 'Guests';
+    var max = document.createElement('span');
+    max.className = 'thb-g-max';
+    text.appendChild(cap);
+    text.appendChild(max);
+
+    var ctl = document.createElement('div');
+    ctl.className = 'thb-g-ctl';
+    num.className = 'thb-g-num';
+    num.removeAttribute('style');
+    ctl.appendChild(minus);
+    ctl.appendChild(num);
+    ctl.appendChild(plus);
+
+    field.appendChild(text);
+    field.appendChild(ctl);
+    btn.parentNode.insertBefore(field, btn);
+
+    /* ---------- вместимость ---------- */
+    var limit = null;
+
+    function sync() {
+      var n = parseInt(num.textContent, 10) || 1;
+      minus.disabled = n <= 1;
+      plus.disabled = limit ? n >= limit : false;
     }
 
-    function isOpen() { return drop.classList.contains('show'); }
+    new MutationObserver(sync).observe(num, { childList: true, characterData: true, subtree: true });
+    minus.addEventListener('click', function () { setTimeout(sync, 0); });
+    plus.addEventListener('click', function () { setTimeout(sync, 0); });
 
-    new MutationObserver(function () { if (isOpen()) place(); })
-      .observe(drop, { attributes: true, attributeFilter: ['class'] });
-    window.addEventListener('resize', function () { if (isOpen()) place(); });
-    place();
+    /* до ответа villas.json подпись пустая: лучше ничего, чем неверное число */
+    max.textContent = '';
+    sync();
 
-    /* ---------- 2: чиним разметку кнопки после пересчёта ---------- */
-    var repairing = false;
+    villaMax().then(function (m) {
+      if (!m) { max.textContent = ''; return; }
+      limit = m;
+      max.textContent = 'Maximum ' + m + (m === 1 ? ' guest' : ' guests');
 
-    function labelSpan() {
-      var spans = [].slice.call(btn.querySelectorAll('span'));
-      return spans.filter(function (s) { return /\d+\s+guests?/i.test(s.textContent || ''); }).pop()
-          || spans[spans.length - 1];
-    }
-
-    function repair() {
-      if (repairing || !num) return;
-      var n = parseInt(num.textContent, 10);
-      if (!n) return;
-      var text = n + (n === 1 ? ' guest' : ' guests');
-
-      repairing = true;
-      /* структуру снесли — возвращаем эталон */
-      if (!btn.querySelector('span')) btn.innerHTML = template;
-      var span = labelSpan();
-      if (span && span.textContent !== text) span.textContent = text;
-      repairing = false;
-    }
-
-    new MutationObserver(repair).observe(btn, { childList: true, subtree: true, characterData: true });
-    if (num) new MutationObserver(repair).observe(num, { childList: true, characterData: true, subtree: true });
-    repair();
-
-    /* ---------- 3: настоящий максимум из data/villas.json ---------- */
-    villaMax().then(function (max) {
-      if (!max) return;
-
-      var note = [].slice.call(drop.querySelectorAll('div')).filter(function (d) {
-        return /^Maximum \d+ guests?$/i.test((d.textContent || '').trim());
-      })[0];
-      if (note) note.textContent = 'Maximum ' + max + (max === 1 ? ' guest' : ' guests');
-
-      /* страничный обработчик «+» знает свой максимум и о нашем не в курсе:
+      /* страничный «+» знает свой максимум и о нашем не в курсе:
          перехватываем клик на стадии погружения и не пускаем дальше */
-      if (plus) {
-        plus.addEventListener('click', function (e) {
-          var n = parseInt(num && num.textContent, 10) || 1;
-          if (n >= max) { e.stopImmediatePropagation(); e.preventDefault(); }
-        }, true);
-      }
+      plus.addEventListener('click', function (e) {
+        var n = parseInt(num.textContent, 10) || 1;
+        if (n >= limit) { e.stopImmediatePropagation(); e.preventDefault(); }
+      }, true);
 
-      var cur = parseInt(num && num.textContent, 10) || 1;
-      if (cur > max && num) { num.textContent = String(max); repair(); }
+      var cur = parseInt(num.textContent, 10) || 1;
+      if (cur > limit) num.textContent = String(limit);
+      sync();
     });
   }
 
