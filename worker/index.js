@@ -14,6 +14,12 @@
  *   GET  /api/availability?villa=<id>&from=&to=
  *                     booked nights for one villa, read from the Hostfully
  *                     mirror in KV. Dates only — no guest data ever leaves here.
+ *   GET  /api/price?villa=<id>
+ *                     "from" nightly rate, currency, min stay, max guests —
+ *                     from the same mirror, refreshed with the calendar.
+ *   GET  /api/quote?villa=<id>&from=&to=&guests=
+ *                     exact price for those dates, proxied to Hostfully and
+ *                     cached briefly. Read-only: nothing is created there.
  *   cron              asset health check every run + weekly digest, Mon 08:00 WITA
  *                     + Hostfully calendar sync (see hostfully.js).
  *
@@ -25,7 +31,7 @@ import { handleAdmin } from './admin.js';
 import { saveLead } from './leads.js';
 import { opportunities } from './opportunities.js';
 import { takeSnapshot } from './snapshots.js';
-import { syncAll as hostfullySync, busyNights } from './hostfully.js';
+import { syncAll as hostfullySync, busyNights, basePrice, quote } from './hostfully.js';
 
 const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
 
@@ -561,6 +567,46 @@ export default {
                                               url.searchParams.get('from'),
                                               url.searchParams.get('to')) : null;
         if (!data) return json({ ok: false, error: 'unknown villa' }, 404);
+        return new Response(JSON.stringify({ ok: true, ...data }), {
+          headers: { 'content-type': 'application/json',
+                     'cache-control': 'public, max-age=300' }
+        });
+      }
+
+      /* Базовая цена «от» для карточки. Читаем зеркало, а не Hostfully. */
+      if (url.pathname === '/api/price') {
+        const villa = (url.searchParams.get('villa') || '').slice(0, 80);
+        const data = villa ? await basePrice(env, villa) : null;
+        if (!data) return json({ ok: false, error: 'no price' }, 404);
+        return new Response(JSON.stringify({ ok: true, villa, ...data }), {
+          headers: { 'content-type': 'application/json',
+                     'cache-control': 'public, max-age=900' }
+        });
+      }
+
+      /* Точная цена на выбранные даты. Ходит в Hostfully, поэтому под лимитом
+         и с коротким кэшем — перебор дат не должен их долбить. */
+      if (url.pathname === '/api/quote') {
+        const villa = (url.searchParams.get('villa') || '').slice(0, 80);
+        const from = (url.searchParams.get('from') || '').slice(0, 10);
+        const to = (url.searchParams.get('to') || '').slice(0, 10);
+        const guests = (url.searchParams.get('guests') || '1').slice(0, 2);
+        const day = /^\d{4}-\d{2}-\d{2}$/;
+
+        if (!villa || !day.test(from) || !day.test(to) || to <= from) {
+          return json({ ok: false, error: 'bad dates' }, 400);
+        }
+
+        const ip = req.headers.get('cf-connecting-ip') || '';
+        if (await tooFast(env, ip, 'quote', 30, 60)) {
+          return json({ ok: false, error: 'rate' }, 429);
+        }
+
+        let data = null;
+        try { data = await quote(env, villa, from, to, guests); }
+        catch (e) { return json({ ok: false, error: 'upstream' }, 502); }
+        if (!data) return json({ ok: false, error: 'unknown villa' }, 404);
+
         return new Response(JSON.stringify({ ok: true, ...data }), {
           headers: { 'content-type': 'application/json',
                      'cache-control': 'public, max-age=300' }

@@ -204,11 +204,17 @@ export async function syncAll(env, force) {
     results.push(await syncOne(env, link));
   }
 
+  /* Цены обновляем тем же тактом. Ошибка тут не должна ронять синхронизацию
+     календаря: занятость важнее, чем свежесть цены. */
+  let prices = 0;
+  try { prices = await syncPrices(env); } catch (e) {}
+
   meta = {
     ts: Date.now(),
     everyMin: SYNC_EVERY_MIN,
     total: results.length,
-    ok: results.filter((r) => r.ok).length
+    ok: results.filter((r) => r.ok).length,
+    prices
   };
   await env.THB_STATS.put(META, JSON.stringify(meta));
   return { skipped: false, meta, results: results.length };
@@ -276,4 +282,151 @@ export async function status(env) {
     live: links.filter((l) => l.state === 'live').length,
     total: links.length
   };
+}
+
+/* ---------- цены ----------
+ *
+ * В iCal цен нет и быть не может — там только даты. Но у Hostfully есть
+ * публичные эндпоинты, на которых работает их же booking-виджет: ключ не
+ * нужен, достаточно UID объекта. Их и читаем, только на чтение.
+ *
+ *   getproperty_api.jsp             — базовая цена «от», валюта, минимальный
+ *                                     срок, максимум гостей;
+ *   api/lead_getquotewidget_api.jsp — точный расчёт на конкретные даты и
+ *                                     число гостей, с уборкой и налогами.
+ *
+ * Отвечают они JSONP: cb(true,{...}). Разбираем вручную, eval не зовём.
+ *
+ * Виджет Hostfully мы на сайт не ставим: он тянет свои стили и ломает нашу
+ * вёрстку. Берём только числа, рисуем сами.
+ *
+ * Ничего в Hostfully этими вызовами не создаётся: заявку гостя мы отправляем
+ * себе (POST /api/lead), в Hostfully её заводят руками.
+ */
+
+const WIDGET = 'https://platform.hostfully.com/';
+
+/* Базовые цены обновляем вместе с календарём. Цену на конкретные даты держим
+   недолго: у агентства включён PriceLabs, он двигает ставки в течение дня. */
+const QUOTE_TTL_SEC = 900;
+
+const priceKey = (villa) => 'hf:price:' + villa;
+const quoteKey = (villa, a, b, g) => 'hf:quote:' + villa + ':' + a + ':' + b + ':' + g;
+
+/* cb(true,{...}) -> объект. false или мусор -> null. */
+export function unwrapJsonp(text) {
+  const s = String(text || '');
+  const open = s.indexOf('(');
+  const close = s.lastIndexOf(')');
+  if (open < 0 || close <= open) return null;
+
+  const inner = s.slice(open + 1, close);
+  const comma = inner.indexOf(',');
+  if (comma < 0) return null;
+  if (inner.slice(0, comma).trim() !== 'true') return null;
+
+  try { return JSON.parse(inner.slice(comma + 1)); } catch (e) { return null; }
+}
+
+async function jsonp(path, params) {
+  const url = new URL(WIDGET + path);
+  url.searchParams.set('jsoncallback', 'cb');
+  for (const [k, v] of Object.entries(params)) {
+    if (v !== null && v !== undefined && v !== '') url.searchParams.set(k, String(v));
+  }
+  url.searchParams.set('element', '1');
+
+  const res = await fetch(url.toString(), { cf: { cacheTtl: 0 } });
+  if (!res.ok) throw new Error('http_' + res.status);
+  const data = unwrapJsonp(await res.text());
+  if (!data) throw new Error('bad_jsonp');
+  return data;
+}
+
+/* Базовая карточка объекта: цена «от», валюта, минимальный срок, макс. гостей. */
+export async function fetchBase(uid) {
+  const d = await jsonp('getproperty_api.jsp', { propertyUID: uid });
+  return {
+    price: Number(d.price) || 0,
+    currency: d.currencySymbol || '',
+    minStay: Number(d.minStay) || 1,
+    maxGuests: Number(d.maximumGuests) || 0,
+    name: d.name ? String(d.name).trim() : ''
+  };
+}
+
+/* Расчёт на даты. checkIn/checkOut — YYYY-MM-DD, checkOut это день выезда. */
+export async function fetchQuote(uid, checkIn, checkOut, guests) {
+  const d = await jsonp('api/lead_getquotewidget_api.jsp', {
+    propertyUID: uid, checkIn, checkOut, guests
+  });
+
+  const nights = Number(d.totalNights) || 0;
+  const rent = Number(d.rent) || 0;
+
+  return {
+    nights,
+    minStay: Number(d.minimumStay) || 0,
+    rent,
+    cleaningFee: Number(d.cleaningFeeAmount) || 0,
+    taxes: Number(d.taxationRateAmount) || 0,
+    total: Number(d.totalWithTaxes) || Number(d.totalAmount) || rent,
+    perNight: nights ? Math.round(rent / nights) : 0
+  };
+}
+
+function linkOf(villa) {
+  return LINKS.filter((l) => l.villa === villa && l.uid)[0] || null;
+}
+
+/* Базовая цена из зеркала. Не ходим в Hostfully на каждый просмотр страницы. */
+export async function basePrice(env, villa) {
+  const link = linkOf(villa);
+  if (!link) return null;
+  try {
+    const rec = JSON.parse(await env.THB_STATS.get(priceKey(villa)) || 'null');
+    return rec && rec.ok ? rec : null;
+  } catch (e) { return null; }
+}
+
+/* Обновление базовых цен — зовём из syncAll, тем же тактом, что и календарь. */
+export async function syncPrices(env) {
+  let ok = 0;
+  for (const link of LINKS) {
+    if (!link.uid) continue;
+    try {
+      const b = await fetchBase(link.uid);
+      await env.THB_STATS.put(priceKey(link.villa),
+        JSON.stringify({ ok: true, ...b, ts: Date.now() }));
+      ok++;
+    } catch (e) {
+      /* Прошлую цену не затираем: показать «нет цены» хуже, чем вчерашнюю. */
+    }
+  }
+  return ok;
+}
+
+/* Расчёт на даты, с коротким кэшем в KV — чтобы перебор дат гостем не
+   превращался в шквал запросов к Hostfully. */
+export async function quote(env, villa, checkIn, checkOut, guests) {
+  const link = linkOf(villa);
+  if (!link) return null;
+
+  const g = Math.max(1, Math.min(30, Number(guests) || 1));
+  const k = quoteKey(villa, checkIn, checkOut, g);
+
+  try {
+    const hit = JSON.parse(await env.THB_STATS.get(k) || 'null');
+    if (hit) return hit;
+  } catch (e) {}
+
+  const q = await fetchQuote(link.uid, checkIn, checkOut, g);
+  const base = await basePrice(env, villa);
+  const out = { villa, checkIn, checkOut, guests: g,
+                currency: base ? base.currency : '', ...q, ts: Date.now() };
+
+  try { await env.THB_STATS.put(k, JSON.stringify(out), { expirationTtl: QUOTE_TTL_SEC }); }
+  catch (e) {}
+
+  return out;
 }
