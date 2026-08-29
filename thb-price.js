@@ -207,7 +207,7 @@
     if (!VILLA) return;
 
     var range = picked();
-    if (!range) { lastKey = ''; showBase(); return; }
+    if (!range) { lastKey = ''; LAST = null; showBase(); return; }
 
     var g = guests();
     var k = range.from + '|' + range.to + '|' + g;
@@ -224,7 +224,8 @@
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (d) {
         if (k !== lastKey) return;             /* гость успел поменять даты */
-        if (!d || !d.ok) { showBase(); return; }
+        if (!d || !d.ok) { LAST = null; showBase(); return; }
+        LAST = d;
         showQuote(d);
       })
       .catch(function () { showBase(); });
@@ -234,6 +235,25 @@
     clearTimeout(timer);
     timer = setTimeout(refresh, 300);
   }
+
+  /* Последний расчёт наружу — форма заявки берёт отсюда виллу, даты и число
+     гостей, чтобы воркер посчитал сумму заново и положил её в Telegram.
+     Само число из браузера никуда не отправляем: его легко подделать. */
+  var LAST = null;
+
+  window.thbGetPrice = function () {
+    if (!VILLA) return null;
+    var r = picked();
+    return {
+      villa: VILLA,
+      from: r ? r.from : '',
+      to: r ? r.to : '',
+      guests: guests(),
+      base: BASE ? BASE.price : 0,
+      currency: BASE ? BASE.currency : '',
+      quote: LAST
+    };
+  };
 
   /* ---------- запуск ---------- */
   villaId().then(function (id) {

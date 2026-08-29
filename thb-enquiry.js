@@ -157,6 +157,18 @@
     var d = dates();
     return d.start && d.end ? Math.round((d.end - d.start) / 86400000) : 0;
   }
+  /* Даты для человека мы шлём словами ("Sat, 20 Sep 2026"), а воркеру нужен
+     машинный вид, чтобы пересчитать сумму в Hostfully. Календарь на странице
+     работает по местному времени, поэтому берём местные же поля даты. */
+  function isoOf(d) {
+    var p = function (n) { return String(n).padStart(2, '0'); };
+    return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate());
+  }
+  /* Вилла и число гостей так, как их видит thb-price.js. Нет его на странице —
+     просто уйдёт заявка без суммы, как раньше. */
+  function priceCtx() {
+    try { return (window.thbGetPrice && window.thbGetPrice()) || null; } catch (e) { return null; }
+  }
 
   /* ---------- build ---------- */
   var scrim, wrap, card, els = {};
@@ -305,11 +317,15 @@
     /* payload + validation */
     function payload() {
       var d = dates();
+      var pc = priceCtx();
       return {
         villa: villaName(),
+        villaId: pc ? pc.villa : '',
         url: villaUrl(),
         checkin: d.start ? fmt(d.start) : '',
         checkout: d.end ? fmt(d.end) : '',
+        from: d.start ? isoOf(d.start) : '',
+        to: d.end ? isoOf(d.end) : '',
         nights: nights(),
         adults: adults,
         children: kids,
