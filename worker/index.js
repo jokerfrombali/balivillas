@@ -139,6 +139,25 @@ async function handleLead(req, env) {
   } else if (d.guests) {
     rows.push(['Гостей', d.guests]);
   }
+  /* Сумма. Считаем сами, по вилле и датам из заявки — число из браузера не
+     берём вообще: его в консоли меняет кто угодно. Hostfully тут только
+     спрашиваем; заявку туда по-прежнему заводят руками. */
+  let priced = null;
+  if (d.villaId && /^\d{4}-\d{2}-\d{2}$/.test(String(d.from || '')) &&
+      /^\d{4}-\d{2}-\d{2}$/.test(String(d.to || '')) && d.to > d.from) {
+    try { priced = await quote(env, String(d.villaId), String(d.from), String(d.to), d.adults || d.guests || 1); }
+    catch (e) { /* цену не достали — заявка уходит без неё, это не повод её терять */ }
+  }
+  if (priced && priced.total) {
+    const cur = priced.currency || '';
+    const m = (v) => (cur ? cur + ' ' : '') + Math.round(Number(v) || 0)
+      .toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    if (priced.perNight) rows.push(['За ночь', m(priced.perNight)]);
+    if (priced.cleaningFee) rows.push(['Уборка', m(priced.cleaningFee)]);
+    if (priced.taxes) rows.push(['Налоги', m(priced.taxes)]);
+    rows.push(['Итого', m(priced.total)]);
+  }
+
   if (d.name) rows.push(['Имя', d.name]);
   if (d.email) rows.push(['Email', d.email]);
   if (d.phone) rows.push(['Телефон', d.phone]);
@@ -164,7 +183,14 @@ async function handleLead(req, env) {
   if (d.source === 'whatsapp') await bump(env, 'd:' + t.date + ':wa');
 
   /* keep the lead itself, not just the counter — the admin panel needs history */
-  await saveLead(env, no, Object.assign({}, d, { city: cf.city, country: cf.country }));
+  await saveLead(env, no, Object.assign({}, d, {
+    city: cf.city,
+    country: cf.country,
+    /* цену кладём посчитанную нами, а не присланную браузером */
+    price: priced ? { currency: priced.currency, perNight: priced.perNight,
+                      cleaningFee: priced.cleaningFee, taxes: priced.taxes,
+                      total: priced.total, nights: priced.nights } : null
+  }));
 
   return json({ ok: !!res.ok, ticket: no });
 }
