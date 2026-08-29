@@ -551,15 +551,19 @@
   else mount();
 })();
 
-/* Календарь занятости из Hostfully — отдельным файлом thb-avail.js.
- * Грузим только там, где на странице есть сам календарь, то есть на
- * страницах вилл. На остальных условие просто не срабатывает.
+/* Дополнения для страниц вилл, каждое отдельным файлом:
+ *   thb-avail.js  — занятые даты из Hostfully в календаре
+ *   thb-guests.js — починка выбора числа гостей в карточке брони
+ * Грузим только там, где соответствующий блок есть на странице.
  */
 (function () {
   function load() {
-    if (!document.getElementById('section-availability')) return;
+    if (document.getElementById('section-availability')) add('/thb-avail.js');
+    if (document.getElementById('guestSelector')) add('/thb-guests.js');
+  }
+  function add(src) {
     var s = document.createElement('script');
-    s.src = '/thb-avail.js';
+    s.src = src;
     s.defer = true;
     document.head.appendChild(s);
   }
