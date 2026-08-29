@@ -70,6 +70,14 @@
 
   function nightsWord(n) { return n === 1 ? 'night' : 'nights'; }
 
+  /* '2026-09-20' -> 'Sep 20', как подписаны поля дат в карточке */
+  function human(d) {
+    try {
+      return new Date(d + 'T00:00:00').toLocaleDateString('en-GB',
+        { day: 'numeric', month: 'short' });
+    } catch (e) { return d; }
+  }
+
   /* ---------- даты из разметки ---------- */
   function monthOf(title) {
     var parts = String(title || '').trim().split(/\s+/);
@@ -143,6 +151,42 @@
     h.querySelector('.thb-price-sub').textContent = sub || '';
   }
 
+  /* ---------- нижняя панель на телефоне ---------- */
+  /* На узком экране карточка брони уезжает вниз, и цену гость не видит —
+     как и на Airbnb, показываем её в липкой панели рядом с кнопкой.
+     Панель рисует сама страница, в ней уже стоит «Prices on request». */
+  var barSubDefault = null;
+
+  function barParts() {
+    var bar = document.getElementById('thbBookBar');
+    if (!bar) return null;
+    var box = bar.querySelector('.tbb-i');
+    if (!box) return null;
+    var top = box.querySelector('strong');
+    var sub = box.querySelector('span');
+    if (!top) return null;
+    if (barSubDefault === null && sub) barSubDefault = sub.textContent;
+    return { top: top, sub: sub };
+  }
+
+  var barWant = null;
+
+  function paintBar() {
+    if (!barWant) return;
+    var p = barParts();
+    if (!p) return;
+    p.top.textContent = barWant.amount;
+    if (p.sub) p.sub.textContent = barWant.sub || barSubDefault || '';
+  }
+
+  /* Панель монтируется страницей позже нашего первого запроса цены, поэтому
+     запомненное значение доносим ещё несколько раз, пока она не появится. */
+  function setBar(amount, sub) {
+    barWant = { amount: amount, sub: sub };
+    paintBar();
+    [200, 800, 2000, 4000].forEach(function (ms) { setTimeout(paintBar, ms); });
+  }
+
   function bill() {
     var cta = panel.querySelector('[data-slot="booking-panel-cta"]');
     if (!cta) return null;
@@ -168,6 +212,7 @@
     if (!BASE || !BASE.price) return;
     setHead(money(BASE.price), 'per night',
             BASE.minStay > 1 ? 'Minimum stay: ' + BASE.minStay + ' nights' : '');
+    setBar(money(BASE.price) + ' per night', null);
     clearBill();
   }
 
@@ -176,6 +221,8 @@
 
     if (q.minStay && n < q.minStay) {
       setHead(money(BASE ? BASE.price : q.perNight), 'per night', '');
+      setBar(money(BASE ? BASE.price : q.perNight) + ' per night',
+             'Minimum stay: ' + q.minStay + ' ' + nightsWord(q.minStay));
       var b0 = bill();
       if (b0) {
         b0.classList.remove('is-loading');
@@ -186,6 +233,8 @@
     }
 
     setHead(money(q.perNight), 'per night', '');
+    setBar(money(q.total) + ' total', n + ' ' + nightsWord(n) + ' · ' + human(q.checkIn) +
+           ' – ' + human(q.checkOut));
 
     var b = bill();
     if (!b) return;

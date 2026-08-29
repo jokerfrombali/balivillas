@@ -134,9 +134,19 @@
       if (cur > limit) num.textContent = String(limit);
       sync();
     });
+
+    /* Форма заявки читает отсюда и текущее число, и предел: у неё свои
+       счётчики взрослых и детей, и их сумма не должна перевалить вместимость.
+       Без этого она считала, что предела нет вовсе. */
+    window.thbGetGuests = function () {
+      return { count: parseInt(num.textContent, 10) || 1, max: limit || 0 };
+    };
   }
 
-  /* Вместимость берём оттуда же, откуда её берёт остальной сайт. */
+  /* Вместимость: сначала спрашиваем Hostfully — там она заведена вместе с
+     ценой и минимальным сроком, и именно её видит гость на Airbnb и Booking.
+     Не ответил — берём число из data/villas.json, как раньше. Своего числа
+     не придумываем: нет ни там, ни там — подписи и предела просто нет. */
   function villaMax() {
     var path = location.pathname.replace(/\/+$/, '');
     var i = path.indexOf('/villa/');
@@ -147,7 +157,15 @@
       .then(function (r) { return r.json(); })
       .then(function (list) {
         var hit = (list || []).filter(function (v) { return v.slug === slug; })[0];
-        return hit && hit.guests ? hit.guests : null;
+        if (!hit) return null;
+        var local = hit.guests || null;
+
+        return fetch('/api/price?villa=' + encodeURIComponent(hit.id))
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (d) {
+            return (d && d.ok && d.maxGuests) ? d.maxGuests : local;
+          })
+          .catch(function () { return local; });
       })
       .catch(function () { return null; });
   }
