@@ -172,6 +172,7 @@
 
   /* ---------- build ---------- */
   var scrim, wrap, card, els = {};
+  var repaintGuests = null;
 
   function build() {
     var st = document.createElement('style');
@@ -281,6 +282,18 @@
     if (cap) adults = Math.min(adults, cap);
 
     function paintGuests() {
+      /* Вместимость перечитываем на каждой перерисовке, а не один раз при
+         сборке листа: страница объявляет свой thbGetGuests с зашитыми
+         восемью гостями сразу, а честное число из Hostfully приходит позже,
+         когда thb-guests.js получит ответ. Из-за этого лист у виллы на
+         шесть человек пускал восьмерых. */
+      var real = maxGuests();
+      if (real) cap = real;
+      if (cap) {
+        if (adults > cap) adults = cap;
+        if (adults + kids > cap) kids = Math.max(0, cap - adults);
+      }
+
       els.adults.textContent = adults;
       els.kids.textContent = kids;
       els.cap.textContent = cap
@@ -295,6 +308,7 @@
     els.adultsPlus.onclick = function () { if (!cap || adults + kids < cap) { adults++; paintGuests(); } };
     els.kidsMinus.onclick = function () { kids = Math.max(0, kids - 1); paintGuests(); };
     els.kidsPlus.onclick = function () { if (!cap || adults + kids < cap) { kids++; paintGuests(); } };
+    repaintGuests = paintGuests;
     paintGuests();
 
     /* dates row -> the real calendar, then straight back here */
@@ -445,6 +459,7 @@
   function open() {
     if (!card) build();
     paintDates();
+    if (repaintGuests) repaintGuests();     /* вместимость могла уточниться */
     lastFocus = document.activeElement;
     scrim.hidden = false;
     wrap.hidden = false;
