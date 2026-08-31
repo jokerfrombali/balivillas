@@ -399,6 +399,23 @@ export async function basePrice(env, villa) {
   } catch (e) { return null; }
 }
 
+/* Все базовые цены разом — для карточек в каталоге: двенадцать отдельных
+   запросов с одной страницы ни к чему. Отдаём только то, что уже в зеркале;
+   вилла без объекта в Hostfully просто не попадёт в ответ, и карточка
+   останется с «On request», а не с выдуманной цифрой. */
+export async function allBasePrices(env) {
+  const out = {};
+  for (const link of LINKS) {
+    if (!link.uid) continue;
+    const rec = await basePrice(env, link.villa);
+    if (rec && rec.price) {
+      out[link.villa] = { price: rec.price, currency: rec.currency,
+                          minStay: rec.minStay, maxGuests: rec.maxGuests };
+    }
+  }
+  return out;
+}
+
 /* Обновление базовых цен — зовём из syncAll, тем же тактом, что и календарь. */
 export async function syncPrices(env) {
   let ok = 0;

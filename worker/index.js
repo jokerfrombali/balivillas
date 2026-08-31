@@ -14,6 +14,7 @@
  *   GET  /api/availability?villa=<id>&from=&to=
  *                     booked nights for one villa, read from the Hostfully
  *                     mirror in KV. Dates only — no guest data ever leaves here.
+ *   GET  /api/prices   all "from" rates at once, for the catalogue cards.
  *   GET  /api/price?villa=<id>
  *                     "from" nightly rate, currency, min stay, max guests —
  *                     from the same mirror, refreshed with the calendar.
@@ -31,7 +32,7 @@ import { handleAdmin } from './admin.js';
 import { saveLead } from './leads.js';
 import { opportunities } from './opportunities.js';
 import { takeSnapshot } from './snapshots.js';
-import { syncAll as hostfullySync, busyNights, basePrice, quote } from './hostfully.js';
+import { syncAll as hostfullySync, busyNights, basePrice, quote, allBasePrices } from './hostfully.js';
 
 const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
 
@@ -610,6 +611,15 @@ export default {
         });
       }
 
+      /* Все базовые цены разом — карточки в каталоге. */
+      if (url.pathname === '/api/prices') {
+        const data = await allBasePrices(env);
+        return new Response(JSON.stringify({ ok: true, prices: data }), {
+          headers: { 'content-type': 'application/json',
+                     'cache-control': 'public, max-age=900' }
+        });
+      }
+
       /* Точная цена на выбранные даты. Ходит в Hostfully, поэтому под лимитом
          и с коротким кэшем — перебор дат не должен их долбить. */
       if (url.pathname === '/api/quote') {
@@ -655,7 +665,23 @@ export default {
       return json({ ok: false, error: 'unknown endpoint' }, 404);
     }
 
-    return env.ASSETS.fetch(req);
+    /* Карточки вилл встречаются на главной, в каталоге, в подборках по районам
+       и в тринадцати языковых копиях главной — прописывать тег в каждый файл
+       значит забыть про один из них. Подшиваем скрипт цен здесь, на выдаче
+       HTML: он сам выходит, если карточек на странице нет. */
+    const res = await env.ASSETS.fetch(req);
+    const type = res.headers.get('content-type') || '';
+    if (type.indexOf('text/html') < 0) return res;
+
+    return new HTMLRewriter()
+      .on('body', {
+        element(el) {
+          /* закрывающий тег экранирован: так строка не обрывает разбор,
+             если файл когда-нибудь окажется внутри страницы */
+          el.append('<script src="/thb-cards.js" defer><\/script>', { html: true });
+        }
+      })
+      .transform(res);
   },
 
   async scheduled(event, env, ctx) {
