@@ -2,8 +2,18 @@
  *
  * Replaces the old Hostfully integration. That one scraped public .ics feeds
  * and a booking-widget JSONP endpoint; this one talks to a documented API with
- * a real token, so we get three things we never had: prices per date, minimum
- * stay per date, and the ability to push a booking back to the PMS.
+ * a real token, so we finally get what we never had: a price per date and a
+ * minimum stay per date.
+ *
+ * ТОЛЬКО ЧТЕНИЕ. Hostex — рабочая система агентства, и трогать её с сайта мы
+ * не имеем права: у токена thehostbali-site снято право Write, попытка записи
+ * отбивается самим Hostex («401 Not authorized for this action»). Заявка с
+ * сайта по-прежнему уходит в Telegram (POST /api/lead), бронь в Hostex заводят
+ * руками. Здесь допустимы только GET и POST /listings/calendar — последний,
+ * несмотря на метод, ничего не меняет, это запрос календаря.
+ *
+ * Если когда-нибудь заведём бронь прямо из сайта (POST /reservations), право
+ * Write придётся вернуть в кабинете осознанно — само по себе оно не появится.
  *
  * Token lives in the HOSTEX_TOKEN secret. Never in the repo, never in the
  * static assets: worker/ is excluded in .assetsignore.
