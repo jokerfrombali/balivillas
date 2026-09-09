@@ -477,9 +477,20 @@ async function writeAllPrices(env) {
   return Object.keys(byUrl).length;
 }
 
-/* Сводка цен для выдачи HTML. Одно чтение KV на запрос страницы. */
+/* Сводка цен для выдачи HTML. Одно чтение KV на запрос страницы.
+ *
+ * Если ключа нет — первый деплой, вытесненный ключ, только что добавленная
+ * сводка — собираем её на месте и кладём обратно. Иначе цена на сайте ждала бы
+ * ближайшего обхода по cron, то есть до получаса «On request» на всех
+ * карточках при живых ценах в KV. */
 export async function readAllPrices(env) {
   try {
+    const rec = JSON.parse(await env.THB_STATS.get(PRICES_ALL) || 'null');
+    if (rec && rec.byUrl) return rec.byUrl;
+  } catch (e) {}
+
+  try {
+    await writeAllPrices(env);
     const rec = JSON.parse(await env.THB_STATS.get(PRICES_ALL) || 'null');
     return rec && rec.byUrl ? rec.byUrl : null;
   } catch (e) { return null; }
