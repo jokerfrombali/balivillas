@@ -1,6 +1,6 @@
 # The Host Bali — full villa catalog
 
-12 private villas in Bali, all managed by The Host Bali. Direct booking on WhatsApp +62 857 4649 9697. Structured version: https://thehostbali.com/data/villas.json
+15 private villas in Bali, all managed by The Host Bali. Direct booking on WhatsApp +62 857 4649 9697. Structured version: https://thehostbali.com/data/villas.json
 
 ## Sanur — quiet beachside east coast, calm sea, good for families and long stays
 
@@ -96,6 +96,16 @@ A one-bedroom teak villa in a quiet Ungasan compound, with a private pool, a law
 
 Amenities: Private pool with tropical garden; Built from natural teak; Bedroom with a double bed; Bathroom with garden view and free-standing tub; Wi-Fi 200 Mbps; Dedicated workspace; Air conditioning; Kitchen with breakfast bar; Smart TV; Fridge, hob and microwave; Coffee maker; In-room safe; Scooter parking; Housekeeping 3x per week; Hair dryer and toiletries; About 10 minutes to the beach
 
+### Eco Tropical — 1BR Pool Villa in Ungasan
+Ungasan, Bali | 1BR/1BA | sleeps 2
+Rates: rates on request (WhatsApp, same-day quote)
+Page: https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/
+Photos: https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/
+
+A one-bedroom villa in Ungasan built from natural teak, with its own pool and lawn. King bed, an enclosed living room with a kitchenette, a freestanding bathtub by the greenery and a wide terrace. The fourth of the Mudra villas, next door to the other three.
+
+Amenities: Private pool with lawn; Built from natural teak; King bed with air conditioning; Freestanding bathtub; Enclosed living room with kitchenette; Smart TV; Wi-Fi 200 Mbps and wired internet; Fridge, hob and microwave; Coffee maker and kettle; Spacious covered terrace; Alfresco dining; Private entrance, single-level home; Free scooter parking; Housekeeping three times a week; About 10 minutes to the beach; Long stays welcome
+
 ## Umalas — quiet lanes between Seminyak and Canggu, cafés and coworking
 
 ### Premier Umalas 16 — Stylish 3BR Pool Townhouse
@@ -118,6 +128,16 @@ Premier Umalas 17 is a two-bedroom home with a private pool in the quiet lanes o
 
 Amenities: Private pool; Wi-Fi 200 Mbps; Two workspaces; Smart TV; Fully equipped kitchen; Air conditioning; Bedrooms with balconies; En-suite bathrooms
 
+### Villa Papat — 4BR Pool Villa in Umalas
+Umalas, Bali | 4BR/4BA | sleeps 10
+Rates: rates on request (WhatsApp, same-day quote)
+Page: https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/
+Photos: https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/
+
+A four-bedroom villa down a quiet lane in Umalas, for up to ten guests. Private pool along the lawn, an open living room facing the garden, four bedrooms each with its own bathroom, and a full kitchen — natural materials throughout and no shared walls with anyone.
+
+Amenities: Private pool with sun loungers; Four bedrooms, en-suite bathrooms; Tropical garden and lawn; Open living room facing the pool; Fully equipped kitchen; Alfresco dining and outdoor seating; Outdoor shower; Air conditioning throughout; Fast Wi-Fi and wired internet; Washing machine; Bathtub; Smart TV; Crib, high chair, children’s dinnerware; Safe and private entrance; Free parking in a gated community; Long stays welcome
+
 ## Canggu — surf, beach clubs, digital-nomad crowd
 
 ### Villa The Wave — Beachside 6BR Villa in Canggu
@@ -129,6 +149,16 @@ Photos: https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu
 Two-storey 341 m² villa built in 2023, a 2–5 minute walk from Berawa Beach in Canggu. Six bedrooms, each with a king bed, a TV and its own en-suite bathroom, plus a separate guest toilet. Open-plan living room with a Smart TV and fully equipped kitchen opening onto a large private pool through full-height glass doors; a wide first-floor balcony overlooks the garden. Fast Wi-Fi, a safe in every room and housekeeping three times a week are included. Sleeps up to 12 — suited to large families, groups of friends, weddings and company retreats.
 
 Amenities: Large private pool; 2–5 min walk to Berawa Beach; Six king bedrooms with en-suite bathrooms; Fast Wi-Fi; Dedicated workspace; Fully equipped kitchen; Smart TV in every bedroom; Air conditioning; Balcony with a view; Indoor and outdoor dining; Washing machine; Free parking on premises; Safe in every room; Private entrance; Housekeeping 3x/week; Suitable for groups and events
+
+### Leonardo — 9BR Resort Villa in Pererenan
+Canggu, Bali | 9BR/9BA | sleeps 18
+Rates: rates on request (WhatsApp, same-day quote)
+Page: https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/
+Photos: https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/gallery/
+
+A nine-bedroom designer villa in Pererenan for up to 18 guests, a ten-minute walk from the beach. Private pool, a lawn running down to a mountain river, home cinema, piano, BBQ and a full kitchen — room enough for two families, a wedding party or a company offsite.
+
+Amenities: Private pool with sun loungers; Nine bedrooms, en-suite bathrooms; Garden on a mountain river; Home cinema; Piano; BBQ area and alfresco dining; Fully equipped kitchen with oven; Air conditioning throughout; Fast Wi-Fi and wired internet; Washer and dryer; Free parking on site; Ten-minute walk to Pererenan Beach
 
 ## How to book
 Message the team on WhatsApp (+62 857 4649 9697) with the villa, dates and number of guests. Reply usually within ~15 minutes between 8:00 and 22:00 WITA. Direct booking carries no OTA commission; nothing is charged on the site.

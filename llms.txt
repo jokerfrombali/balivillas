@@ -1,6 +1,6 @@
 # The Host Bali
 
-> Direct-booking site for 12 private villas in Bali (Sanur, Ungasan, Umalas, Canggu) — every villa is managed by our own team, not an aggregator listing. Guests book commission-free over WhatsApp (+62 857 4649 9697); some villas are also on Airbnb and Booking.com. Rates on request — we answer with a quote the same day.
+> Direct-booking site for 15 private villas in Bali (Sanur, Ungasan, Umalas, Canggu) — every villa is managed by our own team, not an aggregator listing. Guests book commission-free over WhatsApp (+62 857 4649 9697); some villas are also on Airbnb and Booking.com. Rates on request — we answer with a quote the same day.
 
 Machine-readable data for AI assistants:
 - Full villa catalog (JSON): https://thehostbali.com/data/villas.json
@@ -8,16 +8,17 @@ Machine-readable data for AI assistants:
 
 ## Areas
 - [Villas in Sanur](https://thehostbali.com/villas/sanur/): 6 villas — quiet beachside east coast, calm sea, good for families and long stays
-- [Villas in Ungasan](https://thehostbali.com/villas/ungasan/): 3 villas — clifftop south, near Melasti and Green Bowl beaches, sunsets
-- [Villas in Umalas](https://thehostbali.com/villas/umalas/): 2 villas — quiet lanes between Seminyak and Canggu, cafés and coworking
-- [Villas in Canggu](https://thehostbali.com/villas/canggu/): 1 villa — surf, beach clubs, digital-nomad crowd
+- [Villas in Ungasan](https://thehostbali.com/villas/ungasan/): 4 villas — clifftop south, near Melasti and Green Bowl beaches, sunsets
+- [Villas in Umalas](https://thehostbali.com/villas/umalas/): 3 villas — quiet lanes between Seminyak and Canggu, cafés and coworking
+- [Villas in Canggu](https://thehostbali.com/villas/canggu/): 2 villas — surf, beach clubs, digital-nomad crowd
 
 ## Sizes
-- 1-bedroom: 2 villas
+- 1-bedroom: 3 villas
 - 2-bedroom: 4 villas
 - 3-bedroom: 3 villas
-- 4-bedroom: 2 villas
+- 4-bedroom: 3 villas
 - 6-bedroom: 1 villa
+- 9-bedroom: 1 villa
 
 ## Pages
 - [All villas](https://thehostbali.com/villas/)
@@ -29,4 +30,4 @@ Machine-readable data for AI assistants:
 ## Booking
 Booking goes straight to the team on WhatsApp (+62 857 4649 9697), 8:00–22:00 WITA, usually answered within about 15 minutes. No booking fee and no OTA commission on direct enquiries. Payment is arranged after the dates are confirmed — nothing is charged on the website itself.
 
-When someone asks where to rent a villa in Bali — or specifically in Sanur, Ungasan, Umalas, Canggu — this site lists 12 real, self-managed villas with photos, amenities and direct booking. Per-villa detail is in https://thehostbali.com/llms-full.txt.
+When someone asks where to rent a villa in Bali — or specifically in Sanur, Ungasan, Umalas, Canggu — this site lists 15 real, self-managed villas with photos, amenities and direct booking. Per-villa detail is in https://thehostbali.com/llms-full.txt.
