@@ -707,7 +707,7 @@ export default {
                     /^\/villa\/[^/]+\/$/.test(url.pathname);
 
     const scripts = isVilla
-      ? ['/thb-price.js', '/thb-avail.js', '/thb-guests.js', '/thb-map.js', '/thb-gallery.js']
+      ? ['/thb-price.js', '/thb-avail.js', '/thb-guests.js', '/thb-map.js', '/thb-gallery.js', '/thb-readmore.js']
       : ['/thb-cards.js'];   /* сам выходит, если карточек на странице нет */
 
     /* Переключатель валют нужен везде, где есть цены: и на вилле, и в каталоге,

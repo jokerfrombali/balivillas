@@ -295,8 +295,17 @@ async function fetchReservations(env, from, to) {
   return out;
 }
 
-/* Сколько ночей закрыто на каналах. Только счётчик и только для панели: это
-   не занятость, а сигнал «календарь на канале не открыт так далеко». */
+/* Недоступные даты по версии Hostex.
+ *
+ * Здесь смешаны две разные вещи: настоящие блокировки (владелец закрыл даты,
+ * ремонт, бронь из чужого источника) и «хвост» — даты, до которых канал просто
+ * не открыл продажи. Хвост видно по тому, что он тянется непрерывно до конца
+ * горизонта: у Black Pool так закрыто всё с октября, у Tanjung Sari 3 — почти
+ * весь год. Его отбрасываем, остальное считаем занятым.
+ *
+ * Без этого сайт показывал свободными реально закрытые даты: у Premier Umalas
+ * 16 девять ночей сентября, у Mudra 2 — тринадцать. Броней на них нет, и по
+ * /reservations они не приходят. */
 async function fetchClosed(env, from, to) {
   const ids = linked().map((l) => l.pid).join(',');
   const d = await api(env, '/availabilities?property_ids=' + ids +
@@ -304,9 +313,24 @@ async function fetchClosed(env, from, to) {
 
   const out = {};
   for (const p of (d.properties || [])) {
-    out[p.id] = (p.availabilities || [])
+    const days = (p.availabilities || []).map((a) => a.date);
+    const shut = new Set((p.availabilities || [])
       .filter((a) => a.available === false)
-      .map((a) => a.date);
+      .map((a) => a.date));
+
+    /* Ищем начало хвоста: непрерывную полосу закрытых дат, упирающуюся в конец
+       горизонта. Всё, что до неё, — настоящие блокировки. */
+    let tail = null;
+    for (let i = days.length - 1; i >= 0; i--) {
+      if (!shut.has(days[i])) break;
+      tail = days[i];
+    }
+
+    out[p.id] = {
+      blocked: [...shut].filter((d0) => tail === null || d0 < tail).sort(),
+      closedTail: tail,
+      closedCount: shut.size
+    };
   }
   return out;
 }
@@ -384,16 +408,32 @@ export async function syncAll(env, force) {
     const prev = await readMirror(env, link.villa);
     const nights = busy ? (busy[link.pid] || []) : null;
 
-    const shut = (closed[link.pid] || []).filter((d) => !(nights || []).includes(d));
+    const shut = closed[link.pid] || { blocked: [], closedTail: null, closedCount: 0 };
 
-    const rec = nights
+    /* Гостю всё равно, бронь это или блокировка: и то и другое — «нельзя».
+       Поэтому в календарь идут обе группы, а порознь они видны только в
+       панели, чтобы было понятно, откуда что взялось. */
+    const all = nights
+      ? [...new Set(nights.concat(shut.blocked))].sort()
+      : null;
+
+    /* Для панели считаем именно блокировки, без пересечения с бронями: иначе
+       выходит «104 брони и 105 блокировок» на одну и ту же занятость. */
+    const onlyBlocked = nights
+      ? shut.blocked.filter((d) => !nights.includes(d)).length
+      : 0;
+
+    const rec = all
       ? { villa: link.villa, pid: link.pid, ok: true, error: null,
-          nights, closed: shut.length, closedFrom: shut.length ? shut[0] : null,
+          nights: all, booked: nights.length, blocked: onlyBlocked,
+          closedTail: shut.closedTail, closed: shut.closedCount,
           from, to, ts: Date.now(), lastOkTs: Date.now() }
       : { villa: link.villa, pid: link.pid, ok: false, error: fail || 'no_data',
           nights: prev ? prev.nights || [] : [],
+          booked: prev ? prev.booked || 0 : 0,
+          blocked: prev ? prev.blocked || 0 : 0,
+          closedTail: prev ? prev.closedTail || null : null,
           closed: prev ? prev.closed || 0 : 0,
-          closedFrom: prev ? prev.closedFrom || null : null,
           from, to, ts: Date.now(), lastOkTs: prev ? prev.lastOkTs || 0 : 0 };
 
     await env.THB_STATS.put(calKey(link.villa), JSON.stringify(rec));
@@ -678,8 +718,10 @@ export async function status(env) {
       checkedAt: rec ? rec.ts : 0,
       lastOkTs: rec ? rec.lastOkTs || 0 : 0,
       busyNights90: rec ? (rec.nights || []).filter((d) => d >= from && d < to).length : 0,
+      booked: rec ? rec.booked || 0 : 0,
+      blocked: rec ? rec.blocked || 0 : 0,
       closed: rec ? rec.closed || 0 : 0,
-      closedFrom: rec ? rec.closedFrom || null : null,
+      closedTail: rec ? rec.closedTail || null : null,
       price: price && price.ok ? price.price : 0,
       currency: price ? price.currency : '',
       channel: c ? c.channel_type : null,
