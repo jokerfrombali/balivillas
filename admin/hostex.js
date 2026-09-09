@@ -172,22 +172,34 @@
     villaNames().then(function (names) {
       var rows = d.links.map(function (l) {
         var name = names[l.villa] || l.villa;
+        /* Занятость складывается из двух разных вещей, и в панели их лучше
+           видеть порознь: бронь — это деньги, блокировка — это решение
+           владельца или чужой календарь. На сайте они всё равно сливаются в
+           «занято», но при разборе «почему тут не продаётся» разница важна. */
         var right = l.state === 'off'
           ? '<span class="small">объект в Hostex не назначен</span>'
           : '<span class="small">' +
             plural(l.busyNights90, 'занятая ночь', 'занятые ночи', 'занятых ночей') +
             ' за 90 дней' +
+            (l.booked || l.blocked
+              ? ' (бронь ' + (l.booked || 0) + ' · закрыто ' + (l.blocked || 0) + ')'
+              : '') +
             (l.price ? ' · от ' + l.currency + ' ' +
                        String(l.price).replace(/\B(?=(\d{3})+(?!\d))/g, ',') : '') +
-            '</span>';
+            '</span>' +
+            (l.closedTail
+              ? '<span class="small" style="color:var(--warn,#a8761c)">канал закрыт с ' +
+                esc(String(l.closedTail)) + ' — продаём только напрямую</span>'
+              : '');
 
         var left = l.linked
           ? '<b>' + esc(l.hx) + '</b>' + (l.state === 'down' && l.error
               ? '<span class="small" style="color:var(--bad)">' + esc(l.error) + '</span>'
               : '<span class="small">проверено ' + ago(l.checkedAt) +
                 (l.channel ? ' · цена с ' + esc(l.channel) : '') + '</span>')
-          : '<b class="hfnone">объект не выбран</b>' +
-            '<span class="small">назначается в worker/hostex.js</span>';
+          : '<b class="hfnone">объекта в Hostex нет</b>' +
+            '<span class="small">листинг на канале есть, объект не заведён; ' +
+            'после создания — прописать id в worker/hostex.js</span>';
 
         return '<div class="hfrow ' + (l.state === 'off' ? 'off' : '') + '">' +
             '<div class="hfside">' + left + '</div>' +
