@@ -123,28 +123,48 @@
 
   /* ---------- переключатель в шапке ---------- */
 
+  /* Кнопка живёт в шапке рядом с переключателем языка и должна выглядеть так
+     же тихо: без рамки и белого фона, только код валюты и стрелка. Выделяем её
+     мягкой заливкой лишь тогда, когда гость сам выбрал валюту, отличную от
+     рупии, — тогда подсветка несёт смысл, а не просто шумит.
+
+     На узких экранах шапка и так впритык: логотип, язык, валюта, сердце и
+     бургер. Поэтому там кнопка ужимается, а стрелка убирается вовсе. */
   function css() {
     var st = document.createElement('style');
     st.textContent =
       '#thbCurBox{position:relative;display:inline-flex;align-items:center;flex-shrink:0}' +
-      '#thbCurBtn{display:inline-flex;align-items:center;gap:5px;height:40px;padding:0 12px;' +
-        'border:1px solid rgba(10,10,10,.14);background:#fff;border-radius:999px;cursor:pointer;' +
-        'font:600 13px/1 Inter,system-ui,sans-serif;color:#0a0a0a}' +
-      '#thbCurBtn:hover{background:#faf9f7}' +
-      '#thbCurBtn svg{width:13px;height:13px;opacity:.5}' +
-      '#thbCurMenu{position:absolute;top:46px;right:0;z-index:1200;width:250px;max-height:60vh;' +
-        'overflow:auto;background:#fff;border:1px solid #e6e3dc;border-radius:16px;' +
+      '#thbCurBtn{display:inline-flex;align-items:center;gap:5px;height:40px;padding:0 10px;' +
+        'border:0;background:transparent;border-radius:999px;cursor:pointer;' +
+        'font:500 14px/1 Inter,system-ui,sans-serif;color:#0a0a0a;' +
+        'transition:background .18s}' +
+      '#thbCurBtn svg{width:12px;height:12px;opacity:.45;flex-shrink:0}' +
+      '@media(hover:hover){#thbCurBtn:hover{background:rgba(10,10,10,.055)}}' +
+      '#thbCurBox[data-picked="1"] #thbCurBtn{background:rgba(10,10,10,.05);font-weight:600}' +
+
+      '#thbCurMenu{position:absolute;top:46px;right:0;z-index:1200;width:250px;' +
+        'max-width:calc(100vw - 24px);max-height:min(62vh,420px);overflow:auto;' +
+        'background:#fff;border:1px solid #e6e3dc;border-radius:16px;' +
         'box-shadow:0 18px 44px rgba(0,0,0,.16);padding:6px;display:none}' +
       '#thbCurMenu.open{display:block}' +
       '#thbCurMenu button{display:flex;width:100%;align-items:center;gap:10px;padding:9px 11px;' +
         'border:0;background:transparent;border-radius:10px;cursor:pointer;text-align:left;' +
         'font:400 13.5px/1.25 Inter,system-ui,sans-serif;color:#0a0a0a}' +
-      '#thbCurMenu button:hover{background:#f4f1ea}' +
+      '@media(hover:hover){#thbCurMenu button:hover{background:#f4f1ea}}' +
       '#thbCurMenu button[aria-current="true"]{background:#0a0a0a;color:#fff}' +
       '#thbCurMenu b{font-weight:700;min-width:38px}' +
       '#thbCurMenu i{font-style:normal;opacity:.6;margin-left:auto}' +
       '#thbCurNote{padding:8px 11px 6px;font:400 11.5px/1.45 Inter,system-ui,sans-serif;color:#6b6b66}' +
-      '@media(max-width:520px){#thbCurBtn{padding:0 10px;height:36px}#thbCurMenu{width:220px}}';
+
+      '#thbCurRow{display:flex;align-items:center;justify-content:space-between;gap:12px;' +
+        'padding:13px 4px;border-top:1px solid rgba(10,10,10,.08);margin-top:6px;' +
+        'font:500 15px/1.2 Inter,system-ui,sans-serif;color:#0a0a0a}' +
+      '#thbCurRow select{border:1px solid rgba(10,10,10,.14);background:#fff;' +
+        'border-radius:999px;padding:8px 12px;font:600 14px/1 Inter,system-ui,sans-serif;' +
+        'color:#0a0a0a;cursor:pointer}' +
+      '@media(max-width:640px){#thbCurBtn{height:36px;padding:0 7px;font-size:13px;gap:4px}}' +
+      '@media(max-width:430px){#thbCurBtn{padding:0 5px;font-size:12.5px}' +
+        '#thbCurBtn svg{display:none}}';
     document.head.appendChild(st);
   }
 
@@ -195,6 +215,8 @@
     box.appendChild(list);
     anchor.parentElement.insertBefore(box, anchor);
 
+    mobileRow();
+
     document.addEventListener('click', function (e) {
       if (box && !box.contains(e.target)) close();
     });
@@ -202,6 +224,36 @@
       if (e.key === 'Escape') close();
     });
     return true;
+  }
+
+  /* В каталоге и подборках шапка на телефоне прячет и язык, и сердце — остаётся
+     логотип с бургером. Значит выбор валюты должен быть и внутри меню, иначе на
+     мобильном до него не добраться. Здесь обычный select: родной барабан
+     телефона удобнее любого своего списка. */
+  var sel = null;
+  function mobileRow() {
+    var menu = document.getElementById('thbMobileMenu');
+    if (!menu || document.getElementById('thbCurRow')) return;
+
+    var row = document.createElement('div');
+    row.id = 'thbCurRow';
+
+    var label = document.createElement('span');
+    label.textContent = 'Currency';
+
+    sel = document.createElement('select');
+    sel.setAttribute('aria-label', 'Currency');
+    CUR.forEach(function (x) {
+      var o = document.createElement('option');
+      o.value = x.c;
+      o.textContent = x.c + ' · ' + x.s;
+      sel.appendChild(o);
+    });
+    sel.addEventListener('change', function () { pick(sel.value); });
+
+    row.appendChild(label);
+    row.appendChild(sel);
+    menu.appendChild(row);
   }
 
   function open() {
@@ -217,6 +269,8 @@
   function paintButton() {
     if (!box) return;
     box.querySelector('[data-cur-code]').textContent = cur;
+    box.setAttribute('data-picked', cur !== 'IDR' ? '1' : '0');
+    if (sel && sel.value !== cur) sel.value = cur;
     [].forEach.call(list.querySelectorAll('button[data-cur]'), function (b) {
       b.setAttribute('aria-current', b.getAttribute('data-cur') === cur ? 'true' : 'false');
     });
