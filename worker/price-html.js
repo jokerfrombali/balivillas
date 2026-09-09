@@ -1,0 +1,90 @@
+/* Цена в самом HTML, а не только в браузере.
+ *
+ * Раньше в разметке везде стояло «On request», а настоящую цену подставлял
+ * thb-cards.js уже на странице. Для гостя это работало, а для машин — нет:
+ * Googlebot JavaScript выполняет, а GPTBot, ClaudeBot, PerplexityBot и CCBot
+ * забирают HTML как есть и видели «цена по запросу». То есть на вопрос
+ * «сколько стоит вилла в Сануре» у ассистента не было нашей цифры вообще, при
+ * том что у Airbnb и Booking она есть.
+ *
+ * Поэтому цену вшиваем на выдаче через HTMLRewriter: одно чтение KV на запрос,
+ * дальше поток переписывается на лету, без буферизации страницы.
+ *
+ * Цифра — минимальная цена за ночь по свободным ночам ближайших 90 дней из
+ * Hostex (см. worker/hostex.js). Своей арифметики тут нет.
+ *
+ * thb-cards.js и thb-price.js никуда не делись: они по-прежнему уточняют цену
+ * на выбранные даты. Числа те же, просто теперь первая отрисовка не пустая.
+ */
+
+import { readAllPrices } from './hostex.js';
+
+/* «4800000» -> «4,800,000»: так же, как печатает Hostex в кабинете. */
+function money(cur, n) {
+  return cur + ' ' + String(Math.round(Number(n) || 0)).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+/* Адрес виллы из onclick карточки каталога: window.location='/villa/...'. */
+function urlFromOnclick(v) {
+  const m = /window\.location='([^']+)'/.exec(v || '');
+  return m ? m[1].split('?')[0] : null;
+}
+
+const norm = (u) => (u || '').split('?')[0].split('#')[0];
+
+export async function injectPrices(res, env, pathname) {
+  const byUrl = await readAllPrices(env);
+  if (!byUrl) return res;
+
+  /* Состояние обхода: HTMLRewriter идёт по документу последовательно, поэтому
+     достаточно помнить, внутри какой карточки мы сейчас. */
+  let card = null;
+
+  const own = byUrl[norm(pathname)] || null;   /* страница самой виллы */
+
+  const setCard = (url) => { card = byUrl[norm(url)] || null; };
+
+  const cardText = (t) => {
+    if (!card) return;
+    if (t.text.indexOf('On request') < 0) return;
+    t.replace(money(card.currency, card.price) + ' ', { html: false });
+  };
+
+  return new HTMLRewriter()
+    /* карточки главной: адрес в href */
+    .on('a.thb-acard', { element(el) { setCard(el.getAttribute('href')); } })
+    .on('a.thb-acard p.p', { text: cardText })
+
+    /* карточки каталога и подборок по районам: адрес в onclick */
+    .on('div.prop-card', { element(el) { setCard(urlFromOnclick(el.getAttribute('onclick'))); } })
+    .on('div.prop-card span', { text: cardText })
+
+    /* страница виллы: нижняя панель и заголовок карточки брони */
+    .on('#thbBookBar strong', {
+      text(t) {
+        if (!own || t.text.indexOf('Prices on request') < 0) return;
+        t.replace('from ' + money(own.currency, own.price) + ' per night', { html: false });
+      }
+    })
+    .on('[data-slot="booking-panel-header"]', {
+      text(t) {
+        if (!own || t.text.indexOf('Select dates for pricing') < 0) return;
+        t.replace('from ' + money(own.currency, own.price) + ' per night', { html: false });
+      }
+    })
+    .on('#selectedDateRange', {
+      text(t) {
+        if (!own || t.text.indexOf('Select dates for pricing') < 0) return;
+        t.replace('from ' + money(own.currency, own.price) + ' per night' +
+                  (own.minStay > 1 ? ' · minimum stay ' + own.minStay + ' nights' : ''),
+                  { html: false });
+      }
+    })
+    .on('button[aria-label="Select dates"] span.text-secondary', {
+      text(t) {
+        if (!own || t.text.indexOf('Prices on request') < 0) return;
+        t.replace('from ' + money(own.currency, own.price) + ' per night', { html: false });
+      }
+    })
+    .transform(res);
+}

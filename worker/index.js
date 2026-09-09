@@ -33,6 +33,7 @@ import { saveLead } from './leads.js';
 import { opportunities } from './opportunities.js';
 import { takeSnapshot } from './snapshots.js';
 import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices } from './hostex.js';
+import { injectPrices } from './price-html.js';
 
 const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
 
@@ -673,7 +674,7 @@ export default {
     const type = res.headers.get('content-type') || '';
     if (type.indexOf('text/html') < 0) return res;
 
-    return new HTMLRewriter()
+    const withScript = new HTMLRewriter()
       .on('body', {
         element(el) {
           /* закрывающий тег экранирован: так строка не обрывает разбор,
@@ -682,6 +683,12 @@ export default {
         }
       })
       .transform(res);
+
+    /* И сразу вшиваем цену в разметку вместо «On request». Скрипт выше уточнит
+       её на выбранные даты, но первая отрисовка — и всё, что видит краулер без
+       JavaScript, — теперь с цифрой. */
+    try { return await injectPrices(withScript, env, url.pathname); }
+    catch (e) { return withScript; }
   },
 
   async scheduled(event, env, ctx) {

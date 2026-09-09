@@ -139,6 +139,13 @@ const quoteKey = (villa, a, b) => 'hx:quote:' + villa + ':' + a + ':' + b;
 const CHANNELS = 'hx:channels';
 const META = 'hx:meta';
 
+/* Сводка «адрес страницы -> цена от», одним ключом.
+ *
+ * Нужна затем, что цену мы подставляем прямо в HTML на выдаче (см.
+ * worker/price-html.js): читать на каждый показ страницы по ключу на виллу —
+ * это тринадцать чтений KV на запрос, а так одно. */
+const PRICES_ALL = 'hx:prices:all';
+
 /* Точный расчёт держим 15 минут: PriceLabs правит ставки в течение дня, но
    перебор дат гостем не должен превращаться в шквал запросов к Hostex. */
 const QUOTE_TTL_SEC = 900;
@@ -429,6 +436,11 @@ export async function syncAll(env, force) {
     if (min) okPrice++;
   }
 
+  /* Сводка для подстановки цены в HTML. Адреса страниц берём из
+     data/villas.json — того же файла, что читает сайт, чтобы slug не пришлось
+     держать в двух местах и рассинхронизировать. */
+  try { await writeAllPrices(env); } catch (e) { /* карточки просто останутся без цены */ }
+
   meta = {
     ts: Date.now(),
     everyMin: SYNC_EVERY_MIN,
@@ -440,6 +452,37 @@ export async function syncAll(env, force) {
   await env.THB_STATS.put(META, JSON.stringify(meta));
 
   return { skipped: false, meta };
+}
+
+async function writeAllPrices(env) {
+  const res = await env.ASSETS.fetch(new Request('https://thehostbali.com/data/villas.json'));
+  if (!res.ok) throw new Error('villas_' + res.status);
+  const list = await res.json();
+
+  const urlOf = {};
+  for (const v of (list || [])) if (v && v.id && v.url) urlOf[v.id] = v.url;
+
+  const byUrl = {};
+  for (const link of linked()) {
+    const rec = await readPrices(env, link.villa);
+    if (!rec || !rec.ok || !rec.price || !urlOf[link.villa]) continue;
+    byUrl[urlOf[link.villa]] = {
+      price: rec.price,
+      currency: rec.currency,
+      minStay: rec.minStay
+    };
+  }
+
+  await env.THB_STATS.put(PRICES_ALL, JSON.stringify({ ts: Date.now(), byUrl }));
+  return Object.keys(byUrl).length;
+}
+
+/* Сводка цен для выдачи HTML. Одно чтение KV на запрос страницы. */
+export async function readAllPrices(env) {
+  try {
+    const rec = JSON.parse(await env.THB_STATS.get(PRICES_ALL) || 'null');
+    return rec && rec.byUrl ? rec.byUrl : null;
+  } catch (e) { return null; }
 }
 
 /* ---------- reads ---------- */
