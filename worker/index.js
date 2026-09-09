@@ -666,29 +666,50 @@ export default {
       return json({ ok: false, error: 'unknown endpoint' }, 404);
     }
 
-    /* Карточки вилл встречаются на главной, в каталоге, в подборках по районам
-       и в тринадцати языковых копиях главной — прописывать тег в каждый файл
-       значит забыть про один из них. Подшиваем скрипт цен здесь, на выдаче
-       HTML: он сам выходит, если карточек на странице нет. */
+    /* Скрипты цен, календаря, гостей и карты не прописаны ни в одном HTML —
+       страниц вилл двадцать с лишним, и тег в каждой пришлось бы держать
+       руками. Подшиваем их здесь, на выдаче.
+
+       Чтобы этот код вообще вызывался на страницах, в wrangler.jsonc стоит
+       assets.run_worker_first: без него запрос, попавший в файл, отдаётся
+       напрямую мимо воркера — и подшивка не срабатывала вовсе. */
     const res = await env.ASSETS.fetch(req);
     const type = res.headers.get('content-type') || '';
     if (type.indexOf('text/html') < 0) return res;
 
-    const withScript = new HTMLRewriter()
+    /* Страница виллы, но не её фототур: у галереи своя вёрстка и ничего из
+       этого ей не нужно. */
+    const isVilla = /^\/villa\/[^/]+\/[^/]+\/$/.test(url.pathname) ||
+                    /^\/villa\/[^/]+\/$/.test(url.pathname);
+
+    const scripts = isVilla
+      ? ['/thb-price.js', '/thb-avail.js', '/thb-guests.js', '/thb-map.js']
+      : ['/thb-cards.js'];   /* сам выходит, если карточек на странице нет */
+
+    const withScripts = new HTMLRewriter()
       .on('body', {
         element(el) {
           /* закрывающий тег экранирован: так строка не обрывает разбор,
              если файл когда-нибудь окажется внутри страницы */
-          el.append('<script src="/thb-cards.js" defer><\/script>', { html: true });
+          for (const src of scripts) {
+            el.append('<script src="' + src + '" defer><\/script>', { html: true });
+          }
         }
       })
       .transform(res);
 
-    /* И сразу вшиваем цену в разметку вместо «On request». Скрипт выше уточнит
+    /* И сразу вшиваем цену в разметку вместо «On request». Скрипты выше уточнят
        её на выбранные даты, но первая отрисовка — и всё, что видит краулер без
        JavaScript, — теперь с цифрой. */
-    try { return await injectPrices(withScript, env, url.pathname); }
-    catch (e) { return withScript; }
+    let out = withScripts;
+    try { out = await injectPrices(withScripts, env, url.pathname); }
+    catch (e) { /* цена не критична, страницу отдаём как есть */ }
+
+    /* Цену двигает PriceLabs, поэтому страницу нельзя держать в кэше края
+       сутками: минута — компромисс между свежестью цифры и нагрузкой. */
+    const headers = new Headers(out.headers);
+    headers.set('cache-control', 'public, max-age=60, must-revalidate');
+    return new Response(out.body, { status: out.status, headers });
   },
 
   async scheduled(event, env, ctx) {

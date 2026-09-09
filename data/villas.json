@@ -380,7 +380,9 @@
       "/public-objects/images/premier-umalas-17-4.jpg",
       "/public-objects/images/premier-umalas-17-5.jpg"
     ],
-    "description": "Premier Umalas 17 is a two-bedroom home with a private pool in the quiet lanes of Umalas, the residential strip of small roads and rice fields between Canggu and Seminyak. Both bedrooms are en-suite and have their own balconies. Wi-Fi runs at 200 Mbps and the house has two separate workspaces, which makes it work for a couple staying for months as much as for a short holiday. Fully equipped kitchen, air conditioning and a Smart TV. Berawa and Canggu beaches are about 10 minutes away by bike. Sleeps 4."
+    "description": "Premier Umalas 17 is a two-bedroom home with a private pool in the quiet lanes of Umalas, the residential strip of small roads and rice fields between Canggu and Seminyak. Both bedrooms are en-suite and have their own balconies. Wi-Fi runs at 200 Mbps and the house has two separate workspaces, which makes it work for a couple staying for months as much as for a short holiday. Fully equipped kitchen, air conditioning and a Smart TV. Berawa and Canggu beaches are about 10 minutes away by bike. Sleeps 4.",
+    "url": "/villa/premier-umalas-17-2br-pool-home/",
+    "galleryUrl": "/villa/premier-umalas-17-2br-pool-home/gallery/"
   },
   {
     "id": "own-villa-black-pool",
@@ -649,7 +651,9 @@
       "/public-objects/images/villa-black-pool-3.jpg",
       "/public-objects/images/villa-black-pool-4.jpg",
       "/public-objects/images/villa-black-pool-5.jpg"
-    ]
+    ],
+    "url": "/villa/sanur/villa-black-pool-4br-sanur/",
+    "galleryUrl": "/villa/sanur/villa-black-pool-4br-sanur/gallery/"
   },
   {
     "id": "own-sanur-2br-townhouse",
@@ -872,7 +876,9 @@
       "monthly": false,
       "newOnSite": true,
       "luxury": false
-    }
+    },
+    "url": "/villa/sanur/stylish-2br-pool-townhouse-sanur/",
+    "galleryUrl": "/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"
   },
   {
     "id": "own-sanur-modern-2br",
@@ -1087,7 +1093,9 @@
       "monthly": false,
       "newOnSite": true,
       "luxury": false
-    }
+    },
+    "url": "/villa/sanur/modern-2br-pool-townhouse-sanur/",
+    "galleryUrl": "/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"
   },
   {
     "id": "own-lucky-lily-sanur-3br",
@@ -1322,7 +1330,9 @@
       "monthly": false,
       "newOnSite": true,
       "luxury": false
-    }
+    },
+    "url": "/villa/sanur/lucky-lily-3br-pool-villa-sanur/",
+    "galleryUrl": "/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"
   },
   {
     "id": "own-villa-kesari-4-3br-pool-villa-sanur",

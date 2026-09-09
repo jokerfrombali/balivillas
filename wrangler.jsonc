@@ -11,7 +11,37 @@
     "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
     // unknown paths get /404.html with a real 404 status
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+
+    // Без этого запрос, попавший в файл, отдаётся напрямую и воркер не
+    // вызывается вовсе. Из-за этого не работала подшивка скриптов цен и
+    // календаря: страницы вилл и каталог никогда её не получали.
+    // Список — только страницы; картинки, шрифты и статика идут мимо воркера,
+    // как и раньше, иначе каждый файл стоил бы вызова.
+    "run_worker_first": [
+      "/*",
+      "!/public-objects/*",
+      "!/images/*",
+      "!/fonts/*",
+      "!/brand/*",
+      "!/villa/assets/*",
+      "!/*.js",
+      "!/*.css",
+      "!/*.json",
+      "!/*.xml",
+      "!/*.txt",
+      "!/*.map",
+      "!/*.jpg",
+      "!/*.jpeg",
+      "!/*.png",
+      "!/*.avif",
+      "!/*.webp",
+      "!/*.gif",
+      "!/*.svg",
+      "!/*.ico",
+      "!/*.woff2",
+      "!/*.mp4"
+    ]
   },
 
   // ticket counter + daily view counters

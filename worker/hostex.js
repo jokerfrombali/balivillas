@@ -372,6 +372,11 @@ export async function syncAll(env, force) {
 
   let okCal = 0, okPrice = 0;
 
+  /* Копим цены по ходу обхода: перечитывать их из KV сразу после записи нельзя,
+     чтение может вернуть ещё пустое значение, и вилла молча выпадет из сводки
+     для HTML. */
+  const fresh = {};
+
   for (const link of linked()) {
     /* Занятость. Пустой календарь опаснее слегка устаревшего — он показал бы
        виллу свободной на уже занятые даты, поэтому при ошибке держим прошлые
@@ -433,13 +438,13 @@ export async function syncAll(env, force) {
     };
 
     await env.THB_STATS.put(priceKey(link.villa), JSON.stringify(priceRec));
-    if (min) okPrice++;
+    if (min) { okPrice++; fresh[link.villa] = priceRec; }
   }
 
   /* Сводка для подстановки цены в HTML. Адреса страниц берём из
      data/villas.json — того же файла, что читает сайт, чтобы slug не пришлось
      держать в двух местах и рассинхронизировать. */
-  try { await writeAllPrices(env); } catch (e) { /* карточки просто останутся без цены */ }
+  try { await writeAllPrices(env, fresh); } catch (e) { /* карточки просто останутся без цены */ }
 
   meta = {
     ts: Date.now(),
@@ -454,17 +459,24 @@ export async function syncAll(env, force) {
   return { skipped: false, meta };
 }
 
-async function writeAllPrices(env) {
+async function writeAllPrices(env, fresh) {
   const res = await env.ASSETS.fetch(new Request('https://thehostbali.com/data/villas.json'));
   if (!res.ok) throw new Error('villas_' + res.status);
   const list = await res.json();
 
+  /* Адрес страницы: у части вилл в файле лежит url, у части он пустой, зато
+     slug есть у всех. Из-за пустого url четыре виллы молча выпадали из сводки
+     и оставались с «On request» при живой цене. */
   const urlOf = {};
-  for (const v of (list || [])) if (v && v.id && v.url) urlOf[v.id] = v.url;
+  for (const v of (list || [])) {
+    if (!v || !v.id) continue;
+    const u = v.url || (v.slug ? '/villa/' + v.slug + '/' : null);
+    if (u) urlOf[v.id] = u;
+  }
 
   const byUrl = {};
   for (const link of linked()) {
-    const rec = await readPrices(env, link.villa);
+    const rec = (fresh && fresh[link.villa]) || await readPrices(env, link.villa);
     if (!rec || !rec.ok || !rec.price || !urlOf[link.villa]) continue;
     byUrl[urlOf[link.villa]] = {
       price: rec.price,
