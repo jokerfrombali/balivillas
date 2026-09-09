@@ -79,8 +79,8 @@
       "/public-objects/images/premier-umalas-16-31.jpg",
       "/public-objects/images/premier-umalas-16-48.jpg"
     ],
-    "lat": null,
-    "lng": null,
+    "lat": -8.6665,
+    "lng": 115.1551,
     "airbnbUrl": "https://www.airbnb.com/rooms/1662141381391864374",
     "guestyListingId": null,
     "guestyBookingUrl": null,
@@ -260,8 +260,8 @@
       "/public-objects/images/premier-umalas-17-6.jpg",
       "/public-objects/images/premier-umalas-17-22.jpg"
     ],
-    "lat": null,
-    "lng": null,
+    "lat": -8.6665,
+    "lng": 115.1551,
     "airbnbUrl": "https://www.airbnb.com/rooms/1631122907991519841",
     "guestyListingId": null,
     "guestyBookingUrl": null,
@@ -477,8 +477,8 @@
       "/public-objects/images/villa-black-pool-64.jpg",
       "/public-objects/images/villa-black-pool-65.jpg"
     ],
-    "lat": null,
-    "lng": null,
+    "lat": -8.6968,
+    "lng": 115.2619,
     "airbnbUrl": "https://www.airbnb.com/rooms/1496048138640551505",
     "guestyListingId": null,
     "guestyBookingUrl": null,
@@ -724,8 +724,8 @@
       "/public-objects/images/sanur-2br-townhouse-12.jpg",
       "/public-objects/images/sanur-2br-townhouse-15.jpg"
     ],
-    "lat": -8.6911,
-    "lng": 115.2599,
+    "lat": -8.6935,
+    "lng": 115.2593,
     "airbnbUrl": "https://www.airbnb.com/rooms/1623064753663498759",
     "guestyListingId": null,
     "guestyBookingUrl": null,
@@ -948,8 +948,8 @@
       "/public-objects/images/sanur-modern-2br-townhouse-12.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-28.jpg"
     ],
-    "lat": -8.69035,
-    "lng": 115.25893,
+    "lat": -8.6904,
+    "lng": 115.2589,
     "airbnbUrl": "https://www.airbnb.com/rooms/1640382948484924036",
     "guestyListingId": null,
     "guestyBookingUrl": null,
@@ -1631,8 +1631,8 @@
     "monthly": false,
     "url": "/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/",
     "galleryUrl": "/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/",
-    "lat": -8.6978374,
-    "lng": 115.2594997,
+    "lat": -8.6978,
+    "lng": 115.2595,
     "updatedAt": "2026-07-31"
   },
   {
@@ -1925,7 +1925,7 @@
     "url": "/villa/canggu/the-wave-6br-beachside-villa-canggu/",
     "galleryUrl": "/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/",
     "lat": -8.6675,
-    "lng": 115.1444,
+    "lng": 115.1443,
     "updatedAt": "2026-07-31"
   },
   {
@@ -2172,8 +2172,8 @@
     "monthly": null,
     "url": "/villa/sanur/garden-pool-villa-4br-sanur/",
     "galleryUrl": "/villa/sanur/garden-pool-villa-4br-sanur/gallery/",
-    "lat": -8.70541,
-    "lng": 115.24634,
+    "lat": -8.7064,
+    "lng": 115.2471,
     "updatedAt": "2026-07-29"
   },
   {
@@ -2326,8 +2326,8 @@
     "monthly": null,
     "url": "/villa/ungasan/eco-private-1br-pool-villa-ungasan/",
     "galleryUrl": "/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/",
-    "lat": -8.81994,
-    "lng": 115.17511,
+    "lat": -8.8185,
+    "lng": 115.1767,
     "updatedAt": "2026-07-31"
   },
   {
@@ -2386,7 +2386,7 @@
     "monthly": null,
     "url": "/villa/ungasan/eco-teak-2br-pool-villa-ungasan/",
     "galleryUrl": "/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/",
-    "lat": -8.8186,
+    "lat": -8.8185,
     "lng": 115.1766,
     "updatedAt": "2026-07-30",
     "images": [
@@ -2575,7 +2575,7 @@
     "url": "/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/",
     "galleryUrl": "/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/",
     "lat": -8.8185,
-    "lng": 115.1767,
+    "lng": 115.1766,
     "updatedAt": "2026-07-30",
     "images": [
       "/public-objects/images/exclusive-1br-ungasan-12.jpg",
@@ -2700,8 +2700,8 @@
     "monthly": null,
     "url": "/villa/canggu/leonardo-9br-resort-pererenan/",
     "galleryUrl": "/villa/canggu/leonardo-9br-resort-pererenan/gallery/",
-    "lat": -8.6465446,
-    "lng": 115.1234375,
+    "lat": -8.6465,
+    "lng": 115.1234,
     "updatedAt": "2026-09-09",
     "images": [
       "/public-objects/images/villa-leonardo-pererenan-2.jpg",
@@ -2933,8 +2933,8 @@
     "monthly": null,
     "url": "/villa/umalas/villa-papat-4br-pool-villa-umalas/",
     "galleryUrl": "/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/",
-    "lat": -8.6677091,
-    "lng": 115.1510919,
+    "lat": -8.6678,
+    "lng": 115.151,
     "updatedAt": "2026-09-09",
     "images": [
       "/public-objects/images/villa-papat-umalas-1.jpg",
@@ -3131,7 +3131,7 @@
     "monthly": null,
     "url": "/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/",
     "galleryUrl": "/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/",
-    "lat": -8.8186,
+    "lat": -8.8185,
     "lng": 115.1766,
     "updatedAt": "2026-09-09",
     "images": [

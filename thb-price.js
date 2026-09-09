@@ -53,7 +53,7 @@
     if (i < 0) return Promise.resolve(null);
     var slug = path.slice(i + 7);
 
-    return fetch('/data/villas.json', { cache: 'force-cache' })
+    return fetch('/data/villas.json')
       .then(function (r) { return r.json(); })
       .then(function (list) {
         var hit = (list || []).filter(function (v) { return v.slug === slug; })[0];

@@ -72,7 +72,7 @@
 
   function run() {
     Promise.all([
-      fetch('/data/villas.json', { cache: 'force-cache' }).then(function (r) { return r.json(); }),
+      fetch('/data/villas.json').then(function (r) { return r.json(); }),
       fetch('/api/prices').then(function (r) { return r.ok ? r.json() : null; })
     ]).then(function (res) {
       var list = res[0] || [];
