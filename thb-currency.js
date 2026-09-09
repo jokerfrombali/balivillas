@@ -68,12 +68,17 @@
 
   /* ---------- пересчёт текста ---------- */
 
+  /* Берём два вида узлов: те, где ещё стоят рупии, и те, что мы уже
+     пересчитали. Второе важно: после замены на «A$ 1,510» слова «Rp» в тексте
+     нет, и без этой проверки цена больше никогда не переключалась обратно —
+     шапка показывала IDR, а сумма оставалась в долларах. */
   function walk(root) {
     var it = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
       acceptNode: function (n) {
-        if (!n.nodeValue || n.nodeValue.indexOf('Rp') < 0) return NodeFilter.FILTER_REJECT;
         var p = n.parentElement;
-        if (!p || p.closest('script, style, #thbCurBox')) return NodeFilter.FILTER_REJECT;
+        if (!p || p.closest('script, style, #thbCurBox, #thbCurMenu')) return NodeFilter.FILTER_REJECT;
+        var mine = p.hasAttribute && p.hasAttribute('data-thb-idr');
+        if (!mine && (!n.nodeValue || n.nodeValue.indexOf('Rp') < 0)) return NodeFilter.FILTER_REJECT;
         return NodeFilter.FILTER_ACCEPT;
       }
     });
