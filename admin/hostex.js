@@ -1,12 +1,17 @@
-/* Вкладка «Hostfully» в панели.
+/* Вкладка «Hostex» в панели.
  *
- * Показывает связки: слева объект в Hostfully, справа вилла на сайте, между
- * ними проводок. Зелёный — календарь свежий, жёлтый — давно не обновлялся,
- * красный — фид не отвечает, серый — объект ещё не назначен.
+ * Показывает связки: слева объект в Hostex, справа вилла на сайте, между ними
+ * проводок. Зелёный — календарь свежий, жёлтый — давно не обновлялся, красный
+ * — API не отвечает, серый — объект ещё не назначен.
+ *
+ * Под названием объекта стоит канал, с которого снята цена: в Hostex ставка
+ * висит на листинге канала, и базовым считается тот, у которого коэффициент
+ * 100 (см. worker/hostex.js). Цену двигает PriceLabs, поэтому цифра в панели —
+ * минимум по свободным ночам ближайших 90 дней, а не что-то заданное руками.
  *
  * Живёт отдельным файлом, чтобы не трогать разметку index.html: сам вешает
  * кнопку в меню, сам создаёт секцию и сам следит за переключением вкладок.
- * Данные берёт из /api/admin/hostfully — то есть только после входа.
+ * Данные берёт из /api/admin/hostex — то есть только после входа.
  */
 (function () {
   'use strict';
@@ -60,7 +65,7 @@
   var nav = document.getElementById('nav');
   var btn = document.createElement('button');
   btn.dataset.t = TAB;
-  btn.textContent = 'Hostfully';
+  btn.textContent = 'Hostex';
   nav.appendChild(btn);
 
   var sec = document.createElement('section');
@@ -68,7 +73,7 @@
   sec.hidden = true;
   sec.innerHTML =
     '<div class="hfhead">' +
-      '<span class="hfsum" id="hfSum">Связки с Hostfully</span>' +
+      '<span class="hfsum" id="hfSum">Связки с Hostex</span>' +
       '<span class="hfwhen" id="hfWhen"></span>' +
       '<span style="margin-left:auto"><button class="btn primary" id="hfNow">Проверить сейчас</button></span>' +
     '</div>' +
@@ -157,27 +162,32 @@
     if (!d) return;
 
     document.getElementById('hfSum').textContent =
-      'Связки с Hostfully — ' + d.live + ' из ' + d.total + ' в работе';
+      'Связки с Hostex — ' + d.live + ' из ' + d.total + ' в работе' +
+      (d.priced ? ', с ценой ' + d.priced : '');
     document.getElementById('hfWhen').textContent =
-      'проверка каждые ' + Math.round(d.everyMin / 60) + ' ч · последняя ' +
-      ago(d.lastRunTs) + (d.lastRunTs ? ' · следующая ' + inFuture(d.nextRunTs) : '');
+      'проверка каждые ' + d.everyMin + ' мин · последняя ' +
+      ago(d.lastRunTs) + (d.lastRunTs ? ' · следующая ' + inFuture(d.nextRunTs) : '') +
+      (d.lastError ? ' · ошибка: ' + d.lastError : '');
 
     villaNames().then(function (names) {
       var rows = d.links.map(function (l) {
         var name = names[l.villa] || l.villa;
         var right = l.state === 'off'
-          ? '<span class="small">объект в Hostfully не назначен</span>'
+          ? '<span class="small">объект в Hostex не назначен</span>'
           : '<span class="small">' +
-            plural(l.bookings, 'бронь', 'брони', 'броней') + ' · ' +
             plural(l.busyNights90, 'занятая ночь', 'занятые ночи', 'занятых ночей') +
-            ' за 90 дней</span>';
+            ' за 90 дней' +
+            (l.price ? ' · от ' + l.currency + ' ' +
+                       String(l.price).replace(/\B(?=(\d{3})+(?!\d))/g, ',') : '') +
+            '</span>';
 
         var left = l.linked
-          ? '<b>' + esc(l.hf) + '</b>' + (l.state === 'down' && l.error
+          ? '<b>' + esc(l.hx) + '</b>' + (l.state === 'down' && l.error
               ? '<span class="small" style="color:var(--bad)">' + esc(l.error) + '</span>'
-              : '<span class="small">проверено ' + ago(l.checkedAt) + '</span>')
+              : '<span class="small">проверено ' + ago(l.checkedAt) +
+                (l.channel ? ' · цена с ' + esc(l.channel) : '') + '</span>')
           : '<b class="hfnone">объект не выбран</b>' +
-            '<span class="small">назначается в worker/hostfully.js</span>';
+            '<span class="small">назначается в worker/hostex.js</span>';
 
         return '<div class="hfrow ' + (l.state === 'off' ? 'off' : '') + '">' +
             '<div class="hfside">' + left + '</div>' +
@@ -187,23 +197,12 @@
           '</div>';
       }).join('');
 
-      var tail = '';
-      if (d.unlinkedHf && d.unlinkedHf.length) {
-        tail = '<h2 class="sec">Объекты в Hostfully без пары на сайте</h2>' +
-          '<div class="note">Эти объекты есть в Hostfully, но ни одна вилла сайта на них не указывает. ' +
-          'Пока связка не назначена, их календарь на сайт не попадает.</div>' +
-          '<div class="hfchips">' + d.unlinkedHf.map(function (p) {
-            return '<span class="hfchip">' + esc(p.hf) + '</span>';
-          }).join('') + '</div>';
-      }
-
-      document.getElementById('hfBody').innerHTML =
-        '<div class="hflist">' + rows + '</div>' + tail;
+      document.getElementById('hfBody').innerHTML = '<div class="hflist">' + rows + '</div>';
     });
   }
 
   function load() {
-    return api('hostfully').then(function (r) {
+    return api('hostex').then(function (r) {
       if (!r || !r.ok) throw new Error('bad');
       DATA = r.data;
       render();
@@ -219,7 +218,7 @@
     var b = this;
     b.disabled = true;
     b.textContent = 'Проверяю…';
-    api('hostfully/sync', true).then(function (r) {
+    api('hostex/sync', true).then(function (r) {
       if (r && r.ok) { DATA = r.data; render(); }
     }).catch(function () {}).then(function () {
       busy = false;

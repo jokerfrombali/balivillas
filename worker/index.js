@@ -12,17 +12,17 @@
  *                     numbers come from GA4 when GA_SA_KEY is set, else from KV
  *   GET  /api/health  cheap endpoint for external uptime monitors.
  *   GET  /api/availability?villa=<id>&from=&to=
- *                     booked nights for one villa, read from the Hostfully
+ *                     booked nights for one villa, read from the Hostex
  *                     mirror in KV. Dates only — no guest data ever leaves here.
  *   GET  /api/prices   all "from" rates at once, for the catalogue cards.
  *   GET  /api/price?villa=<id>
  *                     "from" nightly rate, currency, min stay, max guests —
  *                     from the same mirror, refreshed with the calendar.
  *   GET  /api/quote?villa=<id>&from=&to=&guests=
- *                     exact price for those dates, proxied to Hostfully and
+ *                     exact price for those dates, proxied to Hostex and
  *                     cached briefly. Read-only: nothing is created there.
  *   cron              asset health check every run + weekly digest, Mon 08:00 WITA
- *                     + Hostfully calendar sync (see hostfully.js).
+ *                     + Hostex calendar and price sync (see hostex.js).
  *
  * The bot token lives in the TELEGRAM_TOKEN secret, never in the repo.
  */
@@ -32,7 +32,7 @@ import { handleAdmin } from './admin.js';
 import { saveLead } from './leads.js';
 import { opportunities } from './opportunities.js';
 import { takeSnapshot } from './snapshots.js';
-import { syncAll as hostfullySync, busyNights, basePrice, quote, allBasePrices } from './hostfully.js';
+import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices } from './hostex.js';
 
 const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
 
@@ -141,7 +141,7 @@ async function handleLead(req, env) {
     rows.push(['Гостей', d.guests]);
   }
   /* Сумма. Считаем сами, по вилле и датам из заявки — число из браузера не
-     берём вообще: его в консоли меняет кто угодно. Hostfully тут только
+     берём вообще: его в консоли меняет кто угодно. Hostex тут только
      спрашиваем; заявку туда по-прежнему заводят руками. */
   let priced = null;
   if (d.villaId && /^\d{4}-\d{2}-\d{2}$/.test(String(d.from || '')) &&
@@ -587,7 +587,7 @@ export default {
       }
 
       /* Занятые даты для календаря на странице виллы. Читаем только зеркало в
-         KV: Hostfully не должен получать по запросу на каждый просмотр. */
+         KV: Hostex не должен получать запрос на каждый просмотр страницы. */
       if (url.pathname === '/api/availability') {
         const villa = (url.searchParams.get('villa') || '').slice(0, 80);
         const data = villa ? await busyNights(env, villa,
@@ -600,7 +600,7 @@ export default {
         });
       }
 
-      /* Базовая цена «от» для карточки. Читаем зеркало, а не Hostfully. */
+      /* Базовая цена «от» для карточки. Читаем зеркало, а не Hostex. */
       if (url.pathname === '/api/price') {
         const villa = (url.searchParams.get('villa') || '').slice(0, 80);
         const data = villa ? await basePrice(env, villa) : null;
@@ -620,7 +620,7 @@ export default {
         });
       }
 
-      /* Точная цена на выбранные даты. Ходит в Hostfully, поэтому под лимитом
+      /* Точная цена на выбранные даты. Ходит в Hostex живьём, поэтому под лимитом
          и с коротким кэшем — перебор дат не должен их долбить. */
       if (url.pathname === '/api/quote') {
         const villa = (url.searchParams.get('villa') || '').slice(0, 80);
@@ -697,9 +697,9 @@ export default {
          понедельник не стоит нам недели истории. */
       try { await takeSnapshot(env); } catch (e) { /* история не критична */ }
 
-      /* Обход календарей Hostfully. syncAll сам решает, пора ли: cron будит нас
+      /* Обход календарей Hostex. syncAll сам решает, пора ли: cron будит нас
          каждые 30 минут, а опрашивать чаще, чем раз в SYNC_EVERY_MIN, незачем. */
-      try { await hostfullySync(env, false); } catch (e) { /* следующий заход подберёт */ }
+      try { await hostexSync(env, false); } catch (e) { /* следующий заход подберёт */ }
     })());
   }
 };

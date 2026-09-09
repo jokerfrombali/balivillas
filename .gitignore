@@ -8,3 +8,5 @@ thehostbali-*.json
 # local worker secrets for `wrangler dev` — never commit, never deploy
 .dev.vars
 .dev.vars.*
+# локальные настройки Claude Code — машинные, не для репозитория
+.claude/

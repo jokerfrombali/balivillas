@@ -1,0 +1,624 @@
+/* Hostex calendar and price sync over the official Open API v3.
+ *
+ * Replaces the old Hostfully integration. That one scraped public .ics feeds
+ * and a booking-widget JSONP endpoint; this one talks to a documented API with
+ * a real token, so we get three things we never had: prices per date, minimum
+ * stay per date, and the ability to push a booking back to the PMS.
+ *
+ * Token lives in the HOSTEX_TOKEN secret. Never in the repo, never in the
+ * static assets: worker/ is excluded in .assetsignore.
+ *
+ * Цены двигает PriceLabs, подключённый к тому же аккаунту Hostex, поэтому
+ * своих цен мы не держим вообще — ни в data/villas.json, ни в коде. Зеркало в
+ * KV обновляется каждые полчаса вместе с cron, а точный расчёт на выбранные
+ * даты идёт живым запросом: показать вчерашнюю цену там, где гость нажимает
+ * «забронировать», хуже, чем подождать лишние 300 мс.
+ */
+
+const BASE = 'https://api.hostex.io/v3';
+
+/* Cron будит воркер каждые 30 минут (см. wrangler.jsonc). Обход стоит два
+   запроса на весь аккаунт — занятость всех объектов одним вызовом и календарь
+   всех листингов вторым, — поэтому ходим каждый раз, а не раз в два часа, как
+   приходилось с Hostfully. */
+export const SYNC_EVERY_MIN = 30;
+
+/* Горизонт. У API ограничение: start_date в пределах года, end_date в пределах
+   трёх лет. Дальше года вперёд у нас всё равно не бронируют. */
+const HORIZON_DAYS = 365;
+
+/* Связка «вилла на сайте» -> «объект в Hostex».
+ *
+ * Ключ — id из data/villas.json, pid — property id из GET /properties.
+ * pid: null означает «вилла на сайте есть, объекта в Hostex нет» — такая вилла
+ * показывается в панели серой связкой, календарь на её странице просто не
+ * заполняется. Это честнее, чем показать пустую занятость.
+ */
+export const LINKS = [
+  { villa: 'own-premier-umalas-16',                   pid: 12782384, hx: 'Premier Umalas 16' },
+  { villa: 'own-premier-umalas-17',                   pid: 12782385, hx: 'Premier Umalas 17' },
+  { villa: 'own-villa-black-pool',                    pid: 12782389, hx: 'Black Pool' },
+  { villa: 'own-villa-kesari-4-3br-pool-villa-sanur', pid: 12782390, hx: 'Kesari 4' },
+  { villa: 'own-the-wave-6br-beachside-villa-canggu', pid: 12782388, hx: 'The Wave' },
+  { villa: 'own-sanur-2br-townhouse',                 pid: 12782386, hx: 'Pungutan 1' },
+  { villa: 'own-sanur-garden-pool-4br',               pid: 12782387, hx: 'Tanjung Sari 3' },
+  { villa: 'own-eco-private-1br-ungasan',             pid: 12782382, hx: 'Mudra 1' },
+  { villa: 'own-eco-teak-2br-ungasan',                pid: 12782383, hx: 'Mudra 2' },
+  { villa: 'own-eco-exclusive-1br-ungasan',           pid: 12782380, hx: 'Mudra 3' },
+
+  /* Объекты, заведённые в Hostex позже сайта: страницы под них добавлены
+     отдельно, id совпадают с data/villas.json. */
+  { villa: 'own-eco-tropical-1br-ungasan',            pid: 12782381, hx: 'Mudra 4' },
+  { villa: 'own-papat-4br-pool-villa-umalas',         pid: 12782391, hx: 'Papat' },
+  { villa: 'own-leonardo-9br-resort-pererenan',       pid: 12782379, hx: 'Leonardo' },
+
+  /* Этих двух в Hostex нет ни под каким именем: Pungutan 2 туда не завели,
+     Lucky Lily не заводили и в Hostfully. Пока не появятся — календарь и цена
+     на их страницах остаются пустыми, а не выдуманными. */
+  { villa: 'own-sanur-modern-2br',                    pid: null, hx: null },
+  { villa: 'own-lucky-lily-sanur-3br',                pid: null, hx: null }
+];
+
+/* ---------- helpers ---------- */
+
+function iso(d) {
+  const p = (n) => String(n).padStart(2, '0');
+  return d.getUTCFullYear() + '-' + p(d.getUTCMonth() + 1) + '-' + p(d.getUTCDate());
+}
+
+function addDays(dateStr, n) {
+  const d = new Date(dateStr + 'T00:00:00Z');
+  d.setUTCDate(d.getUTCDate() + n);
+  return iso(d);
+}
+
+/* Бали живёт в UTC+8, а воркер считает в UTC. Без сдвига с полуночи до 8 утра
+   по местному времени «сегодня» уезжало бы на день назад, и календарь на
+   странице виллы открывался бы на вчерашней дате. */
+function today() {
+  return iso(new Date(Date.now() + 8 * 3600 * 1000));
+}
+
+function nightsBetween(a, b) {
+  const out = [];
+  let d = a;
+  while (d < b) { out.push(d); d = addDays(d, 1); }
+  return out;
+}
+
+/* Hostex отдаёт код валюты (IDR), а страницы виллы печатают её как есть перед
+   суммой. «IDR 4,800,000» читается хуже, чем «Rp 4,800,000», и не совпадает с
+   тем, что гость видел на Airbnb. */
+const CURRENCY_SIGN = { IDR: 'Rp', USD: '$', EUR: '€', AUD: 'A$', SGD: 'S$' };
+function sign(code) { return CURRENCY_SIGN[String(code || '').toUpperCase()] || code || ''; }
+
+/* ---------- API ---------- */
+
+async function api(env, path, init) {
+  const token = env.HOSTEX_TOKEN;
+  if (!token) throw new Error('no_token');
+
+  const res = await fetch(BASE + path, {
+    method: (init && init.method) || 'GET',
+    headers: {
+      'Hostex-Access-Token': token,
+      'content-type': 'application/json',
+      accept: 'application/json'
+    },
+    body: init && init.body ? JSON.stringify(init.body) : undefined,
+    cf: { cacheTtl: 0 }
+  });
+
+  if (!res.ok) throw new Error('http_' + res.status);
+
+  const data = await res.json();
+  if (data.error_code !== 200) {
+    throw new Error('api_' + data.error_code + '_' + String(data.error_msg || '').slice(0, 40));
+  }
+  return data.data;
+}
+
+const linked = () => LINKS.filter((l) => l.pid);
+const linkOf = (villa) => LINKS.filter((l) => l.villa === villa && l.pid)[0] || null;
+
+/* ---------- KV mirror ---------- */
+
+const calKey = (villa) => 'hx:cal:' + villa;
+const priceKey = (villa) => 'hx:price:' + villa;
+const quoteKey = (villa, a, b) => 'hx:quote:' + villa + ':' + a + ':' + b;
+const CHANNELS = 'hx:channels';
+const META = 'hx:meta';
+
+/* Точный расчёт держим 15 минут: PriceLabs правит ставки в течение дня, но
+   перебор дат гостем не должен превращаться в шквал запросов к Hostex. */
+const QUOTE_TTL_SEC = 900;
+
+/* Карта каналов живёт сутки: листинги и коэффициенты меняются, когда объект
+   заводят или снимают с канала, — это события недельного масштаба. */
+const CHANNELS_TTL_SEC = 86400;
+
+export async function readMirror(env, villa) {
+  try { return JSON.parse(await env.THB_STATS.get(calKey(villa)) || 'null'); }
+  catch (e) { return null; }
+}
+
+async function readPrices(env, villa) {
+  try { return JSON.parse(await env.THB_STATS.get(priceKey(villa)) || 'null'); }
+  catch (e) { return null; }
+}
+
+/* ---------- каналы и базовая ставка ----------
+ *
+ * Цена в Hostex висит на листинге канала, а не на объекте. Какой из каналов
+ * несёт нашу собственную ставку, говорит GET /pricing_ratios: канал с
+ * ratio = 100 — это база, остальные считаются от неё (у нас Booking и Agoda
+ * идут со 115). Значит прямую цену для сайта надо брать с базового канала и
+ * ничего самим не пересчитывать.
+ *
+ * Если базового канала вдруг нет (все с наценкой), берём минимальный ratio и
+ * приводим цену к сотне — это по-прежнему цифра Hostex, просто снятая с
+ * наценки канала.
+ */
+async function loadChannels(env, force) {
+  if (!force) {
+    try {
+      const hit = JSON.parse(await env.THB_STATS.get(CHANNELS) || 'null');
+      if (hit && hit.ts && Date.now() - hit.ts < CHANNELS_TTL_SEC * 1000) return hit.map;
+    } catch (e) {}
+  }
+
+  const map = {};
+
+  /* Вместимость берём из метаданных листинга: в самом объекте Hostex её нет, а
+     показывать на карточке больше гостей, чем пускает канал, нельзя. */
+  const caps = {};
+  try {
+    const ls = await api(env, '/listings?limit=100');
+    for (const l of (ls.listings || [])) {
+      const cap = Number((l.metadata || {}).person_capacity) || 0;
+      if (cap) caps[l.listing_id] = Math.max(caps[l.listing_id] || 0, cap);
+    }
+  } catch (e) { /* без вместимости переживём: страница возьмёт её из villas.json */ }
+
+  for (const link of linked()) {
+    let picked = null;
+    try {
+      const r = await api(env, '/pricing_ratios?property_id=' + link.pid);
+      const chans = (r.channels || []).filter((c) => Number(c.ratio) > 0);
+      if (chans.length) {
+        chans.sort((a, b) => Number(a.ratio) - Number(b.ratio));
+        const base = chans.filter((c) => Number(c.ratio) === 100)[0] || chans[0];
+        picked = {
+          channel_type: base.channel_type,
+          listing_id: base.listing_id,
+          ratio: Number(base.ratio) || 100
+        };
+      }
+    } catch (e) {}
+
+    if (picked) {
+      picked.maxGuests = caps[picked.listing_id] || 0;
+      map[link.villa] = picked;
+    }
+  }
+
+  try {
+    await env.THB_STATS.put(CHANNELS, JSON.stringify({ ts: Date.now(), map }),
+                            { expirationTtl: CHANNELS_TTL_SEC * 2 });
+  } catch (e) {}
+
+  return map;
+}
+
+/* Цена канала -> наша базовая ставка. ratio 100 ничего не меняет. */
+function toBase(price, ratio) {
+  const p = Number(price) || 0;
+  const r = Number(ratio) || 100;
+  return r === 100 ? p : Math.round(p * 100 / r);
+}
+
+/* ---------- sync ---------- */
+
+/* Занятые ночи — из реальных броней, а не из /availabilities.
+ *
+ * Тонкость, на которой легко ошибиться. GET /availabilities отдаёт
+ * available: false и на забронированные даты, и на те, что просто закрыты
+ * окном продаж канала: Airbnb открывает календарь не на год вперёд, и на
+ * закрытых датах в /listings/calendar стоит inventory: 0 при живой цене.
+ * У Black Pool так закрыто всё с октября, у Tanjung Sari 3 — весь год, при
+ * нуле броней. Возьми мы available за «занято» — сайт показал бы эти виллы
+ * забронированными на год, хотя напрямую мы их продаём.
+ *
+ * Поэтому занятость считаем по броням, а available держим отдельно, как
+ * диагностику для панели.
+ *
+ * Приватность: в брони лежат имя, телефон и почта гостя. Берём только даты и
+ * property_id, остальное не покидает этот вызов.
+ */
+async function fetchReservations(env, from, to) {
+  const out = {};
+  const seen = {};
+
+  /* У API окно заезда не больше 180 дней, поэтому идём отрезками. */
+  let start = from;
+  while (start < to) {
+    let end = addDays(start, 175);
+    if (end > to) end = to;
+
+    let offset = 0;
+    for (;;) {
+      const d = await api(env, '/reservations?start_check_in_date=' + start +
+                               '&end_check_in_date=' + end +
+                               '&limit=100&offset=' + offset);
+      const batch = d.reservations || [];
+
+      for (const r of batch) {
+        if (seen[r.reservation_code]) continue;
+        seen[r.reservation_code] = 1;
+
+        /* Отменённую бронь дата отпускает: если её считать занятой, вилла
+           навсегда останется занятой на эти ночи. */
+        if (r.status !== 'accepted') continue;
+
+        const pid = r.property_id;
+        if (!out[pid]) out[pid] = [];
+        for (const n of nightsBetween(r.check_in_date, r.check_out_date)) out[pid].push(n);
+      }
+
+      if (batch.length < 100) break;
+      offset += 100;
+    }
+
+    start = addDays(end, 1);
+  }
+
+  for (const pid of Object.keys(out)) {
+    out[pid] = [...new Set(out[pid])].sort();
+  }
+  return out;
+}
+
+/* Сколько ночей закрыто на каналах. Только счётчик и только для панели: это
+   не занятость, а сигнал «календарь на канале не открыт так далеко». */
+async function fetchClosed(env, from, to) {
+  const ids = linked().map((l) => l.pid).join(',');
+  const d = await api(env, '/availabilities?property_ids=' + ids +
+                           '&start_date=' + from + '&end_date=' + to);
+
+  const out = {};
+  for (const p of (d.properties || [])) {
+    out[p.id] = (p.availabilities || [])
+      .filter((a) => a.available === false)
+      .map((a) => a.date);
+  }
+  return out;
+}
+
+/* Календарь цен списка листингов одним запросом.
+   Возвращает { listing_id: { date: { price, minStay } } }. */
+async function fetchCalendar(env, chans, from, to) {
+  const listings = [];
+  const seen = {};
+  for (const villa of Object.keys(chans)) {
+    const c = chans[villa];
+    const k = c.channel_type + '|' + c.listing_id;
+    if (seen[k]) continue;
+    seen[k] = true;
+    listings.push({ channel_type: c.channel_type, listing_id: c.listing_id });
+  }
+  if (!listings.length) return {};
+
+  const d = await api(env, '/listings/calendar', {
+    method: 'POST',
+    body: { start_date: from, end_date: to, listings }
+  });
+
+  const out = {};
+  for (const l of (d.listings || [])) {
+    const days = {};
+    for (const c of (l.calendar || [])) {
+      days[c.date] = {
+        price: Number(c.price) || 0,
+        minStay: Number((c.restrictions || {}).min_stay_on_arrival) || 0
+      };
+    }
+    out[l.listing_id] = days;
+  }
+  return out;
+}
+
+/* Полный обход. force игнорирует интервал — это кнопка «Проверить сейчас». */
+export async function syncAll(env, force) {
+  let meta = {};
+  try { meta = JSON.parse(await env.THB_STATS.get(META) || '{}'); } catch (e) {}
+
+  const dueAt = (meta.ts || 0) + SYNC_EVERY_MIN * 60000;
+  if (!force && Date.now() < dueAt) return { skipped: true, nextAt: dueAt };
+
+  const from = today();
+  const to = addDays(from, HORIZON_DAYS);
+
+  let chans = {};
+  try { chans = await loadChannels(env, !!force); } catch (e) {}
+
+  let busy = null, cal = null, closed = {}, fail = null;
+  try { busy = await fetchReservations(env, from, to); }
+  catch (e) { fail = String(e && e.message || e).slice(0, 80); }
+
+  /* Диагностика для панели. Не получилось — не беда, занятость от этого не
+     зависит. */
+  try { closed = await fetchClosed(env, from, to); }
+  catch (e) {}
+
+  try { cal = await fetchCalendar(env, chans, from, to); }
+  catch (e) { /* занятость важнее цены: без цен обойдёмся, без календаря нет */ }
+
+  let okCal = 0, okPrice = 0;
+
+  for (const link of linked()) {
+    /* Занятость. Пустой календарь опаснее слегка устаревшего — он показал бы
+       виллу свободной на уже занятые даты, поэтому при ошибке держим прошлые
+       даты и помечаем связку несвежей. */
+    const prev = await readMirror(env, link.villa);
+    const nights = busy ? (busy[link.pid] || []) : null;
+
+    const shut = (closed[link.pid] || []).filter((d) => !(nights || []).includes(d));
+
+    const rec = nights
+      ? { villa: link.villa, pid: link.pid, ok: true, error: null,
+          nights, closed: shut.length, closedFrom: shut.length ? shut[0] : null,
+          from, to, ts: Date.now(), lastOkTs: Date.now() }
+      : { villa: link.villa, pid: link.pid, ok: false, error: fail || 'no_data',
+          nights: prev ? prev.nights || [] : [],
+          closed: prev ? prev.closed || 0 : 0,
+          closedFrom: prev ? prev.closedFrom || null : null,
+          from, to, ts: Date.now(), lastOkTs: prev ? prev.lastOkTs || 0 : 0 };
+
+    await env.THB_STATS.put(calKey(link.villa), JSON.stringify(rec));
+    if (rec.ok) okCal++;
+
+    /* Цены. */
+    const c = chans[link.villa];
+    const days = c && cal ? cal[c.listing_id] : null;
+    if (!days) continue;
+
+    const norm = {};
+    for (const date of Object.keys(days)) {
+      const p = toBase(days[date].price, c.ratio);
+      if (p > 0) norm[date] = [p, days[date].minStay || 0];
+    }
+
+    /* Цена «от» для карточки в каталоге: минимум по свободным ночам ближайших
+       трёх месяцев. Занятые ночи в расчёт не берём — обещать цену на дату,
+       которую уже не продать, нечестно. */
+    const busySet = {};
+    for (const n of (rec.nights || [])) busySet[n] = 1;
+    const window = addDays(from, 90);
+
+    let min = 0;
+    for (const date of Object.keys(norm)) {
+      if (date >= window) continue;
+      if (busySet[date]) continue;
+      const p = norm[date][0];
+      if (!min || p < min) min = p;
+    }
+
+    const priceRec = {
+      ok: true,
+      price: min,
+      currency: sign('IDR'),
+      minStay: (norm[from] && norm[from][1]) || 1,
+      maxGuests: c.maxGuests || 0,
+      channel: c.channel_type,
+      ratio: c.ratio,
+      days: norm,
+      ts: Date.now()
+    };
+
+    await env.THB_STATS.put(priceKey(link.villa), JSON.stringify(priceRec));
+    if (min) okPrice++;
+  }
+
+  meta = {
+    ts: Date.now(),
+    everyMin: SYNC_EVERY_MIN,
+    total: linked().length,
+    ok: okCal,
+    prices: okPrice,
+    error: fail
+  };
+  await env.THB_STATS.put(META, JSON.stringify(meta));
+
+  return { skipped: false, meta };
+}
+
+/* ---------- reads ---------- */
+
+/* Занятые ночи одной виллы. Отдаём только даты — ни имён гостей, ни сумм.
+   Hostex, в отличие от iCal Hostfully, имя гостя сюда и не кладёт. */
+export async function busyNights(env, villa, from, to) {
+  const rec = await readMirror(env, villa);
+  if (!rec) return null;
+
+  const a = from || today();
+  const b = to || addDays(a, HORIZON_DAYS);
+  const nights = (rec.nights || []).filter((d) => d >= a && d < b).sort();
+
+  return {
+    villa,
+    from: a,
+    to: b,
+    nights,
+    checkedAt: rec.ts || 0,
+    stale: !rec.ok
+  };
+}
+
+/* Базовая цена «от» из зеркала. В Hostex на каждый просмотр страницы не ходим:
+   зеркало обновляется по cron каждые полчаса. */
+export async function basePrice(env, villa) {
+  const link = linkOf(villa);
+  if (!link) return null;
+
+  const rec = await readPrices(env, villa);
+  if (rec && rec.ok && rec.price) {
+    return { ok: true, price: rec.price, currency: rec.currency,
+             minStay: rec.minStay, maxGuests: rec.maxGuests, ts: rec.ts };
+  }
+
+  /* Пустое зеркало — первый деплой или вытесненный ключ. Синхронизируем разом,
+     чтобы карточка не осталась без цены. */
+  try {
+    await syncAll(env, true);
+    const fresh = await readPrices(env, villa);
+    if (fresh && fresh.ok && fresh.price) {
+      return { ok: true, price: fresh.price, currency: fresh.currency,
+               minStay: fresh.minStay, maxGuests: fresh.maxGuests, ts: fresh.ts };
+    }
+  } catch (e) {}
+
+  return null;
+}
+
+/* Все цены «от» разом — для карточек в каталоге: тринадцать отдельных запросов
+   с одной страницы ни к чему. Вилла без объекта в Hostex в ответ не попадает,
+   и карточка честно остаётся с «On request». */
+export async function allBasePrices(env) {
+  const out = {};
+  for (const link of linked()) {
+    const rec = await readPrices(env, link.villa);
+    if (rec && rec.ok && rec.price) {
+      out[link.villa] = {
+        price: rec.price,
+        currency: rec.currency,
+        minStay: rec.minStay,
+        maxGuests: rec.maxGuests
+      };
+    }
+  }
+  return out;
+}
+
+/* Расчёт на выбранные даты.
+ *
+ * Идём в Hostex живьём, а не в зеркало: цену двигает PriceLabs, и на экране
+ * бронирования гость должен видеть ту же цифру, что стоит в кабинете сейчас.
+ * Короткий кэш в KV защищает от перебора дат, лимит по IP стоит в index.js.
+ *
+ * Уборки и налогов Open API не отдаёт — в Hostex они настроены на стороне
+ * каналов. Поэтому в счёте только ночи: показать выдуманный сбор хуже, чем не
+ * показать никакого.
+ */
+export async function quote(env, villa, checkIn, checkOut, guests) {
+  const link = linkOf(villa);
+  if (!link) return null;
+
+  const g = Math.max(1, Math.min(30, Number(guests) || 1));
+  const k = quoteKey(villa, checkIn, checkOut);
+
+  try {
+    const hit = JSON.parse(await env.THB_STATS.get(k) || 'null');
+    if (hit) return { ...hit, guests: g };
+  } catch (e) {}
+
+  const chans = await loadChannels(env, false);
+  const c = chans[villa];
+  if (!c) return null;
+
+  const cal = await fetchCalendar(env, { [villa]: c }, checkIn, checkOut);
+  const days = cal[c.listing_id] || {};
+
+  let rent = 0, priced = 0;
+  for (const d of nightsBetween(checkIn, checkOut)) {
+    const day = days[d];
+    if (!day || !day.price) continue;
+    rent += toBase(day.price, c.ratio);
+    priced++;
+  }
+
+  /* Ни одной ночи с ценой — объект снят с продажи или даты за горизонтом.
+     Отдаём null: пусть страница покажет «по запросу», а не ноль рупий. */
+  if (!priced) return null;
+
+  const out = {
+    villa,
+    checkIn,
+    checkOut,
+    guests: g,
+    currency: sign('IDR'),
+    nights: priced,
+    minStay: (days[checkIn] && days[checkIn].minStay) || 0,
+    rent,
+    cleaningFee: 0,
+    taxes: 0,
+    total: rent,
+    perNight: Math.round(rent / priced),
+    ts: Date.now()
+  };
+
+  try { await env.THB_STATS.put(k, JSON.stringify(out), { expirationTtl: QUOTE_TTL_SEC }); }
+  catch (e) {}
+
+  return out;
+}
+
+/* ---------- панель ---------- */
+
+export async function status(env) {
+  let meta = {};
+  try { meta = JSON.parse(await env.THB_STATS.get(META) || '{}'); } catch (e) {}
+
+  let chans = {};
+  try { chans = (JSON.parse(await env.THB_STATS.get(CHANNELS) || '{}') || {}).map || {}; }
+  catch (e) {}
+
+  const from = today();
+  const to = addDays(from, 90);
+  const staleAfter = SYNC_EVERY_MIN * 60000 * 2.5;
+
+  const links = [];
+  for (const link of LINKS) {
+    const rec = await readMirror(env, link.villa);
+    const price = await readPrices(env, link.villa);
+    const age = rec ? Date.now() - (rec.lastOkTs || 0) : Infinity;
+
+    let state = 'off';                       /* серая связка: объекта нет */
+    if (link.pid) {
+      if (!rec) state = 'wait';              /* связан, но ни разу не опрошен */
+      else if (rec.ok && age < staleAfter) state = 'live';
+      else if (rec.lastOkTs && age < staleAfter * 4) state = 'stale';
+      else state = 'down';
+    }
+
+    const c = chans[link.villa] || null;
+
+    links.push({
+      villa: link.villa,
+      hx: link.hx,
+      pid: link.pid,
+      linked: !!link.pid,
+      state,
+      error: rec ? rec.error : null,
+      checkedAt: rec ? rec.ts : 0,
+      lastOkTs: rec ? rec.lastOkTs || 0 : 0,
+      busyNights90: rec ? (rec.nights || []).filter((d) => d >= from && d < to).length : 0,
+      closed: rec ? rec.closed || 0 : 0,
+      closedFrom: rec ? rec.closedFrom || null : null,
+      price: price && price.ok ? price.price : 0,
+      currency: price ? price.currency : '',
+      channel: c ? c.channel_type : null,
+      ratio: c ? c.ratio : null
+    });
+  }
+
+  return {
+    everyMin: SYNC_EVERY_MIN,
+    lastRunTs: meta.ts || 0,
+    nextRunTs: (meta.ts || 0) + SYNC_EVERY_MIN * 60000,
+    lastError: meta.error || null,
+    links,
+    live: links.filter((l) => l.state === 'live').length,
+    priced: links.filter((l) => l.price > 0).length,
+    total: links.length
+  };
+}
