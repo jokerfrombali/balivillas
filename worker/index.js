@@ -683,7 +683,7 @@ export default {
                     /^\/villa\/[^/]+\/$/.test(url.pathname);
 
     const scripts = isVilla
-      ? ['/thb-price.js', '/thb-avail.js', '/thb-guests.js', '/thb-map.js']
+      ? ['/thb-price.js', '/thb-avail.js', '/thb-guests.js', '/thb-map.js', '/thb-gallery.js']
       : ['/thb-cards.js'];   /* сам выходит, если карточек на странице нет */
 
     const withScripts = new HTMLRewriter()
