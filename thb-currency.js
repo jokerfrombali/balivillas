@@ -68,17 +68,22 @@
 
   /* ---------- пересчёт текста ---------- */
 
-  /* Берём два вида узлов: те, где ещё стоят рупии, и те, что мы уже
-     пересчитали. Второе важно: после замены на «A$ 1,510» слова «Rp» в тексте
-     нет, и без этой проверки цена больше никогда не переключалась обратно —
-     шапка показывала IDR, а сумма оставалась в долларах. */
+  /* Исходная сумма запоминается для каждого текстового узла отдельно.
+     Раньше она лежала на родителе — и это ломалось там, где сервер пишет в
+     один контейнер и цену, и подпись «per night»: внутри оказывалось два
+     текстовых узла, оба брали одну и ту же исходную строку, и пробел после
+     подписи превращался во вторую цену. На карточке было «$ 110 per night
+     $ 110». */
+  var SRC = new WeakMap();
+
   function walk(root) {
     var it = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
       acceptNode: function (n) {
         var p = n.parentElement;
         if (!p || p.closest('script, style, #thbCurBox, #thbCurMenu')) return NodeFilter.FILTER_REJECT;
-        var mine = p.hasAttribute && p.hasAttribute('data-thb-idr');
-        if (!mine && (!n.nodeValue || n.nodeValue.indexOf('Rp') < 0)) return NodeFilter.FILTER_REJECT;
+        /* уже наш узел — берём даже без «Rp»: после пересчёта его там нет */
+        if (SRC.has(n)) return NodeFilter.FILTER_ACCEPT;
+        if (!n.nodeValue || n.nodeValue.indexOf('Rp') < 0) return NodeFilter.FILTER_REJECT;
         return NodeFilter.FILTER_ACCEPT;
       }
     });
@@ -87,19 +92,16 @@
     return out;
   }
 
-  /* Запоминаем рупии в родителе: иначе после первой замены исходной суммы уже
-     не найти, и «$272» превратился бы в мусор при следующем переключении. */
   function convert(root) {
     walk(root || document.body).forEach(function (node) {
-      var p = node.parentElement;
-      if (!p) return;
+      var src = SRC.get(node);
 
-      var src = p.getAttribute('data-thb-idr');
-      if (src === null) {
+      if (src === undefined) {
+        RE.lastIndex = 0;
         if (!RE.test(node.nodeValue)) { RE.lastIndex = 0; return; }
         RE.lastIndex = 0;
-        p.setAttribute('data-thb-idr', node.nodeValue);
         src = node.nodeValue;
+        SRC.set(node, src);
       }
 
       node.nodeValue = src.replace(RE, function (whole, num) {
