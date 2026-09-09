@@ -44,10 +44,17 @@ export async function injectPrices(res, env, pathname) {
 
   const setCard = (url) => { card = byUrl[norm(url)] || null; };
 
+  /* «Rp 1,939,170» без подписи читается как цена за что угодно — за неделю,
+     за виллу целиком. Дописываем «per night» тем же мелким шрифтом, каким это
+     делает thb-cards.js, но стилем в самом теге: карточка не должна зависеть
+     от того, загрузился ли скрипт. */
+  const PER = '<span style="font-size:13px;font-weight:400;color:#706b61;' +
+              'margin-left:5px;letter-spacing:0;font-family:inherit">per night</span>';
+
   const cardText = (t) => {
     if (!card) return;
     if (t.text.indexOf('On request') < 0) return;
-    t.replace(money(card.currency, card.price) + ' ', { html: false });
+    t.replace(money(card.currency, card.price) + PER + ' ', { html: true });
   };
 
   return new HTMLRewriter()
