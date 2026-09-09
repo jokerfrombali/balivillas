@@ -37,12 +37,24 @@ Gianyar, Bali 80582. Контакт: +62 857 4649 9697 (он же WhatsApp).
 из KV `seq:lead`. `POST /api/hit` — счётчик просмотров. `POST /api/alert` — JS-ошибки.
 `POST /api/tg` — вебхук бота (команды /stats, /health, /help).
 `GET /api/health` — проверка страниц. Cron: аптайм + недельная сводка пн 08:00 WITA.
+`GET /api/fx` — курсы валют для переключателя в шапке (`worker/fx.js`,
+источник open.er-api.com с базой USD, кэш в KV 12 часов, подсказка валюты по
+стране гостя из `request.cf.country`).
+`GET /api/availability`, `/api/price`, `/api/prices`, `/api/quote` — календарь и
+цены из Hostex, см. `docs/HOSTEX-INTEGRATION.md`.
 `/api/admin/*` — панель управления за cookie-сессией, см. `docs/ADMIN.md`
 (модули `worker/admin.js`, `auth.js`, `leads.js`, `seo.js`).
-www→apex редирект в воркере сделать НЕЛЬЗЯ (HTML отдаётся мимо него) —
-он стоит Cloudflare Redirect Rule'ом: `https://www.*` → `https://${1}`, 301,
-с сохранением query string. Поставлен 26.08.2026, проверен: один прыжок,
-метки (utm) переживают редирект.
+
+**HTML теперь идёт через воркер.** Раньше запрос, попавший в файл, отдавался
+напрямую мимо кода — из-за этого не работала подшивка скриптов цен и календаря.
+09.09.2026 в `wrangler.jsonc` добавлен `assets.run_worker_first` со списком
+страниц (картинки, шрифты и статика по-прежнему идут мимо). Воркер подшивает
+скрипты по типу страницы и вписывает цену «от» прямо в разметку
+(`worker/price-html.js`), поэтому её видят и краулеры без JavaScript.
+
+www→apex редирект всё равно оставлен Cloudflare Redirect Rule'ом:
+`https://www.*` → `https://${1}`, 301, с сохранением query string. Поставлен
+26.08.2026, проверен: один прыжок, метки (utm) переживают редирект.
 
 ## Telegram
 

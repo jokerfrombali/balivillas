@@ -34,6 +34,7 @@ import { opportunities } from './opportunities.js';
 import { takeSnapshot } from './snapshots.js';
 import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices } from './hostex.js';
 import { injectPrices } from './price-html.js';
+import { fxRates, suggest } from './fx.js';
 
 const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
 
@@ -621,6 +622,29 @@ export default {
         });
       }
 
+      /* Курсы валют для переключателя в шапке. Цены у нас в рупиях, а гость из
+         Сиднея или Лондона их не читает — отдаём коэффициенты и подсказку по
+         стране, дальше страница считает сама. */
+      if (url.pathname === '/api/fx') {
+        let data;
+        try { data = await fxRates(env, false); }
+        catch (e) { return json({ ok: false, error: 'fx_unavailable' }, 503); }
+
+        const country = (req.cf && req.cf.country) || '';
+        return new Response(JSON.stringify({
+          ok: true,
+          base: 'IDR',
+          rates: data.rates,
+          updated: data.source || '',
+          ts: data.ts || 0,
+          country,
+          suggest: suggest(country)
+        }), {
+          headers: { 'content-type': 'application/json',
+                     'cache-control': 'public, max-age=3600' }
+        });
+      }
+
       /* Точная цена на выбранные даты. Ходит в Hostex живьём, поэтому под лимитом
          и с коротким кэшем — перебор дат не должен их долбить. */
       if (url.pathname === '/api/quote') {
@@ -685,6 +709,10 @@ export default {
     const scripts = isVilla
       ? ['/thb-price.js', '/thb-avail.js', '/thb-guests.js', '/thb-map.js', '/thb-gallery.js']
       : ['/thb-cards.js'];   /* сам выходит, если карточек на странице нет */
+
+    /* Переключатель валют нужен везде, где есть цены: и на вилле, и в каталоге,
+       и на главной. Сам выходит, если на странице нет ни шапки, ни цен. */
+    scripts.push('/thb-currency.js');
 
     const withScripts = new HTMLRewriter()
       .on('body', {
