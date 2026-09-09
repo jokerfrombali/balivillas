@@ -140,3 +140,29 @@ curl -s -o /dev/null -w "%{http_code} -> %{redirect_url}
 - Блог-страницы под запросы «bali villa with private pool <район>» — по одной в месяц.
 - Ссылки: профили в каталогах (TripAdvisor, Google Maps, Bali-каталоги) с
   ссылкой на сайт.
+
+## ИИ-краулеры: открыты, и это осознанно (09.09.2026)
+
+Проект нацелен на видимость в ИИ-ассистентах, поэтому на сайт пускаются все
+ИИ-краулеры. До 09.09.2026 это было не так, и `llms.txt` с `llms-full.txt`
+писались фактически впустую: Cloudflare блокировал тех, для кого они сделаны.
+
+Что было и что стало:
+
+| Настройка Cloudflare | Было | Стало |
+|---|---|---|
+| Security → Settings → Bot traffic → **Block AI bots** | «Block only on pages with ads», плюс с 15.09 в блок попадали смешанные краулеры | **Do not block (allow crawlers)**, смешанные краулеры разрешены |
+| AI Crawl Control → Signals → **Managed robots.txt** | включён, дописывал поверх нашего файла блок `Disallow: /` для GPTBot, ClaudeBot, Google-Extended, CCBot, Bytespider и других | выключен |
+| AI Crawl Control → Security | 15 краулеров в блоке | 0 |
+
+`robots.txt` теперь отдаётся наш собственный, 848 байт, с явным `Allow: /` для
+GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-Web, PerplexityBot,
+Google-Extended, Applebot-Extended и прочих.
+
+Проверка снаружи (curl с соответствующим User-Agent) — 200 у GPTBot, ClaudeBot,
+PerplexityBot, CCBot и Googlebot, включая `/llms-full.txt`.
+
+**Важно:** это настройки дашборда Cloudflare, из репозитория их не изменить.
+Что бы ни лежало в нашем `robots.txt`, включённый Managed robots.txt допишет
+своё сверху. Если однажды ИИ-ассистенты перестанут видеть сайт — проверять
+надо в первую очередь эти три места, а не файл в репозитории.
