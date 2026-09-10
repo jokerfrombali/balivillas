@@ -129,5 +129,52 @@
     ],
     "description": "A four-bedroom villa on a 400 m² plot in a quiet lane on the Sanur beach side, built in 2023 and already in our rental programme. 200 m² of house: a closed, air-conditioned living room and kitchen looking onto the garden, four bedrooms each with its own bathroom, and a 10 × 4 m pool with the greenery around it. Sold furnished, down to the seven air conditioners and the western kitchen. Seven to ten minutes on foot to the main street of Sanur, about thirty-five minutes to the airport.",
     "updatedAt": "2026-09-10"
+  },
+  {
+    "id": "sale-villa-kesari-4",
+    "villaId": "own-villa-kesari-4-3br-pool-villa-sanur",
+    "slug": "sanur/villa-kesari-4-3br",
+    "name": "Villa Kesari 4 — 3BR Pool Villa for Sale in Sanur, Bali",
+    "shortName": "Villa Kesari 4",
+    "ref": "THB-003",
+    "area": "Sanur",
+    "areaSlug": "sanur",
+    "address": "Jl. Kesari II, Sanur, South Denpasar",
+    "status": "available",
+    "priceUsd": 405835,
+    "ownership": "leasehold",
+    "leaseYears": 27,
+    "landSqm": 300,
+    "buildingSqm": 123,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "poolSqm": 21,
+    "features": [
+      "Three bedrooms, each with its own bathroom",
+      "Guest toilet with laundry",
+      "Enclosed kitchen and living area",
+      "Solid Merbau wood floors, windows and doors",
+      "Gypsum plasterboard, plastered and painted finish",
+      "21 m² private pool in mature greenery",
+      "Outdoor shower",
+      "Air conditioning and Wi-Fi",
+      "Outdoor parking"
+    ],
+    "notes": [
+      [
+        "The complex",
+        "One of six villas in a closed complex in the Kesari lanes of Sanur."
+      ],
+      [
+        "Build quality",
+        "Every stage of construction is documented; the work and the installed equipment come with warranties."
+      ],
+      [
+        "Suitable for",
+        "Living in, or renting nightly and monthly — the villa is already in our rental programme."
+      ]
+    ],
+    "description": "A three-bedroom villa in the quiet Kesari lanes of Sanur, one of six houses in a closed complex, already in our rental programme. 123 m² of interior on a 300 m² plot: an enclosed kitchen and living area, three bedrooms each with its own bathroom, a guest toilet with laundry, and a 21 m² pool set in mature greenery with an outdoor shower beside it. Built with solid Merbau floors, windows and doors; every stage of the build is documented and the work and equipment carry warranties.",
+    "updatedAt": "2026-09-10"
   }
 ]
