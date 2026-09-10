@@ -283,5 +283,93 @@
     ],
     "description": "A two-bedroom townhouse villa in central Sanur, built in 2025 over two floors and already in our rental programme. 105 m² of house on a 100 m² plot: an enclosed living room, dining room and kitchen downstairs, two bedrooms upstairs each with its own bathroom, a guest bathroom below, and a 2.5 × 4 m private pool with the house looking onto it. Sold furnished and ready to move into, with fibre internet, three air conditioners and open parking. A compact house for one or two people, or a small rental unit in an area that books all year.",
     "updatedAt": "2026-09-10"
+  },
+  {
+    "id": "sale-villa-sakura",
+    "villaId": null,
+    "slug": "sanur/villa-sakura-3br",
+    "name": "Villa Sakura — 3BR Villa for Sale in Sanur, Bali",
+    "shortName": "Villa Sakura",
+    "ref": "THB-006",
+    "area": "Sanur",
+    "areaSlug": "sanur",
+    "address": "Jl. Danau Tamblingan No.21, Sanur, Denpasar Selatan",
+    "lat": -8.69445,
+    "lng": 115.2638,
+    "coordsPending": true,
+    "status": "available",
+    "priceUsd": 520000,
+    "ownership": "leasehold",
+    "leaseUntil": 2057,
+    "landSqm": 300,
+    "buildingSqm": null,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "builtYear": null,
+    "poolSize": "9 m long",
+    "features": [
+      "Two floors, renovated throughout",
+      "Three bedrooms, each with its own bathroom",
+      "Enclosed living room, dining room and kitchen",
+      "Private pool, 9 m long, in a mature frangipani garden",
+      "Carved timber balconies over the garden on the upper floor",
+      "Bosch kitchen and laundry appliances",
+      "Fibre optic internet",
+      "Guest toilet with laundry on the ground floor",
+      "Walk-in wardrobe",
+      "Two further rooms on the ground floor, ready for any use"
+    ],
+    "notes": [
+      [
+        "The complex",
+        "A managed complex with its own management company and security on site."
+      ],
+      [
+        "Beach",
+        "About three minutes on foot to the ocean; the beachfront promenade and the restaurants of Danau Tamblingan are the same distance."
+      ],
+      [
+        "Views",
+        "Ocean glimpses from the first floor, and the mountains inland on a clear day."
+      ]
+    ],
+    "description": "A three-bedroom villa on Jalan Danau Tamblingan — the street that runs the length of Sanur, three minutes on foot from the ocean and the beachfront promenade. The house stands on 300 m² in a managed complex with its own security, and it has been renovated throughout: a 9-metre pool along the garden, frangipani trees over the lawn, and an enclosed living room, dining room and kitchen opening onto the water through timber doors. A lit travertine stair leads to three bedrooms under pitched alang-alang ceilings, each with a stone feature wall, its own bathroom and a carved timber balcony over the garden; the ocean shows from the upper floor, and the mountains inland on a clear day. Bosch appliances in the kitchen and the laundry, fibre internet, a walk-in wardrobe, a guest toilet downstairs and two further ground-floor rooms that can be an office, a gym or a fourth bedroom.",
+    "updatedAt": "2026-09-10",
+    "templateVillaId": "own-villa-kesari-4-3br-pool-villa-sanur",
+    "images": [
+      "/public-objects/images/villa-sakura-sanur-01.jpg",
+      "/public-objects/images/villa-sakura-sanur-02.jpg",
+      "/public-objects/images/villa-sakura-sanur-03.jpg",
+      "/public-objects/images/villa-sakura-sanur-04.jpg",
+      "/public-objects/images/villa-sakura-sanur-05.jpg",
+      "/public-objects/images/villa-sakura-sanur-06.jpg",
+      "/public-objects/images/villa-sakura-sanur-07.jpg",
+      "/public-objects/images/villa-sakura-sanur-08.jpg",
+      "/public-objects/images/villa-sakura-sanur-09.jpg",
+      "/public-objects/images/villa-sakura-sanur-10.jpg",
+      "/public-objects/images/villa-sakura-sanur-11.jpg",
+      "/public-objects/images/villa-sakura-sanur-12.jpg",
+      "/public-objects/images/villa-sakura-sanur-13.jpg",
+      "/public-objects/images/villa-sakura-sanur-14.jpg",
+      "/public-objects/images/villa-sakura-sanur-15.jpg",
+      "/public-objects/images/villa-sakura-sanur-16.jpg",
+      "/public-objects/images/villa-sakura-sanur-17.jpg",
+      "/public-objects/images/villa-sakura-sanur-18.jpg",
+      "/public-objects/images/villa-sakura-sanur-19.jpg",
+      "/public-objects/images/villa-sakura-sanur-20.jpg",
+      "/public-objects/images/villa-sakura-sanur-21.jpg",
+      "/public-objects/images/villa-sakura-sanur-22.jpg",
+      "/public-objects/images/villa-sakura-sanur-23.jpg",
+      "/public-objects/images/villa-sakura-sanur-24.jpg",
+      "/public-objects/images/villa-sakura-sanur-25.jpg",
+      "/public-objects/images/villa-sakura-sanur-26.jpg",
+      "/public-objects/images/villa-sakura-sanur-27.jpg",
+      "/public-objects/images/villa-sakura-sanur-28.jpg",
+      "/public-objects/images/villa-sakura-sanur-29.jpg",
+      "/public-objects/images/villa-sakura-sanur-30.jpg",
+      "/public-objects/images/villa-sakura-sanur-31.jpg",
+      "/public-objects/images/villa-sakura-sanur-32.jpg"
+    ],
+    "cardImage": "/public-objects/images/villa-sakura-sanur-01.jpg"
   }
 ]

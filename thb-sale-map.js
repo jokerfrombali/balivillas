@@ -161,11 +161,15 @@
       (r[1] || []).forEach(function (v) { villas[v.id] = v; });
 
       return (r[0] || []).filter(function (s) {
-        return s.status !== 'sold';
+        /* показываем только опубликованные: черновик без фотографий и
+           подтверждённой точки на карте делать нечего */
+        return s.status === 'available';
       }).map(function (s) {
+        /* Чужой объект своей виллы в аренде не имеет: у него координаты и
+           обложка лежат прямо в записи о продаже. */
         var v = villas[s.villaId] || {};
-        s.lat = v.lat; s.lng = v.lng;
-        s.image = v.cardImage || (v.images && v.images[0]) || '';
+        if (typeof s.lat !== 'number') { s.lat = v.lat; s.lng = v.lng; }
+        s.image = s.cardImage || v.cardImage || (v.images && v.images[0]) || '';
         return s;
       }).filter(function (s) {
         return typeof s.lat === 'number' && typeof s.lng === 'number';
