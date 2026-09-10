@@ -598,7 +598,11 @@
       add('/thb-guests.js');
       add('/thb-price.js');
     }
-    if (document.getElementById('section-location')) add('/thb-map.js');
+    /* В продажах секция та же, но карта другая: там свой thb-sale-map.js со
+       всеми объектами, и он приходит от воркера. Если подгрузить сюда ещё и
+       карту аренды, две карты дерутся за один контейнер. */
+    if (document.getElementById('section-location') &&
+        location.pathname.indexOf('/villas-for-sale/') !== 0) add('/thb-map.js');
   }
   function add(src) {
     var s = document.createElement('script');

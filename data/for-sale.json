@@ -176,5 +176,112 @@
     ],
     "description": "A three-bedroom villa in the quiet Kesari lanes of Sanur, one of six houses in a closed complex, already in our rental programme. 123 m² of interior on a 300 m² plot: an enclosed kitchen and living area, three bedrooms each with its own bathroom, a guest toilet with laundry, and a 21 m² pool set in mature greenery with an outdoor shower beside it. Built with solid Merbau floors, windows and doors; every stage of the build is documented and the work and equipment carry warranties.",
     "updatedAt": "2026-09-10"
+  },
+  {
+    "id": "sale-sanur-garden-pool-4br",
+    "villaId": "own-sanur-garden-pool-4br",
+    "slug": "sanur/garden-pool-villa-4br",
+    "name": "Sanur Garden Pool Villa — 4BR Villa for Sale in Sanur, Bali",
+    "shortName": "Sanur Garden Pool Villa",
+    "ref": "THB-004",
+    "area": "Sanur",
+    "areaSlug": "sanur",
+    "address": "Sanur Kauh, South Denpasar",
+    "status": "available",
+    "priceUsd": null,
+    "priceIdr": 8709750000,
+    "priceNote": "Negotiable. Transactions are settled in rupiah.",
+    "ownership": "leasehold",
+    "leaseYears": 28,
+    "landSqm": 280,
+    "buildingSqm": 230,
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "builtYear": 2025,
+    "poolSize": "2.5 × 7 m",
+    "features": [
+      "Four bedrooms, all with en-suite bathrooms",
+      "Guest toilet",
+      "Enclosed living room, dining room and kitchen",
+      "Two floors, terrace and balcony",
+      "Pool and garden view",
+      "Sold furnished",
+      "5 air conditioners",
+      "Fibre optic internet",
+      "Drilled well water",
+      "Open parking for one car"
+    ],
+    "notes": [
+      [
+        "Zoning",
+        "Commercial zoning — the villa may be rented out as well as lived in."
+      ],
+      [
+        "Beach",
+        "About five minutes to Sanur beach and the beachfront promenade."
+      ],
+      [
+        "Everyday",
+        "Hospital and gym about five minutes away; Sanur town centre and Denpasar are close by road."
+      ],
+      [
+        "Availability",
+        "Two units available in the same project."
+      ]
+    ],
+    "description": "A four-bedroom villa in Sanur Kauh, built in 2025 over two floors and already in our rental programme. 230 m² of house on a 280 m² plot: enclosed living room, dining room and kitchen, four bedrooms each with its own bathroom, a guest toilet, a terrace and a balcony over the pool and garden. About five minutes from the beach and the promenade, in a residential part of Sanur away from the busy strip, with a hospital and a gym at the same distance.",
+    "updatedAt": "2026-09-10"
+  },
+  {
+    "id": "sale-sanur-modern-2br",
+    "villaId": "own-sanur-modern-2br",
+    "slug": "sanur/modern-2br-pool-townhouse",
+    "name": "Modern 2BR Pool Townhouse — Villa for Sale in Sanur, Bali",
+    "shortName": "Modern 2BR Pool Townhouse",
+    "ref": "THB-005",
+    "area": "Sanur",
+    "areaSlug": "sanur",
+    "address": "Sanur, South Denpasar",
+    "status": "available",
+    "priceUsd": null,
+    "priceIdr": 4675500000,
+    "priceNote": "Transactions are settled in rupiah.",
+    "ownership": "leasehold",
+    "leaseYears": 33,
+    "landSqm": 100,
+    "buildingSqm": 105,
+    "bedrooms": 2,
+    "bathrooms": 3,
+    "builtYear": 2025,
+    "poolSize": "2.5 × 4 m",
+    "features": [
+      "Two bedrooms, both with en-suite bathrooms",
+      "Guest bathroom on the ground floor",
+      "Enclosed living room, dining room and kitchen",
+      "Two floors",
+      "Private pool, pool view from the house",
+      "Sold furnished",
+      "3 air conditioners",
+      "7,700 W power",
+      "Fibre optic internet",
+      "Drilled well water",
+      "Open parking"
+    ],
+    "notes": [
+      [
+        "Zoning",
+        "Residential zoning, in a residential lane rather than on a commercial strip."
+      ],
+      [
+        "Sanur",
+        "Walking distance to the shops and cafés of central Sanur; the beach and the promenade are a short ride away."
+      ],
+      [
+        "Suitable for",
+        "Living in, or renting nightly and monthly — the villa is already in our rental programme."
+      ]
+    ],
+    "description": "A two-bedroom townhouse villa in central Sanur, built in 2025 over two floors and already in our rental programme. 105 m² of house on a 100 m² plot: an enclosed living room, dining room and kitchen downstairs, two bedrooms upstairs each with its own bathroom, a guest bathroom below, and a 2.5 × 4 m private pool with the house looking onto it. Sold furnished and ready to move into, with fibre internet, three air conditioners and open parking. A compact house for one or two people, or a small rental unit in an area that books all year.",
+    "updatedAt": "2026-09-10"
   }
 ]

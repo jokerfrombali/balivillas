@@ -27,6 +27,10 @@
   var ZOOM_MIN = 14, ZOOM_MAX = 19;
   var RADIUS_M = 45;      /* радиус круга на местности, метры (~3 дома) */
 
+  /* Раздел продаж рисует свою карту (thb-sale-map.js) в этом же контейнере —
+     туда не лезем, иначе один скрипт затрёт другой. */
+  if (location.pathname.indexOf('/villas-for-sale/') === 0) return;
+
   var sec = document.getElementById('section-location');
   if (!sec) return;
 

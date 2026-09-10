@@ -712,11 +712,18 @@ export default {
        вместо них карточка объекта с заявкой. */
     const isSale = /^\/villas-for-sale\/[^/]+\/[^/]+\/$/.test(url.pathname);
 
+    /* Каталог продаж: хаб и страницы районов. Там та же карта со всеми нашими
+       объектами, что и на странице объекта, — покупателю нужен обзор. */
+    const isSaleList = /^\/villas-for-sale\/$/.test(url.pathname) ||
+                       /^\/villas-for-sale\/[^/]+\/$/.test(url.pathname);
+
     const scripts = isVilla
       ? ['/thb-price.js', '/thb-avail.js', '/thb-guests.js', '/thb-map.js', '/thb-gallery.js', '/thb-readmore.js']
       : isSale
-        ? ['/thb-map.js', '/thb-gallery.js', '/thb-readmore.js', '/thb-sale.js']
-        : ['/thb-cards.js'];   /* сам выходит, если карточек на странице нет */
+        ? ['/thb-sale-map.js', '/thb-gallery.js', '/thb-readmore.js', '/thb-sale.js']
+        : isSaleList
+          ? ['/thb-cards.js', '/thb-sale-map.js']
+          : ['/thb-cards.js'];   /* сам выходит, если карточек на странице нет */
 
     /* Переключатель валют нужен везде, где есть цены: и на вилле, и в каталоге,
        и на главной. Сам выходит, если на странице нет ни шапки, ни цен. */
