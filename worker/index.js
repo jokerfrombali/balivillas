@@ -717,13 +717,21 @@ export default {
     const isSaleList = /^\/villas-for-sale\/$/.test(url.pathname) ||
                        /^\/villas-for-sale\/[^/]+\/$/.test(url.pathname);
 
+    /* Каталог аренды: хаб, страницы районов и полный список. Карта там со
+       всеми виллами кругами «примерно здесь», как на странице виллы. */
+    const isRentList = /^\/property-rental\/$/.test(url.pathname) ||
+                       /^\/villas\/$/.test(url.pathname) ||
+                       /^\/villas\/[^/]+\/$/.test(url.pathname);
+
     const scripts = isVilla
       ? ['/thb-price.js', '/thb-avail.js', '/thb-guests.js', '/thb-map.js', '/thb-gallery.js', '/thb-readmore.js']
       : isSale
         ? ['/thb-sale-map.js', '/thb-gallery.js', '/thb-readmore.js', '/thb-sale.js']
         : isSaleList
           ? ['/thb-cards.js', '/thb-sale-map.js']
-          : ['/thb-cards.js'];   /* сам выходит, если карточек на странице нет */
+          : isRentList
+            ? ['/thb-cards.js', '/thb-rent-map.js']
+            : ['/thb-cards.js'];   /* сам выходит, если карточек на странице нет */
 
     /* Переключатель валют нужен везде, где есть цены: и на вилле, и в каталоге,
        и на главной. Сам выходит, если на странице нет ни шапки, ни цен. */
