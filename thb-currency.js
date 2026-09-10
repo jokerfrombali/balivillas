@@ -92,7 +92,25 @@
     return out;
   }
 
+  /* Цены на продажу заведены в долларах, а не в рупиях: так их называет
+     владелец и так они стоят в документах. Такие суммы помечены атрибутом
+     data-thb-usd, и пересчитываем мы их через рупию — курс у нас к ней. */
+  function usdNodes(root) {
+    return [].slice.call((root || document.body).querySelectorAll('[data-thb-usd]'));
+  }
+
+  function convertUsd(root) {
+    if (!rates || !rates.USD) return;
+    usdNodes(root).forEach(function (el) {
+      var usd = parseFloat(el.getAttribute('data-thb-usd'));
+      if (!isFinite(usd)) return;
+      if (cur === 'USD') { el.textContent = '$' + thousands(Math.round(usd)); return; }
+      el.textContent = fmt(usd / rates.USD, cur);
+    });
+  }
+
   function convert(root) {
+    convertUsd(root);
     walk(root || document.body).forEach(function (node) {
       var src = SRC.get(node);
 
@@ -305,9 +323,11 @@
       var saved = null;
       try { saved = localStorage.getItem(KEY); } catch (e) {}
 
-      /* Первый заход: показываем валюту страны гостя. Дальше — только его
-         собственный выбор, страну больше не спрашиваем. */
-      pick(saved && BY[saved] ? saved : (d.suggest || 'IDR'));
+      /* Первый заход: показываем валюту страны гостя. На страницах продажи —
+         доллары: цена объявлена в них, и рупия там сбивает с толку. Дальше
+         работает только собственный выбор гостя. */
+      var sale = !!document.querySelector('[data-thb-usd]');
+      pick(saved && BY[saved] ? saved : (sale ? 'USD' : (d.suggest || 'IDR')));
     }).catch(function () { /* без курсов остаются рупии, как и было */ });
   }
 
