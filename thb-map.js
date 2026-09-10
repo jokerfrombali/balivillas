@@ -154,6 +154,18 @@
   }
 
   function villa() {
+    /* Страница объекта на продажу — это та же вилла, но по другому адресу, и по
+       slug её в data/villas.json не найти. Поэтому генератор кладёт координаты
+       прямо в секцию, и мы берём их, не заглядывая в файл. */
+    var own = sec.getAttribute('data-thb-lat');
+    if (own) {
+      return Promise.resolve({
+        lat: parseFloat(own),
+        lng: parseFloat(sec.getAttribute('data-thb-lng')),
+        name: sec.getAttribute('data-thb-name') || document.title
+      });
+    }
+
     var path = location.pathname.replace(/\/+$/, '');
     var i = path.indexOf('/villa/');
     if (i < 0) return Promise.resolve(null);
