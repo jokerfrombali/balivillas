@@ -130,7 +130,9 @@ async function handleLead(req, env) {
   const t = wita(new Date());
   const no = await ticket(env);
   const cf = req.cf || {};
-  const source = d.source === 'whatsapp' ? 'WhatsApp' : 'Форма на сайте';
+  const source = d.source === 'whatsapp' ? 'WhatsApp'
+               : d.source === 'sale' ? 'Продажа объекта'
+               : 'Форма на сайте';
 
   const rows = [];
   if (d.villa) rows.push(['Вилла', d.villa]);
@@ -706,9 +708,15 @@ export default {
     const isVilla = /^\/villa\/[^/]+\/[^/]+\/$/.test(url.pathname) ||
                     /^\/villa\/[^/]+\/$/.test(url.pathname);
 
+    /* Объект на продажу: та же вёрстка, но без цен и календаря аренды —
+       вместо них карточка объекта с заявкой. */
+    const isSale = /^\/villas-for-sale\/[^/]+\/[^/]+\/$/.test(url.pathname);
+
     const scripts = isVilla
       ? ['/thb-price.js', '/thb-avail.js', '/thb-guests.js', '/thb-map.js', '/thb-gallery.js', '/thb-readmore.js']
-      : ['/thb-cards.js'];   /* сам выходит, если карточек на странице нет */
+      : isSale
+        ? ['/thb-map.js', '/thb-gallery.js', '/thb-readmore.js', '/thb-sale.js']
+        : ['/thb-cards.js'];   /* сам выходит, если карточек на странице нет */
 
     /* Переключатель валют нужен везде, где есть цены: и на вилле, и в каталоге,
        и на главной. Сам выходит, если на странице нет ни шапки, ни цен. */
