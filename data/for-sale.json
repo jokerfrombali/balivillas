@@ -307,32 +307,37 @@
     "builtYear": null,
     "poolSize": "9 m long",
     "features": [
-      "Two floors, 200 m² of house, fully renovated in 2026",
-      "Three bedrooms, each with its own bathroom",
-      "Enclosed living room, dining room and kitchen",
-      "Private pool, 9 m long, in a mature frangipani garden",
-      "Carved timber balconies over the garden on the upper floor",
-      "Sold fully furnished, down to the Bosch appliances",
-      "Fibre optic internet",
-      "Guest toilet with laundry on the ground floor",
+      "Two floors, 200 m² of house, renovated in 2026",
+      "Three bedrooms upstairs under alang-alang ceilings",
+      "Two marble bathrooms upstairs, one with a free-standing tub",
+      "Guest toilet with washer and dryer on the ground floor",
+      "Open living and dining room, closed kitchen with quartz worktops",
+      "One more ground-floor room, unfurnished — office, gym or fourth bedroom",
       "Walk-in wardrobe",
-      "Two further rooms on the ground floor, ready for any use"
+      "Carved timber balconies over the garden",
+      "Private pool, 9 m long, in a mature frangipani garden",
+      "Sold fully furnished, Bosch kitchen and laundry appliances",
+      "Fibre optic internet"
     ],
     "notes": [
       [
         "The complex",
-        "A managed complex with its own management company and security on site."
+        "A managed complex on Danau Tamblingan with its own management and security on site."
       ],
       [
         "Beach",
-        "About three minutes on foot to the ocean; the beachfront promenade and the restaurants of Danau Tamblingan are the same distance."
+        "About three minutes on foot to the ocean; the beachfront promenade, the restaurants and the shops of Sanur are the same walk."
       ],
       [
         "Views",
-        "Ocean glimpses from the first floor, and the mountains inland on a clear day."
+        "The ocean shows from the upper floor, and the mountains inland on a clear day."
+      ],
+      [
+        "Layout",
+        "Three bedrooms and two bathrooms upstairs, a guest toilet downstairs. The empty ground-floor room takes a fourth bedroom if a buyer wants one."
       ]
     ],
-    "description": "A three-bedroom villa on Jalan Danau Tamblingan — the street that runs the length of Sanur, three minutes on foot from the ocean and the beachfront promenade. The house stands on 300 m² in a managed complex with its own security, and it was renovated top to bottom in 2026: a 9-metre pool along the garden, frangipani trees over the lawn, and an enclosed living room, dining room and kitchen opening onto the water through timber doors. A lit travertine stair leads to three bedrooms under pitched alang-alang ceilings, each with a stone feature wall, its own bathroom and a carved timber balcony over the garden; the ocean shows from the upper floor, and the mountains inland on a clear day. The house is sold fully furnished, with Bosch appliances in the kitchen and the laundry, fibre internet, a walk-in wardrobe, a guest toilet downstairs and two further ground-floor rooms that can be an office, a gym or a fourth bedroom.",
+    "description": "A three-bedroom villa on Jalan Danau Tamblingan — the street that runs the length of Sanur — three minutes on foot from the ocean and the beachfront promenade. Two floors and 200 m² of house on a 300 m² plot, renovated top to bottom in 2026 and sold fully furnished.\n\nThe ground floor is modern and open: a living room and a dining table under lit ceilings, timber doors onto the pool terrace, and a closed kitchen in white and walnut with quartz worktops, an induction hob and an oven. Behind it sit a guest toilet with the laundry, a walk-in wardrobe and one more room the owners left empty — an office, a gym or a fourth bedroom, with its own glazed doors onto a planted courtyard. A travertine stair with lit treads and a glass balustrade leads upstairs.\n\nAbove, the house keeps its Balinese character: open rafters under alang-alang thatch, stone-clad walls behind the beds, travertine floors and carved timber balconies over the garden. Three bedrooms share two marble bathrooms with double vanities and walk-in showers, one of them with a free-standing tub at the window.\n\nOutside, a nine-metre pool in green stone mosaic runs the length of the lawn under old frangipani trees, with sun loungers on the terrace and a lounge corner at the far end. The villa stands in a managed complex with its own security; the ocean shows from the upper floor and the mountains inland on a clear day.",
     "updatedAt": "2026-09-10",
     "templateVillaId": "own-villa-kesari-4-3br-pool-villa-sanur",
     "images": [
