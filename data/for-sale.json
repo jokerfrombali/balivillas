@@ -3,20 +3,62 @@
     "id": "sale-premier-umalas-16",
     "villaId": "own-premier-umalas-16",
     "slug": "umalas/premier-umalas-16-3br-townhouse",
-    "name": "Premier Umalas 16 — 3BR Pool Townhouse for Sale in Umalas",
+    "name": "Premier Umalas 16 — 3BR Villa for Sale in Umalas, Bali",
     "shortName": "Premier Umalas 16",
     "ref": "THB-001",
     "area": "Umalas",
     "areaSlug": "umalas",
+    "address": "Jalan Umalas Klecung, Kerobokan Kelod, Kuta Utara",
     "status": "available",
+
     "priceUsd": 250000,
     "ownership": "leasehold",
-    "leaseYearsLeft": 27,
-    "landSqm": null,
-    "buildingSqm": null,
+    "leaseUntil": 2052,
+    "leaseExtensionYears": 10,
+
+    "landSqm": 146,
+    "buildingSqm": 158,
     "bedrooms": 3,
-    "bathrooms": 3,
-    "description": "A three-bedroom pool townhouse in the quiet lanes of Umalas, between Canggu and Seminyak, finished in dark stone and warm wood. Each bedroom has its own en-suite bathroom and a desk by the window; the enclosed living room and the kitchen with its island are air-conditioned, and glass doors open onto a private pool and a small planted courtyard. The house is already in our rental programme, so the buyer takes over a property with a running booking history.",
+    "bathrooms": 4,
+    "builtYear": 2023,
+    "poolSize": "4.4 × 2.25 m",
+
+    "income": {
+      "netMonthlyUsd": 2600,
+      "netYearUsd": 31200,
+      "roiPercent": 12.5,
+      "roiUpsidePercent": 16.8,
+      "period": "August 2025 – July 2026",
+      "rentedSince": "February 2024",
+      "note": "August–December 2025 are shown at the average of $2,700 a month.",
+      "manager": "PT Eleviate Catalyst Management",
+      "managedSince": "May 2026",
+      "channelManager": "AdvanceCM"
+    },
+
+    "legal": {
+      "permits": "PBG and SLF issued — the complex is certified for hotel use",
+      "owners": "Two owners, 50/50; one of them lives in Bali full time",
+      "basis": "Investment agreement 16U/PDG/XII/2022 of 11 January 2023 and the assignment of rights of 12 November 2025, signed with PT Premier Development Group",
+      "developer": "PT Premier Development Group",
+      "documents": "The full document pack is shared with a serious buyer on request"
+    },
+
+    "afterPurchase": [
+      ["Keep the current management", "Re-sign with the company running the villa now and carry on without changing anything."],
+      ["Move to another company", "Hand the villa to a different management team on your own terms."],
+      ["Run it yourself", "Rent it nightly or monthly and set the rates and the calendar yourself."],
+      ["Live in it", "Use the villa yourself, full time or between stays of your own guests."]
+    ],
+
+    "dealSteps": [
+      ["Documents first", "You get the contracts, the payment confirmations and the complex paperwork before anything is signed."],
+      ["Meet in Bali", "You meet the sellers and the developer in person — one of the owners lives here."],
+      ["Agree the settlement", "Payment is agreed between the parties: USDT, US dollars or rupiah."],
+      ["Assignment to you", "Papers are signed with the developer, who confirms the transfer of rights to the buyer."]
+    ],
+
+    "description": "A ready three-bedroom villa in the quiet lanes of Umalas, built in 2023 and rented out since February 2024 — the buyer takes over a working property, not a construction site. 158 m² of house on a 146 m² plot: three bedrooms with en-suite bathrooms and desks, an enclosed air-conditioned living room and kitchen, and glass doors onto a private 4.4 × 2.25 m pool and a planted courtyard. Over the twelve months to July 2026 the villa returned $2,600 a month net to the owners after running costs and the management fee.",
     "updatedAt": "2026-09-10"
   }
 ]
