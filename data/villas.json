@@ -79,8 +79,8 @@
       "/public-objects/images/premier-umalas-16-31.jpg",
       "/public-objects/images/premier-umalas-16-48.jpg"
     ],
-    "lat": -8.6665,
-    "lng": 115.1551,
+    "lat": -8.666457,
+    "lng": 115.155136,
     "airbnbUrl": "https://www.airbnb.com/rooms/1662141381391864374",
     "guestyListingId": null,
     "guestyBookingUrl": null,
@@ -205,7 +205,8 @@
       "fast-wifi"
     ],
     "url": "/villa/premier-umalas-16-3br-pool-townhouse/",
-    "galleryUrl": "/villa/premier-umalas-16-3br-pool-townhouse/gallery/"
+    "galleryUrl": "/villa/premier-umalas-16-3br-pool-townhouse/gallery/",
+    "address": "Jl.Umalas n89, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Индонезия"
   },
   {
     "id": "own-premier-umalas-17",
@@ -260,8 +261,8 @@
       "/public-objects/images/premier-umalas-17-6.jpg",
       "/public-objects/images/premier-umalas-17-22.jpg"
     ],
-    "lat": -8.6665,
-    "lng": 115.1551,
+    "lat": -8.666457,
+    "lng": 115.155136,
     "airbnbUrl": "https://www.airbnb.com/rooms/1631122907991519841",
     "guestyListingId": null,
     "guestyBookingUrl": null,
@@ -382,7 +383,8 @@
     ],
     "description": "Premier Umalas 17 is a two-bedroom home with a private pool in the quiet lanes of Umalas, the residential strip of small roads and rice fields between Canggu and Seminyak. Both bedrooms are en-suite and have their own balconies. Wi-Fi runs at 200 Mbps and the house has two separate workspaces, which makes it work for a couple staying for months as much as for a short holiday. Fully equipped kitchen, air conditioning and a Smart TV. Berawa and Canggu beaches are about 10 minutes away by bike. Sleeps 4.",
     "url": "/villa/premier-umalas-17-2br-pool-home/",
-    "galleryUrl": "/villa/premier-umalas-17-2br-pool-home/gallery/"
+    "galleryUrl": "/villa/premier-umalas-17-2br-pool-home/gallery/",
+    "address": "Jl.Umalas n89, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Индонезия"
   },
   {
     "id": "own-villa-black-pool",
@@ -477,8 +479,8 @@
       "/public-objects/images/villa-black-pool-64.jpg",
       "/public-objects/images/villa-black-pool-65.jpg"
     ],
-    "lat": -8.6968,
-    "lng": 115.2619,
+    "lat": -8.696777,
+    "lng": 115.261907,
     "airbnbUrl": "https://www.airbnb.com/rooms/1496048138640551505",
     "guestyListingId": null,
     "guestyBookingUrl": null,
@@ -653,7 +655,8 @@
       "/public-objects/images/villa-black-pool-5.jpg"
     ],
     "url": "/villa/sanur/villa-black-pool-4br-sanur/",
-    "galleryUrl": "/villa/sanur/villa-black-pool-4br-sanur/gallery/"
+    "galleryUrl": "/villa/sanur/villa-black-pool-4br-sanur/gallery/",
+    "address": "8736+7M9, Jl. Kesari II, Sanur, Denpasar Selatan, Kota Denpasar, Bali 80228, Индонезия"
   },
   {
     "id": "own-sanur-2br-townhouse",
@@ -724,8 +727,8 @@
       "/public-objects/images/sanur-2br-townhouse-12.jpg",
       "/public-objects/images/sanur-2br-townhouse-15.jpg"
     ],
-    "lat": -8.6935,
-    "lng": 115.2593,
+    "lat": -8.69347,
+    "lng": 115.259254,
     "airbnbUrl": "https://www.airbnb.com/rooms/1623064753663498759",
     "guestyListingId": null,
     "guestyBookingUrl": null,
@@ -878,7 +881,8 @@
       "luxury": false
     },
     "url": "/villa/sanur/stylish-2br-pool-townhouse-sanur/",
-    "galleryUrl": "/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"
+    "galleryUrl": "/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/",
+    "address": "Jl. Pungutan No.66 C, Sanur, Denpasar Selatan, Kota Denpasar, Bali 80228, Индонезия"
   },
   {
     "id": "own-sanur-modern-2br",
@@ -948,8 +952,8 @@
       "/public-objects/images/sanur-modern-2br-townhouse-12.jpg",
       "/public-objects/images/sanur-modern-2br-townhouse-28.jpg"
     ],
-    "lat": -8.6904,
-    "lng": 115.2589,
+    "lat": -8.69347,
+    "lng": 115.259254,
     "airbnbUrl": "https://www.airbnb.com/rooms/1640382948484924036",
     "guestyListingId": null,
     "guestyBookingUrl": null,
@@ -1095,7 +1099,8 @@
       "luxury": false
     },
     "url": "/villa/sanur/modern-2br-pool-townhouse-sanur/",
-    "galleryUrl": "/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"
+    "galleryUrl": "/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/",
+    "address": "Jl. Pungutan No.66 C, Sanur, Denpasar Selatan, Kota Denpasar, Bali 80228, Индонезия"
   },
   {
     "id": "own-lucky-lily-sanur-3br",
@@ -1631,9 +1636,10 @@
     "monthly": false,
     "url": "/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/",
     "galleryUrl": "/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/",
-    "lat": -8.6978,
-    "lng": 115.2595,
-    "updatedAt": "2026-07-31"
+    "lat": -8.697793,
+    "lng": 115.259519,
+    "updatedAt": "2026-07-31",
+    "address": "8725+WRC, Jl. Kesari II, Sanur, Denpasar Selatan, Kota Denpasar, Bali 80228, Индонезия"
   },
   {
     "id": "own-the-wave-6br-beachside-villa-canggu",
@@ -1924,9 +1930,10 @@
     "monthly": false,
     "url": "/villa/canggu/the-wave-6br-beachside-villa-canggu/",
     "galleryUrl": "/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/",
-    "lat": -8.6675,
-    "lng": 115.1443,
-    "updatedAt": "2026-07-31"
+    "lat": -8.667549,
+    "lng": 115.144327,
+    "updatedAt": "2026-07-31",
+    "address": "Jl. Subak Sari 13 Gg. Beji No.5, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Индонезия"
   },
   {
     "id": "own-sanur-garden-pool-4br",
@@ -2172,9 +2179,10 @@
     "monthly": null,
     "url": "/villa/sanur/garden-pool-villa-4br-sanur/",
     "galleryUrl": "/villa/sanur/garden-pool-villa-4br-sanur/gallery/",
-    "lat": -8.7064,
-    "lng": 115.2471,
-    "updatedAt": "2026-07-29"
+    "lat": -8.706352,
+    "lng": 115.247099,
+    "updatedAt": "2026-07-29",
+    "address": "Jl.Tanjung No.25A, Sanur Kauh, Denpasar Selatan, Kota Denpasar, Bali 80227, Индонезия"
   },
   {
     "id": "own-eco-private-1br-ungasan",
@@ -2326,9 +2334,10 @@
     "monthly": null,
     "url": "/villa/ungasan/eco-private-1br-pool-villa-ungasan/",
     "galleryUrl": "/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/",
-    "lat": -8.8185,
-    "lng": 115.1767,
-    "updatedAt": "2026-07-31"
+    "lat": -8.818493,
+    "lng": 115.176715,
+    "updatedAt": "2026-07-31",
+    "address": "Jl. Pura Lempuyang No.10, Kutuh, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Индонезия"
   },
   {
     "id": "own-eco-teak-2br-ungasan",
@@ -2386,8 +2395,8 @@
     "monthly": null,
     "url": "/villa/ungasan/eco-teak-2br-pool-villa-ungasan/",
     "galleryUrl": "/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/",
-    "lat": -8.8185,
-    "lng": 115.1766,
+    "lat": -8.818546,
+    "lng": 115.176586,
     "updatedAt": "2026-07-30",
     "images": [
       "/public-objects/images/eco-teak-2br-ungasan-23.jpg",
@@ -2516,7 +2525,8 @@
           "/public-objects/images/eco-teak-2br-ungasan-28.jpg"
         ]
       }
-    ]
+    ],
+    "address": "Jl. Pura Lempuyang No.10, Kutuh, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Индонезия"
   },
   {
     "id": "own-eco-exclusive-1br-ungasan",
@@ -2574,8 +2584,8 @@
     "monthly": null,
     "url": "/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/",
     "galleryUrl": "/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/",
-    "lat": -8.8185,
-    "lng": 115.1766,
+    "lat": -8.818535,
+    "lng": 115.176564,
     "updatedAt": "2026-07-30",
     "images": [
       "/public-objects/images/exclusive-1br-ungasan-12.jpg",
@@ -2644,7 +2654,8 @@
           "/public-objects/images/exclusive-1br-ungasan-13.jpg"
         ]
       }
-    ]
+    ],
+    "address": "Jl. Pura Lempuyang No.10, Kutuh, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Индонезия"
   },
   {
     "id": "own-leonardo-9br-resort-pererenan",
@@ -2700,8 +2711,8 @@
     "monthly": null,
     "url": "/villa/canggu/leonardo-9br-resort-pererenan/",
     "galleryUrl": "/villa/canggu/leonardo-9br-resort-pererenan/gallery/",
-    "lat": -8.6465,
-    "lng": 115.1234,
+    "lat": -8.646545,
+    "lng": 115.123438,
     "updatedAt": "2026-09-09",
     "images": [
       "/public-objects/images/villa-leonardo-pererenan-2.jpg",
@@ -2874,7 +2885,8 @@
           "/public-objects/images/villa-leonardo-pererenan-54.jpg"
         ]
       }
-    ]
+    ],
+    "address": "End of gang, Jl. Pantai Pererenan Gg. Mina No.128, Pererenan, Kec. Mengwi, Kabupaten Badung, Bali 80351, Индонезия"
   },
   {
     "id": "own-papat-4br-pool-villa-umalas",
@@ -2933,8 +2945,8 @@
     "monthly": null,
     "url": "/villa/umalas/villa-papat-4br-pool-villa-umalas/",
     "galleryUrl": "/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/",
-    "lat": -8.6678,
-    "lng": 115.151,
+    "lat": -8.667838,
+    "lng": 115.150992,
     "updatedAt": "2026-09-09",
     "images": [
       "/public-objects/images/villa-papat-umalas-1.jpg",
@@ -3073,7 +3085,8 @@
           "/public-objects/images/villa-papat-umalas-44.jpg"
         ]
       }
-    ]
+    ],
+    "address": "85J2+R8P, Jl. Umalas Tunon, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Индонезия"
   },
   {
     "id": "own-eco-tropical-1br-ungasan",
@@ -3131,8 +3144,8 @@
     "monthly": null,
     "url": "/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/",
     "galleryUrl": "/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/",
-    "lat": -8.8185,
-    "lng": 115.1766,
+    "lat": -8.818535,
+    "lng": 115.176564,
     "updatedAt": "2026-09-09",
     "images": [
       "/public-objects/images/eco-tropical-1br-ungasan-1.jpg",
@@ -3201,6 +3214,7 @@
           "/public-objects/images/eco-tropical-1br-ungasan-13.jpg"
         ]
       }
-    ]
+    ],
+    "address": "Jl. Pura Lempuyang No.10, Kutuh, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Индонезия"
   }
 ]
