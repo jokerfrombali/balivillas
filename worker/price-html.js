@@ -54,7 +54,7 @@ export async function injectPrices(res, env, pathname) {
   const cardText = (t) => {
     if (!card) return;
     if (t.text.indexOf('On request') < 0) return;
-    t.replace(money(card.currency, card.price) + PER + ' ', { html: true });
+    t.replace('from ' + money(card.currency, card.price) + PER + ' ', { html: true });
   };
 
   return new HTMLRewriter()

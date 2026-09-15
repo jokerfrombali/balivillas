@@ -92,7 +92,7 @@
         var node = priceText(cards[i]);
         if (!node) continue;
 
-        node.nodeValue = money(p.price, p.currency);
+        node.nodeValue = 'from ' + money(p.price, p.currency);
         var per = document.createElement('span');
         per.className = 'thb-card-per';
         per.textContent = 'night';

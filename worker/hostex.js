@@ -62,6 +62,15 @@ export const LINKS = [
   { villa: 'own-papat-4br-pool-villa-umalas',         pid: 12782391, hx: 'Papat' },
   { villa: 'own-leonardo-9br-resort-pererenan',       pid: 12782379, hx: 'Leonardo' },
 
+  /* Комплекс Serenity на Jl. Kesari II, заведён в Hostex 2026-09. Id взяты из
+     кабинета и сверены с уже связанными объектами: все 13 прежних pid совпали
+     один в один, значит нумерация та же. */
+  { villa: 'own-serenity-3',                          pid: 12792879, hx: 'Serenity 3' },
+  { villa: 'own-serenity-9',                          pid: 12792880, hx: 'Serenity 9' },
+  { villa: 'own-serenity-6-1',                        pid: 12793985, hx: 'Serenity 6.1' },
+  { villa: 'own-serenity-6-2',                        pid: 12793986, hx: 'Serenity 6.2' },
+  { villa: 'own-serenity-10',                         pid: 12793987, hx: 'Serenity 10' },
+
   /* Этих двух в Hostex нет ни под каким именем: Pungutan 2 туда не завели,
      Lucky Lily не заводили и в Hostfully. Пока не появятся — календарь и цена
      на их страницах остаются пустыми, а не выдуманными. */

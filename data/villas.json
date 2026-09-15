@@ -3216,5 +3216,1006 @@
       }
     ],
     "address": "Jl. Pura Lempuyang No.10, Kutuh, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Индонезия"
+  },
+  {
+    "id": "own-serenity-3",
+    "slug": "sanur/serenity-3-sunlit-3br-pool-villa-sanur",
+    "name": "Serenity 3 — Sun-Lit 3BR Pool Villa in Sanur",
+    "area": "Sanur",
+    "areaSlug": "sanur",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "guests": 6,
+    "priceNight": null,
+    "priceMonth": null,
+    "currency": "USD",
+    "amenities": [
+      "Private plunge pool",
+      "Tropical garden and sun terrace",
+      "Three en-suite bedrooms",
+      "Fast Wi-Fi",
+      "Workspace with natural light",
+      "Fully equipped kitchen",
+      "24/7 security in the complex",
+      "Housekeeping included",
+      "About 500 m to Sanur Beach — a 7-minute walk",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Hair dryer",
+      "Cleaning products",
+      "Shampoo",
+      "Hot water",
+      "Hangers",
+      "Bed linens",
+      "Safe",
+      "Refrigerator",
+      "Cooking basics",
+      "Dishes and silverware",
+      "Stove",
+      "Hot water kettle",
+      "Private entrance",
+      "Beach essentials",
+      "Cleaning available during stay",
+      "Exterior security cameras on property",
+      "Washer"
+    ],
+    "images": [
+      "/public-objects/images/serenity-3-sanur-01.jpg",
+      "/public-objects/images/serenity-3-sanur-02.jpg",
+      "/public-objects/images/serenity-3-sanur-03.jpg",
+      "/public-objects/images/serenity-3-sanur-04.jpg",
+      "/public-objects/images/serenity-3-sanur-05.jpg",
+      "/public-objects/images/serenity-3-sanur-06.jpg",
+      "/public-objects/images/serenity-3-sanur-07.jpg",
+      "/public-objects/images/serenity-3-sanur-08.jpg",
+      "/public-objects/images/serenity-3-sanur-09.jpg",
+      "/public-objects/images/serenity-3-sanur-10.jpg",
+      "/public-objects/images/serenity-3-sanur-11.jpg",
+      "/public-objects/images/serenity-3-sanur-12.jpg",
+      "/public-objects/images/serenity-3-sanur-13.jpg",
+      "/public-objects/images/serenity-3-sanur-14.jpg",
+      "/public-objects/images/serenity-3-sanur-15.jpg",
+      "/public-objects/images/serenity-3-sanur-16.jpg",
+      "/public-objects/images/serenity-3-sanur-17.jpg",
+      "/public-objects/images/serenity-3-sanur-18.jpg",
+      "/public-objects/images/serenity-3-sanur-19.jpg",
+      "/public-objects/images/serenity-3-sanur-20.jpg",
+      "/public-objects/images/serenity-3-sanur-21.jpg",
+      "/public-objects/images/serenity-3-sanur-22.jpg",
+      "/public-objects/images/serenity-3-sanur-23.jpg",
+      "/public-objects/images/serenity-3-sanur-24.jpg",
+      "/public-objects/images/serenity-3-sanur-25.jpg",
+      "/public-objects/images/serenity-3-sanur-26.jpg",
+      "/public-objects/images/serenity-3-sanur-27.jpg",
+      "/public-objects/images/serenity-3-sanur-28.jpg",
+      "/public-objects/images/serenity-3-sanur-29.jpg",
+      "/public-objects/images/serenity-3-sanur-30.jpg",
+      "/public-objects/images/serenity-3-sanur-31.jpg",
+      "/public-objects/images/serenity-3-sanur-32.jpg",
+      "/public-objects/images/serenity-3-sanur-33.jpg",
+      "/public-objects/images/serenity-3-sanur-34.jpg",
+      "/public-objects/images/serenity-3-sanur-35.jpg",
+      "/public-objects/images/serenity-3-sanur-36.jpg",
+      "/public-objects/images/serenity-3-sanur-37.jpg",
+      "/public-objects/images/serenity-3-sanur-38.jpg"
+    ],
+    "cardImage": "/public-objects/images/serenity-3-sanur-37.jpg",
+    "topGallery": [
+      "/public-objects/images/serenity-3-sanur-37.jpg",
+      "/public-objects/images/serenity-3-sanur-01.jpg",
+      "/public-objects/images/serenity-3-sanur-10.jpg",
+      "/public-objects/images/serenity-3-sanur-33.jpg",
+      "/public-objects/images/serenity-3-sanur-05.jpg"
+    ],
+    "lat": -8.6974013,
+    "lng": 115.2601836,
+    "airbnbUrl": "https://www.airbnb.com/rooms/1771728939659315869",
+    "guestyListingId": null,
+    "guestyBookingUrl": null,
+    "bookingUrl": null,
+    "photosSource": "https://www.airbnb.com/rooms/1771728939659315869",
+    "monthly": false,
+    "updatedAt": "2026-09-15",
+    "photoGroups": [
+      {
+        "name": "Living room",
+        "airbnbLabel": "Living room",
+        "images": [
+          "/public-objects/images/serenity-3-sanur-01.jpg",
+          "/public-objects/images/serenity-3-sanur-02.jpg",
+          "/public-objects/images/serenity-3-sanur-03.jpg",
+          "/public-objects/images/serenity-3-sanur-04.jpg"
+        ]
+      },
+      {
+        "name": "Full kitchen",
+        "airbnbLabel": "Full kitchen",
+        "images": [
+          "/public-objects/images/serenity-3-sanur-05.jpg",
+          "/public-objects/images/serenity-3-sanur-06.jpg",
+          "/public-objects/images/serenity-3-sanur-07.jpg",
+          "/public-objects/images/serenity-3-sanur-08.jpg"
+        ]
+      },
+      {
+        "name": "Dining area",
+        "airbnbLabel": "Dining area",
+        "images": [
+          "/public-objects/images/serenity-3-sanur-09.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 1",
+        "airbnbLabel": "Bedroom 1",
+        "images": [
+          "/public-objects/images/serenity-3-sanur-10.jpg",
+          "/public-objects/images/serenity-3-sanur-11.jpg",
+          "/public-objects/images/serenity-3-sanur-12.jpg",
+          "/public-objects/images/serenity-3-sanur-13.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 2",
+        "airbnbLabel": "Bedroom 2",
+        "images": [
+          "/public-objects/images/serenity-3-sanur-14.jpg",
+          "/public-objects/images/serenity-3-sanur-15.jpg",
+          "/public-objects/images/serenity-3-sanur-16.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 3",
+        "airbnbLabel": "Bedroom 3",
+        "images": [
+          "/public-objects/images/serenity-3-sanur-17.jpg",
+          "/public-objects/images/serenity-3-sanur-18.jpg",
+          "/public-objects/images/serenity-3-sanur-19.jpg",
+          "/public-objects/images/serenity-3-sanur-20.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 1",
+        "airbnbLabel": "Full bathroom 1",
+        "images": [
+          "/public-objects/images/serenity-3-sanur-21.jpg",
+          "/public-objects/images/serenity-3-sanur-22.jpg",
+          "/public-objects/images/serenity-3-sanur-23.jpg",
+          "/public-objects/images/serenity-3-sanur-24.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 2",
+        "airbnbLabel": "Full bathroom 2",
+        "images": [
+          "/public-objects/images/serenity-3-sanur-25.jpg",
+          "/public-objects/images/serenity-3-sanur-26.jpg",
+          "/public-objects/images/serenity-3-sanur-27.jpg",
+          "/public-objects/images/serenity-3-sanur-28.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 3",
+        "airbnbLabel": "Full bathroom 3",
+        "images": [
+          "/public-objects/images/serenity-3-sanur-29.jpg",
+          "/public-objects/images/serenity-3-sanur-30.jpg",
+          "/public-objects/images/serenity-3-sanur-31.jpg",
+          "/public-objects/images/serenity-3-sanur-32.jpg"
+        ]
+      },
+      {
+        "name": "Exterior",
+        "airbnbLabel": "Exterior",
+        "images": [
+          "/public-objects/images/serenity-3-sanur-33.jpg",
+          "/public-objects/images/serenity-3-sanur-34.jpg",
+          "/public-objects/images/serenity-3-sanur-35.jpg",
+          "/public-objects/images/serenity-3-sanur-36.jpg"
+        ]
+      },
+      {
+        "name": "Pool",
+        "airbnbLabel": "Pool",
+        "images": [
+          "/public-objects/images/serenity-3-sanur-37.jpg",
+          "/public-objects/images/serenity-3-sanur-38.jpg"
+        ]
+      }
+    ],
+    "description": "Serenity 3 is a three-bedroom villa in the gated Serenity complex on Jl. Kesari II in Sanur, about 500 m from the beach — a seven-minute walk. All three bedrooms are en-suite and air-conditioned, with large windows onto the garden. The living room has a Smart TV, the kitchen is fully equipped, and glass doors open onto a private plunge pool in a planted courtyard with a sun terrace. The layout follows Vastu principles, which here means bright rooms through the day. Fast Wi-Fi and a workspace with natural light, free parking, 24/7 security in the complex, housekeeping and pool and garden maintenance included. Suits families, couples and people working remotely. Sleeps 6.",
+    "categories": [
+      "all-villas",
+      "property-rental",
+      "area:sanur",
+      "bedrooms:3",
+      "area-bedrooms:sanur:3",
+      "new-on-thehost",
+      "filter:private-pool",
+      "filter:pool",
+      "filter:garden",
+      "filter:fast-wifi",
+      "filter:kitchen",
+      "filter:air-conditioning",
+      "filter:parking",
+      "filter:near-beach",
+      "filter:workspace",
+      "filter:family"
+    ],
+    "filterTags": [
+      "private-pool",
+      "pool",
+      "garden",
+      "fast-wifi",
+      "kitchen",
+      "air-conditioning",
+      "parking",
+      "near-beach",
+      "workspace",
+      "family"
+    ],
+    "seoSections": {
+      "allVillas": true,
+      "area": true,
+      "bedroomPage": true,
+      "monthly": false,
+      "newOnSite": true,
+      "luxury": false
+    },
+    "url": "/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/",
+    "galleryUrl": "/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/",
+    "address": "Jl. Kesari II No.8-6, Sanur, Denpasar Selatan, Kota Denpasar, Bali 80228, Indonesia"
+  },
+  {
+    "id": "own-serenity-9",
+    "slug": "sanur/serenity-9-elegant-3br-pool-villa-sanur",
+    "name": "Serenity 9 — Elegant 3BR Pool Villa with Garden in Sanur",
+    "area": "Sanur",
+    "areaSlug": "sanur",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "guests": 6,
+    "priceNight": null,
+    "priceMonth": null,
+    "currency": "USD",
+    "amenities": [
+      "Private pool",
+      "Sunbathing area",
+      "Tropical greenery",
+      "Three en-suite bedrooms",
+      "Fast Wi-Fi",
+      "Fully equipped kitchen",
+      "24/7 security in the complex",
+      "Cleaning included",
+      "About 500 m to Sanur Beach — a 7-minute walk",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Hair dryer",
+      "Cleaning products",
+      "Shampoo",
+      "Hot water",
+      "Hangers",
+      "Bed linens",
+      "Refrigerator",
+      "Microwave",
+      "Cooking basics",
+      "Dishes and silverware",
+      "Stove",
+      "Hot water kettle",
+      "Coffee and tea",
+      "Private entrance",
+      "Beach essentials",
+      "Cleaning available during stay",
+      "Exterior security cameras on property",
+      "Washer"
+    ],
+    "images": [
+      "/public-objects/images/serenity-9-sanur-01.jpg",
+      "/public-objects/images/serenity-9-sanur-02.jpg",
+      "/public-objects/images/serenity-9-sanur-03.jpg",
+      "/public-objects/images/serenity-9-sanur-04.jpg",
+      "/public-objects/images/serenity-9-sanur-05.jpg",
+      "/public-objects/images/serenity-9-sanur-06.jpg",
+      "/public-objects/images/serenity-9-sanur-07.jpg",
+      "/public-objects/images/serenity-9-sanur-08.jpg",
+      "/public-objects/images/serenity-9-sanur-09.jpg",
+      "/public-objects/images/serenity-9-sanur-10.jpg",
+      "/public-objects/images/serenity-9-sanur-11.jpg",
+      "/public-objects/images/serenity-9-sanur-12.jpg",
+      "/public-objects/images/serenity-9-sanur-13.jpg",
+      "/public-objects/images/serenity-9-sanur-14.jpg",
+      "/public-objects/images/serenity-9-sanur-15.jpg",
+      "/public-objects/images/serenity-9-sanur-16.jpg",
+      "/public-objects/images/serenity-9-sanur-17.jpg",
+      "/public-objects/images/serenity-9-sanur-18.jpg",
+      "/public-objects/images/serenity-9-sanur-19.jpg",
+      "/public-objects/images/serenity-9-sanur-20.jpg",
+      "/public-objects/images/serenity-9-sanur-21.jpg",
+      "/public-objects/images/serenity-9-sanur-22.jpg",
+      "/public-objects/images/serenity-9-sanur-23.jpg",
+      "/public-objects/images/serenity-9-sanur-24.jpg",
+      "/public-objects/images/serenity-9-sanur-25.jpg",
+      "/public-objects/images/serenity-9-sanur-26.jpg",
+      "/public-objects/images/serenity-9-sanur-27.jpg",
+      "/public-objects/images/serenity-9-sanur-28.jpg",
+      "/public-objects/images/serenity-9-sanur-29.jpg",
+      "/public-objects/images/serenity-9-sanur-30.jpg",
+      "/public-objects/images/serenity-9-sanur-31.jpg",
+      "/public-objects/images/serenity-9-sanur-32.jpg"
+    ],
+    "cardImage": "/public-objects/images/serenity-9-sanur-31.jpg",
+    "topGallery": [
+      "/public-objects/images/serenity-9-sanur-31.jpg",
+      "/public-objects/images/serenity-9-sanur-01.jpg",
+      "/public-objects/images/serenity-9-sanur-11.jpg",
+      "/public-objects/images/serenity-9-sanur-04.jpg",
+      "/public-objects/images/serenity-9-sanur-10.jpg"
+    ],
+    "lat": -8.6974013,
+    "lng": 115.2601836,
+    "airbnbUrl": "https://www.airbnb.com/rooms/1772324108236974011",
+    "guestyListingId": null,
+    "guestyBookingUrl": null,
+    "bookingUrl": null,
+    "photosSource": "https://www.airbnb.com/rooms/1772324108236974011",
+    "monthly": false,
+    "updatedAt": "2026-09-15",
+    "photoGroups": [
+      {
+        "name": "Living room",
+        "airbnbLabel": "Living room",
+        "images": [
+          "/public-objects/images/serenity-9-sanur-01.jpg",
+          "/public-objects/images/serenity-9-sanur-02.jpg",
+          "/public-objects/images/serenity-9-sanur-03.jpg"
+        ]
+      },
+      {
+        "name": "Full kitchen",
+        "airbnbLabel": "Full kitchen",
+        "images": [
+          "/public-objects/images/serenity-9-sanur-04.jpg",
+          "/public-objects/images/serenity-9-sanur-05.jpg",
+          "/public-objects/images/serenity-9-sanur-06.jpg",
+          "/public-objects/images/serenity-9-sanur-07.jpg",
+          "/public-objects/images/serenity-9-sanur-08.jpg",
+          "/public-objects/images/serenity-9-sanur-09.jpg"
+        ]
+      },
+      {
+        "name": "Dining area",
+        "airbnbLabel": "Dining area",
+        "images": [
+          "/public-objects/images/serenity-9-sanur-10.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 1",
+        "airbnbLabel": "Bedroom 1",
+        "images": [
+          "/public-objects/images/serenity-9-sanur-11.jpg",
+          "/public-objects/images/serenity-9-sanur-12.jpg",
+          "/public-objects/images/serenity-9-sanur-13.jpg",
+          "/public-objects/images/serenity-9-sanur-14.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 2",
+        "airbnbLabel": "Bedroom 2",
+        "images": [
+          "/public-objects/images/serenity-9-sanur-15.jpg",
+          "/public-objects/images/serenity-9-sanur-16.jpg",
+          "/public-objects/images/serenity-9-sanur-17.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 3",
+        "airbnbLabel": "Bedroom 3",
+        "images": [
+          "/public-objects/images/serenity-9-sanur-18.jpg",
+          "/public-objects/images/serenity-9-sanur-19.jpg",
+          "/public-objects/images/serenity-9-sanur-20.jpg",
+          "/public-objects/images/serenity-9-sanur-21.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 1",
+        "airbnbLabel": "Full bathroom 1",
+        "images": [
+          "/public-objects/images/serenity-9-sanur-22.jpg",
+          "/public-objects/images/serenity-9-sanur-23.jpg",
+          "/public-objects/images/serenity-9-sanur-24.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 2",
+        "airbnbLabel": "Full bathroom 2",
+        "images": [
+          "/public-objects/images/serenity-9-sanur-25.jpg",
+          "/public-objects/images/serenity-9-sanur-26.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 3",
+        "airbnbLabel": "Full bathroom 3",
+        "images": [
+          "/public-objects/images/serenity-9-sanur-27.jpg",
+          "/public-objects/images/serenity-9-sanur-28.jpg",
+          "/public-objects/images/serenity-9-sanur-29.jpg",
+          "/public-objects/images/serenity-9-sanur-30.jpg"
+        ]
+      },
+      {
+        "name": "Pool",
+        "airbnbLabel": "Pool",
+        "images": [
+          "/public-objects/images/serenity-9-sanur-31.jpg",
+          "/public-objects/images/serenity-9-sanur-32.jpg"
+        ]
+      }
+    ],
+    "description": "Serenity 9 is a secluded three-bedroom pool villa in the gated Serenity complex on Jl. Kesari II in Sanur, about 500 m from the beach — a seven-minute walk. Each bedroom has its own bathroom and air conditioning. There is a lounge with a Smart TV, a fully equipped kitchen with a microwave and coffee, a dining nook, and a private pool with a sunbathing area surrounded by tropical greenery. The Vastu-based layout keeps the rooms bright through the day. Fast internet, free parking, 24/7 security in the complex and cleaning included. Sleeps 6.",
+    "categories": [
+      "all-villas",
+      "property-rental",
+      "area:sanur",
+      "bedrooms:3",
+      "area-bedrooms:sanur:3",
+      "new-on-thehost",
+      "filter:private-pool",
+      "filter:pool",
+      "filter:garden",
+      "filter:fast-wifi",
+      "filter:kitchen",
+      "filter:air-conditioning",
+      "filter:parking",
+      "filter:near-beach",
+      "filter:family"
+    ],
+    "filterTags": [
+      "private-pool",
+      "pool",
+      "garden",
+      "fast-wifi",
+      "kitchen",
+      "air-conditioning",
+      "parking",
+      "near-beach",
+      "family"
+    ],
+    "seoSections": {
+      "allVillas": true,
+      "area": true,
+      "bedroomPage": true,
+      "monthly": false,
+      "newOnSite": true,
+      "luxury": false
+    },
+    "url": "/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/",
+    "galleryUrl": "/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/",
+    "address": "Jl. Kesari II No.8-6, Sanur, Denpasar Selatan, Kota Denpasar, Bali 80228, Indonesia"
+  },
+  {
+    "id": "own-serenity-6-1",
+    "slug": "sanur/serenity-6-1-elegant-2br-villa-sanur",
+    "name": "Serenity 6.1 — Elegant 2BR Villa near the Beach in Sanur",
+    "area": "Sanur",
+    "areaSlug": "sanur",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "guests": 4,
+    "priceNight": null,
+    "priceMonth": null,
+    "currency": "USD",
+    "amenities": [
+      "Pool shared with one neighbouring villa",
+      "Small garden shared with one neighbouring villa",
+      "Private separate entrance",
+      "Separate fully equipped kitchen",
+      "Two en-suite bedrooms",
+      "Fast Wi-Fi",
+      "Dedicated workspace",
+      "About 500 m to Sanur Beach — a 7-minute walk",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Hair dryer",
+      "Cleaning products",
+      "Shampoo",
+      "Hot water",
+      "Hangers",
+      "Bed linens",
+      "Safe",
+      "Refrigerator",
+      "Cooking basics",
+      "Dishes and silverware",
+      "Stove",
+      "Hot water kettle",
+      "Coffee maker",
+      "Coffee and tea",
+      "Private entrance",
+      "Cleaning available during stay",
+      "Exterior security cameras on property",
+      "Washer"
+    ],
+    "images": [
+      "/public-objects/images/serenity-6-1-sanur-01.jpg",
+      "/public-objects/images/serenity-6-1-sanur-02.jpg",
+      "/public-objects/images/serenity-6-1-sanur-03.jpg",
+      "/public-objects/images/serenity-6-1-sanur-04.jpg",
+      "/public-objects/images/serenity-6-1-sanur-05.jpg",
+      "/public-objects/images/serenity-6-1-sanur-06.jpg",
+      "/public-objects/images/serenity-6-1-sanur-07.jpg",
+      "/public-objects/images/serenity-6-1-sanur-08.jpg",
+      "/public-objects/images/serenity-6-1-sanur-09.jpg",
+      "/public-objects/images/serenity-6-1-sanur-10.jpg",
+      "/public-objects/images/serenity-6-1-sanur-11.jpg",
+      "/public-objects/images/serenity-6-1-sanur-12.jpg",
+      "/public-objects/images/serenity-6-1-sanur-13.jpg",
+      "/public-objects/images/serenity-6-1-sanur-14.jpg",
+      "/public-objects/images/serenity-6-1-sanur-15.jpg",
+      "/public-objects/images/serenity-6-1-sanur-16.jpg",
+      "/public-objects/images/serenity-6-1-sanur-17.jpg",
+      "/public-objects/images/serenity-6-1-sanur-18.jpg"
+    ],
+    "cardImage": "/public-objects/images/serenity-6-1-sanur-17.jpg",
+    "topGallery": [
+      "/public-objects/images/serenity-6-1-sanur-17.jpg",
+      "/public-objects/images/serenity-6-1-sanur-16.jpg",
+      "/public-objects/images/serenity-6-1-sanur-01.jpg",
+      "/public-objects/images/serenity-6-1-sanur-08.jpg",
+      "/public-objects/images/serenity-6-1-sanur-11.jpg"
+    ],
+    "lat": -8.6974013,
+    "lng": 115.2601836,
+    "airbnbUrl": "https://www.airbnb.com/rooms/1774601037990013837",
+    "guestyListingId": null,
+    "guestyBookingUrl": null,
+    "bookingUrl": null,
+    "photosSource": "https://www.airbnb.com/rooms/1774601037990013837",
+    "monthly": false,
+    "updatedAt": "2026-09-15",
+    "photoGroups": [
+      {
+        "name": "Full kitchen",
+        "airbnbLabel": "Full kitchen",
+        "images": [
+          "/public-objects/images/serenity-6-1-sanur-01.jpg",
+          "/public-objects/images/serenity-6-1-sanur-02.jpg",
+          "/public-objects/images/serenity-6-1-sanur-03.jpg"
+        ]
+      },
+      {
+        "name": "Dining area",
+        "airbnbLabel": "Dining area",
+        "images": [
+          "/public-objects/images/serenity-6-1-sanur-04.jpg",
+          "/public-objects/images/serenity-6-1-sanur-05.jpg",
+          "/public-objects/images/serenity-6-1-sanur-06.jpg",
+          "/public-objects/images/serenity-6-1-sanur-07.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 1",
+        "airbnbLabel": "Bedroom 1",
+        "images": [
+          "/public-objects/images/serenity-6-1-sanur-08.jpg",
+          "/public-objects/images/serenity-6-1-sanur-09.jpg",
+          "/public-objects/images/serenity-6-1-sanur-10.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 2",
+        "airbnbLabel": "Bedroom 2",
+        "images": [
+          "/public-objects/images/serenity-6-1-sanur-11.jpg",
+          "/public-objects/images/serenity-6-1-sanur-12.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 1",
+        "airbnbLabel": "Full bathroom 1",
+        "images": [
+          "/public-objects/images/serenity-6-1-sanur-13.jpg",
+          "/public-objects/images/serenity-6-1-sanur-14.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 2",
+        "airbnbLabel": "Full bathroom 2",
+        "images": [
+          "/public-objects/images/serenity-6-1-sanur-15.jpg"
+        ]
+      },
+      {
+        "name": "Exterior",
+        "airbnbLabel": "Exterior",
+        "images": [
+          "/public-objects/images/serenity-6-1-sanur-16.jpg"
+        ]
+      },
+      {
+        "name": "Pool",
+        "airbnbLabel": "Pool",
+        "images": [
+          "/public-objects/images/serenity-6-1-sanur-17.jpg",
+          "/public-objects/images/serenity-6-1-sanur-18.jpg"
+        ]
+      }
+    ],
+    "description": "Serenity 6.1 is a two-bedroom villa in the gated Serenity complex on Jl. Kesari II in Sanur, about 500 m from the beach — a seven-minute walk. It has its own separate entrance, so you never cross paths with neighbours coming or going, and its own separate kitchen. Both bedrooms are en-suite and air-conditioned, and the interior is modern and bright under a Vastu layout. One thing to know before booking: the pool area and the small garden are shared with one neighbouring villa. If you want a pool entirely to yourself, look at Serenity 3 or Serenity 9 instead. Fast Wi-Fi, a dedicated workspace, free parking and cleaning during the stay. Suits couples and small groups. Sleeps 4.",
+    "categories": [
+      "all-villas",
+      "property-rental",
+      "area:sanur",
+      "bedrooms:2",
+      "area-bedrooms:sanur:2",
+      "new-on-thehost",
+      "filter:pool",
+      "filter:garden",
+      "filter:fast-wifi",
+      "filter:kitchen",
+      "filter:air-conditioning",
+      "filter:parking",
+      "filter:near-beach",
+      "filter:workspace",
+      "filter:couples"
+    ],
+    "filterTags": [
+      "pool",
+      "garden",
+      "fast-wifi",
+      "kitchen",
+      "air-conditioning",
+      "parking",
+      "near-beach",
+      "workspace",
+      "couples"
+    ],
+    "seoSections": {
+      "allVillas": true,
+      "area": true,
+      "bedroomPage": true,
+      "monthly": false,
+      "newOnSite": true,
+      "luxury": false
+    },
+    "url": "/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/",
+    "galleryUrl": "/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/",
+    "address": "Jl. Kesari II No.8-6, Sanur, Denpasar Selatan, Kota Denpasar, Bali 80228, Indonesia"
+  },
+  {
+    "id": "own-serenity-6-2",
+    "slug": "sanur/serenity-6-2-villa-2br-courtyard-garden-sanur",
+    "name": "Serenity 6.2 — 2BR Villa with Courtyard Garden in Sanur",
+    "area": "Sanur",
+    "areaSlug": "sanur",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "guests": 4,
+    "priceNight": null,
+    "priceMonth": null,
+    "currency": "USD",
+    "amenities": [
+      "Pool shared with one neighbouring villa",
+      "Shared tropical courtyard garden",
+      "Separate entrance",
+      "Own fully equipped kitchen",
+      "Two en-suite bedrooms",
+      "Fast Wi-Fi",
+      "Dedicated workspace",
+      "About 500 m to Sanur Beach — a 7-minute walk",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Hair dryer",
+      "Cleaning products",
+      "Shampoo",
+      "Hot water",
+      "Hangers",
+      "Bed linens",
+      "Safe",
+      "Refrigerator",
+      "Cooking basics",
+      "Dishes and silverware",
+      "Stove",
+      "Hot water kettle",
+      "Coffee maker",
+      "Coffee and tea",
+      "Private entrance",
+      "Cleaning available during stay",
+      "Exterior security cameras on property",
+      "Washer"
+    ],
+    "images": [
+      "/public-objects/images/serenity-6-2-sanur-01.jpg",
+      "/public-objects/images/serenity-6-2-sanur-02.jpg",
+      "/public-objects/images/serenity-6-2-sanur-03.jpg",
+      "/public-objects/images/serenity-6-2-sanur-04.jpg",
+      "/public-objects/images/serenity-6-2-sanur-05.jpg",
+      "/public-objects/images/serenity-6-2-sanur-06.jpg",
+      "/public-objects/images/serenity-6-2-sanur-07.jpg",
+      "/public-objects/images/serenity-6-2-sanur-08.jpg",
+      "/public-objects/images/serenity-6-2-sanur-09.jpg",
+      "/public-objects/images/serenity-6-2-sanur-10.jpg",
+      "/public-objects/images/serenity-6-2-sanur-11.jpg",
+      "/public-objects/images/serenity-6-2-sanur-12.jpg",
+      "/public-objects/images/serenity-6-2-sanur-13.jpg",
+      "/public-objects/images/serenity-6-2-sanur-14.jpg",
+      "/public-objects/images/serenity-6-2-sanur-15.jpg",
+      "/public-objects/images/serenity-6-2-sanur-16.jpg",
+      "/public-objects/images/serenity-6-2-sanur-17.jpg"
+    ],
+    "cardImage": "/public-objects/images/serenity-6-2-sanur-16.jpg",
+    "topGallery": [
+      "/public-objects/images/serenity-6-2-sanur-16.jpg",
+      "/public-objects/images/serenity-6-2-sanur-13.jpg",
+      "/public-objects/images/serenity-6-2-sanur-01.jpg",
+      "/public-objects/images/serenity-6-2-sanur-05.jpg",
+      "/public-objects/images/serenity-6-2-sanur-03.jpg"
+    ],
+    "lat": -8.6974013,
+    "lng": 115.2601836,
+    "airbnbUrl": "https://www.airbnb.com/rooms/1774625296662033603",
+    "guestyListingId": null,
+    "guestyBookingUrl": null,
+    "bookingUrl": null,
+    "photosSource": "https://www.airbnb.com/rooms/1774625296662033603",
+    "monthly": false,
+    "updatedAt": "2026-09-15",
+    "photoGroups": [
+      {
+        "name": "Living room",
+        "airbnbLabel": "Living room",
+        "images": [
+          "/public-objects/images/serenity-6-2-sanur-01.jpg"
+        ]
+      },
+      {
+        "name": "Full kitchen",
+        "airbnbLabel": "Full kitchen",
+        "images": [
+          "/public-objects/images/serenity-6-2-sanur-02.jpg"
+        ]
+      },
+      {
+        "name": "Dining area",
+        "airbnbLabel": "Dining area",
+        "images": [
+          "/public-objects/images/serenity-6-2-sanur-03.jpg",
+          "/public-objects/images/serenity-6-2-sanur-04.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 1",
+        "airbnbLabel": "Bedroom 1",
+        "images": [
+          "/public-objects/images/serenity-6-2-sanur-05.jpg",
+          "/public-objects/images/serenity-6-2-sanur-06.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 2",
+        "airbnbLabel": "Bedroom 2",
+        "images": [
+          "/public-objects/images/serenity-6-2-sanur-07.jpg",
+          "/public-objects/images/serenity-6-2-sanur-08.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 1",
+        "airbnbLabel": "Full bathroom 1",
+        "images": [
+          "/public-objects/images/serenity-6-2-sanur-09.jpg",
+          "/public-objects/images/serenity-6-2-sanur-10.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom 2",
+        "airbnbLabel": "Full bathroom 2",
+        "images": [
+          "/public-objects/images/serenity-6-2-sanur-11.jpg",
+          "/public-objects/images/serenity-6-2-sanur-12.jpg"
+        ]
+      },
+      {
+        "name": "Exterior",
+        "airbnbLabel": "Exterior",
+        "images": [
+          "/public-objects/images/serenity-6-2-sanur-13.jpg",
+          "/public-objects/images/serenity-6-2-sanur-14.jpg",
+          "/public-objects/images/serenity-6-2-sanur-15.jpg"
+        ]
+      },
+      {
+        "name": "Pool",
+        "airbnbLabel": "Pool",
+        "images": [
+          "/public-objects/images/serenity-6-2-sanur-16.jpg",
+          "/public-objects/images/serenity-6-2-sanur-17.jpg"
+        ]
+      }
+    ],
+    "description": "Serenity 6.2 is a two-bedroom villa in the gated Serenity complex on Jl. Kesari II in Sanur, about 500 m from the beach — a seven-minute walk. It has a separate entrance and its own kitchen; both bedrooms are en-suite and air-conditioned, and the Vastu-based layout keeps the interior bright. The pool and the small tropical courtyard garden are shared with one neighbouring villa — sociable rather than fully private, and worth knowing before you book. Fast Wi-Fi, a dedicated workspace, free parking and cleaning during the stay. Suits couples and small groups. Sleeps 4.",
+    "categories": [
+      "all-villas",
+      "property-rental",
+      "area:sanur",
+      "bedrooms:2",
+      "area-bedrooms:sanur:2",
+      "new-on-thehost",
+      "filter:pool",
+      "filter:garden",
+      "filter:fast-wifi",
+      "filter:kitchen",
+      "filter:air-conditioning",
+      "filter:parking",
+      "filter:near-beach",
+      "filter:workspace",
+      "filter:couples"
+    ],
+    "filterTags": [
+      "pool",
+      "garden",
+      "fast-wifi",
+      "kitchen",
+      "air-conditioning",
+      "parking",
+      "near-beach",
+      "workspace",
+      "couples"
+    ],
+    "seoSections": {
+      "allVillas": true,
+      "area": true,
+      "bedroomPage": true,
+      "monthly": false,
+      "newOnSite": true,
+      "luxury": false
+    },
+    "url": "/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/",
+    "galleryUrl": "/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/",
+    "address": "Jl. Kesari II No.8-6, Sanur, Denpasar Selatan, Kota Denpasar, Bali 80228, Indonesia"
+  },
+  {
+    "id": "own-serenity-10",
+    "slug": "sanur/serenity-10-apartment-private-terrace-sanur",
+    "name": "Serenity 10 — 2BR Apartment with Private Terrace in Sanur",
+    "area": "Sanur",
+    "areaSlug": "sanur",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "guests": 4,
+    "priceNight": null,
+    "priceMonth": null,
+    "currency": "USD",
+    "amenities": [
+      "Private terrace overlooking the complex grounds",
+      "Second floor",
+      "Two bedrooms, one bathroom",
+      "Fully equipped kitchen",
+      "Fast Wi-Fi",
+      "Dedicated workspace",
+      "24/7 security in the complex",
+      "About 500 m to Sanur Beach — a 7-minute walk",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Exterior security cameras on property",
+      "Washer",
+      "Hair dryer",
+      "Shampoo",
+      "Private entrance"
+    ],
+    "images": [
+      "/public-objects/images/serenity-10-sanur-01.jpg",
+      "/public-objects/images/serenity-10-sanur-02.jpg",
+      "/public-objects/images/serenity-10-sanur-03.jpg",
+      "/public-objects/images/serenity-10-sanur-04.jpg",
+      "/public-objects/images/serenity-10-sanur-05.jpg",
+      "/public-objects/images/serenity-10-sanur-06.jpg",
+      "/public-objects/images/serenity-10-sanur-07.jpg",
+      "/public-objects/images/serenity-10-sanur-08.jpg",
+      "/public-objects/images/serenity-10-sanur-09.jpg",
+      "/public-objects/images/serenity-10-sanur-10.jpg",
+      "/public-objects/images/serenity-10-sanur-11.jpg"
+    ],
+    "cardImage": "/public-objects/images/serenity-10-sanur-10.jpg",
+    "topGallery": [
+      "/public-objects/images/serenity-10-sanur-10.jpg",
+      "/public-objects/images/serenity-10-sanur-01.jpg",
+      "/public-objects/images/serenity-10-sanur-04.jpg",
+      "/public-objects/images/serenity-10-sanur-06.jpg",
+      "/public-objects/images/serenity-10-sanur-09.jpg"
+    ],
+    "lat": -8.6974013,
+    "lng": 115.2601836,
+    "airbnbUrl": "https://www.airbnb.com/rooms/1774629312632702714",
+    "guestyListingId": null,
+    "guestyBookingUrl": null,
+    "bookingUrl": null,
+    "photosSource": "https://www.airbnb.com/rooms/1774629312632702714",
+    "monthly": false,
+    "updatedAt": "2026-09-15",
+    "photoGroups": [
+      {
+        "name": "Full kitchen",
+        "airbnbLabel": "Full kitchen",
+        "images": [
+          "/public-objects/images/serenity-10-sanur-01.jpg",
+          "/public-objects/images/serenity-10-sanur-02.jpg",
+          "/public-objects/images/serenity-10-sanur-03.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 1",
+        "airbnbLabel": "Bedroom 1",
+        "images": [
+          "/public-objects/images/serenity-10-sanur-04.jpg",
+          "/public-objects/images/serenity-10-sanur-05.jpg"
+        ]
+      },
+      {
+        "name": "Bedroom 2",
+        "airbnbLabel": "Bedroom 2",
+        "images": [
+          "/public-objects/images/serenity-10-sanur-06.jpg",
+          "/public-objects/images/serenity-10-sanur-07.jpg"
+        ]
+      },
+      {
+        "name": "Full bathroom",
+        "airbnbLabel": "Full bathroom",
+        "images": [
+          "/public-objects/images/serenity-10-sanur-08.jpg"
+        ]
+      },
+      {
+        "name": "Additional photos",
+        "airbnbLabel": "Additional photos",
+        "images": [
+          "/public-objects/images/serenity-10-sanur-09.jpg",
+          "/public-objects/images/serenity-10-sanur-10.jpg",
+          "/public-objects/images/serenity-10-sanur-11.jpg"
+        ]
+      }
+    ],
+    "description": "Serenity 10 is a furnished two-bedroom apartment on the second floor of the gated Serenity complex on Jl. Kesari II in Sanur, about 500 m from the beach — a seven-minute walk. It comes with a private terrace looking over the complex grounds, two bedrooms sharing one bathroom, a fully equipped kitchen and air conditioning throughout, under a Vastu layout that keeps the rooms bright. This is an apartment, not a villa: there is no pool of its own. Fast Wi-Fi, a dedicated workspace, free parking and 24/7 security in the complex. Suits couples and solo travellers who want somewhere ready to move into. Sleeps 4.",
+    "categories": [
+      "all-villas",
+      "property-rental",
+      "area:sanur",
+      "bedrooms:2",
+      "area-bedrooms:sanur:2",
+      "new-on-thehost",
+      "filter:fast-wifi",
+      "filter:kitchen",
+      "filter:air-conditioning",
+      "filter:parking",
+      "filter:near-beach",
+      "filter:workspace",
+      "filter:couples"
+    ],
+    "filterTags": [
+      "fast-wifi",
+      "kitchen",
+      "air-conditioning",
+      "parking",
+      "near-beach",
+      "workspace",
+      "couples"
+    ],
+    "seoSections": {
+      "allVillas": true,
+      "area": true,
+      "bedroomPage": true,
+      "monthly": false,
+      "newOnSite": true,
+      "luxury": false
+    },
+    "url": "/villa/sanur/serenity-10-apartment-private-terrace-sanur/",
+    "galleryUrl": "/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/",
+    "address": "Jl. Kesari II No.8-6, Sanur, Denpasar Selatan, Kota Denpasar, Bali 80228, Indonesia"
   }
 ]
