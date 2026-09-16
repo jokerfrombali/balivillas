@@ -59,7 +59,7 @@
     'Full screen': 'Schermo intero', 'zoom in': 'ingrandisci', 'zoom out': 'riduci',
     /* избранное, валюта, куки, прочее */
     'Save this villa': 'Salva questa villa', 'Remove from saved': 'Rimuovi dai salvati', 'Saved villas': 'Ville salvate', 'View': 'Vedi',
-    'Change currency': 'Cambia valuta', 'Indicative rates. Villas are priced and paid in rupiah.': 'Tassi indicativi. Le ville sono quotate e pagate in rupie.',
+    'Change currency': 'Cambia valuta', 'Currency': 'Valuta', 'Indicative rates. Villas are priced and paid in rupiah.': 'Tassi indicativi. Le ville sono quotate e pagate in rupie.',
     'Indonesian rupiah': 'Rupia indonesiana', 'US dollar': 'Dollaro USA', 'Euro': 'Euro', 'Australian dollar': 'Dollaro australiano',
     'British pound': 'Sterlina britannica', 'Singapore dollar': 'Dollaro di Singapore', 'Malaysian ringgit': 'Ringgit malese',
     'Indian rupee': 'Rupia indiana', 'Chinese yuan': 'Yuan cinese', 'Japanese yen': 'Yen giapponese', 'Korean won': 'Won coreano',
