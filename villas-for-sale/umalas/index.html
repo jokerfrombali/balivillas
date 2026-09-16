@@ -783,11 +783,11 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <span style="min-width:0"><span class="tsp-t" style="display:block">Where in Bali?</span><span class="tsp-s" style="display:block">Any price &middot; Any size</span></span>
       </button>
       <div id="thbAreaChips" aria-label="Quick area filter">
-        <button class="thb-qchip" data-area="">All Bali <b>6</b></button>
-        <button class="thb-qchip" data-area="sanur">Sanur <b>5</b></button>
-        <button class="thb-qchip" data-area="canggu">Canggu <b>0</b></button>
-        <button class="thb-qchip on" data-area="umalas">Umalas <b>1</b></button>
-        <button class="thb-qchip" data-area="ungasan">Ungasan <b>0</b></button>
+        <a class="thb-qchip" href="/villas-for-sale/" data-area="">All Bali <b>6</b></a>
+        <a class="thb-qchip" href="/villas-for-sale/sanur/" data-area="sanur">Sanur <b>5</b></a>
+        <a class="thb-qchip" href="/villas-for-sale/canggu/" data-area="canggu">Canggu <b>0</b></a>
+        <a class="thb-qchip on" href="/villas-for-sale/umalas/" data-area="umalas">Umalas <b>1</b></a>
+        <a class="thb-qchip" href="/villas-for-sale/ungasan/" data-area="ungasan">Ungasan <b>0</b></a>
       </div>
       <div class="pills-scroll" id="pillsScroll" style="display:none">
         <button class="pill active" data-amenity="all" onclick="setPill(this)">
@@ -1316,7 +1316,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
   chips.forEach(function(c){
     c.addEventListener('click',function(){
       var a=c.dataset.area;
-      if(!IS_CAT){ if(a!==CUR){ window.location=a?'/villas/'+a+'/':'/villas-for-sale/'; } return; }
+      if(!IS_CAT){ if(a!==CUR){ window.location=a?'/villas-for-sale/'+a+'/':'/villas-for-sale/'; } return; }
       chips.forEach(function(k){k.classList.toggle('on',k===c);});
       var vis=0;
       document.querySelectorAll('.prop-card').forEach(function(k){

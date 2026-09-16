@@ -830,11 +830,11 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <span style="min-width:0"><span class="tsp-t" style="display:block">Where in Bali?</span><span class="tsp-s" style="display:block">Any price &middot; Any size</span></span>
       </button>
       <div id="thbAreaChips" aria-label="Quick area filter">
-        <button class="thb-qchip on" data-area="">All Bali <b>6</b></button>
-        <button class="thb-qchip" data-area="sanur">Sanur <b>5</b></button>
-        <button class="thb-qchip" data-area="canggu">Canggu <b>0</b></button>
-        <button class="thb-qchip" data-area="umalas">Umalas <b>1</b></button>
-        <button class="thb-qchip" data-area="ungasan">Ungasan <b>0</b></button>
+        <a class="thb-qchip on" href="/villas-for-sale/" data-area="">All Bali <b>6</b></a>
+        <a class="thb-qchip" href="/villas-for-sale/sanur/" data-area="sanur">Sanur <b>5</b></a>
+        <a class="thb-qchip" href="/villas-for-sale/canggu/" data-area="canggu">Canggu <b>0</b></a>
+        <a class="thb-qchip" href="/villas-for-sale/umalas/" data-area="umalas">Umalas <b>1</b></a>
+        <a class="thb-qchip" href="/villas-for-sale/ungasan/" data-area="ungasan">Ungasan <b>0</b></a>
       </div>
       <div class="pills-scroll" id="pillsScroll" style="display:none">
         <button class="pill active" data-amenity="all" onclick="setPill(this)">
@@ -1070,6 +1070,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
     </div>
   </div>
 </div>
+
 
 
 
@@ -1439,12 +1440,12 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 </div>
 <script>
 (function(){
-  var IS_CAT=true, CUR='';
+  var IS_CAT=false, CUR='';
   var chips=document.querySelectorAll('.thb-qchip'); if(!chips.length)return;
   chips.forEach(function(c){
     c.addEventListener('click',function(){
       var a=c.dataset.area;
-      if(!IS_CAT){ if(a!==CUR){ window.location=a?'/villas/'+a+'/':'/villas-for-sale/'; } return; }
+      if(!IS_CAT){ if(a!==CUR){ window.location=a?'/villas-for-sale/'+a+'/':'/villas-for-sale/'; } return; }
       chips.forEach(function(k){k.classList.toggle('on',k===c);});
       var vis=0;
       document.querySelectorAll('.prop-card').forEach(function(k){
@@ -1459,7 +1460,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 <script>
 (function(){
   var root=document.getElementById('thbHeroSearch'); if(!root)return;
-  var AREAS=[['','All Bali',12],['sanur','Sanur',6],['canggu','Canggu',1],['umalas','Umalas',2],['ungasan','Ungasan',3]];
+  var AREAS=[['','All Bali',20],['sanur','Sanur',11],['canggu','Canggu',2],['umalas','Umalas',3],['ungasan','Ungasan',4]];
   var MN=['January','February','March','April','May','June','July','August','September','October','November','December'];
   var q={area:'',ci:'',co:'',g:0};
   var today=new Date(); today.setHours(0,0,0,0);
