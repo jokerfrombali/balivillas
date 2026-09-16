@@ -20,7 +20,9 @@
   /* Только страница виллы: /villa/<район>/<вилла>/ или /villa/<вилла>/.
      На самом фототуре и в каталоге файл молча выходит. */
   var path = location.pathname;
-  if (!/^\/villa\/[^/]+\/([^/]+\/)?$/.test(path)) return;
+  /* итальянские близнецы под /it/: проверяем путь без префикса, а ссылки
+     строим от настоящего */
+  if (!/^\/villa\/[^/]+\/([^/]+\/)?$/.test(path.replace(/^\/it(?=\/)/, ''))) return;
   if (/\/gallery\/$/.test(path)) return;
 
   var GALLERY = path + 'gallery/';

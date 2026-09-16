@@ -705,23 +705,26 @@ export default {
 
     /* Страница виллы, но не её фототур: у галереи своя вёрстка и ничего из
        этого ей не нужно. */
-    const isVilla = /^\/villa\/[^/]+\/[^/]+\/$/.test(url.pathname) ||
-                    /^\/villa\/[^/]+\/$/.test(url.pathname);
+    /* Итальянские близнецы лежат под /it/ с теми же путями: для выбора
+       скриптов и подшивки цен префикс снимаем. */
+    const pathNoLang = url.pathname.replace(/^\/it(?=\/)/, '');
+    const isVilla = /^\/villa\/[^/]+\/[^/]+\/$/.test(pathNoLang) ||
+                    /^\/villa\/[^/]+\/$/.test(pathNoLang);
 
     /* Объект на продажу: та же вёрстка, но без цен и календаря аренды —
        вместо них карточка объекта с заявкой. */
-    const isSale = /^\/villas-for-sale\/[^/]+\/[^/]+\/$/.test(url.pathname);
+    const isSale = /^\/villas-for-sale\/[^/]+\/[^/]+\/$/.test(pathNoLang);
 
     /* Каталог продаж: хаб и страницы районов. Там та же карта со всеми нашими
        объектами, что и на странице объекта, — покупателю нужен обзор. */
-    const isSaleList = /^\/villas-for-sale\/$/.test(url.pathname) ||
-                       /^\/villas-for-sale\/[^/]+\/$/.test(url.pathname);
+    const isSaleList = /^\/villas-for-sale\/$/.test(pathNoLang) ||
+                       /^\/villas-for-sale\/[^/]+\/$/.test(pathNoLang);
 
     /* Каталог аренды: хаб, страницы районов и полный список. Карта там со
        всеми виллами кругами «примерно здесь», как на странице виллы. */
-    const isRentList = /^\/property-rental\/$/.test(url.pathname) ||
-                       /^\/villas\/$/.test(url.pathname) ||
-                       /^\/villas\/[^/]+\/$/.test(url.pathname);
+    const isRentList = /^\/property-rental\/$/.test(pathNoLang) ||
+                       /^\/villas\/$/.test(pathNoLang) ||
+                       /^\/villas\/[^/]+\/$/.test(pathNoLang);
 
     const scripts = isVilla
       ? ['/thb-price.js', '/thb-avail.js', '/thb-guests.js', '/thb-map.js', '/thb-gallery.js', '/thb-readmore.js']
@@ -736,6 +739,10 @@ export default {
     /* Переключатель валют нужен везде, где есть цены: и на вилле, и в каталоге,
        и на главной. Сам выходит, если на странице нет ни шапки, ни цен. */
     scripts.push('/thb-currency.js');
+    /* Переключатель языка — на каждой странице, ставится перед валютой.
+       На итальянских страницах ещё словарь для виджетов (календарь, форма). */
+    scripts.push('/thb-lang.js');
+    if (pathNoLang !== url.pathname) scripts.push('/thb-it.js');
 
     const withScripts = new HTMLRewriter()
       .on('body', {
@@ -753,7 +760,7 @@ export default {
        её на выбранные даты, но первая отрисовка — и всё, что видит краулер без
        JavaScript, — теперь с цифрой. */
     let out = withScripts;
-    try { out = await injectPrices(withScripts, env, url.pathname); }
+    try { out = await injectPrices(withScripts, env, pathNoLang, pathNoLang !== url.pathname ? 'it' : 'en'); }
     catch (e) { /* цена не критична, страницу отдаём как есть */ }
 
     /* Цену двигает PriceLabs, поэтому страницу нельзя держать в кэше края

@@ -602,7 +602,7 @@
        всеми объектами, и он приходит от воркера. Если подгрузить сюда ещё и
        карту аренды, две карты дерутся за один контейнер. */
     if (document.getElementById('section-location') &&
-        location.pathname.indexOf('/villas-for-sale/') !== 0) add('/thb-map.js');
+        location.pathname.replace(/^\/it(?=\/)/, '').indexOf('/villas-for-sale/') !== 0) add('/thb-map.js');
   }
   function add(src) {
     var s = document.createElement('script');

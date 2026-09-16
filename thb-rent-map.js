@@ -22,7 +22,7 @@
   var RADIUS_M = 110;      /* круг «примерно здесь» */
   var SHIFT_M = 70;        /* сдвиг центра круга от дома */
 
-  var path = location.pathname;
+  var path = location.pathname.replace(/^\/it(?=\/)/, '');   /* итальянские близнецы */
   var mArea = path.match(/^\/villas\/([^/]+)\/$/);
   var isList = path === '/property-rental/' || path === '/villas/' || !!mArea;
   if (!isList) return;

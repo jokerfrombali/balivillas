@@ -29,7 +29,7 @@
 
   /* Раздел продаж рисует свою карту (thb-sale-map.js) в этом же контейнере —
      туда не лезем, иначе один скрипт затрёт другой. */
-  if (location.pathname.indexOf('/villas-for-sale/') === 0) return;
+  if (location.pathname.replace(/^\/it(?=\/)/, '').indexOf('/villas-for-sale/') === 0) return;
 
   var sec = document.getElementById('section-location');
   if (!sec) return;

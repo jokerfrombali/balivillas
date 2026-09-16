@@ -194,8 +194,9 @@
   }
 
   function build() {
-    var anchor = document.querySelector('a[href="/saved/"][data-fav-link]') ||
-                 document.querySelector('a[href="/saved/"]');
+    /* на итальянских страницах ссылка ведёт на /it/saved/ */
+    var anchor = document.querySelector('a[data-fav-link]') ||
+                 document.querySelector('a[href$="/saved/"]');
     if (!anchor || !anchor.parentElement) return false;
 
     box = document.createElement('div');

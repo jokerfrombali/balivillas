@@ -94,7 +94,8 @@
     if (!t) {
       t = document.createElement('div');
       t.id = 'thbSavedToast';
-      t.innerHTML = '<span data-toast-msg></span><a href="/saved/">View</a>';
+      t.innerHTML = '<span data-toast-msg></span><a href="' +
+        ((document.documentElement.lang || '').slice(0, 2) === 'it' ? '/it' : '') + '/saved/">View</a>';
       document.body.appendChild(t);
     }
     t.querySelector('[data-toast-msg]').textContent = msg;

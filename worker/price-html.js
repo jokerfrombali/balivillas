@@ -30,9 +30,15 @@ function urlFromOnclick(v) {
   return m ? m[1].split('?')[0] : null;
 }
 
-const norm = (u) => (u || '').split('?')[0].split('#')[0];
+/* адреса в карточках итальянских страниц начинаются с /it/ — цены те же */
+const norm = (u) => (u || '').split('?')[0].split('#')[0].replace(/^\/it(?=\/)/, '');
 
-export async function injectPrices(res, env, pathname) {
+export async function injectPrices(res, env, pathname, lang) {
+  /* подписи к ценам: на итальянских близнецах (/it/) — по-итальянски */
+  const IT = lang === 'it';
+  const W = IT
+    ? { from: 'da ', per: 'a notte', onreq: 'Su richiesta', min: ' · soggiorno minimo ', nights: ' notti' }
+    : { from: 'from ', per: 'per night', onreq: 'On request', min: ' · minimum stay ', nights: ' nights' };
   const byUrl = await readAllPrices(env);
   if (!byUrl) return res;
 
@@ -49,12 +55,12 @@ export async function injectPrices(res, env, pathname) {
      делает thb-cards.js, но стилем в самом теге: карточка не должна зависеть
      от того, загрузился ли скрипт. */
   const PER = '<span style="font-size:13px;font-weight:400;color:#706b61;' +
-              'margin-left:5px;letter-spacing:0;font-family:inherit">per night</span>';
+              'margin-left:5px;letter-spacing:0;font-family:inherit">' + W.per + '</span>';
 
   const cardText = (t) => {
     if (!card) return;
-    if (t.text.indexOf('On request') < 0) return;
-    t.replace('from ' + money(card.currency, card.price) + PER + ' ', { html: true });
+    if (t.text.indexOf('On request') < 0 && t.text.indexOf(W.onreq) < 0) return;
+    t.replace(W.from + money(card.currency, card.price) + PER + ' ', { html: true });
   };
 
   return new HTMLRewriter()
@@ -69,28 +75,28 @@ export async function injectPrices(res, env, pathname) {
     /* страница виллы: нижняя панель и заголовок карточки брони */
     .on('#thbBookBar strong', {
       text(t) {
-        if (!own || t.text.indexOf('Prices on request') < 0) return;
-        t.replace('from ' + money(own.currency, own.price) + ' per night', { html: false });
+        if (!own || (t.text.indexOf('Prices on request') < 0 && t.text.indexOf('Prezzi su richiesta') < 0)) return;
+        t.replace(W.from + money(own.currency, own.price) + ' ' + W.per, { html: false });
       }
     })
     .on('[data-slot="booking-panel-header"]', {
       text(t) {
-        if (!own || t.text.indexOf('Select dates for pricing') < 0) return;
-        t.replace('from ' + money(own.currency, own.price) + ' per night', { html: false });
+        if (!own || (t.text.indexOf('Select dates for pricing') < 0 && t.text.indexOf('Scegli le date per vedere il prezzo') < 0)) return;
+        t.replace(W.from + money(own.currency, own.price) + ' ' + W.per, { html: false });
       }
     })
     .on('#selectedDateRange', {
       text(t) {
-        if (!own || t.text.indexOf('Select dates for pricing') < 0) return;
-        t.replace('from ' + money(own.currency, own.price) + ' per night' +
-                  (own.minStay > 1 ? ' · minimum stay ' + own.minStay + ' nights' : ''),
+        if (!own || (t.text.indexOf('Select dates for pricing') < 0 && t.text.indexOf('Scegli le date per vedere il prezzo') < 0)) return;
+        t.replace(W.from + money(own.currency, own.price) + ' ' + W.per +
+                  (own.minStay > 1 ? W.min + own.minStay + W.nights : ''),
                   { html: false });
       }
     })
-    .on('button[aria-label="Select dates"] span.text-secondary', {
+    .on('button[aria-label="Select dates"] span.text-secondary, button[aria-label="Scegli le date"] span.text-secondary', {
       text(t) {
-        if (!own || t.text.indexOf('Prices on request') < 0) return;
-        t.replace('from ' + money(own.currency, own.price) + ' per night', { html: false });
+        if (!own || (t.text.indexOf('Prices on request') < 0 && t.text.indexOf('Prezzi su richiesta') < 0)) return;
+        t.replace(W.from + money(own.currency, own.price) + ' ' + W.per, { html: false });
       }
     })
     .transform(res);
