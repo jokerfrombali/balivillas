@@ -18,3 +18,13 @@
 /villa/tanjung-sari-3-4br-pool-villa-sanur/* /property-rental/ 301
 /villa/the-wave-6br-beachside-villa-berawa-canggu/* /villa/canggu/the-wave-6br-beachside-villa-canggu/ 301
 /villa/villa-kesari-4-trees-3br-sanur/* /villa/sanur/villa-kesari-4-3br-pool-villa-sanur/ 301
+
+# 18.09.2026: /en/, /en-us/, /en-gb/ were word-for-word copies of the home page with their own
+# canonical; Search Console listed them as duplicates. One English home page now
+# (old files kept in tools/legacy-lang/, which .assetsignore keeps off the site).
+/en/ / 301
+/en / 301
+/en-us/ / 301
+/en-us / 301
+/en-gb/ / 301
+/en-gb / 301
