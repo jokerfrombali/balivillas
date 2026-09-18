@@ -629,7 +629,7 @@ export default {
         let synced = null;
         if (url.searchParams.get('sync') === '1' && villa) {
           const ip = req.headers.get('cf-connecting-ip') || '0';
-          if (!(await tooFast(env, ip, 'rsync', 3, 600))) synced = await syncReviews(env, villa);
+          if (!(await tooFast(env, ip, 'rsync', 30, 600))) synced = await syncReviews(env, villa);
         }
         const v = publicView(await getReviews(env, villa));
         return new Response(JSON.stringify({ ok: true, villa, synced, reviews: v }), {
