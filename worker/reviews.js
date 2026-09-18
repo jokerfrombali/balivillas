@@ -15,7 +15,7 @@
  */
 import { LINKS, api } from './hostex.js';
 
-const SHOW_MIN = 4;          // показываем отзывы с оценкой 4 и 5 из 5
+const SHOW_MIN = 5;          // на странице только 5 из 5; средняя — по всем отзывам
 const SHOW_MAX = 12;         // не больше стольких на странице
 const WINDOW_DAYS = 180;     // максимум, который принимает /reviews
 const WINDOWS = 4;           // 4 x 180 = ~2 года
@@ -117,8 +117,8 @@ function stars(n) {
 function sectionHtml(v, lang) {
   const IT = lang === 'it';
   const T = IT
-    ? { h: 'Recensioni degli ospiti', sum: (n, c) => n + ' su 5 · ' + c + (c === 1 ? ' recensione' : ' recensioni'), via: 'Ospite via ', reply: 'Risposta del team', note: 'Recensioni verificate: arrivano dal nostro sistema di prenotazione (Airbnb, Booking.com, prenotazioni dirette). Mostriamo le recensioni con 4 e 5 stelle; la media è calcolata su tutte.' }
-    : { h: 'Guest reviews', sum: (n, c) => n + ' out of 5 · ' + c + (c === 1 ? ' review' : ' reviews'), via: 'Guest via ', reply: 'Reply from the team', note: 'Verified stays: reviews come straight from our booking system (Airbnb, Booking.com, direct bookings). We show 4- and 5-star reviews; the average is calculated over all of them.' };
+    ? { h: 'Recensioni degli ospiti', sum: (n, c) => n + ' su 5 · ' + c + (c === 1 ? ' recensione' : ' recensioni'), via: 'Ospite via ', reply: 'Risposta del team', note: 'Recensioni verificate: arrivano dal nostro sistema di prenotazione (Airbnb, Booking.com, prenotazioni dirette). Mostriamo le recensioni a 5 stelle; la media è calcolata su tutte.' }
+    : { h: 'Guest reviews', sum: (n, c) => n + ' out of 5 · ' + c + (c === 1 ? ' review' : ' reviews'), via: 'Guest via ', reply: 'Reply from the team', note: 'Verified stays: reviews come straight from our booking system (Airbnb, Booking.com, direct bookings). We show 5-star reviews; the average rating is calculated over all reviews.' };
   const cards = v.shown.map((r) =>
     '<article style="border:1px solid #e6e3dc;border-radius:16px;padding:18px 20px;background:#fff">' +
     '<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:8px">' +
