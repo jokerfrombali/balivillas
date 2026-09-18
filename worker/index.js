@@ -35,6 +35,7 @@ import { takeSnapshot } from './snapshots.js';
 import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices } from './hostex.js';
 import { injectPrices } from './price-html.js';
 import { fxRates, suggest } from './fx.js';
+import { syncReviews, getReviews, publicView, injectReviews } from './reviews.js';
 
 const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
 
@@ -621,6 +622,21 @@ export default {
         });
       }
 
+      /* Отзывы виллы из зеркала Hostex (без кодов броней). ?sync=1 — обновить
+         сейчас; не чаще раза в 10 минут на адрес, чтобы не жечь запросы к Hostex. */
+      if (url.pathname === '/api/reviews') {
+        const villa = url.searchParams.get('villa') || '';
+        let synced = null;
+        if (url.searchParams.get('sync') === '1' && villa) {
+          const ip = req.headers.get('cf-connecting-ip') || '0';
+          if (!(await tooFast(env, ip, 'rsync', 3, 600))) synced = await syncReviews(env, villa);
+        }
+        const v = publicView(await getReviews(env, villa));
+        return new Response(JSON.stringify({ ok: true, villa, synced, reviews: v }), {
+          headers: { 'content-type': 'application/json', 'cache-control': 'no-store' }
+        });
+      }
+
       /* Все базовые цены разом — карточки в каталоге. */
       if (url.pathname === '/api/prices') {
         const data = await allBasePrices(env);
@@ -768,6 +784,10 @@ export default {
     let out = withScripts;
     try { out = await injectPrices(withScripts, env, pathNoLang, pathNoLang !== url.pathname ? 'it' : 'en'); }
     catch (e) { /* цена не критична, страницу отдаём как есть */ }
+    if (isVilla) {
+      try { out = await injectReviews(out, env, pathNoLang, pathNoLang !== url.pathname ? 'it' : 'en'); }
+      catch (e) { /* без отзывов страница всё равно целая */ }
+    }
 
     /* Цену двигает PriceLabs, поэтому страницу нельзя держать в кэше края
        сутками: минута — компромисс между свежестью цифры и нагрузкой. */
@@ -792,6 +812,8 @@ export default {
       /* Обход календарей Hostex. syncAll сам решает, пора ли: cron будит нас
          каждые 30 минут, а опрашивать чаще, чем раз в SYNC_EVERY_MIN, незачем. */
       try { await hostexSync(env, false); } catch (e) { /* следующий заход подберёт */ }
+      /* Отзывы: 4 виллы за проход, полный круг за ~2,5 часа. */
+      try { await syncReviews(env); } catch (e) { /* следующий заход подберёт */ }
     })());
   }
 };
