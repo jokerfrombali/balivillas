@@ -560,6 +560,12 @@ async function watch(env) {
 export default {
   async fetch(req, env) {
     const url = new URL(req.url);
+    /* 18.09.2026: http://thehostbali.com/ отдавался как 200 (в Cloudflare не включён Always Use HTTPS).
+       Одна каноническая схема: всё на https, 301. */
+    if (url.protocol === 'http:') {
+      url.protocol = 'https:';
+      return Response.redirect(url.toString(), 301);
+    }
 
     /* www -> apex is NOT done here on purpose: HTML paths are served straight
        from the asset store and never reach this handler, so a redirect here
