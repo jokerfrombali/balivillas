@@ -52,6 +52,29 @@ The most effective long-term response to a bad review is making sure the same is
 
 A single low review has a real but limited effect on an overall rating, particularly once a listing has a healthy volume of reviews behind it. The mistake we see most is an owner fixating on one bad review while losing sight of the broader pattern — a strong review history with one outlier is a very different situation from a rating that's been trending down over several stays, and the two need different responses. See [signs your Bali villa is underperforming](/blog/owners/signs-villa-underperforming-bali/) if you're not sure which situation you're in.
 
+## A decision framework for the first hour after a bad review lands
+
+The instinct in the first hour is usually the wrong one — either firing off a defensive reply or ignoring it while the frustration settles. Instead:
+
+1. **Wait a few hours before drafting a response, but not more than a day.** A response written in the first angry minutes tends to read defensively even when the facts in it are correct. A day's delay is fine; a week reads as indifference.
+2. **Separate what's factually disputable from what isn't.** If the guest got a genuine fact wrong (an amenity that does exist, a policy that was stated clearly beforehand), the public response can note that calmly, once, without dwelling on it. If the complaint is a matter of opinion or experience, don't argue it at all.
+3. **Decide whether this needs a private message in addition to the public response.** Reserve this for complaints with a real, resolvable issue behind them — not simply because the review stings.
+4. **Log the specific complaint somewhere you'll actually check again**, so the pattern check described below isn't relying on memory alone.
+
+## What goes wrong
+
+The most common mistake isn't a bad public response — most owners get that part right once they've thought it through. It's skipping the pattern check entirely and treating every review as an isolated event, so the same complaint quietly repeats three or four times over a year before anyone notices it's a pattern rather than bad luck.
+
+The second is over-indexing on removal. Chasing a platform's dispute process for a review that's negative but within the rules burns time and rarely succeeds, and that energy is almost always better spent on the response and the underlying fix.
+
+## What we do in practice
+
+Across the villas we manage, every review — not just the negative ones — gets logged against a simple recurring-issue tracker, so a second mention of the same complaint is caught immediately rather than requiring someone to remember the first one from months earlier. Public responses go out within one to two days as a matter of routine, drafted calmly rather than reactively, and any resolvable in-stay issue gets a private follow-up alongside the public reply where it's likely to help. This is the same operational habit that keeps [five-star review consistency](/blog/owners/get-5-star-reviews-bali-villa/) from drifting after a rough patch.
+
+## What to check, and with whom
+
+If a review contains something you believe is factually false or violates a platform's stated policy — not just unfavourable — check that platform's current host guidelines directly before assuming a dispute will succeed, since policies and what counts as a violation change and vary by platform. For anything that reads as a legal threat, discriminatory language, or a safety allegation, treat it as a matter to escalate to the platform's formal reporting process immediately rather than handling informally.
+
 ## What to do next
 
 Respond to a bad review calmly and specifically within a day or two, check whether it's part of a pattern, and only pursue platform removal for reviews that genuinely violate policy rather than ones that are simply negative.

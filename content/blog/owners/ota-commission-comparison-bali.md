@@ -54,6 +54,16 @@ OTA cancellation policies are set by the platform, not the villa, and a guest re
 
 Once a villa is listed on more than one or two OTAs, keeping rates and availability in sync manually becomes a real source of error — a double booking from a stale calendar costs far more than any commission saved by adding another platform. See [channel manager for Bali villas](/blog/owners/channel-manager-bali-villas/) for how that software layer works and when it's worth the added cost.
 
+## A worked example: comparing two management proposals
+
+Say two management companies quote you commission rates that look close on paper — one slightly lower than the other. Run the same sample booking through both, as described above: for Company A, the commission is calculated on gross booking value before any OTA fee is subtracted; for Company B, it's calculated on the net amount after the OTA has already taken its cut. Even with Company A's headline rate looking higher, the actual amount you keep from an OTA booking can end up similar or even better than Company B's, because the base each commission is applied to is different.
+
+This is exactly the kind of detail that's easy to miss when comparing proposals only on their headline percentage, and it's worth asking both companies to walk through a real sample booking with you rather than trusting the quoted rate alone.
+
+## What we do differently on commission structure
+
+We don't charge a fixed monthly fee — our commission is calculated on actual bookings only, and we're explicit with owners about whether a given calculation uses gross or net booking value so there's no ambiguity once a booking comes in. We also actively push guests toward direct booking, since it avoids OTA commission entirely and is one of the more meaningful ways an owner's net income improves without any change to nightly rate or occupancy. If you want to see exactly how commission would apply to your specific villa and its typical booking mix, that's a conversation we're glad to have before you sign anything.
+
 ## What to do next
 
 OTA commission and management commission are separate costs that stack on every platform booking. Ask exactly how each is calculated, on what base, and how direct bookings are treated before comparing proposals on headline percentage alone.

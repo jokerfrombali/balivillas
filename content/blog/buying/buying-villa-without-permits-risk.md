@@ -68,6 +68,24 @@ Our guide on notaries for buying property in Bali covers how to choose someone w
 | Rental licensing | Usually smooth | May be blocked or delayed |
 | Ongoing risk | Low | Depends on whether the underlying zoning is sound |
 
+## A worked example
+
+Say you are shown a villa in Canggu priced roughly 15% below comparable, fully permitted properties nearby. The agent says the PBG "is with the notary" and the SLF "will come once it's rented for a while." Neither statement is a document.
+
+Work through it in order: first, confirm the land's zoning actually supports villa rental use at all, through an independent PKKPR check, because if it does not, the 15% discount is irrelevant and you should walk away regardless of price. Second, if zoning is fine, get a licensed consultant's written estimate for the cost and time of completing the PBG and SLF from where they currently stand. Third, compare that estimate plus a delay margin against the 15% discount. If the discount roughly covers the real cost of closing the gap, the deal may be fair; if it does not, you are simply buying someone else's unfinished paperwork at a price that does not reflect it.
+
+This is the calculation buyers skip when a villa "feels" like a good deal. Running it properly takes a notary's time and a bit of patience, both of which are cheaper than discovering the gap after you have paid.
+
+## What we do in practice
+
+Every villa in our own rental portfolio, and every one we list for sale, has been through this verification before we take it on, not after a buyer asks. If we find a gap during that process, we would rather resolve it or disclose it clearly than let a discounted price stand in for an honest explanation. That is part of why our [villas for sale](/villas-for-sale/) listings come with documents already gathered: buyers working with us are not the ones doing this detective work for the first time on a property they do not yet own.
+
+If you are looking at a villa outside our listings and the permit picture is unclear, it is worth having an independent notary run the same checks before you get emotionally or financially committed to the deal. A seller who is genuinely willing to fix the gap before closing will not object to that request; one who resists it is telling you something.
+
+## When a permit gap is a reason to walk away entirely
+
+Not every gap is negotiable. Walk away, rather than negotiate, when any of the following apply: the underlying zoning does not support the villa's actual use and there is no credible, documented rezoning already in progress; the seller cannot or will not produce any permit documents at all, only verbal assurances; the discount on offer does not come close to a licensed consultant's estimate of the cost to fix the gap; or the timeline pressure from the seller or agent does not leave room for proper independent verification. In each of these cases, the apparent bargain is usually not one once the real cost is priced in.
+
 ## What to do next
 
 Do not let a lower price be the only reason to accept a permit gap. If you decide to proceed, get the gap independently verified, priced and made someone's contractual responsibility to close, with a deadline. If the gap traces back to zoning rather than paperwork, walk away or bring in a specialist who can confirm rezoning is realistic before you commit any money.

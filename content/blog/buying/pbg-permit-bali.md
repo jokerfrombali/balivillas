@@ -57,6 +57,32 @@ Some financing arrangements and insurance policies for villas in Bali expect val
 4. Check whether an SLF has been issued for a completed building
 5. If any permit is missing, treat it as a real cost and risk to factor into your offer, not a minor formality
 
+## What goes wrong in practice
+
+- **A PBG that covers an earlier version of the building.** Villas get extended or altered after the original permit was issued, and the document on file no longer matches what is actually standing. A buyer who only checks that "a PBG exists" without comparing it to the current structure can inherit an unpermitted extension without realising it.
+- **An IMB treated as automatically equivalent to a PBG.** Older permits are not simply relabelled; confirm with a notary how a specific IMB is treated under the current system rather than assuming continuity.
+- **Off-plan buyers paying substantial deposits before PBG approval is confirmed**, on the basis that "it's just a formality at this stage." It is not always a formality, and a rejected or delayed PBG can leave a deposit tied up in a stalled project.
+- **A seller conflating a PKKPR with a PBG** when describing a plot's "permits," hoping the buyer will not ask which specific document they mean. Always ask for the permit by name and check the document itself.
+
+## A decision framework: how much permit risk is acceptable
+
+Not every gap is a dealbreaker, but you should be deliberate about which gaps you are willing to accept and at what price.
+
+| Situation | Reasonable approach |
+|---|---|
+| Valid PBG matching the current built structure | Standard due diligence; no special discount needed for this item |
+| Older IMB, status not yet reconfirmed under PBG rules | Get a notary to confirm current status before finalising; minor delay, not usually a dealbreaker |
+| PBG covers an earlier structure, not current extensions | Price in the cost and risk of regularising the extension, or require the seller to resolve it before completion |
+| No permit at all, seller says it is "not usually checked" | Treat as high risk; see our separate guide on [buying a villa without permits](/blog/buying/buying-villa-without-permits-risk/) for what this actually exposes you to |
+
+## What we do in practice
+
+Because we manage the villas in our own portfolio day to day, not just sell them, we have a direct interest in permit documentation being genuinely in order, not just presentable at the point of sale. Before we take on management of a villa, or list one for sale, we confirm the PBG or IMB status against the structure as it actually stands, not the structure as originally drawn. When gaps exist, whether from an old extension or an outdated IMB, we would rather flag it early than have it surface as a dispute later. Buyers working from our [villas for sale](/villas-for-sale/) listings are starting from documentation that has already been through this process.
+
+## Who should be involved and when
+
+Bring a notary or licensed consultant in before you sign anything beyond a small, refundable holding deposit, not after. For off-plan purchases specifically, ask who is responsible, contractually, if the PBG is rejected or delayed beyond an agreed date, and get that answer in writing rather than as a verbal reassurance from the developer's sales team.
+
 ## What to do next
 
 Never treat permit documentation as secondary to the villa's appearance or price. A missing PBG, or an unclear transition from an older IMB, is a real legal and financial risk that should shape your offer or your decision to walk away.

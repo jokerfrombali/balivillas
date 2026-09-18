@@ -62,6 +62,29 @@ The value of a strong notary/PPAT shows up most clearly when something is wrong 
 
 Is buying property in Bali as a foreigner a good investment? That depends heavily on getting this stage right. A well-vetted purchase with clean documentation and a properly registered structure behaves very differently from a rushed one, even if the villas look identical on the surface.
 
+## What goes wrong when buyers cut corners here
+
+- **Using the seller's notary without seeking a second opinion**, on the assumption that "a notary is a notary." Two licensed professionals can differ significantly in how thoroughly they verify a seller's documentation before drafting an agreement.
+- **Signing before due diligence is complete**, because a deal feels time-pressured or another buyer is supposedly interested. A genuine competing offer is rarely worth skipping verification of the certificate, zoning and permits.
+- **Assuming power of attorney covers everything**, without confirming which specific steps still legally require your presence or a properly authorised local representative. This varies by transaction type and should be confirmed early, not assumed.
+- **Paying notary and government fees without an itemised breakdown**, then discovering later that BPHTB, registration costs and the notary's own fee were bundled together in a way that made it hard to check anything was reasonable.
+
+## Working with an independent notary versus the seller's own: a comparison
+
+| | Independent notary you choose | Seller's own notary |
+|---|---|---|
+| Incentive | Works for you; no stake in whether this specific deal closes | Existing relationship with the seller's side |
+| Due diligence thoroughness | Typically more willing to flag problems that could delay closing | May be inclined to smooth over issues to keep the deal moving |
+| Cost | Broadly similar market rates either way | Broadly similar market rates either way |
+| Convenience | Requires you to source and vet someone yourself | Already engaged, seemingly simpler |
+| Overall recommendation | Preferred for anything beyond a very small, low-risk transaction | Acceptable only with an independent second opinion on the key documents |
+
+## What we do in practice
+
+As a team that manages and sells villas ourselves, we work with notaries who verify documentation thoroughly before a property reaches our own portfolio or our [villas for sale](/villas-for-sale/) listings, not notaries chosen for speed. When we introduce a buyer to the notary who has already worked on a property's paperwork, we still encourage getting an independent second opinion if anything about the transaction feels unclear, because a buyer's comfort with the process matters as much as the paperwork itself.
+
+If you already have a notary you trust from a previous transaction or a personal recommendation, that is often the better starting point than any single name we could suggest; what matters most is that whoever you use is verifying documents independently rather than taking a seller's summary at face value.
+
 ## What to do next
 
 Treat the choice of notary/PPAT as its own decision, separate from choosing the villa. Get an independent recommendation, verify their licensing, and get a written scope of what they will check before you commit to using them.

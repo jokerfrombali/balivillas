@@ -55,6 +55,26 @@ Because Hak Sewa is a contract rather than a registered title, a properly drafte
 
 The most frequent issue we see is vague end-of-term language that does not specify whether the building reverts to the landowner, is removed, or is compensated in some way. A second common problem is a contract that never explicitly addresses what happens if the landowner passes away during the lease term, since Indonesian inheritance can complicate who the leaseholder is now dealing with. A third is leases with no clear assignment clause, which makes reselling your interest to a future buyer harder than it should be.
 
+## A framework for reviewing a Hak Sewa contract before signing
+
+Work through the contract in this order, since these are the clauses most likely to cause a real problem if left vague:
+
+1. **Term and extension.** Is the extension a right, with a defined price mechanism, or just an expectation? Get this in writing specifically.
+2. **Successor obligation.** Does the contract bind a future buyer of the underlying land to honour your lease? Confirm this clause exists explicitly.
+3. **End-of-term provisions.** Does the building revert, get removed, or get compensated? This is the clause most contracts leave vague, and the one most worth pushing on.
+4. **Assignment rights.** Can you sell your remaining interest, and under what conditions? Important even if you don't plan to sell soon.
+5. **Death or incapacity of the landowner.** Does the contract address what happens to your lease if the landowner passes away during the term, given Indonesian inheritance can bring new parties into the relationship?
+
+If any of these five are silent or vague in a draft you're offered, that's worth raising with the landowner's side before you sign, not after.
+
+## What goes wrong with Hak Sewa in practice
+
+Beyond the three common problems above, a pattern worth flagging specifically: buyers who negotiate hard on price but accept whatever contract template the seller's side provides without independent review, on the assumption that a notary stamping the document means it has been checked for their interests. A notary formalises a document; it does not automatically mean the terms favour you. Independent legal review of the actual clauses, not just notarisation of whatever was drafted, is what protects a leasehold buyer.
+
+## How we think about Hak Sewa on our own villas
+
+Every villa we list for sale states its lease terms upfront, including remaining years and any extension mechanism, because we manage these properties ourselves and have no reason to leave that ambiguous. If you're comparing a Hak Sewa purchase against a listing elsewhere, use the five-point framework above on both and see which one actually answers all five clearly in writing.
+
 ## What to do next
 
 Hak Sewa is the simplest and most accessible route into a Bali villa for foreign buyers, and it works well when the underlying contract is drafted carefully and reviewed independently before you sign. The quality of that contract, not the headline lease term, is what actually determines how secure your purchase is.

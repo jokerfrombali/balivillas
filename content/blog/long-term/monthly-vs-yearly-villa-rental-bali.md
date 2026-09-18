@@ -56,6 +56,28 @@ The length of rental you commit to and the visa route you're pursuing tend to in
 
 If you're not sure yet, start monthly. The cost difference over a month or two of uncertainty is smaller than the cost of being locked into a year-long lease in the wrong area or the wrong villa. Once you know, converting to yearly is straightforward and the savings compound from there.
 
+## A three-question framework to decide
+
+If you're weighing this decision right now, three questions usually settle it faster than a pros-and-cons list.
+
+**How would you feel if your plans changed six months in?** If the thought of being tied to a year-long lease with no easy exit makes you uneasy, that discomfort is information, start monthly, even at a higher per-month rate, and treat the extra cost as the price of genuine flexibility. If a year feels comfortable and even underwhelming, in that you'd probably stay longer anyway, a yearly lease is likely the better financial call.
+
+**Do you have a firm visa route sorted for the length of stay you're planning?** If you're still working out which long-stay permit applies to you, it's worth resolving that in parallel with, or slightly ahead of, committing to a yearly rental, since the two decisions inform each other in practice even though they're formally separate.
+
+**Would the savings from a yearly lease meaningfully change your budget, or are they a marginal difference?** For some tenants, the gap between monthly and yearly rates is large enough to be a genuine financial decision; for others planning a shorter or more exploratory stay, the difference is small enough that the flexibility of monthly clearly wins regardless.
+
+## What goes wrong when guests commit too early or too late
+
+The pattern we see most often on the "too early" side is a guest signing a yearly lease in their first week in Bali, before they've actually lived in the area day to day, only to realise a month or two later that the specific villa or neighbourhood doesn't suit them the way it looked like it would from photos and a short visit. Exit terms then become the whole story, and not every lease has a clean way out.
+
+On the "too late" side, we see guests stay on monthly rolling arrangements for six months or more, paying the higher monthly rate the whole time, simply because they never got around to confirming their plans were settled enough to convert. If you're genuinely confident after the first month or two, it's worth actively revisiting the yearly option rather than letting inertia keep you on the more expensive monthly rate indefinitely.
+
+## What to check, and with whom, before choosing
+
+- **With yourself:** how you'd feel about being locked in if plans changed, honestly, not just in theory.
+- **With the manager or owner:** whether converting from monthly to yearly partway through is possible, and on what terms.
+- **With a visa agent:** which long-stay permit fits your situation and timeline (as of 2026, verify current requirements, since rules change).
+
 ## What to do next
 
 The monthly-versus-yearly decision comes down to how settled your plans are, not just which number looks smaller on paper — weigh the flexibility of monthly against the savings and certainty of yearly against your own situation.

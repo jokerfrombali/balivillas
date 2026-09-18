@@ -55,6 +55,26 @@ Even though a yearly lease covers all twelve months regardless of season, when y
 
 Get the payment structure and what's included in writing before you commit, not just the headline annual figure — two villas quoted at similar totals can work out very differently once you factor in utilities, staff and deposit terms. And confirm the exit terms even if you're confident you'll stay the full year; plans change more often than tenants expect.
 
+## A framework for deciding whether a yearly quote is good value
+
+Rather than judging a yearly quote against a number you've seen elsewhere, run it through three comparisons. First, divide the annual figure by twelve and compare that to the monthly rate for the same or a comparable villa; the gap between the two is the "certainty discount" you're getting for committing to a year, and it's worth knowing how large that gap actually is before deciding it's worthwhile. Second, compare what's included between the yearly and monthly versions of the same villa, sometimes a yearly deal includes staff or a higher utilities allowance that a monthly quote doesn't, which changes the real comparison more than the headline figures suggest. Third, weigh the upfront capital commitment against your own cash flow; a lower effective monthly rate is only good value if paying most of it upfront doesn't create a problem elsewhere in your budget.
+
+If a yearly quote passes all three checks, comfortably cheaper per month, similar or better inclusions, and manageable upfront payment, it's usually worth taking. If it only passes one or two, it's worth asking whether a monthly arrangement, even at a higher rate, might suit your actual situation better.
+
+## What goes wrong with first-time yearly leases
+
+The most common issue we see is tenants focusing entirely on the headline annual figure and skipping the exit terms, then finding themselves with no clear process if their plans change six months in. A yearly lease is a real commitment; ask specifically what happens if you need to leave early, whether that's a partial refund, a forfeited deposit, or something negotiated case by case, before you sign, not after your plans have already changed.
+
+A second issue is underestimating how much staff and maintenance terms vary between yearly deals. Two villas quoted at a similar annual total can differ meaningfully once you check whether gardening and pool maintenance are included, or whether a cook or driver, if you want one, is bundled in or a separate ongoing cost. Ask for the full breakdown, not just the base rent.
+
+A third is not confirming the visa situation early enough. A tourist visa is unlikely to cover a full year, and sorting out the right long-stay permit can take time; starting that process only after signing the lease sometimes creates unnecessary pressure. Speak to a visa agent in parallel with negotiating the lease, not after.
+
+## What to check, and with whom
+
+- **With the manager or owner:** the full breakdown of what the annual figure includes (utilities, staff, maintenance), the payment schedule, and the exit terms in writing.
+- **With a visa agent:** which long-stay permit currently fits your situation and how long it takes to arrange (as of 2026, verify current requirements, since rules and eligibility change).
+- **With yourself:** whether the upfront or instalment payment structure genuinely fits your cash flow, not just whether the effective monthly rate looks attractive on paper.
+
 ## What to do next
 
 A yearly villa rental cost in Bali is best understood as base rent plus a clear breakdown of what's included, not a single headline number — get that breakdown in writing before comparing quotes between villas.

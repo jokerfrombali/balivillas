@@ -65,6 +65,26 @@ If the honest answers point toward limited time, no existing local network, and 
 
 Worth isn't just about what's avoided — it's also what should show up positively: consistent guest reviews, transparent monthly reporting you can actually understand, pricing that responds to season and demand, and maintenance handled before it becomes a guest complaint. If a management relationship isn't delivering these, the fee isn't earning its keep regardless of the theoretical argument for hiring one.
 
+## A worked example: two owners, two answers
+
+Take two owners with similar villas in Sanur. Owner A lives in Australia, visits twice a year, and has no local contacts beyond the villa's previous caretaker. Owner B lives in Bali full time, previously ran a small guesthouse, and is happy fielding WhatsApp messages at odd hours.
+
+For Owner A, the maths is straightforward: every guest issue during a stay has to route through someone local and accountable, every maintenance job needs a crew that answers the phone, and every compliance question needs someone who already knows the current rules rather than researching them from scratch. The commission is effectively paying for a local operating presence that doesn't otherwise exist. Self-managing from overseas is possible but usually means slower responses and a steeper learning curve on licensing and staff management than the fee would have cost.
+
+For Owner B, the calculation flips. She already has the local presence, the guest-handling instinct and the time. Hiring full management would mean paying for capability she already has, with the main benefit being freed-up time rather than avoided risk. In that case, a lighter booking-agent arrangement or partial support — marketing and pricing only, say — often makes more sense than full management.
+
+The lesson from comparing the two: worth isn't a property of villa management in the abstract, it's a property of the gap between what you can cover yourself and what the fee buys back. Owners who skip this comparison and decide based on the headline commission rate alone tend to get the wrong answer for their situation either way.
+
+## What we check before recommending management or not
+
+When an owner asks us directly whether management makes sense for their villa, we don't give a blanket yes. We ask about location relative to the villa, whether they already have staff or a maintenance contact, how many bookings they're realistically expecting, and whether their goal is passive income or hands-on involvement. In a handful of cases — an owner already living on-site with time to spare — we've told people a lighter arrangement suits them better than our full scope. That conversation costs us nothing and saves both sides a mismatched relationship later.
+
+If you're weighing this up and want a second opinion that isn't trying to sell you the biggest package available, that conversation is free and doesn't commit you to anything.
+
+## What to ask a management company before you decide
+
+Beyond the general worth-it question, a few direct questions to any company you're considering will tell you more than their marketing pages: what exactly is included in the quoted commission versus billed as an extra, how they handle an emergency outside office hours, what their average response time to a guest message actually is, and whether they'll show you a real (anonymised) owner report before you sign. A company that answers these plainly, with specifics rather than reassurance, is usually the one worth trusting with your villa.
+
 ## What to do next
 
 Whether villa management is worth it in Bali depends on your proximity, your available time and what a specific company actually delivers for its fee — not a general rule. Work through the framework above honestly before deciding either way.

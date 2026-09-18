@@ -68,6 +68,16 @@ It's easy to panic at a quiet week or two and change pricing or strategy reactiv
 4. Target marketing toward remote workers, retirees and long-stay guests specifically.
 5. If bookings still lag, check for structural issues beyond seasonality.
 
+## A worked example: turning one quiet month around
+
+Take a 2-bedroom villa in Umalas with a genuinely slow February. Rather than a blanket 20% rate cut, a more targeted response looks like: a moderate 10-15% rate reduction, minimum stay extended to five nights instead of two, listing copy rewritten to emphasise Wi-Fi speed and workspace for remote workers who make up a larger share of February demand, and a direct-booking push highlighting the 15% monthly discount to long-stay guests specifically. Given two to three weeks, this combination typically outperforms a steeper discount with no minimum-stay change, because it targets guests actually travelling in that window rather than assuming any discount attracts any guest.
+
+If, after a fair trial period, enquiry volume still hasn't moved, that's the signal to check whether something structural — outdated photos, a listing that hasn't been refreshed in a year, a review gap after a recent management change — is compounding the seasonal dip rather than seasonality being the whole story.
+
+## What we do differently in low season for the villas we manage
+
+For our own portfolio, low-season planning isn't a single company-wide rule — a Canggu villa's remote-worker-focused low season plan looks different from a Sanur family villa's, which leans more heavily on weekly and monthly direct-booking discounts and a longer minimum stay. We also use the quiet months deliberately for upkeep that would disrupt a high-season booking, so a villa coming out of low season is better presented, not just occupied through it.
+
 ## What to do next
 
 Filling a villa in low season is achievable but takes a different strategy from high season, not just a lower price. The owners who do best treat it as a distinct planning period rather than something to react to once the calendar looks empty.

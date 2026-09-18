@@ -73,6 +73,22 @@ Most thorough onboarding processes run four to six weeks from signed agreement t
 5. Staff continuity decided and communicated, if applicable
 6. First monthly report received and matches what was agreed
 
+## What goes wrong in onboarding, and how to catch it early
+
+The most common onboarding problem isn't a dishonest manager — it's an optimistic one. A company genuinely believes it can turn a villa around in a week, skips the documentation review to hit that promise, and only discovers a licensing gap or an unclear leasehold detail after the villa is already live and taking bookings. Fixing compliance issues retroactively is slower and more stressful than catching them in week one, and it's the owner who bears that stress even though the shortcut wasn't their decision.
+
+A second, quieter problem is mismatched expectations on pricing. Some owners hear an optimistic base rate during the sales conversation, then see a lower opening rate once the listing actually goes live, because the initial figure was aspirational rather than benchmarked against comparable villas. Ask during onboarding specifically how the base rate was calculated and against which comparable properties, so you're not surprised later.
+
+## How we run onboarding for a new villa
+
+When a villa comes under our management, the documentation and compliance review happens before we touch marketing, not after — because a licensing gap found after a villa is live is a much harder problem than the same gap found in week one. We also give owners a written fix list from the property assessment rather than a verbal summary, so nothing gets lost between the site visit and the listing going live.
+
+On staff handover specifically, we have that conversation directly and early rather than assuming it sorts itself out, because it's the step most likely to create friction if left ambiguous. And the first monthly report is built to match exactly what we described during onboarding — if it doesn't, that's on us to explain, not something for the owner to chase.
+
+## Questions worth asking before you sign an onboarding agreement
+
+A few direct questions during the sales conversation, before anything is signed, tend to separate a careful onboarding process from a rushed one: who specifically reviews compliance documentation and what happens if a gap is found, how the initial base rate is benchmarked against comparable villas rather than guessed, whether existing staff are consulted directly about their own continuation, and what the first monthly report will actually look like. Ask for these in writing where possible, since a verbal promise during a sales call is harder to hold anyone to once the agreement is signed.
+
 ## What to do next
 
 A thorough villa management onboarding process in Bali takes four to six weeks and follows a predictable sequence — use it to judge whether a company you're considering is being careful or rushing you to signed bookings.

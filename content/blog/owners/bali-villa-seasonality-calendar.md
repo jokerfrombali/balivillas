@@ -70,6 +70,16 @@ Beyond the main summer and Christmas/New Year windows, various Indonesian and re
 4. Review whether low-season marketing is active, not just a passive rate cut.
 5. Compare your actual booking pace year over year to refine the pattern for your specific villa.
 
+## A worked example: planning one villa's year
+
+Take a 3-bedroom family villa in Sanur. Its realistic calendar looks roughly like this: strong bookings and premium rates in July-August and over Christmas/New Year, a smaller but real bump around Easter, a genuinely quiet stretch in February-March worth scheduling any maintenance into, moderate and building demand through April-June, and a second, more variable quiet stretch September-November. Because it's family-oriented, its low-season dip is sharper than a similarly sized villa in Canggu would see, so its marketing push toward longer stays and its minimum-stay adjustments need to be more aggressive in the quiet months to compensate.
+
+Mapping this out once, ideally against the villa's own booking history rather than the general pattern alone, turns seasonality from something reacted to each month into something planned for a year at a time — which is the practical difference between a villa that's merely listed and one that's actively managed through its calendar.
+
+## What we do differently by area
+
+Because we manage villas across Sanur, Canggu, Umalas and Ungasan, we don't apply one seasonal calendar uniformly — a Canggu villa's shoulder-season pricing assumes more resilient remote-worker demand than a Sanur family villa's would, and a Ungasan clifftop villa's marketing leans more on its clifftop and beach access during quieter months than a Sanur villa's would. Treating each area's actual booking pattern as distinct, rather than applying an island-wide average to every villa, is one of the more concrete ways active management shows up in a full year's occupancy and revenue.
+
 ## What to do next
 
 Bali's seasonal pattern is a useful starting point, but the specific dip and peak for your villa depends on its area and guest profile, and treating every month the same way leaves revenue on the table in both directions.

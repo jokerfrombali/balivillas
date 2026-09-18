@@ -54,6 +54,23 @@ Sometimes the term "nominee" is not used directly, and the arrangement is instea
 
 If you already hold a villa through a nominee structure, the priority is getting independent legal advice on converting to a recognised structure, such as transferring into a PT PMA or negotiating a proper leasehold agreement with the nominee, rather than continuing to rely on the original side agreement. This is a genuinely complex legal situation and one where an experienced Indonesian property lawyer, not a general notary, is the right starting point.
 
+## A framework for deciding what to do if nominee is proposed
+
+If a nominee structure comes up in a conversation about a villa purchase, work through this before responding:
+
+1. **Name the structure clearly.** Whatever it's called — local partner, trust arrangement, side agreement — confirm whether an Indonesian individual would hold title while you hold informal control. If yes, it's a nominee arrangement.
+2. **Ask why it's being proposed instead of leasehold, Hak Pakai or PT PMA.** A vague answer ("it's simpler," "it's normal here") is not a legal justification.
+3. **Get independent legal advice**, from a lawyer with no connection to whoever proposed it, before any money changes hands.
+4. **Compare the real alternative cost.** Leasehold in particular is often not meaningfully more expensive or complex than a nominee arrangement, once you account for the legal exposure the nominee route carries.
+
+## What goes wrong beyond the headline risks
+
+Beyond the scenarios in the table above, a subtler problem shows up over longer holding periods: a nominee relationship that starts on good personal terms can deteriorate over years, particularly if the nominee's own financial circumstances change, or a family dispute draws the property into an unrelated matter. Because there is no reliable independent enforcement mechanism, the foreign buyer's position depends entirely on the ongoing goodwill of someone they may have known only briefly at the point of purchase. This is a structural weakness that no amount of careful paperwork around the arrangement fully resolves.
+
+## What we tell buyers who ask about this
+
+When a prospective buyer asks us whether a nominee structure would work for a villa they're considering, our answer is consistently no, and we point them toward leasehold, Hak Pakai or PT PMA depending on what actually fits their plan. Every villa on our own for-sale list uses one of these recognised structures, and we'd rather lose a sale than steer a buyer toward an arrangement that has repeatedly failed to protect foreign buyers elsewhere.
+
 ## What to do next
 
 Nominee agreements are not a legal ownership route for foreigners in Bali, and the private side agreements meant to protect the foreign party have not reliably held up when disputes reach Indonesian courts. Leasehold, Hak Pakai and PT PMA all exist as the legitimate alternatives, and each is worth understanding on its own terms rather than treating a nominee arrangement as a shortcut past them.

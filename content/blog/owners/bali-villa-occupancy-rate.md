@@ -66,6 +66,18 @@ Low season is where active management effort makes the most visible difference: 
 
 If occupancy stays persistently low despite reasonable pricing, decent reviews and solid presentation, the issue may sit elsewhere — a listing description that undersells the villa, photography that doesn't do it justice, or a management gap in actively adjusting pricing to demand. Why is my Bali villa not getting bookings works through the diagnostic process for this specific situation.
 
+## A worked comparison: two similar villas, different occupancy
+
+Consider two 2-bedroom pool villas in the same Sanur neighbourhood, similar size and condition. Villa A is priced at a fixed rate year-round, has minimum stay set to two nights regardless of season, and is listed only on Airbnb. Villa B has pricing reviewed weekly against comparable listings, a longer minimum stay in low season to reduce turnover costs, and is listed across direct booking, Airbnb and Booking.com with a synced calendar.
+
+Over a full year, Villa B will almost certainly show meaningfully higher occupancy, not because it's a better property but because it's actively capturing more of the available demand in each period. Villa A isn't badly managed in an obvious way — nothing about it looks broken — but the gap between "listed" and "actively managed" is exactly what shows up in a full-year occupancy comparison. This is the practical argument for active management over a set-and-forget listing, and it's visible in the numbers even without a published benchmark to compare against.
+
+## What we actually do to move occupancy for the villas we manage
+
+For the 20 villas under our management, we review pricing at least weekly against comparable listings in the same area, adjust minimum stay length seasonally rather than holding it fixed, and keep availability synced across direct booking, Airbnb and Booking.com so no channel sits stale while another gets attention. When occupancy dips in a specific villa beyond what season alone would explain, we treat that as a signal to check pricing, listing quality and review trends specifically for that property, rather than assuming it will correct itself.
+
+This is also why we're cautious about quoting a single occupancy number to a prospective owner — the honest answer depends on the villa's area, size, price point and how actively it will be managed, and we'd rather walk through that specifically than hand over a figure that doesn't apply.
+
 ## What to do next
 
 Bali villa occupancy rate responds to specific, manageable levers — pricing, presentation, reviews, seasonality — rather than a fixed number every villa should expect to hit.

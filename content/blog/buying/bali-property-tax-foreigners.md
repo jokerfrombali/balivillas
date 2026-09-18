@@ -59,6 +59,33 @@ PBB is assessed annually based on the government's valuation of the land and bui
 
 Our guide on tax when selling a villa in Bali picks up that last stage, once you are ready to exit rather than hold.
 
+## What goes wrong when foreign buyers assume tax works like it does at home
+
+- **Assuming property tax works the way it does in the buyer's home country.** Some buyers arrive expecting a single annual bill similar to a home council tax system, and are surprised by the separate one-off BPHTB at purchase; others under-budget PBB because it looks small relative to the purchase price, then treat it as negligible rather than a routine recurring cost to plan for.
+- **Not obtaining an NPWP early enough**, which can hold up parts of the transaction or ongoing tax compliance if left until it becomes urgent.
+- **Mixing up ownership tax with rental income tax.** These are genuinely separate questions, and a buyer who has only thought through BPHTB and PBB can be caught out later when rental income tax obligations surface, particularly if the villa is later rented through Airbnb or similar without a clear plan for how that income is reported.
+- **Relying on a generic online answer to "is there property tax in Bali"** rather than a notary's specific confirmation for the ownership structure in play. Generic answers are a reasonable starting point for understanding the shape of the system, not for budgeting an actual transaction.
+
+## A decision framework: what to confirm, and with whom
+
+| Question | Who to ask |
+|---|---|
+| What ownership structure applies to this specific villa, and how is it taxed | Your notary/PPAT |
+| Current BPHTB estimate for this transaction | Your notary/PPAT |
+| Current PBB assessment on this specific property | Your notary, or the property's existing owner/seller |
+| Whether I need an NPWP and how to obtain one | Your notary or a tax adviser |
+| How rental income would be taxed if I let the villa out | A tax adviser, separate from the property transaction itself |
+
+Splitting these questions across the right professional, rather than expecting one person to answer all of them informally, avoids the common trap of getting a confident-sounding but incomplete answer to a question that actually needed a specialist.
+
+## What we do in practice
+
+Because we manage villas for owners as well as sell them, we regularly see how the ownership-tax and rental-income-tax questions play out over years, not just at the point of purchase. When we walk a buyer through one of our [villas for sale](/villas-for-sale/), we can tell them the property's transaction and ownership history clearly, and point them to the right professional for the specific tax question they are asking, whether that is BPHTB, PBB, or how rental income would be treated if they later put the villa into our [villa management](/villa-management/) programme. We do not give tax advice ourselves, since the right answer depends on your personal circumstances as much as the property's.
+
+## A note on tax residency and reporting in your home country
+
+Owning property in Bali can also have tax implications in your home country, depending on your residency status and local reporting rules there. This is entirely separate from Indonesian BPHTB and PBB, and is worth raising with a tax adviser in your own country as well as one familiar with Indonesian property tax, rather than assuming one professional covers both sides.
+
 ## What to do next
 
 Property tax for foreign owners in Bali is manageable and predictable once you understand the two-tax structure and how your specific ownership arrangement interacts with each. The mistake to avoid is treating tax as an afterthought discovered after the purchase closes, rather than a budgeted line item confirmed before you sign.

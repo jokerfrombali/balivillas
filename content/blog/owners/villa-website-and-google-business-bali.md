@@ -56,6 +56,31 @@ Google Business Profile reviews are separate from Airbnb or Booking.com reviews,
 
 Local search ranking builds over months, not weeks, and a newly verified Business Profile or freshly launched website won't compete immediately with established competitors that have years of reviews and content. Treat this as a long-term channel alongside faster-moving levers like repeat-guest outreach, rather than expecting it to replace OTA bookings in the short term.
 
+## A decision framework for where to start
+
+If you have to choose one to set up first because time is tight, use these questions:
+
+1. **Does the villa already have a professional-looking, mobile-friendly page anywhere?** If not, start there — a Business Profile driving traffic to a weak or nonexistent website wastes the click.
+2. **Is the villa easy to find on Google Maps when someone searches its area and "villa"?** If not, and a basic website already exists, the Business Profile is the faster, free fix.
+3. **Do you already get direct enquiries, just not enough volume?** That points to a visibility problem (Business Profile, local search) rather than a conversion problem (website).
+4. **Do enquiries arrive but stall before booking?** That points to the website and response process rather than visibility.
+
+Most owners genuinely need both within the same few months — the framework is about sequencing, not about picking one and skipping the other.
+
+## Area pages matter as much as the villa page itself
+
+Guests searching Bali villas often search by area first — "villa Sanur pool" or "villa Canggu beach walk" — before they search a specific villa name they don't yet know. A website that only has one generic page for every villa misses this pattern. Structuring the site (or working with a manager whose site already does this) so each area has its own page, with the villas in that area shown together, matches how people actually search and gives Google a clearer page to rank for that query. This is part of why our own site is organised by area — [Sanur](/villas/sanur/), [Canggu](/villas/canggu/), [Umalas](/villas/umalas/) and [Ungasan](/villas/ungasan/) — rather than one flat villa list.
+
+## What goes wrong
+
+The most common failure isn't a missing website or profile — it's the two drifting apart over time. A phone number changes and gets updated on the website but not the Business Profile. A villa gets renovated and new photos go up on Airbnb but never make it to Google. Individually small, these gaps compound into the inconsistency search engines penalise and guests notice.
+
+The second common failure is verifying a Business Profile and then leaving it static. A profile that never gets new photos, never answers reviews and never posts an update reads, to both Google's ranking systems and a guest scrolling past it, as a business that isn't actively run.
+
+## What we do in practice, and what to check with whom
+
+Because we manage the website and Business Profile for every villa under one system, updates to photos, pricing structure or contact details go out once and apply everywhere, rather than needing to be repeated manually across several places. If you're setting this up yourself, the practical check is simple: pick one detail — your WhatsApp number is a good test — and search for the villa or your brand name from a few different angles (Maps, plain Google search, your own site) to see whether it's identical everywhere. Any mismatch you find is worth fixing immediately rather than batching for later, since it sits there quietly undermining trust until someone notices.
+
 ## What to do next
 
 Set up the website and Google Business Profile together, keep every detail consistent across both, and be patient with how long organic visibility takes to build.

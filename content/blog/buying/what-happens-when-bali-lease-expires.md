@@ -56,6 +56,22 @@ The most common issue is leaseholders discovering only as expiry approaches that
 
 Because we manage villas across four areas of Bali, we occasionally see leases approaching expiry play out for owners we work with, and the pattern is consistent: owners who started extension conversations or resale planning years ahead had far more options than those who addressed it only in the final year. If you own a leasehold villa and are unsure what your contract actually says about expiry, it is worth getting it reviewed now rather than waiting.
 
+## A framework for planning around your expiry date
+
+1. **Locate the exact clause now**, whatever your remaining term, and identify which of the three common outcomes above applies.
+2. **If the outcome is reversion with no compensation**, treat your remaining years as the full extent of your asset's value and plan your exit or use accordingly — don't price a future resale as if an extension will rescue the timeline.
+3. **If compensation applies**, understand exactly how it's calculated and by whom, and get an independent view on whether that formula is likely to be honoured fairly as the date approaches.
+4. **If removal is required**, factor the cost of demolition or removal into your own planning well ahead of time, not as a surprise final expense.
+5. **Whatever the outcome, calendar a review at the 5-year, 2-year and 1-year marks** so decisions get made with time to act, not under last-minute pressure.
+
+## What goes wrong when this is left unclear
+
+Beyond assuming a favourable outcome without checking, a specific and recurring problem is a contract whose expiry language was clear enough at signing but becomes contested once real money and a real deadline are involved — a landowner and leaseholder interpreting the same paragraph differently, each favouring their own position. This is far more likely with older contracts drafted informally or translated loosely, and it's a strong argument for getting even an existing lease reviewed now by a notary, not just contracts you're about to sign.
+
+## Why we raise this with owners even years out
+
+Because we manage villas across Sanur, Canggu, Umalas and Ungasan, we've seen the practical difference between owners who treated their lease's expiry clause as a distant technicality and those who reviewed it early enough to negotiate, sell, or plan around it calmly. If you're not sure what your own lease says about expiry, that uncertainty itself is worth resolving now, independent of how many years you have left.
+
 ## What to do next
 
 What happens when a Bali lease expires depends entirely on your specific contract, and the range of outcomes, from full reversion with no compensation to a negotiated extension, is wide enough that assuming a favourable outcome without checking is a real risk. Review your lease's expiry clause now, however many years remain.

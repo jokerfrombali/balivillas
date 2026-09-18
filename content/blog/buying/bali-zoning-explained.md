@@ -52,6 +52,34 @@ Some buyers try to read the RDTR maps themselves, and while the maps are technic
 
 We have seen buyers discover a zoning mismatch only once they tried to register a villa for rental licensing or apply for a renovation permit years after purchase, long after any leverage to renegotiate the price or walk away had passed. The lesson is not that zoning issues are common, most plots marketed to foreign buyers by reputable agents are fine, but that the cost of checking upfront is trivial compared to the cost of finding out later, and it should never be skipped simply because a deal feels time-pressured.
 
+## A decision framework for weighing a plot's zoning
+
+When you are comparing two or three plots and zoning turns up as a complication on one of them, it helps to work through the same short sequence each time rather than deciding on gut feel.
+
+1. **Confirm the current zoning against your actual intended use**, not a general description of the area. Two plots on the same street can carry different designations.
+2. **Separate "will this be approved" from "how long will it take."** A zoning change that is likely to succeed but takes eighteen months is a different risk to price than one that is fast but uncertain.
+3. **Price the delay and the risk of failure into the offer**, or walk away if either is too open-ended for your timeline.
+4. **Never let a tight closing deadline push you past this step.** A seller who is in a hurry is not a reason to skip verification; if anything it is a reason to be more careful.
+
+If a plot fails this sequence and the seller cannot produce documented, in-progress paperwork for a zoning change, we treat that as a plot to walk away from rather than negotiate around, regardless of how attractive the price looks.
+
+## How the four areas we work in tend to differ
+
+Zoning specifics are set at the regency and village level, so broad generalisations should always be confirmed on the specific plot, but the pattern of what buyers typically encounter differs across the areas where we manage and sell villas.
+
+| Area | What buyers commonly find |
+|---|---|
+| Sanur | A long-established residential and tourism area; zoning is often more straightforward, though beachfront and riverside plots carry setback considerations |
+| Canggu | High demand has pushed development into a wider mix of zoning, including plots near rice fields where agricultural-to-tourism conversion questions come up more often |
+| Umalas | A mix of established residential lanes and newer development; check whether a specific plot is zoned for the commercial rental use you intend, not just residential |
+| Ungasan | Clifftop and Bukit-area plots vary widely in designation; some are well-established for tourism, others need closer checking given the area's more recent development |
+
+This is background, not a substitute for a plot-specific PKKPR check; treat it as a guide to which questions to ask first in each area.
+
+## What we do in practice
+
+As a team that both manages and sells villas ourselves, we do not shortlist a plot for our own portfolio, or list it for sale, without its zoning already confirmed against its actual use as a rental villa. When we walk a buyer through one of our [villas for sale](/villas-for-sale/), the zoning question has already been answered, which is a large part of why buyers work with an established manager rather than piecing together a purchase from an unfamiliar plot on their own. If you already have a plot in mind outside our listings, we are happy to talk through what questions to put to your notary, even if the purchase itself is not through us.
+
 ## What to do next
 
 Treat zoning as a separate, mandatory check from land ownership, not an assumption based on what neighbouring properties do. A plot's zoning should support your specific intended use before you commit any capital.

@@ -63,6 +63,21 @@ When a group books a larger villa together, it's worth agreeing among yourselves
 
 For monthly or seasonal stays, deposit amounts are usually higher in absolute terms since the exposure over a longer period is greater, but the percentage relative to the total rent is often lower than for a two-night booking. If you are booking a month or longer, it's reasonable to ask whether the deposit can be a fixed sum rather than tied to nightly rate, and how it's handled if you extend. See our guide on [negotiating Bali villa rates](/blog/renting/negotiating-bali-villa-rates/) for how deposit and rate discussions usually go together.
 
+## Deciding whether a deposit request feels reasonable
+
+There's no fixed benchmark for a "normal" deposit, but a few checks help you judge whether a specific request is fair rather than opportunistic.
+
+Compare the deposit to the villa's likely replacement costs, not to the nightly rate. A one-bedroom villa with simple furnishings carries less exposure than a large family villa with a fully equipped kitchen, multiple TVs and pool equipment, so a much higher deposit on the smaller villa is worth questioning. Check whether the amount is fixed regardless of stay length or scales with nights booked; a fixed sum is usually easier to plan around than one that grows with every extra night. And ask whether the deposit is held as cash, a card authorisation, or a bank transfer, each has different implications if a dispute drags on, a card authorisation is the easiest to release quickly since no money has actually moved.
+
+If a manager can't explain clearly what the deposit is calculated against, that's itself useful information, ask them to walk you through it before you pay rather than after.
+
+## What to check, and who to check it with
+
+- **With the manager, before you pay:** the exact deposit amount, the method (transfer, card hold, cash), whether it's fixed or scales with your stay, and the return timeline in days.
+- **With yourself, on arrival:** photograph every room, the pool area and any equipment before you unpack, and send yourself the photos with a timestamp so you have a record independent of the villa's own system.
+- **With the manager, at check-out:** ask for the walkthrough to happen with you present rather than after you've left, so any concern is raised and discussed on the spot rather than by message days later.
+- **With your group, before arrival:** if you're travelling with others, agree informally how any deduction would be split, so it isn't an awkward conversation after the fact.
+
 ## What to do next
 
 Before you pay any deposit, confirm in writing whether it's refundable, the amount, the method and the rough return timeline. Do a walkthrough on arrival and document anything already marked.

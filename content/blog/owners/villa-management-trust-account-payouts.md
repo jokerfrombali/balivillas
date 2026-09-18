@@ -66,6 +66,16 @@ Compare the payout against your monthly statement first — [villa owner monthly
 
 A well-run villa management payout process should give you: a fixed, predictable payout date, a statement that reconciles exactly to the transferred amount, clear disclosure of any conversion or transfer fees, and a straightforward answer when you ask how guest funds are tracked before payout. None of this is an unusual ask, and a manager confident in their process answers all of it without friction.
 
+## A worked example: tracing a payout back to its source
+
+Say your statement shows a net payout of a given amount for the month, made up of three direct bookings, two Airbnb stays and one Booking.com stay. To verify it properly, you'd check each direct booking against funds received directly by the manager (usually the fastest to clear), then check the two OTA bookings against the platform's own payout schedule to the manager, which may lag the guest's actual stay by days or weeks depending on the platform. If the manager's payout date falls before an OTA has actually released funds for a given booking, that booking should show as pending rather than paid — and a manager who includes it anyway, ahead of actually holding the funds, is taking on cash-flow risk that should be disclosed, not left implicit.
+
+This is also why comparing payout timing across companies is worth doing before you sign: a manager who pays a fixed date regardless of OTA fund release is effectively fronting you money between bookings, which is fine as a practice but worth knowing about, versus one whose payout date is explicitly tied to when funds actually clear.
+
+## How we handle payouts and why
+
+We pay owners monthly on a fixed date, and our statements show the calculation connecting gross booking value, commission and any expenses to the net figure transferred — not just the final number. For owners paid to an overseas account, we disclose conversion handling upfront during onboarding rather than leaving it to be discovered on the first payout. If you want to see how this works before committing to anything, we're happy to walk through a real payout cycle in detail.
+
 ## What to do next
 
 Understanding how villa managers pay owners in Bali — payout timing, fund flow, currency handling — means fewer surprises once your villa is generating bookings and clearer accountability if something doesn't match.

@@ -62,6 +62,32 @@ Most foreign buyers are not set up to navigate the OSS system directly, particul
 
 A PKKPR check is one part of a broader due diligence process that should also confirm the land certificate type and, ideally, review any existing structures for permit compliance. Our [Bali property due diligence checklist](/blog/buying/bali-property-due-diligence-checklist/) covers the full sequence, and our practical guide on [how to check Bali zoning](/blog/buying/check-bali-zoning-map/) walks through the plot-specific checking process this page describes in principle.
 
+## A worked example of how the decision plays out
+
+Say you are looking at two plots in Umalas, similarly priced, both advertised as suitable for a villa rental. On plot A, the seller has a PKKPR already issued for tourism accommodation use, matching exactly what you intend to build. On plot B, the seller has no PKKPR yet, but says "we can get one, it's not a problem here." These two plots are not comparable offers, even at the same price.
+
+With plot A, your notary's job is to verify the PKKPR is genuine, matches the plot's actual coordinates, and has not expired or been superseded. With plot B, you are effectively pricing in an unknown: the time it takes to apply, the chance the zoning does not support tourism use once actually checked, and the possibility the deal falls through after you have already paid a deposit. A price difference that does not account for this gap is not a fair comparison. In our experience, buyers who treat "PKKPR pending" the same as "PKKPR confirmed" when negotiating are the ones most likely to end up disappointed months later.
+
+## What goes wrong most often
+
+- **A PKKPR issued for the wrong use.** A plot with a PKKPR for general residential use gets bought by someone planning short-term tourism rental, on the assumption residential covers it. It often does not, and the mismatch surfaces only at building permit or licensing stage.
+- **A PKKPR that has expired or been superseded** by a later spatial plan revision. Documents issued some years ago are not automatically still valid; always check the current status, not just that a PKKPR exists somewhere in the seller's paperwork.
+- **Coordinates that do not match the actual plot boundary**, particularly on land that has been subdivided since the PKKPR was issued. A PKKPR for the original, larger parcel does not automatically apply cleanly to a smaller subdivided lot.
+- **Treating a developer's assurance as equivalent to independent verification.** Even when a reputable developer handles the application, have your own notary confirm the result rather than taking their summary at face value.
+
+## What we do in practice
+
+Every villa we manage or list for sale has already been through this process, with the PKKPR result on file rather than a summary from a seller. When we are assessing a new plot for our own portfolio, we treat an unconfirmed PKKPR the same way we would advise a buyer to: as an open risk to be priced or resolved before committing, not a technicality to sort out later. That is part of why buyers working with our [villas for sale](/villas-for-sale/) listings are not starting this process from scratch; the zoning and PKKPR groundwork is already done and documented.
+
+## PKKPR status: what to accept and what to query
+
+| PKKPR status the seller shows you | Reasonable next step |
+|---|---|
+| Issued, for the exact use you intend, coordinates match the plot | Have your notary verify authenticity, then proceed to due diligence on the rest |
+| Issued, but for a different use than you intend | Do not assume it transfers; treat it as if no PKKPR exists for your purpose |
+| "In progress" or "submitted" | Price the delay and the risk of a negative result into your offer, or wait for the result before committing funds |
+| None, and the seller has not started | Treat this as a plot you would only buy at a discount that reflects the work and uncertainty ahead, or walk away |
+
 ## What to do next
 
 Treat a confirmed PKKPR as a prerequisite, not a formality, before committing to a purchase built around a specific intended use, and never rely on a verbal assurance from a seller in place of the formal result.

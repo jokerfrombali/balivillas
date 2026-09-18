@@ -52,6 +52,23 @@ If your only goal is a personal holiday villa without formal commercial rental o
 
 Setting up a PT PMA correctly benefits from a lawyer or licensed company formation agent experienced specifically in Indonesian foreign investment structures, not a general notary alone, because the OSS licensing and classification process sits partly outside standard property conveyancing. Get quotes itemised by component (incorporation, licensing, capital, first-year compliance) so you can compare providers on a like-for-like basis rather than a single bundled number that may exclude parts of the process.
 
+## What goes wrong with PT PMA budgeting
+
+The most common budgeting mistake is treating the incorporation quote as the total cost, then being surprised by OSS licensing timelines and fees, the minimum capital commitment, and first-year compliance costs arriving as separate, unbudgeted items. A second mistake is choosing the cheapest formation agent quote without checking it covers the correct business classification for a villa rental operation specifically — a company registered under the wrong classification can face compliance problems down the line that cost far more to fix than the difference in formation fees would have saved.
+
+A third, less obvious problem: underestimating ongoing annual compliance as a minor administrative cost. For a single-villa operation, annual reporting, tax filings and maintaining good standing are recurring costs that need to be weighed against the rental income the structure is meant to support, not treated as an afterthought to the one-off setup.
+
+## A framework for budgeting a PT PMA realistically
+
+1. **Get the business classification confirmed first**, since it determines minimum capital, licensing requirements and timeline — don't request a generic "PT PMA cost" quote before this is settled.
+2. **Request an itemised quote** covering incorporation, OSS licensing, minimum capital, and first-year compliance separately, so you can compare providers on a like-for-like basis.
+3. **Budget ongoing annual compliance as a recurring cost**, not a one-off, and weigh it against expected rental income for the specific villa.
+4. **Build in timeline buffer.** OSS licensing can take longer than incorporation alone, and a purchase timeline that assumes the company will be ready in weeks when licensing takes months creates unnecessary pressure.
+
+## What we see with buyers setting up a PT PMA
+
+When buyers considering a villa on our for-sale list are weighing a PT PMA structure, we point them toward formation specialists who itemise cost by component rather than quoting a single bundled figure, because that's the only way to compare providers meaningfully and to budget the ongoing compliance cost realistically alongside the villa's running costs.
+
 ## What to do next
 
 PT PMA setup cost in Bali is not one number but a combination of incorporation, licensing, minimum capital and ongoing annual compliance, and it only makes financial sense once you are operating at a scale, or with a structure, that justifies the extra cost over leasehold or Hak Pakai. Get an itemised quote from a licensed formation specialist before deciding.

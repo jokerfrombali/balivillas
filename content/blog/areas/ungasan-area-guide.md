@@ -58,6 +58,24 @@ Ungasan and the wider Bukit peninsula sit slightly higher and drier than the low
 
 If you are weighing Ungasan against a beachside family base, our guide on [whether Sanur is a good place to stay](/blog/areas/is-sanur-a-good-place-to-stay/) covers the opposite end of that trade-off — flatter, more walkable, better suited to families and longer stays, with less dramatic scenery.
 
+## A framework for deciding if Ungasan is right for your trip
+
+Three questions usually settle whether Ungasan fits. First, are you happy arranging transport for essentially every outing, including dinner? If the idea of booking a driver or riding a scooter for every meal sounds like a chore rather than part of the trip, Ungasan will wear on you by day three; if you're comfortable with it, or plan to rent a car for the whole stay anyway, it stops being an issue. Second, does your group include anyone for whom stairs are a genuine barrier? Both Melasti and Green Bowl involve descending a cliff, one by paved road, one by a longer staircase, and that changes the calculus for older travellers or anyone with mobility limits. Third, is the appeal of the trip views and quiet, or walkable buzz? Ungasan delivers strongly on the first and almost not at all on the second, so it rewards travellers who came to Bali for scenery and rest over those who came for street life.
+
+If you answer all three in Ungasan's favour, it's a strong pick; if even one points the other way, it's worth reading our comparison with a flatter, more walkable base before committing.
+
+## What goes wrong when guests book Ungasan without checking this
+
+The recurring complaint we hear from guests who booked elsewhere in Ungasan is feeling stranded without arranging transport in advance. Because so little sits within walking distance, a guest who assumes they'll "figure it out on arrival" often loses the first evening to logistics instead of enjoying the villa. Arranging a driver or scooter rental before you land, not after, avoids this entirely.
+
+A second issue is underestimating stair access at the beaches. Photos of Green Bowl in particular don't convey how long and steep the descent is, and guests travelling with young children or anyone recovering from an injury sometimes find out only once they're at the top of the staircase. Ask us directly which of the nearby beaches suits your group's mobility before you plan a day around one.
+
+A third is booking Ungasan expecting café culture similar to Canggu or Umalas. It doesn't exist here in the same way, the area's character is residential and scenic rather than commercial, and guests expecting to walk to breakfast are usually disappointed unless that expectation is reset before arrival.
+
+## What we check before recommending an Ungasan villa
+
+We typically ask about group composition and any mobility considerations, whether a car or driver is already arranged or needs organising, how many days will be spent exploring Uluwatu versus staying at the villa, and whether quiet and views are genuinely the priority or whether the guest might be happier somewhere more walkable. These questions usually make the fit, or the mismatch, obvious quickly.
+
 ## What to do next
 
 Choose Ungasan if quiet, clifftop views and proximity to Uluwatu's beaches matter more than walkability and amenities on your doorstep. If you would rather step out of the villa straight onto flat, family-friendly beach paths, Sanur or Canggu's Berawa area will suit you better.

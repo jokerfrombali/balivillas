@@ -64,6 +64,27 @@ That depends on your goals, the specific property, and how carefully the purchas
 | Notary/PPAT fees | Spread across the process, confirmed upfront |
 | Any permit-closing costs | Negotiated as part of closing, or after |
 
+## What goes wrong when buyers underestimate this
+
+- **Budgeting only the purchase price**, then scrambling to cover BPHTB, notary fees and registration costs at the last minute because nobody gave a written estimate early enough.
+- **Comparing two villas on price alone**, when one carries a permit gap that will cost real money to close and the other does not. The cheaper headline price is not always the cheaper total cost.
+- **Assuming leasehold and freehold-equivalent structures cost the same to set up.** They often do not, and the difference can be material enough to change which of two similarly priced villas is the better deal.
+- **Treating due diligence as an optional extra to skip when a deal feels rushed.** It is the step most likely to reveal a cost that is much larger than the fee for doing the check in the first place.
+
+## A worked example of how the pieces add up
+
+Consider two villas listed at a similar headline price. Villa A has clean, verified permits, a straightforward leasehold structure, and a seller who provides full documentation upfront. Villa B is priced slightly lower but has an SLF that was never obtained and a leasehold structure your notary has not seen before.
+
+For villa A, your cost stack is close to the standard components: purchase price, BPHTB, notary fees, registration, and a modest due diligence fee that confirms everything is in order. For villa B, add the due diligence time needed to understand the unfamiliar leasehold structure, a licensed consultant's estimate for obtaining the missing SLF, and a contingency for the risk that the estimate turns out low. Once you add all of that to villa B's lower headline price, it may end up costing more in total than villa A, not less. Running this comparison properly, rather than reacting to the headline number, is the single habit that separates a well-priced purchase from an expensive surprise.
+
+## What we do in practice
+
+Because our [villas for sale](/villas-for-sale/) listings are, in most cases, villas our own team already manages, the due diligence, permit verification and documentation are already done before a buyer ever sees the listing, which removes much of the cost uncertainty described above. When we quote a price, we are not hiding a permit gap or an unusual leasehold structure behind a headline number. If you are looking at a property outside our listings, ask your notary for the same full-cost comparison before deciding between two options on price alone.
+
+## Questions worth putting to your notary before you commit
+
+Ask for a written estimate covering BPHTB, notary and registration fees specific to the transaction structure on offer, not a generic percentage. Ask what due diligence will cost and how long it will take. Ask what happens, contractually, if due diligence turns up a problem after you have paid a deposit. A notary who answers these clearly and in writing before you sign anything is a good sign; one who waves the question away is not.
+
 ## What to do next
 
 Ask for a full, written cost breakdown before you commit to any villa, not just the purchase price. A notary who is reluctant to itemise fees upfront is a sign to look elsewhere, and a listing that comes with rental history, running costs and documents already gathered removes much of the uncertainty in this stage.

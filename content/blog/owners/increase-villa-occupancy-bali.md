@@ -62,6 +62,16 @@ Once pricing, listing and reply speed are solid, expanding distribution genuinel
 
 Occupancy problems often show up in reviews before they show up in the booking calendar — a comment about slow Wi-Fi, an unclear check-in process, or a pool that wasn't clean on arrival. Treating reviews as an early warning system, and acting on a pattern rather than dismissing a single complaint, keeps small issues from compounding into a rating drop that then suppresses future bookings.
 
+## A worked example: prioritising when everything needs fixing
+
+An owner comes to us with a villa that's underpriced relative to comparables, has a decent but slightly dated listing, and replies to enquiries once a day rather than promptly. Fixing all three at once would probably help, but it also makes it impossible to know afterward which change actually moved the needle if occupancy improves. The order that tends to work best: fix reply speed first, since it's the cheapest and fastest change to make and the one most likely to be silently losing bookings right now; then correct pricing, since a two-to-four-week test against comparable villas gives a clear read; then invest in a photo refresh, since it's the most expensive of the three and worth doing once the cheaper fixes have already been tested.
+
+This sequencing also matters for reporting back to yourself or an owner: being able to say "we fixed reply speed and enquiries increased within a week" is a far more useful signal for future decisions than a vague sense that "we did a few things and occupancy went up."
+
+## What actually moves the needle most, based on what we see across 20 villas
+
+Across the villas we manage, the single most consistent occupancy driver isn't a clever marketing trick — it's the combination of pricing that's reviewed weekly rather than set once, and guest enquiries answered within roughly 15 minutes during active hours. Villas where both of those are consistently true tend to outperform otherwise-comparable properties where either one lapses, even when the underlying listing photos and description are only average. That's not to say listing quality doesn't matter — it clearly does — but it's the compounding, ongoing habits rather than a one-time fix that separate villas with strong occupancy from ones that merely exist online.
+
 ## What to do next
 
 Increasing villa occupancy in Bali is rarely about one dramatic fix. It's pricing that tracks real demand, a listing that photographs and reads well, replies fast enough to win the enquiry, and a calendar that stays accurate everywhere it's listed.

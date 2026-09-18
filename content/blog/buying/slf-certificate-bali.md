@@ -69,6 +69,26 @@ The SLF sits downstream of two other approvals worth understanding together: the
 | Does every villa need one | Generally yes for legal occupancy and formal rental licensing; verify for your specific case |
 | What if missing | Not automatically illegal, but a real gap for resale, licensing and safety accountability |
 
+## What goes wrong in practice
+
+- **A photocopy accepted without verification.** A scanned SLF looks convincing on a phone screen; it tells you nothing about whether it is genuine, current, or matches the actual building until your notary checks it against local records.
+- **An SLF for a different footprint.** Villas get extended after the SLF inspection, an extra bedroom, an enclosed terrace, a second-floor addition. The certificate on file may cover the original structure only, leaving the extension unaccounted for.
+- **"Pending" treated as "in hand."** A newly built villa mid-application is a different risk profile from one with a certificate already issued. If a seller says the SLF is "in process," ask for the application reference and a realistic timeline, not just a verbal assurance it is coming.
+- **No SLF discovered only at resale.** Some owners never chase the certificate because nothing forced the issue during years of quiet ownership, then discover the gap when a buyer's due diligence surfaces it and the deal stalls while it gets resolved.
+
+## A simple framework for deciding what to accept
+
+| What you find | How to treat it |
+|---|---|
+| Valid SLF, verified against local records, matches current structure | Standard due diligence item, no special adjustment needed |
+| SLF exists but does not cover a later extension | Get the extension regularised or priced into the offer before completing |
+| No SLF, newly built, application genuinely in progress | Reasonable to proceed if the seller commits in writing to delivering it, with a deadline and a consequence if they do not |
+| No SLF, older building, no application started, vague explanation | Treat as a real cost and delay to budget for yourself, and negotiate the price accordingly, or walk away |
+
+## What we do in practice
+
+Because we manage villas day to day rather than only sell them, an SLF gap is not an abstract line item to us, it is something that can affect a villa's ability to operate cleanly as a rental property under our own management. Before we take on a villa, whether for our own rental portfolio or as a listing, we check the SLF against the building as it currently stands, not just against the paperwork a seller hands over. Where a villa in our [villas for sale](/villas-for-sale/) listings has any permit gap, we would rather flag it upfront, with a clear plan for resolving it, than let a buyer discover it later. If you are looking at a property outside our own listings, we are glad to talk through what to ask your notary to verify.
+
 ## What to do next
 
 Treat the SLF as one line item in a wider due diligence checklist, not the whole checklist. A villa can have a valid SLF and still carry other issues (leasehold terms, zoning, land certificate status), and a villa without one is not automatically a bad buy if the gap is understood and priced in.

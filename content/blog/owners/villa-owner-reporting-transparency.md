@@ -67,6 +67,18 @@ If reporting issues are part of a broader pattern of problems, [how to switch vi
 
 Beyond verifying payouts, consistent reporting is also how you catch problems early: an occupancy dip that's larger than seasonal norms would explain, an expense category creeping upward, or a pattern of maintenance issues in the same area of the villa. Reviewing reports month to month, not just skimming the net figure, is what turns reporting from a formality into an actual management tool.
 
+## A worked example: spotting a problem from the report alone
+
+Say your report shows gross revenue roughly flat compared with the previous month, but net payout down noticeably. If expenses aren't itemised, you have no way to know whether that gap is a one-off maintenance cost, a licensing renewal, or something worth questioning. This is the exact scenario itemised reporting is built to catch — with a proper breakdown, you'd see immediately whether it was a single unusual expense or a pattern starting to form.
+
+Compare that with a report where occupancy dropped but revenue per booking held steady: that's a demand story, not a pricing or billing question, and it should push you toward a conversation about marketing and seasonality rather than commission calculations. Reading the report as a whole, not just the final number, is what lets you tell these two situations apart.
+
+## What we send owners every month, and why
+
+Our monthly reports break out every booking with its channel and dates, show the commission calculation rather than just the deducted amount, and list expenses individually with a short note on each one. We also add brief context on anything unusual — a pricing change, a maintenance issue, an occupancy shift outside the normal seasonal pattern — because a number without context tells you less than the same number with one sentence of explanation attached.
+
+If you're an existing owner and want to see how your current reporting compares, or a prospective owner who wants to see the format before committing to anything, we're glad to walk through a real (anonymised) example.
+
 ## What to do next
 
 Transparent villa owner reporting in Bali should let you trace every payout back to specific bookings, with commission and expenses itemised clearly enough to verify independently.

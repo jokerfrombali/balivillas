@@ -60,6 +60,23 @@ If you intend to buy specifically to operate on Airbnb or similar platforms, add
 
 Due diligence does not change fundamentally when you are buying from abroad, but coordinating it remotely takes more planning: engaging an independent notary or lawyer who can review documents digitally, and arranging an independent physical inspection separate from the seller's agent. Our guide on buying a villa remotely from abroad covers this coordination in detail.
 
+## What goes wrong when due diligence is rushed
+
+The due diligence failures we hear about most share a common trigger: pressure to move fast, whether from a seller citing other interested buyers, an agent pushing for a quick deposit, or the buyer's own excitement about a specific property. Under that pressure, the steps most likely to get skipped are independent certificate verification (relying on the seller's copy instead) and zoning checks for intended commercial use (assuming a villa is Airbnb-ready because neighbouring villas operate that way). Both are quick to check properly and expensive to discover were wrong after completion.
+
+A second pattern: buyers who complete thorough due diligence on the property itself but skip equivalent scrutiny of the seller — confirming the seller is actually who they claim to be, and that any company involved in the sale is in good standing, particularly relevant for HGB purchases through an existing PT PMA.
+
+## A framework for pacing due diligence properly
+
+1. **Never let a deposit precede certificate verification.** If a seller pressures you to pay before your notary has independently confirmed the certificate, treat that as a reason to slow down, not speed up.
+2. **Run the four pillars in parallel, not sequentially**, where possible, so a single slow step doesn't create pressure to skip the others.
+3. **Budget real time for zoning and permit checks specifically**, since these often take longer than certificate verification and are the ones most often rushed as a result.
+4. **Get a written summary from your notary or lawyer** covering all four pillars before you finalise price, not a verbal "it looks fine."
+
+## How we approach due diligence on our own listings
+
+Every villa on our for-sale list has certificate, permit and zoning status verified as part of our own process before we list it, specifically because we know how often these checks get skipped elsewhere under time pressure. That doesn't replace your own independent verification — we'd still recommend your own notary confirm everything — but it means you're starting from a property that's already been through this discipline once.
+
 ## What to do next
 
 Due diligence is the single most important discipline in a Bali villa purchase, and it is entirely doable with the right independent advisers, whether you are buying locally or from overseas. Work through the certificate, permits, zoning and title history checks before you get attached to a specific property, not after.

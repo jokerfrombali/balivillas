@@ -63,6 +63,25 @@ A villa's cancellation policy and travel insurance are two separate layers of pr
 
 Cancellation terms and security deposit terms are related but separate questions; a villa can have a lenient cancellation policy and still hold a firm security deposit for damage, or vice versa. If you are comparing two properties, ask about both, not just one. Our guide to the [Bali villa security deposit](/blog/renting/bali-villa-security-deposit/) covers the damage-deposit side in detail, and our [booking deposit guide](/blog/renting/bali-villa-booking-deposit/) explains the upfront payment that reserves your dates.
 
+## A quick framework for judging whether a policy is fair
+
+Not every strict-looking policy is unfair, and not every generous-looking one is safe. Run a policy through three questions before you decide it works for you.
+
+First, does the cutoff match how far ahead you're booking? A policy with a two-week free-change window is reasonable if you're booking six weeks out, but it leaves almost no room if you're booking ten days before arrival, since you'd already be past the cutoff the moment you pay. Second, is the refund tied to a calendar date or a rolling number of days before check-in? Rolling terms are easier to plan around because the cutoff moves with your booking, while a fixed date can quietly slip past you if you're slow to decide. Third, who actually confirms a cancellation, and how? A verbal "that's fine" is not the same as a written confirmation with a timestamp; always get the change or cancellation confirmed in the same channel you booked through.
+
+If a policy fails more than one of these checks, ask direct follow-up questions before paying rather than assuming the worst-case reading is correct, terms are often more flexible than the summary text suggests once you ask.
+
+## What goes wrong in practice
+
+The disputes we hear about from guests booking elsewhere follow a small number of patterns, and most are avoidable with one extra question at booking time.
+
+- **The cutoff was never confirmed in writing.** A guest is told verbally "you can cancel up to a week before" but the written confirmation never arrives, and by the time they try to act, the manager's version of the cutoff is different from what they remember.
+- **Date changes were assumed to be free but weren't.** Some owners treat a date change as a fresh booking against current availability and pricing, especially for peak-season dates, rather than a like-for-like swap. Ask specifically whether a date change carries any cost or repricing.
+- **The deposit and the balance were treated as one pot.** A guest assumes the whole payment is covered by the cancellation policy, but the booking deposit and the remaining balance sometimes have different refund rules, particularly on longer stays. Ask which portion each cutoff applies to.
+- **Peak-season terms were applied without warning.** A booking made in low season for July dates can be quietly held to the stricter peak-season policy once the manager notices the actual travel dates. Confirm which policy applies to your dates specifically, not just when you're booking.
+
+We check all four of these with every guest before a deposit is paid, precisely because they're the cases that generate the most back-and-forth after the fact.
+
 ## What to do next
 
 Before you commit to any villa, get the cancellation terms in writing, check the cutoff dates against your own plans, and ask what happens for date changes versus outright cancellation. If your dates are still flexible, tell us that up front, it often opens up better terms.

@@ -52,6 +52,27 @@ Channel managers reduce double-booking risk substantially but don't eliminate it
 
 If you're weighing whether to add Agoda or Expedia to a villa already on Airbnb and Booking.com, a channel manager is what makes that expansion low-risk rather than a source of new errors. See [listing a Bali villa on Agoda and Expedia](/blog/owners/agoda-and-expedia-for-bali-villas/) for the platform-specific considerations, and treat the channel manager setup as a prerequisite rather than an afterthought if you're going down that path.
 
+## A simple decision framework
+
+Rather than guessing, run through four questions in order. Each "yes" pushes you further toward getting a channel manager set up now rather than later.
+
+1. **How many platforms is the villa on today, and how many will it be on in the next six months?** Two platforms with plans to add a third is effectively a three-platform decision — set it up before the third goes live, not after the first double booking.
+2. **How often do bookings land same-day or next-day?** High-frequency, short-lead bookings are exactly the pattern that overwhelms manual updates, because there's no buffer between the booking landing and the risk window opening.
+3. **Who is physically updating calendars, and what happens when they're offline?** A single person manually syncing calendars is a single point of failure — illness, travel or a bad Wi-Fi day all become double-booking risk.
+4. **Is this one villa or several?** Multiple villas multiply the manual workload roughly linearly, but the coordination failure risk grows faster than that, because each villa adds another calendar someone has to remember to check.
+
+If two or more of these point toward "yes," treat channel manager setup as this month's task, not a someday item.
+
+## What we see go wrong in practice
+
+The two failure patterns we see most often with owners who delay: first, someone adds a third platform "temporarily" to test demand, doesn't set up sync because it's only for a few weeks, and the double booking happens in week two rather than after the test period. Second, an owner sets up a channel manager correctly but never tests it with a real or dummy booking before going live, and only discovers a broken integration — often a platform having quietly changed its API — when a guest arrives to find the villa already occupied.
+
+Both are avoidable with the same discipline: treat sync as broken until proven working, not working until proven broken. That means a test booking on each connected platform after setup, and periodically afterwards, especially after any platform-side update.
+
+## What to check, and with whom
+
+Before choosing a channel manager, confirm three things directly with the provider rather than assuming from their marketing page: which platforms they have a *verified, currently working* integration with (not just "supported" on a list); how sync delay is reported, if at all, so you know your actual exposure window; and what happens to existing reservations if you switch providers later, since migrating a live calendar between systems is where data can quietly get lost. For a villa already under management, this is one of the things worth confirming with your manager directly rather than assuming it's handled — ask what channel manager they use, which platforms it currently covers, and how they catch a failed sync before a guest does.
+
 ## What to do next
 
 A channel manager is worth setting up once a villa is on three or more platforms, or once booking volume makes manual calendar updates a real risk. Below that, a careful manual process can hold, but it's worth reviewing as soon as distribution grows.

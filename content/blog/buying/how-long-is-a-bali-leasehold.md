@@ -53,6 +53,24 @@ If you intend to use a villa personally for a decade or two, a shorter, cheaper 
 
 However long the original term, every leasehold clock is running, and what happens as it approaches its end is governed entirely by the contract's expiry provisions. Our guide on what happens when a Bali lease expires covers the range of outcomes, from reversion with no compensation through to negotiated extension, depending on what your specific contract says.
 
+## What goes wrong when buyers assume a "standard" term
+
+The most common mistake is treating a number seen on one or two listings as representative of the whole market, then being surprised when a specific villa's actual contract shows a shorter or longer term, or different extension conditions. Because term is negotiated individually, two villas in the same street, similar in every other respect, can carry genuinely different lease lengths — comparing "market average" figures instead of the actual contract in front of you is how buyers end up overpaying for a shorter term than they realised, or underpaying attention to a genuinely strong long-term deal.
+
+A second mistake: assuming the term quoted verbally by an agent matches what the actual draft contract states. Marketing materials sometimes round up, or quote from the original grant date rather than from today, meaning the "30 years" you were told can already reflect several years of use. Always confirm the precise remaining term as stated in the document itself.
+
+## A framework for evaluating a specific term offer
+
+1. **Get the exact figure from the draft contract**, not a listing or verbal quote, and confirm whether it's counted from today or from an earlier grant date.
+2. **Check for an extension clause and its pricing mechanism** — a shorter term with a strong extension option can outperform a longer term with none, as covered below.
+3. **Compare the term against your own realistic holding period**, not a market average — a 20-year term is plenty for some buyers and clearly insufficient for others.
+4. **If you plan to resell, model what the term will look like to a future buyer** at your intended resale point, not just at purchase.
+5. **Have a notary confirm nothing in the contract shortens the effective term** — occupancy delays, conditions precedent or other clauses can sometimes eat into the usable period.
+
+## What we tell buyers comparing listings
+
+When buyers ask us to compare villas with different lease terms, we point them to the actual contract figures every time, not the headline years quoted in marketing, because that's the only number that actually matters once you own the property. Every villa on our own for-sale list states its precise remaining term and any extension terms upfront for exactly this reason.
+
 ## What to do next
 
 There is no fixed standard length for a Bali leasehold; each contract sets its own term, commonly falling somewhere in the range seen across current listings, but always worth confirming against your own copy of the contract rather than a market average. Match the term, and any extension option, to your actual intended holding period before you commit.

@@ -53,9 +53,43 @@ A written agreement, even a simple one, should cover the rent, payment schedule,
 
 Long-term rental and long-term visas are separate questions, but they interact — some visa categories effectively assume a longer-term address, and your rental length should be realistic against your visa plans. Check current requirements with a licensed visa agent rather than assuming (as of 2026, verify).
 
+## Comparing area, budget and timing before you search
+
+A useful habit is to write down your priorities in this order before opening a single listing:
+
+| Priority | Question to answer first | Where it affects your search |
+|---|---|---|
+| Area | Which of Sanur, Canggu, Umalas or Ungasan fits your daily life? | Narrows the pool of villas immediately |
+| Budget | What's a realistic monthly or yearly range for your bedroom count? | Avoids wasted enquiries on villas outside range |
+| Timing | How soon do you need to move in? | Determines whether you can wait for the ideal match or need to move fast on a good-enough option |
+| Commitment length | Monthly, yearly, or undecided? | Changes which villas and terms are even on offer |
+
+Filling this in takes ten minutes and saves days of unfocused browsing, because it turns "show me long-term villas in Bali" into a specific, answerable request any manager or agent can respond to properly.
+
 ## Red flags worth watching for during your search
 
 A few warning signs that consistently show up in long-term rental disputes: a listing with no verifiable photos of the actual property, a refusal to put terms in writing before you pay a deposit, pressure to transfer money before you've seen the villa in person or on a proper video call, and a rate that's noticeably below every comparable quote you've received. None of these automatically mean a listing is fraudulent, but each one is worth a direct, specific question before you commit any money.
+
+## A simple framework for choosing where to search first
+
+If you're not sure where to start, work through these questions in order rather than opening five tabs at once:
+
+1. **Do you already know your area?** If yes, go straight to that area's villas and managers rather than browsing generally — a Sanur search and a Canggu search turn up almost entirely different inventory, so general browsing wastes time.
+2. **Do you know your bedroom count and rough budget band?** If not, get quotes on two or three villas first to calibrate, rather than guessing a number and being surprised either way.
+3. **Is speed or breadth more important to you?** If you need to move fast — visa deadline, current lease ending — go direct to two or three managers you've shortlisted. If you want to compare the widest possible range before deciding, an agent or listing site adds breadth at the cost of an extra step in communication.
+4. **Will you view in person or only remotely?** A remote search raises the stakes on everything in step 5 below, because you can't walk the property yourself before committing.
+
+Most searches that stall do so at step 1 — people browse before deciding on an area, which multiplies the number of listings to evaluate for no real benefit.
+
+## What goes wrong in a rushed search
+
+The searches that end badly share a pattern: the tenant found a villa that looked right in photos, moved fast because the listing said "high demand" or similar, and skipped the verification steps above. Common outcomes we hear about from tenants who've had a bad experience elsewhere: paying a deposit before a video call or viewing, discovering the pool is shared rather than private only after moving in, or finding utilities cost far more than expected because "included" meant a small capped allowance rather than full coverage.
+
+None of these require a lawyer to avoid — they require asking the specific questions in Step 4 above and getting the answers in writing before paying anything. A five-minute video call with the actual manager, not just written chat, also tends to surface a lot that a listing alone won't.
+
+## What we check before quoting a long-term rate
+
+Because we manage our own 20 villas rather than listing on behalf of third parties, every long-term quote we give already reflects the villa's actual current condition, live availability and what's genuinely included — we're not relaying information from an owner we haven't spoken to today. When a prospective long-term tenant asks us questions like the ones in Step 4, we can answer immediately rather than checking with someone else and getting back to you tomorrow. That's the practical difference between searching with a company that self-manages and searching through a chain of intermediaries.
 
 ## A shortcut worth knowing
 

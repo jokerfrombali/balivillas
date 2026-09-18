@@ -55,6 +55,28 @@ Area pricing patterns hold reasonably steady year-round for yearly leases, since
 
 The only reliable way to compare yearly prices across areas is to request quotes for a matched bedroom count and villa style in each — comparing a 1-bedroom Ungasan teak villa to a 4-bedroom Sanur family villa tells you nothing useful about "Ungasan versus Sanur pricing." Our guide to [Bali areas explained](/blog/areas/bali-areas-map-explained/) is a good starting point if you haven't decided which area fits your needs yet, and our [yearly rental cost](/blog/long-term/bali-villa-yearly-rental-cost/) guide covers what typically drives the number regardless of area.
 
+## A worked comparison: matching bedroom count before area
+
+To see why matching bedroom count matters more than area, it helps to walk through an example. Imagine you're offered a yearly quote for a 2-bedroom Umalas townhouse and a 2-bedroom Sanur villa. On paper, that looks like a clean area-to-area comparison. But if the Sanur villa has a larger garden, a private pool and sits a few streets back from the beach path, while the Umalas townhouse has a smaller footprint with a shared pool, the gap in price between them may have almost nothing to do with "Sanur versus Umalas" as areas, and almost everything to do with plot size, pool type and finish level.
+
+Now compare a 4-bedroom family villa in Sanur against a 1-bedroom teak villa in Ungasan. Even if the Ungasan villa has the better view and a premium clifftop plot, the sheer difference in space and bedroom count in Sanur's favour will usually dominate the price gap. Neither comparison tells you which area is "cheaper Bali" in general, both only tell you about those two specific villas.
+
+The practical takeaway: before requesting quotes, write down the bedroom count, pool type (private or shared) and rough finish level you want, then ask for quotes matching those three criteria across the areas you're considering. That's the only way an area-to-area comparison means anything.
+
+## What goes wrong when guests compare prices across areas
+
+The most common mistake is treating a single quote from each area as representative of that area's whole market, when in fact the spread within an area, between a basic townhouse and a high-spec family villa, is often larger than the spread between areas for a similar villa. One quote from Canggu and one from Sanur tells you about two specific villas, not about Canggu versus Sanur generally.
+
+A second mistake is assuming a headline "average" price for an area exists and is meaningful. Given how much plot size, view, pool type and finish vary within Sanur, Canggu, Umalas and Ungasan individually, an averaged figure smooths over exactly the details that determine what you'll actually pay for a specific villa.
+
+A third is not accounting for how a villa's position within an area changes the number as much as the area label itself. A villa a short walk from Canggu's main strip and one a 15-minute ride inland can differ meaningfully even though both are "in Canggu"; the same applies to distance from Sanur's beach path or Umalas's café cluster.
+
+## What to check, and with whom, before comparing areas
+
+- **With yourself, first:** settle on bedroom count, pool type and rough finish level before requesting any quotes, so you're comparing like with like.
+- **With us, directly:** ask for quotes on matched criteria across the two or three areas you're weighing, rather than one quote per area chosen at random.
+- **With a local contact if you're new to the island:** ask someone who has actually lived long-term in the area you're considering how the daily reality compares to what a listing photo suggests, since this shapes value as much as the price itself.
+
 ## What to do next
 
 Comparing yearly villa prices across Bali's areas only makes sense when you match bedroom count and villa style — the underlying land economics differ enough between Sanur, Canggu, Umalas and Ungasan that a headline "average" figure would mislead more than it helps.

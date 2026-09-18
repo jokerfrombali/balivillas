@@ -69,6 +69,23 @@ For owners receiving payouts to an overseas account, [how villa managers pay own
 
 Doing this consistently, even briefly, each month is what catches small errors before they compound across a year.
 
+## Comparing two statements side by side
+
+If you're weighing up two management offers, ask both for a sample statement and lay them next to each other. The comparison usually reveals more than either company's sales pitch: one might show commission calculated per booking against a clearly stated base, while the other bundles a single deduction with no working shown. One might itemise every expense with a one-line description, while the other lists a single monthly "operating costs" figure. Neither format is necessarily dishonest, but the itemised version is the one you can actually audit, and that difference matters more over a full year of statements than a slightly lower headline commission rate.
+
+| What to compare | Itemised statement | Vague statement |
+|---|---|---|
+| Commission | Shown per booking with base and rate | One deducted figure, no calculation shown |
+| Expenses | Individual line items with description | Single lump "expenses" total |
+| Occupancy | Nights booked vs available included | Not mentioned |
+| Net payout | Reconciles exactly to bank deposit | Approximate, or unexplained gaps |
+
+## What goes wrong when owners only check the bottom line
+
+The most common mistake we see is an owner glancing at the net payout figure each month, seeing it's roughly what they expected, and filing the statement away without reading the detail. That habit works fine until the month it doesn't — a miscalculated commission rate, a duplicated expense, or a booking that was never recorded can sit unnoticed for months if nobody checks the underlying lines, because the net figure alone can still look plausible even with an error buried inside it.
+
+The fix costs a few minutes a month: run through the five-point routine above rather than just the final number, and raise anything that doesn't add up while it's a small discrepancy rather than a pattern spanning several statements.
+
 ## What to do next
 
 Reading a villa owner monthly statement properly in Bali means checking each section — bookings, gross revenue, commission, expenses, net payout — rather than only glancing at the final figure.

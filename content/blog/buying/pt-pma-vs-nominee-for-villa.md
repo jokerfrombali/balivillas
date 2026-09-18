@@ -50,6 +50,23 @@ Nominee structures persist in the market partly because some agents present them
 
 Some buyers are drawn to a nominee structure because they specifically want closer to full ownership control than leasehold offers, without the cost of a PT PMA, and Hak Pakai either does not apply to their situation or does not offer enough. In that specific case, the honest answer is that PT PMA, despite its cost, remains the legally sound route to that level of control; there is no cheaper legally recognised structure that replicates what a nominee arrangement promises.
 
+## A decision framework for this specific choice
+
+If you're genuinely torn between these two because you want more control than leasehold offers:
+
+1. **Rule out the cheaper legal options first.** Confirm with a notary whether Hak Pakai applies to your situation, and whether leasehold with a strong extension clause would actually meet your needs — many buyers who consider a nominee structure haven't fully explored these first.
+2. **If you specifically need company-level control** — for a rental business, liability separation, or a shared stake with partners — that need points to PT PMA regardless of cost, because a nominee arrangement does not reliably deliver that control anyway.
+3. **Price PT PMA properly before deciding it's too expensive.** Our PT PMA cost guide breaks this down by component; a fully itemised quote is often less than buyers initially assume, particularly relative to the value of the villa being purchased.
+4. **Never treat "it's common practice" as a reason to choose nominee.** Common practice and legal protection are different things, and the gap between them is exactly where the risk sits.
+
+## What goes wrong when buyers try to split the difference
+
+Occasionally buyers try to combine the two — for instance, using a nominee arrangement temporarily with the intention of "converting" to a PT PMA later once the business justifies the cost. This does not avoid the underlying risk during the period the nominee structure is in place, and converting later can be more complex and costly than setting up correctly from the start, since it involves unwinding an unrecognised arrangement rather than simply forming a new company on a blank slate. If PT PMA is the eventual goal, it is almost always simpler and safer to set it up from the outset rather than transitioning into it later.
+
+## What we tell buyers weighing this decision
+
+When a buyer asks us to help think through PT PMA versus a nominee structure for a villa they're considering, we start by checking whether the underlying need is really company-level control, in which case PT PMA is the only recognised route, or whether leasehold or Hak Pakai would actually be sufficient, in which case neither of the two options in this comparison may be necessary at all.
+
 ## What to do next
 
 Weighing PT PMA against a nominee agreement is really a choice between a real, if costlier, legal structure and an arrangement that has not reliably protected foreign buyers in Indonesian courts. If cost is the concern, it is worth first checking whether leasehold or Hak Pakai would actually meet your needs before assuming you must choose between these two.

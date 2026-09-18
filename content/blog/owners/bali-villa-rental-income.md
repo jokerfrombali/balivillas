@@ -61,6 +61,16 @@ Before comparing any income figure, understand what typically comes out of gross
 
 If you're considering an existing rental villa with a booking history, that history — even a partial one — tells you far more about realistic income potential than any island-wide average. Ask to see actual booking and revenue data for a specific villa you're evaluating, not a projected figure. This is one reason our own listings for sale come with rental history, running costs and documents attached, rather than a projected return figure.
 
+## A decision framework for evaluating a specific villa's income potential
+
+Rather than searching for a published average, work through a short set of questions for the specific villa you're evaluating: What comparable villas exist in the same area, and what do they charge across seasons? Does the villa have a booking history you can review, even partial? What's the realistic running cost stack for its size and staffing needs? And how does its direct-booking potential compare with relying entirely on OTAs?
+
+Answering these for one specific property gives you something an island-wide average never could: a grounded, defensible estimate you can actually act on, built from comparable evidence rather than a marketing number designed to sound impressive.
+
+## What goes wrong when owners rely on a headline income figure
+
+The most common mistake is treating a marketing figure — "up to X% return" or "average villa income of Y" — as a floor rather than an aspirational ceiling built on an unstated best case. Owners who budget against that figure, then see genuine but lower income in year one, often wrongly conclude the villa or the manager is underperforming, when the real issue was an unrealistic starting expectation. This is also why we're deliberately cautious about quoting any income figure without seeing the specific villa, area and comparable evidence first — a number without that grounding does an owner more harm than no number at all.
+
 ## What to do next
 
 How much you can earn renting a villa in Bali depends on specifics — location, size, management quality, seasonality — that a single published figure can't capture honestly. Judge a specific villa on its own comparable evidence, not an island-wide average.

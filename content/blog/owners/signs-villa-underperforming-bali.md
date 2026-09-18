@@ -54,6 +54,16 @@ A report that shows nights booked and revenue but nothing about pricing changes,
 
 Sometimes underperformance is structural rather than operational: a villa on a busy road, without a pool view from the main living space, or in a pocket of an area that's simply less in demand than the manager's other listings. No pricing or marketing fix solves a genuine positioning problem. If you're weighing whether the underlying investment still makes sense, is buying a villa in Bali a good investment covers the factors that matter before you buy, and the same questions are worth revisiting for a villa you already own.
 
+## A framework for separating "slow" from "underperforming"
+
+A useful way to think about this: "slow" is what a specific week or month looks like in isolation, while "underperforming" is a trend that holds up against a fair comparison over a longer window. A single quiet fortnight in a genuinely low-demand month isn't a signal on its own — most villas, even well-run ones, have quiet stretches that match the season. What separates a real problem from normal seasonal noise is whether the gap persists against last year's same weeks, and whether it persists relative to comparable villas nearby that are presumably experiencing the same seasonal conditions.
+
+Run both comparisons before concluding anything. If your villa is down year-over-year but so are the comparable villas you can see, that points to a genuine market softening worth understanding rather than fixing. If your villa is down while comparable villas are pacing normally, the cause is specific to your listing, pricing or management, and worth acting on directly rather than waiting for the market to recover.
+
+## What we do when an owner asks us to look at an underperforming villa
+
+When an owner brings us a villa they suspect is underperforming, we don't start with reassurance or with an immediate pricing change — we start with the same year-over-year and nearby-comparable comparison described above, because acting before confirming the actual cause usually wastes the first round of fixes on the wrong problem. Once the comparison confirms a real gap, we work through pricing history, listing freshness and review trend in that order, since they're the three most common and most fixable causes we see across the villas we manage. If the honest conclusion is a structural issue with the property itself, we say so directly rather than promising a marketing fix will solve something it can't.
+
 ## What to do next
 
 Confirm underperformance with a real comparison — same weeks last year, similar villas nearby — before assuming the market alone explains it. Then work through pricing, listing quality and review patterns in that order, since they're the levers most within your control.

@@ -67,6 +67,26 @@ Guests occasionally ask for an exception to a posted minimum stay, particularly 
 4. Check whether OTA platform conventions conflict with your intended policy.
 5. Review minimum stay alongside cancellation policy, since longer stays raise the financial stakes of a cancellation.
 
+## A simple framework for setting your first policy
+
+If you've never actively managed minimum stay and are starting from a flat one-night rule, don't try to build a perfect calendar in one sitting. Work through it in three passes:
+
+1. **First pass: three seasons, three numbers.** Pick one minimum for high season, one for shoulder, one for low season, using the table above as a starting point. Don't subdivide further yet — a rough policy applied consistently beats a precise one that's too complicated to actually follow.
+2. **Second pass: adjust by villa size once the first pass is live.** After a booking cycle or two, check whether your larger villas are seeing bookings cluster at a length well beyond the minimum — if so, tightening the minimum for those specific villas is unlikely to cost you much.
+3. **Third pass: channel-specific tweaks.** Only once the base policy is settled, look at whether direct bookings would benefit from a different minimum than what OTA conventions suggest for the same villa.
+
+Trying to do all three at once from a standing start usually means the policy never quite gets finished or communicated clearly, which defeats the purpose.
+
+## What goes wrong
+
+The most common mistake is setting a policy once at listing and never revisiting it as seasons change or booking data accumulates. A minimum stay chosen for last year's demand pattern can quietly cost bookings or turnover margin as circumstances shift, without an obvious trigger prompting a review.
+
+The second is inconsistent enforcement — holding firm on the minimum for one guest and waiving it for another without a documented reason. Guests occasionally compare notes or notice inconsistency in how a villa is run, and it undermines trust in the same way inconsistent cancellation enforcement does.
+
+## What we do in practice
+
+Because we manage minimum stay policy across a portfolio spanning several areas and villa sizes, we compare actual booking-length data across similar villas rather than guessing at what a given property's demand pattern looks like in isolation — a new villa with no booking history yet can start from a comparable property's pattern rather than a blind guess. We revisit the policy at each seasonal transition rather than leaving it static, and any gap-filling exception to the stated minimum follows a rule of thumb agreed in advance rather than being decided fresh under pressure each time a request comes in.
+
 ## What to do next
 
 Minimum stay policy is a simple lever that most owners under-use, and adjusting it by season can improve both occupancy and net revenue without changing your nightly rate at all.

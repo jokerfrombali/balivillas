@@ -49,6 +49,20 @@ Comparing Hak Milik directly against leasehold or Hak Pakai as if choosing betwe
 
 Occasionally a seller or agent proposes holding Hak Milik through an Indonesian nominee on the foreign buyer's behalf, backed by a private agreement giving the foreign party effective control. This is not a legally recognised ownership structure for foreigners, and Indonesian courts have not reliably enforced the side agreements that are meant to protect the foreign party if the nominee arrangement breaks down. Our guide on nominee agreement risk in Bali sets out exactly what can go wrong and why it is worth avoiding regardless of how the arrangement is framed.
 
+## What goes wrong when the underlying Hak Milik isn't checked properly
+
+The due diligence failures we hear about most involving Hak Milik land share a common shape: the buyer or their notary checked that a certificate existed, but not that it was clean and current. Land that has passed through several generations of an Indonesian family without each transfer being formally registered can carry unresolved claims from heirs who were never removed from an informal understanding of ownership, even though only one name appears on the certificate the seller shows you. This kind of dispute can surface years after a lease is signed, when a family member the buyer never knew about asserts a claim.
+
+A second issue: boundaries on older certificates sometimes don't match the physical plot precisely, particularly on land that has been informally subdivided over time. A survey against the certificate, not just a visual walk of the property, is the only way to catch this before you're committed.
+
+## A short framework for checking Hak Milik before you commit
+
+1. **Get the certificate independently**, direct from the land office or through your own notary, not only from the seller.
+2. **Confirm the registered name matches the person selling or leasing to you** — a family member acting "on behalf of" the registered owner needs documented authority to do so.
+3. **Ask how the current owner acquired the land** — purchase, inheritance, or a long family holding — and how recently the registration was last updated.
+4. **Commission a boundary survey** against the certificate for anything beyond a small, straightforward plot.
+5. **Check for liens or disputes** at the land office, not just by asking the seller whether any exist.
+
 ## What Hak Milik means for villa value and resale
 
 Because Hak Milik land carries no term limit, villas built on land the seller holds as Hak Milik, and which you access through leasehold or Hak Pakai conversion, tend to be viewed as more stable long-term investments than land already sitting on a shorter Hak Guna Bangunan title with a countdown running. This is one factor, among several including location and remaining lease years, that shapes how a villa is priced.

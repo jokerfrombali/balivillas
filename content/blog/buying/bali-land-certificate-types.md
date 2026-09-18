@@ -60,6 +60,24 @@ Land held under Hak Milik and leased to you tends to carry different risk and pr
 
 Certificate verification is one pillar of a complete due diligence process, alongside permits, zoning and title history checks. Our full due diligence checklist walks through how these pieces fit together, and getting the certificate type wrong or unverified undermines everything else you check afterwards, since it is the foundation the rest of the transaction sits on.
 
+## What goes wrong when certificate type is misunderstood
+
+The confusion we see most often is marketing language, particularly the word "freehold," used loosely to describe a leasehold purchase on land the seller holds as Hak Milik, leading a buyer to believe they're getting something closer to ownership than they actually are. This isn't always intentional misrepresentation — sometimes it's just imprecise language carried over from how a seller or agent has always described the deal — but the buyer's understanding needs to be based on the actual certificate, not the adjective used to sell it.
+
+A second issue: buyers who verify that a certificate exists but not that it's current and unencumbered. A Hak Milik certificate can be genuine and still carry undisclosed liens, or reflect an owner who inherited the land without formally updating the registration, both of which surface as problems only once a transaction is well underway.
+
+## A framework for confirming certificate type before you commit
+
+1. **Ask directly, in writing, which certificate type applies** — don't infer it from marketing language like "freehold" or "secure long-term."
+2. **Get a certified copy through your own notary**, independent of the seller, and confirm it matches what you were told.
+3. **If the purchase is a lease, confirm what the underlying certificate is** — Hak Milik, HGB or Hak Pakai — since this shapes the risk profile of the deal you're actually in.
+4. **Check the certificate is current and unencumbered**, not just that it exists, including registration history and any liens.
+5. **Match the certificate type against the structure you intend to use** — leasehold, Hak Pakai purchase, or PT PMA — and confirm they're compatible before you go further.
+
+## How we present certificate information to buyers
+
+Every villa we list states its certificate type plainly, without relying on loose terms like "freehold" to describe a lease, because we'd rather a buyer understand exactly what they're purchasing from the first conversation. Ask us directly about the certificate behind any villa you're considering, and we'll walk through what it actually means for that specific property.
+
 ## What to do next
 
 Understanding which certificate type sits behind a specific Bali villa, and what that certificate actually confers, is the foundation of a sound purchase. Confirm it independently through your own notary before you move forward on price or contract terms.

@@ -51,6 +51,21 @@ Every route carries setup and ongoing costs beyond the purchase price itself: no
 
 Some buyers are tempted by an "easier" route where an Indonesian nominee holds freehold title on the foreign buyer's behalf, backed by a private side agreement. This is not a recognised legal ownership structure in Indonesia, and disputes involving nominee arrangements have not reliably favoured the foreign party in Indonesian courts. It is worth understanding this fully before anyone suggests it as a shortcut; we cover the mechanics and the specific risks in our guide to nominee agreements in Bali.
 
+## What goes wrong when buyers skip the structure decision
+
+The purchases we hear went badly almost always share the same starting mistake: the buyer fell for a specific villa first and only worked out the legal structure afterwards, sometimes under pressure from a seller keen to close. That ordering leaves you negotiating the paperwork from a weaker position, and it's how buyers end up being steered toward whatever structure suits the seller rather than what actually suits them — a PT PMA pushed on someone who only wanted a personal holiday home, or a leasehold contract with vague extension wording accepted because the villa itself looked right.
+
+A second recurring problem is treating "freehold" as a marketing term rather than checking the actual certificate. A villa advertised loosely as freehold nearly always means the underlying land is Hak Milik held by an Indonesian owner, with the foreign buyer holding a lease or Hak Pakai on top — not that the foreign buyer holds freehold themselves. Confirm the certificate type in writing before you let the word "freehold" shape your expectations.
+
+## A simple framework for choosing your structure
+
+Work through these in order:
+
+1. **Personal use only, no formal rental business?** Leasehold is usually the simplest and cheapest route, and it's what most buyers use.
+2. **Want a registered title rather than a contract, and you meet eligibility rules?** Hak Pakai gives stronger legal footing than a private lease — worth checking with a notary whether you qualify.
+3. **Planning to operate at scale, or want the villa held inside a company?** PT PMA carries the highest setup and compliance cost but suits a formal rental business.
+4. **Considering a nominee arrangement because it looks cheaper or simpler?** Stop and read the section above — it is not a shortcut, it's a real legal risk.
+
 ## How the decision actually plays out for buyers
 
 Most people choosing between leasehold, Hak Pakai and PT PMA are really choosing based on three things: whether they want a company and its ongoing compliance, how long they plan to hold the property, and whether they intend to rent it out formally as a business or use it personally. A retiree wanting a single holiday home for twenty years has a very different answer than an investor building a small portfolio to operate commercially.

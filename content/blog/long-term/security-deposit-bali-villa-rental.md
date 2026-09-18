@@ -46,9 +46,33 @@ Most disputes we're aware of in the broader market come down to one of two thing
 
 Deposit terms sometimes scale with the length and structure of the agreement — a yearly lease paid substantially upfront may have different deposit conventions than a month-to-month arrangement. If you're paying a large amount upfront for a yearly lease, it's worth understanding how the deposit interacts with that payment specifically; our guide on [paying a year upfront](/blog/long-term/paying-year-upfront-villa-bali/) covers this alongside deposit considerations.
 
+## Deposit versus advance rent: don't confuse the two
+
+Some agreements bundle an advance rent payment with the deposit in a single upfront figure, which can make it unclear later how much is actually refundable versus how much was simply rent paid ahead of schedule. Ask for these two figures to be broken out separately in the contract — the deposit amount and the advance rent amount — so there's no ambiguity at the end of the lease about what you're entitled to have returned.
+
 ## Currency and how deposits are typically paid
 
 Deposits are usually quoted and held in the same currency as the rent itself, most often Indonesian rupiah, sometimes discussed informally in US dollars for convenience before being converted for the actual transfer. Confirm which currency applies to both the deposit and its return, since exchange rate movement over a year-long stay can otherwise create a small but avoidable discrepancy between what you paid and what you receive back.
+
+## A framework for assessing a deposit request
+
+Before agreeing to any deposit amount, work through these questions:
+
+1. **Is the amount proportionate?** A deposit that's unusually high relative to the monthly or yearly rent, with no clear explanation, is worth questioning rather than accepting at face value.
+2. **Is what it covers written down, or just implied?** "Damage" needs a definition — normal wear should be explicitly excluded, and the contract should say so rather than leaving it to interpretation at checkout.
+3. **Is the return timeline specific?** A number of days after checkout, not "soon." If the other side won't commit to a number, treat that as a signal to negotiate further before paying.
+4. **Who's holding the deposit, and how?** For a larger deposit on a yearly agreement, ask whether it's held by the individual owner or administered as part of a broader management process — the latter tends to have a more consistent, documented process, as covered above.
+5. **What happens if we disagree at checkout?** Ask this before you move in, not after a dispute starts. A contract that names a simple resolution step (joint inspection, an agreed third party) avoids a lot of friction.
+
+## What goes wrong with deposits in practice
+
+The deposit disputes we hear about secondhand almost always come down to one of two root causes: no documented condition at check-in, so there's nothing to compare against at checkout, or a definition of "damage" broad enough to cover normal wear, which turns an ordinary end-of-lease inspection into a negotiation. A third, less common pattern is simply slow or non-responsive return — a deposit that's contractually due within a set number of days but takes weeks to actually arrive, particularly with an individual owner managing the process informally around other commitments.
+
+All three are avoidable with the same basic habits: photograph the property thoroughly at check-in, insist on specific wording in the contract rather than a general statement, and request a joint checkout walkthrough rather than a unilateral inspection after you've already left.
+
+## How we handle deposits on our own villas
+
+Because we manage all 20 of our villas ourselves, our check-in documentation, condition assessment at checkout and deposit return follow the same process across every property, rather than varying by which individual owner happens to be renting out a single villa. If you're weighing up a deposit request from us against one from an individually owned listing, ask us the same questions in the framework above — we're set up to answer all of them specifically, in writing, before you book.
 
 ## What to do next
 

@@ -51,6 +51,22 @@ If you have narrowed it to two areas and still cannot decide, our area-in-area g
 - Check how much time you will actually spend at the villa versus out; more villa time favours quieter areas
 - If in doubt between two areas, ask us: we manage all four and can suggest a specific villa once we know your dates and group
 
+## A simple three-question framework if you're still undecided
+
+If the table and checklist above still leave you between two areas, three questions usually break the tie. First: over a typical day of this trip, will you spend more hours at the villa or out? Heavy villa-time favours Sanur or Ungasan, where the setting itself carries more of the experience; heavy out-time favours Canggu or Umalas, where there's more immediately around you. Second: is anyone in the group especially sensitive to noise, heat or long travel times, small children, older relatives, or someone working odd hours across time zones? If yes, weight the decision toward Sanur or Ungasan even if the rest of the group leans toward Canggu. Third: is this a one-off trip or the first of several? First-timers often do well starting in Sanur or Umalas, both easier to settle into, and can be more adventurous with Canggu or a splitstay on a return visit once they know the island better.
+
+## Where guests get the area choice wrong
+
+The most common mistake is choosing an area based on a friend's recommendation or a generic ranking without checking whether that friend's trip matched the one being planned. A friend's brilliant week in Canggu, built around beach clubs and a big group, says little about whether a couple wanting a quiet week would enjoy the same area.
+
+The second is underestimating how much traffic changes the practical size of Bali. Two areas that look close on a map, Canggu and Ungasan for instance, can be well over an hour apart by road at the wrong time of day, which matters if you're hoping to combine two areas in a single day trip rather than as separate legs of a longer stay.
+
+The third is deciding on area before checking whether a suitable villa actually exists there for the group size and budget in question. It's better to hold the area choice loosely until you've seen two or three real villa options, since the right villa in your second-choice area sometimes serves the trip better than a compromise villa in your first choice.
+
+## What we ask before pointing a guest to one of the four areas
+
+Before recommending Sanur, Canggu, Umalas or Ungasan specifically, we typically ask about group composition and ages, how many days are built around a specific activity versus general downtime, whether remote work is part of the plan, and whether this is a first visit to Bali or a return trip. These questions, more than any generic ranking, are what actually narrow four areas down to one sensible recommendation.
+
 ## What to do next
 
 Picking the best area to rent a villa in Bali comes down to being honest about what the trip is for, not chasing whichever area is trending. Sanur, Umalas and Ungasan suit calmer, family or work-focused stays; Canggu suits groups who want to be in the middle of things.

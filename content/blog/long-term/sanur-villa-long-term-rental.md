@@ -52,6 +52,22 @@ Long-term tenants in Sanur tend to settle into a routine built around the beach 
 - What's included in the quoted rate (utilities, housekeeping, staff) — confirm this in writing regardless of area.
 - Current visa rules relevant to your intended stay length, checked with a licensed visa agent rather than assumed (as of 2026, verify).
 
+## A framework for deciding if Sanur suits your long-term stay
+
+If you're weighing Sanur against another area for a long stay, three questions clarify it quickly. First, does your daily routine need to include nightlife or a busy social scene, or does it centre on work, family life and a calm evening? Sanur strongly favours the second profile; tenants hoping to combine long-term living with regular nights out are usually happier basing themselves in Canggu, even for a long stay. Second, how much does walkability matter to your actual daily errands, not just for a holiday photo, but for a coffee run or a grocery top-up on an ordinary Tuesday? Sanur's beach path genuinely reduces daily scooter dependence in a way that's hard to match elsewhere in south Bali. Third, are you settling with a family, or with children who'll need calm, predictable surroundings? Sanur's combination of quiet lanes and calm water consistently comes up as the deciding factor for families choosing a long-term base here over Canggu or Umalas.
+
+## What goes wrong for long-stay tenants who choose Sanur without checking this
+
+The most common issue isn't Sanur itself, it's tenants who signed a long-term lease here expecting more evening social life than the area actually offers, having compared it only on cost and villa size rather than daily pace. A long stay magnifies a pace mismatch far more than a week's holiday does; a slow evening scene that's charming for a week can feel isolating over six months if it doesn't match what you actually wanted.
+
+A second issue is underestimating how much the specific stretch of Sanur matters. A villa a short walk from the beach path lives very differently from one several streets back, even though both are "in Sanur," and this distinction matters more for a long-term tenant building a daily routine than for a short-stay guest. Ask specifically about walking distance to the path, cafés and the nearest supermarket before committing to a long lease.
+
+A third is not planning visa logistics early enough. Sanur's popularity with long-term tenants means demand for good long-stay villas is real; tenants who wait to sort their visa route before locking in a lease sometimes lose out on the villa they wanted while working through the paperwork. Start the visa conversation with a licensed agent in parallel with your villa search, not after.
+
+## What we check with long-stay tenants before recommending a Sanur villa
+
+We typically ask about family composition and ages, whether remote work with regular calls is part of the routine, how important walkability to the beach path is against budget, and whether the tenant is confident enough to go straight to a yearly lease or would rather start monthly and convert. These questions, more than a generic "Sanur is great for families" recommendation, are what point to the right specific villa in our Sanur portfolio.
+
 ## What to do next
 
 Sanur is the strongest single area we manage villas in for a long, calm stay, particularly for families and anyone wanting to walk rather than ride for daily errands — but the right villa within Sanur still depends on your bedroom count, budget and how close to the beach path you want to be.

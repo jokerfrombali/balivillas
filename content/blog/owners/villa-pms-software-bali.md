@@ -58,6 +58,33 @@ PMS pricing models vary: some charge a flat monthly fee per property, others a p
 
 Most PMS platforms are built around OTA integration first, and direct bookings through your own site or WhatsApp sometimes need to be entered manually to keep the calendar accurate — a step that's easy to forget under time pressure and a common source of the double bookings a PMS is meant to prevent. See [how to get direct bookings for a Bali villa](/blog/owners/direct-bookings-bali-villa/) for how that channel works and why it needs the same calendar discipline as any OTA booking.
 
+## A decision framework: build, buy light, or outsource
+
+Three realistic paths exist, and the right one depends on volume and your own time, not on which system has the longest feature list.
+
+1. **One villa, spare capacity to run it yourself.** A standalone channel manager plus a simple spreadsheet for reporting usually covers it. Paying for a full PMS here mostly buys features you won't use.
+2. **Two to four villas, or one villa with limited time.** A lighter PMS tier earns its cost here, mainly through the messaging and reporting modules — the parts that get skipped first when time is tight and quietly cost bookings or owner trust when they are.
+3. **Several villas, or no real appetite to run software day to day.** At this point the question isn't which PMS to buy, it's whether to run one yourself or hand the whole operation, software included, to a management company. The software cost stops being the deciding factor; your own time and the cost of mistakes made while learning the system usually are.
+
+Be honest about which category you're in before comparing feature lists — the same PMS can be excellent value in category two and a waste of money in category one.
+
+## What goes wrong with self-managed PMS setups
+
+The most common failure isn't choosing the wrong software — most mainstream platforms are competent. It's under-using what's already been paid for. An owner subscribes to a full PMS for the pricing and messaging tools, then keeps setting rates manually out of habit and lets automated messages go unreviewed, effectively paying full-PMS cost for channel-manager-only value.
+
+The second common failure is treating onboarding as a formality. Migrating existing listings, past booking history and calendar rules into a new PMS takes real setup time, and rushing it tends to surface as mismatched availability or an old rate showing on one platform weeks later, usually discovered by a guest rather than the owner.
+
+## What we do in practice
+
+Running a PMS across a portfolio, rather than one villa, changes the calculation: the fixed software cost is spread across many properties, and the operational discipline — someone actually reviewing reports weekly, checking pricing suggestions rather than accepting them blind, and verifying every new listing after onboarding — is built into a daily routine rather than depending on one owner remembering to do it around a day job. That operational layer, not the software licence itself, is usually the difference between a PMS that pays for itself and one that sits half-used.
+
+## Questions worth asking a provider directly
+
+- Which of our current listing platforms do you have a live, tested integration with today, not just on a roadmap
+- What does onboarding involve, and how long does migrating our existing calendar and rates actually take
+- Can we see the messaging templates before committing, so we know what a guest receives automatically
+- What reporting is included by default, and what costs extra as an add-on module
+
 ## What to do next
 
 Property management software makes sense once you're running enough bookings, or enough properties, that manual calendar and messaging work stops being sustainable. For a single villa without that volume, start with a standalone channel manager and add features as the need becomes clear.

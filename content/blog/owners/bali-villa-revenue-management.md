@@ -66,6 +66,18 @@ Some owners want to stay closely involved in pricing decisions even with a manag
 4. Ask for a monthly report showing bookings, occupancy and channel breakdown.
 5. Review whether direct booking is actively promoted, since it avoids platform commission entirely.
 
+## A simple framework for deciding when to intervene
+
+Not every dip needs an immediate reaction, and not every quiet week is a problem. A useful rule of thumb: compare current booking pace against the same period last year and against similarly positioned villas nearby, not against last month in isolation, since month-to-month comparisons get distorted by seasonality on their own. If a villa is tracking meaningfully behind both of those benchmarks for more than a couple of weeks, that's the point to review pricing, minimum stay and channel mix together rather than waiting to see if it self-corrects.
+
+The opposite mistake — reacting to every single slow week with a rate cut — is just as costly, since it trains the calendar toward permanently lower rates without addressing whatever the actual, possibly temporary, cause was.
+
+## What goes wrong without active revenue management
+
+The pattern we see most often with villas that come to us from self-management or a lighter booking-agent arrangement is a rate that was competitive when first set and has simply drifted out of date as the local market moved around it. Nobody made a bad decision — the rate just wasn't revisited, while comparable villas nearby adjusted for season and demand. The fix is rarely dramatic once identified: a rate reset against current comparables, a minimum-stay adjustment for the season, and a habit of reviewing weekly rather than annually.
+
+The second common pattern is channel neglect — a direct-booking page that hasn't been updated to match current Airbnb pricing, or a Booking.com listing left stale while attention goes to Airbnb. Guests comparing channels notice inconsistency, and it can create availability conflicts that are more disruptive than a suboptimal rate on their own.
+
 ## What to do next
 
 Revenue management is ongoing work, not a one-time setup, and the difference between a villa that's actively managed and one that's simply listed shows up clearly over a full year across seasons. If you're unsure whether your villa's current setup is doing this well, it's worth a second opinion.

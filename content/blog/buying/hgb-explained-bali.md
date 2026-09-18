@@ -52,6 +52,23 @@ For a buyer who does not need or want a company structure, leasehold or Hak Paka
 
 If you are buying into an existing PT PMA that already holds a villa under HGB, rather than setting up a new company, your due diligence needs to cover both the company itself, including its filings, debts and compliance history, and the HGB certificate's remaining term and condition. This is a more involved transaction than a straightforward individual leasehold purchase and benefits from a lawyer experienced in both property and corporate due diligence, not just a notary handling the property side.
 
+## What goes wrong with HGB-held villas
+
+The complications we hear about with HGB-held properties tend to fall into two groups. First, a company that let a renewal window pass, sometimes because the shareholders changed or the company became less actively managed over time, and the business built around the villa was left in a precarious position as a result. Second, a buyer purchasing into an existing PT PMA who checked the HGB certificate's remaining term but not the company's own filings, debts or compliance history, only to discover after completion that they had also acquired liabilities that had nothing to do with the land itself.
+
+Both are avoidable with the same discipline: track the HGB term actively rather than assuming it renews itself, and if buying into an existing company, treat the corporate due diligence as equally important as the property due diligence, not a formality that follows it.
+
+## A framework for evaluating an HGB-backed purchase
+
+1. **New PT PMA or existing one?** A new company holding freshly acquired HGB is a cleaner starting point than buying into an existing company's history.
+2. **How much of the HGB term remains?** Treat this the same way you'd treat remaining leasehold years — it materially affects the property's value and your planning horizon.
+3. **Is the company's compliance history clean?** For an existing PT PMA, get a lawyer to review filings and any outstanding obligations, not just the land certificate.
+4. **Who is tracking renewal?** Confirm, in writing, whose responsibility it is within the company structure to manage the renewal process well ahead of the deadline.
+
+## What we tell buyers considering a company-held villa
+
+When a prospective buyer asks us about a villa that is or would be held through a PT PMA on HGB, we're clear that this needs both property and corporate due diligence, and we point buyers toward advisers who handle both, rather than letting the property side alone stand in for a full check. It's a more involved process than a straightforward leasehold purchase, and treating it as equivalent is where problems start.
+
 ## What to do next
 
 HGB is the land title that sits behind most company-held villa purchases in Bali, and understanding its fixed-term, renewable structure matters whether you are setting up a new PT PMA or buying into an existing one. The company and certificate both need checking; neither alone tells the full story.

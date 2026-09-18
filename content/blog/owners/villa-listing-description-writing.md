@@ -57,6 +57,33 @@ A description that oversells — claiming an ocean view that's actually a partia
 
 Airbnb and Booking.com both support formatted descriptions with headers or bold text in some form — use that structure rather than one dense wall of text. Aim for enough detail to answer the practical questions above without padding; a description that's twice as long without adding new information doesn't convert better, it just takes longer to skim.
 
+## A quick framework: what to write first when you're stuck
+
+Staring at a blank description field, work through this order rather than trying to write the whole thing in one pass:
+
+1. **Write the opening two lines last, not first.** Draft the rest of the description, then come back and compress the strongest facts from it into the opening — it's easier to extract a sharp summary from finished detail than to invent one cold.
+2. **List every fact before you write a single sentence of prose.** Bedroom count, pool size, Wi-Fi speed, walking distance to the beach, what's actually in the kitchen. Turning a bullet list of facts into short sentences is far faster than composing paragraphs while also trying to remember details.
+3. **Cut every adjective that isn't attached to a fact.** If "spacious" or "stunning" doesn't have a number or a specific detail next to it, either add one or delete the word.
+4. **Read it back as a guest comparing five listings, not as the owner who knows the villa.** The question isn't "does this sound nice" — it's "would this specific sentence make me pick this listing over the one next to it."
+
+## Comparing a weak opening with a strong one
+
+| Weak opening | Why it underperforms | Stronger version |
+|---|---|---|
+| "Welcome to this stunning tropical paradise villa" | No facts, could describe any of thousands of listings | "A 3-bedroom pool villa in Umalas, five minutes' walk from cafés, built for a small group who want space and fast Wi-Fi" |
+| "Amazing location close to everything" | Vague distance claim guests have learned to distrust | "8-minute walk to Sanur's beach path, 15 minutes by car to the airport" |
+| "Fully equipped modern kitchen" | Doesn't say what's actually included | "Kitchen with oven, blender, rice cooker and a coffee machine, stocked with basics on arrival" |
+
+## What goes wrong
+
+The most common mistake we see isn't bad writing — it's a description that was accurate when written and never updated. A villa gets a bathroom renovated or the Wi-Fi upgraded, and the description still describes the old version months later, quietly understating the property or, worse, describing something no longer there.
+
+The second is writing to impress the owner rather than to convert the guest. A description dense with atmospheric language can read well to the person who commissioned it while doing almost nothing for a guest skimming five listings on a phone in thirty seconds.
+
+## What we do in practice
+
+For villas we manage, listing descriptions get reviewed against the actual property at each seasonal changeover and after any renovation or furniture change, rather than being written once at listing and left alone. We also write platform-specific versions rather than one description pasted everywhere, since Airbnb, Booking.com and a direct website each reward slightly different structure and length. If you're writing your own and want a second opinion, the simplest gut check is having someone who has never seen the villa read the opening two lines and say back what kind of guest they think it suits — if their answer doesn't match your intended guest, the opening needs work.
+
 ## What to do next
 
 A good villa listing description states who it suits and its best feature immediately, then answers practical questions in a scannable structure, using specifics instead of generic adjectives throughout.

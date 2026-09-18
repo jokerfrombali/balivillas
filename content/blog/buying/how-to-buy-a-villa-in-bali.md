@@ -67,6 +67,23 @@ If you are buying from outside Indonesia and cannot attend signing in person, po
 
 The most frequent mistake is verifying the certificate only after an offer is accepted, which puts pressure to proceed even when something looks wrong. A close second is using the seller's recommended notary without independent review, and a third is paying a large deposit before a binding sale and purchase agreement exists, leaving no real recourse if the deal falls through.
 
+## A staged-payment framework to protect yourself
+
+Rather than accepting whatever split a seller proposes, use this as a starting negotiation position and adjust with your notary:
+
+| Milestone | Typical portion released | What should be confirmed first |
+|---|---|---|
+| Signing the SPA | A minority deposit, not the majority | Certificate verified, permits checked, contract reviewed independently |
+| Mid-point checkpoint | A further portion | Any conditions in the SPA met, no outstanding disputes surfaced |
+| Completion / deed signing | Remaining balance | Notary confirms all documents ready for registration |
+| After registration | Any final retained amount, if agreed | Registration confirmed complete by the notary |
+
+If a seller insists on receiving most or all of the price before a binding SPA exists, that is worth treating as a reason to slow down, not a reason to move faster.
+
+## What goes wrong most often, in more detail
+
+Beyond the three mistakes above, a pattern worth naming specifically: buyers who rely on translated summaries of Indonesian-language documents rather than a full independent translation, and later discover a clause they were told didn't matter actually did. Another: buyers who assume a villa's rental income or licence status transfers automatically with the sale, when in practice licences are often tied to the previous owner or operator and need to be reapplied for. Ask specifically, in writing, what transfers and what needs to be reapplied for before you finalise price.
+
 ## What a villa manager can add to the process
 
 Because we manage 20 villas ourselves across Sanur, Canggu, Umalas and Ungasan, buyers sometimes ask us to walk through a property they are considering, separately from any decision about future management. We know what genuinely affects a villa's running costs and rental potential day to day, which complements what a lawyer or notary checks on paper.

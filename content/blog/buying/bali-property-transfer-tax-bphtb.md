@@ -70,6 +70,28 @@ BPHTB is one line item within the broader cost of buying property in Bali, along
 | Does it apply to leasehold | Depends on transaction structure; verify with a notary |
 | Where to get the current rate | Your notary or the relevant regional tax office |
 
+## What goes wrong when BPHTB is not budgeted properly
+
+- **A verbal figure from an agent quoted as if it were confirmed.** Agents are not always tax professionals, and a rounded percentage passed on informally can be wrong for your specific structure or out of date.
+- **Assuming leasehold and freehold-equivalent purchases are taxed identically**, then discovering at closing that the actual calculation basis for your transaction differs from what you budgeted.
+- **Leaving the BPHTB conversation until the sale agreement is already being drafted**, when there is little room left to adjust the offer price if the tax turns out higher than expected.
+- **Not confirming who pays it in writing.** Buyer-pays is conventional but not universal, and an unclear agreement here can turn into a dispute right at closing, the worst possible time.
+
+## A simple framework for budgeting it correctly
+
+1. Ask your notary, early in the process, for a written BPHTB estimate specific to your exact transaction structure, not a general figure for "buying in Bali."
+2. Confirm whether that estimate is based on the transaction price or an officially assessed value, since these can differ, and ask which one governs your case.
+3. Get the payment timeline in writing, so you know exactly when the funds need to be available relative to closing.
+4. Keep the written estimate and the eventual payment confirmation together with your other transaction records, both for your own accounting and for a future resale.
+
+## What we do in practice
+
+When we walk a buyer through one of our [villas for sale](/villas-for-sale/), we point them to their own notary for the current BPHTB figure rather than quoting a number ourselves, because the exact calculation depends on the transaction structure and current regulation, and getting it wrong in either direction helps nobody. What we can tell a buyer upfront is the transaction structure itself, leasehold terms, whether the villa has a track record of prior sales, and the documentation already gathered, so the notary's estimate can be produced quickly rather than starting from scratch.
+
+## How this compares across a leasehold assignment and a resale
+
+A first purchase of a leasehold villa and a later resale of that same leasehold to another buyer are not automatically treated the same way for tax purposes, since a lease assignment can sit differently under the regulations than an original transaction. If you are buying a villa that has already changed leasehold hands once or twice, ask your notary specifically how this transaction's history affects the BPHTB calculation, rather than assuming the figure will match a first-sale scenario.
+
 ## What to do next
 
 Do not treat BPHTB as an afterthought; get a written estimate specific to your transaction before you agree a purchase price, so the number you are comparing against other villas reflects the true total cost, not just the headline price.

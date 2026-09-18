@@ -10,7 +10,7 @@ commercial_target: /villa-management/
 related: owners/guest-communication-villa-bali; owners/minimum-stay-length-bali-villa; owners/guest-damage-deposit-bali-villa; buying/is-buying-a-villa-in-bali-a-good-investment
 updated: 2026-09-18
 priority: 1
-facts_to_verify: none
+facts_to_verify: standard short-term rental cancellation/deposit clause guidance under Indonesian law (as of 2026)
 ---
 
 A cancellation policy sets out what happens to a guest's payment if they cancel a booking, and how far in advance they need to cancel to get a partial or full refund. For a Bali villa, getting this right matters more than owners sometimes expect, because a single last-minute cancellation on a longer stay or during high season can be a meaningful revenue loss with little time to rebook the dates.
@@ -67,6 +67,26 @@ Whatever policy you choose, write it down clearly and apply it consistently rath
 3. Display cancellation terms clearly before a guest books, on every channel you list on.
 4. Decide in advance how you'll handle genuine exceptional circumstances.
 5. Review whether your policy differs sensibly by season, or needlessly applies one rule year-round.
+
+## A framework for choosing between flexible, moderate and strict
+
+Rather than picking a structure by instinct, weigh three factors together:
+
+1. **How quickly do cancelled dates in your area typically rebook?** Areas or seasons with strong last-minute demand can afford more flexibility, since a cancellation usually gets filled anyway. Where rebooking is slow, stricter terms protect real revenue.
+2. **How far in advance do your typical guests book, and how price-sensitive are they?** Guests booking months ahead for a family trip often value flexibility more than a last-minute couple booking a short stay, and will sometimes pay more for it.
+3. **What's the actual revenue at stake per booking?** A one-night stay and a two-week stay carry very different cancellation risk, which is why policy should track [minimum stay length](/blog/owners/minimum-stay-length-bali-villa/) rather than being set once for every booking length.
+
+Most villas end up somewhere in the moderate range as a default, with a stricter variant applied specifically to high season and long-stay bookings rather than the whole calendar.
+
+## What goes wrong
+
+The most common mistake is setting a policy that's technically clear but practically undiscoverable — buried in a listing's fine print rather than stated plainly at the point a guest is deciding whether to book. A guest who only learns the real terms after booking, even if they technically agreed to them, tends to feel misled if a cancellation situation arises, and that feeling shows up in reviews regardless of whether the policy itself was reasonable.
+
+The second is applying the policy unevenly under pressure — waiving it for a guest who pushes back and holding firm for one who doesn't. This is understandable in the moment but erodes the policy's value over time, since word travels and guests increasingly expect an exception to be negotiable.
+
+## What we do in practice, and what to check with whom
+
+For villas we manage, cancellation terms are set by season and booking length in advance, displayed at the point of enquiry rather than buried afterward, and any exception for genuine, well-documented circumstances is decided against a standing rule of thumb rather than case by case under time pressure. If you're drafting your own terms, the practical check is whether a guest could read them in under thirty seconds and know exactly what happens if their plans change — if it takes longer than that to explain, it's probably too complicated to enforce consistently. Where cancellation terms interact with a security deposit or damage clause, keep the two clearly separate in whatever you publish, and where a contractual dispute could realistically arise on a higher-value or longer booking, that specific clause is worth having checked by a local legal adviser rather than adapted from a generic template (as of 2026, verify current standard practice for short-term rental terms).
 
 ## What to do next
 

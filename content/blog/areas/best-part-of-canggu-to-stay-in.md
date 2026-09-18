@@ -61,6 +61,16 @@ A short stay of a few days often favours the more convenient, walkable neighbour
 
 Within any of these areas, the specific street matters almost as much as the neighbourhood choice — a villa on Batu Bolong's main road and one two streets back are a different experience, even though both are technically "Batu Bolong." Always ask for exact position and walking distance, not just the neighbourhood name, when comparing villas.
 
+## Cases where the "best" answer surprised the guest
+
+A remote worker booked Batu Bolong for a six-week stay because it was the neighbourhood everyone online recommended, then found the constant foot traffic and café noise outside their villa made it hard to hold calls; moving the second half of the stay to Pererenan solved it entirely, the work itself hadn't changed, only the surrounding noise had. A retired couple booked Pererenan expecting total quiet for a two-week trip, then found themselves relying on a driver for almost every meal and missing the ability to just step outside for dinner; a villa in Berawa's quieter back streets on their next trip gave them both some walkability and some calm. A group of friends booked Berawa for beach clubs and found the traffic between venues ate more of the evening than expected; splitting the week between two nights in Berawa and the rest inland, using a driver for the beach-club nights specifically, worked better than committing fully to one neighbourhood.
+
+The pattern across all three: the "best part of Canggu" answer isn't fixed even for the same person, it can change within a single trip once the daily reality of a choice becomes clear. If you can, ask us about flexibility, some guests split a longer stay across two of our villas in different neighbourhoods rather than locking into one for the whole trip.
+
+## What we check with guests before recommending a neighbourhood
+
+Before suggesting Batu Bolong, Berawa, Echo Beach or Pererenan specifically, we ask how much of each day involves calls, sleep or concentration versus being out and about, whether nightlife or surf is a daily habit or an occasional plan, and whether the trip is short enough that convenience should win outright or long enough that daily wear from noise and traffic becomes the bigger factor. We also ask directly whether splitting the stay across two neighbourhoods is worth considering, which is more often useful than guests initially assume.
+
 ## What to do next
 
 Write down your top one or two priorities for this specific trip before comparing any listings — that single step resolves most of the "which part of Canggu" question. Then look at our villas in Canggu and tell us your priority; we'll match you to the right neighbourhood and street rather than just the nearest availability.

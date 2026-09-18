@@ -48,6 +48,10 @@ Many yearly and some monthly agreements ask for payment upfront or in large inst
 
 Confirm the person or company signing the contract actually has the legal right to lease the property — for individually owned villas, this sometimes means checking the name on the contract matches the name on the property's underlying ownership or lease documents, or at minimum getting written confirmation of the relationship if a manager is signing on an owner's behalf. This step is less relevant when booking with a company that manages its own villas directly, since the same entity signs, manages and is accountable for the property throughout your stay.
 
+## Renewal terms: what happens when the lease ends
+
+A contract that only covers the initial term and says nothing about renewal can leave you negotiating from a weaker position later, particularly if you've settled into the villa and moving would be disruptive. Ask specifically whether renewal is automatic, requires a fresh negotiation, or gives you a right of first refusal at the prevailing rate — and get whichever applies written into the original agreement rather than assumed.
+
 ## What language should the contract be in?
 
 Ideally, both English and Indonesian versions, or at minimum a version in a language you're fully confident in, with both parties clear that it's the governing document over any verbal side-agreement. If only an Indonesian version exists and you're not fluent, get an independent translation before signing rather than relying on a summary from the other party.
@@ -55,6 +59,28 @@ Ideally, both English and Indonesian versions, or at minimum a version in a lang
 ## Legal considerations to flag, not settle yourself
 
 Property and rental law in Indonesia has specific rules around foreign tenancy, land certificate types and what a rental agreement can and can't legally include — these are worth a conversation with a local lawyer or notary for anything beyond a straightforward short-to-medium stay, particularly for yearly commitments involving significant upfront payment (as of 2026, verify current requirements).
+
+## A framework for reviewing a contract before you sign
+
+Read a draft contract in this order rather than top to bottom, so you catch the items most likely to cause a problem first:
+
+1. **Money terms first.** Rent amount, currency, payment schedule and deposit amount — confirm every figure matches what you were quoted verbally, since a mismatch here is the easiest thing to fix before signing and the hardest after.
+2. **What's included, specifically.** Cross-check the utilities, Wi-Fi and staff line against the table above — vague wording ("utilities included") is worth pushing back on until it names an allowance or says "fully included."
+3. **Exit terms.** Read the early-termination clause even if you're confident you won't need it — this is the clause tenants most regret not reading closely when circumstances change partway through a lease.
+4. **Who's actually signing.** Confirm the signatory has the legal standing described above, particularly for individually owned villas.
+5. **Everything else.** Duration, renewal terms, maintenance responsibility — check these are present at all, since their absence is more common than incorrect wording.
+
+If any of the first four are missing, ask for them in writing before you sign, not after — a contract without these details isn't really protecting either side.
+
+## What goes wrong when a contract is skipped or too vague
+
+The disputes that come up most often in the broader long-term rental market share a common root: something discussed verbally that was never written down, later remembered differently by each side. A tenant assumes "utilities included" means everything; the owner assumes it means a capped allowance. A tenant assumes a security deposit is fully refundable barring damage; the owner assumes normal wear over a year justifies a partial deduction. Neither side is necessarily acting in bad faith — the ambiguity itself is the problem, and it's entirely avoidable by writing specific numbers and definitions into the agreement rather than leaving them as a shared verbal understanding.
+
+A second, less common but more serious pattern: a contract signed with someone who turns out not to have the legal standing to lease the property, which can leave a tenant with no real recourse if a dispute arises later. This is why confirming the signatory's standing, as covered above, is worth the extra question even when everything else about a listing looks straightforward.
+
+## What we put in writing before you book
+
+Our long-term terms are set out before a booking is confirmed, covering every line in the table above — rent, payment schedule, what's included, deposit terms and exit conditions — because we manage the villa ourselves and have no reason to leave any of it ambiguous. If you're comparing our terms against another listing, use the checklist above item by item; it's the same one we'd apply to our own paperwork.
 
 ## What to do next
 

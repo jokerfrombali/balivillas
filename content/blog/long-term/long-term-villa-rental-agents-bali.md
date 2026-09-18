@@ -45,12 +45,35 @@ If you've already found a specific villa managed by a company that runs it thems
 
 A few signs suggest an agent hasn't done thorough vetting: photos that look inconsistent with the description, reluctance to arrange a video call or in-person viewing before asking for a deposit, vague answers about who actually owns the property, or an unwillingness to put the fee structure in writing before you commit to viewing. None of these are proof of a problem on their own, but together they're worth treating as a reason to ask more questions, or to look elsewhere.
 
+## What an agent fee typically buys you, and what it doesn't
+
+An agent fee, where charged, is paying for search time and local presence — not automatically for legal vetting, ongoing support, or a guarantee of quality. It's worth being clear-eyed about that distinction before deciding whether the fee is worth it for your situation: if you value having someone physically view properties and negotiate in Indonesian on your behalf, that's a real service worth paying for; if you already know which villa you want, the same fee buys you very little.
+
 ## Questions worth asking any agent
 
 - Who pays your fee, and how much is it?
 - Have you personally viewed this property and verified who owns it?
 - What happens if there's a maintenance issue during my stay — do you handle it, or do I go to the owner directly?
 - Can you show me a written contract template before I commit to viewing?
+
+## A decision framework: agent, direct, or both
+
+Work through these in order rather than defaulting to whichever route you tried first:
+
+1. **Do you already have a specific villa or company in mind?** If yes, contact them directly before involving an agent — there's nothing an agent adds once you know exactly who you want to rent from.
+2. **Are you searching from outside Bali with limited local knowledge?** An agent's local presence can genuinely help here, particularly for viewings you can't do yourself and negotiation in Indonesian.
+3. **How much does the fee matter to your budget?** If a monthly or yearly rental is already at the top of your budget, an agent fee — even a modest one — is worth pricing in before you commit to that route, since it isn't always disclosed upfront.
+4. **How important is fast support during your stay?** If ongoing responsiveness matters more than search breadth (families, longer stays, remote workers who need reliable Wi-Fi and quick maintenance response), weight toward a company that manages its own villas directly.
+
+## What goes wrong with agent-sourced rentals
+
+The problems we hear about secondhand from long-stayers who used an agent tend to cluster around three things. First, a fee that wasn't clearly disclosed until late in the process, sometimes added on top of the rent rather than built into it. Second, a maintenance issue during the stay that took days to resolve because it had to pass from tenant to agent to owner and back, rather than being handled directly by whoever actually looks after the property. Third, and most costly, a deposit dispute at the end of the stay where the agent had moved on to other clients and stopped being responsive, leaving the tenant negotiating directly with an owner they'd never actually met.
+
+None of these are inevitable with a good agent — plenty operate well — but they're worth pricing into your decision, particularly for a longer commitment.
+
+## What we do differently as a self-managing company
+
+Because we run all 20 of our own villas rather than listing on behalf of other owners, there's no agent fee, no owner-agent-tenant chain, and no handoff if a maintenance issue comes up during your stay — the same team that quoted you the rate also handles housekeeping, repairs and your day-to-day questions. That doesn't make an agent pointless for a broad market scan, but once you've identified a villa of ours you're interested in, going direct through [WhatsApp](/property-rental/) removes a step, not adds one.
 
 ## A hybrid approach many long-stayers use
 

@@ -67,6 +67,24 @@ If you are torn between Canggu and somewhere quieter, our [Umalas area guide](/b
 - Whether the pool and garden are private or shared
 - What time check-in and check-out are (ours are 3:00 pm and 11:00 am, with some flexibility outside high season)
 
+## A worked example: two guests, two very different picks
+
+It helps to see the decision made concretely rather than in the abstract. A couple in their late 20s messages us wanting to surf every morning, work from a café most afternoons and be near beach clubs for sunset; they end up in Berawa or Echo Beach, accepting the traffic trade-off because everything they want is a short ride or walk away. A family of four with a toddler messages us wanting a quiet villa with a fenced pool and manageable drives to a handful of activities; they end up in Pererenan or inland Canggu, giving up the ten-minute beach walk for a calmer street and a lower rate, then use a driver for the occasional beach trip instead of a scooter.
+
+Neither guest is "right" about Canggu, they simply weighted the same trade-offs differently against their own trip. Working out which of these two profiles you're closer to, before you start comparing individual villas, saves a lot of back-and-forth.
+
+## What goes wrong when guests skip the pocket-level decision
+
+The single most common complaint we hear from guests who booked elsewhere in Canggu is "it wasn't what I expected", almost always because they booked based on the name "Canggu" rather than the specific pocket and street. A guest expecting Batu Bolong's walkable buzz ends up in a quiet inland street with nothing nearby; a guest expecting Pererenan's calm ends up on a busy road with traffic noise from early morning.
+
+The second pattern is underestimating traffic on the return leg. A villa can be a five-minute ride to Berawa's beach clubs at 4 pm and a 20-minute crawl back at 7 pm when everyone leaves for dinner at once; if evenings matter to your trip, ask specifically about the return-trip time, not just the outbound one.
+
+The third is not asking whether the pool is shared. Several Canggu villas, particularly smaller ones, share a pool or garden with a neighbouring unit; this is fine for some travellers and a dealbreaker for others, and it rarely shows clearly in photos.
+
+## What we check before recommending a pocket
+
+Before pointing a guest toward Berawa versus Pererenan versus somewhere else, we usually ask: how many mornings will genuinely involve surfing or the beach, how much of the day is work versus leisure, whether evenings matter more than daytime activity, and whether anyone in the group has mobility needs that make walking distance more important than usual. These answers narrow the choice fast, and are more useful than a generic "best area" ranking.
+
 ## What to do next
 
 If surf, beach clubs and being in the middle of things matter most, look at Berawa or Echo Beach. If you want to work from the villa and only visit the beach occasionally, Pererenan or inland Canggu will suit you better and cost less. Either way, confirm the exact street before booking, not just the suburb name.

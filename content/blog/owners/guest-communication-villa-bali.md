@@ -70,6 +70,29 @@ Templates for common pre-arrival information (directions, Wi-Fi details, house r
 4. Address any flagged issue directly and promptly during the stay, not after checkout.
 5. Send a post-stay thank-you and genuine review request.
 
+## A framework for deciding what to fix first
+
+If communication feels like it needs work but it's not obvious where to start, triage by consequence rather than by what feels most broken:
+
+1. **In-stay responsiveness first.** An unresolved issue during a stay is the single fastest route to a bad review, so if guests are ever unreachable to you during a stay, this is the priority regardless of anything else.
+2. **Pre-booking speed second.** Slow replies here cost bookings quietly — a guest who doesn't hear back simply books elsewhere without telling you why, so the loss is invisible unless you're tracking enquiry-to-booking conversion.
+3. **Pre-arrival proactivity third.** This mostly prevents avoidable in-stay questions rather than driving bookings or reviews directly, so it's worth fixing but rarely urgent.
+4. **Post-stay follow-up last.** It's the easiest to build as a simple template and the one most owners eventually get to on their own once the first three are under control.
+
+## What goes wrong
+
+The most common failure pattern is uneven coverage — an owner who's excellent at pre-booking replies because that's the part that feels most connected to revenue, but who goes quiet once a guest has actually checked in, on the assumption that the hard part is over. It isn't; in-stay silence is where reviews are actually won or lost.
+
+The second is relying entirely on memory instead of a simple checklist or template system. Under time pressure, pre-arrival information is the phase most likely to get skipped, and a guest who arrives without directions or Wi-Fi details starts the stay already mildly frustrated, regardless of how well everything else goes.
+
+## What we do in practice
+
+Because guest communication runs through one WhatsApp-based system across every villa we manage, no single phase depends on one person remembering to handle it — pre-arrival information goes out on a set schedule rather than an ad hoc basis, and in-stay coverage doesn't lapse because someone's asleep or travelling. That consistency, more than any individual message being especially well written, is what tends to separate a guest experience that reads as "well run" from one that reads as hit-or-miss.
+
+## What to check if you're self-managing
+
+Track two numbers honestly for a month: average reply time to a pre-booking enquiry, and how many hours pass, worst case, before an in-stay message gets a response. If either number would surprise a guest if they knew it in advance, that's the gap to close before anything else on this list.
+
 ## What to do next
 
 Guest communication is one of the highest-leverage, lowest-cost things an owner can improve, since most of the gains come from response speed and proactive information rather than spending money. If keeping up with all four phases across a busy calendar isn't realistic for you, that's a common reason to hand it to a manager.

@@ -69,6 +69,16 @@ It's reasonable to keep an eye on what comparable villas in your area are chargi
 4. Decide deliberately whether direct-booking rates should differ from platform rates.
 5. Watch for local events or Nyepi that a generic algorithm might not account for.
 
+## A worked example: reading booking pace correctly
+
+Say a date eight weeks out has zero bookings while the same date last year had three by this point. A naive reaction is to cut the rate immediately. A better first step is to check whether the comparison is even fair: was last year's pace unusually fast because of a specific event, has a comparable villa nearby dropped its rate meaningfully, or has the villa's own listing quality changed (fewer reviews after a manager switch, outdated photos)? Only once those explanations are ruled out does a rate adjustment become the right lever — otherwise you're solving a pricing problem that isn't actually a pricing problem.
+
+The reverse mistake is just as common: a date books quickly at the current rate, and the instinct is to leave it alone rather than test whether demand would support a higher rate for the remaining inventory around it. Dynamic pricing done well tests both directions, not just downward.
+
+## What goes wrong when pricing is left on autopilot
+
+The villas that come to us with pricing problems rarely have a dramatic story behind them — usually it's a rate that was reasonable when set and simply wasn't revisited as the season or the local market moved. A second common issue is a pricing tool's suggestion applied without a sense check, which can produce an oddly low rate during a week when a nearby event is actually driving demand up, or an oddly high one during a week the tool has no visibility into a genuinely quiet local pattern. Treating the software's output as a draft to review, not a rate to publish automatically, catches most of these before they cost a booking.
+
 ## What to do next
 
 Dynamic pricing works best as a combination of data and local judgement, not either alone. If your villa's rate has been static for months regardless of season or booking pace, that's the clearest sign it's not being actively managed.

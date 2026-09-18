@@ -53,6 +53,19 @@ A leasehold interest can typically be assigned or sold to a new buyer for the re
 - All structures: annual land and building tax (PBB), regardless of which route you use
 - All structures: notary fees at the point of any future sale or transfer
 
+## What goes wrong when buyers conflate the two
+
+The most common confusion we see is a buyer assuming "long leasehold" is functionally the same as freehold because the term feels long enough — thirty years initially sounds like plenty until you're ten years from the end and trying to sell or refinance, at which point remaining term dominates the conversation with any buyer or lender. A lease with eighty years remaining and one with fifteen remaining are not comparable investments even at the same headline monthly rental yield, and pricing that ignores this gap is a red flag on a listing.
+
+A second common mistake: assuming Hak Pakai eligibility applies automatically to any foreign buyer. It does not — eligibility conditions exist and have changed over time, and a buyer who assumes they qualify without checking can find themselves restructuring a deal late in the process when a notary flags the issue.
+
+## A decision framework for choosing between the three
+
+1. **How long do you realistically plan to hold the villa?** Under a decade or uncertain — leasehold's lower setup cost matters more. Multi-decade or indefinite — Hak Pakai's registered title or a long leasehold with a strong extension clause both work; compare costs directly.
+2. **Will you operate it as a formal rental business, or use it personally?** Formal business at any scale — PT PMA is usually worth the compliance overhead. Personal use — it rarely is.
+3. **Do you meet Hak Pakai eligibility conditions?** If yes and you want a registered title rather than a contract, it is worth the extra registration cost over leasehold.
+4. **How important is resale value to your plan?** If resale matters, weight toward the structure with the clearest, most liquid transfer mechanism for your buyer pool — ask your notary which structures attract the most active resale market in your target area currently.
+
 ## What actually drives the right choice for a buyer
 
 Most buyers end up choosing based on three practical questions: how long they realistically plan to hold the property, whether they want to run it as a formal business or use it personally, and how much ongoing administration they are willing to take on. Someone buying a single holiday villa for occasional personal use rarely needs the complexity of a PT PMA; someone building a small rental portfolio often finds the company structure worth the extra cost.

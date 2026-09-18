@@ -74,6 +74,16 @@ A single quiet week rarely means anything on its own, particularly outside high 
 5. Review recent guest feedback for maintenance or experience issues.
 6. Confirm calendar sync is accurate across every channel the villa is listed on.
 
+## A worked example: diagnosing a specific villa
+
+An owner comes to us with a 3-bedroom Sanur villa that's had almost no enquiries for three weeks. Working through the checklist in order: timing rules out low season, since it's currently high season. Pricing comparison against genuine comparables shows the rate is roughly 15% above similar villas nearby with the same amenities — already a plausible explanation on its own. The listing audit then turns up photos that are two years old and don't show a recently renovated kitchen. Response time checks out fine.
+
+Rather than changing all three at once, the fix starts with pricing, since it's the single most plausible cause and the easiest to test cleanly: a rate adjustment down to match comparables, held for two weeks to see whether enquiry volume responds before also commissioning new photography. In this case, enquiries picked up within the first week, confirming pricing was the primary issue — the outdated photos were a secondary problem worth fixing regardless, but not the one actually blocking bookings.
+
+## What we look for first, and why
+
+When a villa's bookings drop and an owner asks us to look into it, we deliberately resist jumping to the most dramatic explanation first. Most quiet stretches trace back to one of the ordinary causes in the checklist above, not something unusual. Working the list in order — timing, pricing, listing, response time, guest feedback, channel sync — before considering anything more unusual saves time and usually finds the actual, fixable cause within days rather than weeks of guessing.
+
 ## What to do next
 
 A quiet booking calendar almost always has an identifiable cause, and most of them are fixable within a few weeks once you know what to look for. Work through the checklist in order rather than changing several things at once, so you can tell what actually worked.

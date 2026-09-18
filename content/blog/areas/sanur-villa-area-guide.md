@@ -66,6 +66,26 @@ Sanur has a good spread of everyday essentials within easy reach: supermarkets, 
 - Compare against Canggu or Umalas if you're not fixed on Sanur specifically.
 - Ask us about kid-friendly features if travelling with young children.
 
+## A simple framework for deciding if Sanur is right for you
+
+If you're still weighing Sanur against Canggu, Umalas or Seminyak, three questions usually settle it faster than reading another comparison list.
+
+First, what does your day actually look like? If it involves surfing, beach clubs or a busy evening social scene, Sanur will feel too quiet; if it involves a calm swim, a walk, and dinner without noise, it's close to ideal. Second, who's travelling with you? Families with young children, older travellers, or anyone prioritising rest over stimulation tend to be happiest in Sanur specifically because the pace matches what they need, rather than fighting against it. Third, how long are you staying? For a two-night trip built around nightlife, Sanur is the wrong base; for anything from a week upward, especially a month or longer, its walkability and lower background noise start to matter a lot more than they would on a short break.
+
+If your answers point in different directions, for instance you want quiet evenings but also want to be five minutes from a beach club, it's worth being honest that no single area in Bali gives you everything, and picking the trade-off that matters least to your specific trip.
+
+## Where guests get the choice wrong
+
+The most common mistake we see is booking Sanur expecting Canggu's energy, or booking Canggu expecting Sanur's calm, based on a generic "best areas in Bali" list rather than what the trip actually needs. A group booking a villa for a milestone birthday with an evening-out plan every night is often happier in Canggu or Seminyak; a family with a toddler booking a villa in Canggu because "everyone recommends it" often finds themselves fighting traffic and noise they didn't anticipate.
+
+The second common mistake is assuming Sanur is uniformly quiet. The stretch directly on the beach path, particularly near the main cafés, has real daytime activity; if you want the quietest possible stay, ask specifically about a villa set back from the path rather than assuming "Sanur" alone guarantees silence.
+
+The third is underestimating how much a calm, reef-protected sea matters for families with young children specifically, compared with a more scenic but rougher beach elsewhere in Bali. If swimming with kids is a priority, that single factor often outweighs everything else on the comparison list.
+
+## What we check with guests before recommending Sanur
+
+Before we point a guest toward a specific villa in Sanur, we usually ask about group composition and ages, how many nights and whether plans might extend, how much of the day will be spent at the villa versus out exploring, and whether a Nusa Islands day trip is likely, since that affects how close to the harbour it's worth being. These few questions usually narrow a long villa list down to two or three realistic options quickly.
+
 ## What to do next
 
 Tell us your group size, budget and how close to the beach path you'd like to be, and we'll suggest the right villa from our Sanur portfolio, or a different area entirely if that turns out to suit your trip better.

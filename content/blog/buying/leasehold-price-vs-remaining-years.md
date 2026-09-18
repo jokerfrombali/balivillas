@@ -52,6 +52,24 @@ In many cases, the presence and clarity of an extension option matters more to l
 
 When comparing two leasehold villas with different remaining terms, do not simply compare the headline price per year of remaining term as if it were a clean, linear calculation. Instead, weigh the extension terms, the underlying land's desirability, and your own realistic holding period together, since a shorter lease with strong extension rights in a location you value can be a better purchase than a longer lease with no extension rights in a less desirable spot.
 
+## What goes wrong when buyers price purely by years remaining
+
+The mistake we see most often is a buyer building a simple mental formula — price divided by years remaining equals "value per year" — and using that alone to compare listings, ignoring extension terms, location desirability and condition entirely. Two villas with identical remaining terms in different areas, or one with a strong extension option and one without, are not comparable on a price-per-year basis alone, and treating them as if they were leads to either overpaying for a weak position or walking away from a genuinely good one.
+
+A related problem: sellers sometimes price a shortening lease aggressively low to attract a fast sale, and a buyer focused only on the "bargain" price-per-year figure can miss that the underlying extension terms, or lack of them, are what's actually driving the discount, not an inefficiency in the market they're benefiting from.
+
+## A framework for pricing a leasehold purchase properly
+
+1. **Start with the raw remaining term and any extension clause**, confirmed against the actual contract.
+2. **Layer in location and condition** as you would for any property purchase — remaining term is one input, not the whole picture.
+3. **Model your own realistic holding period** against the term plus any extension, not against the seller's framing of the deal.
+4. **If planning eventual resale, discount for how the term will look to a buyer at that future point**, not today.
+5. **Get a second opinion from someone with no stake in the sale** — an independent notary or a manager like us who has seen a range of comparable listings — before treating a headline price-per-year figure as the whole story.
+
+## How we help buyers weigh this
+
+Because we manage 20 villas across four areas and regularly see what similar properties with different remaining terms and extension provisions actually sell and rent for, we can give buyers considering one of our for-sale listings a grounded comparison rather than a generic formula. Ask us directly when comparing a specific villa against others you're considering.
+
 ## What to do next
 
 Remaining lease years genuinely drives price on a Bali leasehold villa, but not in a simple straight line, and extension terms can matter as much as the raw number. Look at the actual contract, not just the headline years, before judging whether a specific asking price is fair.

@@ -10,7 +10,7 @@ commercial_target: /villa-management/
 related: owners/minimum-stay-length-bali-villa; owners/villa-cancellation-policy-owners; owners/guest-issues-and-complaints-villa-bali; buying/is-buying-a-villa-in-bali-a-good-investment
 updated: 2026-09-18
 priority: 2
-facts_to_verify: none
+facts_to_verify: enforceable deposit/damage claim terms for short-term rentals under Indonesian law (as of 2026)
 ---
 
 A damage deposit is a sum held or authorised against a guest's payment method at booking, refunded after checkout if the villa is left undamaged, and used to cover repair or replacement costs if it isn't. It's a separate protection from cancellation policy, which covers lost booking revenue rather than property damage.
@@ -67,6 +67,30 @@ A simple check-in and check-out inspection routine, even brief photos of key are
 3. Communicate the amount, collection method and release timeline clearly before booking.
 4. Document any genuine damage with photos and a repair quote before making a claim.
 5. Release deposits promptly when there's no issue, since delayed releases damage guest trust.
+
+## A framework for setting the deposit amount
+
+Rather than picking a round number, work through three questions specific to the villa:
+
+1. **What's the realistic cost of the most common accidental incidents?** A broken glass, a stained sofa cushion, a cracked pool toy — price out three or four plausible scenarios rather than imagining worst-case damage that almost never actually happens.
+2. **What would a guest reasonably expect for a villa of this size and standard?** A deposit wildly out of line with comparable villas in the area reads as a red flag at booking time, even if the reasoning behind it is sound.
+3. **How will it be collected, and does that method change the number that makes sense?** A pre-authorisation hold that releases automatically can reasonably sit a bit higher than an upfront cash deposit, since it doesn't tie up a guest's actual funds the same way.
+
+Land on a number that covers realistic risk without being so high it becomes a booking deterrent on its own — this is a judgement call, not a formula, and it's fine to adjust after a season of real experience with actual incidents.
+
+## What goes wrong
+
+The most common mistake is silence around the deposit until check-in, when a guest who wasn't expecting a hold on their card discovers it while trying to settle in, which sours the start of the stay regardless of how fair the policy actually is. The fix is simple but easy to skip under time pressure: state the amount and method in the same message as the booking confirmation, not as a separate step later.
+
+The second is inconsistency in what counts as a claimable incident — charging one guest for a minor stain and letting an identical issue slide for another. Guests increasingly compare notes, and this kind of inconsistency, once noticed, damages trust more than a strict-but-consistent policy ever would.
+
+## What we do in practice
+
+For villas we manage, deposit amounts are set per villa based on its actual furnishings rather than a blanket figure across the portfolio, and every check-in and check-out includes a brief photo record of key areas so a genuine claim has a clear baseline to point to. Claims are reserved for real, documented damage — not routine wear — and communicated to the guest promptly with photos and, where relevant, a repair quote, rather than a silent deduction the guest has to ask about.
+
+## What to check, and with whom
+
+Whatever deposit structure you use, confirm how it interacts with each platform you list on — Airbnb's and Booking.com's own protection schemes have their own terms, limits and claims processes that may apply instead of, or alongside, your own policy, and these change from time to time, so check the current version directly with the platform rather than assuming last year's terms still hold. For a genuinely serious or disputed damage claim involving real financial exposure, that's worth a documented paper trail robust enough to stand up if it needs to go beyond a friendly resolution (as of 2026, verify current guidance on enforceable deposit terms for short-term rentals with a local legal adviser).
 
 ## What to do next
 

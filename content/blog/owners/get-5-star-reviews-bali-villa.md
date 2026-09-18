@@ -58,6 +58,29 @@ Ask for a review shortly after checkout, while the stay is fresh, rather than da
 
 A single five-star review proves little; a consistent pattern across many stays, with specific mentions of the same strengths (fast response, spotless villa, helpful staff), is what actually moves booking decisions and platform ranking. Track your reviews for recurring themes rather than treating each one in isolation — recurring praise tells you what to keep doing, and recurring criticism, even mild, tells you what to fix before it becomes a pattern that drags the average down.
 
+## A framework for diagnosing a rating that's stuck below five
+
+If reviews are consistently landing at 4.6–4.8 rather than 5.0, work through these in order rather than guessing:
+
+1. **Read the last ten reviews together, not individually.** A single 4-star review means little; the same comment appearing across three or four reviews is a pattern worth fixing before the next ten stays repeat it.
+2. **Separate villa-condition comments from service comments.** "Wi-Fi was slow" and "took a while to hear back about the aircon" are different problems with different fixes — one is maintenance, the other is response process.
+3. **Check whether the same friction point appears in reviews but was never raised during the stay.** That's the clearest sign guests are noticing things and not mentioning them until checkout, which is exactly the friction-point pattern in the table above.
+4. **Ask whether the listing description still matches what guests are describing in reviews.** A gap here means the fix is in the listing, not in the stay itself.
+
+## What goes wrong
+
+The most common mistake is treating a 4-star review as unfair rather than informative. Even a review that feels harsh or unreasonable usually contains one specific, fixable detail buried in it — and dismissing it as an outlier guest means missing the fix before the next guest hits the same issue.
+
+The second is over-correcting after one bad review — a full villa refresh triggered by a single complaint, while the recurring small issues several other guests have quietly not mentioned go unaddressed. Track patterns over a rolling window rather than reacting to the most recent review in isolation.
+
+## What we do in practice
+
+Across the villas we manage, review themes get reviewed on a recurring basis, not just when a low score comes in — the goal is catching a friction point after the second or third mention, before it becomes a settled pattern that drags the average down over dozens of stays. We also treat check-in messaging, response speed and the review request itself as things to test and refine, not a one-time setup, since guest expectations and platform norms both shift over time.
+
+## What to check, and when to get help
+
+If ratings are dropping villa-wide rather than for one property, that's usually a process issue — response times slipping, check-in instructions going out late — rather than anything wrong with the properties themselves, and worth auditing before touching the villas at all. If a specific review already sits published and feels unfair or factually wrong, see [how to deal with bad villa reviews](/blog/owners/fix-bad-villa-reviews-bali/) for the response and, where a platform allows it, dispute process.
+
 ## What to do next
 
 Five-star reviews come from consistency across the guest journey — an honest listing, a smooth check-in, fast responses to any issue, and a well-timed request afterward — more than from any single dramatic gesture.

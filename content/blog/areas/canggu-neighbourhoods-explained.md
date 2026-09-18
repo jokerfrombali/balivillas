@@ -72,6 +72,24 @@ Villa rates vary meaningfully by neighbourhood for a comparable size and standar
 
 The neighbourhood matters as much as the villa itself in Canggu, since a 10-minute difference in position can mean a genuinely different daily experience. Our villas in Canggu sit across these different pockets — tell us what matters most to your trip and we'll match you to the right one rather than just the nearest availability.
 
+## A worked decision: three guests, three different neighbourhoods
+
+A digital nomad staying six weeks tells us they want fast Wi-Fi, quiet mornings for calls and an easy ride to a change of scene on weekends; we usually point them to Pererenan, where the villa itself carries more of the daily experience and Berawa is a short ride away for the odd evening out. A surf-first couple with two weeks and flexible mornings tells us the swell forecast dictates their day; we point them to Echo Beach or Batu Bolong, close enough to check conditions and paddle out without a long ride first. A group of friends on a ten-day trip built around beach clubs and dinners out tells us walkability and options matter most; Berawa or central Batu Bolong fit, accepting heavier traffic as the trade-off for density.
+
+None of these three would have been happy in each other's neighbourhood, even though all three "stayed in Canggu." The lesson generalises: match the neighbourhood to what fills your actual days, not to which name sounds most familiar.
+
+## What goes wrong when guests skip the neighbourhood-level decision
+
+The most common issue is booking on name recognition. Batu Bolong is the version of Canggu most first-time visitors have heard of, so it gets booked by guests who would actually be happier in Pererenan's quieter lanes, then find the main strip's traffic and noise more tiring than expected over a full week.
+
+A second issue is not checking which neighbourhood a villa is actually in when the listing just says "Canggu." Two villas both marketed this way can be a 20-minute ride apart with very different daily experiences; always confirm the specific street or neighbourhood before comparing price or photos.
+
+A third is underestimating the 4pm–7pm rush when planning cross-neighbourhood evenings. A dinner plan that looks like a quick ride on a map can become a 30–40 minute crawl at the wrong time of day; if evenings matter, build in extra time rather than assuming daytime travel speeds.
+
+## What we check before pointing a guest to a specific Canggu neighbourhood
+
+We usually ask how many days are built around a single activity (surf, work, beach clubs) versus a general holiday rhythm, whether cross-neighbourhood evenings are part of the plan, and whether budget or space matters more than proximity to the coast. These answers usually narrow the five neighbourhoods above down to one clear front-runner well before we start naming specific villas.
+
 ## What to do next
 
 Decide which of the priorities above — walkability, surf, quiet, budget — matters most before you start comparing specific villas, since Canggu's neighbourhoods differ enough that this single decision does most of the work. Then look at our villas in Canggu with that priority in mind.

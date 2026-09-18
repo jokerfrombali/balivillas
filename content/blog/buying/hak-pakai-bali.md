@@ -57,6 +57,23 @@ Hak Pakai's capped term with renewal periods means planning for renewal well bef
 
 Beyond the purchase price, Hak Pakai carries land office registration costs at the point of acquisition and again at renewal, on top of standard notary fees that any structure incurs. These costs are generally moderate relative to the value of the transaction but should be itemised by your notary before you compare a Hak Pakai purchase against a leasehold alternative on price alone.
 
+## What goes wrong when buyers assume they qualify
+
+The single most common problem we hear about with Hak Pakai purchases is a buyer who assumed eligibility based on a general understanding of the rules, made an offer or even started the transfer process, then found at the notary stage that current conditions did not actually apply to their situation. Because eligibility has been adjusted by regulation over the years, information that was accurate two or three years ago is not a safe basis for a purchase decision today. Confirm eligibility as the very first step, before you shortlist properties around the assumption that you qualify.
+
+A second issue: buyers who treat the renewal periods as automatic. Hak Pakai's capped term with defined renewal windows means the right does not simply continue if nobody acts — renewal has to be actively completed within the applicable window, with whatever documentation and conditions apply at that time, which can differ from the conditions at original purchase. Missing this window has caused real complications for holders who assumed renewal was a formality.
+
+## A decision framework: is Hak Pakai worth pursuing over leasehold
+
+1. **Confirm eligibility first**, with a notary, before comparing costs or properties — this determines whether the comparison is even relevant to you.
+2. **If eligible, weigh the registration cost against the value of a registered title.** For a lower-value villa held for a short period, the extra cost may not be worth it over a well-drafted lease. For a higher-value, longer-hold purchase, the stronger legal footing often is.
+3. **Check how comfortable you are with the renewal administration.** A registered title with a capped term still requires active management at renewal time — if you prefer to think about the property as little as possible, factor that in.
+4. **Compare against PT PMA if you might ever operate commercially.** Hak Pakai suits personal use; a shift toward formal rental business later may mean the company structure suits better from the outset.
+
+## What we check with buyers considering Hak Pakai
+
+When a buyer asks us about a specific villa where Hak Pakai might apply, we point them toward independent notary confirmation of eligibility before going further, rather than assuming the structure works simply because it is theoretically available. We would rather a buyer walk away from a Hak Pakai purchase that does not actually apply to them than proceed on an assumption that gets corrected expensively later.
+
 ## What to do next
 
 Hak Pakai gives eligible foreign buyers a registered title rather than a private lease contract, which some buyers value enough to work within its conditions. Whether it suits you depends on meeting current eligibility rules and being comfortable with its term and renewal structure, both of which are worth confirming with a notary before you commit to a specific property.

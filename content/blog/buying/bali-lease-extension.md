@@ -55,6 +55,25 @@ If a landowner declines to extend, or negotiations do not reach agreement, you a
 
 If you are buying a leasehold villa today, ask specifically about extension terms as part of due diligence, not as an afterthought once you have decided you like the property. A villa with 25 years remaining and a strong extension clause can be a materially better purchase than one with 30 years remaining and no extension mechanism at all, depending on your intended holding period.
 
+## What goes wrong when extension is left too late
+
+The pattern that consistently produces a bad outcome: a leaseholder who knows extension isn't guaranteed but keeps deferring the conversation, then finds themselves negotiating in the final year or two with an obviously weaker hand, sometimes needing to sell or relocate on a tighter timeline than they'd like because talks stalled. A landowner facing an urgent, visibly motivated leaseholder has little reason to offer generous terms, and the leaseholder's options — accept whatever is offered, walk away with nothing, or scramble to sell a fast-shrinking interest — are all worse than they would have been with years of runway.
+
+A second, quieter problem: leaseholders who assume a vague mention of extension in the contract ("the parties may discuss renewal") amounts to a real right, when in practice it commits the landowner to nothing beyond a conversation. Treat anything short of a specific term and pricing mechanism as effectively no guarantee at all, and plan accordingly.
+
+## A framework for approaching extension at different stages
+
+| Years remaining | What to do |
+|---|---|
+| More than 10 | Confirm your contract's extension wording now; no urgency to negotiate yet, but know your position |
+| 5–10 | If an option exists, consider starting informal conversations with the landowner; if none exists, begin researching realistic terms for a fresh negotiation |
+| 2–5 | Actively negotiate extension or a fresh term now; this is not too early |
+| Under 2 | Treat this as urgent — negotiate immediately, and in parallel start evaluating a sale of your remaining interest as a backup |
+
+## How we advise owners we work with
+
+For villa owners we manage, we flag lease terms and extension provisions as part of the ongoing relationship, not just at the point of purchase, because we see firsthand how much better extension conversations go when they start early rather than under pressure. If you own a leasehold villa anywhere in Bali, not just one we manage, it's worth checking your contract's extension clause today rather than waiting for a reminder.
+
 ## What to do next
 
 Extending a Bali lease is either a contractual right you can plan around, or a negotiation you need to start early and treat seriously, and knowing which situation you are in is the first step. Review your existing lease contract, or a lease you are considering buying into, specifically for its extension terms before assuming anything.

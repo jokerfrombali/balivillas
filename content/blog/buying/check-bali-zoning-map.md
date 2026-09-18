@@ -48,6 +48,28 @@ A PKKPR confirms whether your intended use is compatible with the plot's zoning,
 4. If the zoning does not match, treat any promise of a future change as speculative, not a basis for the purchase price
 5. Only proceed once zoning compatibility is confirmed in writing, not verbally
 
+## What goes wrong when buyers skip this step
+
+We have seen three patterns repeat often enough to be worth naming. First, a buyer relies on an agent's assurance that "everything here is villa land" because neighbouring plots already have villas on them; neighbouring land use tells you nothing about a specific plot's own zoning designation, and two adjoining plots can carry different classifications. Second, a buyer checks zoning against the address or a rough map pin rather than the certificate's exact coordinates, gets a result that looks fine, then discovers after purchase that the actual surveyed boundary sits partly in a different zone. Third, a buyer accepts a PKKPR that was issued for a different use than the one they intend, for example agricultural or general residential rather than tourism accommodation, and assumes it still covers a villa rental business; it does not, and the mismatch only surfaces when the building permit application is rejected months later.
+
+Each of these is avoidable with the same fix: insist on the check being run against the certificate's exact coordinates, for the specific use you intend, by someone who reads Indonesian zoning classifications for a living. It costs time and a professional's fee up front. It is far cheaper than an unbuildable plot.
+
+## What we check in practice before we recommend a villa
+
+As the team managing and selling villas ourselves, every property we list has already been through this process, and we keep the paperwork on file rather than a verbal summary. When we assess a new villa for our own portfolio or for a listing, we ask the seller for the certificate and PKKPR documentation before we do anything else, not after a buyer expresses interest. If a plot's zoning history is unclear, or a PKKPR was issued for a different use than tourism rental, we flag it rather than paper over it. That is also why our [villas for sale](/villas-for-sale/) listings come with rental history and documents attached: a buyer working with us is not starting the zoning check from zero.
+
+If you are looking at a plot or villa outside our own listings, ask the seller directly for the PKKPR reference number and the certificate coordinates, and have your own notary verify both independently. A seller who resists sharing either is telling you something worth listening to.
+
+## If the zoning doesn't match: your realistic options
+
+When a PKKPR check comes back showing your intended use is not compatible with the plot's current zoning, you generally have three paths, and none of them should be decided on the spot.
+
+- **Walk away.** This is the right call when the mismatch is fundamental, for example agricultural land you intended to build a rental villa on, and the seller has no credible, documented path to a zoning change already in progress.
+- **Negotiate the price down to reflect the risk and delay.** Applicable when a rezoning process is realistically achievable but not yet complete; the discount should reflect both the cost of pursuing it and the chance it fails.
+- **Proceed only if a compatible use still works for you.** Sometimes the zoning supports a different, still viable use, for example general residential rather than short-term tourism rental; decide honestly whether that changes your plans before you commit.
+
+What we would not recommend, in any of these cases, is proceeding on a seller's promise that a rezoning "will definitely go through." Rezoning timelines and outcomes are not within a seller's control, and a purchase price should never be built on that assumption.
+
 ## How this fits into wider due diligence
 
 Zoning is one part of a fuller due diligence process that should also cover the land certificate type and any existing permits. Our [Bali property due diligence checklist](/blog/buying/bali-property-due-diligence-checklist/) covers the full picture, and our guide on [Bali land certificate types](/blog/buying/bali-land-certificate-types/) explains the certificate side specifically, since zoning and certificate type are related but separate checks. For a broader explanation of how Bali's zoning system works generally, rather than the plot-specific checking process covered here, see our companion guide on [Bali zoning explained](/blog/buying/bali-zoning-explained/).

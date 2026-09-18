@@ -56,6 +56,22 @@ Rental income in Indonesia is subject to tax, and the applicable rate and any re
 
 When we're asked to estimate what a villa could realistically earn under management, we start from comparable villas we already manage in the same area, size and standard, rather than a generic percentage. That's a more honest starting point than a market-wide yield figure, because two 3-bedroom pool villas five minutes apart can perform very differently depending on condition, presentation and how actively the calendar is managed — see [how to increase villa occupancy in Bali](/blog/owners/increase-villa-occupancy-bali/) for the levers that explain most of that gap.
 
+## A worked example: two villas, same headline yield
+
+Villa A costs less to buy and generates modest but steady income; Villa B costs considerably more but sits in an area with stronger, more consistent demand, and both are quoted at a similar gross yield by their respective agents. On the surface they look equivalent. Once you net out costs, the picture usually changes: Villa B's higher absolute income may support a management commission and staffing structure more efficiently (fixed costs like a licensing renewal or a maintenance contract matter less as a share of a bigger income base), while Villa A's modest income has to absorb the same fixed costs from a smaller base, which can pull its net yield down further than the headline gross figure suggested.
+
+This is why comparing net yield, and the absolute numbers behind it, matters more than comparing two percentages side by side. A lower gross yield on a more expensive, higher-demand property can still be the financially stronger choice once real costs and growth trajectory are factored in.
+
+## A simple checklist for testing any yield claim
+
+1. Ask for 12 months of actual booked nights for the specific property, not a projected occupancy percentage
+2. Confirm whether the nightly rate used in the calculation is a realistic year-round average or a high-season figure
+3. Get the full list of deductions used to go from gross to net, not just a management commission line
+4. Compare net yield and absolute net income, not just the headline gross percentage
+5. Check whether the villa's licensing and tax position is current, since a compliance gap is a cost that rarely appears in a yield figure but can affect both income and resale
+
+Working through this checklist before accepting any quoted yield is the single most useful habit for evaluating a rental villa purchase or reassessing one you already own.
+
 ## What to do next
 
 Treat any gross yield figure as a starting point, ask for the occupancy and rate assumptions behind it, and always compare net numbers once realistic deductions are applied.

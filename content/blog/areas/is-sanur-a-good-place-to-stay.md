@@ -54,6 +54,26 @@ Sanur is one of the more walkable areas in Bali thanks to its beachfront path, b
 
 Sanur rents vary with pool size, bedroom count, proximity to the beach path and season, similar to elsewhere in Bali. As an indicative range, expect Sanur to sit at or slightly below Canggu's more central listings, reflecting the calmer, more residential character of the area. Our [villas in Sanur](/villas/sanur/) range from 2-bedroom pool townhouses to a 4-bedroom family villa near Mertasari Beach; for the full comparison across areas, see our [villa prices by area](/blog/renting/bali-villa-prices-by-area/) guide.
 
+## A simple test to check the answer applies to you
+
+"Is Sanur a good place to stay" only has one honest answer once you weigh it against your specific trip, so run through this short test rather than taking a general "yes" at face value.
+
+Picture your ideal evening on this trip. If it involves a beach club, live music or a bar crawl, Sanur will disappoint you, its evenings are dinner-and-early-night, not nightlife. If it involves a quiet walk, a good meal and an early start the next day, Sanur delivers exactly that. Next, picture your ideal midday. If it's an active day of surfing or exploring several different spots, Sanur's calm water and flat layout will feel slow; if it's a swim, some shade and time by the pool, it fits well. Finally, consider who you're travelling with. Sanur consistently scores well for families, older travellers and anyone prioritising rest, and consistently scores lower for groups whose trip is built around going out.
+
+If two or three of these point toward calm and rest, the general "yes" applies directly to you. If they point toward activity and nightlife, treat the "yes" as answering a different question than the one you're actually asking, and look at Canggu or Seminyak instead.
+
+## Where guests get this decision wrong
+
+The most common mistake is booking Sanur off a "best areas in Bali" list without checking whether the list-writer's priorities match your own. A generic list often ranks Sanur highly for its calm water and walkability, both genuinely true, without mentioning that these same qualities mean a quiet evening scene, which disappoints a guest expecting more going on after dark.
+
+The second mistake is underestimating how spread out Sanur is for anyone without a scooter or driver. The beachfront path itself is walkable, but supermarkets, some restaurants and day-trip departure points sit further back, and guests who assume everything is within a short stroll sometimes find themselves relying on Grab more than expected in the first day or two.
+
+The third is deciding based only on the beach, without checking villa-specific factors like proximity to the path, pool size for a family, or whether the villa itself has a workspace if remote work is part of the plan. The area fits the trip in general; the specific villa still needs to fit the details.
+
+## What we check before confirming Sanur is the right call
+
+Before recommending a specific villa, we usually ask what a typical evening looks like for the group, whether the trip is built around one or two big activities or a slower daily rhythm, and whether a day trip to the Nusa Islands is likely, since that affects how much proximity to the harbour matters. These few questions usually confirm quickly whether the general "yes" for Sanur holds for that specific traveller.
+
 ## What to do next
 
 If calm water, walkability and quiet evenings matter more than nightlife, Sanur is a good place to stay in Bali for your trip. If you are still deciding specifically with children in mind, our [Sanur for families](/blog/areas/is-sanur-good-for-families/) guide goes deeper into that question.
