@@ -84,6 +84,10 @@ Because most of the villas we manage belong to owners who don't live in Bali, ou
 
 We also flag any decision that genuinely needs your input — an expense above an agreed threshold, a change to pricing strategy, a staffing decision — rather than deciding for you and reporting it after the fact. Overseas ownership works when you're kept in the loop on what matters and shielded from what doesn't, and getting that balance wrong in either direction is usually what makes owners feel disconnected from their own villa.
 
+## Tools that make remote oversight practical
+
+A handful of simple tools go a long way toward making overseas ownership feel manageable rather than anxious: a shared spreadsheet or portal for booking and financial data you can check on your own schedule, a messaging channel reserved specifically for anything genuinely urgent so it doesn't get lost among routine updates, and video calls scheduled around your time zone rather than assumed to happen whenever convenient locally. None of this is complicated, but it needs to be set up deliberately rather than left to develop informally, since informal arrangements tend to break down exactly when something goes wrong and you need them most.
+
 ## What to do next
 
 Managing a Bali villa from overseas works reliably once someone local can act on your behalf for anything requiring physical presence, paired with clear remote reporting for everything else.

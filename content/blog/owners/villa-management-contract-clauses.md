@@ -72,6 +72,20 @@ A few clauses don't fit neatly into the five above but are worth a specific chec
 
 Compare the written contract against what was verbally promised during the sales conversation. If a manager mentioned faster response times, particular marketing channels, or a specific reporting cadence verbally but the contract doesn't reflect it, ask for it to be added in writing before signing. A verbal promise not written into the contract generally isn't enforceable later, however sincerely it was made.
 
+## A worked example of a clause that looks fine but isn't
+
+Take a commission clause that reads: "15% commission on booking revenue, payable monthly." On its face this looks specific. It is not. Booking revenue could mean gross value before OTA commission and payment processing fees, or net after them, and the difference between the two bases can be several percentage points of real money on every booking. "Payable monthly" does not say relative to what: the booking date, the checkout date, or the date guest funds actually clear. A contract with this level of ambiguity should be sent back for clarification before signing, not interpreted optimistically.
+
+The fix is simple: ask for the clause to be rewritten with a worked example using a realistic booking, showing the gross value, what is deducted and in what order, and the exact date the resulting payout lands in your account. If a company is unwilling to make this concrete in writing, treat that reluctance as information.
+
+## What we do in our own contracts
+
+Our own villa management agreements are built around the same five clauses this guide walks through, written to be specific rather than aspirational. Commission is a single percentage on actual bookings, with no separate fixed monthly fee. Expenses above an agreed threshold are pre-approved before we spend, not invoiced after the fact. Owners can block their own dates without losing that flexibility to a fee or lengthy notice requirement. Exit terms are clear rather than designed to make leaving difficult. We would rather an owner read our contract clause by clause against this guide, and ask us to clarify anything that reads as vague, than sign on trust alone.
+
+## Who should review the contract before you sign
+
+For a straightforward, well-scoped contract, a careful read using the checklist above is often enough. For anything unusual, a long minimum term, an unfamiliar fee structure, or clauses referencing jurisdiction and dispute resolution you don't fully follow, it is worth having a lawyer or notary review it before you sign, particularly if you are managing the relationship remotely and will not be able to easily renegotiate later.
+
 ## What to do next
 
 Reading a villa management contract in Bali clause by clause — scope, commission, expenses, reporting, exit terms — takes an hour well spent before you sign, and far less time than resolving a dispute over a clause that was left vague.

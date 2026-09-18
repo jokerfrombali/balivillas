@@ -72,6 +72,10 @@ This is why comparing net yield, and the absolute numbers behind it, matters mor
 
 Working through this checklist before accepting any quoted yield is the single most useful habit for evaluating a rental villa purchase or reassessing one you already own.
 
+## Why yield alone shouldn't be the only decision factor
+
+Yield is a useful comparison tool, but it's not the whole picture for most owners. Capital appreciation potential, personal use of the villa, ease of eventual resale, and how much active involvement you want in running it all matter alongside the percentage. A villa with a slightly lower net yield but stronger long-term appreciation potential, or one that suits your own holiday use well, can be the better choice even if a pure yield comparison would point elsewhere. Treat yield as one input into a broader decision, not the entire answer on its own.
+
 ## What to do next
 
 Treat any gross yield figure as a starting point, ask for the occupancy and rate assumptions behind it, and always compare net numbers once realistic deductions are applied.

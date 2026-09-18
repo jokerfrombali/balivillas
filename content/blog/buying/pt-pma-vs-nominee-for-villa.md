@@ -29,9 +29,17 @@ A PT PMA lets you set up and control a company that holds land under Hak Guna Ba
 | Setup cost | Incorporation, licensing, minimum capital | Lower upfront cost, but with unquantifiable risk |
 | Ongoing requirement | Annual compliance and reporting | Continued cooperation of the nominee |
 
+## What a genuinely apples-to-apples comparison looks like
+
+If you want to compare PT PMA and a nominee arrangement fairly, don't compare setup cost alone — compare the total cost of ownership over your realistic holding period, including the probability-weighted cost of a dispute under each structure. A PT PMA's compliance costs are predictable and budgetable. A nominee arrangement's risk is not priced in any invoice, but it is real, and it should be weighed as a cost even though no one will hand you a bill for it upfront.
+
 ## Why the cost difference is not the real comparison
 
 Nominee arrangements are sometimes chosen because they appear cheaper and faster than setting up a PT PMA, and on a pure setup-cost basis, that is often true. But the comparison is misleading, because a PT PMA gives you an enforceable legal position for that cost, while a nominee arrangement's lower cost buys you a structure with no reliable legal protection at all, which is not a discount on the same outcome, it is a different and considerably riskier outcome. Our full breakdown of nominee agreement risk covers exactly what has gone wrong for buyers who chose this route.
+
+## A note on timing this decision correctly
+
+Deciding between PT PMA and ruling out nominee entirely is best done before you've fallen for a specific villa, not after, since the pressure to make a purchase work with whatever structure is quickest can otherwise push a buyer toward the arrangement an agent finds easiest to offer rather than the one that's actually right for their situation. Settle the structure question in principle first, then shortlist properties.
 
 ## When PT PMA is worth setting up over a simpler structure
 

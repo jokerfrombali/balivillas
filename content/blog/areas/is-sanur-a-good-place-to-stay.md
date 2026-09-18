@@ -70,6 +70,10 @@ The second mistake is underestimating how spread out Sanur is for anyone without
 
 The third is deciding based only on the beach, without checking villa-specific factors like proximity to the path, pool size for a family, or whether the villa itself has a workspace if remote work is part of the plan. The area fits the trip in general; the specific villa still needs to fit the details.
 
+## A note on comparing Sanur to nearby alternatives
+
+If Sanur ticks most of your boxes but you're still curious what you'd be giving up, it's worth being specific rather than vague. You'd trade beach-club evenings and a dense restaurant scene for a longer, quieter dinner routine; you'd trade a wider spread of coworking spaces for a smaller but perfectly workable set of cafés with desks; and you'd trade being in the middle of a busy strip for streets that are genuinely calm after dark. None of these trade-offs are hidden costs, they're simply what "calm" means in practice, and naming them clearly tends to settle any lingering doubt faster than reading another ranked list.
+
 ## What we check before confirming Sanur is the right call
 
 Before recommending a specific villa, we usually ask what a typical evening looks like for the group, whether the trip is built around one or two big activities or a slower daily rhythm, and whether a day trip to the Nusa Islands is likely, since that affects how much proximity to the harbour matters. These few questions usually confirm quickly whether the general "yes" for Sanur holds for that specific traveller.

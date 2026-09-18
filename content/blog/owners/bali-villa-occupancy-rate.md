@@ -78,6 +78,10 @@ For the 20 villas under our management, we review pricing at least weekly agains
 
 This is also why we're cautious about quoting a single occupancy number to a prospective owner — the honest answer depends on the villa's area, size, price point and how actively it will be managed, and we'd rather walk through that specifically than hand over a figure that doesn't apply.
 
+## Tracking occupancy trends over time, not just a snapshot
+
+A single month's occupancy figure tells you less than a trend line does. Tracking occupancy month by month against the same month a year earlier, rather than against last month alone, filters out normal seasonal noise and makes a genuine shift — up or down — much easier to spot early. This is a habit worth building whether or not you use a manager, since it's the clearest early signal that something in pricing, presentation or the broader market has genuinely changed.
+
 ## What to do next
 
 Bali villa occupancy rate responds to specific, manageable levers — pricing, presentation, reviews, seasonality — rather than a fixed number every villa should expect to hit.

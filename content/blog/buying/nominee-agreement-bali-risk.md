@@ -36,6 +36,10 @@ If the relationship between the foreign buyer and the Indonesian nominee sours, 
 
 The typical protective paperwork in a nominee arrangement includes a loan agreement, a power of attorney, and sometimes a mortgage against the property in the foreign buyer's favour, structured to give practical control back to the foreigner. Indonesian courts have in various cases treated the underlying arrangement as an attempt to circumvent the foreign ownership restriction, which undermines the enforceability of the protective documents built around it. This is a structural legal risk, not a matter of finding a better-drafted contract.
 
+## Why the cost comparison against nominee is misleading
+
+A nominee structure is sometimes chosen because it looks cheaper than PT PMA and less restrictive than leasehold, but that comparison only holds if you value the outcomes equally, which you shouldn't. A leasehold contract or a PT PMA gives you an enforceable legal position for its cost; a nominee arrangement's lower apparent cost buys a position with no reliable enforcement at all. Comparing them on price alone, without weighing what each price actually secures, is how buyers talk themselves into the riskier option.
+
 ## The legitimate alternatives, and why they exist for this reason
 
 Leasehold (Hak Sewa), Hak Pakai, and a properly established PT PMA company all exist specifically as legal routes for foreign buyers, and each is enforceable in a way a nominee arrangement is not. Our guide on whether foreigners can buy a villa in Bali covers all three in full, and our PT PMA cost guide sets out what the company route actually involves if you want ownership control closer to what a nominee arrangement promises, without the legal exposure.
@@ -45,6 +49,10 @@ Leasehold (Hak Sewa), Hak Pakai, and a properly established PT PMA company all e
 - PT PMA gives you a company you control, holding land under HGB
 - All three are recognised structures that Indonesian courts will enforce as written
 - None of them require trusting an unrelated third party's continued goodwill
+
+## Why "it's worked for others" isn't reassurance
+
+Some buyers point to acquaintances who have used a nominee arrangement for years without incident as evidence it's safe. A structure without a dispute yet is not the same as a structure that would hold up if a dispute arose — the risk sits latent until the nominee's circumstances change, a family situation shifts, or a disagreement surfaces, at which point the private side agreement's weakness becomes apparent. Years of quiet operation say more about luck than about legal protection.
 
 ## How to spot a nominee arrangement being proposed
 

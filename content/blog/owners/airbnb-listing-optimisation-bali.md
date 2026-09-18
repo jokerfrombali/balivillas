@@ -59,6 +59,24 @@ A strong, consistent review history reinforces everything above, and a slipping 
 
 Airbnb shows a total price including cleaning fee and any service charges early in the search results, so a low nightly rate padded with a high cleaning fee can look misleading and cost clicks once guests see the real total. Structuring fees transparently, rather than minimising the headline rate artificially, tends to convert better over time even if the initial click-through looks slightly lower.
 
+## A worked example: fixing one listing step by step
+
+Take a 3-bedroom Umalas villa with steady but unremarkable bookings. Working through the checklist in order: the cover photo is an interior shot of the living room rather than the pool, so that's swapped first, since it's the single fastest fix with the most visible impact on click-through. The title reads "Beautiful Villa in Umalas" with no specifics, so it's rewritten to state bedroom count, the area and the villa's genuine differentiator (in this case, two dedicated workspaces). The amenities checklist turns out to be missing "washer" and "dedicated workspace," both of which the villa actually has — ticking those boxes alone can restore visibility in filtered searches the listing was previously excluded from entirely, regardless of how good the rest of the listing is.
+
+None of these fixes cost anything beyond time, and together they typically show up in enquiry volume within two to three weeks, which is roughly how long it takes for Airbnb's search ranking to reflect an improved listing and for enough search impressions to accumulate to judge the effect properly.
+
+## What we check first when a listing isn't converting
+
+When an owner asks us to look at why an Airbnb listing isn't performing, we run through amenities completeness and photo order before anything else, because they're the two most common, most overlooked gaps and the fastest to fix. Response rate and time come next, since a listing can look perfect and still underperform if messages sit unanswered for hours. Only once those are confirmed solid do we look at pricing or consider whether the property itself has a genuine positioning problem that content alone can't fix.
+
+## Revisiting a listing after it's already performing well
+
+Optimisation isn't a one-time project even for a listing that's already converting well. Guest expectations shift, comparable villas nearby update their own photos and pricing, and Airbnb periodically adjusts its search algorithm and amenity filters. Building a habit of revisiting photos, title and amenities roughly twice a year, rather than only when bookings visibly slow, keeps a well-performing listing from quietly drifting behind newer, better-presented competitors in the same search results, and it's far cheaper to do proactively than to diagnose after occupancy has already dipped.
+
+## A simple way to track whether optimisation is working
+
+After making changes, watch impressions and click-through rate in Airbnb's own host insights over the following few weeks, not just final bookings, since impressions and click-through respond faster than confirmed bookings and give an earlier read on whether a change is helping. A listing that's getting more views but not converting them points toward a pricing or content-detail issue rather than a visibility problem, while flat impressions after a photo or title change suggests the change hasn't yet been picked up by search, which is worth checking again after a couple more weeks before concluding it didn't work.
+
 ## What to do next
 
 Airbnb listing optimisation for a Bali villa is a repeatable checklist, not a one-off project — revisit photos, title and amenities roughly twice a year, and keep response time under control continuously.

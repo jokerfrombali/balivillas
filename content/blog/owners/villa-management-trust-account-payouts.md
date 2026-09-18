@@ -76,6 +76,10 @@ This is also why comparing payout timing across companies is worth doing before 
 
 We pay owners monthly on a fixed date, and our statements show the calculation connecting gross booking value, commission and any expenses to the net figure transferred — not just the final number. For owners paid to an overseas account, we disclose conversion handling upfront during onboarding rather than leaving it to be discovered on the first payout. If you want to see how this works before committing to anything, we're happy to walk through a real payout cycle in detail.
 
+## What a first payout cycle should confirm
+
+Your first payout under a new manager is worth treating as a test of the whole system, not just a welcome transfer. Check that the payout date matches what was promised during onboarding, that the amount reconciles exactly to the accompanying statement, and that any conversion or transfer fee was disclosed in advance rather than discovered as a surprise deduction. If the first cycle runs cleanly, later ones typically do too; if something's off in the first cycle, raise it immediately rather than assuming it will sort itself out by the second month. Keep a simple record of your own — payout date, gross figure, net figure — for at least the first six months, so you have a clear baseline to compare against if a later payout ever looks different from what you'd expect.
+
 ## What to do next
 
 Understanding how villa managers pay owners in Bali — payout timing, fund flow, currency handling — means fewer surprises once your villa is generating bookings and clearer accountability if something doesn't match.

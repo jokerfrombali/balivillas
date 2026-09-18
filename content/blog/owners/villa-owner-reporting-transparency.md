@@ -79,6 +79,12 @@ Our monthly reports break out every booking with its channel and dates, show the
 
 If you're an existing owner and want to see how your current reporting compares, or a prospective owner who wants to see the format before committing to anything, we're glad to walk through a real (anonymised) example.
 
+## Reporting standards to expect at each stage of the relationship
+
+At onboarding, expect a clear explanation of the report format before your first booking is even taken, not a vague promise that "you'll get a monthly report." Within the first three months, expect the report to actually match what was described, with any discrepancy explained rather than ignored. Beyond that, a mature reporting relationship should feel routine — you know what to expect each month, when to expect it, and how to raise a question if something looks off, without having to chase or re-explain what you're asking for each time.
+
+If a relationship that started with good reporting starts to slip — a late statement, a missing itemisation that used to be there — treat that drift as worth raising early rather than assuming it's a one-off, since a quiet decline in reporting standards is often the first visible sign of a broader change in how attentively the villa is being managed.
+
 ## What to do next
 
 Transparent villa owner reporting in Bali should let you trace every payout back to specific bookings, with commission and expenses itemised clearly enough to verify independently.

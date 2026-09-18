@@ -86,6 +86,10 @@ The most common mistake we see is an owner glancing at the net payout figure eac
 
 The fix costs a few minutes a month: run through the five-point routine above rather than just the final number, and raise anything that doesn't add up while it's a small discrepancy rather than a pattern spanning several statements.
 
+## Keeping your own records alongside the statement
+
+Even with a trustworthy manager, it's worth keeping your own simple record of each month's key figures — gross revenue, commission, net payout — separate from whatever your manager stores. This matters for two practical reasons: it gives you continuous records if you ever switch managers and need historical data that a departing company may be slow to hand over, and it makes year-over-year comparisons easier to run yourself rather than digging back through old statements each time you want to check a trend. A simple spreadsheet with one row per month is enough; it doesn't need to duplicate the full statement, just the figures you'd want on hand quickly.
+
 ## What to do next
 
 Reading a villa owner monthly statement properly in Bali means checking each section — bookings, gross revenue, commission, expenses, net payout — rather than only glancing at the final figure.

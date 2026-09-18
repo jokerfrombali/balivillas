@@ -62,6 +62,35 @@ Buying raw land per are and building versus buying a finished villa are two diff
 | What is the certificate status? | Affects both legal security and resale value |
 | How does it compare to genuinely similar nearby plots? | The only fair comparison, not an island-wide average |
 
+## What goes wrong when buyers compare land on price per are alone
+
+- **Comparing an off-grid plot to one with utilities already connected**, purely on price per are, without accounting for the real cost of bringing in power, water and drainage to the cheaper-looking option. That gap can be substantial and is easy to underestimate from a listing photo.
+- **Assuming road access is equivalent across two plots** because both are described as "5 minutes from the beach," when one sits on a paved through-road and the other requires a narrow walk-in track that limits construction vehicle access and later affects guest experience.
+- **Treating an attractive price per are on unclear-zoned land as a bargain**, without first confirming through a formal PKKPR check whether the zoning actually supports the intended use. Our guide on how to check Bali zoning covers that verification step in detail.
+- **Not accounting for certificate type and any encumbrances** already attached to the land, which can affect both what you are legally entitled to do with the plot and how straightforward a future resale will be.
+
+## A worked example
+
+Two plots in Umalas, each roughly the same size, are quoted at a similar price per are. Plot A sits on a paved lane, has electricity and water already connected, and has a confirmed PKKPR for tourism accommodation use. Plot B sits down an unpaved track, has no utility connection yet, and the seller has not applied for a PKKPR.
+
+On price per are alone, these look comparable. Once you add the realistic cost of bringing utilities to plot B, the time and uncertainty of the zoning check, and the practical difficulty of getting construction materials and later guests down an unpaved track, plot B is not actually the equivalent deal it appears to be at first glance. A buyer who only compares the headline per-are figure would miss this entirely.
+
+## A decision framework for comparing land listings
+
+1. Confirm zoning and PKKPR status first, since this determines whether the land can legally be used as you intend at all.
+2. Check road access and note whether it is suitable for construction vehicles, not just a car.
+3. Ask specifically whether electricity, water and drainage are connected, and if not, get a realistic estimate for bringing them in.
+4. Confirm the certificate type and whether any lease, easement or other right is already attached to the land.
+5. Only once these are equivalent, or the price accounts for the differences, treat price per are as a fair basis for comparison.
+
+## What we do in practice
+
+Most of our own villas were built on land we assessed against exactly this framework before committing: zoning and PKKPR status confirmed, access and utilities checked, certificate verified. When we talk to a buyer considering raw land rather than one of our [villas for sale](/villas-for-sale/), we walk through the same questions, because a low price per are that does not account for access, utilities and zoning is not the discount it looks like on paper. If a finished, already-permitted villa suits your goals better than managing a build from land upward, our current listings are a lower-risk starting point.
+
+## Who to involve before you commit
+
+Bring a notary or licensed land consultant in before you agree a price on raw land, not after. Ask them to confirm zoning and PKKPR status, check the certificate against local records, and give you a realistic estimate of any utility or access work needed. This costs time and a professional fee upfront, and it is far cheaper than discovering after purchase that a "good" price per are did not account for the real cost of making the land usable.
+
 ## What to do next
 
 Treat land price per are as one number in a larger evaluation, not the headline decision point. A lower price per are on land with poor access, unclear zoning or no utilities can end up costing more once those gaps are closed than a higher-priced, cleaner plot nearby.

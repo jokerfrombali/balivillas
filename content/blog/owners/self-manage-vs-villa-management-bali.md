@@ -73,6 +73,23 @@ Hiring a manager doesn't just add a fee — it removes a specific list of ongoin
 
 Some owners self-manage the marketing and booking side while hiring separate local help for housekeeping and maintenance, splitting the workload without going fully hands-off. This can work but splits accountability — if something goes wrong mid-stay, it's not always clear which arrangement should have caught it. It's a reasonable stepping stone for owners still deciding, rather than a permanent solution most settle on long-term.
 
+## A worked example of how the numbers actually compare
+
+Say a villa generates a certain level of gross booking revenue over a year. Self-managed, the owner's direct costs are staff wages, utilities, maintenance and marketing spend, with no management commission on top, but with the owner's own time absorbing guest communication, housekeeping coordination and pricing decisions. Under full management, the owner pays a commission on bookings but hands over guest support, housekeeping supervision, maintenance sourcing, pricing and monthly reporting.
+
+The fair comparison is not "self-management is free," because it is not: the owner's time has a real value, even if no invoice is issued for it, and a slow response to a maintenance issue or an underpriced high-season week has a real cost in guest satisfaction and lost revenue that does not show up as a line item. Owners who run this comparison honestly, valuing their own time realistically rather than at zero, often find the commission is closer to a fair trade than it first appears, particularly once occupancy and guest volume grow beyond a level that fits comfortably around another job or life overseas.
+
+## What goes wrong with self-management most often
+
+- **Underestimating response time expectations.** Guests messaging about an issue expect a reply within the hour in most cases, not by the next morning, and a pattern of slow responses shows up in reviews faster than owners expect.
+- **No backup plan for when the owner is unavailable.** A single point of failure, one person handling everything, breaks down the moment that person travels, gets sick, or is simply asleep in a different time zone from the guest.
+- **Licensing and tax compliance treated as a one-time task rather than ongoing.** Rules and requirements are periodically updated, and self-managing owners sometimes discover a gap only when it becomes a problem, not when it first changed.
+- **Pricing left static across seasons**, missing the demand-based adjustments a management company would make routinely, which quietly costs revenue without ever showing up as an obvious mistake.
+
+## What we do for owners who move from self-management to us
+
+Owners who come to us after self-managing usually describe the same turning point: a specific bad night, a guest issue they could not resolve fast enough, or simply the realisation that the time cost had grown past what they had budgeted for it. When we take over, we absorb the tasks in the comparison table above as a single service under one commission, with monthly reporting so the owner can see clearly what changed. We do not claim self-management is the wrong choice for everyone; for an owner who lives nearby and enjoys the hands-on role, it can work well for years. What we would ask any owner to do is run the honest self-assessment above before deciding, rather than assuming either path by default.
+
 ## What to do next
 
 Self managing a Bali villa vs villa management comes down to an honest read of your own availability and local presence, not a general rule about which is better. Run through the self-assessment above before deciding either way.

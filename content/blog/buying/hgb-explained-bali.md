@@ -44,9 +44,17 @@ HGB is issued for a fixed initial term with defined renewal periods, rather than
 - Ask whether the underlying land beneath the HGB has any encumbrances or disputes
 - Confirm what happens to the building if the HGB term is not renewed
 
+## How HGB term length compares across a typical villa's life
+
+A villa business built around a company-held HGB certificate is, in effect, planning around two overlapping timelines: the HGB term itself and the commercial life of the rental operation. A company that renews HGB reliably and keeps its own compliance current can, in principle, operate indefinitely across multiple renewal cycles, but each renewal is a discrete event requiring active management, not a formality that happens automatically in the background. Treat renewal planning as a standing item in the company's annual compliance calendar, not something to think about only as a deadline nears.
+
 ## HGB versus buying through leasehold or Hak Pakai directly
 
 For a buyer who does not need or want a company structure, leasehold or Hak Pakai will usually be simpler and cheaper to set up than forming a PT PMA to hold HGB. The company route makes sense mainly when you are running the villa as a registered rental business at some scale, want the liability separation a company provides, or are structuring a purchase alongside partners. Our guide comparing PT PMA against nominee agreements looks at the company route from a different angle, focused on why it is the legitimate alternative to arrangements that carry real legal risk.
+
+## How HGB term length shapes a company's own planning
+
+A company holding land under HGB should treat the certificate's term as a standing item in its own business planning, not a distant legal detail. As the term shortens, the same dynamics that affect leasehold villa pricing come into play for the company's own asset value, which matters if the company is ever sold, refinanced, or brought in new shareholders. Building renewal timing into the company's regular compliance calendar, well ahead of the deadline, avoids the term becoming a last-minute scramble.
 
 ## Buying a villa that is already held under HGB
 

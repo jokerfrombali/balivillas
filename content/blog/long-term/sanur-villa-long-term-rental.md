@@ -64,6 +64,10 @@ A second issue is underestimating how much the specific stretch of Sanur matters
 
 A third is not planning visa logistics early enough. Sanur's popularity with long-term tenants means demand for good long-stay villas is real; tenants who wait to sort their visa route before locking in a lease sometimes lose out on the villa they wanted while working through the paperwork. Start the visa conversation with a licensed agent in parallel with your villa search, not after.
 
+## A note on adjusting once you've settled in
+
+Even with careful planning upfront, some tenants find their needs shift after living in Sanur for a month or two, perhaps the villa turns out to be further from the beach path than expected, or a household grows and needs an extra bedroom. Tell us early rather than waiting out a lease that's no longer quite right; moving within our Sanur portfolio, or occasionally to another area entirely, is usually more manageable than tenants assume, particularly before a yearly commitment is locked in.
+
 ## What we check with long-stay tenants before recommending a Sanur villa
 
 We typically ask about family composition and ages, whether remote work with regular calls is part of the routine, how important walkability to the beach path is against budget, and whether the tenant is confident enough to go straight to a yearly lease or would rather start monthly and convert. These questions, more than a generic "Sanur is great for families" recommendation, are what point to the right specific villa in our Sanur portfolio.

@@ -63,6 +63,10 @@ After signing, the notary or a licensed land deed official (PPAT) registers the 
 
 If you are buying from outside Indonesia and cannot attend signing in person, power of attorney can cover most of this process; our guide on buying a villa remotely from abroad covers what that involves.
 
+## Why a rushed timeline is the enemy of a safe purchase
+
+Almost every serious problem in this sequence traces back to time pressure, real or perceived. A seller citing another interested buyer, a notary rushed to finish before a holiday, or a buyer's own eagerness to close before a return flight all push toward skipping or shortening a step that exists specifically to protect you. Build slack into your own timeline from the start, and treat any external pressure to compress it as a signal worth questioning rather than a reason to move faster.
+
 ## Common mistakes that derail a purchase
 
 The most frequent mistake is verifying the certificate only after an offer is accepted, which puts pressure to proceed even when something looks wrong. A close second is using the seller's recommended notary without independent review, and a third is paying a large deposit before a binding sale and purchase agreement exists, leaving no real recourse if the deal falls through.

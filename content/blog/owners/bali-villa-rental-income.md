@@ -71,6 +71,10 @@ Answering these for one specific property gives you something an island-wide ave
 
 The most common mistake is treating a marketing figure — "up to X% return" or "average villa income of Y" — as a floor rather than an aspirational ceiling built on an unstated best case. Owners who budget against that figure, then see genuine but lower income in year one, often wrongly conclude the villa or the manager is underperforming, when the real issue was an unrealistic starting expectation. This is also why we're deliberately cautious about quoting any income figure without seeing the specific villa, area and comparable evidence first — a number without that grounding does an owner more harm than no number at all.
 
+## How income potential changes over a villa's first few years
+
+A villa's income in its first year under new management or new ownership is rarely representative of its steady-state potential, since it typically takes several months to a year to build a review history, refine pricing against real booking pace, and establish a reliable direct-booking channel alongside OTA listings. Judging a villa's long-term potential purely on its first-year numbers, in either direction, tends to be misleading — a strong first year might reflect an unsustainable launch discount, while a modest one might simply reflect the normal ramp-up period rather than a structural problem with the property. Give a new villa or a newly managed one at least a full seasonal cycle, ideally closer to two years, before drawing firm conclusions about its steady-state income potential.
+
 ## What to do next
 
 How much you can earn renting a villa in Bali depends on specifics — location, size, management quality, seasonality — that a single published figure can't capture honestly. Judge a specific villa on its own comparable evidence, not an island-wide average.

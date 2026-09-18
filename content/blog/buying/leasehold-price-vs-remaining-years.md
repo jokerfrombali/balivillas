@@ -32,6 +32,10 @@ A villa does not lose value at a steady, even rate as each year passes. Buyers t
 | Short term, strong extension option | Moderate discount, buyer pool narrows to those valuing the extension |
 | Short term, no extension clause | Largest discount, narrowest buyer pool, mainly short-horizon buyers |
 
+## How rental income potential factors into the price question
+
+For buyers planning to rent out a leasehold villa, remaining term also affects the realistic rental income horizon, which in turn feeds back into how the purchase price should be judged. A villa with 10 years remaining might still command a reasonable purchase price if the buyer's plan is entirely about rental income over that decade rather than eventual resale, whereas the same term would be a weak proposition for a buyer prioritising long-term capital value. Be honest with yourself about which of these two goals is actually driving your purchase before you judge whether a specific price is fair.
+
 ## What to check before pricing a leasehold purchase
 
 - Confirm the exact remaining years on the actual contract, not a rounded marketing figure
@@ -39,6 +43,10 @@ A villa does not lose value at a steady, even rate as each year passes. Buyers t
 - Compare the asking price against similar properties with similar remaining terms, not just similar size and location
 - Consider your own intended holding period against the remaining term plus any extension
 - Factor in that a shorter remaining term may also mean a smaller pool of future buyers if you plan to resell
+
+## Why identical-looking villas can price very differently
+
+Two villas that look nearly identical in photos and floor plan can carry meaningfully different prices purely because of what sits behind the numbers on their certificates — one with a clear extension mechanism and a landowner known for renewing cooperatively, another with a vague clause and an uncertain relationship history. This is why a price comparison based on size, location and finish alone, without digging into the lease specifics, can lead you to the wrong conclusion about which listing is actually the better value.
 
 ## How this affects your own resale later
 

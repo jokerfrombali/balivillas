@@ -33,6 +33,10 @@ These ranges are indicative of what commonly appears in listings, not a standard
 
 The landowner's own preferences and plans for the land matter as much as market norms. Some landowners prefer shorter terms so they retain more control and flexibility over their land within their own lifetime; others are willing to grant longer terms for a higher upfront payment. This is genuinely a negotiation, and buyers who assume a "standard" term exists sometimes miss room to negotiate a longer or shorter period that better fits their actual plans.
 
+## Why some landowners prefer shorter terms
+
+It's worth understanding the landowner's side of this negotiation too. Some Indonesian landowners deliberately favour shorter lease terms, even at a lower total price, because it keeps their long-term options open — a shorter lease means the land returns to their control sooner, useful if they're uncertain about their own future plans or want flexibility for the next generation of the family. Understanding this motivation can help you negotiate more effectively: a landowner focused on retaining flexibility may respond better to a proposal with a shorter initial term and a clearly structured extension option than to a request for a much longer single term upfront.
+
 ## How to read a specific leasehold offer
 
 - Confirm the exact number of years stated in the draft contract, not a rounded figure from marketing material
@@ -40,6 +44,10 @@ The landowner's own preferences and plans for the land matter as much as market 
 - Ask whether an extension option is included, and if so, on what terms
 - Compare the term against your own intended holding period, not the market average
 - Get independent legal review of the actual contract before treating any number as final
+
+## Term length and how it's counted from
+
+One detail worth confirming explicitly: whether the stated term runs from the date you sign, or from an earlier date the landowner originally registered or intended, which can differ if the property changed hands or sat unused for a period before you bought it. A "30-year lease" that actually started counting five years ago before you ever saw the property is materially different from one starting fresh at your signature, and this detail is easy to miss in a summary but should be explicit in the contract itself.
 
 ## How term length interacts with price
 

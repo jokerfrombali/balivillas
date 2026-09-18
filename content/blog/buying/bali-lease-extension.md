@@ -27,9 +27,17 @@ If your lease includes an extension clause, it typically specifies the additiona
 | No extension clause | Fresh negotiation required at term end | Weaker, depends on landowner goodwill |
 | Extension mentioned but vague | Some obligation to negotiate, terms unclear | Moderate, worth clarifying now |
 
+## What a strong extension clause actually specifies
+
+Not all extension clauses offer the same protection. The strongest versions name the additional term precisely, set out a clear pricing formula (fixed figure, indexed to a specific benchmark, or tied to an independent valuation process both sides agree to in advance), specify the notice period and deadline for exercising the option, and confirm whether the right transfers to a future buyer of your lease. A clause that simply says the parties "may agree to extend" offers little more protection than having no clause at all, since it commits the landowner to nothing beyond a conversation.
+
 ## Why starting early matters
 
 Landowners are generally more open to agreeing extension terms well before a lease ends, when there is no pressure and the relationship is straightforward, than in the final months when the leaseholder's urgency becomes obvious and the negotiating position shifts against them. Starting the conversation years ahead, not months, gives you room to negotiate calmly and, if talks do not go well, time to plan alternatives such as selling your remaining interest.
+
+## How extension terms differ from a fresh purchase negotiation
+
+Negotiating an extension with an existing landowner relationship is a genuinely different conversation from negotiating a first-time lease purchase with a stranger. You have history, a track record as a tenant, and often a personal relationship that can work in your favour, but you also have less leverage than a fresh buyer who could simply walk away and buy elsewhere. Recognising which dynamic you're in helps calibrate expectations realistically rather than assuming either full goodwill or a purely transactional negotiation.
 
 ## What to check in your existing lease right now
 

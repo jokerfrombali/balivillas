@@ -68,6 +68,23 @@ Ask for this in writing before the notice period ends, not after — it's far ea
 
 Where you have flexibility, time the actual handover date for a natural gap in your booking calendar rather than mid-peak-season. A switch during a quiet stretch gives the new manager time to learn the villa and update listings without live guest pressure complicating the transition. If your calendar doesn't allow that flexibility, at minimum brief the new manager thoroughly on any imminent check-ins before they take over communication.
 
+## What goes wrong when a switch is rushed
+
+- **Giving notice before the new manager is confirmed**, on the assumption a signed agreement will follow quickly. Owners who do this sometimes end up managing bookings themselves for a few unplanned weeks while negotiations with a new company drag on.
+- **Assuming listing accounts transfer automatically.** Where an outgoing manager's company owns the Airbnb or Booking.com listing, reviews and account history can stay with them, leaving the new manager building visibility from close to zero. Confirm ownership before you commit to a switch, not after.
+- **Overlooking a licence registered in the outgoing manager's name.** If a tourism licence or business registration was set up under the previous company rather than the owner's own entity, operating during the gap while it is re-registered is a real compliance risk, not a formality to sort out later.
+- **Losing staff who knew the villa's quirks**, because nobody discussed continuity until the switch date arrived and staff assumed they were being let go rather than transitioned.
+
+## What we do when an owner switches to us
+
+When an owner comes to us mid-contract with another company, we start with their existing termination clause, not our own onboarding timeline, because the notice period and handover obligations in that contract set the real schedule. We ask for a signed agreement with us to be in place before the owner gives notice to their outgoing manager, so there is no gap where nobody is responsible for the calendar. Where possible, we time the actual handover for a quieter stretch in the booking calendar, and we brief ourselves thoroughly on any imminent check-ins before taking over guest communication if a quiet gap is not available.
+
+On licensing and listing accounts specifically, we ask the owner to confirm ownership structure early, since this is the detail most likely to cause a problem if left until the switch date. If a re-registration is needed, we would rather flag that timeline honestly upfront than let an owner discover a compliance gap partway through a transition.
+
+## A short pre-switch checklist
+
+Before you give notice, confirm in writing: the exact notice period and any conditions attached to it, who owns the listing accounts and licence registration, whether staff will transition with the villa, and the exact date access changes hands. Missing any one of these is the most common reason a switch that looked simple on paper turns messy in practice.
+
 ## What to do next
 
 Switching villa management company in Bali is straightforward when the sequence is followed: confirm notice terms, line up the new manager first, agree who handles transition bookings, and get a documented handover before access changes hands.

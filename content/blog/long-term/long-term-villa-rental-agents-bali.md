@@ -75,6 +75,10 @@ None of these are inevitable with a good agent — plenty operate well — but t
 
 Because we run all 20 of our own villas rather than listing on behalf of other owners, there's no agent fee, no owner-agent-tenant chain, and no handoff if a maintenance issue comes up during your stay — the same team that quoted you the rate also handles housekeeping, repairs and your day-to-day questions. That doesn't make an agent pointless for a broad market scan, but once you've identified a villa of ours you're interested in, going direct through [WhatsApp](/property-rental/) removes a step, not adds one.
 
+## Comparing costs realistically over a full lease term
+
+Agent fees rarely look large as a single line item, but it's worth comparing them against a full monthly or yearly commitment rather than in isolation. A fee equivalent to even half a month's rent on a yearly lease is a meaningful percentage of what you'll actually spend once utilities, staff and other running costs are added, and it's money that a direct booking with a self-managing company like ours simply doesn't require. Put the number in front of yourself in absolute terms, not just as a percentage, before deciding it's worth paying for the convenience.
+
 ## A hybrid approach many long-stayers use
 
 A pattern that works well in practice: use an agent's broad reach at the very start of your search to understand what's available in your target area and budget, then, once you've narrowed down to a specific villa or a specific company that self-manages its properties, contact them directly for the actual booking. This combines the search breadth of an agent with the cost and speed advantage of a direct booking, without committing to either approach exclusively for the whole process.

@@ -62,6 +62,29 @@ Holding costs vary somewhat by area, driven mainly by land and building size, pr
 | Is the villa currently insured, and at what level? | Confirms whether you need to arrange new cover |
 | What would a management company's fee look like for this villa? | Lets you compare self-management versus outsourcing |
 
+## What goes wrong when buyers underestimate this
+
+- **Budgeting maintenance as an occasional expense rather than a routine one.** A villa that gets a "big tidy-up" once a year, rather than continuous upkeep, tends to need more expensive fixes more often, because small problems (a leaking pipe, early rust on a railing) are caught late.
+- **Hiring staff directly without a clear plan for oversight while living abroad.** Direct staffing gives control, but only if someone is actually checking in regularly; an absent owner with no local oversight structure often ends up with a villa that looks fine in photos and is quietly deteriorating.
+- **Treating a management company's fee as pure cost, without weighing it against what direct staffing and oversight would actually cost in time and risk.** The fair comparison is total cost and outcome, not just the headline percentage.
+- **Not budgeting for large, infrequent costs** such as repainting, pool resurfacing or roof work, which do not happen every year but are certain to happen eventually, and can be a shock if there is no reserve set aside.
+
+## A decision framework: self-staff or use a management company
+
+| Factor | Leans toward direct staffing | Leans toward a management company |
+|---|---|---|
+| You live in Bali or visit very frequently | Yes | Less critical either way |
+| You want to actively manage guest bookings and marketing yourself | Yes | No, this is exactly what a management fee covers |
+| You value predictable, bundled costs over granular control | No | Yes |
+| The villa will sit empty for long stretches without you nearby | No, oversight risk is high | Yes |
+| You want monthly reporting and a single point of accountability | Depends on your own systems | Yes, typically built into the service |
+
+Neither option is universally right; it depends on how much time, distance and interest you personally have in the day-to-day running of the property.
+
+## What we do in practice
+
+Because we manage 20 villas ourselves across Sanur, Canggu, Umalas and Ungasan, holding costs are not theoretical for us, they are what we track monthly for every property in our care: staff wages, utilities, routine maintenance and the periodic larger jobs. When we talk to an owner considering our [villa management](/villa-management/) service, we walk through what their specific villa currently costs to run and what our fee structure would look like against that baseline, rather than quoting a generic number. If you are buying a villa and want a realistic sense of what it will cost to hold before you commit, ask us, even if the property is not one of ours; we can usually give a grounded estimate based on comparable villas we already manage.
+
 ## What to do next
 
 Do not evaluate a villa purchase on price alone; ask for a realistic holding cost picture before you commit, including current PBB, staffing needs and maintenance condition. A villa that costs less to buy but needs heavy ongoing investment can end up costing more over several years than a slightly pricier, better-maintained one.

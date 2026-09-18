@@ -46,6 +46,10 @@ Most disputes we're aware of in the broader market come down to one of two thing
 
 Deposit terms sometimes scale with the length and structure of the agreement — a yearly lease paid substantially upfront may have different deposit conventions than a month-to-month arrangement. If you're paying a large amount upfront for a yearly lease, it's worth understanding how the deposit interacts with that payment specifically; our guide on [paying a year upfront](/blog/long-term/paying-year-upfront-villa-bali/) covers this alongside deposit considerations.
 
+## What a fair deposit clause looks like in practice
+
+A clause that protects both sides tends to read something like this: a stated amount, a specific list of what can be deducted (documented damage beyond normal wear, unpaid bills, missing inventory), a joint checkout inspection within a set number of days of move-out, and a return timeline measured in a fixed number of days after that inspection, with any deduction itemised in writing. If a draft contract you're offered is missing any of these four elements, ask for it to be added before you sign, rather than assuming good faith will fill the gap later.
+
 ## Deposit versus advance rent: don't confuse the two
 
 Some agreements bundle an advance rent payment with the deposit in a single upfront figure, which can make it unclear later how much is actually refundable versus how much was simply rent paid ahead of schedule. Ask for these two figures to be broken out separately in the contract — the deposit amount and the advance rent amount — so there's no ambiguity at the end of the lease about what you're entitled to have returned.

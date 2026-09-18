@@ -39,6 +39,10 @@ A good notary will register or at least formally notarise the lease deed in a wa
 | Eligibility | No specific conditions for foreign buyers | Conditions apply, confirm current rules |
 | Protection source | Contract terms and enforceability | Land office registration |
 
+## Why the notary you use for a lease matters
+
+Because Hak Sewa relies entirely on contract quality rather than a registered title, the notary drafting or reviewing your lease is doing more of the actual protective work than in a Hak Pakai or Hak Milik transaction. A notary who routinely handles foreign-buyer leases will know the clauses that most often cause disputes later and draft around them proactively; a notary less familiar with this specific type of contract may produce something technically valid but weaker in practice. Ask any notary you're considering how many similar lease contracts they've handled, not just whether they're licensed.
+
 ## Negotiating the term and extension option
 
 The single most negotiated point in a Hak Sewa contract is usually the term and whether an extension is built in as a right rather than left as a hope. A lease with a clear, pre-agreed extension mechanism, including how the extension price is calculated, is worth more than one of the same headline length without that clause, because it removes uncertainty at the point you would otherwise be renegotiating from a weaker position. Our guide on extending a Bali lease covers how this typically plays out in practice.

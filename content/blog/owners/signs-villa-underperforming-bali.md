@@ -64,6 +64,10 @@ Run both comparisons before concluding anything. If your villa is down year-over
 
 When an owner brings us a villa they suspect is underperforming, we don't start with reassurance or with an immediate pricing change — we start with the same year-over-year and nearby-comparable comparison described above, because acting before confirming the actual cause usually wastes the first round of fixes on the wrong problem. Once the comparison confirms a real gap, we work through pricing history, listing freshness and review trend in that order, since they're the three most common and most fixable causes we see across the villas we manage. If the honest conclusion is a structural issue with the property itself, we say so directly rather than promising a marketing fix will solve something it can't.
 
+## Setting a realistic timeline for a turnaround
+
+Once a genuine cause is identified and a fix applied — a pricing correction, a photo refresh, a review-response campaign — give it a fair window before judging whether it worked. Pricing changes typically show up in booking pace within two to four weeks; listing content changes take a little longer since they depend on new search impressions accumulating; a review trend takes the longest to shift, often a full season, since it depends on new stays actually happening and new reviews being left. Judging a fix too early, based on a week or two of data, is one of the more common reasons owners conclude something "didn't work" when it simply hadn't had time to.
+
 ## What to do next
 
 Confirm underperformance with a real comparison — same weeks last year, similar villas nearby — before assuming the market alone explains it. Then work through pricing, listing quality and review patterns in that order, since they're the levers most within your control.

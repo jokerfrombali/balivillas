@@ -52,6 +52,24 @@ Every additional platform is another place a stale calendar can cause a double b
 
 For the villas in our own portfolio, we list primarily on our direct site plus Airbnb and Booking.com, and add Agoda or Expedia selectively where a specific villa's guest mix and calendar gaps make it worthwhile, rather than as a blanket rule across all 20 properties. That's a judgement call based on each villa's performance data, not a platform we push by default.
 
+## A worked example: deciding whether to add a third platform
+
+Say a 2-bedroom villa in Ungasan is booked solidly through Airbnb and Booking.com in high season but consistently has gaps in shoulder months, and a review of past guest origin shows almost no bookings from Asian source markets despite the villa's location being a reasonable fit for shorter regional trips. That's a concrete, evidence-based reason to test Agoda specifically, rather than adding it as a default step for every villa regardless of its actual booking pattern.
+
+Compare that with a villa that's already booked close to capacity across its main two platforms with minimal calendar gaps — for that property, the incremental volume Agoda or Expedia might add is unlikely to be worth the setup time and the extra calendar-sync risk, at least until demand on the main platforms softens or the owner specifically wants to diversify guest source markets for other reasons.
+
+## A simple test before committing to a new platform
+
+Rather than listing on Agoda or Expedia indefinitely on a hunch, treat the first few months as a deliberate test: track bookings, guest origin and total nights specifically attributable to the new platform, and compare the admin time spent maintaining it against what it actually contributed. If a platform isn't producing meaningful bookings after a fair trial period, and it's adding calendar-sync risk without a clear return, it's reasonable to drop it and refocus effort on the platforms that are already working.
+
+## What a fair trial period actually looks like
+
+Give a new platform at least a full season, not just a few weeks, before judging its contribution, since both Agoda and Expedia can have a genuine onboarding or verification lag before a listing reaches full search visibility. Track bookings attributable specifically to that platform against the admin time spent maintaining its listing and calendar sync, and compare that against what the same time invested in optimising your existing Airbnb or Booking.com listing might have returned instead. This comparison, more than a gut feeling about whether the new platform "seems to be working," is what should decide whether to keep it, adjust it, or drop it. Note the actual results somewhere, even briefly, so the decision is based on evidence the next time you revisit it rather than a fading impression.
+
+## Who ends up benefiting most from these two platforms
+
+In our experience, villas that benefit most from Agoda and Expedia tend to share a few traits: they're already performing well on Airbnb and Booking.com, they sit in an area with genuine appeal to regional Asian travellers or bundled-travel bookers, and the owner or manager has enough operational capacity to handle a third or fourth listing without letting calendar accuracy slip anywhere. A villa missing any of those three tends to see limited return for the added setup and ongoing maintenance effort, which is why we treat these platforms as a considered addition rather than a default step for every property.
+
 ## What to do next
 
 Treat Agoda and Expedia as secondary channels to add once your primary platforms are performing, not as a first step. The reach they add is real but narrower, and the setup and sync overhead needs to be worth it for your specific villa.

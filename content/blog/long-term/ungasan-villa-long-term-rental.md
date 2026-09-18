@@ -49,6 +49,30 @@ Life in Ungasan moves around the clifftop rather than a café strip — a drive 
 - Transport plan for daily life — a scooter, driver or car is close to essential here, unlike Sanur.
 - Current visa rules relevant to your stay length, checked with a licensed visa agent rather than assumed (as of 2026, verify).
 
+## A framework for deciding if Ungasan fits a long-term stay
+
+Three questions help settle whether Ungasan is the right long-term base rather than a closer-in area. First, are you genuinely comfortable arranging transport for every part of daily life, including meals, for the length of a whole lease, not just a holiday week? This is the single biggest factor in whether tenants stay happy here long term; those who embrace it, treating a drive to a restaurant as part of the appeal rather than a chore, tend to do well, while those who quietly resent it tend to move on sooner than planned. Second, does your household fit comfortably in a 1- or 2-bedroom villa? Our Ungasan stock is intentionally compact and couple- or small-household-oriented, and a larger family will usually be better served by our Sanur or Canggu portfolio instead. Third, is quiet and scenery genuinely the priority over community and convenience? Ungasan has the least in the way of a visible long-stay social scene of our four areas, which some tenants find restful and others find isolating over months rather than weeks.
+
+## What goes wrong for long-term tenants who choose Ungasan without checking this
+
+The most common issue is tenants underestimating how much daily transport planning adds up over a long stay. A single scooter ride to dinner is a minor inconvenience on holiday; doing it for every meal, errand and social plan for months is a genuinely different commitment, and tenants who haven't tested this rhythm before committing to a long lease sometimes find it wears on them more than expected.
+
+A second issue is choosing Ungasan primarily for the view without checking the villa's actual size against household needs. A stunning clifftop outlook doesn't compensate for a bedroom count that's too tight for the number of people actually living there long term; check the layout carefully against your household, not just the photos.
+
+A third is underestimating how quiet the evenings genuinely are. Some long-stay tenants find this exactly what they wanted after a busier period elsewhere; others, particularly those used to a more social daily rhythm, find the isolation harder to adjust to than expected and end up spending more on transport into Uluwatu or Jimbaran than they'd budgeted, just to have somewhere to go.
+
+## A note on trying before committing to a full year
+
+If you're not sure whether Ungasan's transport-dependent rhythm will suit you long term, it's worth starting with a monthly arrangement rather than signing a yearly lease straight away, even though the monthly rate is higher. A month living the actual routine, driving to dinner, planning beach trips in advance, tells you far more than a short visit or a written description ever will, and converting to yearly once you're confident is usually straightforward.
+
+## A note on the ongoing cost of transport
+
+Beyond the villa rent itself, it's worth budgeting realistically for the transport side of living in Ungasan long term, whether that's a scooter rental, fuel, or a regular driver for evenings out. This isn't part of the villa quote and varies by how much you're out and about, but tenants who plan for it as a genuine monthly line item, rather than an occasional expense, tend to find the area's overall cost picture more predictable than those who don't.
+
+## What we check before recommending a long-term Ungasan villa
+
+We typically ask whether the tenant has already spent time in a similarly transport-dependent area and knows they're comfortable with it, how many people the villa needs to comfortably house long term, and whether quiet and scenery are a genuine priority or a secondary consideration behind convenience. These questions help confirm whether Ungasan, rather than a closer-in area, is the right long-term choice.
+
 ## What to do next
 
 Ungasan rewards long-term tenants who prioritise quiet, views and proximity to the Bukit's dramatic beaches over daily walkability, and its teak-built villa style is distinct from anywhere else we manage. Just plan your transport before you commit.

@@ -73,6 +73,10 @@ A second pattern is underestimating how much traffic actually shapes a Canggu st
 
 A third is assuming Sanur will be "boring" without actually defining what that means for the specific trip. Guests who need genuine rest, recovering from a demanding work period, travelling with a new baby, managing jet lag, often find Sanur's quiet is exactly what makes the trip work, not a compromise they're settling for.
 
+## A note for guests who genuinely want both
+
+Some trips don't have a single clear priority, and that's a reasonable position, not indecision. If a chunk of the group wants Canggu's energy and another chunk wants Sanur's calm, splitting a longer stay between the two, rather than forcing a single compromise area, often serves everyone better than picking a middle-ground area that fully satisfies neither preference. We coordinate split stays across our own villas in both areas reasonably often, and it tends to work best when each leg gets at least three or four nights, enough to actually settle into that area's pace rather than just passing through it.
+
 ## What we check before recommending one over the other
 
 Before pointing a guest toward Sanur or Canggu specifically, we usually ask about group composition, how the group wants to spend a typical evening, whether remote work with regular calls is part of the plan, and whether this is a short trip where either area works or a longer stay where the daily pace really matters. These questions, more than the area's general reputation, are what determine the right answer for that specific trip.

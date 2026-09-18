@@ -32,6 +32,10 @@ Some contracts specify that the building reverts to the landowner along with the
 
 As a lease term shortens, the villa's resale value typically declines, since a buyer purchasing your remaining interest is buying fewer years and, depending on the contract, less certainty about what happens at the end. Our guide on how leasehold years affect villa price covers how this decline typically plays out and what drives it. Understanding your specific expiry clause helps you price a resale realistically rather than relying on assumptions about what "should" happen.
 
+## Why translation quality matters for this specific clause
+
+Expiry and reversion clauses are exactly the kind of dense legal language where a loose or informal translation can quietly change the practical meaning without either party noticing at signing. If your only understanding of this clause comes from a verbal summary or a rough translation rather than a professional legal translation of the actual document, get that resolved now, since it's one of the clauses where a misunderstanding has the highest cost.
+
 ## Checking your own lease now
 
 - Locate the original lease contract and find the clause covering the end of term
@@ -43,6 +47,10 @@ As a lease term shortens, the villa's resale value typically declines, since a b
 ## What to do if your lease has no extension option
 
 If your contract is silent on extension, you have two realistic paths: begin negotiating a fresh term with the landowner well ahead of expiry, covered in our guide on extending a Bali lease, or plan to sell your remaining interest to a buyer with a shorter investment horizon before the term runs out. Waiting until the final year to decide narrows both options considerably.
+
+## How expiry outcomes affect financing and inheritance planning
+
+An expiry clause that leaves the leaseholder with nothing at the end also affects anyone hoping to pass the villa on or lend against it. A lease with reversion and no compensation has limited value to leave to heirs once the term is largely used up, and lenders, where villa-secured financing is even available, will weigh remaining term and expiry terms heavily in any lending decision. If inheritance planning or financing matters to your situation, treat the expiry clause as directly relevant to that planning, not a separate legal detail.
 
 ## Buying a villa with a shortening lease
 

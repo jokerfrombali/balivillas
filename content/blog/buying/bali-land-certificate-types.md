@@ -1,7 +1,7 @@
 ---
 page_id: P296
 title: Bali Land Certificate Types, Compared
-description: Bali villas sit on different certificate types, each with different rights and terms. Here is how to tell them apart and what each one actually means for a buyer.
+description: Bali villas sit on different land certificate types, each with different rights and terms. Here is how to tell them apart and what each means for a buyer.
 h1: Bali Land Certificate Types Explained
 lead: The certificate attached to a Bali villa, whether Hak Milik, Hak Guna Bangunan, Hak Pakai or a leasehold contract layered on top of one of these, determines what you are actually buying and for how long.
 primary_query: bali land certificate types
@@ -52,9 +52,17 @@ For most foreign buyers, the practical purchase is a Hak Sewa lease contract on 
 - Check the certificate's stated term against what you have been told verbally
 - Verify the registered owner's name matches who you are actually transacting with
 
+## A quick way to sanity-check what you're being told
+
+Before you get deep into paperwork, ask the seller or agent to state, in one sentence, exactly which certificate the land holds and what you would be purchasing on top of it. A confident, specific answer ("the land is Hak Milik, held by the family since the 1990s, and you'd be buying a 25-year lease with a 10-year extension option") is a good sign. A vague answer ("it's basically freehold, don't worry about the details") is worth treating as a prompt to slow down and verify independently before going further.
+
 ## Why certificate type affects price and risk differently
 
 Land held under Hak Milik and leased to you tends to carry different risk and pricing dynamics than land already on a shortening HGB term, because the underlying certificate's own security differs even before your specific contract term is considered. A villa on HGB land nearing the end of its own term, with your lease sitting inside that shrinking window, needs closer scrutiny than one on Hak Milik land with a long, well-drafted lease.
+
+## How certificate type interacts with your ownership structure choice
+
+The certificate behind a villa and the ownership structure you choose as a buyer are two separate but connected decisions. Land held as Hak Milik can be accessed by a foreign buyer through a lease or, in eligible cases, a Hak Pakai conversion; land already on HGB is typically accessed through a PT PMA purchase or takeover. Confirming the certificate type early tells you which ownership structures are realistically available for that specific property, narrowing your decision before you invest time comparing structures that may not even apply to the villa you're considering.
 
 ## Certificate checks as part of full due diligence
 

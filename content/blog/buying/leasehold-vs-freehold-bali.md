@@ -45,6 +45,10 @@ Setting up a PT PMA, a foreign-owned limited company, lets you hold land under H
 
 A leasehold interest can typically be assigned or sold to a new buyer for the remaining term, subject to whatever the original lease contract allows, but its value naturally declines as the remaining term shortens, a topic covered in our guide on how leasehold years affect villa price. Hak Pakai and PT PMA structures have their own transfer mechanics, and inheritance treatment differs by structure, so this is worth discussing with a notary specifically in light of your personal circumstances, particularly if the villa is a significant part of your estate plans.
 
+## Why the comparison question itself trips people up
+
+Search results and casual conversation often frame this as "leasehold vs freehold," which sets buyers up to look for a freehold option that, for them, doesn't exist. Reframing the question as "which of the three structures I can actually use fits my plan" from the outset avoids a lot of wasted comparison against an option that was never on the table for a foreign buyer in the first place.
+
 ## Costs that differ by structure
 
 - Leasehold: lowest setup cost, mainly notary fees for the lease deed

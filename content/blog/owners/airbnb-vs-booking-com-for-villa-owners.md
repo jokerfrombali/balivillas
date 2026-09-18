@@ -63,6 +63,14 @@ This is also a useful exercise to repeat seasonally rather than once, since the 
 
 Across the 20 villas we manage, we don't apply a single platform strategy uniformly — a Sanur family villa's listing effort leans more toward Airbnb's longer-stay guest base, while a Canggu villa closer to the beach clubs picks up more from Booking.com's shorter, more spontaneous searchers. We review the actual booking split by platform periodically rather than assuming last year's pattern still holds, and adjust where we put listing and pricing attention accordingly.
 
+## Content differences worth building separately for each platform
+
+Beyond the amenity fields and photo order, the tone that performs well differs slightly between the two platforms. Airbnb guests responding to a private-house, lived-in feel tend to engage with description language that emphasises space, privacy and a home-like stay. Booking.com guests, coming from a more hotel-comparison mindset, respond better to a description structured around concrete facts — room count, distance to landmarks, included amenities — presented efficiently rather than woven into narrative. Adapting tone as well as format, not just copying the same text across both, is a smaller but genuine part of getting the most out of each platform, and it's worth revisiting periodically as each platform's own guest base and search behaviour continue to shift.
+
+## A simple test if you're unsure which platform to prioritise
+
+If you genuinely don't know which platform suits your villa better, run a deliberate short test rather than guessing: keep pricing consistent across both for a defined period, say six to eight weeks, and track enquiries, conversion and average booking value separately for each. This removes the guesswork and gives you a specific, comparable answer for your villa rather than relying on general patterns that may not hold for your particular size, area and guest profile.
+
 ## What to do next
 
 Airbnb and Booking.com serve different guest habits more than they differ in raw cost, so the right mix depends on your villa's size, area and typical stay length rather than a universal winner.

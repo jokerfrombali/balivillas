@@ -72,6 +72,23 @@ Run through these before signing anything, because the label on the contract —
 
 Some owners deliberately mix the two: a booking agent or direct listing management for marketing reach, combined with a separately hired local caretaker or housekeeping service for operations. This can work, but it splits accountability — if a guest has a bad experience, it's not always clear whose responsibility the fix was. Full villa management consolidates that accountability under one company, which is the main practical advantage beyond the operational scope itself.
 
+## What goes wrong when owners pick the wrong model
+
+- **Choosing a booking agent because the commission looks lower, without honestly assessing who handles a 2am plumbing issue.** Owners overseas sometimes discover, mid-stay, that "we'll figure it out" is not a real plan once a guest is actually messaging about a problem.
+- **Assuming a caretaker hired informally covers the same ground as a full villa management service.** A caretaker can handle a lot, but rarely has the systems for dynamic pricing across channels, multi-platform calendar sync, or structured monthly reporting, which matters more than it first appears once you are trying to compare year-on-year performance.
+- **Not clarifying who owns the guest relationship and listing account under a booking agent arrangement**, then finding it difficult to move marketing elsewhere later because the agent's account, not the owner's, holds the reviews and booking history.
+- **Mixing the two models informally** without writing down who is responsible for what, so a guest complaint during a stay becomes a back-and-forth about whose job it was, rather than a quick fix.
+
+## A decision framework
+
+Ask yourself three questions honestly. Do you, or someone you fully trust, live close enough to respond to a guest issue in person within a reasonable time, at any hour? Do you already have reliable housekeeping and maintenance staff in place, or would you be building that from scratch? Do you want one company accountable for the whole guest experience, or are you comfortable coordinating several separate services yourself?
+
+If the answer to the first two is yes and you are comfortable coordinating multiple parties, a booking agent plus your own local arrangements can work well and cost less. If any answer is no, particularly the first one, full villa management removes a risk that a lower commission rate does not offset.
+
+## What we do
+
+We operate as full villa management, not a booking agent, across all 20 villas we manage. That means guest support runs 24/7, housekeeping and maintenance are handled by our own crew rather than coordinated case by case, and pricing and calendar decisions are made proactively across Airbnb, Booking.com and our own direct site rather than left to the owner to monitor. When an owner is deciding between this and a lighter-touch booking agent, we would rather be honest that our model suits owners who are not locally available or do not want to be the first call when something goes wrong, than pretend it fits every situation.
+
 ## What to do next
 
 Villa management vs booking agent is really a question of how much operational responsibility you want to keep, not which service is objectively better. Match the model to how hands-on you can realistically be, not to the headline commission figure alone.

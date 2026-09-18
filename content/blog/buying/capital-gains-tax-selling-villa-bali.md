@@ -62,6 +62,27 @@ Unlike some jurisdictions that reduce capital gains tax for longer holding perio
 | Any outstanding permit-closing costs | Negotiated between parties |
 | Agent or marketing costs, if used | Seller |
 
+## What goes wrong when sellers plan too late
+
+- **Setting an asking price before knowing the tax exposure**, then having to renegotiate net proceeds expectations once the actual figure comes back from a notary, sometimes after a buyer is already engaged.
+- **Assuming a leasehold sale will be taxed the same way a freehold-equivalent sale would be**, and only discovering the difference once a buyer's notary raises it during due diligence, which can stall or unwind a deal that was otherwise ready to close.
+- **Listing without current permit documentation in hand**, which slows a buyer's due diligence and weakens your negotiating position even before tax enters the conversation.
+- **Confusing gross-value taxation with a profit-based system**, and budgeting net proceeds as if renovation costs or the original purchase price would reduce the tax bill, when the calculation basis may not work that way.
+
+## A worked example of planning a sale properly
+
+Say you bought a villa some years ago and are now considering selling. Rather than setting a price based on what similar villas are listed at, work backwards from your target net proceeds. First, get a written estimate from your notary of the seller-side tax on a realistic sale value, confirmed for your specific leasehold or ownership structure. Second, add any outstanding permit-closing costs if due diligence on your own villa would reveal gaps, since a buyer's notary will find these anyway and it is better to resolve or disclose them upfront. Third, factor in notary and any agent costs for the sale itself. Only once you have subtracted all of this from a realistic sale value do you know what you would actually walk away with, and that number, not the headline listing price, is the one worth planning around.
+
+Sellers who skip this and price purely against comparable listings sometimes find themselves accepting an offer that, after tax and closing costs, delivers meaningfully less than expected.
+
+## What we do in practice
+
+When an owner talks to us about selling a villa we manage, or lists through our [villas for sale](/villas-for-sale/) programme, we start from the documentation: current lease term, permit status, and rental history, because that is what determines both how quickly a sale can close and what a buyer's due diligence will surface. We point sellers to their own notary or tax adviser for the current seller-side tax figure rather than estimating it ourselves, since getting this wrong in either direction does a seller no favours, but we can tell them clearly what documentation gaps, if any, are likely to come up so nothing is a surprise once an offer is on the table.
+
+## Who to involve, and when
+
+Bring in your notary or tax adviser as soon as you start thinking about selling, not once you have a buyer. Ask specifically for the current seller-side tax rate applicable to your ownership structure, whether any exemption or threshold applies to your situation, and a written estimate of net proceeds after tax, notary fees and any outstanding permit costs. Treat that written estimate as the number you plan around, not the headline listing price a comparable villa achieved.
+
 ## What to do next
 
 Selling a villa in Bali is not simply the reverse of buying one; the tax, the documentation you need ready, and the negotiation dynamics are different enough to plan for separately. Getting a written estimate of your tax exposure and gathering clean documentation before you list both make the process faster and protect your net proceeds.

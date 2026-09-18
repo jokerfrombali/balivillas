@@ -61,7 +61,7 @@ Rather than guessing, run through four questions in order. Each "yes" pushes you
 3. **Who is physically updating calendars, and what happens when they're offline?** A single person manually syncing calendars is a single point of failure — illness, travel or a bad Wi-Fi day all become double-booking risk.
 4. **Is this one villa or several?** Multiple villas multiply the manual workload roughly linearly, but the coordination failure risk grows faster than that, because each villa adds another calendar someone has to remember to check.
 
-If two or more of these point toward "yes," treat channel manager setup as this month's task, not a someday item.
+If two or more of these point toward "yes," treat channel manager setup as this month's task, not a someday item. Waiting for a double booking to force the decision is the expensive way to learn the answer.
 
 ## What we see go wrong in practice
 

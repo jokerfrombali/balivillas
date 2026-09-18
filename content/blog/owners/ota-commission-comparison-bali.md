@@ -64,6 +64,14 @@ This is exactly the kind of detail that's easy to miss when comparing proposals 
 
 We don't charge a fixed monthly fee — our commission is calculated on actual bookings only, and we're explicit with owners about whether a given calculation uses gross or net booking value so there's no ambiguity once a booking comes in. We also actively push guests toward direct booking, since it avoids OTA commission entirely and is one of the more meaningful ways an owner's net income improves without any change to nightly rate or occupancy. If you want to see exactly how commission would apply to your specific villa and its typical booking mix, that's a conversation we're glad to have before you sign anything.
 
+## Reviewing your commission structure periodically, not just once
+
+Commission arrangements, both platform-side and with a manager, are worth revisiting periodically rather than treated as fixed forever once agreed. Platform terms change over time, a villa's booking mix between direct, Airbnb and Booking.com shifts as its review history and direct channel build up, and a management relationship that made sense at onboarding may warrant a different conversation a year or two in once the villa has an established track record. Raising this periodically, rather than assuming the original terms are permanent, is a reasonable and normal part of an ongoing owner-manager relationship, and a manager confident in the value they provide shouldn't be defensive about that conversation.
+
+## What owners often get wrong about "the cheapest option"
+
+Chasing the lowest headline commission rate, without checking whether it's calculated on gross or net booking value, is one of the more common ways owners end up paying more than they expected. A manager quoting a slightly higher percentage on gross value can end up cheaper in practice than one quoting a lower percentage on net value, once an OTA's own commission has already been subtracted from that net base. This is exactly why the worked comparison above matters more than the headline number alone — run the actual maths on a real booking before deciding a lower quoted rate is genuinely the cheaper option.
+
 ## What to do next
 
 OTA commission and management commission are separate costs that stack on every platform booking. Ask exactly how each is calculated, on what base, and how direct bookings are treated before comparing proposals on headline percentage alone.

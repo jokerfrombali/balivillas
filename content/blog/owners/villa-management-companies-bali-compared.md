@@ -67,6 +67,18 @@ None of these are unusual requests. A management company confident in its own se
 
 If you already work with a manager and are comparing alternatives because something isn't working, the comparison above still applies, but you also need to think through handover timing and existing bookings. [How to switch villa management company in Bali](/blog/owners/switch-villa-management-company-bali/) covers that process in detail — read it alongside this comparison rather than treating the switch as a separate decision.
 
+## A worked comparison, side by side
+
+Say you have two proposals on the table for a 3-bedroom villa in Umalas. Company A quotes a lower headline commission but bills maintenance call-outs, marketing and licensing renewal separately. Company B quotes a higher commission that bundles all of it, with expenses pre-approved before they are spent.
+
+Run both through a realistic month: a typical booking mix, one or two maintenance call-outs, and the villa's share of marketing spend. Once you add company A's separate line items to its lower base commission, the two proposals often land closer together than the headline numbers suggest, and sometimes company B comes out ahead once you account for the time you would spend approving and chasing company A's extra invoices yourself. This is the calculation worth doing before a decision, not after the first month's report arrives with charges you did not expect.
+
+## What we do, measured against our own criteria
+
+Since we are one of the operators an owner might be comparing, it is worth being explicit about where we sit on each of the five criteria above. Our scope covers marketing across Airbnb, Booking.com and our own direct site, pricing and calendar, 24/7 guest care, housekeeping, maintenance by our own crew, monthly owner reports, compliance guidance and staff management. Our fee is a single commission on actual bookings, no fixed monthly charge, with expenses pre-approved rather than billed after the fact. We do not publish the exact percentage here because it depends on the specific villa, but we give a written figure once we have assessed the property, and an owner can block their own dates without a fee. On exit terms, we set out clear terms upfront rather than relying on a lengthy lock-in to retain owners.
+
+None of this is a substitute for running the same five-criteria comparison against us that you would run against anyone else on your shortlist. We would rather be measured on the same terms than asked to take our word for it.
+
 ## What to do next
 
 Comparing villa management companies in Bali properly takes an afternoon of structured questions, not weeks of sales calls. Use the five criteria above against every company on your shortlist and insist on written, comparable answers.

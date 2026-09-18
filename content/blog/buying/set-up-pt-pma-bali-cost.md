@@ -36,6 +36,10 @@ Many buyers assume incorporation is the whole process and are surprised that lic
 
 The minimum capital or investment threshold attached to a PT PMA is not simply a fee paid to the government; it is generally a commitment reflecting the scale of investment the classification is designed for, and it affects how much capital you need to have ready and demonstrable as part of the company's setup. This figure varies by business classification and has been subject to regulatory change, so get a current figure from a licensed company formation agent or lawyer for the specific classification your villa business falls under, rather than relying on a number from an older source (as of 2026, verify current minimum capital requirements).
 
+## Why classification errors are the costliest mistake
+
+Getting the business classification wrong at incorporation is the single most expensive mistake we see in PT PMA setups, because it isn't just a paperwork inconvenience — a company registered under a classification that doesn't match its actual activity can face compliance problems, licence issues, or the need to re-register under a corrected classification later, all of which cost more in time and fees than getting it right from the outset would have. If your formation agent isn't asking detailed questions about exactly what the villa business will do, that's worth treating as a warning sign before you proceed.
+
 ## Ongoing annual costs after setup
 
 - Annual financial statement preparation and filing
@@ -43,6 +47,10 @@ The minimum capital or investment threshold attached to a PT PMA is not simply a
 - Maintaining the company's registered address and any required local staff or director arrangements
 - Renewing any licences tied to the business classification as required
 - Notary or lawyer fees if the company structure or shareholding changes
+
+## How to compare formation agent quotes fairly
+
+When you receive quotes from different formation agents, lay them out side by side against the four cost components in the table above, since a lower headline number sometimes simply excludes minimum capital or first-year compliance rather than genuinely being cheaper overall. Ask each provider explicitly what is and isn't included, and get it in writing before choosing based on price alone.
 
 ## PT PMA versus simpler ownership routes
 

@@ -41,6 +41,10 @@ When you check a villa's certificate as part of due diligence, confirming whethe
 - Verify the certificate boundaries match the physical plot, ideally with a survey
 - Ask how long the current owner has held Hak Milik and how they acquired it
 
+## Why family-held Hak Milik land needs extra care
+
+A significant share of Hak Milik land in Bali has been held within the same Indonesian family for generations, sometimes passed down informally between siblings or cousins without every transfer being registered at the land office along the way. This isn't unusual and doesn't automatically signal a problem, but it does mean the name on today's certificate may not tell the full ownership story, and other family members could hold an unregistered claim that only surfaces once a sale or lease is underway. Asking directly how long the current holder has had the land, and how they acquired it, is a simple question that can save considerable trouble later.
+
 ## Hak Milik versus the structures you can actually hold
 
 Comparing Hak Milik directly against leasehold or Hak Pakai as if choosing between them misses the point, since Hak Milik simply is not available to you as a foreign buyer. The real decision is between the structures covered in our leasehold versus freehold comparison, which explains how leasehold, Hak Pakai and PT PMA each function as the practical alternative.

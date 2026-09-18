@@ -49,6 +49,10 @@ In some transactions, land that was Hak Milik in the Indonesian owner's hands co
 
 Hak Sewa (leasehold) tends to suit buyers who want the simplest setup and are comfortable relying on a well-drafted private contract, while Hak Pakai suits buyers who qualify and want the added security of a registered title, and are willing to work within its eligibility and term conditions. Our guide to Hak Sewa in Bali covers the lease route in full for comparison.
 
+## Hak Pakai and resale: what a future buyer will check
+
+If you plan to sell a Hak Pakai villa later, expect your buyer to run the same eligibility and term checks you did when you bought it, and to weigh remaining term heavily in their offer. A registered title's transfer process itself is generally more standardised than negotiating an assignment on a private leasehold contract, which can make resale somewhat more straightforward procedurally, even though the eligibility conditions still narrow your pool of potential buyers to those who qualify.
+
 ## Renewal and what happens at the end of the term
 
 Hak Pakai's capped term with renewal periods means planning for renewal well before the term ends matters, since a lapsed right without a completed renewal can create real complications. The exact renewal process, required documentation, and any conditions that must still be met at renewal time are worth clarifying with a notary at the outset, not assumed to be automatic.

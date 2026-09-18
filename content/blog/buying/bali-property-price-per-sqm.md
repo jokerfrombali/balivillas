@@ -58,6 +58,25 @@ Imagine comparing a 300 sqm plot with a finished 200 sqm villa in Sanur against 
 | What is the build quality and age? | Two "finished" villas can differ hugely in remaining useful life |
 | How does this compare to other listings in the same specific micro-area? | Broad area averages miss street-level variation |
 
+## What goes wrong when buyers lean on a single figure
+
+- **Anchoring on a number seen in an article or forum post about a different area**, then judging a specific listing as "expensive" or "cheap" against a benchmark that never applied to it in the first place.
+- **Comparing a blended land-plus-building figure to a land-only figure** without realising the two numbers are measuring different things, which makes an otherwise reasonable plot look overpriced or a poorly built villa look like a bargain.
+- **Ignoring remaining leasehold term when comparing per-sqm prices**, so a villa with twelve years left on its lease gets compared directly against one with thirty-five years left, at the same headline per-sqm number, as if they were equivalent assets.
+- **Treating a low per-sqm price as automatically attractive** without checking whether it reflects genuine value or a zoning, permit or access problem that explains the discount.
+
+## A simple decision framework for using the metric
+
+1. Establish whether the figure you are looking at is land-only, building-only, or blended, and make sure you are comparing the same type across listings.
+2. Narrow the comparison to the same specific micro-area, not just the same broad district; a street back from the beach in Canggu can differ meaningfully from a beachfront lane.
+3. Adjust mentally, or ask your notary to help quantify, for remaining leasehold term differences before treating two per-sqm prices as comparable.
+4. Confirm zoning and permit status before price becomes the deciding factor; a low price per sqm on land that cannot legally be used as you intend is not a discount, it is a different product entirely.
+5. Only after these adjustments, use price per sqm as one input into your final decision, alongside the villa's actual condition, rental potential and documentation.
+
+## What we do in practice
+
+When we assess a villa for our own portfolio or for a [villas for sale](/villas-for-sale/) listing, we do not lean on a blended price-per-sqm figure to judge whether it is fairly priced. We look at the land and building split separately, the remaining leasehold term, the zoning and permit status, and how the property compares to similar villas we already manage in the same specific area. That is the comparison that actually tells you whether a price is reasonable, and it is the same comparison we would encourage any buyer to run before treating a headline per-sqm number as meaningful on its own.
+
 ## What to do next
 
 Use price per sqm as one input among several, not the deciding metric. The listings that make sense are the ones where the per-sqm price, the leasehold term, the zoning and the build quality all line up with what you are actually trying to buy.

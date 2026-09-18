@@ -68,6 +68,16 @@ Exit terms are the question owners forget until they need it. Ask directly: what
 
 A company confident in its service usually answers this clearly and doesn't try to lock you in with vague or lengthy notice terms. If you're already managing a villa and considering a change, [how to switch villa management company in Bali](/blog/owners/switch-villa-management-company-bali/) walks through that process step by step, including the handover details worth confirming up front.
 
+## What we tell owners who ask us these questions
+
+Because we manage 20 villas ourselves, we get these questions regularly, and we'd rather an owner ask them of us directly than assume. Our commission is a single percentage on actual bookings, with no fixed monthly fee, expenses pre-approved before we spend them, and an owner's right to block their own dates built in rather than negotiated case by case. We don't publish the exact rate here because it varies with a villa's size, location and condition, but we give a written figure specific to your property once we've seen it, the same standard we'd suggest holding any manager to.
+
+On licensing, we handle the registration and compliance side as part of the service, and we're happy to show an owner how it works for a villa we currently manage rather than describe it in the abstract. On exit terms, our approach is the one described above: a clear notice period, a defined handover, and no attempt to hold guest relationships or listing accounts hostage if an owner decides to leave.
+
+## Two patterns that should make you slow down
+
+The first is a company that answers every question above quickly and confidently but never in writing, everything is "trust us, we've done this hundreds of times." Confidence is not a substitute for a document you can hold them to later. The second is a company that answers thoroughly on fees and marketing but goes quiet or vague specifically on licensing and exit terms, the two categories owners tend to ask about last, if at all. Both patterns are more common than owners expect, and both are reasons to keep shortlisting rather than sign on the strength of one good conversation.
+
 ## A short list to bring to every conversation
 
 1. What exactly is covered by the commission, and what's billed separately?

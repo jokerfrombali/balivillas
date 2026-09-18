@@ -67,6 +67,31 @@ If you have on-site staff or work with a management company, make sure whoever h
 4. Follow up after the fix to confirm it actually worked for the guest.
 5. Document the issue and resolution, and watch for recurring patterns.
 
+## A framework for deciding how to respond
+
+Not every complaint deserves the same intensity of response. Triage on two axes: how serious the impact on the stay, and how fixable it is right now.
+
+1. **Serious and fixable now** (AC broken in high heat, no hot water): drop everything, get someone there or a solution in motion within the hour, and communicate progress even before it's resolved.
+2. **Serious but not immediately fixable** (a major appliance needing a part, a pool pump failure): acknowledge fast, be honest about the realistic timeline, and offer a genuine interim gesture rather than silence while you wait.
+3. **Minor and fixable** (a slow drain, a stiff lock): fix it, confirm it's done, no need for compensation, but don't dismiss it either — small issues left unacknowledged still show up in reviews.
+4. **Minor and not really fixable** (a guest's personal preference about décor, an unavoidable neighbourhood noise): acknowledge honestly, explain what's realistic, and don't over-promise a fix that won't happen.
+
+This framework prevents both under-reacting to something serious and over-reacting (with compensation) to something genuinely minor.
+
+## What goes wrong
+
+The most common mistake is a good first response followed by silence — acknowledging quickly, promising a fix, and then not following up to confirm it actually worked. Guests remember the silence at the end more than the fast start, and an unconfirmed fix sometimes wasn't actually a fix at all.
+
+The second is inconsistent authority — a complaint that needs owner sign-off for even minor resolutions, so a guest waits hours for a decision that should have taken minutes. This is avoidable with a small amount of upfront agreement about what can be resolved on the spot.
+
+## What we do in practice
+
+Because complaint handling runs through 24/7 WhatsApp support across the villas we manage, acknowledgement doesn't depend on whether the owner happens to be awake or reachable, and staff have clear authority to resolve routine issues immediately rather than escalating every complaint upward first. We log every complaint, not just the serious ones, specifically so a pattern — the same maintenance issue recurring across different guests — gets caught and fixed at the source rather than handled as a series of unrelated one-off incidents.
+
+## What to check before a season, not during one
+
+Before high season starts, it's worth confirming, rather than assuming, three things: who is actually reachable for guest issues outside normal hours, what a staff member or manager is authorised to resolve without checking in first, and whether recurring maintenance issues from the previous season were actually fixed or just patched. Doing this review in a quiet period avoids discovering the gaps for the first time during a guest's stay.
+
 ## What to do next
 
 How a complaint is handled usually matters more than the complaint itself, and most guests respond well to a fast, genuine, well-communicated resolution even when the original issue was real. The villas that struggle with reviews are usually the ones that respond slowly or defensively, not the ones with the most maintenance issues.

@@ -50,6 +50,26 @@ Long-term life in Canggu tends to revolve around a mix of work and surf — an e
 - Whether a larger group villa (like our 6- or 9-bedroom properties) suits a split-cost long stay better than a smaller unit elsewhere.
 - Current visa rules relevant to your stay length, checked directly with a licensed agent rather than assumed (as of 2026, verify).
 
+## A framework for deciding if Canggu suits a long stay
+
+Three questions usually clarify whether Canggu is the right long-term base, as opposed to somewhere quieter nearby. First, is the daily social energy, other long-stayers around, a constant flow of new people through cafés and coworking spaces, something you actually want, or something you'd tire of after a few months? Canggu delivers this in a way no other area we manage does, and it's a genuine draw for some tenants and a genuine source of fatigue for others over a long stay. Second, how much does daily traffic actually cost you in time and patience? A long-term tenant faces Canggu's congestion every day, not just occasionally on holiday, so it's worth being honest about how much that will wear on you compared with a quieter alternative a short ride away. Third, does your long-term plan involve a family with young children, or a couple or group without that consideration? Our larger Canggu villas suit families reasonably well in terms of space, but Sanur's calmer water and quieter lanes consistently come out ahead for tenants prioritising a young family's daily routine over surf and social scene.
+
+## What goes wrong for tenants who commit to Canggu long term without checking this
+
+The clearest pattern is tenants drawn in by Canggu's reputation as the default long-stay hub, without registering how much traffic has grown alongside that popularity. A long-term tenant feels this daily, in a way a week-long guest often doesn't notice as sharply, and some tenants who signed a year-long lease based on an earlier, calmer impression of the area find the daily reality more tiring than expected.
+
+A second issue is underestimating how much a larger group villa, like our 6- or 9-bedroom properties, changes the long-term equation. These suit a group or extended family splitting costs far better than they suit a couple or small family looking for a compact base; matching villa size to the actual household matters as much here as area choice does.
+
+A third is not comparing Canggu against Umalas early enough. Tenants who want the café and coworking infrastructure without Canggu's traffic sometimes settle for Canggu by default, without realising Umalas offers a genuinely comparable working environment a short ride away with a calmer daily pace.
+
+## A note on adjusting a long-term booking after arrival
+
+Some tenants only discover how they actually feel about Canggu's pace after living there for a month or two, and that's a normal part of settling long term rather than a sign of a bad decision. If the traffic or the social intensity turns out to wear on you more than expected, tell us early rather than waiting out a full year on principle; moving to a quieter villa, in Canggu itself or in a nearby area like Umalas, is usually more straightforward mid-lease than tenants assume, particularly on a monthly arrangement.
+
+## What we check before recommending a long-term Canggu villa
+
+We typically ask whether the social, high-energy side of Canggu is a genuine draw or an afterthought, whether the household includes young children whose routine matters more than surf access, how many people need to split a larger villa's cost, and whether Umalas has been considered as an alternative. These questions point clearly toward whether Canggu, or one of the quieter areas we manage, is the better long-term fit.
+
 ## What to do next
 
 Canggu remains the strongest choice for long-stay tenants prioritising surf, cafés and a working-holiday social scene, especially for groups wanting real space in a villa like The Wave or Leonardo — just weigh the busier daily pace against Sanur's or Umalas's quieter alternatives.

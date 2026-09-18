@@ -48,9 +48,17 @@ Zoning determines what a plot is legally designated for, and a villa that looks 
 - Get the lease agreement, if applicable, independently reviewed
 - Confirm land and building tax (PBB) is current and paid
 
+## Who should be on your due diligence team
+
+A straightforward leasehold purchase typically needs an independent notary at minimum, with many buyers also engaging a separate lawyer for deeper contract and title review. A PT PMA or existing-company purchase needs that same team plus someone experienced in Indonesian corporate due diligence, since you're checking a company's history as well as a property's. Whichever route applies, make sure everyone on your team is genuinely independent of the seller and their agent, not merely recommended by them — a recommendation from the seller's side is not disqualifying on its own, but it's worth verifying independence directly before relying on their findings.
+
 ## Is buying property in Bali a good investment
 
 Whether a specific purchase is a good investment depends on factors specific to that property and your own goals, including remaining lease term, location, condition, running costs and your intended use, and we do not offer investment advice or promise returns. What due diligence does is remove the legal and structural unknowns that would otherwise make any investment judgement unreliable, so you are assessing the property itself, not a paperwork risk hiding underneath it.
+
+## How long proper due diligence realistically takes
+
+Buyers sometimes underestimate how long thorough due diligence takes, expecting certificate and permit checks to complete within days when in practice zoning confirmation and title history review can take several weeks depending on the specific land office and the complexity of the property's history. Build this into your purchase timeline from the outset, and treat any seller pushing for a faster close than your due diligence team says is realistic as a reason for caution, not a reason to compress the checks.
 
 ## Buying for Airbnb or rental operation
 

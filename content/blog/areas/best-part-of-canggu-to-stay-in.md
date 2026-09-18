@@ -67,6 +67,14 @@ A remote worker booked Batu Bolong for a six-week stay because it was the neighb
 
 The pattern across all three: the "best part of Canggu" answer isn't fixed even for the same person, it can change within a single trip once the daily reality of a choice becomes clear. If you can, ask us about flexibility, some guests split a longer stay across two of our villas in different neighbourhoods rather than locking into one for the whole trip.
 
+## A note on changing your mind mid-stay
+
+It's worth knowing that the "best part of Canggu" decision isn't necessarily final once you've booked. If a longer stay isn't working out the way you expected, tell us rather than sticking it out for the full length on principle; moving to a different neighbourhood partway through, where availability allows, is often simpler than guests assume, and we'd rather adjust a booking early than have a guest quietly unhappy for the second half of their trip.
+
+## A note on trying a neighbourhood before locking in a longer stay
+
+If you're planning a stay of a few weeks or longer and genuinely can't decide between two neighbourhoods, consider booking the first portion in one and the remainder in the other, rather than guessing upfront. This costs a little in flexibility compared with committing to a single villa the whole time, but it removes the risk of spending most of a longer trip in a pocket that turns out not to suit you, and gives you a real basis for choosing next time.
+
 ## What we check with guests before recommending a neighbourhood
 
 Before suggesting Batu Bolong, Berawa, Echo Beach or Pererenan specifically, we ask how much of each day involves calls, sleep or concentration versus being out and about, whether nightlife or surf is a daily habit or an occasional plan, and whether the trip is short enough that convenience should win outright or long enough that daily wear from noise and traffic becomes the bigger factor. We also ask directly whether splitting the stay across two neighbourhoods is worth considering, which is more often useful than guests initially assume.
