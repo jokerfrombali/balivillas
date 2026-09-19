@@ -148,6 +148,20 @@ details .a{padding:0 20px 18px;color:#55524b;font-size:14px;line-height:1.65}
 .cases-note{font-size:12px;color:#a09a8e;margin-top:16px}
 @media(max-width:960px){.cases{grid-template-columns:1fr}}
 </style>
+
+<style id="thb-vm-css">
+.crumbs{font-size:12.5px;color:#8a877f;padding:18px 0 0}.crumbs a{color:#6b6b66}.crumbs span{margin:0 6px}
+.prose{max-width:760px}.prose p{margin:0 0 16px;color:#3b3b36;font-size:16px;line-height:1.7}.prose ul{margin:0 0 18px 20px;color:#3b3b36;font-size:15.5px;line-height:1.65}.prose li{margin:0 0 8px}
+.prose h3{font-family:'Lora',Georgia,serif;font-size:21px;font-weight:600;margin:26px 0 10px}
+.vcards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.vcard{background:#fff;border:1px solid #e6e3dc;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.vcard img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#f2efe8}.vcard div{padding:14px 16px}.vcard b{font-family:'Lora',Georgia,serif;font-size:15.5px;display:block;line-height:1.3}.vcard span{font-size:12.5px;color:#6b6b66;display:block;margin-top:4px}
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.rv article{background:#fff;border:1px solid #e6e3dc;border-radius:16px;padding:18px 20px}.rv .rh{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:13px;color:#6b6b66;margin-bottom:8px}.rv .rh b{color:#0a0a0a;font-size:14px}.rv p{margin:0;font-size:14.5px;line-height:1.65;color:#2a2a26}.rv .st{color:#d9a21b;letter-spacing:1px}
+.rel{display:flex;flex-wrap:wrap;gap:10px}.rel a{border:1px solid #e6e3dc;background:#fff;border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:500}
+.feebox{background:#fff;border:1px solid #e6e3dc;border-radius:20px;padding:22px 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feebox b{font-family:'Lora',Georgia,serif;font-size:30px;display:block}.feebox span{font-size:13px;color:#6b6b66}
+.calc{background:#fff;border:1px solid #e6e3dc;border-radius:20px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px}.calc label{display:block;font-size:12.5px;color:#6b6b66;margin:0 0 4px}.calc input,.calc select{width:100%;border:1px solid #d9d4c9;border-radius:12px;padding:11px 12px;font-size:15px;margin-bottom:14px;background:#fafaf7}.calc .out{background:#f4f2ed;border-radius:16px;padding:20px}.calc .out b{font-family:'Lora',Georgia,serif;font-size:26px;display:block}.calc .out p{font-size:13.5px;color:#55524b;margin:6px 0 12px}
+@media(max-width:960px){.vcards{grid-template-columns:repeat(2,1fr)}.rv{grid-template-columns:1fr}.feebox{grid-template-columns:1fr}.calc{grid-template-columns:1fr}}
+@media(max-width:560px){.vcards{grid-template-columns:1fr}}
+</style>
 <style id="thb-fav-css">
 .thb-fav{position:absolute;top:10px;right:10px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.92);border:none;border-radius:50%;cursor:pointer;padding:0;z-index:4;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 2px 8px rgba(0,0,0,.13);touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:background .18s,transform .18s}
 .thb-fav svg{width:17px;height:17px;fill:none;stroke:#0a0a0a;stroke-width:2;transition:fill .18s,stroke .18s,transform .18s}
@@ -265,8 +279,8 @@ body.thb-menu-open{overflow:hidden}
 
   <div class="stats">
     <div class="stats-in">
-      <div class="stat"><b>12</b><span>villas under our care</span></div>
-      <div class="stat"><b>4</b><span>areas: Sanur, Canggu, Umalas, Ungasan</span></div>
+      <div class="stat"><b>20</b><span>villas under our care</span></div>
+      <div class="stat"><b>8</b><span>areas across south Bali, from Sanur to Uluwatu</span></div>
       <div class="stat"><b>24/7</b><span>guest support on the ground</span></div>
       <div class="stat"><b>0%</b><span>hidden fees &mdash; one transparent commission</span></div>
     </div>
@@ -345,8 +359,8 @@ body.thb-menu-open{overflow:hidden}
     <div class="band">
       <div>
         <p class="kicker" style="color:#C1B59D">Owner-first terms</p>
-        <h2>One commission.<br>Nothing hidden.</h2>
-        <p style="margin-top:12px">We earn only when you earn — a single commission on actual bookings. No fixed monthly fees, no surprise charges, no markup games on repairs.</p>
+        <h2>20% of actual revenue.<br>Nothing hidden.</h2>
+        <p style="margin-top:12px">We earn only when you earn: a single 20% commission on actual bookings. No fixed monthly fees, no onboarding fee, no markup on repairs. <a href="/villa-management/pricing/" style="text-decoration:underline">What the 20% covers</a>.</p>
         <a class="btn-wa" href="https://wa.me/6285746499697?text=Hi!%20I%20own%20a%20villa%20in%20Bali%20%E2%80%94%20what%20are%20your%20management%20terms%3F" rel="noopener">Get your terms in one message</a>
       </div>
       <ul>
@@ -360,51 +374,37 @@ body.thb-menu-open{overflow:hidden}
   </div>
 </section>
 
-<!-- SUCCESS STORIES (thb-cases): ПЛЕЙСХОЛДЕРЫ — заменить на реальные кейсы -->
+<!-- AREAS (generated by tools/villa-management/build.py) -->
+<section style="padding-top:0" id="areas">
+  <div class="wrap">
+    <p class="kicker">Where we work</p>
+    <h2>Villa management <span class="serif" style="font-style:italic">by area</span></h2>
+    <p class="sec-sub">Villas, townhouses and apartments: we manage property across south Bali from two bases, Sanur and Ungasan. Each area page explains who books there, which streets rent and how we run the house.</p>
+    <div class="svc"><a class="svc-card" href="/villa-management/sanur/" style="display:block"><h3>Sanur</h3><p>Sanur is where The Host Bali started and where most of our villas are: 11 of the 20 homes we run sit between the beach p…</p></a><a class="svc-card" href="/villa-management/renon-denpasar/" style="display:block"><h3>Renon and Denpasar</h3><p>Renon and the residential districts of Denpasar are ten to fifteen minutes from our Sanur office. We manage villas, town…</p></a><a class="svc-card" href="/villa-management/canggu/" style="display:block"><h3>Canggu</h3><p>Canggu is the most competitive rental market in Bali: thousands of listings, fast-moving prices and guests who compare t…</p></a><a class="svc-card" href="/villa-management/pererenan-berawa/" style="display:block"><h3>Pererenan and Berawa</h3><p>Pererenan, Berawa and Seseh are where Canggu&#x27;s larger villas are. We manage Leonardo, a nine-bedroom resort villa in Per…</p></a><a class="svc-card" href="/villa-management/umalas/" style="display:block"><h3>Umalas and Kerobokan</h3><p>Umalas sits between Seminyak and Canggu and rents to guests who want both without the noise of either. We manage three h…</p></a><a class="svc-card" href="/villa-management/ungasan/" style="display:block"><h3>Ungasan</h3><p>We run four teak eco villas in Ungasan, minutes from Melasti and Green Bowl beaches, and we manage other Bukit villas fr…</p></a><a class="svc-card" href="/villa-management/uluwatu/" style="display:block"><h3>Uluwatu</h3><p>Uluwatu villas are sold on surf, cliffs and sunsets, and they are run from the road up to Pecatu. We manage them from ou…</p></a><a class="svc-card" href="/villa-management/jimbaran/" style="display:block"><h3>Jimbaran</h3><p>Jimbaran is the family end of the Bukit: a calm bay, seafood dinners on the sand and the airport fifteen minutes away. W…</p></a></div>
+  </div>
+</section>
+<section style="padding-top:0" id="services-detail">
+  <div class="wrap">
+    <p class="kicker">Property management in Bali, in detail</p>
+    <h2>Every part of the service <span class="serif" style="font-style:italic">on its own page</span></h2>
+    <div class="svc" style="margin-top:8px"><a class="svc-card" href="/villa-management/airbnb-management/" style="display:block"><h3>Airbnb management</h3><p>Listings, pricing, guests and turnovers on Airbnb and every other channel.</p></a><a class="svc-card" href="/villa-management/holiday-rental-management/" style="display:block"><h3>Holiday rental management</h3><p>Nightly and weekly stays across Airbnb, Booking.com, Agoda and direct.</p></a><a class="svc-card" href="/villa-management/long-term-rental-management/" style="display:block"><h3>Long-term rentals</h3><p>Monthly and yearly tenants: screening, contracts, deposits, rent.</p></a><a class="svc-card" href="/villa-management/dynamic-pricing-and-revenue-management/" style="display:block"><h3>Pricing &amp; revenue</h3><p>Seasonal rates, minimum stays, gap nights, reviewed weekly.</p></a><a class="svc-card" href="/villa-management/housekeeping-and-cleaning/" style="display:block"><h3>Housekeeping</h3><p>Turnover cleaning to a checklist, linen, amenities, photo checks.</p></a><a class="svc-card" href="/villa-management/maintenance-and-pool-care/" style="display:block"><h3>Maintenance &amp; pool</h3><p>Weekly pool care, AC, garden, wet-season checks, approved repairs.</p></a><a class="svc-card" href="/villa-management/guest-services-and-concierge/" style="display:block"><h3>Guest care &amp; concierge</h3><p>A 24/7 line for guests; owners never take the call.</p></a><a class="svc-card" href="/villa-management/owner-reporting-and-payouts/" style="display:block"><h3>Reports &amp; payouts</h3><p>One monthly statement with every booking, receipt and the payout.</p></a></div>
+    <p class="sec-sub" style="margin-top:18px">Also: <a href="/villa-management/pricing/">fees</a>, <a href="/villa-management/foreign-and-overseas-owners/">overseas owners</a>, <a href="/villa-management/switch-to-the-host-bali/">switching manager</a>, <a href="/villa-management/new-villa-launch/">launching a new villa</a>, <a href="/villa-management/rent-out-my-villa/">renting out for the first time</a>, <a href="/villa-management/villa-investment-management/">investors</a>, <a href="/villa-management/licensing-and-compliance-help/">licences</a>, <a href="/villa-management/luxury-villa-management/">luxury villas</a>, <a href="/villa-management/airbnb-co-hosting/">co-hosting</a>, <a href="/villa-management/villa-staff-management/">staff</a>, <a href="/villa-management/your-villa-manager/">your villa manager</a>, <a href="/villa-management/owner-reviews-and-case-studies/">reviews</a> and the <a href="/villa-management/income-calculator/">income calculator</a>.</p>
+  </div>
+</section>
 <section style="padding-top:0" id="results">
   <div class="wrap">
-    <p class="kicker">Success stories</p>
-    <h2>What changes when we<br><span class="serif" style="font-style:italic">take the keys.</span></h2>
-    <p class="sec-sub">A few recent examples from villas under our management &mdash; different areas, different starting points, same approach.</p>
-    <div class="cases thb-cases">
-      <div class="case">
-        <img src="/public-objects/images/sanur-garden-pool-4br-34.jpg" alt="4BR family villa in Sanur under The Host Bali management" loading="lazy" decoding="async" width="600" height="450">
-        <div class="cb">
-          <h3>4BR family villa &middot; Sanur</h3>
-          <p class="tx">The owners ran it themselves on Airbnb between trips home to Australia: slow replies, empty weeks, tired photos. We reshot the villa, rebuilt the listings and took over guest chat &mdash; the calendar filled within the first season.</p>
-          <div class="mx">
-            <div class="m"><b>83%</b><span>occupancy</span></div>
-            <div class="m"><b>+42%</b><span>owner income, yr 1</span></div>
-          </div>
-          <p class="who">&mdash; Owners from Perth, with us since 2024</p>
-        </div>
-      </div>
-      <div class="case">
-        <img src="/public-objects/images/premier-umalas-16-08.jpg" alt="3BR townhouse in Umalas under The Host Bali management" loading="lazy" decoding="async" width="600" height="450">
-        <div class="cb">
-          <h3>3BR townhouse &middot; Umalas</h3>
-          <p class="tx">A previous agency charged a fixed monthly fee whether guests came or not, and repairs appeared on invoices with no photos. We moved the villa to commission-only terms, pre-approved every expense and tightened pricing per season.</p>
-          <div class="mx">
-            <div class="m"><b>76%</b><span>occupancy</span></div>
-            <div class="m"><b>$0</b><span>surprise charges</span></div>
-          </div>
-          <p class="who">&mdash; Owner from Jakarta, with us since 2025</p>
-        </div>
-      </div>
-      <div class="case">
-        <img src="/public-objects/images/eco-private-ungasan-01.jpg" alt="1BR eco villa in Ungasan under The Host Bali management" loading="lazy" decoding="async" width="600" height="450">
-        <div class="cb">
-          <h3>1BR eco villa &middot; Ungasan</h3>
-          <p class="tx">The villa sat in a quiet yearly rental far below its potential. We switched it to short stays, positioned it for couples, and its sister units joined two months later &mdash; the whole complex now runs as one calendar.</p>
-          <div class="mx">
-            <div class="m"><b>+47%</b><span>vs long-term rent</span></div>
-            <div class="m"><b>3</b><span>units under one team</span></div>
-          </div>
-          <p class="who">&mdash; Owner from Singapore, with us since 2025</p>
-        </div>
-      </div>
-    </div>
-    <p class="cases-note">Numbers are from recent seasons and vary by villa, area and condition &mdash; ask us for a realistic estimate for yours.</p>
+    <p class="kicker">Guest reviews</p>
+    <h2>What guests say about villas <span class="serif" style="font-style:italic">we manage</span></h2>
+    <p class="sec-sub">Straight from our booking system, with the platform and the date. Owner references are given personally, on request.</p>
+    <div class="rv"><article><div class="rh"><b>Guest via Booking.com</b><span><span class="st">★★★★★<span style="color:#d9d4c9"></span></span> 2026-09-17</span></div><p>Preciosa villa de lujo, moderna. Iwan, muy amable, nos dio todas las indicaciones necesarias; siempre disponible y atento, la villa, súper limpia. Muy cómoda ubicación.</p><div class="rh" style="margin:10px 0 0"><span><a href="/villa/sanur/villa-black-pool-4br-sanur/">Villa Black Pool — Family 4BR Villa with Big Pool</a></span></div></article><article><div class="rh"><b>Guest via Airbnb</b><span><span class="st">★★★★★<span style="color:#d9d4c9"></span></span> 2026-09-14</span></div><p>The place is very beautiful, in a quiet region.  All bedrooms are suites with a neat decoration, clean and with amenities. Pool is nice and clear. 
+
+Eva was super proactive and very communicative, easy to talk and always helping.</p><div class="rh" style="margin:10px 0 0"><span><a href="/villa/canggu/the-wave-6br-beachside-villa-canggu/">Villa The Wave — Beachside 6BR Villa in Canggu</a></span></div></article><article><div class="rh"><b>Guest via Airbnb</b><span><span class="st">★★★★★<span style="color:#d9d4c9"></span></span> 2026-09-12</span></div><p>We had a great stay at this villa and really enjoyed our time there. The villa is beautiful, comfortable, and in a great location in Canggu. It’s very close to the beach, with plenty of restaurants, cafés, beach clubs, and other places nearby, which makes it a great choice for anyone looking to stay in Canggu.
+
+The host was also very responsive, helpful, and easy to communicate with throughout our stay. Everything we…</p><div class="rh" style="margin:10px 0 0"><span><a href="/villa/canggu/the-wave-6br-beachside-villa-canggu/">Villa The Wave — Beachside 6BR Villa in Canggu</a></span></div></article><article><div class="rh"><b>Guest via Airbnb</b><span><span class="st">★★★★★<span style="color:#d9d4c9"></span></span> 2026-09-07</span></div><p>宿はとても清潔で、サヌールの大通りにも出やすい立地でした。
+幼い子供のためにベビーベッドも貸し出してくださり、プールも消毒されていて、安心して過ごすことができました！
+ただ宿の実際の住所が、記載されていた住所と異なっていたため、Grabで向かう際には注意が必要だと思いました。</p><div class="rh" style="margin:10px 0 0"><span><a href="/villa/sanur/stylish-2br-pool-townhouse-sanur/">Stylish 2BR Pool Townhouse in Sanur</a></span></div></article><article><div class="rh"><b>Guest via Airbnb</b><span><span class="st">★★★★★<span style="color:#d9d4c9"></span></span> 2026-08-28</span></div><p>Lovely home in Sanur for a family holiday. Location is tucked away from the main street which makes it a lot more quiet and peaceful.</p><div class="rh" style="margin:10px 0 0"><span><a href="/villa/sanur/garden-pool-villa-4br-sanur/">Sanur Garden Pool Villa — Family 4BR near Mertasari Beach</a></span></div></article><article><div class="rh"><b>Guest via Airbnb</b><span><span class="st">★★★★★<span style="color:#d9d4c9"></span></span> 2026-08-27</span></div><p>This Villa is beautiful and a wonderful stay! The open Roman style architecture makes it feel very inviting with the beautiful yard by the river that you can hear running through the evening. The staff were very responsive and the owner is very nice,  involved and accommodating. 
+
+My sister and our children did not want to leave and it’s walking distance to a ton of shops and amazing cafés and restaurants. And about …</p><div class="rh" style="margin:10px 0 0"><span><a href="/villa/canggu/leonardo-9br-resort-pererenan/">Leonardo — 9BR Resort Villa in Pererenan</a></span></div></article></div><p class="cases-note">Verified stays, synced from our booking system (Airbnb, Booking.com, direct). Each villa page shows its full rating and review count; the average is calculated over all reviews, not only those shown.</p>
   </div>
 </section>
 
@@ -419,7 +419,7 @@ body.thb-menu-open{overflow:hidden}
     </details>
     <details>
       <summary>What does management cost?</summary>
-      <div class="a">A single commission on actual bookings — nothing when the villa doesn&rsquo;t earn. The exact rate depends on the villa and the scope of work; message us on WhatsApp and you&rsquo;ll have our terms the same day.</div>
+      <div class="a">20% of actual booking revenue, nothing fixed and nothing when the villa doesn&rsquo;t earn. Repairs, consumables and utilities are billed at cost with receipts. See the <a href="/villa-management/pricing/">pricing page</a> for what the 20% covers.</div>
     </details>
     <details>
       <summary>Can I still stay in my own villa?</summary>
