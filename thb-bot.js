@@ -112,7 +112,20 @@
     if (e.target && e.target.tagName && /^(IMG|SCRIPT|LINK)$/.test(e.target.tagName)) {
       var src = e.target.src || e.target.href || '';
       /* only report our own missing files, not third-party blockers */
-      if (src.indexOf(location.origin) === 0) alertOnce('Не загрузился файл: ' + src);
+      if (src.indexOf(location.origin) !== 0) return;
+      /* A dropped connection (mobile crawlers, flaky Wi-Fi, a deploy in progress) also fires
+         this event. Re-check the file before waking the chat: alert only when the server
+         really answers 4xx/5xx or the file is unreachable twice (19.09.2026). */
+      try {
+        fetch(src, { method: 'HEAD', cache: 'no-store' }).then(function (r) {
+          if (r.status >= 400) alertOnce('Не загрузился файл (' + r.status + '): ' + src);
+        }).catch(function () {
+          setTimeout(function () {
+            fetch(src, { method: 'HEAD', cache: 'no-store' })
+              .catch(function () { alertOnce('Файл недоступен дважды: ' + src); });
+          }, 3000);
+        });
+      } catch (err) {}
       return;
     }
     alertOnce((e.message || 'script error') + ' @ ' +
