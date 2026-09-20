@@ -74,37 +74,37 @@
   </url>
   <url>
     <loc>https://thehostbali.com/en-au/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thehostbali.com/ru/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thehostbali.com/de/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thehostbali.com/fr/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thehostbali.com/nl/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thehostbali.com/es/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -119,31 +119,31 @@
   </url>
   <url>
     <loc>https://thehostbali.com/ja/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thehostbali.com/ko/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thehostbali.com/zh-hans/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thehostbali.com/zh-hant/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thehostbali.com/ar/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -376,8 +376,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/ungasan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/ungasan/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://thehostbali.com/terms/</loc><lastmod>2026-09-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-<url><loc>https://thehostbali.com/privacy/</loc><lastmod>2026-09-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+<url><loc>https://thehostbali.com/terms/</loc><lastmod>2026-09-20</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+<url><loc>https://thehostbali.com/privacy/</loc><lastmod>2026-09-20</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url>
     <loc>https://thehostbali.com/villa-management/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa-management/"/>
@@ -1040,5 +1040,45 @@
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thehostbali.com/monthly-rental/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/monthly-rental/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/monthly-rental/"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thehostbali.com/monthly-rental/sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/monthly-rental/sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/monthly-rental/sanur/"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://thehostbali.com/monthly-rental/canggu/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/monthly-rental/canggu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/monthly-rental/canggu/"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://thehostbali.com/monthly-rental/umalas/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/monthly-rental/umalas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/monthly-rental/umalas/"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://thehostbali.com/monthly-rental/ungasan/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/monthly-rental/ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/monthly-rental/ungasan/"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
