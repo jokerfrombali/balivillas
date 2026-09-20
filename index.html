@@ -87,7 +87,6 @@
 <link rel="preload" as="image" fetchpriority="high" type="image/avif" imagesrcset="/public-objects/hero/slide-05-640.avif 640w, /public-objects/hero/slide-05-960.avif 960w, /public-objects/hero/slide-05-1200.avif 1200w" imagesizes="100vw" href="/public-objects/hero/slide-05-1200.avif">
 
 
-<link rel="stylesheet" href="/fonts/fonts.css"><noscript></noscript>
 <link rel="stylesheet" href="/thb-tw.css">
 <style>
 body { font-family: 'Inter', sans-serif; background: #fafaf7; color: #0a0a0a; -webkit-font-smoothing: antialiased; overflow-x: clip; }
@@ -1132,7 +1131,11 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
   }
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   ken(0);   /* the first slide is on screen the longest — it drifts too */
-  setTimeout(function(){ load(1); setInterval(next, HOLD); }, 1800);
+  /* the second hero photo is ~65 KB; downloading it at 1.8 s competed with the LCP image on a
+     throttled connection (PSI 20.09.2026). Start the show once the page has finished loading. */
+  var begin=function(){ setTimeout(function(){ load(1); setInterval(next, HOLD); }, 1200); };
+  if(document.readyState==='complete') begin();
+  else window.addEventListener('load', begin, {once:true});
   document.addEventListener('visibilitychange',function(){});
 })();
 </script>

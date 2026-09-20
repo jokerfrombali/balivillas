@@ -195,7 +195,8 @@ def head_html(title, desc, url, ldjson, ogtype='article'):
         f'<meta property="og:url" content="{SITE}{url}">\n<meta property="og:type" content="{ogtype}">\n<meta property="og:site_name" content="The Host Bali">\n'
         f'<meta property="og:image" content="{SITE}/public-objects/hero/slide-05-1200.jpg">\n<meta name="twitter:card" content="summary_large_image">\n'
         '<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'
-        '<link rel="stylesheet" href="/fonts/fonts.css">\n' + read('head-tailwind.html') +
+        '<link rel="stylesheet" href="/fonts/fonts.css">\n'  # blog pages do not load thb-tw.css, so they keep the separate font file
+        + read('head-tailwind.html') +
         '<script type="application/ld+json">' + json.dumps(ldjson, ensure_ascii=False) + '</script>\n' +
         read('head-css.html') + ARTICLE_CSS + '</head>\n'
     )
