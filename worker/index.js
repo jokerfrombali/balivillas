@@ -212,25 +212,36 @@ async function handleLead(req, env) {
   return json({ ok: !!res.ok, ticket: no });
 }
 
+/* Флуд-защита счётчика просмотров, не стоящая ни одной записи в KV.
+   Живёт в памяти изолята, поэтому считает приблизительно: изоляты поднимаются
+   в разных дата-центрах и перезапускаются. Для этой задачи достаточно — она
+   гасит одного зациклившегося клиента, а не выстраивает честный учёт. Платить
+   за неё записью в KV нельзя: именно она и съедала четверть дневного лимита. */
+const hitSeen = new Map();
+function hitTooFast(ip, limit, windowSec) {
+  const now = Date.now();
+  const key = fingerprint(ip) + ':' + Math.floor(now / (windowSec * 1000));
+  if (hitSeen.size > 5000) hitSeen.clear();
+  const n = (hitSeen.get(key) || 0) + 1;
+  hitSeen.set(key, n);
+  return n > limit;
+}
+
 async function handleHit(req, env) {
   const ip = req.headers.get('cf-connecting-ip') || '0.0.0.0';
-  if (await tooFast(env, ip, 'hit', 90, 60)) return new Response(null, { status: 204 });
+  if (hitTooFast(ip, 90, 60)) return new Response(null, { status: 204 });
 
   let d = {};
   try { d = await req.json(); } catch (e) {}
   const t = wita(new Date());
-  const path = String(d.path || '/').slice(0, 120);
-  await bump(env, 'd:' + t.date + ':views');
-  await bump(env, 'd:' + t.date + ':p:' + path);
 
-  let src = 'direct';
-  try {
-    if (d.ref) {
-      const h = new URL(d.ref).hostname.replace(/^www\./, '');
-      if (h && h !== 'thehostbali.com') src = h.slice(0, 60);
-    }
-  } catch (e) {}
-  await bump(env, 'd:' + t.date + ':s:' + src);
+  /* 21.09.2026: раньше здесь было четыре записи в KV на каждый просмотр —
+     антифлуд, общий счётчик, счётчик по странице и по источнику. На free-плане
+     это упиралось в 1000 записей в сутки примерно на 250 просмотрах, и в тот
+     момент падала отправка заявки. Разбивку по страницам и источникам целиком
+     покрывает GA4: дайджест и так берёт её оттуда, а эти ключи были запасным
+     вариантом. Остаётся один счётчик — он нужен, когда GA4 недоступен. */
+  await bump(env, 'd:' + t.date + ':views');
 
   return new Response(null, { status: 204 });
 }
@@ -333,22 +344,14 @@ async function statsText(env, dayOffsetDays, title) {
     }
     lines.push('', '<i>данные Google Analytics</i>');
   } else {
+    /* Разбивку по страницам и источникам больше не ведём в KV (см. handleHit),
+       так что в запасном режиме остаются только итоги за день. */
     const views = await get('d:' + d.date + ':views');
-    const pages = await topKeys(env, 'd:' + d.date + ':p:', 5);
-    const srcs = await topKeys(env, 'd:' + d.date + ':s:', 4);
 
     lines.push('Просмотров: <b>' + views + '</b>');
     lines.push('Заявок: <b>' + leads + '</b>' + (wa ? ' (из них WhatsApp: ' + wa + ')' : ''));
-    if (pages.length) {
-      lines.push('', '<b>Страницы:</b>');
-      pages.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
-    }
-    if (srcs.length) {
-      lines.push('', '<b>Источники:</b>');
-      srcs.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
-    }
     if (!views && !leads) lines.push('', 'Активности пока не было.');
-    lines.push('', '<i>счётчик сайта; GA4 не подключён</i>');
+    lines.push('', '<i>счётчик сайта; GA4 недоступен, разбивка по страницам есть только в нём</i>');
   }
 
   return lines.join('\n');
