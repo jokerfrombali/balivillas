@@ -88,11 +88,17 @@ async function tg(env, text, topic) {
 
 /* KV counter. At this volume a lost increment now and then is acceptable. */
 async function bump(env, key, by, ttlDays) {
-  if (!env.THB_STATS) return 0;
-  const cur = Number(await env.THB_STATS.get(key)) || 0;
-  const next = cur + (by || 1);
-  await env.THB_STATS.put(key, String(next), { expirationTtl: (ttlDays || 120) * 86400 });
-  return next;
+  if (!env.THB_STATS) return null;
+  /* 21.09.2026: KV на free-плане даёт 1000 записей в сутки, и мы в них упирались.
+     Счётчик — не повод терять заявку, поэтому отказ KV здесь только гасится. */
+  try {
+    const cur = Number(await env.THB_STATS.get(key)) || 0;
+    const next = cur + (by || 1);
+    await env.THB_STATS.put(key, String(next), { expirationTtl: (ttlDays || 120) * 86400 });
+    return next;
+  } catch (e) {
+    return null;
+  }
 }
 
 /* Throttle per visitor, so nobody can flood the chat through the endpoint.
@@ -107,16 +113,21 @@ function fingerprint(ip) {
 async function tooFast(env, ip, bucket, limit, windowSec) {
   if (!env.THB_STATS) return false;
   const key = 'rl:' + bucket + ':' + fingerprint(ip) + ':' + Math.floor(Date.now() / (windowSec * 1000));
-  const n = Number(await env.THB_STATS.get(key)) || 0;
-  if (n >= limit) return true;
-  await env.THB_STATS.put(key, String(n + 1), { expirationTtl: windowSec * 2 });
+  /* Отказ KV открывает ворота, а не закрывает их: этот счётчик стоит первым в
+     обработчике заявки, и брошенное исключение стоило бы нам самой заявки.
+     Пропустить лишний запрос дешевле, чем потерять клиента. */
+  try {
+    const n = Number(await env.THB_STATS.get(key)) || 0;
+    if (n >= limit) return true;
+    await env.THB_STATS.put(key, String(n + 1), { expirationTtl: windowSec * 2 });
+  } catch (e) {}
   return false;
 }
 
 async function ticket(env) {
   if (!env.THB_STATS) return null;
   const n = await bump(env, 'seq:lead', 1, 3650);
-  return String(n).padStart(4, '0');
+  return n === null ? null : String(n).padStart(4, '0');
 }
 
 /* ---------- API ---------- */
@@ -237,8 +248,10 @@ async function handleAlert(req, env) {
     let h = 0;
     for (let i = 0; i < msg.length; i++) h = (h * 31 + msg.charCodeAt(i)) | 0;
     const key = 'alert:' + h;
-    if (await env.THB_STATS.get(key)) return new Response(null, { status: 204 });
-    await env.THB_STATS.put(key, '1', { expirationTtl: 3600 });
+    try {
+      if (await env.THB_STATS.get(key)) return new Response(null, { status: 204 });
+      await env.THB_STATS.put(key, '1', { expirationTtl: 3600 });
+    } catch (e) { /* без дедупликации сообщение уйдёт, это лучше чем молчание */ }
   }
 
   const t = wita(new Date());
