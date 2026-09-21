@@ -47,6 +47,13 @@
     '@media(max-width:1023px){#thbShareFloat{display:flex}}' +
     '@media(max-width:768px){#thbShareFloat{top:82px;right:64px;width:42px;height:42px}}' +
     'body.thb-menu-open #thbShareFloat{display:none!important}' +
+    /* Когда включается липкое меню разделов, страница опускает «назад» и сердце
+       на 132px (128px на узких). Кнопка об этом не знала и оставалась наверху,
+       наезжая на меню. Значения повторяют правило .villa-floating-back,#thbFavFloat
+       в шаблоне виллы — меняются там, поменять и здесь. */
+    '#thbShareFloat{transition:top .26s cubic-bezier(.22,.61,.36,1),background .18s,transform .18s}' +
+    'body.thb-secnav-on:not(.thb-secnav-inline) #thbShareFloat{top:132px}' +
+    '@media(max-width:768px){body.thb-secnav-on:not(.thb-secnav-inline) #thbShareFloat{top:128px}}' +
     /* подсказка «скопировано» */
     '.thb-share-toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);z-index:80;' +
       'background:#0a0a0a;color:#fff;font-family:Inter,system-ui,sans-serif;font-size:13.5px;' +
