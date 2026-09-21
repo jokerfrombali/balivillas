@@ -23,7 +23,10 @@ DRY = '--dry' in sys.argv
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 os.chdir(ROOT)
 
-SAME_AS = ["https://instagram.com/thehostbali/"]
+# 21.09.2026: профиль в Instagram не заполнен, ссылку с сайта сняли, и указывать
+# на пустую страницу в sameAs нельзя — это сигнал в никуда. Впишите сюда профиль,
+# когда он появится: sameAs как раз и разводит одноимённые компании.
+SAME_AS = []
 ALT_NAMES = ["TheHostBali", "The Host Bali Villas", "Host Bali"]
 
 changed = skipped = 0
@@ -33,7 +36,7 @@ for f in sorted(glob.glob('**/*.html', recursive=True)):
     h = open(f, encoding='utf-8', errors='ignore').read()
     if '"@type": "Organization"' not in h:
         continue
-    if '"sameAs"' in h:
+    if '"alternateName"' in h:
         skipped += 1; continue
 
     def patch(m):
@@ -47,7 +50,8 @@ for f in sorted(glob.glob('**/*.html', recursive=True)):
         hit = False
         for n in nodes:
             if isinstance(n, dict) and n.get('@type') == 'Organization':
-                n['sameAs'] = SAME_AS
+                if SAME_AS:
+                    n['sameAs'] = SAME_AS
                 n['alternateName'] = ALT_NAMES
                 hit = True
         if not hit:
