@@ -9,10 +9,19 @@ TW = set(json.load(io.open(os.path.join(ROOT, 'data', 'i18n', 'it.pages.json'), 
 p = os.path.join(ROOT, 'sitemap.xml')
 s = io.open(p, encoding='utf-8').read()
 
-# снять прошлый прогон
-s = re.sub(r'\s*<xhtml:link[^>]*/>', '', s)
+# Снимаем прошлый прогон — но только свои связки. У других разделов
+# (/villa-management/*, /blog/*) альтернативы ставит другой генератор, и
+# вычищать их отсюда нельзя: они пропадали из карты после каждого прогона.
+def drop_ours(m):
+    block = m.group(0)
+    loc = re.search(r'<loc>([^<]+)</loc>', block).group(1)
+    path = loc[len(SITE):] if loc.startswith(SITE) else loc
+    if path in TW or path.startswith('/it/'):
+        block = re.sub(r'\s*<xhtml:link[^>]*/>', '', block)
+    return block
+
+s = re.sub(r'\s*<url>.*?</url>', drop_ours, s, flags=re.S)
 s = re.sub(r'\s*<url>\s*<loc>https://thehostbali\.com/it/(?!</loc>)[^<]*</loc>.*?</url>', '', s, flags=re.S)
-s = s.replace(' xmlns:xhtml="http://www.w3.org/1999/xhtml"', '')
 
 def alts(path):
     en, it = SITE + path, SITE + '/it' + path
