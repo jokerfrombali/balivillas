@@ -31,18 +31,10 @@
 
 
 
-<link rel="stylesheet" href="/fonts/fonts.css"><noscript></noscript>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: { ink:'#0a0a0a', off:'#fafaf7', paper:'#f2efe8', line:'#e6e3dc' },
-      fontFamily: { display:['Lora','Georgia','serif'], sans:['Inter','sans-serif'] }
-    }
-  }
-}
-</script>
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/lora-ecda3beb.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/lora-6d4ac4a9.woff2" crossorigin>
+<link rel="stylesheet" href="/thb-tw.css">
 
 <style>
 * { box-sizing: border-box; }
@@ -635,6 +627,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
       </div>
       <a href="/villas-for-sale/" class="nav-link">For sale</a>
         <a href="/villa-management/" class="nav-link">Villa Management</a>
+      <a href="/blog/" class="nav-link">Guides</a>
       <a href="/#about" class="nav-link">About</a>
       <a href="/contacts/" class="nav-link">Contacts</a>
     </div>
@@ -659,6 +652,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
   <a href="/villas/ungasan/">Ungasan <span>4</span></a>
   <a href="/about/">About us</a>
   <a href="/contacts/">Contacts</a>
+  <a href="/blog/">Guides</a>
   <a href="https://wa.me/6285746499697" rel="noopener" style="color:#0a7d43">WhatsApp</a>
 </div>
 <script>(function(){var b=document.getElementById('thbBurger'),m=document.getElementById('thbMobileMenu');if(!b||!m)return;b.addEventListener('click',function(){m.hidden=!m.hidden;b.setAttribute('aria-expanded',!m.hidden)});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.hidden=true})})})();</script>
@@ -669,6 +663,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
     <div style="width:140px;flex-shrink:0;padding:0 28px 0 0">
       <p class="mega-col-title">Property type</p>
               <a href="/property-rental/?type=villa" class="mega-item">Villa <span class="mega-count">20</span></a>
+              <a href="/monthly-rental/" class="mega-item" style="font-weight:600">Monthly rentals &rarr;</a>
               <a href="/property-rental/" class="mega-item">All properties <span class="mega-count">20</span></a>
               <a href="/villas-for-sale/" class="mega-item" style="font-weight:600">Villas for sale &rarr;</a>
               </div>
@@ -713,7 +708,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
     </div>
     <div style="flex:1"></div>
     <div class="mega-featured mega-zoom" style="width:180px;flex-shrink:0;margin-right:16px">
-      <picture><source srcset="/images/all-bali.avif" type="image/avif"><img src="/images/all-bali.jpg" alt="Map" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" width="736" height="920"></picture>
+      <picture><source srcset="/images/all-bali-360.avif" type="image/avif"><img loading="lazy" decoding="async" src="/images/all-bali-360.jpg" alt="Map" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" width="736" height="920"></picture>
       <div class="mega-featured-overlay"></div>
       <div class="mega-featured-content">
         <p style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;line-height:1.25;margin-bottom:6px">All of Bali,<br>on the map</p>
@@ -725,7 +720,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
       </div>
     </div>
     <div id="megaSlide" class="mega-featured mega-zoom" style="width:180px;flex-shrink:0">
-      <picture><source srcset="/images/sanur.avif" type="image/avif"><img id="megaSlideImg" src="/images/sanur.jpg" alt="" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 0.6s" width="460" height="460"></picture>
+      <picture><source srcset="/images/sanur-360.avif" type="image/avif"><img loading="lazy" decoding="async" id="megaSlideImg" src="/images/sanur-360.jpg" alt="" class="mega-zoom-img" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 0.6s" width="460" height="460"></picture>
       <div class="mega-featured-overlay"></div>
       <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.2);z-index:2">
         <div id="megaSlideBar" style="height:100%;background:white;width:100%;transition:none;transform-origin:left"></div>
@@ -927,6 +922,7 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
 <section aria-labelledby="canggu-seo-title" style="max-width:1320px;margin:56px auto 0;padding:0 40px 56px"><div class="thb-rgrid2" style="background:#f2efe8;border:1px solid #e6e3dc;border-radius:28px;padding:32px;display:grid;grid-template-columns:1.35fr .85fr;gap:28px"><div><p style="font-size:12px;color:#6b6b66;text-transform:uppercase;letter-spacing:0.18em;font-weight:700;margin-bottom:10px">Canggu · for sale</p><h2 id="canggu-seo-title" style="font-family:'Lora',Georgia,serif;font-size:34px;line-height:1.08;font-weight:700;margin:0 0 14px">Buying a villa in Canggu</h2><p style="font-size:15px;line-height:1.8;color:#3b3b36;margin:0 0 14px">Canggu and its quieter neighbour Pererenan are the busiest rental market in Bali: surf breaks from Batu Bolong to Pererenan beach, beach clubs, coworking spaces and a year-round crowd of visitors and remote workers. Nightly rates and occupancy are the highest on the island, and so is the competition between villas.</p><p style="font-size:15px;line-height:1.8;color:#3b3b36;margin:0 0 14px">That is why what a Canggu villa earns matters more than what it looks like. Where a villa is in our programme, the listing shows the real figures. We also point out the trade-offs honestly: traffic, noise near the beach clubs, and the building boom that keeps adding supply.</p></div><div style="background:#fafaf7;border:1px solid #e6e3dc;border-radius:22px;padding:22px"><h2 style="font-family:'Lora',Georgia,serif;font-size:22px;font-weight:700;margin:0 0 14px">Villas for sale by area</h2><div style="display:flex;flex-wrap:wrap;gap:8px"><a href="/villas-for-sale/" style="font-size:13px;color:#0a0a0a;text-decoration:none;background:white;border:1px solid #e6e3dc;border-radius:999px;padding:8px 12px">All villas for sale in Bali</a><a href="/villas-for-sale/sanur/" style="font-size:13px;color:#0a0a0a;text-decoration:none;background:white;border:1px solid #e6e3dc;border-radius:999px;padding:8px 12px">For sale in Sanur</a><a href="/villas-for-sale/umalas/" style="font-size:13px;color:#0a0a0a;text-decoration:none;background:white;border:1px solid #e6e3dc;border-radius:999px;padding:8px 12px">For sale in Umalas</a><a href="/villas-for-sale/ungasan/" style="font-size:13px;color:#0a0a0a;text-decoration:none;background:white;border:1px solid #e6e3dc;border-radius:999px;padding:8px 12px">For sale in Ungasan</a><a href="/villas/canggu/" style="font-size:13px;color:#0a0a0a;text-decoration:none;background:white;border:1px solid #e6e3dc;border-radius:999px;padding:8px 12px">Rent a villa in Canggu</a><a href="/villa-management/" style="font-size:13px;color:#0a0a0a;text-decoration:none;background:white;border:1px solid #e6e3dc;border-radius:999px;padding:8px 12px">Villa management</a></div></div></div><div class="thb-rgrid3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px"><div style="background:white;border:1px solid #e6e3dc;border-radius:22px;padding:22px"><h2 style="font-family:'Lora',Georgia,serif;font-size:20px;font-weight:700;margin:0 0 8px">Why buy in Canggu</h2><p style="font-size:14px;line-height:1.7;color:#4b4b45;margin:0">Demand. Canggu fills villas in months when the rest of Bali is quiet, and larger houses near the beach command rates that few other areas reach. Pererenan offers the same beach with fewer crowds.</p></div><div style="background:white;border:1px solid #e6e3dc;border-radius:22px;padding:22px"><h2 style="font-family:'Lora',Georgia,serif;font-size:20px;font-weight:700;margin:0 0 8px">Ownership and prices</h2><p style="font-size:14px;line-height:1.7;color:#4b4b45;margin:0">Leasehold is the norm; land near the beach is priced accordingly, and asking prices for pool villas start well above the island average. We list what is genuinely for sale, not everything on the market.</p></div><div style="background:white;border:1px solid #e6e3dc;border-radius:22px;padding:22px"><h2 style="font-family:'Lora',Georgia,serif;font-size:20px;font-weight:700;margin:0 0 8px">Rental picture</h2><p style="font-size:14px;line-height:1.7;color:#4b4b45;margin:0">Short-term holiday rentals dominate. A well-run villa near the surf can reach high occupancy, but running costs and marketing spend are higher too — we show both sides for the villas we manage.</p></div></div></section>
 
 <!-- Footer -->
+<!-- thb-guides:begin --><style id="thb-guides-css">.thb-guides{max-width:1320px;margin:0 auto;padding:0 40px 56px}.thb-guides h2{font-family:Lora,Georgia,serif;font-size:28px;font-weight:700;margin:0 0 6px}.thb-guides p.l{font-size:14px;color:#6b6b66;margin:0 0 18px}.thb-guides ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.thb-guides li a{display:block;background:#fff;border:1px solid #e6e3dc;border-radius:16px;padding:16px 18px;color:#0a0a0a;text-decoration:none;font-size:15px;line-height:1.4;font-weight:600}.thb-guides li a:hover{border-color:#0a0a0a}.thb-guides li a span{display:block;font-size:12.5px;color:#6b6b66;font-weight:400;margin-top:4px}.thb-guides .all{display:inline-block;margin-top:16px;font-size:14px;font-weight:600;color:#0a0a0a}@media(max-width:900px){.thb-guides ul{grid-template-columns:1fr 1fr}}@media(max-width:600px){.thb-guides{padding:0 20px 40px}.thb-guides ul{grid-template-columns:1fr}}</style><section class="thb-guides" aria-label="Guides"><h2>Buying in Canggu: guides</h2><p class="l">Written by The Host Bali team, who manage the villas on this site.</p><ul><li><a href="/blog/buying/bali-property-transfer-tax-bphtb/">BPHTB, the Bali Property Transfer Tax, Explained<span>BPHTB is the tax due when property changes hands in Bali. Here is what it applies to, roug…</span></a></li><li><a href="/blog/buying/bali-land-certificate-types/">Bali Land Certificate Types Explained<span>Bali villas sit on different land certificate types, each with different rights and terms.…</span></a></li><li><a href="/blog/buying/leasehold-vs-freehold-bali/">Bali Leasehold vs Freehold<span>Freehold is not available to foreign buyers in Bali. Here is how leasehold compares to the…</span></a></li><li><a href="/blog/buying/bali-zoning-explained/">Bali Zoning Explained: What Buyers Need to Know<span>How Bali&#x27;s land zoning system actually works, the main zone types a buyer runs into, and w…</span></a></li><li><a href="/blog/buying/buying-villa-without-permits-risk/">Buying a Villa Without Permits: The Real Cost<span>A villa without proper permits can look like a bargain, but the missing paperwork usually …</span></a></li><li><a href="/blog/buying/can-foreigners-buy-villa-in-bali/">Can Foreigners Buy a Villa in Bali?<span>Foreigners cannot own freehold land in Bali, but there are legal routes to control a villa…</span></a></li></ul><a class="all" href="/blog/buying/">All guides →</a></section><!-- thb-guides:end -->
 <style id="thb-footer-css">
 .thb-ft{background:#232322;color:#e9e4da;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:14px;line-height:1.6;margin:0;padding:0;box-sizing:border-box}
 .thb-ft *{box-sizing:border-box}
@@ -968,7 +964,6 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <p class="thb-ft-lead">We manage every villa on this site ourselves — you talk to the people who hold the keys, not to an agent in between.</p>
         <div class="thb-ft-soc">
           <a href="https://wa.me/6285746499697" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.1 3.3 5.2 4.5 3.1 1.2 3.5 1 4.1.9.6-.1 2-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.2-.6-.4z"/><path d="M12 2.2C6.6 2.2 2.2 6.6 2.2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm0 17.9c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.9-1.4-1.3-2.9-1.3-4.5 0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.6 8.4-8 8.4z"/></svg> WhatsApp</a>
-          <a href="https://instagram.com/thehostbali/" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg> Instagram</a>
           <a href="mailto:hello@thehostbali.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg> Email</a>
         </div>
       </div>
@@ -988,9 +983,10 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
         <ul>
           <li><a href="/about/">About us</a></li>
           <li><a href="/contacts/">Contacts</a></li>
-          <li><a href="/#longterm">Monthly &amp; Yearly</a></li>
+          <li><a href="/monthly-rental/">Monthly &amp; Yearly</a></li>
           <li><a href="/villas-for-sale/">Long stays</a></li>
           <li><a href="/villa-management/">Villa management</a></li>
+          <li><a href="/blog/">Guides</a></li>
           <li><a href="/villas-for-sale/">Villas for sale</a></li>
         </ul>
       </div>
@@ -1083,8 +1079,8 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
       </div>
       <div class="filter-body">
         <div style="display:flex;flex-wrap:wrap;gap:6px">
-          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="period" value="daily"> Daily</label>
-          <label class="f-chip active"><input type="checkbox" checked style="display:none" data-filter="period" value="monthly"> Monthly</label>
+          <label class="f-chip active"><input type="checkbox" checked style="display:none" data-filter="period" value="daily"> Daily</label>
+          <label class="f-chip"><input type="checkbox" style="display:none" data-filter="period" value="monthly"> Monthly</label>
           <label class="f-chip"><input type="checkbox" style="display:none" data-filter="period" value="yearly"> Yearly</label>
         </div>
       </div>
@@ -1382,10 +1378,10 @@ a,button,[onclick],.prop-card,.thb-acard,.thb-qchip,#thbBurger,.tsh-chip{touch-a
     grid.appendChild(frag);
   });
 })();</script>
-<script defer src="/thb-filters.js"></script>
+<script defer src="/thb-filters.js?v=20260921"></script>
 <script defer src="/thb-events.js"></script>
 <script defer src="/thb-consent.js"></script>
-<script defer src="/thb-bot.js"></script>
+<script defer src="/thb-bot.js?v=20260919"></script>
 </body>
 </html>
 

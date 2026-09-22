@@ -1,0 +1,415 @@
+{
+ "own-premier-umalas-16": {
+  "area": "Umalas",
+  "areaSlug": "umalas",
+  "name": "Premier Umalas 16 — Stylish 3BR Pool Townhouse",
+  "url": "/villa/premier-umalas-16-3br-pool-townhouse/",
+  "bedrooms": 3,
+  "reviews": null
+ },
+ "own-premier-umalas-17": {
+  "area": "Umalas",
+  "areaSlug": "umalas",
+  "name": "Premier Umalas 17 — Stylish 2BR Private Pool Home",
+  "url": "/villa/premier-umalas-17-2br-pool-home/",
+  "bedrooms": 2,
+  "reviews": {
+   "ratingValue": 4.3,
+   "reviewCount": 3,
+   "shown": [
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "As pessoas que nos apoiaram durante a estadia da Villa eram mto atenciosas. A Villa correspondia as fotos. Só o projeto de um dos banheiros, especificamente no espaço disponível para banho era muito pequeno, tipo pareceu erro de projeto, pois o outro banheiro era maior a área. Então, esse era um momento que, com a pouca saída de água do chuveiro (que já precisa de manutenção) e o pouco espaço, se tornavam mais travados. O resto a Villa era ótima, cama e travesseiros ótimos, jogo de lençol tambem. Cozinha super completa. Villa grande e arejada. Só tem uma construção atrás que, no primeiro dia estava fazendo barulho, mas depois não fez mais, daí tira um pouco tambem a privacidade de deixar a cortina aberta (acho que isso poderia ter sido comunicado na publicação da vila, igual tem em outras publicações da plataforma). O bairro tem pontos de conveniência próximas (farmácia, mercadinho), mas não eh o tipo de bairro pra se caminhar.",
+     "date": "2026-08-20",
+     "reply": ""
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "挑了很久选中了这家民宿，性价比非常高，有独立的工作区域很安静可以专注工作，空调也很给力，50米内租摩托车，有咖啡烘培店，超市。周边还有比较好的幼儿园，管家很热情是个专业的团队，总体很满意。",
+     "date": "2026-07-16",
+     "reply": "Dear Chu,\n\nThank you so much for this wonderful 5-star review! We're absolutely delighted that you had such a fantastic experience at our villa.\n\nYour kind words about the cleanliness, location, amenities, and our team mean the world to us. It's guests like you who make what we do so rewarding!\n\nWe truly hope to welcome you back to Bali and our villa again very soon. Thank you for choosing us and for being such a pleasure to host!\n\nWarm regards,\nEva and The Host Team 🙏"
+    }
+   ],
+   "ts": 1789801231998
+  }
+ },
+ "own-villa-black-pool": {
+  "area": "Sanur",
+  "areaSlug": "sanur",
+  "name": "Villa Black Pool — Family 4BR Villa with Big Pool",
+  "url": "/villa/sanur/villa-black-pool-4br-sanur/",
+  "bedrooms": 4,
+  "reviews": {
+   "ratingValue": 4.8,
+   "reviewCount": 4,
+   "shown": [
+    {
+     "channel": "booking.com",
+     "score": 5,
+     "text": "Preciosa villa de lujo, moderna. Iwan, muy amable, nos dio todas las indicaciones necesarias; siempre disponible y atento, la villa, súper limpia. Muy cómoda ubicación.",
+     "date": "2026-09-17",
+     "reply": "Thank you so much, romina ! It was a pleasure having you with us. We hope to welcome you back to Bali soon!"
+    },
+    {
+     "channel": "booking.com",
+     "score": 5,
+     "text": "Great location\n\nSlippery tiles",
+     "date": "2026-08-13",
+     "reply": "Thank you so much, David ! It was a pleasure having you with us. We hope to welcome you back to Bali soon!"
+    }
+   ],
+   "ts": 1789794040930
+  }
+ },
+ "own-sanur-2br-townhouse": {
+  "area": "Sanur",
+  "areaSlug": "sanur",
+  "name": "Stylish 2BR Pool Townhouse in Sanur",
+  "url": "/villa/sanur/stylish-2br-pool-townhouse-sanur/",
+  "bedrooms": 2,
+  "reviews": {
+   "ratingValue": 5,
+   "reviewCount": 3,
+   "shown": [
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "宿はとても清潔で、サヌールの大通りにも出やすい立地でした。\n幼い子供のためにベビーベッドも貸し出してくださり、プールも消毒されていて、安心して過ごすことができました！\nただ宿の実際の住所が、記載されていた住所と異なっていたため、Grabで向かう際には注意が必要だと思いました。",
+     "date": "2026-09-07",
+     "reply": "Thank you so much, J ! It was a pleasure having you with us. We hope to welcome you back to Bali soon!"
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "숙소 자체가 너무 좋았습니다\n다음에 사누르에 다시 온다면 또 머무르고 싶습니다",
+     "date": "2026-08-13",
+     "reply": ""
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "Highly recommend, love to stay again.",
+     "date": "2026-06-25",
+     "reply": ""
+    }
+   ],
+   "ts": 1789795821165
+  }
+ },
+ "own-sanur-modern-2br": {
+  "area": "Sanur",
+  "areaSlug": "sanur",
+  "name": "Modern 2BR Pool Townhouse in Sanur",
+  "url": "/villa/sanur/modern-2br-pool-townhouse-sanur/",
+  "bedrooms": 2,
+  "reviews": null
+ },
+ "own-lucky-lily-sanur-3br": {
+  "area": "Sanur",
+  "areaSlug": "sanur",
+  "name": "Lucky Lily 3BR Pool Villa in Sanur",
+  "url": "/villa/sanur/lucky-lily-3br-pool-villa-sanur/",
+  "bedrooms": 3,
+  "reviews": null
+ },
+ "own-villa-kesari-4-3br-pool-villa-sanur": {
+  "area": "Sanur",
+  "areaSlug": "sanur",
+  "name": "Villa Kesari 4 — Family 3BR Pool Villa in Sanur",
+  "url": "/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/",
+  "bedrooms": 3,
+  "reviews": {
+   "ratingValue": 4.1,
+   "reviewCount": 6,
+   "shown": [
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "Clean and tidy",
+     "date": "2026-07-14",
+     "reply": ""
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "We had a wonderful week stay at the Kesari 4 Villa ! We were a family of 3 and it was perfect for us. The place is very clean and the pool and garden are kept beautifully. Iwan the villa manager gave exceptional service and was easily contactable when needed. Thank you for a beautiful stay in Sanur🙏🏽",
+     "date": "2026-06-24",
+     "reply": ""
+    }
+   ],
+   "ts": 1789794042639
+  }
+ },
+ "own-the-wave-6br-beachside-villa-canggu": {
+  "area": "Canggu",
+  "areaSlug": "canggu",
+  "name": "Villa The Wave — Beachside 6BR Villa in Canggu",
+  "url": "/villa/canggu/the-wave-6br-beachside-villa-canggu/",
+  "bedrooms": 6,
+  "reviews": {
+   "ratingValue": 4.5,
+   "reviewCount": 6,
+   "shown": [
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "The place is very beautiful, in a quiet region.  All bedrooms are suites with a neat decoration, clean and with amenities. Pool is nice and clear. \n\nEva was super proactive and very communicative, easy to talk and always helping.",
+     "date": "2026-09-14",
+     "reply": "Thank you so much, Vinicius ! It was a pleasure having you with us. We hope to welcome you back to Bali soon!"
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "We had a great stay at this villa and really enjoyed our time there. The villa is beautiful, comfortable, and in a great location in Canggu. It’s very close to the beach, with plenty of restaurants, cafés, beach clubs, and other places nearby, which makes it a great choice for anyone looking to stay in Canggu.\n\nThe host was also very responsive, helpful, and easy to communicate with throughout our stay. Everything went smoothly, and we had such a good experience. We would definitely recommend this villa and would be happy to stay here again!",
+     "date": "2026-09-12",
+     "reply": "Thank you so much, Meshal ! It was a pleasure having you with us. We hope to welcome you back to Bali soon!"
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "Très belle villa, comme neuve, correspondant aux photos et a la description. L hôte est accueillante et réactive. L emplacement, a 300 mètres de la mer, très proche des restaurants bars etc, est paisible et résidentiel.\nUn excellent rapport qualité/prix.",
+     "date": "2026-08-05",
+     "reply": ""
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "Magnifique villa conforme aux photos. Matériaux et décoration de qualité.\nAccueil parfait et personnel très bienveillant.\nPropreté impeccable.\nProximité des plages et beach clubs appréciée.\nNous reviendrons",
+     "date": "2026-08-02",
+     "reply": ""
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "Great location great place good communication",
+     "date": "2026-07-04",
+     "reply": ""
+    }
+   ],
+   "ts": 1789795818617
+  }
+ },
+ "own-sanur-garden-pool-4br": {
+  "area": "Sanur",
+  "areaSlug": "sanur",
+  "name": "Sanur Garden Pool Villa — Family 4BR near Mertasari Beach",
+  "url": "/villa/sanur/garden-pool-villa-4br-sanur/",
+  "bedrooms": 4,
+  "reviews": {
+   "ratingValue": 5,
+   "reviewCount": 5,
+   "shown": [
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "Lovely home in Sanur for a family holiday. Location is tucked away from the main street which makes it a lot more quiet and peaceful.",
+     "date": "2026-08-28",
+     "reply": ""
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "Hello, it was a really Nice Place. Thank you for having us.",
+     "date": "2026-07-19",
+     "reply": ""
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "They even went above and beyond and installed a local tv system so we could watch the football.\n\nThe operations really are fantastic for this place",
+     "date": "2026-07-13",
+     "reply": ""
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "This place made me fall in love with Sanur. Four comfortable and clean rooms, big living room, clean kitchen, a great location close to the beach and the bustling center of Sanur, yet still peaceful. The host is also very easy to communicate with. Thank you so much, deff will be back!!",
+     "date": "2026-06-26",
+     "reply": ""
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "Great stay and managed by Iwan the local house manager who helped us with all our additional requests. \n\nFantastic house to stay in. Easy to get GRAB or GOJEK. The pool is larger than in the photos which is great. \n\nWill definitely book this again the next time am in Bali with the family!",
+     "date": "2026-06-21",
+     "reply": ""
+    }
+   ],
+   "ts": 1789795824564
+  }
+ },
+ "own-eco-private-1br-ungasan": {
+  "area": "Ungasan",
+  "areaSlug": "ungasan",
+  "name": "Eco Private — Teak 1BR Pool Villa in Ungasan",
+  "url": "/villa/ungasan/eco-private-1br-pool-villa-ungasan/",
+  "bedrooms": 1,
+  "reviews": {
+   "ratingValue": 5,
+   "reviewCount": 3,
+   "shown": [
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "The place is really nice, spacious, and spotlessly clean. It had everything we needed for a comfortable stay, and the atmosphere was very welcoming. The host was incredibly helpful and responsive, always accommodating our requests and making sure we had a great experience. You can truly feel the care and attention to detail. Definitely worth the money.",
+     "date": "2026-06-27",
+     "reply": ""
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "The place is new nice and clean, the owner ans host are great.\nThe main downside is that villa 1 is right on the street and it is noisy.",
+     "date": "2026-06-23",
+     "reply": ""
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "This house was so cute!! We stayed for a week and it gets cleaned 3x a week and the pool was so nice! The host was so so communicative which was so amazing! It’s definitely not sound proof so if you don’t sleep well with sounds of cars or rain that may be a problem but other than that it was perfect! 10/10 recommend :)",
+     "date": "2026-06-15",
+     "reply": ""
+    }
+   ],
+   "ts": 1789795826015
+  }
+ },
+ "own-eco-teak-2br-ungasan": {
+  "area": "Ungasan",
+  "areaSlug": "ungasan",
+  "name": "Eco Teak — 2BR Pool Villa in Ungasan",
+  "url": "/villa/ungasan/eco-teak-2br-pool-villa-ungasan/",
+  "bedrooms": 2,
+  "reviews": {
+   "ratingValue": 4,
+   "reviewCount": 1,
+   "shown": [],
+   "ts": 1789797638055
+  }
+ },
+ "own-eco-exclusive-1br-ungasan": {
+  "area": "Ungasan",
+  "areaSlug": "ungasan",
+  "name": "Eco Exclusive — Teak 1BR Pool Villa in Ungasan",
+  "url": "/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/",
+  "bedrooms": 1,
+  "reviews": {
+   "ratingValue": 5,
+   "reviewCount": 4,
+   "shown": [
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "Speechless from the time I entered the villa. Peace and private. Will definitely recommend to my friends and family!",
+     "date": "2026-08-18",
+     "reply": ""
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "Super logement ! Très beau !",
+     "date": "2026-07-29",
+     "reply": ""
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "Очень милый уютный домик. Со своим садом Совершенно новый, отчего есть некоторые минусы, днем находится в пространстве очень приятно.\nНо под вечер лично мне не хватило некоторых деталей, входная дверь рядом с кроватью и она стеклянная возможность закрыть шторой нет, такая же история в кухонной зоне и ванной, несмотря что территория частная ночью комфортнее спать с ощущением закрытого пространства.\n+ Большой tv \n+ хорошо работает интернет. \n+ удобный жесткий матрас.\n+ есть отдельный мини кабинет для работы\n+ очень хорошо укомплектована кухня все новое если желаете готовить супер.\n- слив в душе не оч хорошо работает вода затекает в комнату.\n- очень жесткие подушки (мне заменили 💜)\n-пространство не закрывается на ночь шторы.\n-муравьи\n\nПерсонал милый и отзывчивый.",
+     "date": "2026-07-16",
+     "reply": "Hi Yana,\n\nThank you so much for leaving such a detailed and thoughtful review! We truly appreciate you taking the time to share both your positive feedback and your suggestions for improvement.\n\nThis is indeed our newer property, and your comments are incredibly valuable to us. We're committed to making it even better, and we'll work on addressing all of the points you mentioned right away.\n\nThank you for helping us improve and for being so kind and attentive during your stay. Guests like you make us better!\n\nWe hope to welcome you back soon.\n\nBest regards,\nEva 🙏"
+    },
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "Propre service impeccable et privee",
+     "date": "2026-07-14",
+     "reply": ""
+    }
+   ],
+   "ts": 1789797639684
+  }
+ },
+ "own-leonardo-9br-resort-pererenan": {
+  "area": "Canggu",
+  "areaSlug": "canggu",
+  "name": "Leonardo — 9BR Resort Villa in Pererenan",
+  "url": "/villa/canggu/leonardo-9br-resort-pererenan/",
+  "bedrooms": 9,
+  "reviews": {
+   "ratingValue": 5,
+   "reviewCount": 1,
+   "shown": [
+    {
+     "channel": "airbnb",
+     "score": 5,
+     "text": "This Villa is beautiful and a wonderful stay! The open Roman style architecture makes it feel very inviting with the beautiful yard by the river that you can hear running through the evening. The staff were very responsive and the owner is very nice,  involved and accommodating. \n\nMy sister and our children did not want to leave and it’s walking distance to a ton of shops and amazing cafés and restaurants. And about a 15 minute walk to the shore.\n\nI definitely recommend this Villa for any large group or event - or if you just want private space to feel free to stretch out.",
+     "date": "2026-08-27",
+     "reply": ""
+    }
+   ],
+   "ts": 1789799417977
+  }
+ },
+ "own-papat-4br-pool-villa-umalas": {
+  "area": "Umalas",
+  "areaSlug": "umalas",
+  "name": "Villa Papat — 4BR Pool Villa in Umalas",
+  "url": "/villa/umalas/villa-papat-4br-pool-villa-umalas/",
+  "bedrooms": 4,
+  "reviews": null
+ },
+ "own-eco-tropical-1br-ungasan": {
+  "area": "Ungasan",
+  "areaSlug": "ungasan",
+  "name": "Eco Tropical — 1BR Pool Villa in Ungasan",
+  "url": "/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/",
+  "bedrooms": 1,
+  "reviews": {
+   "ratingValue": 3,
+   "reviewCount": 1,
+   "shown": [],
+   "ts": 1789797641233
+  }
+ },
+ "own-serenity-3": {
+  "area": "Sanur",
+  "areaSlug": "sanur",
+  "name": "Serenity 3 — Sun-Lit 3BR Pool Villa in Sanur",
+  "url": "/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/",
+  "bedrooms": 3,
+  "reviews": null
+ },
+ "own-serenity-9": {
+  "area": "Sanur",
+  "areaSlug": "sanur",
+  "name": "Serenity 9 — Elegant 3BR Pool Villa with Garden in Sanur",
+  "url": "/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/",
+  "bedrooms": 3,
+  "reviews": null
+ },
+ "own-serenity-6-1": {
+  "area": "Sanur",
+  "areaSlug": "sanur",
+  "name": "Serenity 6.1 — Elegant 2BR Villa near the Beach in Sanur",
+  "url": "/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/",
+  "bedrooms": 2,
+  "reviews": null
+ },
+ "own-serenity-6-2": {
+  "area": "Sanur",
+  "areaSlug": "sanur",
+  "name": "Serenity 6.2 — 2BR Villa with Courtyard Garden in Sanur",
+  "url": "/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/",
+  "bedrooms": 2,
+  "reviews": null
+ },
+ "own-serenity-10": {
+  "area": "Sanur",
+  "areaSlug": "sanur",
+  "name": "Serenity 10 — 2BR Apartment with Private Terrace in Sanur",
+  "url": "/villa/sanur/serenity-10-apartment-private-terrace-sanur/",
+  "bedrooms": 2,
+  "reviews": null
+ }
+}

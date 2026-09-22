@@ -83,7 +83,8 @@
       frame.referrerPolicy = 'no-referrer-when-downgrade';
       frame.setAttribute('allowfullscreen', '');
       frame.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0;display:block;z-index:1';
-      holder.insertBefore(frame, circle);
+      /* circle may have been re-parented by another script (18.09.2026 bot reports) */
+      if (circle.parentNode === holder) holder.insertBefore(frame, circle); else holder.appendChild(frame);
     }
 
     function setZoom(z) {

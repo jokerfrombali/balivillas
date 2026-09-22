@@ -36,6 +36,7 @@ import { takeSnapshot } from './snapshots.js';
 import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices, readAllCalendars } from './hostex.js';
 import { injectPrices } from './price-html.js';
 import { fxRates, suggest } from './fx.js';
+import { syncReviews, getReviews, publicView, injectReviews } from './reviews.js';
 
 const TZ_OFFSET_MIN = 8 * 60;            // Asia/Makassar (WITA), no DST
 
@@ -88,11 +89,17 @@ async function tg(env, text, topic) {
 
 /* KV counter. At this volume a lost increment now and then is acceptable. */
 async function bump(env, key, by, ttlDays) {
-  if (!env.THB_STATS) return 0;
-  const cur = Number(await env.THB_STATS.get(key)) || 0;
-  const next = cur + (by || 1);
-  await env.THB_STATS.put(key, String(next), { expirationTtl: (ttlDays || 120) * 86400 });
-  return next;
+  if (!env.THB_STATS) return null;
+  /* 21.09.2026: KV на free-плане даёт 1000 записей в сутки, и мы в них упирались.
+     Счётчик — не повод терять заявку, поэтому отказ KV здесь только гасится. */
+  try {
+    const cur = Number(await env.THB_STATS.get(key)) || 0;
+    const next = cur + (by || 1);
+    await env.THB_STATS.put(key, String(next), { expirationTtl: (ttlDays || 120) * 86400 });
+    return next;
+  } catch (e) {
+    return null;
+  }
 }
 
 /* Throttle per visitor, so nobody can flood the chat through the endpoint.
@@ -107,16 +114,21 @@ function fingerprint(ip) {
 async function tooFast(env, ip, bucket, limit, windowSec) {
   if (!env.THB_STATS) return false;
   const key = 'rl:' + bucket + ':' + fingerprint(ip) + ':' + Math.floor(Date.now() / (windowSec * 1000));
-  const n = Number(await env.THB_STATS.get(key)) || 0;
-  if (n >= limit) return true;
-  await env.THB_STATS.put(key, String(n + 1), { expirationTtl: windowSec * 2 });
+  /* Отказ KV открывает ворота, а не закрывает их: этот счётчик стоит первым в
+     обработчике заявки, и брошенное исключение стоило бы нам самой заявки.
+     Пропустить лишний запрос дешевле, чем потерять клиента. */
+  try {
+    const n = Number(await env.THB_STATS.get(key)) || 0;
+    if (n >= limit) return true;
+    await env.THB_STATS.put(key, String(n + 1), { expirationTtl: windowSec * 2 });
+  } catch (e) {}
   return false;
 }
 
 async function ticket(env) {
   if (!env.THB_STATS) return null;
   const n = await bump(env, 'seq:lead', 1, 3650);
-  return String(n).padStart(4, '0');
+  return n === null ? null : String(n).padStart(4, '0');
 }
 
 /* ---------- API ---------- */
@@ -201,25 +213,36 @@ async function handleLead(req, env) {
   return json({ ok: !!res.ok, ticket: no });
 }
 
+/* Флуд-защита счётчика просмотров, не стоящая ни одной записи в KV.
+   Живёт в памяти изолята, поэтому считает приблизительно: изоляты поднимаются
+   в разных дата-центрах и перезапускаются. Для этой задачи достаточно — она
+   гасит одного зациклившегося клиента, а не выстраивает честный учёт. Платить
+   за неё записью в KV нельзя: именно она и съедала четверть дневного лимита. */
+const hitSeen = new Map();
+function hitTooFast(ip, limit, windowSec) {
+  const now = Date.now();
+  const key = fingerprint(ip) + ':' + Math.floor(now / (windowSec * 1000));
+  if (hitSeen.size > 5000) hitSeen.clear();
+  const n = (hitSeen.get(key) || 0) + 1;
+  hitSeen.set(key, n);
+  return n > limit;
+}
+
 async function handleHit(req, env) {
   const ip = req.headers.get('cf-connecting-ip') || '0.0.0.0';
-  if (await tooFast(env, ip, 'hit', 90, 60)) return new Response(null, { status: 204 });
+  if (hitTooFast(ip, 90, 60)) return new Response(null, { status: 204 });
 
   let d = {};
   try { d = await req.json(); } catch (e) {}
   const t = wita(new Date());
-  const path = String(d.path || '/').slice(0, 120);
-  await bump(env, 'd:' + t.date + ':views');
-  await bump(env, 'd:' + t.date + ':p:' + path);
 
-  let src = 'direct';
-  try {
-    if (d.ref) {
-      const h = new URL(d.ref).hostname.replace(/^www\./, '');
-      if (h && h !== 'thehostbali.com') src = h.slice(0, 60);
-    }
-  } catch (e) {}
-  await bump(env, 'd:' + t.date + ':s:' + src);
+  /* 21.09.2026: раньше здесь было четыре записи в KV на каждый просмотр —
+     антифлуд, общий счётчик, счётчик по странице и по источнику. На free-плане
+     это упиралось в 1000 записей в сутки примерно на 250 просмотрах, и в тот
+     момент падала отправка заявки. Разбивку по страницам и источникам целиком
+     покрывает GA4: дайджест и так берёт её оттуда, а эти ключи были запасным
+     вариантом. Остаётся один счётчик — он нужен, когда GA4 недоступен. */
+  await bump(env, 'd:' + t.date + ':views');
 
   return new Response(null, { status: 204 });
 }
@@ -237,8 +260,10 @@ async function handleAlert(req, env) {
     let h = 0;
     for (let i = 0; i < msg.length; i++) h = (h * 31 + msg.charCodeAt(i)) | 0;
     const key = 'alert:' + h;
-    if (await env.THB_STATS.get(key)) return new Response(null, { status: 204 });
-    await env.THB_STATS.put(key, '1', { expirationTtl: 3600 });
+    try {
+      if (await env.THB_STATS.get(key)) return new Response(null, { status: 204 });
+      await env.THB_STATS.put(key, '1', { expirationTtl: 3600 });
+    } catch (e) { /* без дедупликации сообщение уйдёт, это лучше чем молчание */ }
   }
 
   const t = wita(new Date());
@@ -320,22 +345,14 @@ async function statsText(env, dayOffsetDays, title) {
     }
     lines.push('', '<i>данные Google Analytics</i>');
   } else {
+    /* Разбивку по страницам и источникам больше не ведём в KV (см. handleHit),
+       так что в запасном режиме остаются только итоги за день. */
     const views = await get('d:' + d.date + ':views');
-    const pages = await topKeys(env, 'd:' + d.date + ':p:', 5);
-    const srcs = await topKeys(env, 'd:' + d.date + ':s:', 4);
 
     lines.push('Просмотров: <b>' + views + '</b>');
     lines.push('Заявок: <b>' + leads + '</b>' + (wa ? ' (из них WhatsApp: ' + wa + ')' : ''));
-    if (pages.length) {
-      lines.push('', '<b>Страницы:</b>');
-      pages.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
-    }
-    if (srcs.length) {
-      lines.push('', '<b>Источники:</b>');
-      srcs.forEach(function (r) { lines.push(r[1] + ' · ' + esc(r[0])); });
-    }
     if (!views && !leads) lines.push('', 'Активности пока не было.');
-    lines.push('', '<i>счётчик сайта; GA4 не подключён</i>');
+    lines.push('', '<i>счётчик сайта; GA4 недоступен, разбивка по страницам есть только в нём</i>');
   }
 
   return lines.join('\n');
@@ -561,6 +578,12 @@ async function watch(env) {
 export default {
   async fetch(req, env) {
     const url = new URL(req.url);
+    /* 18.09.2026: http://thehostbali.com/ отдавался как 200 (в Cloudflare не включён Always Use HTTPS).
+       Одна каноническая схема: всё на https, 301. */
+    if (url.protocol === 'http:') {
+      url.protocol = 'https:';
+      return Response.redirect(url.toString(), 301);
+    }
 
     /* www -> apex is NOT done here on purpose: HTML paths are served straight
        from the asset store and never reach this handler, so a redirect here
@@ -629,6 +652,21 @@ export default {
         }), {
           headers: { 'content-type': 'application/json',
                      'cache-control': 'public, max-age=300' }
+        });
+      }
+
+      /* Отзывы виллы из зеркала Hostex (без кодов броней). ?sync=1 — обновить
+         сейчас; не чаще раза в 10 минут на адрес, чтобы не жечь запросы к Hostex. */
+      if (url.pathname === '/api/reviews') {
+        const villa = url.searchParams.get('villa') || '';
+        let synced = null;
+        if (url.searchParams.get('sync') === '1' && villa) {
+          const ip = req.headers.get('cf-connecting-ip') || '0';
+          if (!(await tooFast(env, ip, 'rsync', 30, 600))) synced = await syncReviews(env, villa);
+        }
+        const v = publicView(await getReviews(env, villa));
+        return new Response(JSON.stringify({ ok: true, villa, synced, reviews: v }), {
+          headers: { 'content-type': 'application/json', 'cache-control': 'no-store' }
         });
       }
 
@@ -779,6 +817,10 @@ export default {
     let out = withScripts;
     try { out = await injectPrices(withScripts, env, pathNoLang, pathNoLang !== url.pathname ? 'it' : 'en'); }
     catch (e) { /* цена не критична, страницу отдаём как есть */ }
+    if (isVilla) {
+      try { out = await injectReviews(out, env, pathNoLang, pathNoLang !== url.pathname ? 'it' : 'en'); }
+      catch (e) { /* без отзывов страница всё равно целая */ }
+    }
 
     /* Цену двигает PriceLabs, поэтому страницу нельзя держать в кэше края
        сутками: минута — компромисс между свежестью цифры и нагрузкой. */
@@ -803,6 +845,8 @@ export default {
       /* Обход календарей Hostex. syncAll сам решает, пора ли: cron будит нас
          каждые 30 минут, а опрашивать чаще, чем раз в SYNC_EVERY_MIN, незачем. */
       try { await hostexSync(env, false); } catch (e) { /* следующий заход подберёт */ }
+      /* Отзывы: 4 виллы за проход, полный круг за ~2,5 часа. */
+      try { await syncReviews(env); } catch (e) { /* следующий заход подберёт */ }
     })());
   }
 };

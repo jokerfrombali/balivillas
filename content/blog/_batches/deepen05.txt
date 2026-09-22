@@ -1,0 +1,13 @@
+P408	owners/channel-manager-bali-villas	816
+P409	owners/villa-pms-software-bali	845
+P410	owners/direct-bookings-bali-villa	902
+P411	owners/villa-website-and-google-business-bali	792
+P412	owners/villa-photography-bali	829
+P413	owners/villa-listing-description-writing	837
+P414	owners/get-5-star-reviews-bali-villa	883
+P415	owners/fix-bad-villa-reviews-bali	826
+P416	owners/guest-communication-villa-bali	1043
+P417	owners/minimum-stay-length-bali-villa	1041
+P418	owners/villa-cancellation-policy-owners	1017
+P419	owners/guest-damage-deposit-bali-villa	1010
+P420	owners/guest-issues-and-complaints-villa-bali	1071

@@ -113,7 +113,7 @@ function sign(code) { return CURRENCY_SIGN[String(code || '').toUpperCase()] || 
 
 /* ---------- API ---------- */
 
-async function api(env, path, init) {
+export async function api(env, path, init) {
   const token = env.HOSTEX_TOKEN;
   if (!token) throw new Error('no_token');
 

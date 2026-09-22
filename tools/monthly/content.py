@@ -1,0 +1,155 @@
+# -*- coding: utf-8 -*-
+"""Copy for /monthly-rental/ and its area pages.
+
+Wording follows the SERP checks of 20.09.2026: on Bali the dominant term is "monthly rental",
+not "long term rental", so "monthly" leads every title and H1 and "long-term / long stay" are
+carried as synonyms inside the body.
+"""
+
+AREAS = [
+ dict(
+  slug='sanur', area='Sanur', area_slug='sanur',
+  title='Monthly Villa Rentals in Sanur, Bali — Private Pool Villas from 1 Month',
+  desc='Fully serviced private pool villas in Sanur for monthly and long-term rental. Housekeeping, pool care and Wi-Fi included. Rented direct from the team that manages them.',
+  h1='Monthly villa rentals <span class="italic font-light">in Sanur.</span>',
+  kicker='Long stays in Sanur',
+  lead='Eleven private pool villas in Sanur, available from one month. Housekeeping, pool care and Wi-Fi are included, and you rent straight from the team that runs them — no agency fee, no middleman.',
+  market=[
+   'Sanur is the part of Bali people choose when they are staying rather than visiting. It is residential first and touristic second: quiet lanes, low buildings, no club strip, and an eight-kilometre beachside promenade that is flat, shaded and closed to cars — the reason so many long-stay residents here walk and cycle instead of renting a scooter.',
+   'The practical side is what keeps people for a second and third month. Supermarkets, pharmacies, clinics and the island&rsquo;s main hospitals are minutes away, there are international schools and coworking spaces, and Grab and Gojek cover the whole area properly. The airport is 30&ndash;45 minutes by car, and the fast-boat terminal to Nusa Penida and Lembongan is walking distance from the north end of the beach.',
+   'Compared with Canggu, Sanur trades nightlife and surf for calm, space and a shorter commute to anything you actually need. It suits remote workers who want to get work done, families settling in for a school term, couples on a long winter escape and retirees — which is exactly who rents our villas here by the month.',
+  ],
+  best=[
+   '1&ndash;2 bedrooms for solo remote workers and couples: the most-asked configuration and the one that books furthest ahead',
+   '3 bedrooms for families staying a school term, with room to work and eat properly rather than just sleep',
+   '4 bedrooms and up for two families sharing or for a group that wants one base for several months',
+  ],
+  faq=[
+   ('How much is a monthly villa rental in Sanur?',
+    'It depends on the size of the villa and the season. Rates for each of our Sanur villas are shown on the cards above; where a villa shows &ldquo;rate on request&rdquo;, message us and we will send the figure the same day. Ours are fully furnished, serviced villas with housekeeping and pool care included, so they sit above a bare yearly lease from an agent and well below the nightly rate multiplied by thirty.'),
+   ('What is the minimum stay?',
+    'One calendar month. Some villas take 21 nights in low season &mdash; ask, and we will tell you which ones are open.'),
+   ('Is electricity included?',
+    'No. Electricity is metered and billed at cost at the end of each month, which is the norm in Bali; air conditioning is what moves the figure. Everything else &mdash; housekeeping, pool and garden care, Wi-Fi, maintenance and call-outs &mdash; is in the rate.'),
+   ('Can I extend month by month?',
+    'Yes, subject to the calendar. Tell us early and we will hold the villa; long stays are priced better the further ahead you commit.'),
+   ('Do you take a deposit?',
+    'A refundable security deposit, returned after check-out once the villa and the electricity meter are checked. There is no agency commission on top &mdash; you are renting from the manager, not through a broker.'),
+  ],
+ ),
+ dict(
+  slug='canggu', area='Canggu', area_slug='canggu',
+  title='Monthly Villa Rentals in Canggu, Bali — Private Pool Villas from 1 Month',
+  desc='Private pool villas in Canggu and Pererenan for monthly and long-term rental, serviced and rented direct. Housekeeping, pool care and Wi-Fi included.',
+  h1='Monthly villa rentals <span class="italic font-light">in Canggu.</span>',
+  kicker='Long stays in Canggu',
+  lead='Serviced private pool villas in Canggu and Pererenan, available from one month, rented direct from the team that manages them.',
+  market=[
+   'Canggu is where most people picture a Bali long stay: surf at Batu Bolong and Echo Beach, coworking spaces on every second corner, and the densest concentration of cafes, gyms and studios on the island. If your month is built around work, training and a social circle, this is the easiest place to land.',
+   'It is also the busiest. Traffic on the Shortcut and Batu Bolong at peak hours is real, and the further you sit from the main lanes the calmer the month becomes &mdash; which is why Pererenan, one ridge north, has become the choice of people on their second or third stay. Rice fields, the same beaches, a fraction of the noise.',
+   'Rates in Canggu run above Sanur for the same number of bedrooms, and the good long-stay villas are gone months ahead over the dry season. If you are planning June to September, book early.',
+  ],
+  best=[
+   '1&ndash;2 bedrooms for remote workers and couples who want to be inside the Canggu&ndash;Pererenan triangle',
+   'Larger villas for groups sharing one base &mdash; the per-person cost drops sharply and our bigger homes here are built for it',
+   'Anything with a proper desk and reliable fibre: in Canggu the working setup decides the stay',
+  ],
+  faq=[
+   ('How much is a monthly villa rental in Canggu?',
+    'Canggu prices above most of Bali for the same size of villa, and the dry season prices above the wet. Our Canggu and Pererenan rates are on the cards above; where a card shows &ldquo;rate on request&rdquo;, message us for the figure.'),
+   ('Canggu or Pererenan?',
+    'Canggu if you want to walk to cafes, gyms and the beach and do not mind the traffic. Pererenan if you want the same beaches with rice fields and quiet lanes, and are happy to ride five to ten minutes for the busy side.'),
+   ('What is the minimum stay?',
+    'One calendar month, subject to the calendar. Canggu books further ahead than anywhere else we operate, so ask early for dry-season dates.'),
+   ('Is electricity included?',
+    'No &mdash; it is metered and billed at cost monthly. Housekeeping, pool and garden care, Wi-Fi and maintenance are included.'),
+  ],
+ ),
+ dict(
+  slug='umalas', area='Umalas', area_slug='umalas',
+  title='Monthly Villa Rentals in Umalas, Bali — Private Pool Villas from 1 Month',
+  desc='Serviced private pool villas in Umalas for monthly and long-term rental. Quiet, central, ten minutes from Canggu and Seminyak. Rented direct.',
+  h1='Monthly villa rentals <span class="italic font-light">in Umalas.</span>',
+  kicker='Long stays in Umalas',
+  lead='Private pool villas in Umalas, available from one month &mdash; the quiet middle ground between Canggu and Seminyak, rented direct from the team that manages them.',
+  market=[
+   'Umalas is the compromise a lot of long-stay residents arrive at after a month somewhere louder. It sits between Canggu and Seminyak with rice fields still in the middle of it, so you get quiet lanes and space, but Berawa Beach is about ten minutes away and Seminyak about fifteen.',
+   'It is a residential area rather than a tourist one: stables, schools, bakeries, vets, gyms and a strong resident community, with far less through-traffic than the coastal strips. For families and for anyone who works from home during the day and wants the beach in the evening, it is the most practical base on this side of the island.',
+   'Because it is not a beach address, the same specification of villa usually costs less per month here than in Canggu &mdash; one of the reasons people who stay a season keep moving inland.',
+  ],
+  best=[
+   '2&ndash;3 bedroom pool homes for couples and small families staying a season',
+   'Townhouse-style villas with a desk in every bedroom, for two people both working from home',
+   'Anything with covered parking &mdash; in Umalas you will use a car more than in Canggu',
+  ],
+  faq=[
+   ('Is Umalas good for a long stay?',
+    'Yes, and it is one of the more underrated choices. You keep quiet and space, you are ten to fifteen minutes from Berawa and Seminyak, and you pay less per month than for the same villa at a beach address.'),
+   ('What is the minimum stay?',
+    'One calendar month.'),
+   ('Is electricity included?',
+    'No &mdash; metered and billed at cost each month. Housekeeping, pool and garden care, Wi-Fi and maintenance are in the rate.'),
+   ('Do I need a scooter or a car?',
+    'A scooter is enough for daily life; a car is more comfortable if you have children or are moving between Umalas, Canggu and Seminyak regularly. We can arrange either.'),
+  ],
+ ),
+ dict(
+  slug='ungasan', area='Ungasan', area_slug='ungasan',
+  title='Monthly Villa Rentals in Ungasan, Bali — Private Pool Villas from 1 Month',
+  desc='Eco private pool villas in Ungasan, Bukit, for monthly and long-term rental. Close to Melasti and Uluwatu. Serviced and rented direct.',
+  h1='Monthly villa rentals <span class="italic font-light">in Ungasan.</span>',
+  kicker='Long stays on the Bukit',
+  lead='Private pool villas in Ungasan on the Bukit peninsula, available from one month &mdash; close to Melasti and Uluwatu, rented direct from the team that manages them.',
+  market=[
+   'Ungasan sits on the Bukit, the limestone peninsula at the southern tip of Bali, and it feels different from the rest of the island: dry, open, clifftop, with the best beaches in Bali a short ride away &mdash; Melasti, Karma, Nyang Nyang, Padang Padang and the Uluwatu breaks.',
+   'It is the quietest of the areas we operate in, and that cuts both ways. If you want surf, space and a genuinely calm month, it is hard to beat. If you want to walk to a choice of cafes every evening, Canggu or Sanur will suit you better &mdash; on the Bukit you ride to most things.',
+   'Per month, Ungasan is usually the best value of our four areas for a private pool villa, and it is the natural choice for surfers, writers and anyone whose month is built around the water rather than the town.',
+  ],
+  best=[
+   '1&ndash;2 bedroom eco villas for surfers, couples and solo long stays &mdash; our core stock here',
+   'Villas with a proper outdoor living area: on the Bukit you live outside, the climate is drier than the north',
+   'Anything within ten minutes of Melasti if beach access is what the month is about',
+  ],
+  faq=[
+   ('Is Ungasan suitable for a month or longer?',
+    'Yes, if you want quiet and beaches over walkable nightlife. It is the calmest of our areas and usually the best value per month for a private pool villa.'),
+   ('How far is Uluwatu and Melasti?',
+    'Both are a short ride &mdash; roughly ten to twenty minutes depending on the villa and the traffic. The airport is about 30 minutes.'),
+   ('What is the minimum stay?',
+    'One calendar month.'),
+   ('Is electricity included?',
+    'No &mdash; metered and billed at cost. Housekeeping, pool and garden care, Wi-Fi and maintenance are included.'),
+  ],
+ ),
+]
+
+HUB = dict(
+ title='Monthly Villa Rentals in Bali — Private Pool Villas from 1 Month | The Host Bali',
+ desc='Monthly and long-term rental of private pool villas in Sanur, Canggu, Umalas and Ungasan. Fully furnished and serviced, housekeeping and pool care included, rented direct from the manager.',
+ h1='Monthly villa rentals in Bali,<br> <span class="italic font-light">booked direct.</span>',
+ kicker='Long stays from one month',
+ lead='Twenty private pool villas in Sanur, Canggu, Umalas and Ungasan, available by the month. Fully furnished and serviced, with housekeeping, pool care and Wi-Fi included &mdash; and rented straight from the team that manages them, so there is no agency commission on top.',
+ intro=[
+  'A monthly villa rental in Bali is a different product from a nightly booking and from a yearly lease, and it is worth knowing which one you are being offered. A nightly booking multiplied by thirty is the most expensive way to stay a month. A yearly lease through an agent is the cheapest per month, but the villa usually comes unfurnished, you pay a year up front, and the agent takes a commission for introducing you.',
+  'What we rent sits between the two: a fully furnished, fully serviced villa, from one calendar month, with housekeeping, pool and garden care, Wi-Fi and maintenance included in the rate. You deal with the company that manages the villa every day &mdash; not a listing site and not a broker &mdash; so there is no booking fee and no introduction fee, and if the air conditioning fails on a Sunday you message the same people who answered your first question.',
+  'Every villa on this page is one we manage ourselves. That is why we can hold dates for you while you decide, price a three-month stay differently from a one-month stay, and tell you honestly which villa suits the month you have in mind.',
+ ],
+ faq=[
+  ('How much does it cost to rent a villa in Bali for a month?',
+   'It depends on the area, the number of bedrooms and the season. Our own rates are on the villa cards on this page and on each area page. As a guide to the wider market: bare, unfurnished villas on yearly agency leases are the cheapest per month, serviced and furnished monthly rentals like ours sit above them, and Canggu prices above Sanur, Umalas and Ungasan for the same size of villa.'),
+  ('What is the minimum stay?',
+   'One calendar month on every villa. A few take 21 nights in low season &mdash; ask us which.'),
+  ('What is included in the monthly rate?',
+   'A furnished villa with a private pool, weekly housekeeping, pool and garden care, Wi-Fi, and maintenance including call-outs. Electricity is metered and billed at cost, which is standard in Bali. Daily housekeeping, airport transfers and scooter or car hire can be added.'),
+  ('Do you charge an agency or booking fee?',
+   'No. We manage these villas ourselves, so you rent from the manager directly. There is no agency commission, no introduction fee and no platform service fee &mdash; only the rent, the metered electricity and a refundable security deposit.'),
+  ('Can I see the villa before committing?',
+   'Yes. If you are already in Bali we will arrange a viewing. If you are not, we will do a video walkthrough on WhatsApp &mdash; most of our long-stay guests book that way.'),
+  ('Which area should I choose for a long stay?',
+   'Sanur for calm, walkability, schools and medical facilities. Canggu and Pererenan for surf, coworking and social life. Umalas for quiet and space within reach of both Canggu and Seminyak. Ungasan for the Bukit beaches and the best value per month.'),
+  ('Can I pay monthly rather than for the whole stay up front?',
+   'For stays of three months and longer we normally split payment. Tell us what you need and we will set out the terms in writing before you commit.'),
+  ('Do you also manage villas for owners?',
+   'Yes &mdash; every villa on this site is under our management. If you own a villa in Bali and want it rented and run, see <a href="/villa-management/">villa management</a>.'),
+ ],
+)

@@ -40,6 +40,7 @@ Allow: /
 Sitemap: https://thehostbali.com/sitemap.xml
 Sitemap: https://thehostbali.com/sitemap-growth.xml
 Sitemap: https://thehostbali.com/sitemap-images.xml
+Sitemap: https://thehostbali.com/sitemap-blog.xml
 
 # Админка — не для поиска
 User-agent: *

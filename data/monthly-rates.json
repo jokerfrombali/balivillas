@@ -1,0 +1,184 @@
+{
+  "_readme": [
+    "Monthly (long-stay) rates. Edit priceMonth and minNights, then run:",
+    "  python3 tools/monthly/build.py && python3 tools/update-lastmod.py",
+    "priceMonth: number in the currency below, per calendar month, or null = 'Rate on request'.",
+    "Leave null for any villa you do not want priced publicly - the card still shows, with an enquiry link."
+  ],
+  "currency": "IDR",
+  "currencySymbol": "IDR",
+  "minMonths": 1,
+  "includes": [
+    "Weekly housekeeping",
+    "Pool and garden care",
+    "Wi-Fi",
+    "Maintenance and call-outs"
+  ],
+  "excludes": [
+    "Electricity, metered and billed at cost",
+    "Scooter or car hire",
+    "Daily housekeeping (available as an add-on)"
+  ],
+  "villas": {
+    "own-premier-umalas-16": {
+      "name": "Premier Umalas 16 — Stylish 3BR Pool Townhouse",
+      "area": "Umalas",
+      "bedrooms": 3,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-premier-umalas-17": {
+      "name": "Premier Umalas 17 — Stylish 2BR Private Pool Home",
+      "area": "Umalas",
+      "bedrooms": 2,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-villa-black-pool": {
+      "name": "Villa Black Pool — Family 4BR Villa with Big Pool",
+      "area": "Sanur",
+      "bedrooms": 4,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-sanur-2br-townhouse": {
+      "name": "Stylish 2BR Pool Townhouse in Sanur",
+      "area": "Sanur",
+      "bedrooms": 2,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-sanur-modern-2br": {
+      "name": "Modern 2BR Pool Townhouse in Sanur",
+      "area": "Sanur",
+      "bedrooms": 2,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-lucky-lily-sanur-3br": {
+      "name": "Lucky Lily 3BR Pool Villa in Sanur",
+      "area": "Sanur",
+      "bedrooms": 3,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-villa-kesari-4-3br-pool-villa-sanur": {
+      "name": "Villa Kesari 4 — Family 3BR Pool Villa in Sanur",
+      "area": "Sanur",
+      "bedrooms": 3,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-the-wave-6br-beachside-villa-canggu": {
+      "name": "Villa The Wave — Beachside 6BR Villa in Canggu",
+      "area": "Canggu",
+      "bedrooms": 6,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-sanur-garden-pool-4br": {
+      "name": "Sanur Garden Pool Villa — Family 4BR near Mertasari Beach",
+      "area": "Sanur",
+      "bedrooms": 4,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-eco-private-1br-ungasan": {
+      "name": "Eco Private — Teak 1BR Pool Villa in Ungasan",
+      "area": "Ungasan",
+      "bedrooms": 1,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-eco-teak-2br-ungasan": {
+      "name": "Eco Teak — 2BR Pool Villa in Ungasan",
+      "area": "Ungasan",
+      "bedrooms": 2,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-eco-exclusive-1br-ungasan": {
+      "name": "Eco Exclusive — Teak 1BR Pool Villa in Ungasan",
+      "area": "Ungasan",
+      "bedrooms": 1,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-leonardo-9br-resort-pererenan": {
+      "name": "Leonardo — 9BR Resort Villa in Pererenan",
+      "area": "Canggu",
+      "bedrooms": 9,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-papat-4br-pool-villa-umalas": {
+      "name": "Villa Papat — 4BR Pool Villa in Umalas",
+      "area": "Umalas",
+      "bedrooms": 4,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-eco-tropical-1br-ungasan": {
+      "name": "Eco Tropical — 1BR Pool Villa in Ungasan",
+      "area": "Ungasan",
+      "bedrooms": 1,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-serenity-3": {
+      "name": "Serenity 3 — Sun-Lit 3BR Pool Villa in Sanur",
+      "area": "Sanur",
+      "bedrooms": 3,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-serenity-9": {
+      "name": "Serenity 9 — Elegant 3BR Pool Villa with Garden in Sanur",
+      "area": "Sanur",
+      "bedrooms": 3,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-serenity-6-1": {
+      "name": "Serenity 6.1 — Elegant 2BR Villa near the Beach in Sanur",
+      "area": "Sanur",
+      "bedrooms": 2,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-serenity-6-2": {
+      "name": "Serenity 6.2 — 2BR Villa with Courtyard Garden in Sanur",
+      "area": "Sanur",
+      "bedrooms": 2,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    },
+    "own-serenity-10": {
+      "name": "Serenity 10 — 2BR Apartment with Private Terrace in Sanur",
+      "area": "Sanur",
+      "bedrooms": 2,
+      "priceMonth": null,
+      "minMonths": 1,
+      "note": ""
+    }
+  }
+}

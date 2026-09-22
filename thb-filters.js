@@ -38,7 +38,9 @@
     var am = checkedMany('amenity').concat(quickPills());
     return {
       type: checkedOne('type', 'all'),
-      beds: checkedOne('beds', 'any'),
+      /* 21.09.2026: спальни стали множественным выбором — «2 и 3 спальни»
+         обычный запрос, а раньше чип-ы вели себя как радиокнопки. */
+      beds: checkedMany('beds').filter(function (v) { return v !== 'any'; }),
       loc: checkedMany('location'),
       am: am.filter(function (v, i) { return v && am.indexOf(v) === i; })
     };
@@ -48,9 +50,12 @@
     if (s.type && s.type !== 'all') {
       if ((card.getAttribute('data-type') || '').indexOf(s.type) < 0) return false;
     }
-    if (s.beds && s.beds !== 'any') {
+    if (s.beds.length) {
       var b = parseInt(card.getAttribute('data-beds') || '0', 10) || 0;
-      if (s.beds === '5' ? b < 5 : b !== parseInt(s.beds, 10)) return false;
+      var hit = s.beds.some(function (v) {
+        return v === '5' ? b >= 5 : b === parseInt(v, 10);   /* «5+» — это диапазон */
+      });
+      if (!hit) return false;
     }
     if (s.loc.length && s.loc.indexOf(card.getAttribute('data-location')) < 0) return false;
     if (s.am.length) {
@@ -64,18 +69,27 @@
 
   function activeCount(s) {
     return (s.type && s.type !== 'all' ? 1 : 0) +
-           (s.beds && s.beds !== 'any' ? 1 : 0) +
-           s.loc.length + s.am.length;
+           s.beds.length + s.loc.length + s.am.length;
   }
 
   function word(n) { return n === 1 ? ' villa' : ' villas'; }
 
-  /* keep the single-choice groups single, and mirror state onto the chips */
+  /* Type и Rental period — выбор один. Bedrooms — сколько угодно, но первый чип
+     («Any») работает как сброс: он гасит остальные, а любой другой гасит его. */
+  var MULTI = { beds: true };
+
   function syncChips(changed) {
     ['type', 'beds', 'period'].forEach(function (group) {
       var list = inputs(group);
-      if (changed && changed.getAttribute('data-filter') === group && changed.checked) {
-        list.forEach(function (i) { if (i !== changed) i.checked = false; });
+      var touched = changed && changed.getAttribute('data-filter') === group;
+      if (touched && changed.checked) {
+        if (!MULTI[group] || changed.value === 'any' || changed.value === 'all') {
+          list.forEach(function (i) { if (i !== changed) i.checked = false; });
+        } else {
+          list.forEach(function (i) {
+            if (i.value === 'any' || i.value === 'all') i.checked = false;
+          });
+        }
       }
       if (!list.some(function (i) { return i.checked; }) && list.length) {
         list[0].checked = true;               // fall back to "All" / "Any"

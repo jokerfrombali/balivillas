@@ -1,0 +1,80 @@
+<style id="thb-wapill-css">
+/* the green WhatsApp button on its own, bottom-right — no avatar, no pitch */
+#thbWaPill{position:fixed;left:auto;right:20px;transform:none;bottom:calc(20px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;background:none;border:0;box-shadow:none;padding:0;width:auto;font-family:'Inter',sans-serif;box-sizing:border-box}
+#thbWaPill .ava,#thbWaPill p,#thbWaPill .wa-ai{display:none}
+#thbWaPill .wa-go{display:inline-flex;align-items:center;gap:8px;height:48px;box-sizing:border-box;background:#22c55e;color:#fff;font-weight:700;font-size:14.5px;padding:0 20px;border-radius:999px;text-decoration:none;flex:0 0 auto;box-shadow:0 12px 28px -10px rgba(22,163,74,.6),0 2px 8px rgba(0,0,0,.14);transition:background .15s,transform .16s,box-shadow .16s}
+#thbWaPill .wa-go:hover{background:#16a34a;transform:translateY(-1px);box-shadow:0 16px 32px -10px rgba(22,163,74,.66),0 2px 10px rgba(0,0,0,.16)}
+#thbWaPill .wa-go svg{width:19px;height:19px}
+@media(max-width:600px){#thbWaPill{right:14px;bottom:calc(16px + env(safe-area-inset-bottom))}#thbWaPill .wa-go{height:46px;padding:0 17px;font-size:14px}}
+@media print{#thbWaPill{display:none}}
+</style>
+<div id="thbWaPill">
+  <span class="ava" aria-hidden="true"></span>
+  <p>Need help choosing? We know every villa — tell us what matters and we'll pick the right one.</p>
+  <a class="wa-go" href="https://wa.me/6285746499697?text=Hi%20The%20Host%20Bali!%20I%27m%20looking%20for%20a%20villa%20in%20Bali." rel="noopener" aria-label="Chat on WhatsApp with a human">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2C6.6 2.2 2.2 6.6 2.2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm5.5 12.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.1 3.3 5.2 4.5 3.1 1.2 3.5 1 4.1.9.6-.1 2-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.2-.6-.4z"/></svg>
+    WhatsApp
+  </a>
+</div>
+<style id="thb-savedmenu-css">
+#thbMobileMenu .thb-saved-item{display:flex;align-items:center;justify-content:space-between}
+#thbMobileMenu .thb-saved-item [data-fav-count]{background:#e11d48;color:#fff;border-radius:999px;min-width:20px;height:20px;line-height:20px;text-align:center;font-size:11.5px;font-weight:700;padding:0 6px;margin:0}
+</style>
+<script defer src="/thb-fav.js"></script>
+<style id="thb-favhdr-fix">
+/* на узких экранах сердце не влезает рядом с CTA — прячем, счётчик показываем точкой на бургере */
+@media(max-width:639px){
+  #thbNavRight [data-fav-link],.hd nav [data-fav-link],header [data-fav-link]{display:none!important}
+  #thbBurger{position:relative}
+  body.thb-has-saved #thbBurger::after{content:'';position:absolute;top:5px;right:5px;width:10px;height:10px;
+    border-radius:50%;background:#e11d48;border:2px solid #fff}
+}
+</style>
+<script>
+/* Villas mega-menu: hover the Villas nav item to reveal the districts/sections panel */
+(function () {
+  var trigger = document.querySelector('.mega-trigger');
+  var panel = document.getElementById('villasPanel');
+  if (!trigger || !panel) return;
+  var backdrop = document.getElementById('villasBackdrop');
+  var chevron = trigger.querySelector('.mega-chevron');
+  var open = false;
+  function openMega() {
+    if (open) return; open = true;
+    panel.classList.add('open');
+    if (backdrop) backdrop.classList.add('open');
+    if (chevron) chevron.classList.add('open');
+  }
+  function closeMega() {
+    if (!open) return; open = false;
+    panel.classList.remove('open');
+    if (backdrop) backdrop.classList.remove('open');
+    if (chevron) chevron.classList.remove('open');
+  }
+  trigger.addEventListener('mouseenter', openMega);
+  if (backdrop) backdrop.addEventListener('click', closeMega);
+  /* close once the pointer leaves the trigger+panel zone */
+  document.addEventListener('mousemove', function (e) {
+    if (!open) return;
+    var pr = panel.getBoundingClientRect();
+    var tr = trigger.getBoundingClientRect();
+    var inZone = e.clientY >= tr.top && e.clientY <= pr.bottom + 8
+                 && e.clientX >= pr.left - 24 && e.clientX <= pr.right + 24;
+    if (!inZone && e.clientY > tr.bottom) closeMega();
+  });
+  /* click outside closes */
+  document.addEventListener('click', function (e) {
+    if (!trigger.contains(e.target) && !panel.contains(e.target)) closeMega();
+  });
+  /* Escape closes */
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMega();
+  });
+})();
+</script>
+<script defer src="/thb-totop.js"></script>
+<script defer src="/thb-events.js"></script>
+<script defer src="/thb-consent.js"></script>
+<script defer src="/thb-bot.js?v=20260919"></script>
+</body>
+</html>
