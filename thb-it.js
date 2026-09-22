@@ -15,6 +15,8 @@
     'Cleaning fee': 'Pulizie finali', 'Taxes': 'Tasse', 'Guests': 'Ospiti',
     'On request': 'Su richiesta', 'Prices on request': 'Prezzi su richiesta',
     'Select dates for pricing': 'Scegli le date per vedere il prezzo', 'Select dates': 'Scegli le date',
+    'Select check-out date': 'Scegli la data di check-out', 'Select check-in date': 'Scegli la data di check-in',
+    'Clear dates': 'Cancella le date', 'Add date': 'Aggiungi la data',
     'Crossed-out dates are already booked': 'Le date barrate sono già prenotate',
     'Those dates include nights that are already booked. Please pick a range without them.':
       'Queste date includono notti già prenotate. Scegli un intervallo senza di esse.',
@@ -77,6 +79,10 @@
   var P = [
     [/^(January|February|March|April|May|June|July|August|September|October|November|December) (\d{4})$/,
       function (m, mo, y) { return MON[mo] + ' ' + y; }],
+    /* «Oct 3, 2026 ~ Oct 6, 2026» -> «3 ott 2026 ~ 6 ott 2026»: порядок
+       день-месяц, названия месяцев подменит dateish */
+    [/^([A-Za-z]{3}) (\d{1,2}), (\d{4}) ~ ([A-Za-z]{3}) (\d{1,2}), (\d{4})$/, '$2 $1 $3 ~ $5 $4 $6'],
+    [/^([A-Za-z]{3}) (\d{1,2}), (\d{4})$/, '$2 $1 $3'],
     [/^from (.+?) per night$/, 'da $1 a notte'],
     [/^(.+?) per night$/, '$1 a notte'],
     [/^(.+?) total$/, '$1 totale'],
@@ -104,14 +110,33 @@
     [/^Booking request — (.+)$/, 'Richiesta di prenotazione — $1']
   ];
 
+  /* Даты виджеты печатают по-английски («3 Oct – 6 Oct», «Sat, 3 Oct 2026»):
+     формат задан в thb-price.js и thb-enquiry.js одинаково для всех языков.
+     Меняем только названия месяцев и дней недели, и только там, где рядом
+     стоит число, — чтобы не задеть имена вилл. */
+  var MS = { Jan: 'gen', Feb: 'feb', Mar: 'mar', Apr: 'apr', May: 'mag', Jun: 'giu',
+             Jul: 'lug', Aug: 'ago', Sep: 'set', Oct: 'ott', Nov: 'nov', Dec: 'dic' };
+  var DS = { Mon: 'lun', Tue: 'mar', Wed: 'mer', Thu: 'gio', Fri: 'ven', Sat: 'sab', Sun: 'dom' };
+
+  function dateish(s) {
+    if (!/\d/.test(s) || !/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/.test(s)) return null;
+    var out = s.replace(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/g, function (m) { return MS[m]; })
+               .replace(/\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\b/g, function (m) { return DS[m]; });
+    return out === s ? null : out;
+  }
+
   function tr(s) {
     var k = s.trim();
     if (!k) return null;
     if (X.hasOwnProperty(k)) return s.replace(k, X[k]);
     for (var i = 0; i < P.length; i++) {
-      if (P[i][0].test(k)) return s.replace(k, k.replace(P[i][0], P[i][1]));
+      if (P[i][0].test(k)) {
+        var out = k.replace(P[i][0], P[i][1]);
+        return s.replace(k, dateish(out) || out);
+      }
     }
-    return null;
+    var d = dateish(k);
+    return d === null ? null : s.replace(k, d);
   }
 
   var SKIP = { SCRIPT: 1, STYLE: 1, NOSCRIPT: 1 };

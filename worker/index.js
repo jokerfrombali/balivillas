@@ -16,6 +16,7 @@
  *                     mirror in KV. Dates only — no guest data ever leaves here.
  *   GET  /api/prices   all "from" rates at once, for the catalogue cards.
  *   GET  /api/price?villa=<id>
+ *   GET  /api/calendars  занятость всех вилл разом, для фильтра по датам
  *                     "from" nightly rate, currency, min stay, max guests —
  *                     from the same mirror, refreshed with the calendar.
  *   GET  /api/quote?villa=<id>&from=&to=&guests=
@@ -32,7 +33,7 @@ import { handleAdmin } from './admin.js';
 import { saveLead } from './leads.js';
 import { opportunities } from './opportunities.js';
 import { takeSnapshot } from './snapshots.js';
-import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices } from './hostex.js';
+import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices, readAllCalendars } from './hostex.js';
 import { injectPrices } from './price-html.js';
 import { fxRates, suggest } from './fx.js';
 
@@ -615,6 +616,22 @@ export default {
         });
       }
 
+      /* Занятость всех вилл разом — фильтр по датам в каталоге. Ночи отдаём
+         отрезками, страница сама проверяет пересечение с выбранными датами.
+         Виллы без объекта в Hostex в ответе нет: каталог показывает её как
+         «даты по запросу», а не как свободную. */
+      if (url.pathname === '/api/calendars') {
+        const data = await readAllCalendars(env);
+        if (!data) return json({ ok: false, error: 'no_calendars' }, 503);
+        return new Response(JSON.stringify({
+          ok: true, from: data.from, to: data.to,
+          updated: data.ts || 0, villas: data.byUrl
+        }), {
+          headers: { 'content-type': 'application/json',
+                     'cache-control': 'public, max-age=300' }
+        });
+      }
+
       /* Все базовые цены разом — карточки в каталоге. */
       if (url.pathname === '/api/prices') {
         const data = await allBasePrices(env);
@@ -733,7 +750,7 @@ export default {
         : isSaleList
           ? ['/thb-cards.js', '/thb-sale-map.js']
           : isRentList
-            ? ['/thb-cards.js', '/thb-rent-map.js']
+            ? ['/thb-cards.js', '/thb-rent-map.js', '/thb-dates.js']
             : ['/thb-cards.js'];   /* сам выходит, если карточек на странице нет */
 
     /* Переключатель валют нужен везде, где есть цены: и на вилле, и в каталоге,

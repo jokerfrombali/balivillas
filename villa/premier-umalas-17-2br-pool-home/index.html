@@ -1287,6 +1287,23 @@ document.addEventListener('DOMContentLoaded', function() {
   window.renderCalendars = renderCalendars;
   window.thbGetDates = function () { return { start: startDate, end: endDate }; };
 
+  /* Даты, выбранные в каталоге, приходят в адресе (?checkin=&checkout=).
+     Гость отфильтровал выдачу по датам и открыл виллу — на странице виллы они
+     должны быть уже выбраны, иначе он выбирает их второй раз. Ставит их
+     thb-avail.js, когда календарь отрисован. */
+  window.thbSetDates = function (a, b) {
+    var p = String(a || '').split('-'), q = String(b || '').split('-');
+    if (p.length !== 3 || q.length !== 3) return false;
+    var s = new Date(+p[0], +p[1] - 1, +p[2]), e = new Date(+q[0], +q[1] - 1, +q[2]);
+    if (isNaN(s) || isNaN(e) || e <= s) return false;
+    startDate = s; endDate = e;
+    baseDate = new Date(s.getFullYear(), s.getMonth(), 1);
+    renderCalendars();
+    updateDateDisplay();
+    updateBookingForm();
+    return true;
+  };
+
   window.clearDates = function() {
     startDate = null;
     endDate = null;

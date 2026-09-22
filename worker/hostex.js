@@ -155,6 +155,12 @@ const META = 'hx:meta';
  * это тринадцать чтений KV на запрос, а так одно. */
 const PRICES_ALL = 'hx:prices:all';
 
+/* Сводка занятости всех вилл разом — фильтр по датам в каталоге. Без неё
+   страница каталога читала бы по ключу на виллу: двадцать чтений KV на один
+   запрос. Ночи лежат отрезками [первая ночь, день выезда), так ответ в
+   несколько раз короче списка дат. */
+const CAL_ALL = 'hx:cal:all:v2';
+
 /* Точный расчёт держим 15 минут: PriceLabs правит ставки в течение дня, но
    перебор дат гостем не должен превращаться в шквал запросов к Hostex. */
 const QUOTE_TTL_SEC = 900;
@@ -409,6 +415,7 @@ export async function syncAll(env, force) {
      чтение может вернуть ещё пустое значение, и вилла молча выпадет из сводки
      для HTML. */
   const fresh = {};
+  const freshCal = {};
 
   for (const link of linked()) {
     /* Занятость. Пустой календарь опаснее слегка устаревшего — он показал бы
@@ -446,6 +453,7 @@ export async function syncAll(env, force) {
           from, to, ts: Date.now(), lastOkTs: prev ? prev.lastOkTs || 0 : 0 };
 
     await env.THB_STATS.put(calKey(link.villa), JSON.stringify(rec));
+    freshCal[link.villa] = rec;
     if (rec.ok) okCal++;
 
     /* Цены. */
@@ -494,6 +502,8 @@ export async function syncAll(env, force) {
      data/villas.json — того же файла, что читает сайт, чтобы slug не пришлось
      держать в двух местах и рассинхронизировать. */
   try { await writeAllPrices(env, fresh); } catch (e) { /* карточки просто останутся без цены */ }
+  /* Сводка занятости для фильтра по датам в каталоге. */
+  try { await writeAllCalendars(env, freshCal, fresh); } catch (e) { /* фильтр переживёт: соберётся при запросе */ }
 
   meta = {
     ts: Date.now(),
@@ -508,20 +518,25 @@ export async function syncAll(env, force) {
   return { skipped: false, meta };
 }
 
-async function writeAllPrices(env, fresh) {
+/* Адрес страницы виллы: у части вилл в data/villas.json лежит url, у части он
+   пустой, зато slug есть у всех. Из-за пустого url четыре виллы молча выпадали
+   из сводки цен и оставались с «On request» при живой цене. */
+async function urlMap(env) {
   const res = await env.ASSETS.fetch(new Request('https://thehostbali.com/data/villas.json'));
   if (!res.ok) throw new Error('villas_' + res.status);
   const list = await res.json();
 
-  /* Адрес страницы: у части вилл в файле лежит url, у части он пустой, зато
-     slug есть у всех. Из-за пустого url четыре виллы молча выпадали из сводки
-     и оставались с «On request» при живой цене. */
   const urlOf = {};
   for (const v of (list || [])) {
     if (!v || !v.id) continue;
     const u = v.url || (v.slug ? '/villa/' + v.slug + '/' : null);
     if (u) urlOf[v.id] = u;
   }
+  return urlOf;
+}
+
+async function writeAllPrices(env, fresh) {
+  const urlOf = await urlMap(env);
 
   const byUrl = {};
   for (const link of linked()) {
@@ -536,6 +551,94 @@ async function writeAllPrices(env, fresh) {
 
   await env.THB_STATS.put(PRICES_ALL, JSON.stringify({ ts: Date.now(), byUrl }));
   return Object.keys(byUrl).length;
+}
+
+/* Занятые ночи -> отрезки [первая ночь, день выезда).
+   '2026-10-12','2026-10-13','2026-10-14' -> ['2026-10-12','2026-10-15'].
+   Каталог проверяет пересечение с выбранными датами, а не перебирает даты. */
+function nightsToRanges(nights) {
+  const out = [];
+  const list = [...new Set(nights || [])].sort();
+  let start = null, prev = null;
+  for (const d of list) {
+    if (start === null) { start = prev = d; continue; }
+    if (d === addDays(prev, 1)) { prev = d; continue; }
+    out.push([start, addDays(prev, 1)]);
+    start = prev = d;
+  }
+  if (start !== null) out.push([start, addDays(prev, 1)]);
+  return out;
+}
+
+/* Минимальный срок по датам -> отрезки [начало, конец, ночей].
+   PriceLabs держит min stay 2 почти весь год и поднимает его на пики, поэтому
+   отрезков выходит единицы. Брать min stay «на сегодня» для декабрьских дат
+   нельзя — именно на пики он и меняется. */
+function minStayRanges(days) {
+  const dates = Object.keys(days || {}).sort();
+  const out = [];
+  let start = null, prev = null, val = null;
+  for (const d of dates) {
+    const m = Number(days[d][1]) || 0;
+    if (!m) continue;
+    if (start === null) { start = prev = d; val = m; continue; }
+    if (m === val && d === addDays(prev, 1)) { prev = d; continue; }
+    out.push([start, addDays(prev, 1), val]);
+    start = prev = d; val = m;
+  }
+  if (start !== null) out.push([start, addDays(prev, 1), val]);
+  return out;
+}
+
+/* Сводка занятости для фильтра по датам в каталоге: адрес страницы -> отрезки
+   занятых ночей, минимальный срок по датам и вместимость. Вилла без объекта в Hostex в
+   сводку не попадает — каталог показывает её как «даты по запросу», а не как
+   свободную: обещать свободу там, где календаря нет, нельзя. */
+async function writeAllCalendars(env, freshCal, freshPrice) {
+  const urlOf = await urlMap(env);
+
+  const byUrl = {};
+  let from = today(), to = addDays(from, HORIZON_DAYS);
+
+  for (const link of linked()) {
+    const rec = (freshCal && freshCal[link.villa]) || await readMirror(env, link.villa);
+    const url = urlOf[link.villa];
+    if (!rec || !url) continue;
+
+    const pr = (freshPrice && freshPrice[link.villa]) || await readPrices(env, link.villa);
+    const mins = pr ? minStayRanges(pr.days) : [];
+    byUrl[url] = {
+      busy: nightsToRanges(rec.nights),
+      minStay: (pr && pr.minStay) || 1,
+      /* отрезков обычно единицы; если PriceLabs дробит срок по дням, длинный
+         список тут не нужен — хватит значения по умолчанию */
+      min: mins.length <= 60 ? mins : [],
+      maxGuests: (pr && pr.maxGuests) || 0,
+      stale: !rec.ok
+    };
+    if (rec.from && rec.from > from) from = rec.from;
+    if (rec.to && rec.to < to) to = rec.to;
+  }
+
+  await env.THB_STATS.put(CAL_ALL, JSON.stringify({ ts: Date.now(), from, to, byUrl }));
+  return Object.keys(byUrl).length;
+}
+
+/* Одно чтение KV на запрос каталога. Ключа нет (первый деплой, вытеснение) —
+   собираем на месте, иначе фильтр по датам молчал бы до ближайшего cron. */
+export async function readAllCalendars(env) {
+  try {
+    const rec = JSON.parse(await env.THB_STATS.get(CAL_ALL) || 'null');
+    if (rec && rec.byUrl) return rec;
+  } catch (e) {}
+
+  try {
+    await writeAllCalendars(env);
+    const rec = JSON.parse(await env.THB_STATS.get(CAL_ALL) || 'null');
+    if (rec && rec.byUrl) return rec;
+  } catch (e) {}
+
+  return null;
 }
 
 /* Сводка цен для выдачи HTML. Одно чтение KV на запрос страницы.

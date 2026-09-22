@@ -83,18 +83,32 @@
   }
 
   /* ---------- даты из разметки ---------- */
+  /* Название месяца -> номер. На итальянских страницах подпись переведена
+     («Ottobre 2026»), а прежний запасной разбор через new Date() молча давал
+     январь: V8 пропускает непонятное слово и читает только год. Поэтому
+     сверяем и с английским списком, и с названиями месяцев языка страницы. */
+  function monthIndex(name) {
+    var n = String(name || '').toLowerCase();
+    if (!n) return -1;
+    var lang = (document.documentElement.lang || 'en');
+    for (var m = 0; m < 12; m++) {
+      if (n === MONTHS[m].toLowerCase()) return m;
+      try {
+        var loc = new Date(Date.UTC(2020, m, 1))
+          .toLocaleDateString(lang, { month: 'long', timeZone: 'UTC' }).toLowerCase();
+        if (n === loc) return m;
+      } catch (e) {}
+    }
+    return -1;
+  }
+
   function monthOf(title) {
     var parts = String(title || '').trim().split(/\s+/);
     if (parts.length < 2) return null;
     var year = parseInt(parts[parts.length - 1], 10);
     if (!year) return null;
-    var m = MONTHS.indexOf(parts[0]);
-    if (m < 0) {
-      var d = new Date(parts.join(' ') + ' 1');
-      if (isNaN(d)) return null;
-      return { y: d.getFullYear(), m: d.getMonth() };
-    }
-    return { y: year, m: m };
+    var m = monthIndex(parts[0]);
+    return m < 0 ? null : { y: year, m: m };   /* месяц не узнали — лучше ничего не делать */
   }
 
   function iso(y, m, d) {
@@ -103,6 +117,17 @@
 
   /* Возвращает { from, to } или null. Ищем по всем отрисованным месяцам. */
   function picked() {
+    /* Что выбрано, знает сама страница виллы: там лежат настоящие Date.
+       Разбор разметки оставляем запасным путём. */
+    try {
+      var sel = window.thbGetDates && window.thbGetDates();
+      if (sel && sel.start && sel.end) {
+        var a = iso(sel.start.getFullYear(), sel.start.getMonth(), sel.start.getDate());
+        var b = iso(sel.end.getFullYear(), sel.end.getMonth(), sel.end.getDate());
+        if (b > a) return { from: a, to: b };
+      }
+    } catch (e) {}
+
     var from = null, to = null;
     var boxes = sec.querySelectorAll('.calendar-month');
 

@@ -62,19 +62,32 @@
     return y + '-' + String(m + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
   }
 
+  /* Название месяца -> номер. На итальянских страницах подпись переведена
+     («Ottobre 2026»), а прежний запасной разбор через new Date() молча давал
+     январь: V8 пропускает непонятное слово и читает только год. Поэтому
+     сверяем и с английским списком, и с названиями месяцев языка страницы. */
+  function monthIndex(name) {
+    var n = String(name || '').toLowerCase();
+    if (!n) return -1;
+    var lang = (document.documentElement.lang || 'en');
+    for (var m = 0; m < 12; m++) {
+      if (n === MONTHS[m].toLowerCase()) return m;
+      try {
+        var loc = new Date(Date.UTC(2020, m, 1))
+          .toLocaleDateString(lang, { month: 'long', timeZone: 'UTC' }).toLowerCase();
+        if (n === loc) return m;
+      } catch (e) {}
+    }
+    return -1;
+  }
+
   function monthOf(title) {
     var parts = String(title || '').trim().split(/\s+/);
     if (parts.length < 2) return null;
     var year = parseInt(parts[parts.length - 1], 10);
     if (!year) return null;
-    var m = MONTHS.indexOf(parts[0]);
-    if (m < 0) {
-      /* страница на другом языке — пробуем разобрать средствами браузера */
-      var d = new Date(parts.join(' ') + ' 1');
-      if (isNaN(d)) return null;
-      return { y: d.getFullYear(), m: d.getMonth() };
-    }
-    return { y: year, m: m };
+    var m = monthIndex(parts[0]);
+    return m < 0 ? null : { y: year, m: m };   /* месяц не узнали — лучше ничего не делать */
   }
 
   /* ---------- покраска ---------- */
@@ -177,6 +190,30 @@
     n.innerHTML = '<i></i><span>' + text + '</span>';
   }
 
+  /* ---------- даты из каталога ---------- */
+  /* Гость отфильтровал каталог по датам и открыл виллу: даты приезжают в
+     адресе и должны быть уже выбраны в календаре. Ставим их только если ночи
+     свободны — иначе показали бы выбор поверх чужой брони. */
+  function preset() {
+    var a, b;
+    try {
+      var p = new URLSearchParams(location.search);
+      a = p.get('checkin'); b = p.get('checkout');
+    } catch (e) { return; }
+    if (!a || !b || a >= b || typeof window.thbSetDates !== 'function') return;
+
+    if (BUSY) {
+      for (var d = a; d < b; d = next(d)) if (BUSY.has(d)) return;
+    }
+    try { window.thbSetDates(a, b); } catch (e) {}
+  }
+
+  function next(d) {
+    var x = new Date(d + 'T00:00:00Z');
+    x.setUTCDate(x.getUTCDate() + 1);
+    return x.toISOString().slice(0, 10);
+  }
+
   /* ---------- запуск ---------- */
   villaId().then(function (id) {
     if (!id) return;
@@ -187,6 +224,8 @@
         BUSY = new Set(d.nights || []);
         paint();
         note('Crossed-out dates are already booked');
+        preset();
       });
-  }).catch(function () { /* нет данных — календарь просто остаётся как был */ });
+  }).catch(function () { /* нет данных — календарь просто остаётся как был */ })
+    .then(function () { if (!BUSY) preset(); });
 })();

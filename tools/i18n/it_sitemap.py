@@ -37,5 +37,22 @@ s = s.replace('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">', 1)
 s = s.replace('</urlset>', '\n'.join(extra) + '\n</urlset>')
 s = s.replace('\n\n</urlset>', '\n</urlset>')
+
+# Главная уже стоит в карте как /it/ — это итальянская посадочная страница.
+# Добавлять её вторым блоком нельзя: дубль <loc> ломает карту. Поэтому в конце
+# оставляем по одному блоку на адрес, предпочитая тот, где есть xhtml:link.
+seen, out = set(), []
+for b in re.findall(r'\s*<url>.*?</url>', s, re.S):
+    loc = re.search(r'<loc>([^<]+)</loc>', b).group(1)
+    if loc in seen:
+        i = [k for k, x in enumerate(out) if '<loc>' + loc + '</loc>' in x][0]
+        if 'xhtml:link' in b and 'xhtml:link' not in out[i]:
+            out[i] = b
+        continue
+    seen.add(loc)
+    out.append(b)
+s = (s[:s.index('<url>')].rstrip() + '\n' +
+     ''.join(x.lstrip('\n') if i == 0 else x for i, x in enumerate(out)) + '\n</urlset>\n')
+
 io.open(p, 'w', encoding='utf-8', newline='\n').write(s)
 print('it-urls добавлено:', len(extra))

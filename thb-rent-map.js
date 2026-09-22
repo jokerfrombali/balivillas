@@ -92,10 +92,17 @@
 
     data().then(function (list) {
       if (!list.length) { wrap.remove(); return; }
-      var n = areaOnly ? list.filter(function (v) { return v.areaSlug === areaOnly; }).length : list.length;
-      txt.querySelector('.thb-mapbar-s').textContent =
-        (areaOnly ? n + (n === 1 ? ' villa here' : ' villas here') : n + ' villas') +
-        ' · shown as an area, not a doorstep';
+      function count() {
+        var set = shownUrls();
+        var n = list.filter(function (v) {
+          return (!areaOnly || v.areaSlug === areaOnly) && inResults(v, set);
+        }).length;
+        txt.querySelector('.thb-mapbar-s').textContent =
+          (areaOnly ? n + (n === 1 ? ' villa here' : ' villas here') : n + ' villas') +
+          ' · shown as an area, not a doorstep';
+      }
+      count();
+      document.addEventListener('thb:cards-changed', count);
     }).catch(function () { wrap.remove(); });
   }
 
@@ -103,6 +110,28 @@
     return '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">' +
       '<path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5' +
       'A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>';
+  }
+
+  /* Карта показывает ровно то, что осталось в выдаче: после фильтра по датам
+     кружок занятой виллы рядом со списком свободных — это обман. Смотрим на
+     карточки каталога; если их на странице нет, показываем всё. */
+  function shownUrls() {
+    var cards = document.querySelectorAll('.prop-card');
+    if (!cards.length) return null;
+    var set = {};
+    for (var i = 0; i < cards.length; i++) {
+      var c = cards[i];
+      if (c.getAttribute('data-thb-date') === 'off' || c.style.display === 'none') continue;
+      var oc = c.getAttribute('onclick') || c.getAttribute('href') || '';
+      var m = oc.match(/\/(?:it\/)?villa\/[^'"?]+/);
+      if (m) set[m[0].replace(/^\/it/, '')] = 1;
+    }
+    return set;
+  }
+
+  function inResults(v, set) {
+    if (!set) return true;
+    return !!set[v.url || ('/villa/' + v.slug + '/')];
   }
 
   /* ---------- данные ---------- */
@@ -148,7 +177,11 @@
 
   /* ---------- отрисовка ---------- */
 
-  function draw(box, list) {
+  function draw(box, all) {
+    var set = shownUrls();
+    var list = all.filter(function (v) { return inResults(v, set); });
+    if (!list.length) list = all;
+
     var focus = list.filter(function (v) { return !areaOnly || v.areaSlug === areaOnly; });
     if (!focus.length) focus = list;
 
@@ -169,6 +202,7 @@
     var w = Math.max(180, Math.min(250, box.clientWidth - 44));
     var maxH = Math.max(140, Math.min(300, box.clientHeight - 120));
 
+    var circles = [];
     list.forEach(function (v) {
       var c = fuzz(v);
       var circle = L.circle(c, {
@@ -181,6 +215,31 @@
         autoPan: true, keepInView: true,
         autoPanPaddingTopLeft: [14, 18], autoPanPaddingBottomRight: [14, 30]
       });
+      circles.push(circle);
+    });
+
+    /* Фильтр по датам сменился при открытой карте — перерисовываем кружки. */
+    document.addEventListener('thb:cards-changed', function () {
+      var now = shownUrls();
+      var keep = all.filter(function (v) { return inResults(v, now); });
+      if (!keep.length) return;
+      circles.forEach(function (c) { map.removeLayer(c); });
+      circles = [];
+      keep.forEach(function (v) {
+        var cc = L.circle(fuzz(v), {
+          radius: RADIUS_M,
+          color: '#b84a31', weight: 2, opacity: .7,
+          fillColor: '#b84a31', fillOpacity: .18
+        }).addTo(map);
+        cc.bindPopup(card(v), {
+          minWidth: w, maxWidth: w, maxHeight: maxH,
+          autoPan: true, keepInView: true,
+          autoPanPaddingTopLeft: [14, 18], autoPanPaddingBottomRight: [14, 30]
+        });
+        circles.push(cc);
+      });
+      var pp = keep.filter(function (v) { return !areaOnly || v.areaSlug === areaOnly; }).map(fuzz);
+      if (pp.length) map.fitBounds(pp, { padding: [40, 40], maxZoom: 14 });
     });
 
     map.on('popupopen', function (e) {
