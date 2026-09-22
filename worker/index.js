@@ -33,7 +33,7 @@ import { handleAdmin } from './admin.js';
 import { saveLead } from './leads.js';
 import { opportunities } from './opportunities.js';
 import { takeSnapshot } from './snapshots.js';
-import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices, readAllCalendars } from './hostex.js';
+import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices, readAllCalendars, rangeQuotes } from './hostex.js';
 import { injectPrices } from './price-html.js';
 import { fxRates, suggest } from './fx.js';
 import { syncReviews, getReviews, publicView, injectReviews } from './reviews.js';
@@ -652,6 +652,23 @@ export default {
         }), {
           headers: { 'content-type': 'application/json',
                      'cache-control': 'public, max-age=300' }
+        });
+      }
+
+      /* Сумма за выбранные даты по всем виллам разом — карточки каталога после
+         выбора дат. Считаем по зеркалу цен, в Hostex не ходим: иначе один выбор
+         дат превращался бы в двадцать запросов к их API. */
+      if (url.pathname === '/api/quotes') {
+        const from = (url.searchParams.get('from') || '').slice(0, 10);
+        const to = (url.searchParams.get('to') || '').slice(0, 10);
+        const ok = /^\d{4}-\d{2}-\d{2}$/.test(from) && /^\d{4}-\d{2}-\d{2}$/.test(to) && to > from;
+        const data = ok ? await rangeQuotes(env, from, to) : null;
+        if (!data) return json({ ok: false, error: 'no_quotes' }, ok ? 503 : 400);
+        return new Response(JSON.stringify({
+          ok: true, from: data.from, to: data.to, nights: data.nights, villas: data.byUrl
+        }), {
+          headers: { 'content-type': 'application/json',
+                     'cache-control': 'public, max-age=900' }
         });
       }
 

@@ -161,6 +161,12 @@ const PRICES_ALL = 'hx:prices:all';
    несколько раз короче списка дат. */
 const CAL_ALL = 'hx:cal:all:v2';
 
+/* Цены по датам для всех вилл разом. Нужны затем, что в каталоге, когда гость
+   выбрал даты, карточка должна показывать сумму за эти ночи, а не «от». Считать
+   её живым запросом в Hostex на каждую виллу нельзя — это двадцать запросов на
+   один выбор дат; поэтому суммируем по зеркалу. */
+const DAYS_ALL = 'hx:days:all';
+
 /* Точный расчёт держим 15 минут: PriceLabs правит ставки в течение дня, но
    перебор дат гостем не должен превращаться в шквал запросов к Hostex. */
 const QUOTE_TTL_SEC = 900;
@@ -504,6 +510,8 @@ export async function syncAll(env, force) {
   try { await writeAllPrices(env, fresh); } catch (e) { /* карточки просто останутся без цены */ }
   /* Сводка занятости для фильтра по датам в каталоге. */
   try { await writeAllCalendars(env, freshCal, fresh); } catch (e) { /* фильтр переживёт: соберётся при запросе */ }
+  /* Цены по датам — для сумм в карточках каталога. */
+  try { await writeAllDays(env, fresh); } catch (e) { /* соберётся при первом запросе */ }
 
   meta = {
     ts: Date.now(),
@@ -622,6 +630,66 @@ async function writeAllCalendars(env, freshCal, freshPrice) {
 
   await env.THB_STATS.put(CAL_ALL, JSON.stringify({ ts: Date.now(), from, to, byUrl }));
   return Object.keys(byUrl).length;
+}
+
+async function writeAllDays(env, freshPrice) {
+  const urlOf = await urlMap(env);
+
+  const byUrl = {};
+  for (const link of linked()) {
+    const rec = (freshPrice && freshPrice[link.villa]) || await readPrices(env, link.villa);
+    const url = urlOf[link.villa];
+    if (!rec || !rec.ok || !rec.days || !url) continue;
+
+    /* держим только цену: минимальный срок уже лежит в сводке календарей */
+    const days = {};
+    for (const d of Object.keys(rec.days)) {
+      const p = rec.days[d][0];
+      if (p > 0) days[d] = p;
+    }
+    byUrl[url] = { cur: rec.currency || 'Rp', days };
+  }
+
+  await env.THB_STATS.put(DAYS_ALL, JSON.stringify({ ts: Date.now(), byUrl }));
+  return Object.keys(byUrl).length;
+}
+
+/* Сумма за выбранные ночи по каждой вилле. Ночи берём как [заезд, выезд):
+   ночь выезда не считается. Вилла, у которой в зеркале нет цены хотя бы на
+   одну ночь из выбранных, в ответ не попадает — в карточке останется «от»,
+   а не придуманная сумма. */
+export async function rangeQuotes(env, from, to) {
+  let rec = null;
+  try { rec = JSON.parse(await env.THB_STATS.get(DAYS_ALL) || 'null'); } catch (e) {}
+  if (!rec || !rec.byUrl) {
+    try {
+      await writeAllDays(env);
+      rec = JSON.parse(await env.THB_STATS.get(DAYS_ALL) || 'null');
+    } catch (e) {}
+  }
+  if (!rec || !rec.byUrl) return null;
+
+  const nights = nightsBetween(from, to);
+  if (!nights.length) return null;
+
+  const out = {};
+  for (const url of Object.keys(rec.byUrl)) {
+    const { cur, days } = rec.byUrl[url];
+    let total = 0, ok = true;
+    for (const d of nights) {
+      const p = days[d];
+      if (!p) { ok = false; break; }
+      total += p;
+    }
+    if (!ok) continue;
+    out[url] = {
+      total,
+      perNight: Math.round(total / nights.length),
+      currency: cur || 'Rp'
+    };
+  }
+
+  return { from, to, nights: nights.length, byUrl: out, ts: rec.ts || 0 };
 }
 
 /* Одно чтение KV на запрос каталога. Ключа нет (первый деплой, вытеснение) —

@@ -37,6 +37,7 @@
     minStay: function (n) { return 'min ' + n + (n === 1 ? ' notte' : ' notti'); },
     onRequest: 'Date su richiesta', checkin: 'Check-in', checkout: 'Check-out',
     addDate: 'Aggiungi la data',
+    forNights: function (n) { return 'per ' + n + (n === 1 ? ' notte' : ' notti'); },
     none: 'Nessuna villa libera per queste date. Prova altre date o scrivici su WhatsApp.',
     longer: function (n, m) { return 'Altre ' + n + (n === 1 ? ' villa è libera' : ' ville sono libere') +
       ' ma con soggiorno minimo di ' + m + (m === 1 ? ' notte' : ' notti') + '.'; },
@@ -53,6 +54,7 @@
     minStay: function (n) { return 'min ' + n + (n === 1 ? ' night' : ' nights'); },
     onRequest: 'Dates on request', checkin: 'Check-in', checkout: 'Check-out',
     addDate: 'Add date',
+    forNights: function (n) { return 'for ' + n + (n === 1 ? ' night' : ' nights'); },
     none: 'No villas free for these dates. Try other dates or message us on WhatsApp.',
     longer: function (n, m) { return n + (n === 1 ? ' more villa is free' : ' more villas are free') +
       ' but need at least ' + m + (m === 1 ? ' night' : ' nights') + '.'; },
@@ -185,6 +187,7 @@
         'background:rgba(255,255,255,.94);backdrop-filter:blur(4px);' +
         'font:600 11.5px/1 Inter,system-ui,sans-serif;color:#0a0a0a;box-shadow:0 2px 10px rgba(0,0,0,.12)}' +
       '.thb-dnote.warn{background:#fdf4e3;color:#8a5a12}' +
+      '.thb-dtot{display:block;margin-top:2px;font:400 12.5px/1.2 Inter,system-ui,sans-serif;' + 'color:#706b61;letter-spacing:0}' +
       '#thbDatesHint{margin:6px 0 0;font:400 13px/1.45 Inter,system-ui,sans-serif;color:#6b6b66}' +
       '#thbNoDates{margin:18px 0;padding:18px 20px;border:1px solid #e6e3dc;border-radius:16px;' +
         'background:#fff;font:400 14px/1.5 Inter,system-ui,sans-serif;color:#0a0a0a}' +
@@ -396,6 +399,57 @@
 
   var baseTitle = null;
 
+  /* ---------- сумма за выбранные ночи в карточке ---------- */
+  /* «Rp 2,462,255 per night» ничего не говорит гостю, который уже выбрал даты:
+     он хочет увидеть, во сколько обойдётся именно этот приезд. Суммы считает
+     воркер по зеркалу цен (/api/quotes), пересчёт в валюту делает
+     thb-currency.js — он подхватывает новый текст сам. */
+  var QUOTES = {};
+  var ORIG = new WeakMap();
+
+  function priceBox(card) {
+    return card.querySelector('span[style*="font-size:19px"]') ||
+           card.querySelector('p.p') || null;
+  }
+
+  function thousands(n) {
+    return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  function restorePrices() {
+    cards().forEach(function (c) {
+      var box = priceBox(c);
+      if (box && ORIG.has(box)) { box.innerHTML = ORIG.get(box); ORIG.delete(box); }
+    });
+  }
+
+  function paintPrices(q) {
+    if (!q || !q.villas) return;
+    var n = q.nights || nights(S.ci, S.co);
+    cards().forEach(function (c) {
+      var box = priceBox(c);
+      var rec = box && q.villas[urlOf(c)];
+      if (!box || !rec) return;
+      if (!ORIG.has(box)) ORIG.set(box, box.innerHTML);
+      box.innerHTML = (rec.currency || 'Rp') + ' ' + thousands(rec.total) +
+                      '<span class="thb-dtot">' + T.forNights(n) + '</span>';
+    });
+  }
+
+  function prices() {
+    if (!S.ci || !S.co) { restorePrices(); return; }
+    var key = S.ci + '_' + S.co;
+    if (QUOTES[key]) { paintPrices(QUOTES[key]); return; }
+    fetch('/api/quotes?from=' + S.ci + '&to=' + S.co)
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) {
+        if (!j || !j.ok) return;
+        QUOTES[key] = j;
+        if (S.ci + '_' + S.co === key) paintPrices(j);
+      })
+      .catch(function () { /* сумму не показали — в карточке осталась цена «от» */ });
+  }
+
   var shortInfo = { n: 0, min: 0 };
 
   function apply() {
@@ -423,6 +477,7 @@
     title();
     hint(on);
     empty(on);
+    prices();
     url();
     pushToSheet();
     try { document.dispatchEvent(new CustomEvent('thb:cards-changed')); } catch (e) {}
