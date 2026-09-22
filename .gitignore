@@ -15,3 +15,5 @@ thehostbali-*.json
 imports/
 # корзина: сюда переносится то, что нельзя удалить из этой среды
 _to_delete/
+__pycache__/
+*.pyc
