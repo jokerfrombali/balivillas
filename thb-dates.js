@@ -187,6 +187,39 @@
         'background:rgba(255,255,255,.94);backdrop-filter:blur(4px);' +
         'font:600 11.5px/1 Inter,system-ui,sans-serif;color:#0a0a0a;box-shadow:0 2px 10px rgba(0,0,0,.12)}' +
       '.thb-dnote.warn{background:#fdf4e3;color:#8a5a12}' +
+      /* строка поиска под заголовком района: та же роль, что у большого поиска
+         на /property-rental/, где даты уже были */
+      '#thbHeroDates{display:flex;align-items:stretch;margin:18px auto 0;max-width:520px;' +
+        'background:#fff;border-radius:999px;padding:5px;box-shadow:0 10px 30px rgba(0,0,0,.18);' +
+        'font-family:Inter,system-ui,sans-serif;text-align:left}' +
+      '#thbHeroDates .seg{flex:1;min-width:0;border:0;background:transparent;cursor:pointer;' +
+        'padding:8px 18px;border-radius:999px;text-align:left;transition:background .15s}' +
+      '@media(hover:hover){#thbHeroDates .seg:hover{background:#f4f1ea}}' +
+      '#thbHeroDates .seg b{display:block;font:700 10.5px/1 Inter,system-ui,sans-serif;' +
+        'letter-spacing:.09em;text-transform:uppercase;color:#8a877f;margin-bottom:5px}' +
+      '#thbHeroDates .seg span{display:block;font:500 14px/1.1 Inter,system-ui,sans-serif;color:#9a968e;' +
+        'white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' +
+      '#thbHeroDates .seg span.set{color:#0a0a0a;font-weight:600}' +
+      '#thbHeroDates .sep{width:1px;background:#e6e3dc;margin:8px 0;flex:0 0 auto}' +
+      '#thbHeroDates .go{flex:0 0 auto;border:0;background:#0a0a0a;color:#fff;border-radius:999px;' +
+        'cursor:pointer;padding:0 20px;font:600 13.5px/1 Inter,system-ui,sans-serif;display:flex;' +
+        'align-items:center;gap:7px}' +
+      '#thbHeroDates .go svg{width:14px;height:14px;flex:0 0 auto}' +
+      '@media(max-width:640px){#thbHeroDates{max-width:none;margin-top:14px}' +
+        '#thbHeroDates .seg{padding:7px 12px}#thbHeroDates .go{padding:0 15px;font-size:0;gap:0}}' +
+
+      /* блок «Даты» в ящике фильтров */
+      '#thbFilterDates .row{display:flex;gap:8px}' +
+      '#thbFilterDates .seg{flex:1;min-width:0;border:1.5px solid #e6e3dc;background:#fff;' +
+        'border-radius:14px;padding:9px 13px;cursor:pointer;text-align:left}' +
+      '@media(hover:hover){#thbFilterDates .seg:hover{border-color:#0a0a0a}}' +
+      '#thbFilterDates .seg b{display:block;font:700 10px/1 Inter,system-ui,sans-serif;' +
+        'letter-spacing:.08em;text-transform:uppercase;color:#8a877f;margin-bottom:5px}' +
+      '#thbFilterDates .seg span{display:block;font:500 13.5px/1.1 Inter,system-ui,sans-serif;color:#9a968e}' +
+      '#thbFilterDates .seg span.set{color:#0a0a0a;font-weight:600}' +
+      '#thbFilterDates .x{margin-top:10px;border:0;background:transparent;padding:0;cursor:pointer;' +
+        'font:500 12px/1 Inter,system-ui,sans-serif;color:#6b6b66;text-decoration:underline}' +
+
       '.thb-dtot{display:block;margin-top:2px;font:400 12.5px/1.2 Inter,system-ui,sans-serif;' + 'color:#706b61;letter-spacing:0}' +
       '#thbDatesHint{margin:6px 0 0;font:400 13px/1.45 Inter,system-ui,sans-serif;color:#6b6b66}' +
       '#thbNoDates{margin:18px 0;padding:18px 20px;border:1px solid #e6e3dc;border-radius:16px;' +
@@ -246,8 +279,11 @@
       pop.classList.contains('open') ? close() : open();
     });
     scrim.addEventListener('click', close);
+    openers.push(wrap);
     document.addEventListener('click', function (e) {
-      if (pop.classList.contains('open') && !wrap.contains(e.target) && !pop.contains(e.target)) close();
+      if (!pop.classList.contains('open') || pop.contains(e.target)) return;
+      for (var i = 0; i < openers.length; i++) if (openers[i].contains(e.target)) return;
+      close();
     });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 
@@ -255,9 +291,14 @@
     return true;
   }
 
+  /* Календарь открывается из трёх мест: кнопки в ряду фильтров, строки поиска
+     в шапке района и ящика фильтров. Позиционируем по тому, откуда открыли. */
+  var anchorFor = null;
+  var openers = [];
+
   function place() {
     if (window.innerWidth <= 860) return;          /* снизу, как шторка */
-    var r = btn.getBoundingClientRect();
+    var r = (anchorFor || btn).getBoundingClientRect();
     var w = Math.min(640, window.innerWidth - 32);
     var left = Math.min(Math.max(16, r.left), window.innerWidth - w - 16);
     pop.style.width = w + 'px';
@@ -268,7 +309,90 @@
       ? r.top - 8 - h : r.bottom + 8) + 'px';
   }
 
-  function open() {
+  /* Строка поиска под заголовком страницы района. На /property-rental/ такой
+     поиск с датами есть, а на странице района его не было вовсе — гость
+     доходил до района и не находил, куда вписать даты. */
+  function buildHeroBar() {
+    if (document.getElementById('hsGo')) return;        /* большой поиск уже есть */
+    var host = document.querySelector('.promo-center');
+    if (!host || document.getElementById('thbHeroDates')) return;
+
+    var bar = document.createElement('div');
+    bar.id = 'thbHeroDates';
+    bar.innerHTML =
+      '<button type="button" class="seg"><b>' + T.checkin + '</b>' +
+        '<span data-thb-ci>' + T.addDate + '</span></button>' +
+      '<i class="sep"></i>' +
+      '<button type="button" class="seg"><b>' + T.checkout + '</b>' +
+        '<span data-thb-co>' + T.addDate + '</span></button>' +
+      '<button type="button" class="go">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">' +
+        '<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>' + T.apply + '</button>';
+    host.appendChild(bar);
+    openers.push(bar);
+
+    [].forEach.call(bar.querySelectorAll('.seg'), function (b) {
+      b.addEventListener('click', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        pop.classList.contains('open') ? close() : open(bar);
+      });
+    });
+    bar.querySelector('.go').addEventListener('click', function (e) {
+      e.preventDefault(); e.stopPropagation();
+      if (!S.ci || !S.co) { open(bar); return; }
+      var rb = document.querySelector('.results-bar') || document.getElementById('cardGrid');
+      if (rb) rb.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  /* Тот же выбор дат внутри ящика фильтров: гость открывает «Filters» и ищет
+     даты там, рядом с остальными условиями. */
+  function buildFilterRow() {
+    var panel = document.getElementById('filterPanel');
+    if (!panel || document.getElementById('thbFilterDates')) return;
+
+    var sec = document.createElement('div');
+    sec.className = 'filter-section';
+    sec.id = 'thbFilterDates';
+    sec.innerHTML =
+      '<div class="filter-title">' + T.dates +
+        '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"' +
+        ' aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/>' +
+        '<path d="M8 3v4M16 3v4M3 10h18"/></svg></div>' +
+      '<div class="filter-body"><div class="row">' +
+        '<button type="button" class="seg"><b>' + T.checkin + '</b>' +
+          '<span data-thb-ci>' + T.addDate + '</span></button>' +
+        '<button type="button" class="seg"><b>' + T.checkout + '</b>' +
+          '<span data-thb-co>' + T.addDate + '</span></button>' +
+      '</div><button type="button" class="x" data-thb-clear style="display:none">' + T.clear + '</button></div>';
+
+    var first = panel.querySelector('.filter-section');
+    if (first) panel.insertBefore(sec, first); else panel.appendChild(sec);
+    openers.push(sec);
+
+    [].forEach.call(sec.querySelectorAll('.seg'), function (b) {
+      b.addEventListener('click', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        pop.classList.contains('open') ? close() : open(sec);
+      });
+    });
+    sec.querySelector('[data-thb-clear]').addEventListener('click', function (e) {
+      e.preventDefault(); e.stopPropagation();
+      S.ci = S.co = ''; D.ci = D.co = ''; apply(); renderPop();
+    });
+
+    /* «Clear all» в ящике снимает и даты */
+    var all = panel.querySelector('button[onclick*="clearAllFilters"]');
+    if (all) all.addEventListener('click', function () {
+      setTimeout(function () {
+        if (!S.ci && !S.co) return;
+        S.ci = S.co = ''; D.ci = D.co = ''; apply(); renderPop();
+      }, 0);
+    });
+  }
+
+  function open(from) {
+    anchorFor = from || btn;
     load().then(function () { renderPop(); place(); });
     pop.classList.add('open');
     scrim.classList.add('open');
@@ -475,6 +599,7 @@
 
     label();
     title();
+    drawerCta();
     hint(on);
     empty(on);
     prices();
@@ -501,11 +626,24 @@
   }
 
   function label() {
-    if (!btn) return;
-    var s = btn.querySelector('span');
     var on = !!(S.ci && S.co);
-    s.textContent = on ? range(S.ci, S.co) : T.dates;
-    btn.setAttribute('data-on', on ? '1' : '0');
+
+    if (btn) {
+      btn.querySelector('span').textContent = on ? range(S.ci, S.co) : T.dates;
+      btn.setAttribute('data-on', on ? '1' : '0');
+    }
+
+    [].forEach.call(document.querySelectorAll('[data-thb-ci]'), function (e) {
+      e.textContent = S.ci ? short(S.ci) : T.addDate;
+      e.classList.toggle('set', !!S.ci);
+    });
+    [].forEach.call(document.querySelectorAll('[data-thb-co]'), function (e) {
+      e.textContent = S.co ? short(S.co) : T.addDate;
+      e.classList.toggle('set', !!S.co);
+    });
+    [].forEach.call(document.querySelectorAll('[data-thb-clear]'), function (e) {
+      e.style.display = on ? '' : 'none';
+    });
   }
 
   /* Район берём из адреса страницы или из активного чипа, а не из заголовка:
@@ -518,6 +656,14 @@
       a = (on && on.getAttribute('data-area')) || '';
     }
     return a ? a.charAt(0).toUpperCase() + a.slice(1) : '';
+  }
+
+  /* Кнопка в ящике фильтров считает свои карточки и не знает про даты:
+     показывала «Show 11 villas», когда на эти даты свободны восемь. */
+  function drawerCta() {
+    var panel = document.getElementById('filterPanel');
+    var cta = panel && panel.querySelector('.btn-primary');
+    if (cta) cta.textContent = T.apply + ' ' + T.villas(visibleCards().length);
   }
 
   function title() {
@@ -631,13 +777,32 @@
   /* Прочие фильтры (ящик, чипы районов, сортировка) меняют inline display —
      пересчитываем заголовок и пустую выдачу, само скрытие держит CSS. */
   function watch() {
+    if (!window.MutationObserver) return;
+
     var grid = document.getElementById('cardGrid');
-    if (!grid || !window.MutationObserver) return;
-    var t = null;
+    if (grid) {
+      var t = null;
+      new MutationObserver(function () {
+        clearTimeout(t);
+        t = setTimeout(function () { if (S.ci && S.co) apply(); }, 60);
+      }).observe(grid, { attributes: true, subtree: true, attributeFilter: ['style'] });
+    }
+
+    /* Ящик фильтров и сортировка пишут в заголовок свой счёт («2 villas
+       available»), не зная про даты. Возвращаем свой — но только когда даты
+       выбраны и текст действительно чужой, иначе получится вечный цикл. */
+    var el = document.getElementById('resultsTitle');
+    if (!el) return;
+    var mine = '';
+    var lock = false;
     new MutationObserver(function () {
-      clearTimeout(t);
-      t = setTimeout(function () { if (S.ci && S.co) apply(); }, 60);
-    }).observe(grid, { attributes: true, subtree: true, attributeFilter: ['style'] });
+      if (lock || !S.ci || !S.co) return;
+      if (el.textContent.trim() === mine) return;
+      lock = true;
+      title();
+      mine = el.textContent.trim();
+      setTimeout(function () { lock = false; }, 0);
+    }).observe(el, { childList: true, characterData: true, subtree: true });
   }
 
   function fromUrl() {
@@ -654,6 +819,8 @@
     if (!build()) return;
     var t0 = document.getElementById('resultsTitle');
     if (t0) baseTitle = t0.textContent.trim();   /* до любых фильтров */
+    buildHeroBar();
+    buildFilterRow();
     hookSheet();
     hookHero();
     hookCards();

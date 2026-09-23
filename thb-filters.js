@@ -102,12 +102,18 @@
     });
   }
 
+  /* Виллы, занятые на выбранные даты, прячет thb-dates.js атрибутом. Считать
+     их здесь нельзя: на кнопке выходило «Show 11 villas», когда на эти даты
+     свободны восемь. */
+  function datesOff(c) { return c.getAttribute('data-thb-date') === 'off'; }
+
   function apply() {
     var s = state(), n = 0, total = 0;
     cards().forEach(function (c) {
-      total++;
       var ok = fits(c, s);
       c.style.display = ok ? '' : 'none';
+      if (datesOff(c)) return;
+      total++;
       if (ok) n++;
     });
 
