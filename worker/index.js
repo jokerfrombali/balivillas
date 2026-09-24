@@ -33,7 +33,7 @@ import { handleAdmin } from './admin.js';
 import { saveLead } from './leads.js';
 import { opportunities } from './opportunities.js';
 import { takeSnapshot } from './snapshots.js';
-import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices, readAllCalendars, rangeQuotes } from './hostex.js';
+import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices, readAllCalendars, rangeQuotes, checkDrift, readDrift } from './hostex.js';
 import { injectPrices } from './price-html.js';
 import { fxRates, suggest } from './fx.js';
 import { syncReviews, getReviews, publicView, injectReviews } from './reviews.js';
@@ -575,6 +575,47 @@ async function watch(env) {
 
 /* ---------- entry ---------- */
 
+/* Сверка цен по каналам Hostex: сообщаем, когда наш листинг отстал, и когда
+   всё сошлось обратно. Молчим, пока состояние не меняется — иначе одно и то же
+   сообщение приходило бы каждый день. */
+async function driftWatch(env) {
+  let rec;
+  try { rec = await checkDrift(env); } catch (e) { return; }
+  if (!rec) return;
+
+  const names = Object.keys(rec.villas || {});
+  let prev = [];
+  try { prev = JSON.parse(await env.THB_STATS.get('hx:drift:seen') || '[]'); } catch (e) {}
+
+  const same = names.length === prev.length && names.every((n) => prev.indexOf(n) >= 0);
+  if (same) return;
+
+  if (names.length) {
+    const lines = names.map((n) => {
+      const d = rec.villas[n];
+      return '• <b>' + n + '</b>: ' + d.n + ' дат, с ' + d.from + ' по ' + d.to +
+             '\n  у нас ' + money(d.ours) + ', на каналах ' + money(d.channels) +
+             ' (' + (d.pct > 0 ? '+' : '') + d.pct + '%)';
+    });
+    await tg(env,
+      '⚠️ <b>Цена на нашем листинге разошлась с каналами Hostex</b>\n' +
+      'Сайт берёт цену с прямого листинга. Если Hostex не дописал туда цены ' +
+      '(«Price update partially failed»), перетолкнуть можно Sync Now в PriceLabs — ' +
+      'кнопку Sync now на странице Price в Hostex не трогаем.\n\n' +
+      lines.join('\n'),
+      env.TG_TOPIC_OPS || 4);
+  } else {
+    await tg(env, '✅ <b>Цены Hostex снова сходятся</b>\nНаш листинг совпадает с остальными каналами.',
+             env.TG_TOPIC_OPS || 4);
+  }
+
+  try { await env.THB_STATS.put('hx:drift:seen', JSON.stringify(names)); } catch (e) {}
+}
+
+function money(n) {
+  return 'Rp ' + String(Math.round(Number(n) || 0)).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
 export default {
   async fetch(req, env) {
     const url = new URL(req.url);
@@ -683,6 +724,20 @@ export default {
         }
         const v = publicView(await getReviews(env, villa));
         return new Response(JSON.stringify({ ok: true, villa, synced, reviews: v }), {
+          headers: { 'content-type': 'application/json', 'cache-control': 'no-store' }
+        });
+      }
+
+      /* Сверка цен нашего листинга с остальными каналами Hostex. Только чтение
+         сохранённого отчёта; ?run=1 запускает проверку, но не чаще раза в
+         полчаса — она стоит одного запроса к Hostex. */
+      if (url.pathname === '/api/drift') {
+        if (url.searchParams.get('run') === '1') {
+          const busy = await tooFast(env, 'drift', 'driftrun', 3, 1800);
+          if (!busy) { try { await checkDrift(env); } catch (e) {} }
+        }
+        const rec = await readDrift(env);
+        return new Response(JSON.stringify({ ok: true, drift: rec || null }), {
           headers: { 'content-type': 'application/json', 'cache-control': 'no-store' }
         });
       }
@@ -864,6 +919,11 @@ export default {
       try { await hostexSync(env, false); } catch (e) { /* следующий заход подберёт */ }
       /* Отзывы: 4 виллы за проход, полный круг за ~2,5 часа. */
       try { await syncReviews(env); } catch (e) { /* следующий заход подберёт */ }
+
+      /* Раз в сутки сверяем цены нашего листинга с остальными каналами: Hostex
+         иногда не дописывает цены именно на прямой сайт, и тогда мы показываем
+         старые суммы. Пишем в Telegram только при смене состояния. */
+      if (h.time === '09:00') await driftWatch(env);
     })());
   }
 };

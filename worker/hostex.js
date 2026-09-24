@@ -229,7 +229,14 @@ async function loadChannels(env, force) {
         picked = {
           channel_type: base.channel_type,
           listing_id: base.listing_id,
-          ratio: Number(base.ratio) || 100
+          ratio: Number(base.ratio) || 100,
+          /* остальные каналы держим рядом: по ним сторож проверяет, не отстала
+             ли цена на базовом листинге (см. checkDrift) */
+          all: chans.map((c) => ({
+            channel_type: c.channel_type,
+            listing_id: c.listing_id,
+            ratio: Number(c.ratio) || 100
+          }))
         };
       }
     } catch (e) {}
@@ -793,6 +800,124 @@ export async function allBasePrices(env) {
     }
   }
   return out;
+}
+
+/* ---------- сторож: не отстала ли цена на нашем листинге ----------
+ *
+ * Цену для сайта мы берём с базового листинга (ratio 100) — это «Booking Site»
+ * в Hostex, наш прямой сайт. 24 сентября 2026 Hostex не смог дописать туда
+ * цены на два окна по Mudra 3 («Price update partially failed», таймаут их
+ * внутреннего сервиса), на Airbnb, Booking и Trip.com цены ушли — и сайт
+ * несколько дней показывал суммы на 0,3–8% ниже, пока человек не сверил
+ * календарь руками.
+ *
+ * Сторож сверяет сам: тянет календари всех каналов одним запросом, приводит
+ * цены к базовой ставке по ratio и считает даты, где базовый листинг
+ * разошёлся с большинством остальных. Ничего не чинит и никуда не пишет —
+ * только отчёт: чинить всё равно на стороне PriceLabs/Hostex.
+ */
+const DRIFT_KEY = 'hx:drift';
+const DRIFT_DAYS = 365;        /* сорванная запись бывает и на окне будущего года */
+const DRIFT_TOL = 0.01;        /* 1% — округления каналов не считаем расхождением */
+const DRIFT_MIN_DATES = 3;     /* одна-две даты — это ручная правка, не сбой */
+
+export async function checkDrift(env) {
+  let chans = await loadChannels(env, false);
+  /* карта каналов в KV может быть от прошлой версии, где лежал только базовый
+     листинг: без остальных каналов сверять не с чем */
+  if (!Object.keys(chans).some((v) => (chans[v].all || []).length > 1)) {
+    chans = await loadChannels(env, true);
+  }
+  const villas = Object.keys(chans);
+  if (!villas.length) return null;
+
+  const listings = [];
+  const seen = {};
+  for (const villa of villas) {
+    for (const c of (chans[villa].all || [chans[villa]])) {
+      const k = c.channel_type + '|' + c.listing_id;
+      if (seen[k]) continue;
+      seen[k] = true;
+      listings.push({ channel_type: c.channel_type, listing_id: c.listing_id });
+    }
+  }
+  if (listings.length < 2) return null;
+
+  const from = today();
+  const to = addDays(from, DRIFT_DAYS);
+  const d = await api(env, '/listings/calendar', {
+    method: 'POST',
+    body: { start_date: from, end_date: to, listings }
+  });
+
+  const byListing = {};
+  for (const l of (d.listings || [])) {
+    const days = {};
+    for (const c of (l.calendar || [])) {
+      const p = Number(c.price) || 0;
+      if (p > 0) days[c.date] = p;
+    }
+    byListing[l.listing_id] = days;
+  }
+
+  const out = {};
+  for (const villa of villas) {
+    const c = chans[villa];
+    const base = byListing[c.listing_id];
+    const others = (c.all || []).filter((x) => x.listing_id !== c.listing_id);
+    if (!base || !others.length) continue;
+
+    const dates = [];
+    for (const date of Object.keys(base).sort()) {
+      /* к базовой ставке приводим каждый канал по его ratio */
+      const want = [];
+      for (const o of others) {
+        const days = byListing[o.listing_id];
+        const p = days && days[date];
+        if (p) want.push(toBase(p, o.ratio));
+      }
+      if (want.length < 2) continue;
+
+      /* берём медиану остальных каналов: один канал с ручной правкой не должен
+         объявлять сбоем всё окно */
+      want.sort((a, b) => a - b);
+      const med = want[Math.floor(want.length / 2)];
+      const mine = toBase(base[date], c.ratio);
+      if (!med || !mine) continue;
+      if (Math.abs(mine - med) / med > DRIFT_TOL) {
+        dates.push({ date, ours: mine, channels: med });
+      }
+    }
+
+    if (dates.length >= DRIFT_MIN_DATES) {
+      /* разброс расхождения: ровный процент на сотне дат — это чаще разная
+         модель цены (фикс на нашем листинге), а скачок на куске окна — сбитая
+         запись. Отдаём и то и другое, решает человек. */
+      const pcts = dates.map((x) => (x.ours - x.channels) / x.channels * 100);
+      const avg = pcts.reduce((a, b) => a + b, 0) / pcts.length;
+      out[villa] = {
+        n: dates.length,
+        from: dates[0].date,
+        to: dates[dates.length - 1].date,
+        ours: dates[0].ours,
+        channels: dates[0].channels,
+        pct: Math.round(avg * 10) / 10,
+        pctMin: Math.round(Math.min.apply(null, pcts) * 10) / 10,
+        pctMax: Math.round(Math.max.apply(null, pcts) * 10) / 10,
+        baseChannel: c.channel_type,
+        others: others.map((o) => o.channel_type + ':' + o.ratio).join(', ')
+      };
+    }
+  }
+
+  const rec = { ts: Date.now(), villas: out, checked: villas.length };
+  try { await env.THB_STATS.put(DRIFT_KEY, JSON.stringify(rec)); } catch (e) {}
+  return rec;
+}
+
+export async function readDrift(env) {
+  try { return JSON.parse(await env.THB_STATS.get(DRIFT_KEY) || 'null'); }
+  catch (e) { return null; }
 }
 
 /* Расчёт на выбранные даты.
