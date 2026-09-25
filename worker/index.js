@@ -34,6 +34,7 @@ import { saveLead } from './leads.js';
 import { opportunities } from './opportunities.js';
 import { takeSnapshot } from './snapshots.js';
 import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices, readAllCalendars, rangeQuotes, checkDrift, readDrift } from './hostex.js';
+import { handleMcp } from './mcp.js';
 import { injectPrices } from './price-html.js';
 import { fxRates, suggest } from './fx.js';
 import { syncReviews, getReviews, publicView, injectReviews } from './reviews.js';
@@ -641,6 +642,12 @@ export default {
        leads. So /admin/ ships as an empty shell: it holds no data and asks for
        the password itself, and every number in it comes from /api/admin/*, which
        does check the session cookie. */
+
+    /* MCP: единый слой доступа к данным для агентов. Живёт вне /api/: у него
+       свой протокол (JSON-RPC) и своя авторизация по токену. */
+    if (url.pathname === '/mcp' || url.pathname === '/mcp/') {
+      return handleMcp(req, env);
+    }
 
     if (url.pathname.indexOf('/api/') === 0) {
       if (req.method === 'OPTIONS') return new Response(null, { status: 204 });
