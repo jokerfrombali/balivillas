@@ -859,6 +859,12 @@ const HEAL_AGREE = 0.7;
 /* Разница больше половины — это не сорванная запись, а другая цена. */
 const HEAL_MAX = 0.5;
 
+/* Виллы, цену которых сайт никогда не подменяет ценой каналов. Сюда идут те,
+   где на прямом листинге стоит своя ставка осознанно: ручная скидка для
+   прямых гостей, фиксированный тариф и подобное. Для них сторож только
+   сообщает о расхождении. */
+const HEAL_SKIP = [];
+
 export async function checkDrift(env) {
   let chans = await loadChannels(env, false);
   /* карта каналов в KV может быть от прошлой версии, где лежал только базовый
@@ -938,7 +944,8 @@ export async function checkDrift(env) {
     }
 
     const agree = compared ? agreed / compared : 0;
-    const canHeal = agree >= HEAL_AGREE && Object.keys(heal).length > 0;
+    const canHeal = agree >= HEAL_AGREE && Object.keys(heal).length > 0 &&
+                    HEAL_SKIP.indexOf(villa) < 0;
 
     if (dates.length >= DRIFT_MIN_DATES) {
       /* разброс расхождения: ровный процент на сотне дат — это чаще разная
