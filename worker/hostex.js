@@ -422,7 +422,17 @@ export async function syncAll(env, force) {
   try { cal = await fetchCalendar(env, chans, from, to); }
   catch (e) { /* занятость важнее цены: без цен обойдёмся, без календаря нет */ }
 
-  let okCal = 0, okPrice = 0;
+  let okCal = 0, okPrice = 0, healedTotal = 0;
+
+  /* Поправки от сторожа: даты, где наш листинг отстал от каналов. Их считает
+     checkDrift раз в два часа, здесь мы их только применяем. */
+  let heal = {};
+  try {
+    const dr = JSON.parse(await env.THB_STATS.get(DRIFT_KEY) || 'null');
+    for (const v of Object.keys((dr && dr.villas) || {})) {
+      if (dr.villas[v].heal) heal[v] = dr.villas[v].heal;
+    }
+  } catch (e) {}
 
   /* Копим цены по ходу обхода: перечитывать их из KV сразу после записи нельзя,
      чтение может вернуть ещё пустое значение, и вилла молча выпадет из сводки
@@ -480,6 +490,23 @@ export async function syncAll(env, force) {
       if (p > 0) norm[date] = [p, days[date].minStay || 0];
     }
 
+    /* Hostex не дописал цены на наш листинг — ставим те, что получили каналы.
+       В Hostex при этом ничего не пишем: правим только то, что показываем. */
+    const fix = heal[link.villa] || null;
+    let healed = 0;
+    if (fix) {
+      for (const date of Object.keys(fix)) {
+        const h = fix[date];
+        if (!norm[date] || !h) continue;
+        /* цена на листинге изменилась с прошлой сверки — значит Hostex её
+           дописал, и подменять больше нечего */
+        if (norm[date][0] !== h[1]) continue;
+        norm[date] = [h[0], norm[date][1]];
+        healed++;
+      }
+      healedTotal += healed;
+    }
+
     /* Цена «от» для карточки в каталоге: минимум по свободным ночам ближайших
        трёх месяцев. Занятые ночи в расчёт не берём — обещать цену на дату,
        которую уже не продать, нечестно. */
@@ -503,6 +530,7 @@ export async function syncAll(env, force) {
       maxGuests: c.maxGuests || 0,
       channel: c.channel_type,
       ratio: c.ratio,
+      healed: healed,
       days: norm,
       ts: Date.now()
     };
@@ -526,6 +554,9 @@ export async function syncAll(env, force) {
     total: linked().length,
     ok: okCal,
     prices: okPrice,
+    /* сколько дат сайт показывает по ценам каналов, потому что на нашем
+       листинге Hostex их не обновил */
+    healed: healedTotal,
     error: fail
   };
   await env.THB_STATS.put(META, JSON.stringify(meta));
@@ -821,6 +852,13 @@ const DRIFT_DAYS = 365;        /* сорванная запись бывает �
 const DRIFT_TOL = 0.01;        /* 1% — округления каналов не считаем расхождением */
 const DRIFT_MIN_DATES = 3;     /* одна-две даты — это ручная правка, не сбой */
 
+/* Порог доверия: чинить цену по каналам можно только там, где наш листинг с
+   ними обычно согласен. Вилла со своей ровной ставкой согласия не наберёт, и
+   её ставку мы не тронем. */
+const HEAL_AGREE = 0.7;
+/* Разница больше половины — это не сорванная запись, а другая цена. */
+const HEAL_MAX = 0.5;
+
 export async function checkDrift(env) {
   let chans = await loadChannels(env, false);
   /* карта каналов в KV может быть от прошлой версии, где лежал только базовый
@@ -868,6 +906,8 @@ export async function checkDrift(env) {
     if (!base || !others.length) continue;
 
     const dates = [];
+    let agreed = 0, compared = 0;
+    const heal = {};
     for (const date of Object.keys(base).sort()) {
       /* к базовой ставке приводим каждый канал по его ratio */
       const want = [];
@@ -884,10 +924,21 @@ export async function checkDrift(env) {
       const med = want[Math.floor(want.length / 2)];
       const mine = toBase(base[date], c.ratio);
       if (!med || !mine) continue;
-      if (Math.abs(mine - med) / med > DRIFT_TOL) {
-        dates.push({ date, ours: mine, channels: med });
-      }
+
+      compared++;
+      const off = Math.abs(mine - med) / med;
+      if (off <= DRIFT_TOL) { agreed++; continue; }
+
+      dates.push({ date, ours: mine, channels: med });
+      /* Поправку держим отдельно: применять её или нет, решаем ниже, когда
+         посчитаем согласие по всему году. */
+      /* храним и то, что сейчас лежит у нас: как только Hostex допишет цену,
+         поправка перестанет подходить и применяться */
+      if (want.length >= 2 && off <= HEAL_MAX) heal[date] = [med, mine];
     }
+
+    const agree = compared ? agreed / compared : 0;
+    const canHeal = agree >= HEAL_AGREE && Object.keys(heal).length > 0;
 
     if (dates.length >= DRIFT_MIN_DATES) {
       /* разброс расхождения: ровный процент на сотне дат — это чаще разная
@@ -901,6 +952,11 @@ export async function checkDrift(env) {
         to: dates[dates.length - 1].date,
         ours: dates[0].ours,
         channels: dates[0].channels,
+        agree: Math.round(agree * 100),
+        /* цены, которыми сайт подменит отставшие: пусто, если это не сбой
+           записи, а своя ставка виллы */
+        heal: canHeal ? heal : null,
+        healed: canHeal ? Object.keys(heal).length : 0,
         pct: Math.round(avg * 10) / 10,
         pctMin: Math.round(Math.min.apply(null, pcts) * 10) / 10,
         pctMax: Math.round(Math.max.apply(null, pcts) * 10) / 10,
@@ -949,11 +1005,23 @@ export async function quote(env, villa, checkIn, checkOut, guests) {
   const cal = await fetchCalendar(env, { [villa]: c }, checkIn, checkOut);
   const days = cal[c.listing_id] || {};
 
-  let rent = 0, priced = 0;
+  /* Те же поправки, что и в зеркале: иначе каталог показывал бы цену каналов,
+     а страница виллы — отставшую цену нашего листинга. */
+  let fix = null;
+  try {
+    const dr = JSON.parse(await env.THB_STATS.get(DRIFT_KEY) || 'null');
+    fix = ((dr && dr.villas && dr.villas[villa]) || {}).heal || null;
+  } catch (e) {}
+
+  let rent = 0, priced = 0, healed = 0;
   for (const d of nightsBetween(checkIn, checkOut)) {
     const day = days[d];
     if (!day || !day.price) continue;
-    rent += toBase(day.price, c.ratio);
+    const live = toBase(day.price, c.ratio);
+    const h = fix && fix[d];
+    const use = h && h[1] === live ? h[0] : live;
+    if (use !== live) healed++;
+    rent += use;
     priced++;
   }
 
@@ -970,6 +1038,7 @@ export async function quote(env, villa, checkIn, checkOut, guests) {
     nights: priced,
     minStay: (days[checkIn] && days[checkIn].minStay) || 0,
     rent,
+    healed,
     cleaningFee: 0,
     taxes: 0,
     total: rent,
@@ -988,6 +1057,21 @@ export async function quote(env, villa, checkIn, checkOut, guests) {
 export async function status(env) {
   let meta = {};
   try { meta = JSON.parse(await env.THB_STATS.get(META) || '{}'); } catch (e) {}
+
+  /* последний отчёт сторожа цен: какие виллы разошлись с каналами и где сайт
+     показывает цену каналов вместо отставшей */
+  let drift = null;
+  try {
+    const d = JSON.parse(await env.THB_STATS.get(DRIFT_KEY) || 'null');
+    if (d) {
+      drift = { ts: d.ts, villas: {} };
+      for (const v of Object.keys(d.villas || {})) {
+        const x = d.villas[v];
+        drift.villas[v] = { n: x.n, from: x.from, to: x.to, pct: x.pct,
+                            agree: x.agree, healed: x.healed };
+      }
+    }
+  } catch (e) {}
 
   let chans = {};
   try { chans = (JSON.parse(await env.THB_STATS.get(CHANNELS) || '{}') || {}).map || {}; }
@@ -1030,7 +1114,10 @@ export async function status(env) {
       price: price && price.ok ? price.price : 0,
       currency: price ? price.currency : '',
       channel: c ? c.channel_type : null,
-      ratio: c ? c.ratio : null
+      ratio: c ? c.ratio : null,
+      /* сколько дат показываем по ценам каналов: Hostex не дописал их на наш
+         листинг, сайт подставил сам (см. checkDrift) */
+      healed: price ? price.healed || 0 : 0
     });
   }
 
@@ -1042,6 +1129,8 @@ export async function status(env) {
     links,
     live: links.filter((l) => l.state === 'live').length,
     priced: links.filter((l) => l.price > 0).length,
-    total: links.length
+    total: links.length,
+    healed: links.reduce((n, l) => n + (l.healed || 0), 0),
+    drift
   };
 }

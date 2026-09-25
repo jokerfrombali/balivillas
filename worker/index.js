@@ -593,9 +593,14 @@ async function driftWatch(env) {
   if (names.length) {
     const lines = names.map((n) => {
       const d = rec.villas[n];
+      /* две разные истории: сорванная запись, которую сайт уже обошёл,
+         и своя ставка виллы, которую трогать нельзя */
+      const tail = d.healed
+        ? '\n  сайт уже показывает цены каналов на этих датах; в Hostex нужно перетолкнуть'
+        : '\n  совпадение с каналами всего ' + d.agree + '% по году: похоже на свою ставку, сайт её не меняет';
       return '• <b>' + n + '</b>: ' + d.n + ' дат, с ' + d.from + ' по ' + d.to +
              '\n  у нас ' + money(d.ours) + ', на каналах ' + money(d.channels) +
-             ' (' + (d.pct > 0 ? '+' : '') + d.pct + '%)';
+             ' (' + (d.pct > 0 ? '+' : '') + d.pct + '%)' + tail;
     });
     await tg(env,
       '⚠️ <b>Цена на нашем листинге разошлась с каналами Hostex</b>\n' +
@@ -737,7 +742,17 @@ export default {
           if (!busy) { try { await checkDrift(env); } catch (e) {} }
         }
         const rec = await readDrift(env);
-        return new Response(JSON.stringify({ ok: true, drift: rec || null }), {
+        /* сами поправки по датам наружу не отдаём: в ответе важны вилла, окно и
+           размер расхождения, а не список из сотен дат */
+        const slim = rec ? { ts: rec.ts, checked: rec.checked, villas: {} } : null;
+        for (const v of Object.keys((rec && rec.villas) || {})) {
+          const x = rec.villas[v];
+          slim.villas[v] = { n: x.n, from: x.from, to: x.to, ours: x.ours,
+                             channels: x.channels, pct: x.pct, pctMin: x.pctMin,
+                             pctMax: x.pctMax, agree: x.agree, healed: x.healed,
+                             baseChannel: x.baseChannel, others: x.others };
+        }
+        return new Response(JSON.stringify({ ok: true, drift: slim }), {
           headers: { 'content-type': 'application/json', 'cache-control': 'no-store' }
         });
       }
@@ -920,10 +935,12 @@ export default {
       /* Отзывы: 4 виллы за проход, полный круг за ~2,5 часа. */
       try { await syncReviews(env); } catch (e) { /* следующий заход подберёт */ }
 
-      /* Раз в сутки сверяем цены нашего листинга с остальными каналами: Hostex
-         иногда не дописывает цены именно на прямой сайт, и тогда мы показываем
-         старые суммы. Пишем в Telegram только при смене состояния. */
-      if (h.time === '09:00') await driftWatch(env);
+      /* Сверка цен нашего листинга с остальными каналами Hostex. Раз в два
+         часа: сорванную запись надо заметить и подменить цену в тот же день, а
+         не на следующий. В Telegram пишем только при смене состояния. */
+      if (/^\d\d:00$/.test(h.time) && Number(h.time.slice(0, 2)) % 2 === 1) {
+        await driftWatch(env);
+      }
     })());
   }
 };
