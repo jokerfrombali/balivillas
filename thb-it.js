@@ -83,6 +83,8 @@
        день-месяц, названия месяцев подменит dateish */
     [/^([A-Za-z]{3}) (\d{1,2}), (\d{4}) ~ ([A-Za-z]{3}) (\d{1,2}), (\d{4})$/, '$2 $1 $3 ~ $5 $4 $6'],
     [/^([A-Za-z]{3}) (\d{1,2}), (\d{4})$/, '$2 $1 $3'],
+    /* campi check-in/check-out del modulo: «Oct 5» -> «5 ott» */
+    [/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d{1,2})$/, '$2 $1'],
     [/^from (.+?) per night$/, 'da $1 a notte'],
     [/^(.+?) per night$/, '$1 a notte'],
     [/^(.+?) total$/, '$1 totale'],

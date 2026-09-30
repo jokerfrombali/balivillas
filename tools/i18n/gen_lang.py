@@ -149,9 +149,20 @@ def tr_ld(txt):
 
 
 def tr_script(seg):
-    """Обычный inline-скрипт: только адреса страниц-близнецов в кавычках."""
-    return re.sub(r"(['\"])(/[A-Za-z0-9\-/]*/)\1",
-                  lambda m: m.group(1) + it_path(m.group(2)) + m.group(1), seg)
+    """Обычный inline-скрипт: адреса страниц-близнецов в кавычках плюс
+    календарь виллы. Календарь ищет поля «Заезд/Выезд» по тексту
+    'Add date', а в HTML он уже переведён — скрипт поле не находил и дата
+    в форму не попадала. Даём ему узнавать и перевод, и дату в любом
+    порядке («Oct 5» и «5 окт», во что её превращает словарь виджетов)."""
+    seg = re.sub(r"(['\"])(/[A-Za-z0-9\-/]*/)\1",
+                 lambda m: m.group(1) + it_path(m.group(2)) + m.group(1), seg)
+    ad = T.get('Add date')
+    if ad and "'Add date'" in seg:
+        test = "/^(Add date|%s)$/.test(%%s.textContent.trim())" % re.escape(ad).replace('/', '\\/')
+        seg = seg.replace("div.textContent.trim() === 'Add date'", test % 'div')
+        seg = seg.replace("s.textContent.trim() === 'Add date' || s.textContent.match(/^[A-Z][a-z]{2} \\d+$/)",
+                          (test % 's') + " || /^([^\\s\\d]{2,5}\\.? \\d{1,2}|\\d{1,2} [^\\s\\d]{2,5}\\.?)$/.test(s.textContent.trim())")
+    return seg
 
 
 def remove_lang_switcher(html):

@@ -1180,7 +1180,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Also handle divs with "Add date" text
         document.querySelectorAll('div').forEach(div => {
-            if (div.textContent.trim() === 'Add date' && !div.id) {
+            if (/^(Add date|Aggiungi\ la\ data)$/.test(div.textContent.trim()) && !div.id) {
                 const parent = div.closest('[class*="border"]');
                 if (parent) {
                     const allAddDates = parent.parentElement.querySelectorAll('div');
@@ -1407,13 +1407,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update sidebar form
     document.querySelectorAll('div').forEach(div => {
-      if (div.textContent.trim() === 'Add date' && startDate) {
+      if (/^(Add date|Aggiungi\ la\ data)$/.test(div.textContent.trim()) && startDate) {
         const parent = div.closest('[class*="border"]');
         if (parent) {
           const siblings = parent.parentElement.querySelectorAll('div');
           let count = 0;
           siblings.forEach(s => {
-            if (s.textContent.trim() === 'Add date' || s.textContent.match(/^[A-Z][a-z]{2} \d+$/)) {
+            if (/^(Add date|Aggiungi\ la\ data)$/.test(s.textContent.trim()) || /^([^\s\d]{2,5}\.? \d{1,2}|\d{1,2} [^\s\d]{2,5}\.?)$/.test(s.textContent.trim())) {
               count++;
               if (count === 1 && startDate) {
                 s.textContent = startDate.toLocaleDateString('en-US', opts);
