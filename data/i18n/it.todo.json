@@ -1,5 +1,5 @@
 {
- "Bali Villa Rental — Smart Villa Search | The Host Bali": {
+ "The Host Bali — Private Pool Villas in Bali, Booked Direct": {
   "it": "",
   "pages": 1
  },
@@ -23,6 +23,10 @@
   "it": "",
   "pages": 15
  },
+ "Guides": {
+  "it": "",
+  "pages": 68
+ },
  "About": {
   "it": "",
   "pages": 68
@@ -31,47 +35,27 @@
   "it": "",
   "pages": 68
  },
- "EN": {
-  "it": "",
-  "pages": 12
- },
- "English": {
-  "it": "",
-  "pages": 12
- },
- "RU": {
-  "it": "",
-  "pages": 12
- },
- "soon": {
+ "Browse villas": {
   "it": "",
   "pages": 1
- },
- "ID": {
-  "it": "",
-  "pages": 1
- },
- "Bahasa": {
-  "it": "",
-  "pages": 1
- },
- "ZH": {
-  "it": "",
-  "pages": 12
- },
- "List your property": {
-  "it": "",
-  "pages": 2
  },
  "Saved villas": {
   "it": "",
   "pages": 41
+ },
+ "List your property": {
+  "it": "",
+  "pages": 2
  },
  "Property type": {
   "it": "",
   "pages": 12
  },
  "Villa": {
+  "it": "",
+  "pages": 12
+ },
+ "Monthly rentals &rarr;": {
   "it": "",
   "pages": 12
  },
@@ -211,15 +195,15 @@
   "it": "",
   "pages": 12
  },
- "Find your perfect": {
+ "Your perfect Bali villa,": {
   "it": "",
   "pages": 1
  },
- "Bali villa.": {
+ "booked direct.": {
   "it": "",
   "pages": 1
  },
- "Rent, buy — or hand your villa over to the team that runs every home on this site.": {
+ "Every villa on this site is run by our own team in Bali. Book straight with us: no platform fee on top, and a real person answers the same day.": {
   "it": "",
   "pages": 1
  },
@@ -231,7 +215,7 @@
   "it": "",
   "pages": 1
  },
- "15 private pool villas · Sanur, Canggu, Umalas &amp; Ungasan": {
+ "20 private pool villas · Sanur, Canggu, Umalas &amp; Ungasan": {
   "it": "",
   "pages": 1
  },
@@ -289,7 +273,7 @@
  },
  "Villa The Wave — Beachside 6BR Villa in Canggu": {
   "it": "",
-  "pages": 6
+  "pages": 7
  },
  "Canggu, Bali": {
   "it": "",
@@ -309,7 +293,7 @@
  },
  "Villa Black Pool — Family 4BR Villa with Big Pool": {
   "it": "",
-  "pages": 6
+  "pages": 7
  },
  "Sanur, Bali": {
   "it": "",
@@ -321,7 +305,7 @@
  },
  "Sanur Garden Pool Villa — Family 4BR near Mertasari Beach": {
   "it": "",
-  "pages": 6
+  "pages": 7
  },
  "4 bed &middot; 4.5 bath &middot; 8 guests": {
   "it": "",
@@ -385,7 +369,7 @@
  },
  "Stylish 2BR Pool Townhouse in Sanur": {
   "it": "",
-  "pages": 7
+  "pages": 8
  },
  "2 bed &middot; 2.5 bath &middot; 4 guests": {
   "it": "",
@@ -445,7 +429,7 @@
  },
  "Leonardo — 9BR Resort Villa in Pererenan": {
   "it": "",
-  "pages": 4
+  "pages": 5
  },
  "9 bed &middot; 9 bath &middot; 18 guests": {
   "it": "",
@@ -575,6 +559,62 @@
   "it": "",
   "pages": 1
  },
+ "Booking direct": {
+  "it": "",
+  "pages": 1
+ },
+ "Why book straight": {
+  "it": "",
+  "pages": 1
+ },
+ "with us.": {
+  "it": "",
+  "pages": 1
+ },
+ "The same villas appear on the big platforms. Booking them here goes to the team that actually holds the keys, cleans the rooms and answers at 2am.": {
+  "it": "",
+  "pages": 1
+ },
+ "No platform fee": {
+  "it": "",
+  "pages": 1
+ },
+ "Airbnb and Booking.com add their service fee on top of the rate. Book here and that part simply is not charged.": {
+  "it": "",
+  "pages": 1
+ },
+ "You talk to the manager": {
+  "it": "",
+  "pages": 1
+ },
+ "Not a call centre. One WhatsApp thread with the person who runs the villa, before and during your stay.": {
+  "it": "",
+  "pages": 1
+ },
+ "Flexible on dates": {
+  "it": "",
+  "pages": 1
+ },
+ "Early check-in, a late flight, an extra night, a month instead of a week — we can say yes without a platform in the middle.": {
+  "it": "",
+  "pages": 1
+ },
+ "We manage every villa": {
+  "it": "",
+  "pages": 1
+ },
+ "All 20 homes on this site are under our own management, with our own housekeeping and maintenance teams.": {
+  "it": "",
+  "pages": 1
+ },
+ "Check dates on WhatsApp": {
+  "it": "",
+  "pages": 1
+ },
+ "See villas in Sanur": {
+  "it": "",
+  "pages": 1
+ },
  "How it works": {
   "it": "",
   "pages": 1
@@ -653,19 +693,19 @@
  },
  "What we stand for": {
   "it": "",
-  "pages": 2
+  "pages": 1
  },
  "Fewer promises.": {
   "it": "",
-  "pages": 2
+  "pages": 1
  },
  "All of them kept.": {
   "it": "",
-  "pages": 2
+  "pages": 1
  },
  "Verified, not scraped": {
   "it": "",
-  "pages": 2
+  "pages": 1
  },
  "Every villa checked by our team before it goes live.": {
   "it": "",
@@ -673,7 +713,7 @@
  },
  "Honest matches": {
   "it": "",
-  "pages": 2
+  "pages": 1
  },
  "We recommend what fits you — not what pays us more.": {
   "it": "",
@@ -681,7 +721,7 @@
  },
  "On the ground": {
   "it": "",
-  "pages": 2
+  "pages": 1
  },
  "Real local support in Bali, 24/7, from booking to checkout.": {
   "it": "",
@@ -689,7 +729,7 @@
  },
  "Transparency for owners": {
   "it": "",
-  "pages": 2
+  "pages": 1
  },
  "Full reporting on every booking and every expense.": {
   "it": "",
@@ -715,6 +755,66 @@
   "it": "",
   "pages": 1
  },
+ "Guides from the team that runs the villas": {
+  "it": "",
+  "pages": 1
+ },
+ "Written by The Host Bali team, who manage the villas on this site.": {
+  "it": "",
+  "pages": 15
+ },
+ "Bali Villa Cancellation Policy": {
+  "it": "",
+  "pages": 2
+ },
+ "How Bali villa cancellation policies actually work, what to check before you pay a deposit…": {
+  "it": "",
+  "pages": 2
+ },
+ "Bali Villa Monthly Rental Cost": {
+  "it": "",
+  "pages": 2
+ },
+ "Bali villa monthly rental cost varies widely by area, size and season. Here&#x27;s what typical…": {
+  "it": "",
+  "pages": 2
+ },
+ "Bali Villa Rental Contract": {
+  "it": "",
+  "pages": 2
+ },
+ "A Bali villa rental contract checklist covering rent, deposit, inclusions and exit terms —…": {
+  "it": "",
+  "pages": 2
+ },
+ "Bali Villa Rental Scams": {
+  "it": "",
+  "pages": 2
+ },
+ "Bali villa rental scams follow a small number of repeating patterns. Here is how each one …": {
+  "it": "",
+  "pages": 2
+ },
+ "Bali Villa Security Deposit": {
+  "it": "",
+  "pages": 2
+ },
+ "What a Bali villa security deposit actually covers, typical amounts and return timelines, …": {
+  "it": "",
+  "pages": 2
+ },
+ "Direct Booking vs Airbnb for a Bali Villa": {
+  "it": "",
+  "pages": 2
+ },
+ "Booking a Bali villa direct vs Airbnb, compared on price, protection and flexibility, so y…": {
+  "it": "",
+  "pages": 2
+ },
+ "All guides →": {
+  "it": "",
+  "pages": 15
+ },
  "The Host Bali": {
   "it": "",
   "pages": 68
@@ -726,10 +826,6 @@
  "WhatsApp": {
   "it": "",
   "pages": 68
- },
- "Instagram": {
-  "it": "",
-  "pages": 67
  },
  "Email": {
   "it": "",
@@ -887,10 +983,6 @@
   "it": "",
   "pages": 1
  },
- "Language": {
-  "it": "",
-  "pages": 1
- },
  "Menu": {
   "it": "",
   "pages": 13
@@ -951,37 +1043,25 @@
   "it": "",
   "pages": 4
  },
- "17 private pool villas in Bali, managed by our own team — Sanur, Canggu, Umalas and Ungasan. Daily, monthly and long stays, booked direct.": {
+ "11 private pool villas in Sanur, plus Canggu, Umalas and Ungasan — run by our own team in Bali. Book direct: no platform fee, same-day reply.": {
   "it": "",
   "pages": 1
  },
- "Villa rental and full-service property management in Bali by The Host Bali. 15 private pool villas in Sanur, Canggu, Umalas and Ungasan.": {
+ "20 private pool villas in Bali, managed by our own team — Sanur, Canggu, Umalas and Ungasan. Daily, monthly and long stays, booked direct.": {
   "it": "",
   "pages": 1
  },
- "Bali Villa Rentals — 15 Private Pool Villas, Book Direct | The Host Bali": {
+ "Bali Villa Rental — Smart Villa Search | The Host Bali": {
   "it": "",
   "pages": 1
  },
- "DE": {
+ "Villa rental and full-service property management in Bali by The Host Bali. 20 private pool villas in Sanur, Canggu, Umalas and Ungasan.": {
   "it": "",
-  "pages": 11
+  "pages": 1
  },
- "Deutsch": {
+ "Bali Villa Rentals — 20 Private Pool Villas, Book Direct | The Host Bali": {
   "it": "",
-  "pages": 11
- },
- "FR": {
-  "it": "",
-  "pages": 11
- },
- "Français": {
-  "it": "",
-  "pages": 11
- },
- "JA": {
-  "it": "",
-  "pages": 11
+  "pages": 1
  },
  "Calm Seas": {
   "it": "",
@@ -999,7 +1079,7 @@
   "it": "",
   "pages": 1
  },
- "Fifteen villas our own team runs in Sanur, Canggu, Umalas and Ungasan. Live calendars, the price you see is the price you pay, and a person on WhatsApp who knows the house.": {
+ "Twenty villas our own team runs in Sanur, Canggu, Umalas and Ungasan. Live calendars, the price you see is the price you pay, and a person on WhatsApp who knows the house.": {
   "it": "",
   "pages": 1
  },
@@ -1243,7 +1323,7 @@
   "it": "",
   "pages": 1
  },
- "Fifteen private pool villas in four areas: beachside Sanur on the calm east coast, Canggu and Pererenan for surf and beach clubs, quiet Umalas between Canggu and Seminyak, and the clifftop south around Ungasan. From one-bedroom hideaways to a nine-bedroom estate, for a week, a month or a year.": {
+ "Twenty private pool villas in four areas: beachside Sanur on the calm east coast, Canggu and Pererenan for surf and beach clubs, quiet Umalas between Canggu and Seminyak, and the clifftop south around Ungasan. From one-bedroom hideaways to a nine-bedroom estate, for a week, a month or a year.": {
   "it": "",
   "pages": 1
  },
@@ -1301,7 +1381,7 @@
  },
  "How do I book a villa in Bali with The Host Bali?": {
   "it": "",
-  "pages": 2
+  "pages": 1
  },
  "Open the villa page, choose your dates and guests and send the request. It goes straight to our WhatsApp; we confirm availability and the total price the same day, usually within the hour. No booking fee, no agency commission.": {
   "it": "",
@@ -1344,6 +1424,10 @@
   "pages": 1
  },
  "After we confirm the dates you receive a payment link or bank details; the website itself never charges your card. The balance and any deposit are agreed before arrival.": {
+  "it": "",
+  "pages": 1
+ },
+ "Before you book: guides for villa guests": {
   "it": "",
   "pages": 1
  },
@@ -1667,7 +1751,7 @@
   "it": "",
   "pages": 1
  },
- "We do not list every villa on the island — only the fifteen our own team manages, in four areas we know street by street. Each area page shows what is free, what it costs and how the neighbourhood actually lives: where the beach is, how loud the evenings get, what the traffic is like at eight in the morning.": {
+ "We do not list every villa on the island — only the twenty our own team manages, in four areas we know street by street. Each area page shows what is free, what it costs and how the neighbourhood actually lives: where the beach is, how loud the evenings get, what the traffic is like at eight in the morning.": {
   "it": "",
   "pages": 1
  },
@@ -1690,6 +1774,58 @@
  "Four compact pool villas in a managed eco complex on the Bukit, close to the best beaches in the south.": {
   "it": "",
   "pages": 1
+ },
+ "Choosing an area: our guides": {
+  "it": "",
+  "pages": 1
+ },
+ "Best Part of Canggu to Stay in": {
+  "it": "",
+  "pages": 2
+ },
+ "There&#x27;s no single best part of Canggu to stay in — the right neighbourhood depends on your…": {
+  "it": "",
+  "pages": 2
+ },
+ "Canggu Neighbourhoods": {
+  "it": "",
+  "pages": 2
+ },
+ "Canggu isn&#x27;t one place — Berawa, Batu Bolong, Echo Beach and Pererenan each feel different…": {
+  "it": "",
+  "pages": 2
+ },
+ "Eating Out in Umalas": {
+  "it": "",
+  "pages": 2
+ },
+ "Umalas restaurants sorted by what they&#x27;re actually good for — a quick lunch between meetin…": {
+  "it": "",
+  "pages": 2
+ },
+ "How to Pick the Best Area to Rent a Villa in Bali": {
+  "it": "",
+  "pages": 1
+ },
+ "Sanur, Canggu, Umalas or Ungasan: here is how a villa manager would help you pick the righ…": {
+  "it": "",
+  "pages": 1
+ },
+ "Is Sanur Good for Families": {
+  "it": "",
+  "pages": 2
+ },
+ "Is Sanur good for families visiting Bali? Yes — calm water, flat streets and villas with p…": {
+  "it": "",
+  "pages": 2
+ },
+ "Is Sanur a Good Place to Stay in Bali": {
+  "it": "",
+  "pages": 2
+ },
+ "Is Sanur a good place to stay in Bali? Yes, for calm beaches and families; here is the hon…": {
+  "it": "",
+  "pages": 2
  },
  "Villas in Sanur, Bali": {
   "it": "",
@@ -1715,7 +1851,7 @@
   "it": "",
   "pages": 5
  },
- "About Us — The Host Bali | Bali Locals": {
+ "About The Host Bali — the team that runs the villas": {
   "it": "",
   "pages": 1
  },
@@ -1739,19 +1875,15 @@
   "it": "",
   "pages": 2
  },
- "We're on a mission to make Bali stays": {
+ "The Host Bali.": {
   "it": "",
   "pages": 1
  },
- "honest.": {
+ "We rent out and manage private pool villas in Bali — eleven in Sanur, plus Canggu, Umalas and Ungasan. Every villa on this site is run by our own team: we clean it, answer the messages and keep the calendar you see.": {
   "it": "",
   "pages": 1
  },
- "Verified villas instead of pretty lies. Real people instead of ticket queues. Full cycle — from your first stay to buying your own villa or land. Built in Bali, by people who live here.": {
-  "it": "",
-  "pages": 1
- },
- "Get to know us": {
+ "See our villas": {
   "it": "",
   "pages": 1
  },
@@ -1780,402 +1912,6 @@
   "pages": 1
  },
  "average reply time, day and night": {
-  "it": "",
-  "pages": 1
- },
- "Why we exist": {
-  "it": "",
-  "pages": 1
- },
- "Bali's rental market has a trust problem.": {
-  "it": "",
-  "pages": 1
- },
- "We're fixing it.": {
-  "it": "",
-  "pages": 1
- },
- "The old way": {
-  "it": "",
-  "pages": 1
- },
- "Photos that lie": {
-  "it": "",
-  "pages": 1
- },
- "Five-year-old listings, rendered pools, \"fast Wi-Fi\" that dies at sunset.": {
-  "it": "",
-  "pages": 1
- },
- "Support that vanishes": {
-  "it": "",
-  "pages": 1
- },
- "Everyone answers before you pay. Then the chat goes quiet.": {
-  "it": "",
-  "pages": 1
- },
- "Owners left in the dark": {
-  "it": "",
-  "pages": 1
- },
- "Vague monthly summaries, hidden markups, promises nobody can keep.": {
-  "it": "",
-  "pages": 1
- },
- "Hours of scrolling": {
-  "it": "",
-  "pages": 1
- },
- "Hundreds of identical listings, zero way to know which one is real.": {
-  "it": "",
-  "pages": 1
- },
- "The The Host Bali way": {
-  "it": "",
-  "pages": 1
- },
- "Verified in person": {
-  "it": "",
-  "pages": 1
- },
- "Our team visits every villa: we test the Wi-Fi, meet the staff, shoot real photos.": {
-  "it": "",
-  "pages": 1
- },
- "Humans on the ground, 24/7": {
-  "it": "",
-  "pages": 1
- },
- "A real local team that answers in minutes — before, during and after your stay.": {
-  "it": "",
-  "pages": 1
- },
- "Every rupiah reported": {
-  "it": "",
-  "pages": 1
- },
- "Owners see every booking, every expense, every payout. Itemized. On time.": {
-  "it": "",
-  "pages": 1
- },
- "Search that finds your match in seconds": {
-  "it": "",
-  "pages": 1
- },
- "Describe your stay in plain words — get verified villas that actually fit.": {
-  "it": "",
-  "pages": 1
- },
- "Our journey": {
-  "it": "",
-  "pages": 1
- },
- "It started with": {
-  "it": "",
-  "pages": 1
- },
- "one bad booking.": {
-  "it": "",
-  "pages": 1
- },
- "A year on scooters": {
-  "it": "",
-  "pages": 1
- },
- "A villa that looked stunning online turned out to be a half-drained pool with dying Wi-Fi. Every traveler has this story — we decided to end it. We spent a year visiting villas one by one across Canggu, Uluwatu, Ubud, Seminyak and Sanur: testing, photographing, meeting the staff, checking the paperwork. Only then did a villa earn its place on our platform.": {
-  "it": "",
-  "pages": 1
- },
- "Then we made search speak villa": {
-  "it": "",
-  "pages": 1
- },
- "We built a search engine that understands plain human language. Tell it \"quiet 2-bedroom near Berawa beach, fast Wi-Fi, under $1,500 a month\" — and it finds your match in seconds. Not from scraped listings. Only from villas we verified ourselves.": {
-  "it": "",
-  "pages": 1
- },
- "Today: platform + full operations": {
-  "it": "",
-  "pages": 1
- },
- "The Host Bali is now both a tech platform and a hospitality team. Technology on the surface — housekeeping, pool and garden crews, guest support and transparent owner management on the ground. That's why owners trust us with their properties, and guests come back.": {
-  "it": "",
-  "pages": 1
- },
- "\"Our mission is simple: make renting, owning and managing a villa in Bali feel as good as the island itself.\"": {
-  "it": "",
-  "pages": 1
- },
- "Managed honestly. Cared for completely. — The The Host Bali team": {
-  "it": "",
-  "pages": 1
- },
- "Full-cycle property partner": {
-  "it": "",
-  "pages": 1
- },
- "From your first night": {
-  "it": "",
-  "pages": 1
- },
- "to your own villa.": {
-  "it": "",
-  "pages": 1
- },
- "We operate at the intersection of three roles — host to our guests, partner to our owners, and guide to those buying on the island — and we hold every one of them to the same standard: honesty, attention to detail, and full accountability for the result. One roof, no hand-offs between agencies and brokers who don't talk to each other.": {
-  "it": "",
-  "pages": 1
- },
- "Villa rentals": {
-  "it": "",
-  "pages": 1
- },
- "Daily, monthly and yearly stays in 500+ verified villas — matched to you in seconds.": {
-  "it": "",
-  "pages": 1
- },
- "Find a villa →": {
-  "it": "",
-  "pages": 1
- },
- "by The Host": {
-  "it": "",
-  "pages": 1
- },
- "Listings on Airbnb &amp; Booking.com, guest communication, housekeeping, garden and pool care, repairs, tax compliance. No hidden markups, no vague monthly summaries — owning a villa should be an asset, not a second job.": {
-  "it": "",
-  "pages": 1
- },
- "Learn more →": {
-  "it": "",
-  "pages": 1
- },
- "Villa sales": {
-  "it": "",
-  "pages": 1
- },
- "Buy in Bali with the operator who runs it after you sign. Real numbers, clean paperwork — and we stay as your operating partner for as long as you own it.": {
-  "it": "",
-  "pages": 1
- },
- "Talk to us →": {
-  "it": "",
-  "pages": 1
- },
- "Land sales": {
-  "it": "",
-  "pages": 1
- },
- "Plots in locations we know convert to bookings — with land status, zoning and titles reviewed before you commit.": {
-  "it": "",
-  "pages": 1
- },
- "See available land →": {
-  "it": "",
-  "pages": 1
- },
- "Investment &amp; development": {
-  "it": "",
-  "pages": 1
- },
- "From land plot to income-generating villa: planning, construction oversight and rental projections built on real portfolio data.": {
-  "it": "",
-  "pages": 1
- },
- "Discuss a project →": {
-  "it": "",
-  "pages": 1
- },
- "Legal &amp; paperwork": {
-  "it": "",
-  "pages": 1
- },
- "Leasehold vs freehold, licensing, tax compliance — explained in plain language and handled correctly, every time.": {
-  "it": "",
-  "pages": 1
- },
- "Ask a question →": {
-  "it": "",
-  "pages": 1
- },
- "The team": {
-  "it": "",
-  "pages": 1
- },
- "The people behind": {
-  "it": "",
-  "pages": 1
- },
- "every perfect stay.": {
-  "it": "",
-  "pages": 1
- },
- "Made Wirawan": {
-  "it": "",
-  "pages": 1
- },
- "Head of Villa Operations": {
-  "it": "",
-  "pages": 1
- },
- "Born in Denpasar. Knows every villa in our collection by heart — because he approved each one personally.": {
-  "it": "",
-  "pages": 1
- },
- "Ayu Lestari": {
-  "it": "",
-  "pages": 1
- },
- "Guest Experience Lead": {
-  "it": "",
-  "pages": 1
- },
- "From Ubud. The voice behind our 24/7 support — if you message us, chances are Ayu's team answers in minutes.": {
-  "it": "",
-  "pages": 1
- },
- "Wayan Putra": {
-  "it": "",
-  "pages": 1
- },
- "Maintenance &amp; Gardens": {
-  "it": "",
-  "pages": 1
- },
- "Third-generation Canggu local. Leads the crews that keep pools blue, gardens green, and everything working.": {
-  "it": "",
-  "pages": 1
- },
- "Sari Dewi": {
-  "it": "",
-  "pages": 1
- },
- "Owner Relations": {
-  "it": "",
-  "pages": 1
- },
- "From Sanur. Makes sure every villa owner gets what we promise: clear reports, honest numbers, zero surprises.": {
-  "it": "",
-  "pages": 1
- },
- "Life at The Host Bali": {
-  "it": "",
-  "pages": 1
- },
- "Real villas. Real work.": {
-  "it": "",
-  "pages": 1
- },
- "Every single day.": {
-  "it": "",
-  "pages": 1
- },
- "From 7am pool checks to late-night guest support — this is what \"managed\" actually looks like.": {
-  "it": "",
-  "pages": 1
- },
- "Our operations crew — Canggu, Bali": {
-  "it": "",
-  "pages": 1
- },
- "7am pool service": {
-  "it": "",
-  "pages": 1
- },
- "Villa check before arrival": {
-  "it": "",
-  "pages": 1
- },
- "Back office — bookings &amp; reports": {
-  "it": "",
-  "pages": 1
- },
- "Guest support, always on": {
-  "it": "",
-  "pages": 1
- },
- "Welcome drinks at check-in": {
-  "it": "",
-  "pages": 1
- },
- "Guest experience desk": {
-  "it": "",
-  "pages": 1
- },
- "Every villa visited and checked by our team before it goes live. No stock listings, no surprises.": {
-  "it": "",
-  "pages": 1
- },
- "We recommend what fits you — not what pays us more. Rankings can't be bought.": {
-  "it": "",
-  "pages": 1
- },
- "Real local support in Bali, 24/7, from booking to checkout. A team that answers, not a ticket queue.": {
-  "it": "",
-  "pages": 1
- },
- "Full reporting on every booking and every expense. Every rupiah in and out, documented.": {
-  "it": "",
-  "pages": 1
- },
- "FAQ": {
-  "it": "",
-  "pages": 1
- },
- "Questions we": {
-  "it": "",
-  "pages": 1
- },
- "hear most often.": {
-  "it": "",
-  "pages": 1
- },
- "What is The Host Bali?": {
-  "it": "",
-  "pages": 1
- },
- "The Host Bali is a villa rental platform in Bali with 500+ personally verified villas in Canggu, Ubud, Seminyak, Uluwatu and Sanur. Operations and property management are run by The Host, our in-house hospitality team. We cover the full property cycle: rentals for guests, management for owners, and villa &amp; land sales for buyers.": {
-  "it": "",
-  "pages": 1
- },
- "How do I book a villa?": {
-  "it": "",
-  "pages": 1
- },
- "Describe your stay in plain words in our search, or message us on WhatsApp at +62 857 4649 9697. Booking direct means no OTA commission — rates are typically lower than on Airbnb or Booking.com.": {
-  "it": "",
-  "pages": 1
- },
- "Do you guarantee occupancy or income for owners?": {
-  "it": "",
-  "pages": 1
- },
- "No — and honest operators can't. Bali's market shifts by season and platform. What we do guarantee: full transparency on every rupiah in and out, itemized reporting on every booking and expense, and professional operations from housekeeping to tax compliance.": {
-  "it": "",
-  "pages": 1
- },
- "Can foreigners buy a villa or land in Bali?": {
-  "it": "",
-  "pages": 1
- },
- "Yes — through the right legal structure: leasehold, or freehold via an Indonesian entity, depending on your goals. We review land titles, zoning and licensing with legal counsel, explain everything in plain language before you commit, and stay on as your operating partner after the purchase.": {
-  "it": "",
-  "pages": 1
- },
- "What does management by The Host include?": {
-  "it": "",
-  "pages": 1
- },
- "End-to-end operations: listings and marketing on Airbnb, Booking.com and other platforms, professional photography, guest communication and check-ins, daily housekeeping, pool and garden care, repairs, and tax filings — with transparent monthly reporting and no hidden markups.": {
-  "it": "",
-  "pages": 1
- },
- "Where is your office?": {
-  "it": "",
-  "pages": 1
- },
- "Jalan Pasekan Gang Batu Ngonjol 10 No. 8, Batubulan Kangin, Kec. Sukawati, Kab. Gianyar, Bali 80582, Indonesia. Office hours Mon–Sat 9:00–18:00 WITA; guest support is 24/7 via WhatsApp.": {
   "it": "",
   "pages": 1
  },
@@ -2223,6 +1959,58 @@
   "it": "",
   "pages": 1
  },
+ "What we write about": {
+  "it": "",
+  "pages": 1
+ },
+ "Questions to Ask a Villa Management Company": {
+  "it": "",
+  "pages": 2
+ },
+ "The questions to ask a villa management company that actually reveal how they operate — on…": {
+  "it": "",
+  "pages": 2
+ },
+ "Booking with a Local Villa Manager Bali": {
+  "it": "",
+  "pages": 2
+ },
+ "Why booking with a local, self-managed villa company in Bali often beats an aggregator or …": {
+  "it": "",
+  "pages": 2
+ },
+ "Ending a Villa Management Agreement in Bali": {
+  "it": "",
+  "pages": 2
+ },
+ "A step-by-step checklist for ending a villa management agreement in Bali without disputes …": {
+  "it": "",
+  "pages": 2
+ },
+ "Ending a Villa Rental in Bali: What to Sort Out": {
+  "it": "",
+  "pages": 2
+ },
+ "What leaving Bali actually costs and involves when you end a long-term villa rental: notic…": {
+  "it": "",
+  "pages": 2
+ },
+ "Something Went Wrong at Your Villa - Now What": {
+  "it": "",
+  "pages": 2
+ },
+ "A problem during a Bali villa stay is rarely a disaster once you know who to message and w…": {
+  "it": "",
+  "pages": 2
+ },
+ "Villa Concierge Services Bali": {
+  "it": "",
+  "pages": 2
+ },
+ "What villa concierge services in Bali typically cover, what a self-managed villa company c…": {
+  "it": "",
+  "pages": 2
+ },
  "Chat": {
   "it": "",
   "pages": 1
@@ -2231,59 +2019,15 @@
   "it": "",
   "pages": 1
  },
- "Checking a villa pool in person": {
-  "it": "",
-  "pages": 1
- },
- "Building the platform": {
-  "it": "",
-  "pages": 1
- },
- "Housekeeping preparing a villa": {
-  "it": "",
-  "pages": 1
- },
- "Made Wirawan, Head of Villa Operations": {
-  "it": "",
-  "pages": 1
- },
- "Ayu Lestari, Guest Experience Lead": {
-  "it": "",
-  "pages": 1
- },
- "Wayan Putra, Maintenance and Gardens": {
-  "it": "",
-  "pages": 1
- },
- "Sari Dewi, Owner Relations": {
-  "it": "",
-  "pages": 1
- },
- "The Host Bali operations team together in Bali": {
-  "it": "",
-  "pages": 1
- },
- "Morning pool service at a managed villa": {
-  "it": "",
-  "pages": 1
- },
- "Villa inspection before guest arrival": {
-  "it": "",
-  "pages": 1
- },
- "Back office team managing bookings and reports": {
-  "it": "",
-  "pages": 1
- },
- "Guest support team answering messages": {
-  "it": "",
-  "pages": 1
- },
- "Welcoming a guest with a drink at check-in": {
-  "it": "",
-  "pages": 1
- },
  "The Host Bali office on the map": {
+  "it": "",
+  "pages": 1
+ },
+ "The Host Bali rents out and manages private pool villas in Sanur, Canggu, Umalas and Ungasan. Run by our own team on the island. Visit us in Canggu.": {
+  "it": "",
+  "pages": 1
+ },
+ "About Us — The Host Bali | Bali Locals": {
   "it": "",
   "pages": 1
  },
@@ -2292,38 +2036,6 @@
   "pages": 1
  },
  "About The Host Bali": {
-  "it": "",
-  "pages": 1
- },
- "The Host Bali is a villa rental platform in Bali with 500+ personally verified villas in Canggu, Ubud, Seminyak, Uluwatu and Sanur. Operations and property management are run by The Host, the in-house hospitality team. The company covers the full property cycle: rentals for guests, management for owners, and villa & land sales for buyers.": {
-  "it": "",
-  "pages": 1
- },
- "Describe your stay in plain words in the search on thehostbali.com, or message the team on WhatsApp at +62 857 4649 9697. Booking direct means no OTA commission, so rates are typically lower than on Airbnb or Booking.com.": {
-  "it": "",
-  "pages": 1
- },
- "Does The Host Bali guarantee occupancy or rental income for villa owners?": {
-  "it": "",
-  "pages": 1
- },
- "No — and honest operators can't. Bali's market shifts by season and platform. What is guaranteed: full transparency on every rupiah in and out, itemized reporting on every booking and expense, and professional operations — housekeeping, maintenance, guest support and tax compliance.": {
-  "it": "",
-  "pages": 1
- },
- "Yes, through the right legal structure — leasehold, or freehold via an Indonesian entity, depending on goals. The Host Bali reviews land titles, zoning and licensing with legal counsel and explains everything in plain language before any commitment, then stays on as operating partner after the purchase.": {
-  "it": "",
-  "pages": 1
- },
- "Where is the The Host Bali office?": {
-  "it": "",
-  "pages": 1
- },
- "Jalan Pasekan Gang Batu Ngonjol 10 No. 8, Batubulan Kangin, Kec. Sukawati, Kab. Gianyar, Bali 80582, Indonesia. Office hours Mon–Sat 9:00–18:00 WITA; guest support is available 24/7 via WhatsApp +62 857 4649 9697.": {
-  "it": "",
-  "pages": 1
- },
- "What does villa management by The Host include?": {
   "it": "",
   "pages": 1
  },
@@ -2356,14 +2068,6 @@
   "pages": 1
  },
  "Contracts, management, partnerships": {
-  "it": "",
-  "pages": 1
- },
- "@thehostbali": {
-  "it": "",
-  "pages": 1
- },
- "Villas, life in Bali": {
   "it": "",
   "pages": 1
  },
@@ -2404,6 +2108,10 @@
   "pages": 1
  },
  "Open in Google Maps": {
+  "it": "",
+  "pages": 1
+ },
+ "Answers before you message": {
   "it": "",
   "pages": 1
  },
@@ -2471,7 +2179,7 @@
   "it": "",
   "pages": 1
  },
- "areas: Sanur, Canggu, Umalas, Ungasan": {
+ "areas across south Bali, from Sanur to Uluwatu": {
   "it": "",
   "pages": 1
  },
@@ -2615,7 +2323,7 @@
   "it": "",
   "pages": 1
  },
- "One commission.": {
+ "20% of actual revenue.": {
   "it": "",
   "pages": 1
  },
@@ -2623,7 +2331,11 @@
   "it": "",
   "pages": 1
  },
- "We earn only when you earn — a single commission on actual bookings. No fixed monthly fees, no surprise charges, no markup games on repairs.": {
+ "We earn only when you earn: a single 20% commission on actual bookings. No fixed monthly fees, no onboarding fee, no markup on repairs.": {
+  "it": "",
+  "pages": 1
+ },
+ "What the 20% covers": {
   "it": "",
   "pages": 1
  },
@@ -2651,79 +2363,251 @@
   "it": "",
   "pages": 1
  },
- "Success stories": {
+ "Where we work": {
   "it": "",
   "pages": 1
  },
- "What changes when we": {
+ "by area": {
   "it": "",
   "pages": 1
  },
- "take the keys.": {
+ "Villas, townhouses and apartments: we manage property across south Bali from two bases, Sanur and Ungasan. Each area page explains who books there, which streets rent and how we run the house.": {
   "it": "",
   "pages": 1
  },
- "A few recent examples from villas under our management &mdash; different areas, different starting points, same approach.": {
+ "Sanur is where The Host Bali started and where most of our villas are: 11 of the 20 homes we run sit between the beach p…": {
   "it": "",
   "pages": 1
  },
- "4BR family villa &middot; Sanur": {
+ "Renon and Denpasar": {
   "it": "",
   "pages": 1
  },
- "The owners ran it themselves on Airbnb between trips home to Australia: slow replies, empty weeks, tired photos. We reshot the villa, rebuilt the listings and took over guest chat &mdash; the calendar filled within the first season.": {
+ "Renon and the residential districts of Denpasar are ten to fifteen minutes from our Sanur office. We manage villas, town…": {
   "it": "",
   "pages": 1
  },
- "occupancy": {
+ "Canggu is the most competitive rental market in Bali: thousands of listings, fast-moving prices and guests who compare t…": {
   "it": "",
   "pages": 1
  },
- "owner income, yr 1": {
+ "Pererenan and Berawa": {
   "it": "",
   "pages": 1
  },
- "&mdash; Owners from Perth, with us since 2024": {
+ "Pererenan, Berawa and Seseh are where Canggu&#x27;s larger villas are. We manage Leonardo, a nine-bedroom resort villa in Per…": {
   "it": "",
   "pages": 1
  },
- "3BR townhouse &middot; Umalas": {
+ "Umalas and Kerobokan": {
   "it": "",
   "pages": 1
  },
- "A previous agency charged a fixed monthly fee whether guests came or not, and repairs appeared on invoices with no photos. We moved the villa to commission-only terms, pre-approved every expense and tightened pricing per season.": {
+ "Umalas sits between Seminyak and Canggu and rents to guests who want both without the noise of either. We manage three h…": {
   "it": "",
   "pages": 1
  },
- "surprise charges": {
+ "We run four teak eco villas in Ungasan, minutes from Melasti and Green Bowl beaches, and we manage other Bukit villas fr…": {
   "it": "",
   "pages": 1
  },
- "&mdash; Owner from Jakarta, with us since 2025": {
+ "Uluwatu": {
   "it": "",
   "pages": 1
  },
- "1BR eco villa &middot; Ungasan": {
+ "Uluwatu villas are sold on surf, cliffs and sunsets, and they are run from the road up to Pecatu. We manage them from ou…": {
   "it": "",
   "pages": 1
  },
- "The villa sat in a quiet yearly rental far below its potential. We switched it to short stays, positioned it for couples, and its sister units joined two months later &mdash; the whole complex now runs as one calendar.": {
+ "Jimbaran": {
   "it": "",
   "pages": 1
  },
- "vs long-term rent": {
+ "Jimbaran is the family end of the Bukit: a calm bay, seafood dinners on the sand and the airport fifteen minutes away. W…": {
   "it": "",
   "pages": 1
  },
- "units under one team": {
+ "Property management in Bali, in detail": {
   "it": "",
   "pages": 1
  },
- "&mdash; Owner from Singapore, with us since 2025": {
+ "Every part of the service": {
   "it": "",
   "pages": 1
  },
- "Numbers are from recent seasons and vary by villa, area and condition &mdash; ask us for a realistic estimate for yours.": {
+ "on its own page": {
+  "it": "",
+  "pages": 1
+ },
+ "Airbnb management": {
+  "it": "",
+  "pages": 1
+ },
+ "Listings, pricing, guests and turnovers on Airbnb and every other channel.": {
+  "it": "",
+  "pages": 1
+ },
+ "Holiday rental management": {
+  "it": "",
+  "pages": 1
+ },
+ "Nightly and weekly stays across Airbnb, Booking.com, Agoda and direct.": {
+  "it": "",
+  "pages": 1
+ },
+ "Long-term rentals": {
+  "it": "",
+  "pages": 1
+ },
+ "Monthly and yearly tenants: screening, contracts, deposits, rent.": {
+  "it": "",
+  "pages": 1
+ },
+ "Pricing &amp; revenue": {
+  "it": "",
+  "pages": 1
+ },
+ "Seasonal rates, minimum stays, gap nights, reviewed weekly.": {
+  "it": "",
+  "pages": 1
+ },
+ "Turnover cleaning to a checklist, linen, amenities, photo checks.": {
+  "it": "",
+  "pages": 1
+ },
+ "Maintenance &amp; pool": {
+  "it": "",
+  "pages": 1
+ },
+ "Weekly pool care, AC, garden, wet-season checks, approved repairs.": {
+  "it": "",
+  "pages": 1
+ },
+ "Guest care &amp; concierge": {
+  "it": "",
+  "pages": 1
+ },
+ "A 24/7 line for guests; owners never take the call.": {
+  "it": "",
+  "pages": 1
+ },
+ "Reports &amp; payouts": {
+  "it": "",
+  "pages": 1
+ },
+ "One monthly statement with every booking, receipt and the payout.": {
+  "it": "",
+  "pages": 1
+ },
+ "Also:": {
+  "it": "",
+  "pages": 1
+ },
+ "fees": {
+  "it": "",
+  "pages": 1
+ },
+ "overseas owners": {
+  "it": "",
+  "pages": 1
+ },
+ "switching manager": {
+  "it": "",
+  "pages": 1
+ },
+ "launching a new villa": {
+  "it": "",
+  "pages": 1
+ },
+ "renting out for the first time": {
+  "it": "",
+  "pages": 1
+ },
+ "investors": {
+  "it": "",
+  "pages": 1
+ },
+ "licences": {
+  "it": "",
+  "pages": 1
+ },
+ "luxury villas": {
+  "it": "",
+  "pages": 1
+ },
+ "co-hosting": {
+  "it": "",
+  "pages": 1
+ },
+ "staff": {
+  "it": "",
+  "pages": 1
+ },
+ "your villa manager": {
+  "it": "",
+  "pages": 1
+ },
+ "reviews": {
+  "it": "",
+  "pages": 1
+ },
+ "and the": {
+  "it": "",
+  "pages": 1
+ },
+ "income calculator": {
+  "it": "",
+  "pages": 1
+ },
+ "Guest reviews": {
+  "it": "",
+  "pages": 1
+ },
+ "What guests say about villas": {
+  "it": "",
+  "pages": 1
+ },
+ "we manage": {
+  "it": "",
+  "pages": 1
+ },
+ "Straight from our booking system, with the platform and the date. Owner references are given personally, on request.": {
+  "it": "",
+  "pages": 1
+ },
+ "Guest via Booking.com": {
+  "it": "",
+  "pages": 1
+ },
+ "Preciosa villa de lujo, moderna. Iwan, muy amable, nos dio todas las indicaciones necesarias; siempre disponible y atento, la villa, súper limpia. Muy cómoda ubicación.": {
+  "it": "",
+  "pages": 1
+ },
+ "Guest via Airbnb": {
+  "it": "",
+  "pages": 1
+ },
+ "The place is very beautiful, in a quiet region. All bedrooms are suites with a neat decoration, clean and with amenities. Pool is nice and clear. Eva was super proactive and very communicative, easy to talk and always helping.": {
+  "it": "",
+  "pages": 1
+ },
+ "We had a great stay at this villa and really enjoyed our time there. The villa is beautiful, comfortable, and in a great location in Canggu. It’s very close to the beach, with plenty of restaurants, cafés, beach clubs, and other places nearby, which makes it a great choice for anyone looking to stay in Canggu. The host was also very responsive, helpful, and easy to communicate with throughout our stay. Everything we…": {
+  "it": "",
+  "pages": 1
+ },
+ "宿はとても清潔で、サヌールの大通りにも出やすい立地でした。 幼い子供のためにベビーベッドも貸し出してくださり、プールも消毒されていて、安心して過ごすことができました！ ただ宿の実際の住所が、記載されていた住所と異なっていたため、Grabで向かう際には注意が必要だと思いました。": {
+  "it": "",
+  "pages": 1
+ },
+ "Lovely home in Sanur for a family holiday. Location is tucked away from the main street which makes it a lot more quiet and peaceful.": {
+  "it": "",
+  "pages": 1
+ },
+ "This Villa is beautiful and a wonderful stay! The open Roman style architecture makes it feel very inviting with the beautiful yard by the river that you can hear running through the evening. The staff were very responsive and the owner is very nice, involved and accommodating. My sister and our children did not want to leave and it’s walking distance to a ton of shops and amazing cafés and restaurants. And about …": {
+  "it": "",
+  "pages": 1
+ },
+ "Verified stays, synced from our booking system (Airbnb, Booking.com, direct). Each villa page shows its full rating and review count; the average is calculated over all reviews, not only those shown.": {
   "it": "",
   "pages": 1
  },
@@ -2747,7 +2631,15 @@
   "it": "",
   "pages": 1
  },
- "A single commission on actual bookings — nothing when the villa doesn&rsquo;t earn. The exact rate depends on the villa and the scope of work; message us on WhatsApp and you&rsquo;ll have our terms the same day.": {
+ "20% of actual booking revenue, nothing fixed and nothing when the villa doesn&rsquo;t earn. Repairs, consumables and utilities are billed at cost with receipts. See the": {
+  "it": "",
+  "pages": 1
+ },
+ "pricing page": {
+  "it": "",
+  "pages": 1
+ },
+ "for what the 20% covers.": {
   "it": "",
   "pages": 1
  },
@@ -2787,19 +2679,59 @@
   "it": "",
   "pages": 1
  },
- "4BR family villa in Sanur under The Host Bali management": {
+ "Owner guides: fees, contracts, occupancy": {
   "it": "",
   "pages": 1
  },
- "3BR townhouse in Umalas under The Host Bali management": {
+ "Airbnb Listing Optimisation for a Bali Villa": {
   "it": "",
   "pages": 1
  },
- "1BR eco villa in Ungasan under The Host Bali management": {
+ "A practical walk-through of Airbnb listing optimisation for Bali villas — photos, title, d…": {
   "it": "",
   "pages": 1
  },
- "Villa management in Bali — video": {
+ "Airbnb vs Booking.com for Bali Villa Owners": {
+  "it": "",
+  "pages": 1
+ },
+ "Airbnb vs Booking.com for villa owners in Bali — how guest type, commission structure and …": {
+  "it": "",
+  "pages": 1
+ },
+ "Bali Villa High Season and Low Season": {
+  "it": "",
+  "pages": 1
+ },
+ "When Bali&#x27;s villa high season and low season actually fall, how demand shifts by area, and…": {
+  "it": "",
+  "pages": 1
+ },
+ "Bali Villa Rental Yield, Explained Properly": {
+  "it": "",
+  "pages": 1
+ },
+ "A plain breakdown of Bali villa rental yield — how it&#x27;s calculated, what costs to net out …": {
+  "it": "",
+  "pages": 1
+ },
+ "Cancellation Policy for Bali Villa Owners": {
+  "it": "",
+  "pages": 1
+ },
+ "How to set a fair, clear cancellation policy for a Bali villa, the common structures owner…": {
+  "it": "",
+  "pages": 1
+ },
+ "Comparing Villa Management Companies in Bali": {
+  "it": "",
+  "pages": 1
+ },
+ "A practical way to compare villa management companies in Bali on scope, fees, compliance a…": {
+  "it": "",
+  "pages": 1
+ },
+ "Play video: villa management in Bali": {
   "it": "",
   "pages": 1
  },
@@ -2959,6 +2891,42 @@
   "it": "",
   "pages": 4
  },
+ "Canggu guides": {
+  "it": "",
+  "pages": 1
+ },
+ "Canggu Villa Long Term Rental": {
+  "it": "",
+  "pages": 1
+ },
+ "Canggu villa long term rental for surfers and remote workers — what the area offers month …": {
+  "it": "",
+  "pages": 1
+ },
+ "How to Pick a Private Pool Villa in Canggu": {
+  "it": "",
+  "pages": 1
+ },
+ "Finding a Canggu private pool villa that actually suits you means checking pool type, walk…": {
+  "it": "",
+  "pages": 1
+ },
+ "What Sets the Canggu Villa Rental Price": {
+  "it": "",
+  "pages": 1
+ },
+ "Canggu villa rental price depends on bedroom count, proximity to the beach and season more…": {
+  "it": "",
+  "pages": 1
+ },
+ "Where to Stay in Canggu": {
+  "it": "",
+  "pages": 1
+ },
+ "Where to stay in Canggu depends on whether you want surf, nightlife or quiet — here is how…": {
+  "it": "",
+  "pages": 1
+ },
  "Canggu villa rental — FAQ": {
   "it": "",
   "pages": 1
@@ -3059,6 +3027,42 @@
   "it": "",
   "pages": 1
  },
+ "Sanur guides": {
+  "it": "",
+  "pages": 1
+ },
+ "Choosing Villas in Sanur with a Private Pool": {
+  "it": "",
+  "pages": 1
+ },
+ "Villas in Sanur with private pool range from 2-bedroom townhouses to 4-bedroom family home…": {
+  "it": "",
+  "pages": 1
+ },
+ "How Sanur Villa Rental Price Is Set": {
+  "it": "",
+  "pages": 1
+ },
+ "Sanur villa rental price varies by bedroom count, distance to the beach path and stay leng…": {
+  "it": "",
+  "pages": 1
+ },
+ "Sanur Villa Rental Long Term": {
+  "it": "",
+  "pages": 1
+ },
+ "Sanur villa rental long term explained — what the area suits, typical villa styles, and wh…": {
+  "it": "",
+  "pages": 1
+ },
+ "Sanur vs Canggu": {
+  "it": "",
+  "pages": 1
+ },
+ "Sanur vs Canggu comes down to pace, not quality. Compare traffic, nightlife, beaches and w…": {
+  "it": "",
+  "pages": 1
+ },
  "Sanur villa rental — FAQ": {
   "it": "",
   "pages": 1
@@ -3151,6 +3155,50 @@
   "it": "",
   "pages": 1
  },
+ "Umalas guides": {
+  "it": "",
+  "pages": 1
+ },
+ "Is an Umalas Villa with Private Pool Right for You": {
+  "it": "",
+  "pages": 1
+ },
+ "An Umalas villa with private pool sits between Seminyak and Canggu on quiet lanes near caf…": {
+  "it": "",
+  "pages": 1
+ },
+ "Long Term Villa Rental Umalas Bali": {
+  "it": "",
+  "pages": 1
+ },
+ "Long term villa rental Umalas Bali for remote workers wanting Canggu&#x27;s convenience without…": {
+  "it": "",
+  "pages": 1
+ },
+ "Umalas Bali Guide": {
+  "it": "",
+  "pages": 1
+ },
+ "The Umalas Bali guide travellers actually need — what the area is like, how it compares to…": {
+  "it": "",
+  "pages": 1
+ },
+ "What Determines Umalas Villa Rental Price": {
+  "it": "",
+  "pages": 1
+ },
+ "Umalas villa rental price sits between Sanur and Canggu, shaped by workspace features and …": {
+  "it": "",
+  "pages": 1
+ },
+ "Is Umalas Good for Families?": {
+  "it": "",
+  "pages": 1
+ },
+ "Is Umalas good for families travelling to Bali? Here&#x27;s what works — space, quiet lanes, ki…": {
+  "it": "",
+  "pages": 1
+ },
  "Umalas villa rental — FAQ": {
   "it": "",
   "pages": 1
@@ -3240,6 +3288,58 @@
   "pages": 1
  },
  "Melasti, Green Bowl and Pandawa beaches are around ten minutes by scooter, Uluwatu temple and its sunset kecak about twenty, and Ngurah Rai airport roughly 30 minutes by car. A scooter or car is needed here.": {
+  "it": "",
+  "pages": 1
+ },
+ "Ungasan guides": {
+  "it": "",
+  "pages": 1
+ },
+ "The Beaches Near Ungasan": {
+  "it": "",
+  "pages": 1
+ },
+ "The beaches near Ungasan worth the drive down the cliff, what each one is actually good fo…": {
+  "it": "",
+  "pages": 1
+ },
+ "Understanding Ungasan Villa Rental Price": {
+  "it": "",
+  "pages": 1
+ },
+ "Ungasan villa rental price reflects the area&#x27;s quieter, more remote character. Here&#x27;s what…": {
+  "it": "",
+  "pages": 1
+ },
+ "Ungasan Bali Guide": {
+  "it": "",
+  "pages": 1
+ },
+ "An Ungasan Bali guide from the team that manages villas there — what the clifftop Bukit ar…": {
+  "it": "",
+  "pages": 1
+ },
+ "Ungasan Villa Long Term Rental": {
+  "it": "",
+  "pages": 1
+ },
+ "Ungasan villa long term rental for anyone wanting clifftop quiet near Melasti and Green Bo…": {
+  "it": "",
+  "pages": 1
+ },
+ "What an Ungasan Villa with Private Pool Offers": {
+  "it": "",
+  "pages": 1
+ },
+ "An Ungasan villa with private pool puts you near clifftop beaches like Melasti and Green B…": {
+  "it": "",
+  "pages": 1
+ },
+ "Ungasan for Couples": {
+  "it": "",
+  "pages": 1
+ },
+ "Ungasan for couples works because of clifftop views, quiet villas and easy access to Uluwa…": {
   "it": "",
   "pages": 1
  },
@@ -3579,9 +3679,89 @@
   "it": "",
   "pages": 1
  },
- "Learn more about the area": {
+ "Learn more about Canggu": {
   "it": "",
-  "pages": 26
+  "pages": 2
+ },
+ "Canggu is the busy, social side of Bali: surf breaks, beach clubs, coworking spaces and the densest run of cafés and gyms on the island. Pererenan, one ridge north, is the quieter version of the same thing.": {
+  "it": "",
+  "pages": 2
+ },
+ "Batu Bolong and Echo Beach": {
+  "it": "",
+  "pages": 2
+ },
+ "the main surf and sunset beaches, usually 5–10 minutes by scooter": {
+  "it": "",
+  "pages": 2
+ },
+ "Pererenan beach": {
+  "it": "",
+  "pages": 2
+ },
+ "calmer and less crowded, a few minutes further north": {
+  "it": "",
+  "pages": 2
+ },
+ "Cafés, gyms and coworking": {
+  "it": "",
+  "pages": 2
+ },
+ "Jalan Pantai Batu Bolong and Jalan Pantai Berawa — minutes away, but slow at peak hours": {
+  "it": "",
+  "pages": 2
+ },
+ "Beach clubs": {
+  "it": "",
+  "pages": 2
+ },
+ "Finns, Atlas and La Brisa, about 10 minutes": {
+  "it": "",
+  "pages": 2
+ },
+ "Supermarkets": {
+  "it": "",
+  "pages": 9
+ },
+ "Pepito and Zest within about 5–10 minutes": {
+  "it": "",
+  "pages": 2
+ },
+ "Medical care": {
+  "it": "",
+  "pages": 13
+ },
+ "Canggu clinics nearby; the larger hospitals are in Denpasar, roughly 45 minutes": {
+  "it": "",
+  "pages": 2
+ },
+ "Seminyak": {
+  "it": "",
+  "pages": 5
+ },
+ "about 25–35 minutes depending on traffic": {
+  "it": "",
+  "pages": 2
+ },
+ "Ngurah Rai airport": {
+  "it": "",
+  "pages": 20
+ },
+ "roughly 45–75 minutes — leave more time than the map suggests": {
+  "it": "",
+  "pages": 2
+ },
+ "Canggu suits surfers, remote workers and anyone who wants their social life within scooter range. The trade-off is traffic and noise; if that matters, look at Pererenan or Umalas instead.": {
+  "it": "",
+  "pages": 2
+ },
+ "All our villas in Canggu": {
+  "it": "",
+  "pages": 2
+ },
+ "Monthly rentals in Canggu": {
+  "it": "",
+  "pages": 2
  },
  "Check-in": {
   "it": "",
@@ -3696,10 +3876,6 @@
   "pages": 26
  },
  "breadcrumb": {
-  "it": "",
-  "pages": 26
- },
- "Share": {
   "it": "",
   "pages": 26
  },
@@ -4078,6 +4254,66 @@
  "Umalas is the quiet strip of rice fields and small lanes between Canggu and Seminyak — residential rather than touristy, and popular with people staying for months rather than days. Berawa and Canggu beaches are about 10 minutes by scooter, Seminyak and the Petitenget restaurants around 15, and Ngurah Rai airport roughly 30 minutes by car. A scooter is the practical way to get around.": {
   "it": "",
   "pages": 4
+ },
+ "Learn more about Umalas": {
+  "it": "",
+  "pages": 3
+ },
+ "Umalas sits between Canggu and Seminyak with rice fields still in the middle of it — a residential area rather than a tourist strip, with quiet lanes and far less through-traffic than the coast.": {
+  "it": "",
+  "pages": 3
+ },
+ "Berawa beach": {
+  "it": "",
+  "pages": 3
+ },
+ "about 10 minutes by scooter": {
+  "it": "",
+  "pages": 3
+ },
+ "about 15 minutes, for restaurants and shopping": {
+  "it": "",
+  "pages": 3
+ },
+ "about 10–15 minutes to Batu Bolong": {
+  "it": "",
+  "pages": 3
+ },
+ "Bakeries, cafés and gyms": {
+  "it": "",
+  "pages": 3
+ },
+ "Jalan Umalas and Jalan Bumbak — a few minutes, and quieter than the beach roads": {
+  "it": "",
+  "pages": 3
+ },
+ "Pepito and Bintang Supermarket within about 10 minutes": {
+  "it": "",
+  "pages": 3
+ },
+ "Schools and stables": {
+  "it": "",
+  "pages": 3
+ },
+ "international schools and riding stables are in this area — one reason families base here": {
+  "it": "",
+  "pages": 3
+ },
+ "roughly 40–60 minutes": {
+  "it": "",
+  "pages": 3
+ },
+ "Umalas suits families and anyone working from home during the day who still wants the beach in the evening. You will use a car or scooter more than in Canggu, and pay less for the same villa.": {
+  "it": "",
+  "pages": 3
+ },
+ "All our villas in Umalas": {
+  "it": "",
+  "pages": 3
+ },
+ "Monthly rentals in Umalas": {
+  "it": "",
+  "pages": 3
  },
  "6 guests maximum": {
   "it": "",
@@ -4494,6 +4730,82 @@
  "The villa sits on a quiet residential lane in south Sanur, a few minutes’ walk from local cafés and warungs and about a kilometre from Mertasari Beach with its kite-surfing spot and sunset walks. Sanur’s beachfront promenade, the Sindhu morning market and the fast-boat harbour for Nusa Penida and the Gili islands are all a short scooter ride away, and Ngurah Rai airport is roughly 30 minutes by car.": {
   "it": "",
   "pages": 2
+ },
+ "Learn more about Sanur": {
+  "it": "",
+  "pages": 11
+ },
+ "Sanur is the calm, residential side of Bali — the east coast, reef-protected water, and an eight-kilometre beachfront promenade that is flat, shaded and closed to cars. It is the area long-stay guests and families keep coming back to.": {
+  "it": "",
+  "pages": 11
+ },
+ "Sanur beach and the promenade": {
+  "it": "",
+  "pages": 11
+ },
+ "walking distance from most of our villas — the path runs from Mertasari in the south to Matahari Terbit in the north": {
+  "it": "",
+  "pages": 11
+ },
+ "Jalan Danau Tamblingan": {
+  "it": "",
+  "pages": 11
+ },
+ "the main street for cafés, warungs, yoga studios and massage places, a few minutes by scooter": {
+  "it": "",
+  "pages": 11
+ },
+ "Sindhu morning market": {
+  "it": "",
+  "pages": 11
+ },
+ "fresh produce and warung breakfasts, about 5 minutes": {
+  "it": "",
+  "pages": 11
+ },
+ "Supermarkets and pharmacies": {
+  "it": "",
+  "pages": 11
+ },
+ "Hardys and Coco Mart, plus Guardian and Kimia Farma, all within about 5 minutes": {
+  "it": "",
+  "pages": 11
+ },
+ "BIMC and Sanglah — Bali&rsquo;s main hospitals are on this side of the island, roughly 10–20 minutes": {
+  "it": "",
+  "pages": 11
+ },
+ "Fast boat harbour": {
+  "it": "",
+  "pages": 11
+ },
+ "departures to Nusa Penida, Lembongan and the Gilis, about 5–10 minutes": {
+  "it": "",
+  "pages": 11
+ },
+ "roughly 30 minutes by car outside peak hours": {
+  "it": "",
+  "pages": 11
+ },
+ "Ubud": {
+  "it": "",
+  "pages": 11
+ },
+ "about an hour by car if you want the rice terraces for a day": {
+  "it": "",
+  "pages": 11
+ },
+ "Sanur suits people who want to walk and cycle, families with small children — the water is shallow and calm — and anyone staying long enough to care about supermarkets, clinics and a short airport run. It is not the place for surf or nightlife.": {
+  "it": "",
+  "pages": 11
+ },
+ "All our villas in Sanur": {
+  "it": "",
+  "pages": 11
+ },
+ "Monthly rentals in Sanur": {
+  "it": "",
+  "pages": 11
  },
  "8 guests maximum": {
   "it": "",
@@ -6507,6 +6819,74 @@
   "it": "",
   "pages": 4
  },
+ "Learn more about Ungasan": {
+  "it": "",
+  "pages": 4
+ },
+ "Ungasan is on the Bukit, the limestone peninsula at the southern tip of Bali: dry, open and clifftop, with the island&rsquo;s best beaches a short ride away and none of the congestion of the west coast.": {
+  "it": "",
+  "pages": 4
+ },
+ "Melasti beach": {
+  "it": "",
+  "pages": 4
+ },
+ "white sand under the cliffs, about 10 minutes by scooter": {
+  "it": "",
+  "pages": 4
+ },
+ "Uluwatu and the surf breaks": {
+  "it": "",
+  "pages": 4
+ },
+ "Padang Padang, Bingin and Uluwatu itself, roughly 15–20 minutes": {
+  "it": "",
+  "pages": 4
+ },
+ "Uluwatu temple and the kecak sunset": {
+  "it": "",
+  "pages": 4
+ },
+ "about 20 minutes": {
+  "it": "",
+  "pages": 4
+ },
+ "Karma and Nyang Nyang beaches": {
+  "it": "",
+  "pages": 4
+ },
+ "quieter alternatives, 15–25 minutes": {
+  "it": "",
+  "pages": 4
+ },
+ "Warungs and cafés": {
+  "it": "",
+  "pages": 4
+ },
+ "along Jalan Melasti and the Ungasan main road, a few minutes": {
+  "it": "",
+  "pages": 4
+ },
+ "Pepito Ungasan and local shops within about 5–10 minutes": {
+  "it": "",
+  "pages": 4
+ },
+ "about 30 minutes — the closest of all our areas": {
+  "it": "",
+  "pages": 4
+ },
+ "Ungasan suits surfers, couples and anyone who wants a genuinely quiet month with the best beaches in Bali nearby. You will ride to most things; there is no walkable café strip here.": {
+  "it": "",
+  "pages": 4
+ },
+ "All our villas in Ungasan": {
+  "it": "",
+  "pages": 4
+ },
+ "Monthly rentals in Ungasan": {
+  "it": "",
+  "pages": 4
+ },
  "2 guests maximum": {
   "it": "",
   "pages": 3
@@ -6823,6 +7203,58 @@
   "it": "",
   "pages": 1
  },
+ "Buying in Canggu: guides": {
+  "it": "",
+  "pages": 1
+ },
+ "BPHTB, the Bali Property Transfer Tax, Explained": {
+  "it": "",
+  "pages": 5
+ },
+ "BPHTB is the tax due when property changes hands in Bali. Here is what it applies to, roug…": {
+  "it": "",
+  "pages": 5
+ },
+ "Bali Land Certificate Types Explained": {
+  "it": "",
+  "pages": 5
+ },
+ "Bali villas sit on different land certificate types, each with different rights and terms.…": {
+  "it": "",
+  "pages": 5
+ },
+ "Bali Leasehold vs Freehold": {
+  "it": "",
+  "pages": 5
+ },
+ "Freehold is not available to foreign buyers in Bali. Here is how leasehold compares to the…": {
+  "it": "",
+  "pages": 5
+ },
+ "Bali Zoning Explained: What Buyers Need to Know": {
+  "it": "",
+  "pages": 5
+ },
+ "How Bali&#x27;s land zoning system actually works, the main zone types a buyer runs into, and w…": {
+  "it": "",
+  "pages": 5
+ },
+ "Buying a Villa Without Permits: The Real Cost": {
+  "it": "",
+  "pages": 5
+ },
+ "A villa without proper permits can look like a bargain, but the missing paperwork usually …": {
+  "it": "",
+  "pages": 5
+ },
+ "Can Foreigners Buy a Villa in Bali?": {
+  "it": "",
+  "pages": 5
+ },
+ "Foreigners cannot own freehold land in Bali, but there are legal routes to control a villa…": {
+  "it": "",
+  "pages": 5
+ },
  "Buying a villa in Canggu — FAQ": {
   "it": "",
   "pages": 1
@@ -6984,6 +7416,10 @@
   "pages": 1
  },
  "Ask for the pack on any listing and you get the documents and the rental figures the same day. Then a viewing in person or on video, an offer, a notarised agreement and the transfer of rights or lease. If you want the villa to keep earning, our team can carry on managing it after the sale.": {
+  "it": "",
+  "pages": 1
+ },
+ "Buying a villa in Bali: read first": {
   "it": "",
   "pages": 1
  },
@@ -7199,6 +7635,10 @@
   "it": "",
   "pages": 6
  },
+ "Learn more about the area": {
+  "it": "",
+  "pages": 6
+ },
  "Asking price · leasehold · 28 years": {
   "it": "",
   "pages": 1
@@ -7347,6 +7787,10 @@
   "it": "",
   "pages": 6
  },
+ "Share": {
+  "it": "",
+  "pages": 6
+ },
  "Sanur Garden Pool Villa — 4BR Villa for Sale in Sanur, Bali": {
   "it": "",
   "pages": 1
@@ -7412,6 +7856,10 @@
   "pages": 1
  },
  "Sanur books well in every season: holiday guests in the high months and monthly tenants in between. For villas we manage, the listing shows the actual occupancy and income, so you can judge the return on real numbers.": {
+  "it": "",
+  "pages": 1
+ },
+ "Buying in Sanur: guides": {
   "it": "",
   "pages": 1
  },
@@ -7963,6 +8411,10 @@
   "it": "",
   "pages": 1
  },
+ "Buying in Umalas: guides": {
+  "it": "",
+  "pages": 1
+ },
  "Buying a villa in Umalas — FAQ": {
   "it": "",
   "pages": 1
@@ -8284,6 +8736,10 @@
   "pages": 1
  },
  "Couples, surfers and honeymooners keep the calendar busy, with strong demand around Uluwatu’s events. For villas in our programme the listing shows the actual occupancy and income.": {
+  "it": "",
+  "pages": 1
+ },
+ "Buying in Ungasan: guides": {
   "it": "",
   "pages": 1
  },
