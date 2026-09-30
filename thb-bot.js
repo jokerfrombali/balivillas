@@ -107,29 +107,54 @@
     });
   }
 
+  /* Краулеры ходят к нам сотнями и получают от края то же, что и люди, но их
+     промахи чинятся не в коде сайта. Помечаем их в сообщении, чтобы было видно
+     сразу. */
+  var CRAWLER = /bot|crawl|spider|slurp|headless|lighthouse|pagespeed|preview/i
+    .test(navigator.userAgent || '');
+
+  /* 4xx — это наш промах: файла нет или он закрыт. 5xx на статике почти всегда
+     край: пересборка версии, защита от ботов, сетевой сбой. Такой ответ
+     перепроверяем и будим чат, только если он повторился (30.09.2026: за ночь
+     пришло девять сообщений про 500/503 на thb-cards.js, хотя файл на месте и
+     деплоя в те часы не было). */
+  function recheck(src, tries) {
+    fetch(src, { method: 'HEAD', cache: 'no-store' }).then(function (r) {
+      if (r.status < 400) return;                       /* выправилось само */
+      if (r.status >= 500 && tries > 0) {
+        setTimeout(function () { recheck(src, tries - 1); }, 6000);
+        return;
+      }
+      alertOnce('Не загрузился файл (' + r.status + '): ' + src +
+                (CRAWLER ? ' · краулер' : ''));
+    }).catch(function () {
+      setTimeout(function () {
+        fetch(src, { method: 'HEAD', cache: 'no-store' })
+          .catch(function () {
+            alertOnce('Файл недоступен дважды: ' + src + (CRAWLER ? ' · краулер' : ''));
+          });
+      }, 3000);
+    });
+  }
+
   window.addEventListener('error', function (e) {
     if (!e) return;
     if (e.target && e.target.tagName && /^(IMG|SCRIPT|LINK)$/.test(e.target.tagName)) {
       var src = e.target.src || e.target.href || '';
       /* only report our own missing files, not third-party blockers */
       if (src.indexOf(location.origin) !== 0) return;
-      /* A dropped connection (mobile crawlers, flaky Wi-Fi, a deploy in progress) also fires
-         this event. Re-check the file before waking the chat: alert only when the server
-         really answers 4xx/5xx or the file is unreachable twice (19.09.2026). */
-      try {
-        fetch(src, { method: 'HEAD', cache: 'no-store' }).then(function (r) {
-          if (r.status >= 400) alertOnce('Не загрузился файл (' + r.status + '): ' + src);
-        }).catch(function () {
-          setTimeout(function () {
-            fetch(src, { method: 'HEAD', cache: 'no-store' })
-              .catch(function () { alertOnce('Файл недоступен дважды: ' + src); });
-          }, 3000);
-        });
-      } catch (err) {}
+      try { recheck(src, 2); } catch (err) {}
       return;
     }
-    alertOnce((e.message || 'script error') + ' @ ' +
-              (e.filename || '?') + ':' + (e.lineno || 0));
+
+    /* «script error @ ?:0» — это ошибка в чужом скрипте с другого домена:
+       браузер не отдаёт ни файла, ни строки, чинить по такому сообщению
+       нечего. Пишем только то, где есть адрес файла. */
+    var msg = e.message || '';
+    if (!e.filename && (!msg || /^script error/i.test(msg))) return;
+
+    alertOnce(msg + ' @ ' + (e.filename || '?') + ':' + (e.lineno || 0) +
+              (CRAWLER ? ' · краулер' : ''));
   }, true);
 
   window.addEventListener('unhandledrejection', function (e) {

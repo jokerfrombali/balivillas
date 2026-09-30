@@ -528,13 +528,17 @@ async function handleTgHook(req, env) {
  * Fetching our own public hostname from inside the Worker loops back into the
  * edge and returns 522 — that produced false "site is down" alerts. */
 async function probe(env) {
-  const paths = ['/', '/property-rental/', '/villa/sanur/villa-black-pool-4br-sanur/'];
+  const paths = ['/', '/property-rental/', '/villa/sanur/villa-black-pool-4br-sanur/',
+                 '/thb-cards.js', '/thb-currency.js', '/thb-dates.js'];
   const out = [];
   for (const p of paths) {
     try {
       const r = await env.ASSETS.fetch(new Request('https://thehostbali.com' + p));
       const body = await r.text();
-      out.push({ path: p, status: r.status, bytes: body.length, ok: r.status === 200 && body.length > 2000 });
+      /* у скриптов порог другой: страница меньше 2 КБ — обрубок, а скрипт
+         такого размера нормален */
+      const min = p.slice(-3) === '.js' ? 300 : 2000;
+      out.push({ path: p, status: r.status, bytes: body.length, ok: r.status === 200 && body.length > min });
     } catch (e) {
       out.push({ path: p, status: 0, bytes: 0, ok: false, error: String(e).slice(0, 120) });
     }
