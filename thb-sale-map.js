@@ -28,7 +28,7 @@
   var RADIUS_M = 45;          /* круг «примерно здесь» вокруг текущего объекта */
   var ZOOM_ONE = 15;          /* страница объекта: видно район и соседей */
 
-  var path = location.pathname.replace(/^\/it(?=\/)/, '');   /* итальянские близнецы */
+  var path = location.pathname.replace(/^\/(it|ru|de|fr|es|nl|ja|ko|zh-hans|zh-hant|ar)(?=\/)/, '');   /* языковые версии */
   if (path.indexOf('/villas-for-sale/') !== 0) return;
   if (/\/gallery\/$/.test(path)) return;
 

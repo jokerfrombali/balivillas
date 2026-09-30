@@ -31,7 +31,9 @@ function urlFromOnclick(v) {
 }
 
 /* адреса в карточках итальянских страниц начинаются с /it/ — цены те же */
-const norm = (u) => (u || '').split('?')[0].split('#')[0].replace(/^\/it(?=\/)/, '');
+import { STRIP } from './langs.js';
+
+const norm = (u) => (u || '').split('?')[0].split('#')[0].replace(STRIP, '');
 
 export async function injectPrices(res, env, pathname, lang) {
   /* подписи к ценам: на итальянских близнецах (/it/) — по-итальянски */

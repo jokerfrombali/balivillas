@@ -22,7 +22,7 @@
   var path = location.pathname;
   /* итальянские близнецы под /it/: проверяем путь без префикса, а ссылки
      строим от настоящего */
-  if (!/^\/villa\/[^/]+\/([^/]+\/)?$/.test(path.replace(/^\/it(?=\/)/, ''))) return;
+  if (!/^\/villa\/[^/]+\/([^/]+\/)?$/.test(path.replace(/^\/(it|ru|de|fr|es|nl|ja|ko|zh-hans|zh-hant|ar)(?=\/)/, ''))) return;
   if (/\/gallery\/$/.test(path)) return;
 
   var GALLERY = path + 'gallery/';

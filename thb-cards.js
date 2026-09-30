@@ -44,7 +44,7 @@
   /* Адрес виллы: у ссылки в href, у div — внутри onclick. */
   function pathOf(card) {
     var href = card.getAttribute && card.getAttribute('href');
-    if (href) href = href.replace(/^\/it(?=\/)/, '');   /* итальянские страницы */
+    if (href) href = href.replace(/^\/(it|ru|de|fr|es|nl|ja|ko|zh-hans|zh-hant|ar)(?=\/)/, '');   /* языковые версии */
     if (href && href.indexOf('/villa/') === 0) return href;
     var oc = String(card.getAttribute('onclick') || '');
     var m = oc.match(/\/villa\/[^'"]+/);

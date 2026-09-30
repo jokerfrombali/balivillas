@@ -35,6 +35,7 @@ import { opportunities } from './opportunities.js';
 import { takeSnapshot } from './snapshots.js';
 import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices, readAllCalendars, rangeQuotes, checkDrift, readDrift } from './hostex.js';
 import { handleMcp } from './mcp.js';
+import { STRIP, langOf } from './langs.js';
 import { injectPrices } from './price-html.js';
 import { fxRates, suggest } from './fx.js';
 import { syncReviews, getReviews, publicView, injectReviews } from './reviews.js';
@@ -860,7 +861,8 @@ export default {
        этого ей не нужно. */
     /* Итальянские близнецы лежат под /it/ с теми же путями: для выбора
        скриптов и подшивки цен префикс снимаем. */
-    const pathNoLang = url.pathname.replace(/^\/it(?=\/)/, '');
+    const pathNoLang = url.pathname.replace(STRIP, '');
+    const lang = langOf(url.pathname);
     const isVilla = /^\/villa\/[^/]+\/[^/]+\/$/.test(pathNoLang) ||
                     /^\/villa\/[^/]+\/$/.test(pathNoLang);
 
@@ -895,7 +897,8 @@ export default {
     /* Переключатель языка — на каждой странице, ставится перед валютой.
        На итальянских страницах ещё словарь для виджетов (календарь, форма). */
     scripts.push('/thb-lang.js');
-    if (pathNoLang !== url.pathname) scripts.push('/thb-it.js');
+    /* словарь для виджетов своего языка: календарь, форма, карта, валюта */
+    if (lang !== 'en') scripts.push('/thb-' + lang + '.js');
 
     const withScripts = new HTMLRewriter()
       .on('body', {
@@ -913,7 +916,7 @@ export default {
        её на выбранные даты, но первая отрисовка — и всё, что видит краулер без
        JavaScript, — теперь с цифрой. */
     let out = withScripts;
-    try { out = await injectPrices(withScripts, env, pathNoLang, pathNoLang !== url.pathname ? 'it' : 'en'); }
+    try { out = await injectPrices(withScripts, env, pathNoLang, lang); }
     catch (e) { /* цена не критична, страницу отдаём как есть */ }
     if (isVilla) {
       try { out = await injectReviews(out, env, pathNoLang, pathNoLang !== url.pathname ? 'it' : 'en'); }

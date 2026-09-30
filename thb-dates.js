@@ -25,7 +25,7 @@
   if (window.__thbDates) return;
   window.__thbDates = true;
 
-  var path = location.pathname.replace(/^\/it(?=\/)/, '');
+  var path = location.pathname.replace(/^\/(it|ru|de|fr|es|nl|ja|ko|zh-hans|zh-hant|ar)(?=\/)/, '');
   var IT = path !== location.pathname;
   if (!/^\/(property-rental|villas)\/([^/]+\/)?$/.test(path)) return;
 
@@ -107,7 +107,7 @@
       var m = oc.match(/window\.location\s*=\s*'([^']+)'/);
       a = m ? m[1] : '';
     }
-    return (a || '').split('?')[0].replace(/^\/it(?=\/)/, '');
+    return (a || '').split('?')[0].replace(/^\/(it|ru|de|fr|es|nl|ja|ko|zh-hans|zh-hant|ar)(?=\/)/, '');
   }
 
   /* Минимальный срок берём на дату заезда: на пиках он выше, чем сегодня. */
