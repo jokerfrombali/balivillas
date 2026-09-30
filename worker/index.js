@@ -35,6 +35,7 @@ import { opportunities } from './opportunities.js';
 import { takeSnapshot } from './snapshots.js';
 import { syncAll as hostexSync, busyNights, basePrice, quote, allBasePrices, readAllCalendars, rangeQuotes, checkDrift, readDrift } from './hostex.js';
 import { handleMcp } from './mcp.js';
+import { serveLlms } from './llms.js';
 import { STRIP, langOf } from './langs.js';
 import { injectPrices } from './price-html.js';
 import { fxRates, suggest } from './fx.js';
@@ -650,6 +651,11 @@ export default {
 
     /* MCP: единый слой доступа к данным для агентов. Живёт вне /api/: у него
        свой протокол (JSON-RPC) и своя авторизация по токену. */
+    /* Файлы для ИИ-ассистентов: собраны скриптом, живые цены подставляем здесь. */
+    if (url.pathname === '/llms.txt' || url.pathname === '/llms-full.txt') {
+      return serveLlms(req, env, url.pathname);
+    }
+
     if (url.pathname === '/mcp' || url.pathname === '/mcp/') {
       return handleMcp(req, env, tooFast);
     }

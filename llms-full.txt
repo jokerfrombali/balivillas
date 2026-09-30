@@ -1,7 +1,7 @@
 # The Host Bali — full villa catalog
 
 20 private villas in Bali, all managed by The Host Bali. Direct booking on WhatsApp +62 857 4649 9697. Structured version: https://thehostbali.com/data/villas.json
-Free and booked nights: https://thehostbali.com/api/calendars · price for a stay: https://thehostbali.com/api/quotes?from=&to=
+Rates below are live: "from" per night, minimum stay and the next free check-in are read from our booking calendar and refreshed every 30 minutes. Free and booked nights: https://thehostbali.com/api/calendars · price for a stay: https://thehostbali.com/api/quotes?from=&to=
 Tool endpoint for assistants (MCP, read-only, no key): https://thehostbali.com/mcp
 
 ## Sanur — quiet beachside east coast, calm sea, good for families and long stays
@@ -211,6 +211,14 @@ Photos: https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/galle
 A nine-bedroom designer villa in Pererenan for up to 18 guests, a ten-minute walk from the beach. Private pool, a lawn running down to a mountain river, home cinema, piano, BBQ and a full kitchen — room enough for two families, a wedding party or a company offsite.
 
 Amenities: Private pool with sun loungers; Nine bedrooms, en-suite bathrooms; Garden on a mountain river; Home cinema; Piano; BBQ area and alfresco dining; Fully equipped kitchen with oven; Air conditioning throughout; Fast Wi-Fi and wired internet; Washer and dryer; Free parking on site; Ten-minute walk to Pererenan Beach
+
+## Monthly rentals
+Most villas also take monthly and yearly stays at a monthly rate, with housekeeping and pool care included. Quote on WhatsApp for the exact month; free dates are in the calendar feed above.
+- [Monthly villa rentals in Bali](https://thehostbali.com/monthly-rental/)
+- [Monthly villa rentals in Sanur](https://thehostbali.com/monthly-rental/sanur/)
+- [Monthly villa rentals in Ungasan](https://thehostbali.com/monthly-rental/ungasan/)
+- [Monthly villa rentals in Umalas](https://thehostbali.com/monthly-rental/umalas/)
+- [Monthly villa rentals in Canggu](https://thehostbali.com/monthly-rental/canggu/)
 
 ## How to book
 Message the team on WhatsApp (+62 857 4649 9697) with the villa, dates and number of guests. Reply usually within ~15 minutes between 8:00 and 22:00 WITA. Direct booking carries no OTA commission; nothing is charged on the site.

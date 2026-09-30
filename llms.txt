@@ -1,10 +1,10 @@
 # The Host Bali
 
-> Direct-booking site for 20 private villas in Bali (Sanur, Ungasan, Umalas, Canggu) — every villa is managed by our own team, not an aggregator listing. Guests book commission-free over WhatsApp (+62 857 4649 9697); some villas are also on Airbnb and Booking.com. Rates on request — we answer with a quote the same day.
+> Direct-booking site for 20 private villas in Bali (Sanur, Ungasan, Umalas, Canggu) — every villa is managed by our own team, not an aggregator listing. Guests book commission-free over WhatsApp (+62 857 4649 9697); some villas are also on Airbnb and Booking.com. Nightly rates come live from our booking calendar (see https://thehostbali.com/llms-full.txt); an exact quote for your dates comes back the same day.
 
 Machine-readable data for AI assistants:
 - Full villa catalog (JSON): https://thehostbali.com/data/villas.json
-- Full catalog (plain text): https://thehostbali.com/llms-full.txt
+- Full catalog with live rates and next free dates (plain text): https://thehostbali.com/llms-full.txt
 - Italian version of the whole site (same pages under /it/): https://thehostbali.com/it/
 - Villas for sale (JSON): https://thehostbali.com/data/for-sale.json
 - Free and booked nights for every villa, a year ahead (JSON): https://thehostbali.com/api/calendars
@@ -31,13 +31,25 @@ site shows. Booking itself goes through the team on WhatsApp (+62 857 4649 9697)
 - 6-bedroom: 1 villa
 - 9-bedroom: 1 villa
 
+## Monthly rentals
+Most villas also take monthly and yearly stays at a monthly rate, with housekeeping and pool care included. Quote on WhatsApp for the exact month; free dates are in the calendar feed above.
+- [Monthly villa rentals in Bali](https://thehostbali.com/monthly-rental/)
+- [Monthly villa rentals in Sanur](https://thehostbali.com/monthly-rental/sanur/)
+- [Monthly villa rentals in Ungasan](https://thehostbali.com/monthly-rental/ungasan/)
+- [Monthly villa rentals in Umalas](https://thehostbali.com/monthly-rental/umalas/)
+- [Monthly villa rentals in Canggu](https://thehostbali.com/monthly-rental/canggu/)
+
 ## Pages
 - [All villas](https://thehostbali.com/villas/)
-- [Long-term and monthly rental](https://thehostbali.com/property-rental/)
+- [Villas for rent, all of Bali](https://thehostbali.com/property-rental/)
+- [Monthly villa rentals](https://thehostbali.com/monthly-rental/)
 - [Villas for sale](https://thehostbali.com/villas-for-sale/)
 - [Villa management for owners](https://thehostbali.com/villa-management/)
 - [About the team](https://thehostbali.com/about/)
 - [Contacts](https://thehostbali.com/contacts/)
+
+## Villa management for owners
+The same team manages villas for owners across south Bali: listings and pricing on Airbnb, Booking.com and direct, guest care around the clock, housekeeping, maintenance and one monthly statement. A single commission of 20% of actual booking revenue, nothing fixed and nothing when the villa does not earn. Details: https://thehostbali.com/villa-management/
 
 ## Guides (500 articles, English)
 - [All guides](https://thehostbali.com/blog/)

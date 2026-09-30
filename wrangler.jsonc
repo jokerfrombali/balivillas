@@ -29,7 +29,11 @@
       "!/*.css",
       "!/*.json",
       "!/*.xml",
-      "!/*.txt",
+      // .txt мимо воркера, кроме llms.txt и llms-full.txt: в них воркер
+      // подставляет живые цены из календаря (worker/llms.js)
+      "!/robots.txt",
+      "!/urls.txt",
+      "!/d9136b4b49643e1de42472f8c7cc1cf0.txt",
       "!/*.map",
       "!/*.jpg",
       "!/*.jpeg",

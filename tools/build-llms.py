@@ -36,6 +36,35 @@ AREA_BLURB = {
 }
 
 
+GUIDES = [
+    ("All guides", "/blog/"),
+    ("Renting a villa in Bali", "/blog/renting/"),
+    ("Bali area guides", "/blog/areas/"),
+    ("Long-term rental & living in Bali", "/blog/long-term/"),
+    ("Buying & selling villas in Bali", "/blog/buying/"),
+    ("Villa management for owners", "/blog/owners/"),
+    ("Bali trip practicalities", "/blog/travel/"),
+]
+
+
+def monthly_block(areas):
+    """Аренда на месяц — отдельный раздел сайта, и именно её чаще всего спрашивают
+    у ассистентов: «villa in Bali for a month». Раньше её в файлах не было вовсе."""
+    L = ["## Monthly rentals"]
+    L.append(
+        "Most villas also take monthly and yearly stays at a monthly rate, with "
+        "housekeeping and pool care included. Quote on WhatsApp for the exact month; "
+        "free dates are in the calendar feed above."
+    )
+    L.append(f"- [Monthly villa rentals in Bali]({ORIGIN}/monthly-rental/)")
+    for area in areas:
+        slug = area.lower()
+        if (ROOT / "monthly-rental" / slug / "index.html").exists():
+            L.append(f"- [Monthly villa rentals in {area}]({ORIGIN}/monthly-rental/{slug}/)")
+    L.append("")
+    return L
+
+
 def villa_url(v):
     """Адрес виллы. У 5 из 12 записей поля url нет, и он выводится из slug —
     ровно так же, как это делает конструктор в /admin/villas/. slug у части вилл
@@ -103,13 +132,25 @@ def build_llms(villas):
         f"> Direct-booking site for {total} private villas in Bali "
         f"({', '.join(areas)}) — every villa is managed by our own team, not an "
         f"aggregator listing. Guests book commission-free over WhatsApp ({WA}); "
-        f"some villas are also on Airbnb and Booking.com. Rates on request — "
-        f"we answer with a quote the same day."
+        f"some villas are also on Airbnb and Booking.com. Nightly rates come live "
+        f"from our booking calendar (see {ORIGIN}/llms-full.txt); an exact quote "
+        f"for your dates comes back the same day."
     )
     L.append("")
     L.append("Machine-readable data for AI assistants:")
     L.append(f"- Full villa catalog (JSON): {ORIGIN}/data/villas.json")
-    L.append(f"- Full catalog (plain text): {ORIGIN}/llms-full.txt")
+    L.append(f"- Full catalog with live rates and next free dates (plain text): {ORIGIN}/llms-full.txt")
+    L.append(f"- Italian version of the whole site (same pages under /it/): {ORIGIN}/it/")
+    L.append(f"- Villas for sale (JSON): {ORIGIN}/data/for-sale.json")
+    L.append(f"- Free and booked nights for every villa, a year ahead (JSON): {ORIGIN}/api/calendars")
+    L.append(f'- Nightly rates "from" for every villa (JSON): {ORIGIN}/api/prices')
+    L.append(f"- Total for a stay, all villas at once (JSON): {ORIGIN}/api/quotes?from=YYYY-MM-DD&to=YYYY-MM-DD")
+    L.append("")
+    L.append(f"For assistants that connect tools (MCP): {ORIGIN}/mcp")
+    L.append("Read-only and open, no key needed. JSON-RPC over HTTP. Tools: list_properties,")
+    L.append("get_property, check_availability, find_available. Ask it which villas are free for")
+    L.append("your dates and what the stay costs; the answer comes from the same calendar the")
+    L.append(f"site shows. Booking itself goes through the team on WhatsApp ({WA}).")
     L.append("")
 
     L.append("## Areas")
@@ -129,12 +170,31 @@ def build_llms(villas):
         L.append(f"- {b}-bedroom: {n} {'villa' if n == 1 else 'villas'}")
     L.append("")
 
+    L.extend(monthly_block(areas))
+
     L.append("## Pages")
     L.append(f"- [All villas]({ORIGIN}/villas/)")
-    L.append(f"- [Long-term and monthly rental]({ORIGIN}/property-rental/)")
+    L.append(f"- [Villas for rent, all of Bali]({ORIGIN}/property-rental/)")
+    L.append(f"- [Monthly villa rentals]({ORIGIN}/monthly-rental/)")
+    L.append(f"- [Villas for sale]({ORIGIN}/villas-for-sale/)")
     L.append(f"- [Villa management for owners]({ORIGIN}/villa-management/)")
     L.append(f"- [About the team]({ORIGIN}/about/)")
     L.append(f"- [Contacts]({ORIGIN}/contacts/)")
+    L.append("")
+
+    L.append("## Villa management for owners")
+    L.append(
+        "The same team manages villas for owners across south Bali: listings and "
+        "pricing on Airbnb, Booking.com and direct, guest care around the clock, "
+        "housekeeping, maintenance and one monthly statement. A single commission of "
+        "20% of actual booking revenue, nothing fixed and nothing when the villa does "
+        f"not earn. Details: {ORIGIN}/villa-management/"
+    )
+    L.append("")
+
+    L.append("## Guides (500 articles, English)")
+    for name, path in GUIDES:
+        L.append(f"- [{name}]({ORIGIN}{path})")
     L.append("")
 
     L.append("## Booking")
@@ -164,6 +224,12 @@ def build_llms_full(villas):
         f"{len(villas)} private villas in Bali, all managed by The Host Bali. "
         f"Direct booking on WhatsApp {WA}. Structured version: {ORIGIN}/data/villas.json"
     )
+    L.append(
+        'Rates below are live: "from" per night, minimum stay and the next free check-in '
+        "are read from our booking calendar and refreshed every 30 minutes. Free and booked "
+        f"nights: {ORIGIN}/api/calendars · price for a stay: {ORIGIN}/api/quotes?from=&to="
+    )
+    L.append(f"Tool endpoint for assistants (MCP, read-only, no key): {ORIGIN}/mcp")
     L.append("")
 
     for area, group in areas.items():
@@ -190,6 +256,8 @@ def build_llms_full(villas):
                 L.append("Amenities: " + "; ".join(am))
             L.append("")
 
+    L.extend(monthly_block(areas))
+
     L.append("## How to book")
     L.append(
         f"Message the team on WhatsApp ({WA}) with the villa, dates and number of "
@@ -198,6 +266,23 @@ def build_llms_full(villas):
     )
     L.append("")
     return "\n".join(L)
+
+
+KEEP = ("<!-- for-sale:begin -->", "<!-- for-sale:end -->")
+
+
+def keep_block(path):
+    """Блок продаж собирается из data/for-sale.json отдельным шагом и живёт между
+    метками. Скрипт его не пересобирает, а переносит как есть: иначе каждый
+    запуск стирал бы объекты продажи из файлов для ассистентов."""
+    p = ROOT / path
+    if not p.exists():
+        return ""
+    t = p.read_text(encoding="utf-8")
+    a, b = t.find(KEEP[0]), t.find(KEEP[1])
+    if a < 0 or b < 0:
+        return ""
+    return "\n" + t[a:b + len(KEEP[1])] + "\n"
 
 
 def write(path, text, check):
@@ -223,8 +308,8 @@ def main():
           + ", ".join(f"{a} {len(g)}" for a, g in areas.items()))
 
     drift = False
-    drift |= write("llms.txt", build_llms(villas), check)
-    drift |= write("llms-full.txt", build_llms_full(villas), check)
+    drift |= write("llms.txt", build_llms(villas) + keep_block("llms.txt"), check)
+    drift |= write("llms-full.txt", build_llms_full(villas) + keep_block("llms-full.txt"), check)
 
     if check and drift:
         print("\nAI-файлы не совпадают с каталогом. Запустите: python tools/build-llms.py")
