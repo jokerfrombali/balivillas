@@ -123,8 +123,8 @@
       var c = cards[i];
       if (c.getAttribute('data-thb-date') === 'off' || c.style.display === 'none') continue;
       var oc = c.getAttribute('onclick') || c.getAttribute('href') || '';
-      var m = oc.match(/\/(?:it\/)?villa\/[^'"?]+/);
-      if (m) set[m[0].replace(/^\/it/, '')] = 1;
+      var m = oc.match(/\/(?:[a-z]{2}(?:-han[st])?\/)?villa\/[^'"?]+/);
+      if (m) set[m[0].replace(/^\/[a-z]{2}(?:-han[st])?(?=\/villa\/)/, '')] = 1;
     }
     return set;
   }

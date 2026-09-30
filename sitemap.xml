@@ -5,6 +5,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,6 +15,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/property-rental/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/property-rental/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/property-rental/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/property-rental/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -23,6 +25,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -32,6 +35,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/umalas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/umalas/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/umalas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/umalas/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -41,6 +45,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/sanur/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -50,6 +55,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/premier-umalas-16-3br-pool-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/premier-umalas-16-3br-pool-townhouse/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -59,6 +65,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/premier-umalas-17-2br-pool-home/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/premier-umalas-17-2br-pool-home/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -68,18 +75,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-black-pool-4br-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/villa-black-pool-4br-sanur/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thehostbali.com/en-au/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thehostbali.com/ru/</loc>
     <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -107,15 +109,6 @@
     <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-<url>
-    <loc>https://thehostbali.com/it/</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/"/>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://thehostbali.com/ja/</loc>
@@ -152,6 +145,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/premier-umalas-16-3br-pool-townhouse/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/premier-umalas-16-3br-pool-townhouse/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -160,6 +154,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/premier-umalas-17-2br-pool-home/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/premier-umalas-17-2br-pool-home/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -168,6 +163,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-black-pool-4br-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/villa-black-pool-4br-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -176,6 +172,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/stylish-2br-pool-townhouse-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/stylish-2br-pool-townhouse-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -184,6 +181,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -192,6 +190,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/modern-2br-pool-townhouse-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/modern-2br-pool-townhouse-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -200,6 +199,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -208,6 +208,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -216,6 +217,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -224,6 +226,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -232,6 +235,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-10-apartment-private-terrace-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-10-apartment-private-terrace-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -240,6 +244,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -248,6 +253,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -256,6 +262,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -264,6 +271,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -272,6 +280,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -280,102 +289,126 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
   <url><loc>https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/><lastmod>2026-08-19</lastmod></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/><lastmod>2026-08-19</lastmod></url>
 <url><loc>https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/><lastmod>2026-08-19</lastmod></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/><lastmod>2026-08-19</lastmod></url>
 <url><loc>https://thehostbali.com/contacts/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/contacts/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/contacts/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/contacts/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/contacts/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/contacts/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
 <url><loc>https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/the-wave-6br-beachside-villa-canggu/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/the-wave-6br-beachside-villa-canggu/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/canggu/the-wave-6br-beachside-villa-canggu/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/leonardo-9br-resort-pererenan/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/leonardo-9br-resort-pererenan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/canggu/leonardo-9br-resort-pererenan/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/umalas/villa-papat-4br-pool-villa-umalas/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/umalas/villa-papat-4br-pool-villa-umalas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/umalas/villa-papat-4br-pool-villa-umalas/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/garden-pool-villa-4br-sanur/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/garden-pool-villa-4br-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/garden-pool-villa-4br-sanur/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/villas/canggu/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/canggu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/canggu/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/canggu/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/canggu/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/canggu/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://thehostbali.com/villas/ungasan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/ungasan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/ungasan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://thehostbali.com/terms/</loc><lastmod>2026-09-21</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 <url><loc>https://thehostbali.com/privacy/</loc><lastmod>2026-09-21</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url>
@@ -383,6 +416,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa-management/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa-management/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa-management/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa-management/"/>
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -392,6 +426,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/about/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/about/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/about/"/>
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -399,51 +434,63 @@
 <url><loc>https://thehostbali.com/villas-for-sale/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://thehostbali.com/villas-for-sale/sanur/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://thehostbali.com/villas-for-sale/canggu/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/canggu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/canggu/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/canggu/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/canggu/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/canggu/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://thehostbali.com/villas-for-sale/umalas/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/umalas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/umalas/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/umalas/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/umalas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/umalas/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://thehostbali.com/villas-for-sale/ungasan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/ungasan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/ungasan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/ungasan/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/ungasan/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://thehostbali.com/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villas-for-sale/sanur/villa-black-pool-4br/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/villa-black-pool-4br/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/villa-black-pool-4br/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-black-pool-4br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-black-pool-4br/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/villa-black-pool-4br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villas-for-sale/sanur/villa-kesari-4-3br/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/villa-kesari-4-3br/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/villa-kesari-4-3br/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-kesari-4-3br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-kesari-4-3br/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/villa-kesari-4-3br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villas-for-sale/sanur/garden-pool-villa-4br/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/garden-pool-villa-4br/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/garden-pool-villa-4br/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/garden-pool-villa-4br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/garden-pool-villa-4br/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/garden-pool-villa-4br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villas-for-sale/sanur/modern-2br-pool-townhouse/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/modern-2br-pool-townhouse/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/modern-2br-pool-townhouse/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/modern-2br-pool-townhouse/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/modern-2br-pool-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/modern-2br-pool-townhouse/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-sakura-3br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-sakura-3br/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/villa-sakura-3br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-sakura-3br/gallery/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-sakura-3br/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/villa-sakura-3br/gallery/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url>
     <loc>https://thehostbali.com/villa-management/sanur/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa-management/sanur/"/>
@@ -725,10 +772,41 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://thehostbali.com/it/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://thehostbali.com/it/property-rental/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/property-rental/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/property-rental/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/property-rental/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/property-rental/"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/property-rental/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/property-rental/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/property-rental/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/property-rental/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/property-rental/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -738,6 +816,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villas/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -747,6 +836,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/umalas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/umalas/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/umalas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/umalas/"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villas/umalas/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/umalas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/umalas/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/umalas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/umalas/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -756,6 +856,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/sanur/"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villas/sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/sanur/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/sanur/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -765,6 +876,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/premier-umalas-16-3br-pool-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/premier-umalas-16-3br-pool-townhouse/"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/premier-umalas-16-3br-pool-townhouse/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/premier-umalas-16-3br-pool-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/premier-umalas-16-3br-pool-townhouse/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -774,6 +896,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/premier-umalas-17-2br-pool-home/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/premier-umalas-17-2br-pool-home/"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/premier-umalas-17-2br-pool-home/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/premier-umalas-17-2br-pool-home/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/premier-umalas-17-2br-pool-home/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -783,6 +916,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-black-pool-4br-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/villa-black-pool-4br-sanur/"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/villa-black-pool-4br-sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-black-pool-4br-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/villa-black-pool-4br-sanur/"/>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -792,6 +936,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/premier-umalas-16-3br-pool-townhouse/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/premier-umalas-16-3br-pool-townhouse/gallery/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/premier-umalas-16-3br-pool-townhouse/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/premier-umalas-16-3br-pool-townhouse/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/premier-umalas-16-3br-pool-townhouse/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -800,6 +954,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/premier-umalas-17-2br-pool-home/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/premier-umalas-17-2br-pool-home/gallery/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/premier-umalas-17-2br-pool-home/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/premier-umalas-17-2br-pool-home/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/premier-umalas-17-2br-pool-home/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -808,6 +972,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-black-pool-4br-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/villa-black-pool-4br-sanur/gallery/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/villa-black-pool-4br-sanur/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-black-pool-4br-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/villa-black-pool-4br-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -816,6 +990,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/stylish-2br-pool-townhouse-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/stylish-2br-pool-townhouse-sanur/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/stylish-2br-pool-townhouse-sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/stylish-2br-pool-townhouse-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/stylish-2br-pool-townhouse-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -824,6 +1008,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -832,6 +1026,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/modern-2br-pool-townhouse-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/modern-2br-pool-townhouse-sanur/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/modern-2br-pool-townhouse-sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/modern-2br-pool-townhouse-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/modern-2br-pool-townhouse-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -840,6 +1044,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -848,6 +1062,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -856,6 +1080,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -864,6 +1098,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -872,6 +1116,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-10-apartment-private-terrace-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-10-apartment-private-terrace-sanur/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/serenity-10-apartment-private-terrace-sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-10-apartment-private-terrace-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-10-apartment-private-terrace-sanur/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -880,6 +1134,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -888,6 +1152,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -896,6 +1170,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -904,6 +1188,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -912,6 +1206,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -920,106 +1224,265 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/"/>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
 <url><loc>https://thehostbali.com/it/villa/sanur/lucky-lily-3br-pool-villa-sanur/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/><lastmod>2026-08-19</lastmod></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/><lastmod>2026-08-19</lastmod></url>
+<url><loc>https://thehostbali.com/ru/villa/sanur/lucky-lily-3br-pool-villa-sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/lucky-lily-3br-pool-villa-sanur/"/><lastmod>2026-08-19</lastmod></url>
 <url><loc>https://thehostbali.com/it/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/it/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/><lastmod>2026-08-19</lastmod></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/><lastmod>2026-08-19</lastmod></url>
+<url><loc>https://thehostbali.com/ru/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/"/><lastmod>2026-08-19</lastmod></url>
 <url><loc>https://thehostbali.com/it/contacts/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/contacts/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/contacts/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/contacts/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/contacts/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/contacts/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://thehostbali.com/ru/contacts/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/contacts/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/contacts/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/contacts/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/contacts/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 <url><loc>https://thehostbali.com/it/villa/canggu/the-wave-6br-beachside-villa-canggu/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/the-wave-6br-beachside-villa-canggu/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/the-wave-6br-beachside-villa-canggu/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/canggu/the-wave-6br-beachside-villa-canggu/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/canggu/the-wave-6br-beachside-villa-canggu/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/the-wave-6br-beachside-villa-canggu/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/canggu/the-wave-6br-beachside-villa-canggu/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/it/villa/canggu/leonardo-9br-resort-pererenan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/leonardo-9br-resort-pererenan/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/leonardo-9br-resort-pererenan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/canggu/leonardo-9br-resort-pererenan/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/canggu/leonardo-9br-resort-pererenan/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/leonardo-9br-resort-pererenan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/canggu/leonardo-9br-resort-pererenan/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villa/canggu/leonardo-9br-resort-pererenan/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/canggu/leonardo-9br-resort-pererenan/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/canggu/leonardo-9br-resort-pererenan/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/it/villa/umalas/villa-papat-4br-pool-villa-umalas/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/umalas/villa-papat-4br-pool-villa-umalas/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/umalas/villa-papat-4br-pool-villa-umalas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/umalas/villa-papat-4br-pool-villa-umalas/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/umalas/villa-papat-4br-pool-villa-umalas/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/umalas/villa-papat-4br-pool-villa-umalas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/umalas/villa-papat-4br-pool-villa-umalas/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/it/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/"/><lastmod>2026-09-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/it/villa/sanur/garden-pool-villa-4br-sanur/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/garden-pool-villa-4br-sanur/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/garden-pool-villa-4br-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/garden-pool-villa-4br-sanur/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/sanur/garden-pool-villa-4br-sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/garden-pool-villa-4br-sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/garden-pool-villa-4br-sanur/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villa/sanur/garden-pool-villa-4br-sanur/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/sanur/garden-pool-villa-4br-sanur/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/sanur/garden-pool-villa-4br-sanur/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/it/villa/ungasan/eco-private-1br-pool-villa-ungasan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/ungasan/eco-private-1br-pool-villa-ungasan/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-private-1br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/it/villa/ungasan/eco-teak-2br-pool-villa-ungasan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/ungasan/eco-teak-2br-pool-villa-ungasan/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-teak-2br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/it/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://thehostbali.com/ru/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/"/><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://thehostbali.com/it/villas/canggu/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/canggu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/canggu/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/canggu/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/canggu/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/canggu/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://thehostbali.com/ru/villas/canggu/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/canggu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/canggu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/canggu/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/canggu/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://thehostbali.com/it/villas/ungasan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/ungasan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/ungasan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://thehostbali.com/ru/villas/ungasan/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas/ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas/ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas/ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas/ungasan/"/><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url>
     <loc>https://thehostbali.com/it/villa-management/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa-management/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa-management/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa-management/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa-management/"/>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/villa-management/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villa-management/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villa-management/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villa-management/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villa-management/"/>
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -1029,6 +1492,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/about/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/about/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/about/"/>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://thehostbali.com/ru/about/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/about/"/>
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1036,49 +1510,121 @@
 <url><loc>https://thehostbali.com/it/villas-for-sale/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://thehostbali.com/ru/villas-for-sale/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://thehostbali.com/it/villas-for-sale/sanur/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://thehostbali.com/ru/villas-for-sale/sanur/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://thehostbali.com/it/villas-for-sale/canggu/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/canggu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/canggu/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/canggu/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/canggu/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/canggu/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://thehostbali.com/ru/villas-for-sale/canggu/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/canggu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/canggu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/canggu/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/canggu/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://thehostbali.com/it/villas-for-sale/umalas/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/umalas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/umalas/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/umalas/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/umalas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/umalas/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://thehostbali.com/ru/villas-for-sale/umalas/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/umalas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/umalas/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/umalas/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/umalas/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://thehostbali.com/it/villas-for-sale/ungasan/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/ungasan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/ungasan/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/ungasan/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/ungasan/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://thehostbali.com/ru/villas-for-sale/ungasan/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/ungasan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/ungasan/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://thehostbali.com/it/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villas-for-sale/sanur/villa-black-pool-4br/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/villa-black-pool-4br/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/villa-black-pool-4br/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-black-pool-4br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-black-pool-4br/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/villa-black-pool-4br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villas-for-sale/sanur/villa-black-pool-4br/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/villa-black-pool-4br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/villa-black-pool-4br/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-black-pool-4br/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/villa-black-pool-4br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villas-for-sale/sanur/villa-kesari-4-3br/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/villa-kesari-4-3br/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/villa-kesari-4-3br/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-kesari-4-3br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-kesari-4-3br/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/villa-kesari-4-3br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villas-for-sale/sanur/villa-kesari-4-3br/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/villa-kesari-4-3br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/villa-kesari-4-3br/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-kesari-4-3br/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/villa-kesari-4-3br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villas-for-sale/sanur/garden-pool-villa-4br/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/garden-pool-villa-4br/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/garden-pool-villa-4br/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/garden-pool-villa-4br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/garden-pool-villa-4br/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/garden-pool-villa-4br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villas-for-sale/sanur/garden-pool-villa-4br/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/garden-pool-villa-4br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/garden-pool-villa-4br/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/garden-pool-villa-4br/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/garden-pool-villa-4br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villas-for-sale/sanur/modern-2br-pool-townhouse/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/modern-2br-pool-townhouse/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/modern-2br-pool-townhouse/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/modern-2br-pool-townhouse/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/modern-2br-pool-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/modern-2br-pool-townhouse/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villas-for-sale/sanur/modern-2br-pool-townhouse/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/modern-2br-pool-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/modern-2br-pool-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/modern-2br-pool-townhouse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/modern-2br-pool-townhouse/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villas-for-sale/sanur/villa-sakura-3br/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-sakura-3br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-sakura-3br/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/villa-sakura-3br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villas-for-sale/sanur/villa-sakura-3br/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-sakura-3br/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/villa-sakura-3br/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://thehostbali.com/it/villas-for-sale/sanur/villa-sakura-3br/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/gallery/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/gallery/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-sakura-3br/gallery/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-sakura-3br/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/villa-sakura-3br/gallery/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://thehostbali.com/ru/villas-for-sale/sanur/villa-sakura-3br/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thehostbali.com/it/villas-for-sale/sanur/villa-sakura-3br/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thehostbali.com/ru/villas-for-sale/sanur/villa-sakura-3br/gallery/"/><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 </urlset>

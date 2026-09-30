@@ -56,8 +56,9 @@
   }
 
   function cur() {
-    var l = (document.documentElement.lang || 'en').toLowerCase().slice(0, 2);
-    return l === 'it' ? 'it' : 'en';
+    var l = (document.documentElement.lang || 'en').toLowerCase();
+    for (var i = 0; i < LANGS.length; i++) if (l === LANGS[i].c || l.slice(0, 2) === LANGS[i].c) return LANGS[i].c;
+    return 'en';
   }
 
   function css() {
@@ -113,7 +114,7 @@
     btn.type = 'button';
     btn.setAttribute('aria-haspopup', 'menu');
     btn.setAttribute('aria-expanded', 'false');
-    btn.setAttribute('aria-label', me === 'it' ? 'Lingua' : 'Language');
+    btn.setAttribute('aria-label', ({ it: 'Lingua', ru: 'Язык' })[me] || 'Language');
     btn.innerHTML =
       '<svg class="g" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">' +
       '<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>' +

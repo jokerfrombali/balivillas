@@ -169,12 +169,21 @@ def remove_lang_switcher(html):
         html = html[:i] + html[pos:]
 
 
-def hreflang_block(en_url, lang_url):
-    """Связка версий страницы: английская как основная и текущий язык."""
-    return ('<link rel="alternate" hreflang="x-default" href="%s">\n'
-            '<link rel="alternate" hreflang="en" href="%s">\n'
-            '<link rel="alternate" hreflang="%s" href="%s">'
-            % (en_url, en_url, LANG, lang_url))
+ALL_LANGS = [os.path.basename(f).split('.')[0]
+             for f in glob.glob(os.path.join(ROOT, 'data', 'i18n', '*.pages.json'))]
+
+
+def hreflang_block(path):
+    """Полная связка версий страницы: английская (она же x-default) и все
+    языки, у которых уже есть близнец. Каждая версия ссылается на все
+    остальные — иначе Google считает кластер неполным."""
+    rel = path.strip('/')
+    out = ['<link rel="alternate" hreflang="x-default" href="%s%s">' % (SITE, path),
+           '<link rel="alternate" hreflang="en" href="%s%s">' % (SITE, path)]
+    for l in sorted(set(ALL_LANGS) | {LANG}):
+        if l == LANG or os.path.exists(os.path.join(ROOT, l, rel, 'index.html')):
+            out.append('<link rel="alternate" hreflang="%s" href="%s/%s%s">' % (l, SITE, l, path))
+    return '\n'.join(out)
 
 
 def build(f):
@@ -213,7 +222,7 @@ def build(f):
     html = re.sub(r'<meta property="og:url" content="[^"]*">', '<meta property="og:url" content="%s">' % it_url, html, count=1)
     if p != '/':
         html = re.sub(r'\s*<link rel="alternate" hreflang="[^"]*"\s+href="[^"]*"\s*/?>', '', html)
-        html = re.sub(r'(<link rel="canonical" href="[^"]*">)', r'\1\n' + hreflang_block(en_url, it_url), html, count=1)
+        html = re.sub(r'(<link rel="canonical" href="[^"]*">)', lambda m: m.group(1) + '\n' + hreflang_block(p), html, count=1)
     return html
 
 

@@ -26,10 +26,40 @@
   window.__thbDates = true;
 
   var path = location.pathname.replace(/^\/(it|ru|de|fr|es|nl|ja|ko|zh-hans|zh-hant|ar)(?=\/)/, '');
-  var IT = path !== location.pathname;
+  /* префикс языка страницы: '' для английской, '/it', '/ru' … для близнецов */
+  var PFX = location.pathname.slice(0, location.pathname.length - path.length);
+  var LNG = PFX.slice(1);
+  var IT = LNG === 'it';
   if (!/^\/(property-rental|villas)\/([^/]+\/)?$/.test(path)) return;
 
-  var T = IT ? {
+
+  /* русские формы: 1 вилла, 2–4 виллы, 5+ вилл (11–14 — всегда «вилл») */
+  function ru(n, one, few, many) {
+    var a = n % 10, b = n % 100;
+    return (a === 1 && b !== 11) ? one : (a >= 2 && a <= 4 && (b < 12 || b > 14)) ? few : many;
+  }
+  var RU = {
+    dates: 'Даты', any: 'Любые даты', clear: 'Сбросить', apply: 'Показать',
+    villas: function (n) { return n + ' ' + ru(n, 'вилла', 'виллы', 'вилл'); },
+    free: function (n) { return n + ' ' + ru(n, 'вилла свободна', 'виллы свободны', 'вилл свободно'); },
+    nights: function (n) { return n + ' ' + ru(n, 'ночь', 'ночи', 'ночей'); },
+    minStay: function (n) { return 'мин. ' + n + ' ' + ru(n, 'ночь', 'ночи', 'ночей'); },
+    onRequest: 'Даты по запросу', checkin: 'Заезд', checkout: 'Выезд',
+    addDate: 'Добавить дату',
+    forNights: function (n) { return 'за ' + n + ' ' + ru(n, 'ночь', 'ночи', 'ночей'); },
+    none: 'На эти даты свободных вилл нет. Попробуйте другие даты или напишите нам в WhatsApp.',
+    longer: function (n, m) { return 'Ещё ' + n + ' ' + ru(n, 'вилла свободна', 'виллы свободны', 'вилл свободно') +
+      ', но минимальный срок — ' + m + ' ' + ru(m, 'ночь', 'ночи', 'ночей') + '.'; },
+    dow: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    mon: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль',
+          'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    monShort: ['янв', 'фев', 'мар', 'апр', 'мая', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
+    loading: 'Проверяем календари…',
+    areas: { sanur: 'Санур', canggu: 'Чангу', umalas: 'Умалас', ungasan: 'Унгасан',
+             pererenan: 'Переренан', uluwatu: 'Улувату', seminyak: 'Семиньяк', jimbaran: 'Джимбаран' }
+  };
+
+  var T = LNG === 'ru' ? RU : IT ? {
     dates: 'Date', any: 'Qualsiasi data', clear: 'Cancella', apply: 'Mostra',
     villas: function (n) { return n + (n === 1 ? ' villa' : ' ville'); },
     free: function (n) { return n + (n === 1 ? ' villa libera' : ' ville libere'); },
@@ -655,6 +685,7 @@
       var on = document.querySelector('.thb-qchip.on');
       a = (on && on.getAttribute('data-area')) || '';
     }
+    if (a && T.areas && T.areas[a.toLowerCase()]) return T.areas[a.toLowerCase()];
     return a ? a.charAt(0).toUpperCase() + a.slice(1) : '';
   }
 
@@ -770,7 +801,7 @@
       var u = urlOf(card);
       if (!u) return;
       e.preventDefault(); e.stopPropagation();
-      location.href = (IT ? '/it' : '') + u + '?checkin=' + S.ci + '&checkout=' + S.co;
+      location.href = PFX + u + '?checkin=' + S.ci + '&checkout=' + S.co;
     }, true);
   }
 

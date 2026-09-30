@@ -71,7 +71,7 @@
     'We use Google Analytics to see which villas and buttons people actually use. Nothing is sold or used for ads.': 'Usiamo Google Analytics per capire quali ville e pulsanti vengono davvero usati. Nulla viene venduto o usato per la pubblicità.',
     'Nothing is sold or used for ads.': 'Nulla viene venduto o usato per la pubblicità.',
     'Read more': 'Leggi di più', 'Read less': 'Mostra meno', 'back to top': 'torna su',
-    'All': 'Tutte', 'Any': 'Qualsiasi', 'found': 'trovate', 'available': 'disponibili'
+    'All': 'Tutte', 'Any': 'Qualsiasi', 'found': 'trovate', 'available': 'disponibili', 'for': 'per'
   };
 
   var MON = { January: 'Gennaio', February: 'Febbraio', March: 'Marzo', April: 'Aprile', May: 'Maggio', June: 'Giugno',

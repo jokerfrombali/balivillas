@@ -12,9 +12,10 @@ for f in PAGES:
     html = io.open(f, encoding='utf-8').read()
     orig = html
     html = remove_lang_switcher(html)
-    if p != '/' and ('hreflang="' + LANG + '"') not in html:
+    if p != '/':
+        html = re.sub(r'\s*<link rel="alternate" hreflang="[^"]*"\s+href="[^"]*"\s*/?>', '', html)
         html = re.sub(r'(<link rel="canonical" href="[^"]*">)',
-                      r'\1\n' + hreflang_block(SITE + p, SITE + '/' + LANG + p), html, count=1)
+                      lambda m: m.group(1) + '\n' + hreflang_block(p), html, count=1)
     if html != orig:
         io.open(f, 'w', encoding='utf-8', newline='').write(html)
         n += 1
