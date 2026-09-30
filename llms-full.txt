@@ -1,6 +1,8 @@
 # The Host Bali — full villa catalog
 
 20 private villas in Bali, all managed by The Host Bali. Direct booking on WhatsApp +62 857 4649 9697. Structured version: https://thehostbali.com/data/villas.json
+Free and booked nights: https://thehostbali.com/api/calendars · price for a stay: https://thehostbali.com/api/quotes?from=&to=
+Tool endpoint for assistants (MCP, read-only, no key): https://thehostbali.com/mcp
 
 ## Sanur — quiet beachside east coast, calm sea, good for families and long stays
 

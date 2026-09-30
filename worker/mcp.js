@@ -18,6 +18,11 @@
 import { allBasePrices, busyNights, rangeQuotes } from './hostex.js';
 import { listGroups, upsertGroup, deleteGroup, listPosts, savePost, deletePost, postingPlan } from './fbdata.js';
 
+/* Что отдаём без токена. Это чтение публичных данных: те же объекты, цены и
+   занятость, что видит гость на сайте и любой поисковый робот. Группы,
+   журнал публикаций и любая запись — только по токену. */
+const PUBLIC_TOOLS = ['list_properties', 'get_property', 'check_availability', 'find_available'];
+
 const NAME = 'thehostbali';
 const VERSION = '1.0.0';
 const PROTOCOL = '2024-11-05';
@@ -446,18 +451,24 @@ function res(body, status) {
   });
 }
 
-export async function handleMcp(req, env) {
+export async function handleMcp(req, env, limiter) {
   if (req.method === 'OPTIONS') return res(null, 204);
 
   const token = env.MCP_TOKEN;
-  if (!token) {
-    return res({ error: 'mcp_not_configured',
-                 hint: 'задайте секрет MCP_TOKEN: npx wrangler secret put MCP_TOKEN' }, 503);
-  }
-
   const auth = req.headers.get('authorization') || '';
   const given = auth.replace(/^Bearer\s+/i, '').trim();
-  if (given !== token) return res({ error: 'unauthorized' }, 401);
+
+  /* Свой токен — полный набор. Чужой токен — отказ сразу: это попытка, а не
+     анонимный гость. Без токена — открытая половина, только чтение. */
+  if (given && (!token || given !== token)) return res({ error: 'unauthorized' }, 401);
+  const full = !!token && given === token;
+
+  if (!full && limiter) {
+    const ip = req.headers.get('cf-connecting-ip') || '0';
+    if (await limiter(env, ip, 'mcp', 60, 60)) {
+      return res({ error: 'rate_limited', hint: 'не больше 60 вызовов в минуту' }, 429);
+    }
+  }
 
   /* GET — на streamable HTTP это подписка на события сервера. Событий мы не
      шлём, поэтому честно отвечаем, что метод не поддержан. */
@@ -475,21 +486,33 @@ export async function handleMcp(req, env) {
         protocolVersion: PROTOCOL,
         capabilities: { tools: { listChanged: false } },
         serverInfo: { name: NAME, version: VERSION },
-        instructions: 'Данные The Host Bali: объекты аренды и продажи, занятость и ' +
-          'цены из зеркала Hostex, группы Facebook с правилами и журнал публикаций. ' +
-          'Hostex только на чтение: брони и цены отсюда не меняются.'
+        instructions: full
+          ? 'Данные The Host Bali: объекты аренды и продажи, занятость и цены из ' +
+            'зеркала Hostex, группы Facebook с правилами и журнал публикаций. ' +
+            'Hostex только на чтение: брони и цены отсюда не меняются.'
+          : 'Виллы The Host Bali на Бали: объекты в аренду и на продажу, свободные ' +
+            'даты и цены из календаря. Только чтение. Бронирование идёт через ' +
+            'команду в WhatsApp, ссылка есть в карточке объекта.'
       });
     }
 
     if (method === 'notifications/initialized' || method === 'notifications/cancelled') return null;
     if (method === 'ping') return rpc(id, {});
-    if (method === 'tools/list') return rpc(id, { tools: TOOLS });
+    if (method === 'tools/list') {
+      return rpc(id, { tools: full ? TOOLS : TOOLS.filter((t) => PUBLIC_TOOLS.indexOf(t.name) >= 0) });
+    }
 
     if (method === 'resources/list') return rpc(id, { resources: [] });
     if (method === 'prompts/list') return rpc(id, { prompts: [] });
 
     if (method === 'tools/call') {
       const p = msg.params || {};
+      if (!full && PUBLIC_TOOLS.indexOf(p.name) < 0) {
+        return rpc(id, {
+          content: [{ type: 'text', text: 'этот инструмент доступен только по токену: ' + p.name }],
+          isError: true
+        });
+      }
       try {
         const out = await call(env, p.name, p.arguments);
         return rpc(id, {

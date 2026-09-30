@@ -6,6 +6,16 @@ Machine-readable data for AI assistants:
 - Full villa catalog (JSON): https://thehostbali.com/data/villas.json
 - Full catalog (plain text): https://thehostbali.com/llms-full.txt
 - Italian version of the whole site (same pages under /it/): https://thehostbali.com/it/
+- Villas for sale (JSON): https://thehostbali.com/data/for-sale.json
+- Free and booked nights for every villa, a year ahead (JSON): https://thehostbali.com/api/calendars
+- Nightly rates "from" for every villa (JSON): https://thehostbali.com/api/prices
+- Total for a stay, all villas at once (JSON): https://thehostbali.com/api/quotes?from=YYYY-MM-DD&to=YYYY-MM-DD
+
+For assistants that connect tools (MCP): https://thehostbali.com/mcp
+Read-only and open, no key needed. JSON-RPC over HTTP. Tools: list_properties,
+get_property, check_availability, find_available. Ask it which villas are free for
+your dates and what the stay costs; the answer comes from the same calendar the
+site shows. Booking itself goes through the team on WhatsApp (+62 857 4649 9697).
 
 ## Areas
 - [Villas in Sanur](https://thehostbali.com/villas/sanur/): 11 villas — quiet beachside east coast, calm sea, good for families and long stays

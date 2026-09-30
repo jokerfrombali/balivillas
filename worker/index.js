@@ -650,7 +650,7 @@ export default {
     /* MCP: единый слой доступа к данным для агентов. Живёт вне /api/: у него
        свой протокол (JSON-RPC) и своя авторизация по токену. */
     if (url.pathname === '/mcp' || url.pathname === '/mcp/') {
-      return handleMcp(req, env);
+      return handleMcp(req, env, tooFast);
     }
 
     if (url.pathname.indexOf('/api/') === 0) {
