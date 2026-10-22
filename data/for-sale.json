@@ -303,16 +303,16 @@
     "landSqm": 300,
     "buildingSqm": 200,
     "bedrooms": 3,
-    "bathrooms": 3,
+    "bathrooms": 2,
     "builtYear": null,
     "poolSize": "9 m long",
     "features": [
       "Two floors, 200 m² of house, renovated in 2026",
-      "Three bedrooms upstairs under alang-alang ceilings",
+      "Two bedrooms upstairs under alang-alang ceilings",
       "Two marble bathrooms upstairs, one with a free-standing tub",
-      "Guest toilet with washer and dryer on the ground floor",
+      "Guest toilet with washer and dryer on the ground floor, no shower",
       "Open living and dining room, closed kitchen with quartz worktops",
-      "One more ground-floor room, unfurnished — office, gym or fourth bedroom",
+      "Third bedroom on the ground floor, set up as a study with a sofa bed",
       "Walk-in wardrobe",
       "Carved timber balconies over the garden",
       "Private pool, 9 m long, in a mature frangipani garden",
@@ -334,11 +334,11 @@
       ],
       [
         "Layout",
-        "Three bedrooms and two bathrooms upstairs, a guest toilet downstairs. The empty ground-floor room takes a fourth bedroom if a buyer wants one."
+        "Two bedrooms and two bathrooms upstairs. The third bedroom is on the ground floor, set up as a study with a sofa bed, next to a guest toilet; there is no shower downstairs."
       ]
     ],
-    "description": "A three-bedroom villa on Jalan Danau Tamblingan — the street that runs the length of Sanur — three minutes on foot from the ocean and the beachfront promenade. Two floors and 200 m² of house on a 300 m² plot, renovated top to bottom in 2026 and sold fully furnished.\n\nThe ground floor is modern and open: a living room and a dining table under lit ceilings, timber doors onto the pool terrace, and a closed kitchen in white and walnut with quartz worktops, an induction hob and an oven. Behind it sit a guest toilet with the laundry, a walk-in wardrobe and one more room the owners left empty — an office, a gym or a fourth bedroom, with its own glazed doors onto a planted courtyard. A travertine stair with lit treads and a glass balustrade leads upstairs.\n\nAbove, the house keeps its Balinese character: open rafters under alang-alang thatch, stone-clad walls behind the beds, travertine floors and carved timber balconies over the garden. Three bedrooms share two marble bathrooms with double vanities and walk-in showers, one of them with a free-standing tub at the window.\n\nOutside, a nine-metre pool in green stone mosaic runs the length of the lawn under old frangipani trees, with sun loungers on the terrace and a lounge corner at the far end. The villa stands in a managed complex with its own security; the ocean shows from the upper floor and the mountains inland on a clear day.",
-    "updatedAt": "2026-09-10",
+    "description": "A three-bedroom villa on Jalan Danau Tamblingan — the street that runs the length of Sanur — three minutes on foot from the ocean and the beachfront promenade. Two floors and 200 m² of house on a 300 m² plot, renovated top to bottom in 2026 and sold fully furnished.\n\nThe ground floor is modern and open: a living room and a dining table under lit ceilings, timber doors onto the pool terrace, and a closed kitchen in white and walnut with quartz worktops, an induction hob and an oven. Behind it sit a guest toilet with the laundry (there is no shower downstairs), a walk-in wardrobe and the third bedroom, set up for now as a study with a sofa bed, with its own glazed doors onto a planted courtyard. A travertine stair with lit treads and a glass balustrade leads upstairs.\n\nAbove, the house keeps its Balinese character: open rafters under alang-alang thatch, stone-clad walls behind the beds, travertine floors and carved timber balconies over the garden. The two bedrooms upstairs share two marble bathrooms with double vanities and walk-in showers, one of them with a free-standing tub at the window.\n\nOutside, a nine-metre pool in green stone mosaic runs the length of the lawn under old frangipani trees, with sun loungers on the terrace and a lounge corner at the far end. The villa stands in a managed complex with its own security; the ocean shows from the upper floor and the mountains inland on a clear day.",
+    "updatedAt": "2026-10-22",
     "templateVillaId": "own-villa-kesari-4-3br-pool-villa-sanur",
     "images": [
       "/public-objects/images/villa-sakura-sanur-01.jpg",
