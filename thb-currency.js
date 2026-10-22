@@ -94,7 +94,11 @@
 
   /* Цены на продажу заведены в долларах, а не в рупиях: так их называет
      владелец и так они стоят в документах. Такие суммы помечены атрибутом
-     data-thb-usd, и пересчитываем мы их через рупию — курс у нас к ней. */
+     data-thb-usd, и пересчитываем мы их через рупию — курс у нас к ней.
+
+     Если продавец назвал цену и в другой валюте, она стоит рядом отдельным
+     атрибутом (data-thb-rub="45000000") и показывается как есть, без курса:
+     эту сумму продавец обещал, и она не должна плавать вместе с рублём. */
   function usdNodes(root) {
     return [].slice.call((root || document.body).querySelectorAll('[data-thb-usd]'));
   }
@@ -105,6 +109,8 @@
       var usd = parseFloat(el.getAttribute('data-thb-usd'));
       if (!isFinite(usd)) return;
       if (cur === 'USD') { el.textContent = '$' + thousands(Math.round(usd)); return; }
+      var fixed = parseFloat(el.getAttribute('data-thb-' + cur.toLowerCase()));
+      if (isFinite(fixed)) { el.textContent = BY[cur].s + ' ' + thousands(Math.round(fixed)); return; }
       el.textContent = fmt(usd / rates.USD, cur);
     });
   }

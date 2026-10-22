@@ -329,7 +329,8 @@
      доллары через data-thb-usd, рупии — по тексту «Rp …». */
   function price(s) {
     if (s.priceUsd) {
-      return '<span data-thb-usd="' + s.priceUsd + '">$' + thousands(s.priceUsd) + '</span>';
+      var rub = s.priceRub ? ' data-thb-rub="' + s.priceRub + '"' : '';
+      return '<span data-thb-usd="' + s.priceUsd + '"' + rub + '>$' + thousands(s.priceUsd) + '</span>';
     }
     if (s.priceIdr) return 'Rp ' + thousands(s.priceIdr);
     return 'Price on request';

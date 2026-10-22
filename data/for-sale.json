@@ -298,6 +298,7 @@
     "lng": 115.262955,
     "status": "available",
     "priceUsd": 520000,
+    "priceRub": 45000000,
     "ownership": "leasehold",
     "leaseUntil": 2057,
     "landSqm": 300,

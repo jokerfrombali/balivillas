@@ -102,6 +102,7 @@ async function sales(env) {
     areaSlug: s.areaSlug,
     status: s.status,
     priceUsd: s.priceUsd || null,
+    priceRub: s.priceRub || null,
     ownership: s.ownership || null,
     leaseUntil: s.leaseUntil || null,
     bedrooms: Number(s.bedrooms) || null,
