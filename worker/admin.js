@@ -100,7 +100,7 @@ async function health(env) {
   const out = [];
   for (const p of paths) {
     try {
-      const r = await env.ASSETS.fetch(new Request('https://thehostbali.com' + p));
+      const r = await env.ASSETS.fetch(new Request('https://balivillas.ai' + p));
       const body = await r.text();
       out.push({ path: p, status: r.status, kb: Math.round(body.length / 1024),
                  ok: r.status === 200 && body.length > 2000 });
@@ -115,7 +115,7 @@ async function indexnow(env, paths) {
   const list = (paths || [])
     .filter(function (p) { return typeof p === 'string' && p.charAt(0) === '/'; })
     .slice(0, 100)
-    .map(function (p) { return 'https://thehostbali.com' + p; });
+    .map(function (p) { return 'https://balivillas.ai' + p; });
 
   if (!list.length) return { ok: false, error: 'no_paths' };
 
@@ -124,9 +124,9 @@ async function indexnow(env, paths) {
       method: 'POST',
       headers: { 'content-type': 'application/json; charset=utf-8' },
       body: JSON.stringify({
-        host: 'thehostbali.com',
+        host: 'balivillas.ai',
         key: INDEXNOW_KEY,
-        keyLocation: 'https://thehostbali.com/' + INDEXNOW_KEY + '.txt',
+        keyLocation: 'https://balivillas.ai/' + INDEXNOW_KEY + '.txt',
         urlList: list
       })
     });

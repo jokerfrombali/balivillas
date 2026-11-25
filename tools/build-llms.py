@@ -21,7 +21,7 @@ import pathlib
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-ORIGIN = "https://thehostbali.com"
+ORIGIN = "https://balivillas.ai"
 WA = "+62 857 4649 9697"
 
 # Порядок районов в выдаче: сначала где вилл больше — ассистент читает сверху.

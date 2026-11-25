@@ -6,12 +6,12 @@ robots.txt почищен.
 
 ## 1. Google Search Console — сделано 19.08.2026
 
-Ресурс `https://thehostbali.com/` (тип «с префиксом в URL») создан и **подтверждён
+Ресурс `https://balivillas.ai/` (тип «с префиксом в URL») создан и **подтверждён
 автоматически** — по тегу Google Аналитики, который уже стоит на страницах.
 Поэтому важно: не удалять gtag.js со страниц, иначе подтверждение слетит.
 
-- Sitemap `https://thehostbali.com/sitemap.xml` — статус «Успешно», 49 страниц.
-- Sitemap `https://thehostbali.com/sitemap-growth.xml` — «Успешно», 13 страниц.
+- Sitemap `https://balivillas.ai/sitemap.xml` — статус «Успешно», 49 страниц.
+- Sitemap `https://balivillas.ai/sitemap-growth.xml` — «Успешно», 13 страниц.
 - GA4 ↔ Search Console связаны: в Отчётах GA4 появились «Запросы» и «Обычный
   поисковый трафик» — там будет видно, по каким запросам приходят из Google.
 
@@ -20,7 +20,7 @@ robots.txt почищен.
 1. URL Inspection → главная и 2–3 виллы → **Request indexing** (ускоряет первый обход).
 2. Через неделю смотреть Pages (что проиндексировано), Enhancements
    (подтянулся ли VacationRental), Core Web Vitals.
-3. По желанию — добавить ещё и **доменный** ресурс `thehostbali.com`
+3. По желанию — добавить ещё и **доменный** ресурс `balivillas.ai`
    (покрывает www и http): Add property → Domain → TXT-запись в Cloudflare DNS.
 
 ## 2. Google Analytics 4 — сделано 19.08.2026
@@ -42,7 +42,7 @@ robots.txt почищен.
 
 ## 3. Bing Webmaster Tools — сделано 19.08.2026
 
-Сайт `thehostbali.com` уже был добавлен и подтверждён. Дополнительно:
+Сайт `balivillas.ai` уже был добавлен и подтверждён. Дополнительно:
 
 - отправлены обе карты сайта (`sitemap.xml`, `sitemap-growth.xml`), ошибок 0;
 - через URL Submission отправлены 20 ключевых URL (главная, каталог, 4 страницы
@@ -67,7 +67,7 @@ City           : Sukawati
 Province       : Bali
 Postal code    : 80582
 Телефон        : +62 857 4649 9697
-Сайт           : https://thehostbali.com
+Сайт           : https://balivillas.ai
 ```
 
 После адреса Google предложит зоны обслуживания (Sanur, Canggu, Umalas,
@@ -110,7 +110,7 @@ Google подтверждает профиль одним видео **без м
 
 ## 5. www -> apex (сделано 26.08.2026)
 
-Cloudflare → thehostbali.com → Rules → Redirect Rules, правило
+Cloudflare → balivillas.ai → Rules → Redirect Rules, правило
 «Redirect from WWW to root» из шаблона:
 - Wildcard pattern, Request URL `https://www.*`
 - Target URL `https://${1}`, статус **301**
@@ -127,7 +127,7 @@ DNS may not be proxying www». Предупреждение ложное: www п
 
 ```bash
 curl -s -o /dev/null -w "%{http_code} -> %{redirect_url}
-" "https://www.thehostbali.com/?utm_source=chatgpt.com"
+" "https://www.balivillas.ai/?utm_source=chatgpt.com"
 ```
 
 Мелочь: `www/robots.txt` отдаётся напрямую, без редиректа — Cloudflare

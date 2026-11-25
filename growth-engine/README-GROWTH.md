@@ -22,7 +22,7 @@
 node growth-engine/engine.mjs
 
 # с реальными данными
-API_BASE=https://mantavillas.com SITE_ORIGIN=https://thehostbali.com node growth-engine/engine.mjs
+API_BASE=https://mantavillas.com SITE_ORIGIN=https://balivillas.ai node growth-engine/engine.mjs
 
 # мгновенная индексация (после выкладки dist/ на сайт)
 node growth-engine/indexnow.mjs
@@ -36,9 +36,9 @@ node growth-engine/indexnow.mjs
 2. `deploy/growth-engine.yml` → переместите в `.github/workflows/growth-engine.yml`.
 3. В workflow проверьте `API_BASE` (должен отдавать JSON на `/api/villas`; если API закрыт — добавьте токен в GitHub Secrets и заголовок в `loadVillas()`).
 4. Первый запуск: Actions → growth-engine → Run workflow.
-5. После деплоя: проверьте `https://thehostbali.com/llms.txt` и `https://thehostbali.com/bali-villa-prices/`.
-6. Добавьте строку `Sitemap: https://thehostbali.com/sitemap-growth.xml` в robots.txt и отправьте в Search Console + Bing Webmaster Tools.
-7. Pinterest: бизнес-аккаунт → Create → Bulk create with RSS → `https://thehostbali.com/feed.xml`.
+5. После деплоя: проверьте `https://balivillas.ai/llms.txt` и `https://balivillas.ai/bali-villa-prices/`.
+6. Добавьте строку `Sitemap: https://balivillas.ai/sitemap-growth.xml` в robots.txt и отправьте в Search Console + Bing Webmaster Tools.
+7. Pinterest: бизнес-аккаунт → Create → Bulk create with RSS → `https://balivillas.ai/feed.xml`.
 8. Файл `{key}.txt` (создаётся indexnow.mjs) должен быть доступен в корне сайта.
 
 ## Что это НЕ делает (честно)
@@ -51,4 +51,4 @@ node growth-engine/indexnow.mjs
 
 - `спросите ChatGPT/Perplexity: «median villa price in Canggu per night»` — через 2–4 недели ваш price-index должен начать появляться в источниках.
 - Bing Webmaster Tools → URL Inspection: страницы должны индексироваться в течение суток после IndexNow-пинга.
-- GA4: смотрите UTM `via thehostbali.com/...` в тексте входящих WhatsApp-сообщений — это карта «страница → деньги».
+- GA4: смотрите UTM `via balivillas.ai/...` в тексте входящих WhatsApp-сообщений — это карта «страница → деньги».

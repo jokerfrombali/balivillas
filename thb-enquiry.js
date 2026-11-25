@@ -141,7 +141,7 @@
   }
   function villaUrl() {
     var c = document.querySelector('link[rel="canonical"]');
-    return c && c.href ? c.href.split('?')[0] : 'https://thehostbali.com' + location.pathname;
+    return c && c.href ? c.href.split('?')[0] : 'https://balivillas.ai' + location.pathname;
   }
   function maxGuests() {
     try { var g = window.thbGetGuests && window.thbGetGuests(); return (g && g.max) || 0; } catch (e) { return 0; }

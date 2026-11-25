@@ -37,7 +37,7 @@ We do not publish one fixed deposit percentage here because it genuinely varies 
 | Payment link / card gateway | Faster confirmation, smaller amounts | Gateway fees, chargeback risk |
 | Cash on arrival | Balance for some guests | Only for balance, never full trust on deposit |
 
-Nothing is charged automatically on thehostbali.com's own site — payment is arranged after dates are confirmed directly with the guest, and rates are quoted the same day on request. That sequencing (confirm dates and terms first, then arrange payment) is worth copying whatever gateway or method an owner uses independently, because it avoids the awkward situation of holding a guest's money before both sides have agreed the specifics.
+Nothing is charged automatically on balivillas.ai's own site — payment is arranged after dates are confirmed directly with the guest, and rates are quoted the same day on request. That sequencing (confirm dates and terms first, then arrange payment) is worth copying whatever gateway or method an owner uses independently, because it avoids the awkward situation of holding a guest's money before both sides have agreed the specifics.
 
 ## Currency and exchange rate risk
 
@@ -92,4 +92,4 @@ Whichever currency you actually settle in, stated clearly and as an exact figure
 Refer back to the cancellation terms you sent when the deposit was requested. This is exactly why those terms need to be written down at the start — negotiating them after a cancellation request arrives is far harder and less consistent.
 
 ### Does The Host Bali charge guests anything through its own website?
-No. Nothing is charged on thehostbali.com itself; payment is arranged directly with the guest after dates and rate are confirmed, and there is no booking fee or OTA-style commission on direct enquiries.
+No. Nothing is charged on balivillas.ai itself; payment is arranged directly with the guest after dates and rate are confirmed, and there is no booking fee or OTA-style commission on direct enquiries.

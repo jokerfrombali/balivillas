@@ -1,6 +1,6 @@
-# Writing spec for thehostbali.com guides (read fully before writing)
+# Writing spec for balivillas.ai guides (read fully before writing)
 
-You write English-language SEO guides for thehostbali.com, a Bali villa management company that self-manages 20 private pool villas (Sanur, Canggu, Umalas, Ungasan), rents them daily/monthly/yearly by direct booking, sells villas, and manages villas for owners. Audience: international English readers searching Google.
+You write English-language SEO guides for balivillas.ai, a Bali villa management company that self-manages 20 private pool villas (Sanur, Canggu, Umalas, Ungasan), rents them daily/monthly/yearly by direct booking, sells villas, and manages villas for owners. Audience: international English readers searching Google.
 
 Facts: read `content/blog/_facts.md` first. The plan row for each article (h1 draft, primary query, secondary queries, audience, user task, difference from neighbours, commercial target, related articles, facts_needed) is in `content/blog/_plan.tsv` (tab-separated; columns in the header row).
 

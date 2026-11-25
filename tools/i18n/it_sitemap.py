@@ -4,7 +4,7 @@
 import io, json, os, re
 
 ROOT = r'D:\Projects\thebalihost'
-SITE = 'https://thehostbali.com'
+SITE = 'https://balivillas.ai'
 TW = set(json.load(io.open(os.path.join(ROOT, 'data', 'i18n', 'it.pages.json'), encoding='utf-8')))
 p = os.path.join(ROOT, 'sitemap.xml')
 s = io.open(p, encoding='utf-8').read()

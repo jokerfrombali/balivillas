@@ -7,7 +7,7 @@
 import glob, io, json, os, re
 
 ROOT = r'D:\Projects\thebalihost'
-SITE = 'https://thehostbali.com'
+SITE = 'https://balivillas.ai'
 LANGS = {}
 for f in sorted(glob.glob(os.path.join(ROOT, 'data', 'i18n', '*.pages.json'))):
     LANGS[os.path.basename(f).split('.')[0]] = set(json.load(io.open(f, encoding='utf-8')))

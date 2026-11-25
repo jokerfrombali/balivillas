@@ -7,7 +7,7 @@
 
 ## Адрес и доступ
 
-    POST https://thehostbali.com/mcp
+    POST https://balivillas.ai/mcp
 
 Сервер разделён надвое. **Без токена** доступна открытая половина, только чтение:
 `list_properties`, `get_property`, `check_availability`, `find_available`. Это те же
@@ -67,13 +67,13 @@
 любой http-мост, например `mcp-remote`:
 
 ```bash
-npx mcp-remote https://thehostbali.com/mcp --header "Authorization: Bearer <MCP_TOKEN>"
+npx mcp-remote https://balivillas.ai/mcp --header "Authorization: Bearer <MCP_TOKEN>"
 ```
 
 Проверить живость можно руками:
 
 ```bash
-curl -s -X POST https://thehostbali.com/mcp \
+curl -s -X POST https://balivillas.ai/mcp \
   -H "authorization: Bearer <MCP_TOKEN>" -H 'content-type: application/json' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
 ```

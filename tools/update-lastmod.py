@@ -15,7 +15,7 @@ def dirty_files():
 DIRTY = dirty_files()
 
 def path_for(url):
-    p = url.replace('https://thehostbali.com/', '')
+    p = url.replace('https://balivillas.ai/', '')
     if p == '' or p.endswith('/'):
         p += 'index.html'
     return p

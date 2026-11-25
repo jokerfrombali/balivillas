@@ -84,7 +84,7 @@ Cron раз в 30 минут: каждый запуск проверяет до�
 ## Проверка после включения
 
 ```bash
-curl -s https://thehostbali.com/api/health          # {"ok":true,...}
+curl -s https://balivillas.ai/api/health          # {"ok":true,...}
 ```
 
 Затем на сайте: нажать WhatsApp → в теме 2 должна появиться заявка с номером.
@@ -120,7 +120,7 @@ curl -s https://thehostbali.com/api/health          # {"ok":true,...}
 08:00 WITA — команды `/stats` нужны, когда хочется посмотреть цифры за
 сегодня/вчера между сводками.
 
-Webhook зарегистрирован на `https://thehostbali.com/api/tg` и защищён секретом
+Webhook зарегистрирован на `https://balivillas.ai/api/tg` и защищён секретом
 `TG_HOOK_SECRET`: запрос без него получает 403, поэтому подделать команду со
 стороны нельзя.
 

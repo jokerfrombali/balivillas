@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Tell Google which "Host" on Bali we are.
 
-Search Console, 20.09.2026: for the query "the host bali" thehostbali.com is not in the top 10 at
+Search Console, 20.09.2026: for the query "the host bali" balivillas.ai is not in the top 10 at
 all. The results belong to The Host Table (thehosttable.com), The Bali Host (thebalihost.com) and
 BaliSuperHost. Add the same qualifier - "the host bali" villa sanur - and our pages take positions
 1, 2, 3, 5, 7 and 8, so the site ranks fine; Google simply does not connect the brand name to it.

@@ -18,7 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content import AREAS, HUB
 
-SITE = 'https://thehostbali.com'
+SITE = 'https://balivillas.ai'
 WA = 'https://wa.me/6285746499697?text='
 esc = lambda s: html.escape(str(s), quote=True)
 

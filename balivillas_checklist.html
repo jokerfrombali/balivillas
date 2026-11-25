@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>thehostbali.com — 90-дневный план продвижения</title>
+<title>balivillas.ai — 90-дневный план продвижения</title>
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/lora-ecda3beb.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/lora-6d4ac4a9.woff2" crossorigin>
@@ -631,7 +631,7 @@
     <div class="section-num">01</div>
     <div class="section-title">
       LLM-фундамент сайта
-      <span class="sub">Превращаем thehostbali.com в источник, который цитируют ChatGPT, Perplexity, Gemini</span>
+      <span class="sub">Превращаем balivillas.ai в источник, который цитируют ChatGPT, Perplexity, Gemini</span>
     </div>
     <div class="section-meta">
       Бюджет: <strong>~$450</strong><br>
@@ -653,7 +653,7 @@
       <div class="task-desc">
         Понять стартовую точку. Что есть, что отсутствует, что мешает LLM правильно понять контент.
         <ul>
-          <li>Проверить индексацию: <code>site:thehostbali.com</code> в Google и Bing</li>
+          <li>Проверить индексацию: <code>site:balivillas.ai</code> в Google и Bing</li>
           <li>Прогнать через PageSpeed Insights, Lighthouse</li>
           <li>Проверить robots.txt, sitemap.xml</li>
           <li>Список текущих страниц с типами контента</li>
@@ -664,7 +664,7 @@
           <div class="prompt-label">Промт для аудита</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Проведи технический аудит сайта thehostbali.com с точки зрения LLM-визибилити (ChatGPT, Perplexity, Gemini, Google AI Overviews). Цель — понять, насколько сайт готов цитироваться нейросетями при запросах туристов про аренду вилл на Бали short-term (1-14 дней).
+        <div class="prompt-content">Проведи технический аудит сайта balivillas.ai с точки зрения LLM-визибилити (ChatGPT, Perplexity, Gemini, Google AI Overviews). Цель — понять, насколько сайт готов цитироваться нейросетями при запросах туристов про аренду вилл на Бали short-term (1-14 дней).
 
 Проверь и дай отчёт по пунктам:
 1. Структура HTML: есть ли семантические теги (article, section, nav), правильная иерархия H1-H6
@@ -709,10 +709,10 @@
           <div class="prompt-label">Промт для генерации llms.txt</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Сгенерируй файлы /llms.txt и /llms-full.txt для thehostbali.com по спецификации llmstxt.org. Сайт занимается short-term арендой вилл на Бали (1-14 дней) для международной аудитории (digital nomads, австралийцы, русскоязычные туристы, EU/UK).
+        <div class="prompt-content">Сгенерируй файлы /llms.txt и /llms-full.txt для balivillas.ai по спецификации llmstxt.org. Сайт занимается short-term арендой вилл на Бали (1-14 дней) для международной аудитории (digital nomads, австралийцы, русскоязычные туристы, EU/UK).
 
 Структура llms.txt должна включать:
-- # thehostbali.com (заголовок проекта)
+- # balivillas.ai (заголовок проекта)
 - > Краткое описание в одной строке: что за сервис, для кого, чем отличается
 - ## Core sections — ссылки на главные разделы (Areas, Villa types, Booking guide, FAQ, About)
 - ## Areas — все локации (Canggu, Seminyak, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, Berawa)
@@ -727,7 +727,7 @@
 2. Пример FastAPI route для отдачи llms.txt с правильным Content-Type: text/markdown
 3. Чек: как проверить, что файл доступен (curl команда)
 
-Используй реальные урлы вида https://thehostbali.com/areas/canggu, https://thehostbali.com/guides/first-time-bali и т.д.</div>
+Используй реальные урлы вида https://balivillas.ai/areas/canggu, https://balivillas.ai/guides/first-time-bali и т.д.</div>
       </div>
       <div class="notes-block">
         <div class="notes-label">Заметки</div>
@@ -760,7 +760,7 @@
           <div class="prompt-label">Промт для генерации schema</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Сгенерируй полный набор JSON-LD schema.org разметки для thehostbali.com (short-term villa rental Bali). Нужны шаблоны под FastAPI/Jinja2 темплейты.
+        <div class="prompt-content">Сгенерируй полный набор JSON-LD schema.org разметки для balivillas.ai (short-term villa rental Bali). Нужны шаблоны под FastAPI/Jinja2 темплейты.
 
 1. ORGANIZATION schema для главной страницы:
 - name, url, logo, sameAs (соцсети — оставь плейсхолдеры), contactPoint, areaServed (Bali, Indonesia)
@@ -811,7 +811,7 @@
           <div class="prompt-label">Промт для keyword research</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Собери keyword-кластеры для thehostbali.com (short-term villa rental Bali, 1-14 дней). Цель — попадать в LLM-цитирование (ChatGPT, Perplexity, Gemini) и Google AI Overviews. ЦА: digital nomads (US/UK/EU/AU), russian relocants, australian tourists.
+        <div class="prompt-content">Собери keyword-кластеры для balivillas.ai (short-term villa rental Bali, 1-14 дней). Цель — попадать в LLM-цитирование (ChatGPT, Perplexity, Gemini) и Google AI Overviews. ЦА: digital nomads (US/UK/EU/AU), russian relocants, australian tourists.
 
 Дай таблицу с 5 кластерами, в каждом 12-15 запросов:
 
@@ -863,7 +863,7 @@
           <div class="prompt-label">Промт для контент-плана</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">На основе keyword-кластеров (которые я тебе скину следующим сообщением) составь контент-план thehostbali.com на 90 дней. Total: 60-80 статей. Темп: 7 статей/неделя.
+        <div class="prompt-content">На основе keyword-кластеров (которые я тебе скину следующим сообщением) составь контент-план balivillas.ai на 90 дней. Total: 60-80 статей. Темп: 7 статей/неделя.
 
 Распределение:
 - 15-20 Area guides (по локациям Бали)
@@ -914,7 +914,7 @@
           <div class="prompt-label">Промт для шаблона статьи</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Создай универсальный шаблон LLM-оптимизированной статьи для thehostbali.com. Шаблон должен максимизировать вероятность цитирования ChatGPT, Perplexity, Gemini, Google AI Overviews.
+        <div class="prompt-content">Создай универсальный шаблон LLM-оптимизированной статьи для balivillas.ai. Шаблон должен максимизировать вероятность цитирования ChatGPT, Perplexity, Gemini, Google AI Overviews.
 
 Структурные требования:
 1. ОТВЕТ В ПЕРВЫХ 50 СЛОВАХ — прямой ответ на основной запрос статьи. Без вступлений типа "Bali is a beautiful island...". Сразу: "The best area in Bali for first-time visitors is Seminyak because..."
@@ -961,7 +961,7 @@ D) Пример заполнения шаблона на статье "Canggu vs
           <div class="prompt-label">Промт для скрипта генерации</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Напиши Python-скрипт article_generator.py для пакетной генерации LLM-оптимизированных статей под thehostbali.com. Стек: Python 3.11, Ollama (localhost:11434), Anthropic API (Claude Sonnet 4.6 для финальной правки), Pillow для обработки изображений, SQLite для хранения статей.
+        <div class="prompt-content">Напиши Python-скрипт article_generator.py для пакетной генерации LLM-оптимизированных статей под balivillas.ai. Стек: Python 3.11, Ollama (localhost:11434), Anthropic API (Claude Sonnet 4.6 для финальной правки), Pillow для обработки изображений, SQLite для хранения статей.
 
 Архитектура:
 1. INPUT: CSV-файл с контент-планом (колонки: id, title, slug, primary_keyword, secondary_keywords, type, target_length, h2_structure, faq_needed, internal_links, priority)
@@ -1023,7 +1023,7 @@ D) Пример заполнения шаблона на статье "Canggu vs
           <div class="prompt-label">Промт для чек-листа публикации</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Создай детальный pre-publish чек-лист на 1 статью thehostbali.com. После прохождения чек-листа статья готова к публикации.
+        <div class="prompt-content">Создай детальный pre-publish чек-лист на 1 статью balivillas.ai. После прохождения чек-листа статья готова к публикации.
 
 Чек-лист должен покрывать:
 
@@ -1087,7 +1087,7 @@ D) AMPLIFICATION (5 пунктов):
           <div class="prompt-label">ТЗ для фрилансера-аудитора</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Project brief: GEO (Generative Engine Optimization) audit for thehostbali.com
+        <div class="prompt-content">Project brief: GEO (Generative Engine Optimization) audit for balivillas.ai
 
 Background:
 - New domain (<6 months), short-term Bali villa rental
@@ -1098,7 +1098,7 @@ Background:
 What I need from you (deliverable: 10-15 page report + 30-min Loom walkthrough):
 
 1. CITATION TEST: Run 25 queries in ChatGPT, Perplexity, Gemini, Google AI Overviews about Bali villa rental (queries I'll provide). Report:
-   - Which queries already cite thehostbali.com
+   - Which queries already cite balivillas.ai
    - Which competitors dominate (top 5 cited domains per query)
    - Source quality patterns (what makes the cited sources rank)
 
@@ -1168,7 +1168,7 @@ Looking for: someone with proven GEO/AI Search experience (not regular SEO). Ple
           <div class="prompt-label">Промт для стратегии аккаунтов</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Разработай детальную стратегию работы с Reddit-аккаунтами для продвижения thehostbali.com (short-term Bali villa rental). Цель — стабильно попадать в источники ChatGPT и Perplexity по запросам про Бали.
+        <div class="prompt-content">Разработай детальную стратегию работы с Reddit-аккаунтами для продвижения balivillas.ai (short-term Bali villa rental). Цель — стабильно попадать в источники ChatGPT и Perplexity по запросам про Бали.
 
 Контекст:
 - У меня есть свой реальный аккаунт (Bali-резидент)
@@ -1195,7 +1195,7 @@ Looking for: someone with proven GEO/AI Search experience (not regular SEO). Ple
 4. RATIO PROTOCOL:
    - Соотношение упоминаний к обычным комментам: 1:25 минимум
    - Никогда два аккаунта не отвечают в одном треде
-   - Никогда не пишем "I recommend thehostbali.com" — пишем как опыт ("I used balivillas for my 2-month stay, found them via X")
+   - Никогда не пишем "I recommend balivillas.ai" — пишем как опыт ("I used balivillas for my 2-month stay, found them via X")
 
 5. SAFE PATTERNS — как формулировать упоминания, чтобы не получить shadowban:
    - 5 примеров "правильных" упоминаний
@@ -1298,7 +1298,7 @@ Geo-распределение прокси:
           <div class="prompt-label">Промт для warm-up плана по неделям</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Составь детальный 28-дневный warm-up план для 3 Reddit-аккаунтов (мой основной, partner, helper). Цель — к концу 4-й недели начать аккуратные упоминания thehostbali.com в Бали-сабах без триггеров спам-фильтра.
+        <div class="prompt-content">Составь детальный 28-дневный warm-up план для 3 Reddit-аккаунтов (мой основной, partner, helper). Цель — к концу 4-й недели начать аккуратные упоминания balivillas.ai в Бали-сабах без триггеров спам-фильтра.
 
 Для каждого дня каждого аккаунта дай конкретную активность:
 
@@ -1321,7 +1321,7 @@ Week 3 — Soft entry в Бали-сабы:
 
 Week 4 — Active in Bali subs:
 - 3-5 комментариев/день в r/bali и related
-- Первое упоминание thehostbali.com только если идеальный контекст (см. safe patterns)
+- Первое упоминание balivillas.ai только если идеальный контекст (см. safe patterns)
 - Не более 1 упоминания на аккаунт в неделю
 
 Для каждой недели дай:
@@ -1364,7 +1364,7 @@ Bonus: 10 топ-вопросов в r/bali, которые регулярно �
 - Содержит 1-2 конкретных детали (название кафе, цена, район, имя)
 - Длина: 80-150 слов (Reddit любит средние комменты)
 - Заканчивается либо вопросом к OP, либо мягким wrap-up
-- НЕТ упоминания thehostbali.com (это для базы, упоминания будут добавляться в 4 из 20)
+- НЕТ упоминания balivillas.ai (это для базы, упоминания будут добавляться в 4 из 20)
 
 Темы шаблонов:
 1. "First time in Bali, where to stay?" — рекомендация районов под разные потребности
@@ -1422,7 +1422,7 @@ Bonus: 10 топ-вопросов в r/bali, которые регулярно �
           <div class="prompt-label">Промт для Quora-стратегии</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Разработай стратегию работы с Quora для thehostbali.com. Цель — попадать в Gemini и Perplexity цитирования по запросам про Бали, плюс driving direct traffic с самой Quora.
+        <div class="prompt-content">Разработай стратегию работы с Quora для balivillas.ai. Цель — попадать в Gemini и Perplexity цитирования по запросам про Бали, плюс driving direct traffic с самой Quora.
 
 1. ACCOUNT SETUP:
    - 2 аккаунта (мой основной + partner)
@@ -1441,7 +1441,7 @@ Bonus: 10 топ-вопросов в r/bali, которые регулярно �
 4. ANSWER FORMAT:
    - Длина 300-500 слов
    - Структура: hook (1 sentence) → personal context (2-3 sentences) → main answer with H2-like структурой (Quora их поддерживает) → 1-2 фото → soft mention (где уместно)
-   - Embed: можно ли вставлять ссылки на thehostbali.com (когда да, когда нет)
+   - Embed: можно ли вставлять ссылки на balivillas.ai (когда да, когда нет)
 
 5. UPVOTE PROTOCOL:
    - Как получать первые апвоуты (не покупка — это палится)
@@ -1449,7 +1449,7 @@ Bonus: 10 топ-вопросов в r/bali, которые регулярно �
    - Шаринг в LinkedIn / Twitter для extra visibility
 
 6. CONTENT REPURPOSING:
-   - Каждый ответ Quora должен быть production of base article из blog thehostbali.com
+   - Каждый ответ Quora должен быть production of base article из blog balivillas.ai
    - Не дословное копирование (Quora не любит)
    - Сжатая версия с дополнительным личным углом
 
@@ -1483,7 +1483,7 @@ Bonus: 10 топ-вопросов в r/bali, которые регулярно �
           <div class="prompt-label">Промт для Telegram-плана</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Разработай план посевов в Telegram-каналах Bali-комьюнити для thehostbali.com. Бюджет на этот канал: $200.
+        <div class="prompt-content">Разработай план посевов в Telegram-каналах Bali-комьюнити для balivillas.ai. Бюджет на этот канал: $200.
 
 1. КАНАЛЫ — найди и приоритизируй:
    - Русскоязычные Bali-каналы (нужны имена/handles): для релокантов, для туристов, для нянь, для серфингистов
@@ -1532,25 +1532,25 @@ Bonus: 10 топ-вопросов в r/bali, которые регулярно �
     </div>
     <div class="task-body"><div class="task-body-inner">
       <div class="task-desc">
-        LinkedIn — это сильный E-E-A-T сигнал для Google и LLM. Личный профиль "Founder, thehostbali.com" + 1-2 статьи в месяц про Bali rental market. ChatGPT часто цитирует LinkedIn-статьи как авторитетный источник.
+        LinkedIn — это сильный E-E-A-T сигнал для Google и LLM. Личный профиль "Founder, balivillas.ai" + 1-2 статьи в месяц про Bali rental market. ChatGPT часто цитирует LinkedIn-статьи как авторитетный источник.
       </div>
       <div class="prompt-block">
         <div class="prompt-header">
           <div class="prompt-label">Промт для LinkedIn-плана</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Разработай 90-дневную LinkedIn-стратегию для Alex Anichkin как Founder thehostbali.com. Цель — построить authority в нише Bali real estate / villa rental, что даст boost к E-E-A-T сигналам для thehostbali.com и попаданию в LLM-цитаты.
+        <div class="prompt-content">Разработай 90-дневную LinkedIn-стратегию для Alex Anichkin как Founder balivillas.ai. Цель — построить authority в нише Bali real estate / villa rental, что даст boost к E-E-A-T сигналам для balivillas.ai и попаданию в LLM-цитаты.
 
 Контекст обо мне:
 - Russian entrepreneur, Bali-based с 2019, KITAS
-- Несколько проектов: Auditka AI (B2B SaaS), thehostbali.com, Bali Real Estate CRM
+- Несколько проектов: Auditka AI (B2B SaaS), balivillas.ai, Bali Real Estate CRM
 - Опыт в IT, ML, automation
 - Цель: позиционировать как expert по Bali rental market
 
 1. PROFILE OPTIMIZATION:
    - Headline (220 chars max): варианты с keyword "Bali villa rental" / "Bali real estate"
    - About section: 2000 chars, история, expertise, что строю
-   - Featured: top articles, thehostbali.com link
+   - Featured: top articles, balivillas.ai link
    - Skills, endorsements strategy
 
 2. CONTENT STRATEGY — 90 дней:
@@ -1573,9 +1573,9 @@ Bonus: 10 топ-вопросов в r/bali, которые регулярно �
    - Engagement pods: стоит ли вступать (риски)
 
 4. CROSS-LINKING:
-   - В каждой статье — natural mention thehostbali.com (не CTA, а контекстно)
-   - LinkedIn profile → linkedin.com/in/alex-anichkin → thehostbali.com (в featured)
-   - Article authors на thehostbali.com → link на LinkedIn profile (E-E-A-T loop)
+   - В каждой статье — natural mention balivillas.ai (не CTA, а контекстно)
+   - LinkedIn profile → linkedin.com/in/alex-anichkin → balivillas.ai (в featured)
+   - Article authors на balivillas.ai → link на LinkedIn profile (E-E-A-T loop)
 
 5. METRICS:
    - Profile views growth
@@ -1628,7 +1628,7 @@ Bonus: 10 топ-вопросов в r/bali, которые регулярно �
           <div class="prompt-label">Промт для GBP-setup</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Дай полный гайд по созданию Google Business Profile для thehostbali.com (Bali, Indonesia, vacation rental agency).
+        <div class="prompt-content">Дай полный гайд по созданию Google Business Profile для balivillas.ai (Bali, Indonesia, vacation rental agency).
 
 1. CATEGORY SELECTION:
    - Primary: "Vacation home rental agency" или альтернативы
@@ -1648,7 +1648,7 @@ Bonus: 10 топ-вопросов в r/bali, которые регулярно �
    - Сколько ждать ответа Google
 
 4. PROFILE OPTIMIZATION:
-   - Business name (нельзя keyword-stuffing, но можно "thehostbali.com — Villa Rentals")
+   - Business name (нельзя keyword-stuffing, но можно "balivillas.ai — Villa Rentals")
    - Description 750 chars: написать SEO-friendly но natural
    - Phone, website, hours (24/7? business hours?)
    - Service areas — какие районы Бали указать
@@ -1710,7 +1710,7 @@ Bonus: 10 топ-вопросов в r/bali, которые регулярно �
           <div class="prompt-label">Промт для review-collection системы</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Разработай review collection систему для thehostbali.com. Цель — за 90 дней собрать 20-30 реальных отзывов в Google Business Profile + Trustpilot + TripAdvisor.
+        <div class="prompt-content">Разработай review collection систему для balivillas.ai. Цель — за 90 дней собрать 20-30 реальных отзывов в Google Business Profile + Trustpilot + TripAdvisor.
 
 1. WORKFLOW автоматизации (под FastAPI/SQLite стек):
    - Trigger: гость завершил стэй (check-out date passed)
@@ -1786,7 +1786,7 @@ Tone требований: вежливо, без выпрашивания, бе
           <div class="prompt-label">Промт для setup listings</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Дай пошаговый гайд по созданию business listings на TripAdvisor и Trustpilot для thehostbali.com.
+        <div class="prompt-content">Дай пошаговый гайд по созданию business listings на TripAdvisor и Trustpilot для balivillas.ai.
 
 PART A: TRIPADVISOR
 1. Какая категория business: Travel Agency, Vacation Home Rental Agency, Lodging
@@ -1798,7 +1798,7 @@ PART A: TRIPADVISOR
 7. Q&A section: засеять типовыми вопросами
 8. Reviews protocol: на TripAdvisor отвечать на каждый отзыв
 9. Linking: где разрешено линковать на сайт
-10. TripAdvisor Plus / Premium — стоит ли платить (для thehostbali.com — нет)
+10. TripAdvisor Plus / Premium — стоит ли платить (для balivillas.ai — нет)
 
 PART B: TRUSTPILOT
 1. Free vs paid account — что в free достаточно
@@ -1845,7 +1845,7 @@ PART D: WIDGETS ON SITE
           <div class="prompt-label">Промт для Airbnb-стратегии</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Разработай "Airbnb parasite SEO" стратегию для thehostbali.com. Не отказываемся от Airbnb-канала, а используем его как trust-signal и driver direct трафика на наш сайт.
+        <div class="prompt-content">Разработай "Airbnb parasite SEO" стратегию для balivillas.ai. Не отказываемся от Airbnb-канала, а используем его как trust-signal и driver direct трафика на наш сайт.
 
 1. LISTING STRATEGY:
    - 5 виллов в Airbnb (наши лучшие или наших партнёров)
@@ -1868,7 +1868,7 @@ PART D: WIDGETS ON SITE
    - Soft mention host expertise (с linking где разрешено)
 
 4. HOST PROFILE:
-   - Bio: "Alex, Bali resident since 2019. Manage 12+ villas across Canggu, Seminyak, Ubud. More properties at thehostbali.com" (Airbnb позволяет website link в About host)
+   - Bio: "Alex, Bali resident since 2019. Manage 12+ villas across Canggu, Seminyak, Ubud. More properties at balivillas.ai" (Airbnb позволяет website link в About host)
    - Verifications: ID, email, phone — все включены
    - Response time target: <1 hour
    - Superhost status — путь к нему через рейтинги
@@ -1883,16 +1883,16 @@ PART D: WIDGETS ON SITE
    - Discount для long stays (28+ дней: -20%, 7+ дней: -10%)
 
 7. SOFT FUNNEL К САЙТУ:
-   - В messaging guest получает "Welcome to your Bali stay! Find more villas and guides at thehostbali.com/canggu"
+   - В messaging guest получает "Welcome to your Bali stay! Find more villas and guides at balivillas.ai/canggu"
    - Post-stay follow-up: review request + link to similar villas на нашем сайте
 
 8. REVIEWS LEVERAGE:
-   - Каждый отзыв на Airbnb → можно использовать как testimonial на thehostbali.com (с указанием source)
+   - Каждый отзыв на Airbnb → можно использовать как testimonial на balivillas.ai (с указанием source)
    - Не копировать без attribution
 
 9. SEO BLEED:
    - Airbnb-страница виллы ранжируется в Google по long-tail
-   - Наша своя страница этой же виллы на thehostbali.com тоже ранжируется
+   - Наша своя страница этой же виллы на balivillas.ai тоже ранжируется
    - Двойное присутствие в выдаче, конкуренция самого с собой минимизирована потому что разные intent matchings
 
 В конце — операционный план на первый месяц: создать 5 listings (по 1.5 часа каждое), оптимизировать, получить первые 3 бронирования, начать сбор review-base.</div>
@@ -1921,7 +1921,7 @@ PART D: WIDGETS ON SITE
           <div class="prompt-label">Промт для Booking-onboarding</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Дай гайд по onboarding на Booking.com как property management partner для thehostbali.com.
+        <div class="prompt-content">Дай гайд по onboarding на Booking.com как property management partner для balivillas.ai.
 
 1. ACCOUNT TYPE:
    - Property owner vs Property manager vs Travel agent — какой выбрать
@@ -1952,9 +1952,9 @@ PART D: WIDGETS ON SITE
    - Минимальная brutto-цена чтобы это окупилось
 
 6. TRUST SIGNAL ESCAPE:
-   - Имя property "Villa X by thehostbali.com" (Booking позволяет?)
+   - Имя property "Villa X by balivillas.ai" (Booking позволяет?)
    - Direct booking discount: разместить hint на BookingMessenger
-   - Сколько booking-channels иметь чтобы thehostbali.com профайл начал цитироваться LLM ("trusted partner of Booking.com")
+   - Сколько booking-channels иметь чтобы balivillas.ai профайл начал цитироваться LLM ("trusted partner of Booking.com")
 
 7. REVIEWS:
    - Booking-reviews могут показываться в Google Knowledge Panel — boost
@@ -1992,7 +1992,7 @@ PART D: WIDGETS ON SITE
           <div class="prompt-label">Промт для GBP контент-плана</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Дай контент-план для Google Business Profile thehostbali.com на 90 дней. Цель — Local Pack visibility в Bali локациях + поддержка LLM-trust сигналов.
+        <div class="prompt-content">Дай контент-план для Google Business Profile balivillas.ai на 90 дней. Цель — Local Pack visibility в Bali локациях + поддержка LLM-trust сигналов.
 
 1. POST FREQUENCY:
    - 2-3 posts per week (мобильные алгоритмы любят регулярность)
@@ -2087,7 +2087,7 @@ PART D: WIDGETS ON SITE
           <div class="prompt-label">Промт для выбора якорей</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">У меня на thehostbali.com опубликовано 40+ статей через 60 дней после старта. Помоги выбрать 2-3 лучших кандидата для виральной разогрев-кампании.
+        <div class="prompt-content">У меня на balivillas.ai опубликовано 40+ статей через 60 дней после старта. Помоги выбрать 2-3 лучших кандидата для виральной разогрев-кампании.
 
 Критерии выбора:
 1. INFORMATIONAL intent (не product/booking page — на такие лить опасно)
@@ -2156,7 +2156,7 @@ PART D: WIDGETS ON SITE
           <div class="prompt-label">Промт для Facebook Ads-кампании</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Разработай Facebook Ads campaign для виральной разогрев-кампании thehostbali.com. Цель — не конверсия, а пик трафика на якорную информационную статью в течение 3-4 дней. $200 budget total.
+        <div class="prompt-content">Разработай Facebook Ads campaign для виральной разогрев-кампании balivillas.ai. Цель — не конверсия, а пик трафика на якорную информационную статью в течение 3-4 дней. $200 budget total.
 
 КАМПАНИЯ:
 
@@ -2246,7 +2246,7 @@ PART D: WIDGETS ON SITE
           <div class="prompt-label">Промт для redirect-cleaner</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Напиши FastAPI-сервис "traffic-cleaner" для безопасной обработки popunder/CPM-трафика перед направлением на thehostbali.com. Цель — фильтровать ботов и outright-мусор, randomize referer, симулировать organic-natural паттерн.
+        <div class="prompt-content">Напиши FastAPI-сервис "traffic-cleaner" для безопасной обработки popunder/CPM-трафика перед направлением на balivillas.ai. Цель — фильтровать ботов и outright-мусор, randomize referer, симулировать organic-natural паттерн.
 
 АРХИТЕКТУРА:
 
@@ -2276,7 +2276,7 @@ PART D: WIDGETS ON SITE
    - 1.5-second delay на JS-side
    - Mouse movement listener (require 50px movement)
    - Если no movement за 3 sec → block, redirect на 404
-   - Если bot detected → redirect на neutral page (не на thehostbali.com)
+   - Если bot detected → redirect на neutral page (не на balivillas.ai)
 
 6. RATE LIMITING:
    - Per-IP: max 5 requests / hour
@@ -2294,7 +2294,7 @@ PART D: WIDGETS ON SITE
 
 9. DEPLOYMENT:
    - Docker container
-   - Deploy на отдельный VPS (НЕ на твой production thehostbali.com сервер)
+   - Deploy на отдельный VPS (НЕ на твой production balivillas.ai сервер)
    - Domain: traffic.balivillas.workers.dev или отдельный домен
    - Cloudflare proxy для DDoS-protection
 
@@ -2325,14 +2325,14 @@ PART D: WIDGETS ON SITE
     </div>
     <div class="task-body"><div class="task-body-inner">
       <div class="task-desc">
-        Без трекинга невозможно понять что работает. Цель: знать каждую неделю, по каким запросам thehostbali.com цитируется ChatGPT/Perplexity/Gemini. Tools: Otterly.ai (бесплатно до 50 запросов) или собственный скрипт.
+        Без трекинга невозможно понять что работает. Цель: знать каждую неделю, по каким запросам balivillas.ai цитируется ChatGPT/Perplexity/Gemini. Tools: Otterly.ai (бесплатно до 50 запросов) или собственный скрипт.
       </div>
       <div class="prompt-block">
         <div class="prompt-header">
           <div class="prompt-label">Промт для LLM-tracking скрипта</div>
           <button class="copy-btn">Copy</button>
         </div>
-        <div class="prompt-content">Напиши Python-скрипт llm_citation_tracker.py для еженедельного отслеживания цитирования thehostbali.com в LLM-выдачах. Стек: Python 3.11, requests, SQLite, schedule.
+        <div class="prompt-content">Напиши Python-скрипт llm_citation_tracker.py для еженедельного отслеживания цитирования balivillas.ai в LLM-выдачах. Стек: Python 3.11, requests, SQLite, schedule.
 
 TRACKING TARGETS:
 1. ChatGPT (через OpenAI API с web_search tool enabled)
@@ -2344,11 +2344,11 @@ QUERIES LIST (50 запросов):
 - 20 из главных area guides ("best area to stay in Bali for X")
 - 15 из villa-type guides ("private pool villa Canggu")
 - 10 из logistics ("how to get from airport to Canggu")
-- 5 brand queries ("thehostbali.com review", "is thehostbali.com legit")
+- 5 brand queries ("balivillas.ai review", "is balivillas.ai legit")
 
 PIPELINE на каждый запрос:
 1. Send query to each of 4 LLM APIs
-2. Parse response для mentions of thehostbali.com (URL, brand name, sometimes typo'd как "The Host Bali")
+2. Parse response для mentions of balivillas.ai (URL, brand name, sometimes typo'd как "The Host Bali")
 3. Detect type of mention:
    - Direct citation with link
    - Brand mention without link
@@ -2407,7 +2407,7 @@ COST CALCULATION:
   <div class="milestone">
     <div class="milestone-day">D 30</div>
     <div class="milestone-text">
-      <strong>Фундамент готов.</strong> Сайт проиндексирован, 20+ статей опубликовано, /llms.txt и schema внедрены, GBP активен с 5+ отзывами, Reddit-аккаунты в week 4 warm-up. Первые упоминания thehostbali.com в Quora/Reddit без бренд-фильтра.
+      <strong>Фундамент готов.</strong> Сайт проиндексирован, 20+ статей опубликовано, /llms.txt и schema внедрены, GBP активен с 5+ отзывами, Reddit-аккаунты в week 4 warm-up. Первые упоминания balivillas.ai в Quora/Reddit без бренд-фильтра.
     </div>
   </div>
 

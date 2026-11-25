@@ -27,7 +27,7 @@ OG = OG_BY_LANG.get(LANG, 'en_US')
 
 ROOT = r'D:\Projects\thebalihost'
 D = os.path.join(ROOT, 'data', 'i18n')
-SITE = 'https://thehostbali.com'
+SITE = 'https://balivillas.ai'
 
 PAGES = ['index.html', 'property-rental/index.html', 'villas/index.html',
          'about/index.html', 'contacts/index.html', 'villa-management/index.html', 'saved/index.html']

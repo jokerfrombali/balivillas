@@ -568,7 +568,7 @@ export async function syncAll(env, force) {
    пустой, зато slug есть у всех. Из-за пустого url четыре виллы молча выпадали
    из сводки цен и оставались с «On request» при живой цене. */
 async function urlMap(env) {
-  const res = await env.ASSETS.fetch(new Request('https://thehostbali.com/data/villas.json'));
+  const res = await env.ASSETS.fetch(new Request('https://balivillas.ai/data/villas.json'));
   if (!res.ok) throw new Error('villas_' + res.status);
   const list = await res.json();
 

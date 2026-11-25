@@ -5,7 +5,7 @@ additionalType, amenityFeature inside containsPlace, fewer than 8 images.
 Run: python3 tools/villa-page/fix_vacation_rental_ld.py   (EN and /it/ pages)
 """
 import json,re,glob
-SITE='https://thehostbali.com'
+SITE='https://balivillas.ai'
 villas=json.load(open('data/villas.json'))
 by_slug={v['slug']:v for v in villas}
 def parse_addr(a):

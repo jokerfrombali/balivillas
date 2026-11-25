@@ -18,7 +18,7 @@
  *
  * Переменные окружения:
  *   API_BASE     — база API (ожидается GET {API_BASE}/api/villas)
- *   SITE_ORIGIN  — канонический домен (default: https://thehostbali.com)
+ *   SITE_ORIGIN  — канонический домен (default: https://balivillas.ai)
  *   WA_NUMBER    — WhatsApp для CTA (default: 6281918843134)
  *   OUT_DIR      — куда класть результат (default: ./dist)
  */
@@ -31,7 +31,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const CFG = {
   apiBase: process.env.API_BASE || "",
-  origin: (process.env.SITE_ORIGIN || "https://thehostbali.com").replace(/\/$/, ""),
+  origin: (process.env.SITE_ORIGIN || "https://balivillas.ai").replace(/\/$/, ""),
   wa: process.env.WA_NUMBER || "6281239081021",
   out: process.env.OUT_DIR || path.join(__dirname, "dist"),
   brand: "The Host Bali",
@@ -150,7 +150,7 @@ function normalize(raw, i) {
 
 function waLink(v, context = "villa") {
   const text = encodeURIComponent(
-    `Hi! I'm interested in ${v ? v.name + " (" + v.area + ")" : "a villa in Bali"}. Is it available? [via thehostbali.com/${context}]`
+    `Hi! I'm interested in ${v ? v.name + " (" + v.area + ")" : "a villa in Bali"}. Is it available? [via balivillas.ai/${context}]`
   );
   return `https://wa.me/${CFG.wa}?text=${text}`;
 }

@@ -11,7 +11,7 @@ import json, re, os, sys, html
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TPL = os.path.join(ROOT, "growth-engine", "rich-villa-template.html")
 DATA = os.path.join(ROOT, "growth-engine", "real-villas.json")
-ORIGIN = "https://thehostbali.com"
+ORIGIN = "https://balivillas.ai"
 WA = "6281239081021"
 
 BEDS_WORD = {1: "1 bed", 2: "2 beds", 3: "3 beds", 4: "4 beds", 5: "5 beds", 6: "6 beds"}

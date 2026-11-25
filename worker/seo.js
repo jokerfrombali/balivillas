@@ -19,7 +19,7 @@ export async function sitemapPaths(env) {
   for (const file of ['/sitemap.xml', '/sitemap-growth.xml']) {
     let xml = '';
     try {
-      const r = await env.ASSETS.fetch(new Request('https://thehostbali.com' + file));
+      const r = await env.ASSETS.fetch(new Request('https://balivillas.ai' + file));
       if (r.status !== 200) continue;
       xml = await r.text();
     } catch (e) { continue; }
@@ -64,7 +64,7 @@ async function auditOne(env, path) {
   const row = { path: path, status: 0, issues: [] };
   let html = '';
   try {
-    const r = await env.ASSETS.fetch(new Request('https://thehostbali.com' + path));
+    const r = await env.ASSETS.fetch(new Request('https://balivillas.ai' + path));
     row.status = r.status;
     if (r.status !== 200) {
       row.issues.push({ level: 'error', code: 'status', text: 'Страница отвечает ' + r.status });

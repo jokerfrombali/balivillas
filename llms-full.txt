@@ -1,16 +1,16 @@
 # The Host Bali — full villa catalog
 
-20 private villas in Bali, all managed by The Host Bali. Direct booking on WhatsApp +62 857 4649 9697. Structured version: https://thehostbali.com/data/villas.json
-Rates below are live: "from" per night, minimum stay and the next free check-in are read from our booking calendar and refreshed every 30 minutes. Free and booked nights: https://thehostbali.com/api/calendars · price for a stay: https://thehostbali.com/api/quotes?from=&to=
-Tool endpoint for assistants (MCP, read-only, no key): https://thehostbali.com/mcp
+20 private villas in Bali, all managed by The Host Bali. Direct booking on WhatsApp +62 857 4649 9697. Structured version: https://balivillas.ai/data/villas.json
+Rates below are live: "from" per night, minimum stay and the next free check-in are read from our booking calendar and refreshed every 30 minutes. Free and booked nights: https://balivillas.ai/api/calendars · price for a stay: https://balivillas.ai/api/quotes?from=&to=
+Tool endpoint for assistants (MCP, read-only, no key): https://balivillas.ai/mcp
 
 ## Sanur — quiet beachside east coast, calm sea, good for families and long stays
 
 ### Villa Black Pool — Family 4BR Villa with Big Pool
 Sanur, Bali | 4BR/4BA | sleeps 8
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/
-Photos: https://thehostbali.com/villa/sanur/villa-black-pool-4br-sanur/gallery/
+Page: https://balivillas.ai/villa/sanur/villa-black-pool-4br-sanur/
+Photos: https://balivillas.ai/villa/sanur/villa-black-pool-4br-sanur/gallery/
 
 Spacious modern 4-bedroom villa in Sanur with a private black-tiled pool, tropical garden, open living spaces and walking distance to the beach, cafés and shops.
 
@@ -19,8 +19,8 @@ Amenities: Private black-tiled pool; Outdoor shower; Lush tropical garden; Wi-Fi
 ### Stylish 2BR Pool Townhouse in Sanur
 Sanur, Bali | 2BR/2.5BA | sleeps 4
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/
-Photos: https://thehostbali.com/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/
+Page: https://balivillas.ai/villa/sanur/stylish-2br-pool-townhouse-sanur/
+Photos: https://balivillas.ai/villa/sanur/stylish-2br-pool-townhouse-sanur/gallery/
 
 Modern 2-bedroom townhouse in Sanur, about 15 minutes walk to the beach, with a private plunge pool, enclosed living room, full kitchen, fast Wi-Fi and two king bedrooms with en-suite bathrooms.
 
@@ -29,8 +29,8 @@ Amenities: Private plunge pool; Fast Wi-Fi 300 Mbps; Two king bedrooms; Dedicate
 ### Modern 2BR Pool Townhouse in Sanur
 Sanur, Bali | 2BR/2.5BA | sleeps 4
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/
-Photos: https://thehostbali.com/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/
+Page: https://balivillas.ai/villa/sanur/modern-2br-pool-townhouse-sanur/
+Photos: https://balivillas.ai/villa/sanur/modern-2br-pool-townhouse-sanur/gallery/
 
 New 110 m2 two-storey townhouse in a quiet part of Sanur, a 15-minute walk from the beach. Two en-suite king bedrooms (one with a workspace), a private enclosed pool and terrace, a Smart TV living room, a fully equipped kitchen, 300 Mbps Wi-Fi and housekeeping 3x a week. Ideal for families, couples and long-term stays.
 
@@ -39,8 +39,8 @@ Amenities: Private pool; Fast Wi-Fi 300 Mbps; Two king bedrooms; Dedicated works
 ### Lucky Lily 3BR Pool Villa in Sanur
 Sanur, Bali | 3BR/3.5BA | sleeps 6
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/
-Photos: https://thehostbali.com/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/
+Page: https://balivillas.ai/villa/sanur/lucky-lily-3br-pool-villa-sanur/
+Photos: https://balivillas.ai/villa/sanur/lucky-lily-3br-pool-villa-sanur/gallery/
 
 Spacious 3-bedroom private villa in Sanur with a large garden, private pool, BBQ area, fast Wi-Fi, dedicated workspace and family-friendly layout, about 7 minutes by scooter from Sanur Beach.
 
@@ -49,8 +49,8 @@ Amenities: Private pool; Large tropical garden; BBQ area; Fast Wi-Fi; Dedicated 
 ### Villa Kesari 4 — Family 3BR Pool Villa in Sanur
 Sanur, Bali | 3BR/3BA | sleeps 6
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/
-Photos: https://thehostbali.com/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/
+Page: https://balivillas.ai/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/
+Photos: https://balivillas.ai/villa/sanur/villa-kesari-4-3br-pool-villa-sanur/gallery/
 
 Newly built 3-bedroom family villa on a quiet street in Sanur, a 10-minute walk from the beach. Private pool with a shallow area for children, tropical garden with sun loungers, and three en-suite bedrooms with A/C, blackout curtains and garden views. Open-plan living room with a dining area, fully equipped kitchen, 300 Mbps fibre Wi-Fi and a work-friendly desk. Housekeeping 3x a week, pool and garden care included. Free private parking with automatic gates; staff meet every guest in person.
 
@@ -59,8 +59,8 @@ Amenities: Private pool with shallow kids' area; Large tropical garden; Three en
 ### Sanur Garden Pool Villa — Family 4BR near Mertasari Beach
 Sanur, Bali | 4BR/4.5BA | sleeps 8
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/
-Photos: https://thehostbali.com/villa/sanur/garden-pool-villa-4br-sanur/gallery/
+Page: https://balivillas.ai/villa/sanur/garden-pool-villa-4br-sanur/
+Photos: https://balivillas.ai/villa/sanur/garden-pool-villa-4br-sanur/gallery/
 
 Two-storey 235 m² villa on a quiet lane in south Sanur, a short walk from local cafés and about a kilometre from Mertasari Beach. Four bedrooms — the master on the ground floor with a pool view, three more upstairs — each with a king bed and its own en-suite bathroom, plus a separate guest toilet. The enclosed living and kitchen area is air-conditioned, with a large sofa, Smart TV and a dining table for eight, and opens through sliding glass doors onto a 35 m² private pool with four sunbeds and a garden. Fast Wi-Fi, a dedicated workspace, filtered drinking water, private parking and housekeeping three times a week are included. Sleeps up to 8 — suited to families and to two or three families travelling together.
 
@@ -69,8 +69,8 @@ Amenities: Private 35 m² pool with four sunbeds; Tropical garden; Four king bed
 ### Serenity 3 — Sun-Lit 3BR Pool Villa in Sanur
 Sanur, Bali | 3BR/3BA | sleeps 6
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/
-Photos: https://thehostbali.com/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/
+Page: https://balivillas.ai/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/
+Photos: https://balivillas.ai/villa/sanur/serenity-3-sunlit-3br-pool-villa-sanur/gallery/
 
 Serenity 3 is a three-bedroom villa in the gated Serenity complex on Jl. Kesari II in Sanur, about 500 m from the beach — a seven-minute walk. All three bedrooms are en-suite and air-conditioned, with large windows onto the garden. The living room has a Smart TV, the kitchen is fully equipped, and glass doors open onto a private plunge pool in a planted courtyard with a sun terrace. The layout follows Vastu principles, which here means bright rooms through the day. Fast Wi-Fi and a workspace with natural light, free parking, 24/7 security in the complex, housekeeping and pool and garden maintenance included. Suits families, couples and people working remotely. Sleeps 6.
 
@@ -79,8 +79,8 @@ Amenities: Private plunge pool; Tropical garden and sun terrace; Three en-suite 
 ### Serenity 9 — Elegant 3BR Pool Villa with Garden in Sanur
 Sanur, Bali | 3BR/3BA | sleeps 6
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/
-Photos: https://thehostbali.com/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/
+Page: https://balivillas.ai/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/
+Photos: https://balivillas.ai/villa/sanur/serenity-9-elegant-3br-pool-villa-sanur/gallery/
 
 Serenity 9 is a secluded three-bedroom pool villa in the gated Serenity complex on Jl. Kesari II in Sanur, about 500 m from the beach — a seven-minute walk. Each bedroom has its own bathroom and air conditioning. There is a lounge with a Smart TV, a fully equipped kitchen with a microwave and coffee, a dining nook, and a private pool with a sunbathing area surrounded by tropical greenery. The Vastu-based layout keeps the rooms bright through the day. Fast internet, free parking, 24/7 security in the complex and cleaning included. Sleeps 6.
 
@@ -89,8 +89,8 @@ Amenities: Private pool; Sunbathing area; Tropical greenery; Three en-suite bedr
 ### Serenity 6.1 — Elegant 2BR Villa near the Beach in Sanur
 Sanur, Bali | 2BR/2BA | sleeps 4
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/
-Photos: https://thehostbali.com/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/
+Page: https://balivillas.ai/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/
+Photos: https://balivillas.ai/villa/sanur/serenity-6-1-elegant-2br-villa-sanur/gallery/
 
 Serenity 6.1 is a two-bedroom villa in the gated Serenity complex on Jl. Kesari II in Sanur, about 500 m from the beach — a seven-minute walk. It has its own separate entrance, so you never cross paths with neighbours coming or going, and its own separate kitchen. Both bedrooms are en-suite and air-conditioned, and the interior is modern and bright under a Vastu layout. One thing to know before booking: the pool area and the small garden are shared with one neighbouring villa. If you want a pool entirely to yourself, look at Serenity 3 or Serenity 9 instead. Fast Wi-Fi, a dedicated workspace, free parking and cleaning during the stay. Suits couples and small groups. Sleeps 4.
 
@@ -99,8 +99,8 @@ Amenities: Pool shared with one neighbouring villa; Small garden shared with one
 ### Serenity 6.2 — 2BR Villa with Courtyard Garden in Sanur
 Sanur, Bali | 2BR/2BA | sleeps 4
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/
-Photos: https://thehostbali.com/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/
+Page: https://balivillas.ai/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/
+Photos: https://balivillas.ai/villa/sanur/serenity-6-2-villa-2br-courtyard-garden-sanur/gallery/
 
 Serenity 6.2 is a two-bedroom villa in the gated Serenity complex on Jl. Kesari II in Sanur, about 500 m from the beach — a seven-minute walk. It has a separate entrance and its own kitchen; both bedrooms are en-suite and air-conditioned, and the Vastu-based layout keeps the interior bright. The pool and the small tropical courtyard garden are shared with one neighbouring villa — sociable rather than fully private, and worth knowing before you book. Fast Wi-Fi, a dedicated workspace, free parking and cleaning during the stay. Suits couples and small groups. Sleeps 4.
 
@@ -109,8 +109,8 @@ Amenities: Pool shared with one neighbouring villa; Shared tropical courtyard ga
 ### Serenity 10 — 2BR Apartment with Private Terrace in Sanur
 Sanur, Bali | 2BR/1BA | sleeps 4
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/
-Photos: https://thehostbali.com/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/
+Page: https://balivillas.ai/villa/sanur/serenity-10-apartment-private-terrace-sanur/
+Photos: https://balivillas.ai/villa/sanur/serenity-10-apartment-private-terrace-sanur/gallery/
 
 Serenity 10 is a furnished two-bedroom apartment on the second floor of the gated Serenity complex on Jl. Kesari II in Sanur, about 500 m from the beach — a seven-minute walk. It comes with a private terrace looking over the complex grounds, two bedrooms sharing one bathroom, a fully equipped kitchen and air conditioning throughout, under a Vastu layout that keeps the rooms bright. This is an apartment, not a villa: there is no pool of its own. Fast Wi-Fi, a dedicated workspace, free parking and 24/7 security in the complex. Suits couples and solo travellers who want somewhere ready to move into. Sleeps 4.
 
@@ -121,8 +121,8 @@ Amenities: Private terrace overlooking the complex grounds; Second floor; Two be
 ### Eco Private — Teak 1BR Pool Villa in Ungasan
 Ungasan, Bali | 1BR/1BA | sleeps 2
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/
-Photos: https://thehostbali.com/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/
+Page: https://balivillas.ai/villa/ungasan/eco-private-1br-pool-villa-ungasan/
+Photos: https://balivillas.ai/villa/ungasan/eco-private-1br-pool-villa-ungasan/gallery/
 
 A one-bedroom villa in Ungasan on the Bukit peninsula, built almost entirely from natural teak and wrapped in tropical planting. Step out of the bedroom and you are at a private pool set in a garden; the air-conditioned living area with a Smart TV runs into a kitchen with a bar counter, and the bathroom has its own garden outlook and a free-standing tub. Wi-Fi runs at 200 Mbps and there is a desk by the window, so the villa works for remote work as much as for a slow holiday. Scooter parking, housekeeping three times a week and a laundry pick-up service are included; the beaches of the south coast are around ten minutes away. Sleeps 2 — made for couples, solo travellers and long stays.
 
@@ -131,8 +131,8 @@ Amenities: Private pool with tropical garden; Built from natural teak; One bedro
 ### Eco Teak — 2BR Pool Villa in Ungasan
 Ungasan, Bali | 2BR/2BA | sleeps 4
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/
-Photos: https://thehostbali.com/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/
+Page: https://balivillas.ai/villa/ungasan/eco-teak-2br-pool-villa-ungasan/
+Photos: https://balivillas.ai/villa/ungasan/eco-teak-2br-pool-villa-ungasan/gallery/
 
 A two-bedroom villa in Ungasan built from natural teak, with its own pool, a lawn and two covered verandas. Both bedrooms have extra-wide two-metre beds, air conditioning and their own bathroom; the enclosed living room and fully equipped kitchen are air-conditioned as well, and the dining table looks straight out at the water. Wi-Fi runs at 200 Mbps, so the villa suits remote work as much as a family holiday. Self check-in with a code lock, free scooter parking and housekeeping three times a week are included, and the beaches of the Bukit are about ten minutes away. Sleeps 4.
 
@@ -141,8 +141,8 @@ Amenities: Private pool with tropical garden; Built from natural teak; Two bedro
 ### Eco Exclusive — Teak 1BR Pool Villa in Ungasan
 Ungasan, Bali | 1BR/1BA | sleeps 2
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/
-Photos: https://thehostbali.com/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/
+Page: https://balivillas.ai/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/
+Photos: https://balivillas.ai/villa/ungasan/eco-exclusive-1br-pool-villa-ungasan/gallery/
 
 A one-bedroom teak villa in a quiet Ungasan compound, with a private pool, a lawn and a bright open-plan interior. Bedroom, living area and the kitchen with its breakfast bar all sit under one pitched teak roof; the bathroom opens onto greenery and has a free-standing tub and a rain shower. Wi-Fi runs at 200 Mbps and there is a workspace and an in-room safe. Housekeeping three times a week, scooter parking and self check-in are included, and the beaches of the Bukit are about ten minutes away. Sleeps 2 — made for couples, solo travellers and long stays.
 
@@ -151,8 +151,8 @@ Amenities: Private pool with tropical garden; Built from natural teak; Bedroom w
 ### Eco Tropical — 1BR Pool Villa in Ungasan
 Ungasan, Bali | 1BR/1BA | sleeps 2
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/
-Photos: https://thehostbali.com/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/
+Page: https://balivillas.ai/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/
+Photos: https://balivillas.ai/villa/ungasan/eco-tropical-1br-pool-villa-ungasan/gallery/
 
 A one-bedroom villa in Ungasan built from natural teak, with its own pool and lawn. King bed, an enclosed living room with a kitchenette, a freestanding bathtub by the greenery and a wide terrace. The fourth of the Mudra villas, next door to the other three.
 
@@ -163,8 +163,8 @@ Amenities: Private pool with lawn; Built from natural teak; King bed with air co
 ### Premier Umalas 16 — Stylish 3BR Pool Townhouse
 Umalas, Bali | 3BR/3BA | sleeps 6
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/
-Photos: https://thehostbali.com/villa/premier-umalas-16-3br-pool-townhouse/gallery/
+Page: https://balivillas.ai/villa/premier-umalas-16-3br-pool-townhouse/
+Photos: https://balivillas.ai/villa/premier-umalas-16-3br-pool-townhouse/gallery/
 
 Premier Umalas 16 is a three-bedroom townhouse in the quiet lanes of Umalas, between Canggu and Seminyak, finished in dark stone and warm wood. Each bedroom has its own en-suite bathroom and a desk by the window; the enclosed living room and the kitchen with its island are air-conditioned, and glass doors open onto a private pool and a small planted courtyard. Wi-Fi runs at 200 Mbps, and with three separate workspaces the house is set up for people staying for months as much as for a holiday. Washing machine, safe and iron are on site. Sleeps 6.
 
@@ -173,8 +173,8 @@ Amenities: Private pool; Planted courtyard and terrace; Three bedrooms, all en-s
 ### Premier Umalas 17 — Stylish 2BR Private Pool Home
 Umalas, Bali | 2BR/2BA | sleeps 4
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/
-Photos: https://thehostbali.com/villa/premier-umalas-17-2br-pool-home/gallery/
+Page: https://balivillas.ai/villa/premier-umalas-17-2br-pool-home/
+Photos: https://balivillas.ai/villa/premier-umalas-17-2br-pool-home/gallery/
 
 Premier Umalas 17 is a two-bedroom home with a private pool in the quiet lanes of Umalas, the residential strip of small roads and rice fields between Canggu and Seminyak. Both bedrooms are en-suite and have their own balconies. Wi-Fi runs at 200 Mbps and the house has two separate workspaces, which makes it work for a couple staying for months as much as for a short holiday. Fully equipped kitchen, air conditioning and a Smart TV. Berawa and Canggu beaches are about 10 minutes away by bike. Sleeps 4.
 
@@ -183,8 +183,8 @@ Amenities: Private pool; Wi-Fi 200 Mbps; Two workspaces; Smart TV; Fully equippe
 ### Villa Papat — 4BR Pool Villa in Umalas
 Umalas, Bali | 4BR/4BA | sleeps 10
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/
-Photos: https://thehostbali.com/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/
+Page: https://balivillas.ai/villa/umalas/villa-papat-4br-pool-villa-umalas/
+Photos: https://balivillas.ai/villa/umalas/villa-papat-4br-pool-villa-umalas/gallery/
 
 A four-bedroom villa down a quiet lane in Umalas, for up to ten guests. Private pool along the lawn, an open living room facing the garden, four bedrooms each with its own bathroom, and a full kitchen — natural materials throughout and no shared walls with anyone.
 
@@ -195,8 +195,8 @@ Amenities: Private pool with sun loungers; Four bedrooms, en-suite bathrooms; Tr
 ### Villa The Wave — Beachside 6BR Villa in Canggu
 Canggu, Bali | 6BR/6.5BA | sleeps 12
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/
-Photos: https://thehostbali.com/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/
+Page: https://balivillas.ai/villa/canggu/the-wave-6br-beachside-villa-canggu/
+Photos: https://balivillas.ai/villa/canggu/the-wave-6br-beachside-villa-canggu/gallery/
 
 Two-storey 341 m² villa built in 2023, a 2–5 minute walk from Berawa Beach in Canggu. Six bedrooms, each with a king bed, a TV and its own en-suite bathroom, plus a separate guest toilet. Open-plan living room with a Smart TV and fully equipped kitchen opening onto a large private pool through full-height glass doors; a wide first-floor balcony overlooks the garden. Fast Wi-Fi, a safe in every room and housekeeping three times a week are included. Sleeps up to 12 — suited to large families, groups of friends, weddings and company retreats.
 
@@ -205,8 +205,8 @@ Amenities: Large private pool; 2–5 min walk to Berawa Beach; Six king bedrooms
 ### Leonardo — 9BR Resort Villa in Pererenan
 Canggu, Bali | 9BR/9BA | sleeps 18
 Rates: rates on request (WhatsApp, same-day quote)
-Page: https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/
-Photos: https://thehostbali.com/villa/canggu/leonardo-9br-resort-pererenan/gallery/
+Page: https://balivillas.ai/villa/canggu/leonardo-9br-resort-pererenan/
+Photos: https://balivillas.ai/villa/canggu/leonardo-9br-resort-pererenan/gallery/
 
 A nine-bedroom designer villa in Pererenan for up to 18 guests, a ten-minute walk from the beach. Private pool, a lawn running down to a mountain river, home cinema, piano, BBQ and a full kitchen — room enough for two families, a wedding party or a company offsite.
 
@@ -214,11 +214,11 @@ Amenities: Private pool with sun loungers; Nine bedrooms, en-suite bathrooms; Ga
 
 ## Monthly rentals
 Most villas also take monthly and yearly stays at a monthly rate, with housekeeping and pool care included. Quote on WhatsApp for the exact month; free dates are in the calendar feed above.
-- [Monthly villa rentals in Bali](https://thehostbali.com/monthly-rental/)
-- [Monthly villa rentals in Sanur](https://thehostbali.com/monthly-rental/sanur/)
-- [Monthly villa rentals in Ungasan](https://thehostbali.com/monthly-rental/ungasan/)
-- [Monthly villa rentals in Umalas](https://thehostbali.com/monthly-rental/umalas/)
-- [Monthly villa rentals in Canggu](https://thehostbali.com/monthly-rental/canggu/)
+- [Monthly villa rentals in Bali](https://balivillas.ai/monthly-rental/)
+- [Monthly villa rentals in Sanur](https://balivillas.ai/monthly-rental/sanur/)
+- [Monthly villa rentals in Ungasan](https://balivillas.ai/monthly-rental/ungasan/)
+- [Monthly villa rentals in Umalas](https://balivillas.ai/monthly-rental/umalas/)
+- [Monthly villa rentals in Canggu](https://balivillas.ai/monthly-rental/canggu/)
 
 ## How to book
 Message the team on WhatsApp (+62 857 4649 9697) with the villa, dates and number of guests. Reply usually within ~15 minutes between 8:00 and 22:00 WITA. Direct booking carries no OTA commission; nothing is charged on the site.
@@ -228,7 +228,7 @@ Message the team on WhatsApp (+62 857 4649 9697) with the villa, dates and numbe
 # Villas for sale
 
 ## Premier Umalas 16 — 3BR Villa for Sale in Umalas, Bali (THB-001)
-URL: https://thehostbali.com/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/
+URL: https://balivillas.ai/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/
 Asking price: US$250,000
 Ownership: leasehold until 2052 (+10 years extension available)
 Facts: 3 bedrooms, 4 bathrooms, land 146 m2, building 158 m2, pool 4.4 × 2.25 m, built 2023
@@ -237,7 +237,7 @@ Rental income: about US$2,600 a month net to the owner (August 2025 – July 202
 Description: A ready three-bedroom villa in the quiet lanes of Umalas, built in 2023 and rented out since February 2024 — the buyer takes over a working property, not a construction site. 158 m² of house on a 146 m² plot: three bedrooms with en-suite bathrooms and desks, an enclosed air-conditioned living room and kitchen, and glass doors onto a private 4.4 × 2.25 m pool and a planted courtyard. Over the twelve months to July 2026 the villa returned $2,600 a month net to the owners after running costs and the management fee.
 
 ## Villa Black Pool — 4BR Villa for Sale in Sanur, Bali (THB-002)
-URL: https://thehostbali.com/villas-for-sale/sanur/villa-black-pool-4br/
+URL: https://balivillas.ai/villas-for-sale/sanur/villa-black-pool-4br/
 Asking price: US$540,000
 Ownership: leasehold until 21 January 2053
 Facts: 4 bedrooms, 4 bathrooms, land 400 m2, building 200 m2, pool 10 × 4 m, built 2023
@@ -246,7 +246,7 @@ Description: A four-bedroom villa on a 400 m² plot in a quiet lane on the Sanur
 Features: Sold furnished; Closed, air-conditioned living room; 7 air conditioners, 6 fans; Western kitchen: hob, oven, fridge; Washing machine, storage room; CBN fibre internet; 13,000 W power, prepaid meter; Well water; Covered parking bay
 
 ## Villa Kesari 4 — 3BR Pool Villa for Sale in Sanur, Bali (THB-003)
-URL: https://thehostbali.com/villas-for-sale/sanur/villa-kesari-4-3br/
+URL: https://balivillas.ai/villas-for-sale/sanur/villa-kesari-4-3br/
 Asking price: US$405,835
 Ownership: leasehold, 27 years
 Facts: 3 bedrooms, 3 bathrooms, land 300 m2, building 123 m2
@@ -255,7 +255,7 @@ Description: A three-bedroom villa in the quiet Kesari lanes of Sanur, one of si
 Features: Three bedrooms, each with its own bathroom; Guest toilet with laundry; Enclosed kitchen and living area; Solid Merbau wood floors, windows and doors; Gypsum plasterboard, plastered and painted finish; 21 m² private pool in mature greenery; Outdoor shower; Air conditioning and Wi-Fi; Outdoor parking
 
 ## Sanur Garden Pool Villa — 4BR Villa for Sale in Sanur, Bali (THB-004)
-URL: https://thehostbali.com/villas-for-sale/sanur/garden-pool-villa-4br/
+URL: https://balivillas.ai/villas-for-sale/sanur/garden-pool-villa-4br/
 Asking price: Rp 8,709,750,000 (Negotiable. Transactions are settled in rupiah.)
 Ownership: leasehold, 28 years
 Facts: 4 bedrooms, 4 bathrooms, land 280 m2, building 230 m2, pool 2.5 × 7 m, built 2025
@@ -264,7 +264,7 @@ Description: A four-bedroom villa in Sanur Kauh, built in 2025 over two floors a
 Features: Four bedrooms, all with en-suite bathrooms; Guest toilet; Enclosed living room, dining room and kitchen; Two floors, terrace and balcony; Pool and garden view; Sold furnished; 5 air conditioners; Fibre optic internet; Drilled well water; Open parking for one car
 
 ## Modern 2BR Pool Townhouse — Villa for Sale in Sanur, Bali (THB-005)
-URL: https://thehostbali.com/villas-for-sale/sanur/modern-2br-pool-townhouse/
+URL: https://balivillas.ai/villas-for-sale/sanur/modern-2br-pool-townhouse/
 Asking price: Rp 4,675,500,000 (Transactions are settled in rupiah.)
 Ownership: leasehold, 33 years
 Facts: 2 bedrooms, 3 bathrooms, land 100 m2, building 105 m2, pool 2.5 × 4 m, built 2025
@@ -273,7 +273,7 @@ Description: A two-bedroom townhouse villa in central Sanur, built in 2025 over 
 Features: Two bedrooms, both with en-suite bathrooms; Guest bathroom on the ground floor; Enclosed living room, dining room and kitchen; Two floors; Private pool, pool view from the house; Sold furnished; 3 air conditioners; 7,700 W power; Fibre optic internet; Drilled well water; Open parking
 
 ## Villa Sakura — 3BR Villa for Sale in Sanur, Bali (THB-006)
-URL: https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/
+URL: https://balivillas.ai/villas-for-sale/sanur/villa-sakura-3br/
 Asking price: US$520,000; in rubles fixed at RUB 45,000,000
 Ownership: leasehold until 2057
 Facts: 3 bedrooms (two upstairs, the third on the ground floor, set up as a study with a sofa bed), 2 bathrooms upstairs and a guest toilet downstairs (no shower), land 300 m2, building 200 m2, pool 9 m long, renovated 2026

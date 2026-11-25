@@ -15,7 +15,7 @@
 
 import { readAllPrices, readAllCalendars } from './hostex.js';
 
-const ORIGIN = 'https://thehostbali.com';
+const ORIGIN = 'https://balivillas.ai';
 const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 function pad(n) { return n < 10 ? '0' + n : String(n); }

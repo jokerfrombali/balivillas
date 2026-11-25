@@ -1,4 +1,4 @@
-# Состояние проекта thehostbali.com — паспорт для передачи
+# Состояние проекта balivillas.ai — паспорт для передачи
 
 Этот файл — точка входа для любого нового человека или ИИ-ассистента
 (в том числе новой сессии Claude с другого аккаунта). Здесь всё, что нельзя
@@ -69,7 +69,7 @@ www→apex редирект всё равно оставлен Cloudflare Redire
   Ключевые события: whatsapp_click, booking_submit. Спец-параметры:
   spot, page_name, has_dates. События шлёт `thb-events.js`.
   Данные в бот тянет `worker/ga.js` через service account (секрет GA_SA_KEY).
-- **Search Console**: ресурс `https://thehostbali.com/`, подтверждён по тегу
+- **Search Console**: ресурс `https://balivillas.ai/`, подтверждён по тегу
   GA (не удалять gtag!). Карты: sitemap.xml (49), sitemap-growth.xml (13),
   sitemap-images.xml (283 фото). Связан с GA4.
 - **Bing Webmaster**: те же три карты + IndexNow (ключ — 32-hex `.txt`

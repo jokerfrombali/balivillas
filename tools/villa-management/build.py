@@ -12,7 +12,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content_geo import GEO
 from content_pages import PAGES
-SITE = 'https://thehostbali.com'
+SITE = 'https://balivillas.ai'
 TODAY = datetime.date.today().isoformat()
 COMMISSION = '20%'
 WA = 'https://wa.me/6285746499697?text='

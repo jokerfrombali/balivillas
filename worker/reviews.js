@@ -136,7 +136,7 @@ function sectionHtml(v, lang) {
 
 /* Вилла по адресу страницы: /villa/<slug>/ -> id из data/villas.json. */
 async function villaForPath(env, pathNoLang) {
-  const res = await env.ASSETS.fetch(new Request('https://thehostbali.com/data/villas.json'));
+  const res = await env.ASSETS.fetch(new Request('https://balivillas.ai/data/villas.json'));
   if (!res.ok) return null;
   const list = await res.json();
   for (const v of (list || [])) {

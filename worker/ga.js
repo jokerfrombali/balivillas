@@ -268,7 +268,7 @@ export async function searchConsoleRaw(env, body) {
 }
 
 async function scQuery(env, token, body) {
-  const site = env.SC_SITE_URL || 'https://thehostbali.com/';
+  const site = env.SC_SITE_URL || 'https://balivillas.ai/';
   try {
     const r = await fetch(
       'https://searchconsole.googleapis.com/webmasters/v3/sites/' +

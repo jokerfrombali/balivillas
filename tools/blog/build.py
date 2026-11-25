@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the /blog/ section of thehostbali.com from markdown sources.
+"""Build the /blog/ section of balivillas.ai from markdown sources.
 
 Source: content/blog/<hub>/<slug>.md  (frontmatter "key: value" lines between --- markers,
 then markdown body; a "## FAQ" section with "### question" + answer paragraphs is turned
@@ -17,7 +17,7 @@ import markdown
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SHELL = os.path.join(ROOT, 'tools', 'blog', 'shell')
 SRC = os.path.join(ROOT, 'content', 'blog')
-SITE = 'https://thehostbali.com'
+SITE = 'https://balivillas.ai'
 CHECK = '--check' in sys.argv
 TODAY = datetime.date.today().isoformat()
 

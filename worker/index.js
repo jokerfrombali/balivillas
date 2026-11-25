@@ -467,7 +467,7 @@ async function seoDigestText(env) {
     lines.push(esc(t.why));
   });
   if (op.tasks.length > 3) {
-    lines.push('', 'Ещё ' + (op.tasks.length - 3) + ' в панели: thehostbali.com/admin/');
+    lines.push('', 'Ещё ' + (op.tasks.length - 3) + ' в панели: balivillas.ai/admin/');
   }
   if (op.cannibal.length) {
     lines.push('', '⚠ Запросов, где мы конкурируем сами с собой: ' + op.cannibal.length);
@@ -520,7 +520,7 @@ async function handleTgHook(req, env) {
                    '/stats вчера — за прошлые сутки',
                    '/seo — что сделать для поиска прямо сейчас',
                    '/health — доступны ли ключевые страницы',
-                   '', 'Панель: thehostbali.com/admin/',
+                   '', 'Панель: balivillas.ai/admin/',
                    'Сводка за неделю приходит сама по понедельникам в 08:00 WITA.'].join('\n'), topic);
   }
   return new Response(null, { status: 204 });
@@ -535,7 +535,7 @@ async function probe(env) {
   const out = [];
   for (const p of paths) {
     try {
-      const r = await env.ASSETS.fetch(new Request('https://thehostbali.com' + p));
+      const r = await env.ASSETS.fetch(new Request('https://balivillas.ai' + p));
       const body = await r.text();
       /* у скриптов порог другой: страница меньше 2 КБ — обрубок, а скрипт
          такого размера нормален */
@@ -631,7 +631,7 @@ function money(n) {
 export default {
   async fetch(req, env) {
     const url = new URL(req.url);
-    /* 18.09.2026: http://thehostbali.com/ отдавался как 200 (в Cloudflare не включён Always Use HTTPS).
+    /* 18.09.2026: http://balivillas.ai/ отдавался как 200 (в Cloudflare не включён Always Use HTTPS).
        Одна каноническая схема: всё на https, 301. */
     if (url.protocol === 'http:') {
       url.protocol = 'https:';

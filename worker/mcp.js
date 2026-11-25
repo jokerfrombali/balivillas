@@ -26,7 +26,7 @@ const PUBLIC_TOOLS = ['list_properties', 'get_property', 'check_availability', '
 const NAME = 'thehostbali';
 const VERSION = '1.0.0';
 const PROTOCOL = '2024-11-05';
-const SITE = 'https://thehostbali.com';
+const SITE = 'https://balivillas.ai';
 const WA = '6285746499697';
 
 /* ---------- данные сайта ---------- */

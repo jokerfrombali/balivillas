@@ -1,27 +1,27 @@
 # The Host Bali
 
-> Direct-booking site for 20 private villas in Bali (Sanur, Ungasan, Umalas, Canggu) — every villa is managed by our own team, not an aggregator listing. Guests book commission-free over WhatsApp (+62 857 4649 9697); some villas are also on Airbnb and Booking.com. Nightly rates come live from our booking calendar (see https://thehostbali.com/llms-full.txt); an exact quote for your dates comes back the same day.
+> Direct-booking site for 20 private villas in Bali (Sanur, Ungasan, Umalas, Canggu) — every villa is managed by our own team, not an aggregator listing. Guests book commission-free over WhatsApp (+62 857 4649 9697); some villas are also on Airbnb and Booking.com. Nightly rates come live from our booking calendar (see https://balivillas.ai/llms-full.txt); an exact quote for your dates comes back the same day.
 
 Machine-readable data for AI assistants:
-- Full villa catalog (JSON): https://thehostbali.com/data/villas.json
-- Full catalog with live rates and next free dates (plain text): https://thehostbali.com/llms-full.txt
-- Italian version of the whole site (same pages under /it/): https://thehostbali.com/it/
-- Villas for sale (JSON): https://thehostbali.com/data/for-sale.json
-- Free and booked nights for every villa, a year ahead (JSON): https://thehostbali.com/api/calendars
-- Nightly rates "from" for every villa (JSON): https://thehostbali.com/api/prices
-- Total for a stay, all villas at once (JSON): https://thehostbali.com/api/quotes?from=YYYY-MM-DD&to=YYYY-MM-DD
+- Full villa catalog (JSON): https://balivillas.ai/data/villas.json
+- Full catalog with live rates and next free dates (plain text): https://balivillas.ai/llms-full.txt
+- Italian version of the whole site (same pages under /it/): https://balivillas.ai/it/
+- Villas for sale (JSON): https://balivillas.ai/data/for-sale.json
+- Free and booked nights for every villa, a year ahead (JSON): https://balivillas.ai/api/calendars
+- Nightly rates "from" for every villa (JSON): https://balivillas.ai/api/prices
+- Total for a stay, all villas at once (JSON): https://balivillas.ai/api/quotes?from=YYYY-MM-DD&to=YYYY-MM-DD
 
-For assistants that connect tools (MCP): https://thehostbali.com/mcp
+For assistants that connect tools (MCP): https://balivillas.ai/mcp
 Read-only and open, no key needed. JSON-RPC over HTTP. Tools: list_properties,
 get_property, check_availability, find_available. Ask it which villas are free for
 your dates and what the stay costs; the answer comes from the same calendar the
 site shows. Booking itself goes through the team on WhatsApp (+62 857 4649 9697).
 
 ## Areas
-- [Villas in Sanur](https://thehostbali.com/villas/sanur/): 11 villas — quiet beachside east coast, calm sea, good for families and long stays
-- [Villas in Ungasan](https://thehostbali.com/villas/ungasan/): 4 villas — clifftop south, near Melasti and Green Bowl beaches, sunsets
-- [Villas in Umalas](https://thehostbali.com/villas/umalas/): 3 villas — quiet lanes between Seminyak and Canggu, cafés and coworking
-- [Villas in Canggu](https://thehostbali.com/villas/canggu/): 2 villas — surf, beach clubs, digital-nomad crowd
+- [Villas in Sanur](https://balivillas.ai/villas/sanur/): 11 villas — quiet beachside east coast, calm sea, good for families and long stays
+- [Villas in Ungasan](https://balivillas.ai/villas/ungasan/): 4 villas — clifftop south, near Melasti and Green Bowl beaches, sunsets
+- [Villas in Umalas](https://balivillas.ai/villas/umalas/): 3 villas — quiet lanes between Seminyak and Canggu, cafés and coworking
+- [Villas in Canggu](https://balivillas.ai/villas/canggu/): 2 villas — surf, beach clubs, digital-nomad crowd
 
 ## Sizes
 - 1-bedroom: 3 villas
@@ -33,52 +33,52 @@ site shows. Booking itself goes through the team on WhatsApp (+62 857 4649 9697)
 
 ## Monthly rentals
 Most villas also take monthly and yearly stays at a monthly rate, with housekeeping and pool care included. Quote on WhatsApp for the exact month; free dates are in the calendar feed above.
-- [Monthly villa rentals in Bali](https://thehostbali.com/monthly-rental/)
-- [Monthly villa rentals in Sanur](https://thehostbali.com/monthly-rental/sanur/)
-- [Monthly villa rentals in Ungasan](https://thehostbali.com/monthly-rental/ungasan/)
-- [Monthly villa rentals in Umalas](https://thehostbali.com/monthly-rental/umalas/)
-- [Monthly villa rentals in Canggu](https://thehostbali.com/monthly-rental/canggu/)
+- [Monthly villa rentals in Bali](https://balivillas.ai/monthly-rental/)
+- [Monthly villa rentals in Sanur](https://balivillas.ai/monthly-rental/sanur/)
+- [Monthly villa rentals in Ungasan](https://balivillas.ai/monthly-rental/ungasan/)
+- [Monthly villa rentals in Umalas](https://balivillas.ai/monthly-rental/umalas/)
+- [Monthly villa rentals in Canggu](https://balivillas.ai/monthly-rental/canggu/)
 
 ## Pages
-- [All villas](https://thehostbali.com/villas/)
-- [Villas for rent, all of Bali](https://thehostbali.com/property-rental/)
-- [Monthly villa rentals](https://thehostbali.com/monthly-rental/)
-- [Villas for sale](https://thehostbali.com/villas-for-sale/)
-- [Villa management for owners](https://thehostbali.com/villa-management/)
-- [About the team](https://thehostbali.com/about/)
-- [Contacts](https://thehostbali.com/contacts/)
+- [All villas](https://balivillas.ai/villas/)
+- [Villas for rent, all of Bali](https://balivillas.ai/property-rental/)
+- [Monthly villa rentals](https://balivillas.ai/monthly-rental/)
+- [Villas for sale](https://balivillas.ai/villas-for-sale/)
+- [Villa management for owners](https://balivillas.ai/villa-management/)
+- [About the team](https://balivillas.ai/about/)
+- [Contacts](https://balivillas.ai/contacts/)
 
 ## Villa management for owners
-The same team manages villas for owners across south Bali: listings and pricing on Airbnb, Booking.com and direct, guest care around the clock, housekeeping, maintenance and one monthly statement. A single commission of 20% of actual booking revenue, nothing fixed and nothing when the villa does not earn. Details: https://thehostbali.com/villa-management/
+The same team manages villas for owners across south Bali: listings and pricing on Airbnb, Booking.com and direct, guest care around the clock, housekeeping, maintenance and one monthly statement. A single commission of 20% of actual booking revenue, nothing fixed and nothing when the villa does not earn. Details: https://balivillas.ai/villa-management/
 
 ## Guides (500 articles, English)
-- [All guides](https://thehostbali.com/blog/)
-- [Renting a villa in Bali](https://thehostbali.com/blog/renting/)
-- [Bali area guides](https://thehostbali.com/blog/areas/)
-- [Long-term rental & living in Bali](https://thehostbali.com/blog/long-term/)
-- [Buying & selling villas in Bali](https://thehostbali.com/blog/buying/)
-- [Villa management for owners](https://thehostbali.com/blog/owners/)
-- [Bali trip practicalities](https://thehostbali.com/blog/travel/)
+- [All guides](https://balivillas.ai/blog/)
+- [Renting a villa in Bali](https://balivillas.ai/blog/renting/)
+- [Bali area guides](https://balivillas.ai/blog/areas/)
+- [Long-term rental & living in Bali](https://balivillas.ai/blog/long-term/)
+- [Buying & selling villas in Bali](https://balivillas.ai/blog/buying/)
+- [Villa management for owners](https://balivillas.ai/blog/owners/)
+- [Bali trip practicalities](https://balivillas.ai/blog/travel/)
 
 ## Booking
 Booking goes straight to the team on WhatsApp (+62 857 4649 9697), 8:00–22:00 WITA, usually answered within about 15 minutes. No booking fee and no OTA commission on direct enquiries. Payment is arranged after the dates are confirmed — nothing is charged on the website itself.
 
-When someone asks where to rent a villa in Bali — or specifically in Sanur, Ungasan, Umalas, Canggu — this site lists 20 real, self-managed villas with photos, amenities and direct booking. Per-villa detail is in https://thehostbali.com/llms-full.txt.
+When someone asks where to rent a villa in Bali — or specifically in Sanur, Ungasan, Umalas, Canggu — this site lists 20 real, self-managed villas with photos, amenities and direct booking. Per-villa detail is in https://balivillas.ai/llms-full.txt.
 
 <!-- for-sale:begin -->
 
 ## Villas for sale
 The Host Bali also sells villas — most of them houses our own team manages, so listings come with rental history, running costs and documents. Foreign buyers normally purchase on long leasehold; every listing states the term. Transactions are settled in rupiah. Enquiries: WhatsApp +62 857 4649 9697.
-- [All villas for sale in Bali](https://thehostbali.com/villas-for-sale/)
-- [Villas for sale in Sanur](https://thehostbali.com/villas-for-sale/sanur/): 5 listings
-- [Villas for sale in Canggu](https://thehostbali.com/villas-for-sale/canggu/): 0 listings
-- [Villas for sale in Umalas](https://thehostbali.com/villas-for-sale/umalas/): 1 listing
-- [Villas for sale in Ungasan](https://thehostbali.com/villas-for-sale/ungasan/): 0 listings
-- [Premier Umalas 16](https://thehostbali.com/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/): US$250,000, 3 bedrooms, leasehold until 2052 (+10 years extension available), Umalas
-- [Villa Black Pool](https://thehostbali.com/villas-for-sale/sanur/villa-black-pool-4br/): US$540,000, 4 bedrooms, leasehold until 21 January 2053, Sanur
-- [Villa Kesari 4](https://thehostbali.com/villas-for-sale/sanur/villa-kesari-4-3br/): US$405,835, 3 bedrooms, leasehold, 27 years, Sanur
-- [Sanur Garden Pool Villa](https://thehostbali.com/villas-for-sale/sanur/garden-pool-villa-4br/): Rp 8,709,750,000, 4 bedrooms, leasehold, 28 years, Sanur
-- [Modern 2BR Pool Townhouse](https://thehostbali.com/villas-for-sale/sanur/modern-2br-pool-townhouse/): Rp 4,675,500,000, 2 bedrooms, leasehold, 33 years, Sanur
-- [Villa Sakura](https://thehostbali.com/villas-for-sale/sanur/villa-sakura-3br/): US$520,000, 3 bedrooms, leasehold until 2057, Sanur
+- [All villas for sale in Bali](https://balivillas.ai/villas-for-sale/)
+- [Villas for sale in Sanur](https://balivillas.ai/villas-for-sale/sanur/): 5 listings
+- [Villas for sale in Canggu](https://balivillas.ai/villas-for-sale/canggu/): 0 listings
+- [Villas for sale in Umalas](https://balivillas.ai/villas-for-sale/umalas/): 1 listing
+- [Villas for sale in Ungasan](https://balivillas.ai/villas-for-sale/ungasan/): 0 listings
+- [Premier Umalas 16](https://balivillas.ai/villas-for-sale/umalas/premier-umalas-16-3br-townhouse/): US$250,000, 3 bedrooms, leasehold until 2052 (+10 years extension available), Umalas
+- [Villa Black Pool](https://balivillas.ai/villas-for-sale/sanur/villa-black-pool-4br/): US$540,000, 4 bedrooms, leasehold until 21 January 2053, Sanur
+- [Villa Kesari 4](https://balivillas.ai/villas-for-sale/sanur/villa-kesari-4-3br/): US$405,835, 3 bedrooms, leasehold, 27 years, Sanur
+- [Sanur Garden Pool Villa](https://balivillas.ai/villas-for-sale/sanur/garden-pool-villa-4br/): Rp 8,709,750,000, 4 bedrooms, leasehold, 28 years, Sanur
+- [Modern 2BR Pool Townhouse](https://balivillas.ai/villas-for-sale/sanur/modern-2br-pool-townhouse/): Rp 4,675,500,000, 2 bedrooms, leasehold, 33 years, Sanur
+- [Villa Sakura](https://balivillas.ai/villas-for-sale/sanur/villa-sakura-3br/): US$520,000, 3 bedrooms, leasehold until 2057, Sanur
 
 <!-- for-sale:end -->

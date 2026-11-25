@@ -8,7 +8,7 @@ The key file <key>.txt sits in the site root and is deployed with the assets.
 """
 import glob, json, os, subprocess, sys, urllib.request
 
-HOST = 'thehostbali.com'
+HOST = 'balivillas.ai'
 key_files = [f for f in glob.glob('*.txt') if len(os.path.basename(f)) == 36]
 KEY = os.path.basename(key_files[0])[:-4] if key_files else None
 assert KEY, 'IndexNow key file (<32-hex>.txt) not found in site root'

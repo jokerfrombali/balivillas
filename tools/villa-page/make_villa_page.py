@@ -13,7 +13,7 @@ import json, os, re, sys, html, shutil
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 TPL  = os.path.join(ROOT, 'villa', 'sanur', 'modern-2br-pool-townhouse-sanur', 'index.html')
-SITE = 'https://thehostbali.com'
+SITE = 'https://balivillas.ai'
 
 T_SLUG = 'modern-2br-pool-townhouse-sanur'
 T_BASE = 'sanur-modern-2br-townhouse'

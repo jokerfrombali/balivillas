@@ -1,6 +1,6 @@
 # Деплой TheBaliHost
 
-Статический сайт. Хостинг — **Cloudflare Workers (Static Assets)**, домен — `thehostbali.com`.
+Статический сайт. Хостинг — **Cloudflare Workers (Static Assets)**, домен — `balivillas.ai`.
 
 ## Параметры
 
@@ -10,7 +10,7 @@
 | Продакшн-ветка | `main` |
 | Хостинг | Cloudflare Workers, аккаунт `nevskiy50@gmail.com` |
 | Имя Worker-проекта | `thebalihost` |
-| Домен | `thehostbali.com` + `www.thehostbali.com` |
+| Домен | `balivillas.ai` + `www.balivillas.ai` |
 | Регистратор домена | Namecheap |
 | DNS | Cloudflare, NS `jack.ns.cloudflare.com` / `vida.ns.cloudflare.com` |
 | Build command | *(пусто)* |

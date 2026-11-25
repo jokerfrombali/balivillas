@@ -20,7 +20,7 @@ for x in S:
     NAMES.add(x['shortName']); NAMES.add(x['name'])
 NAMES |= {'Sanur', 'Canggu', 'Umalas', 'Ungasan', 'Pererenan', 'Bali', 'The Host Bali', 'The HOST', 'WhatsApp',
           'Instagram', 'Email', 'Bosch', 'Hostex', 'Airbnb', 'Booking.com', 'Google', 'Wi-Fi', 'IDR', 'USD', 'EUR',
-          'hello@thehostbali.com', 'THB-001', 'THB-002', 'THB-003', 'THB-004', 'THB-005', 'THB-006',
+          'hello@balivillas.ai', 'THB-001', 'THB-002', 'THB-003', 'THB-004', 'THB-005', 'THB-006',
           'Jl. Kesari II, Sanur, South Denpasar', 'Jl. Kesari II, Sanur, Denpasar Selatan',
           'Jl. Danau Tamblingan No.21, Sanur, Denpasar Selatan', 'Jalan Umalas Klecung, Kerobokan Kelod, Kuta Utara',
           'Sanur Kauh, South Denpasar', 'Sanur, South Denpasar', 'PT Premier Development Group',
