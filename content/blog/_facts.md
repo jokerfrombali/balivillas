@@ -3,9 +3,9 @@
 Use ONLY these company facts. Anything not listed here about BaliVillas must not be claimed.
 
 ## Company
-- Brand: BaliVillas. Legal entity: PT MITRA VILA NUSANTARA, NIB 1000000008820545.
+- Brand: BaliVillas. Legal entity: PT MALE ESTATE, NIB 1000000008820545.
 - Office: Jalan Pasekan Gang Batu Ngonjol 10 No. 8, Batubulan Kangin, Kec. Sukawati, Kab. Gianyar, Bali 80582, Indonesia.
-- WhatsApp +62 857 4649 9697 (guest support 24/7; office hours Mon–Sat 9:00–18:00 WITA; booking replies 8:00–22:00 WITA, usually within about 15 minutes). Email hello@balivillas.ai. Instagram @thehostbali.
+- WhatsApp +62 857 4649 9697 (guest support 24/7; office hours Mon–Sat 9:00–18:00 WITA; booking replies 8:00–22:00 WITA, usually within about 15 minutes). Email info@balivillas.ai. Instagram @thehostbali.
 - What we do: we manage every villa on the site ourselves (not an aggregator). Guests book direct over WhatsApp with no booking fee and no OTA commission on direct enquiries; payment is arranged after dates are confirmed, nothing is charged on the website. Some villas are also listed on Airbnb and Booking.com. Rates on request; quote the same day. Direct-booking discounts advertised on area pages: 5% off any stay, 10% off weekly, 15% off monthly.
 - Check-in from 3:00 pm, check-out by 11:00 am (early/late often possible outside high season on request).
 - Villa management for owners: marketing and listings (Airbnb, Booking.com, direct site), pricing and calendar, 24/7 guest care, housekeeping, maintenance by own crew, monthly owner reports, compliance guidance, staff management. One commission on actual bookings, no fixed monthly fee; expenses pre-approved; owner can block own dates; clear exit terms. Exact commission rate is NOT published — say "ask for terms". Do NOT quote occupancy or income figures.

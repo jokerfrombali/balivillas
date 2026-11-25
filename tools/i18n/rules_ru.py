@@ -26,7 +26,7 @@ for x in S:
     NAMES.add(x['shortName']); NAMES.add(x['name'])
 NAMES |= {'Bali', 'BaliVillas', 'The HOST', 'WhatsApp', 'Instagram', 'Email', 'Bosch',
           'Hostex', 'Airbnb', 'Booking.com', 'Agoda', 'Trip.com', 'Google', 'Wi-Fi',
-          'IDR', 'USD', 'EUR', 'hello@balivillas.ai', 'Pererenan', 'Berawa', 'Seminyak',
+          'IDR', 'USD', 'EUR', 'info@balivillas.ai', 'Pererenan', 'Berawa', 'Seminyak',
           'Uluwatu', 'Melasti', 'Green Bowl', 'Ubud', 'Jimbaran', 'Pecatu', 'Kerobokan',
           'Batu Bolong', 'Echo Beach', 'Nusa Penida', 'Lembongan', 'Denpasar',
           'THB-001', 'THB-002', 'THB-003', 'THB-004', 'THB-005', 'THB-006',

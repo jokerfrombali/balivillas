@@ -30,7 +30,7 @@ Booking direct with an established, self-managed villa company cuts out the plat
 
 ## How to verify a villa manager is trustworthy before booking direct
 
-Since a direct booking skips a platform's built-in review system, check for the manager's own track record instead: an established website with real villa listings and photos, a legal business entity (we operate as PT MITRA VILA NUSANTARA), responsiveness when you first message, and clear terms provided in writing before you pay. A manager who answers questions plainly and confirms terms before asking for payment is a good sign.
+Since a direct booking skips a platform's built-in review system, check for the manager's own track record instead: an established website with real villa listings and photos, a legal business entity (we operate as PT MALE ESTATE), responsiveness when you first message, and clear terms provided in writing before you pay. A manager who answers questions plainly and confirms terms before asking for payment is a good sign.
 
 ## When a platform still makes sense
 
@@ -78,7 +78,7 @@ Booking direct is usually cheaper, since there's no platform service fee or OTA 
 
 ### Is booking a Bali villa directly with the manager safe?
 
-It can be, provided you check for an established business with real contact details, clear terms confirmed in writing, and a track record you can verify, a website with genuine listings, a registered business entity, and responsive communication. We operate as PT MITRA VILA NUSANTARA and confirm all terms before any payment is made.
+It can be, provided you check for an established business with real contact details, clear terms confirmed in writing, and a track record you can verify, a website with genuine listings, a registered business entity, and responsive communication. We operate as PT MALE ESTATE and confirm all terms before any payment is made.
 
 ### Should I use Airbnb, Booking.com or book direct for my Bali villa?
 

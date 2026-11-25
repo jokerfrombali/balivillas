@@ -10,7 +10,7 @@
 ## Что это
 
 Статический сайт аренды вилл на Бали + Cloudflare Worker. Владелец —
-jokerfrombali (nevskiy50@gmail.com). Компания PT MITRA VILA NUSANTARA,
+jokerfrombali (nevskiy50@gmail.com). Компания PT MALE ESTATE,
 адрес: Jalan Pasekan Gang Batu Ngonjol 10 No. 8, Batubulan Kangin, Sukawati,
 Gianyar, Bali 80582. Контакт: +62 857 4649 9697 (он же WhatsApp).
 Конверсия сайта = сообщение в WhatsApp или заявка через форму BOOKING.

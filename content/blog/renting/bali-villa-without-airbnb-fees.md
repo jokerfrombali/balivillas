@@ -54,7 +54,7 @@ That's a manageable risk, not a reason to avoid direct booking altogether — bu
 - Pay by bank transfer to a named business account, never cash or an unverified personal account
 - Check whether the manager also lists on Airbnb or Booking.com — if they do, you can cross-reference reviews there even while booking direct
 
-We're PT MITRA VILA NUSANTARA, a registered Indonesian company, and some of our villas are listed on Airbnb and Booking.com alongside our direct listings, so this cross-referencing is available if you want it as a safety check while still booking direct.
+We're PT MALE ESTATE, a registered Indonesian company, and some of our villas are listed on Airbnb and Booking.com alongside our direct listings, so this cross-referencing is available if you want it as a safety check while still booking direct.
 
 ## Comparing the total cost, not just the fee
 

@@ -46,7 +46,7 @@ We manage all 20 of our villas ourselves across Sanur, Canggu, Umalas and Ungasa
 
 "Local" doesn't just mean a company registered in Bali, it means the people answering your messages and managing the property are genuinely based here, know the specific villa and area, and have staff who can physically attend to something within the same day. Some listings marketed as local are actually managed remotely by an agency handling properties across multiple countries, with limited on-the-ground presence. It's a fair question to ask directly: who actually manages this villa day to day, and are they based in Bali themselves?
 
-We're registered as PT MITRA VILA NUSANTARA, based in Gianyar, Bali, and our team is genuinely on the ground across Sanur, Canggu, Umalas and Ungasan, which is part of why we can respond quickly to something that comes up during a stay rather than needing to coordinate with a distant office first.
+We're registered as PT MALE ESTATE, based in Gianyar, Bali, and our team is genuinely on the ground across Sanur, Canggu, Umalas and Ungasan, which is part of why we can respond quickly to something that comes up during a stay rather than needing to coordinate with a distant office first.
 
 ## How local knowledge shows up in small, practical ways
 

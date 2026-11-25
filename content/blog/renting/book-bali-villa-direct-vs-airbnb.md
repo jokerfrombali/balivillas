@@ -69,7 +69,7 @@ The main risk with direct booking is verifying legitimacy without a platform's s
 - Pay by bank transfer to a named business account, never cash or a personal account with no verification
 - Get every term (price, dates, inclusions, cancellation policy) in writing before paying a deposit
 
-We're PT MITRA VILA NUSANTARA, a registered Indonesian company, and we list some of our villas on Airbnb and Booking.com as well as taking direct bookings, so you can compare the same villa across both routes if you want that reassurance before booking direct.
+We're PT MALE ESTATE, a registered Indonesian company, and we list some of our villas on Airbnb and Booking.com as well as taking direct bookings, so you can compare the same villa across both routes if you want that reassurance before booking direct.
 
 ## How communication style differs in practice
 
