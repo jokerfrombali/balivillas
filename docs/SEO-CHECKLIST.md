@@ -62,8 +62,8 @@ Bing питает не только свой поиск, но и ChatGPT Search 
 адреса на сайте и в профиле само по себе плюс для карт):
 
 ```
-Street address : Jalan Pasekan Gang Batu Ngonjol 10 No. 8, Batubulan Kangin
-City           : Sukawati
+Street address : Jl. Tukad Musi 3B No.9, Panjer, Denpasar Selatan
+City           : Denpasar Selatan
 Province       : Bali
 Postal code    : 80582
 Телефон        : +62 857 4649 9697
