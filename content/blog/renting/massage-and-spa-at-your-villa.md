@@ -105,6 +105,6 @@ Some do, offered as a lighter, shorter session, sometimes as a joint parent-and-
 
 A flat, shaded spot such as a terrace or garden area, a nearby power socket if equipment is needed, a clear path from the gate, and fresh towels. Let anyone else staying with you know the timing so the space stays quiet during the session.
 
-### Can The Host Bali arrange an in-villa massage for me?
+### Can BaliVillas arrange an in-villa massage for me?
 
 Yes. As part of managing our villas in Sanur, Canggu, Umalas and Ungasan, we can connect you with therapists we already use and tell you what a fair price range looks like for your dates before you commit to anything.

@@ -1,4 +1,4 @@
-/*! The Host Bali — saved villas (wishlist). Vanilla, no deps, localStorage. */
+/*! BaliVillas — saved villas (wishlist). Vanilla, no deps, localStorage. */
 (function () {
   'use strict';
 

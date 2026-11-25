@@ -1,6 +1,6 @@
-# The Host Bali — full villa catalog
+# BaliVillas — full villa catalog
 
-20 private villas in Bali, all managed by The Host Bali. Direct booking on WhatsApp +62 857 4649 9697. Structured version: https://balivillas.ai/data/villas.json
+20 private villas in Bali, all managed by BaliVillas. Direct booking on WhatsApp +62 857 4649 9697. Structured version: https://balivillas.ai/data/villas.json
 Rates below are live: "from" per night, minimum stay and the next free check-in are read from our booking calendar and refreshed every 30 minutes. Free and booked nights: https://balivillas.ai/api/calendars · price for a stay: https://balivillas.ai/api/quotes?from=&to=
 Tool endpoint for assistants (MCP, read-only, no key): https://balivillas.ai/mcp
 

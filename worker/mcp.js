@@ -1,4 +1,4 @@
-/* MCP-сервер The Host Bali.
+/* MCP-сервер BaliVillas.
  *
  * Единый слой доступа к данным для агентов: объекты сайта, занятость и цены из
  * зеркала Hostex, группы Facebook с их правилами и журнал публикаций. Нужен,
@@ -135,7 +135,7 @@ function waLink(text) {
 const TOOLS = [
   {
     name: 'list_properties',
-    description: 'Список объектов The Host Bali: аренда и продажа. Фильтры по типу, ' +
+    description: 'Список объектов BaliVillas: аренда и продажа. Фильтры по типу, ' +
       'району, числу спален, цене и статусу. Для аренды отдаёт цену «от» за ночь из ' +
       'календаря Hostex, для продажи — цену объекта.',
     inputSchema: {
@@ -325,8 +325,8 @@ async function call(env, name, args) {
     if (!one) return { error: 'not_found', hint: 'сначала list_properties' };
 
     const text = one.kind === 'sale'
-      ? 'Hi The Host Bali! I am interested in ' + one.name + ' (' + one.ref + '). Is it still available?'
-      : 'Hi The Host Bali! I am interested in ' + one.name + '. Is it available?';
+      ? 'Hi BaliVillas! I am interested in ' + one.name + ' (' + one.ref + '). Is it still available?'
+      : 'Hi BaliVillas! I am interested in ' + one.name + '. Is it available?';
 
     return {
       property: one,
@@ -488,10 +488,10 @@ export async function handleMcp(req, env, limiter) {
         capabilities: { tools: { listChanged: false } },
         serverInfo: { name: NAME, version: VERSION },
         instructions: full
-          ? 'Данные The Host Bali: объекты аренды и продажи, занятость и цены из ' +
+          ? 'Данные BaliVillas: объекты аренды и продажи, занятость и цены из ' +
             'зеркала Hostex, группы Facebook с правилами и журнал публикаций. ' +
             'Hostex только на чтение: брони и цены отсюда не меняются.'
-          : 'Виллы The Host Bali на Бали: объекты в аренду и на продажу, свободные ' +
+          : 'Виллы BaliVillas на Бали: объекты в аренду и на продажу, свободные ' +
             'даты и цены из календаря. Только чтение. Бронирование идёт через ' +
             'команду в WhatsApp, ссылка есть в карточке объекта.'
       });

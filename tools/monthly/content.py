@@ -124,7 +124,7 @@ AREAS = [
 ]
 
 HUB = dict(
- title='Monthly Villa Rentals in Bali — Private Pool Villas from 1 Month | The Host Bali',
+ title='Monthly Villa Rentals in Bali — Private Pool Villas from 1 Month | BaliVillas',
  desc='Monthly and long-term rental of private pool villas in Sanur, Canggu, Umalas and Ungasan. Fully furnished and serviced, housekeeping and pool care included, rented direct from the manager.',
  h1='Monthly villa rentals in Bali,<br> <span class="italic font-light">booked direct.</span>',
  kicker='Long stays from one month',

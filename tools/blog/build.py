@@ -44,15 +44,15 @@ HUBS = {
 HUB_ORDER = ['renting', 'areas', 'long-term', 'buying', 'owners', 'travel']
 
 CTA = {
-    '/villa-management/': ('Own a villa in Bali?', 'We manage 20 villas in Sanur, Canggu, Umalas and Ungasan ourselves — marketing, guests, staff and monthly owner reports on one commission. Send us the location and a couple of photos for an honest assessment.', 'Talk about villa management', 'Hi The Host Bali! I own a villa in Bali and would like to discuss management.'),
-    '/villas-for-sale/': ('Looking at villas for sale?', 'Our listings come with rental history, running costs and documents, because most of them are villas our own team already manages. Ask for the current list.', 'See villas for sale', 'Hi The Host Bali! I am interested in villas for sale in Bali.'),
-    '/property-rental/': ('Need a villa in Bali?', 'Every villa on this site is managed by our own team. Tell us your dates, area and group size on WhatsApp and we reply the same day with availability and a direct price, no platform fees.', 'Browse villas for rent', 'Hi The Host Bali! I am looking for a villa in Bali.'),
-    '/villas/sanur/': ('Staying in Sanur?', 'We manage 11 private pool villas in Sanur, from 2-bedroom townhouses to 4-bedroom family villas near the beach path. Direct booking, same-day reply.', 'See villas in Sanur', 'Hi The Host Bali! I am looking for a villa in Sanur.'),
-    '/villas/canggu/': ('Staying in Canggu?', 'Our Canggu villas are large beachside houses for groups and families, managed by our own team. Ask for dates and a direct price.', 'See villas in Canggu', 'Hi The Host Bali! I am looking for a villa in Canggu.'),
-    '/villas/umalas/': ('Staying in Umalas?', 'Quiet pool townhouses between Canggu and Seminyak, set up for weeks and months: kitchens, desks, fast Wi-Fi and parking. Direct booking, same-day reply.', 'See villas in Umalas', 'Hi The Host Bali! I am looking for a villa in Umalas.'),
-    '/villas/ungasan/': ('Staying in Ungasan?', 'Teak eco villas with private pools on the Bukit, minutes from Melasti and Green Bowl beaches, managed by our own team. Ask for dates and a direct price.', 'See villas in Ungasan', 'Hi The Host Bali! I am looking for a villa in Ungasan.'),
-    '/villas/': ('Choosing an area?', 'We manage villas in four areas of Bali and know them street by street. Tell us what matters for your stay and we will suggest the right area and villa.', 'Compare villas by area', 'Hi The Host Bali! Can you help me choose an area and a villa in Bali?'),
-    '/contacts/': ('Talk to the team', 'One WhatsApp message reaches the people who hold the keys, not a call centre. We answer 8:00–22:00 Bali time, usually within about 15 minutes.', 'Contact us', 'Hi The Host Bali!'),
+    '/villa-management/': ('Own a villa in Bali?', 'We manage 20 villas in Sanur, Canggu, Umalas and Ungasan ourselves — marketing, guests, staff and monthly owner reports on one commission. Send us the location and a couple of photos for an honest assessment.', 'Talk about villa management', 'Hi BaliVillas! I own a villa in Bali and would like to discuss management.'),
+    '/villas-for-sale/': ('Looking at villas for sale?', 'Our listings come with rental history, running costs and documents, because most of them are villas our own team already manages. Ask for the current list.', 'See villas for sale', 'Hi BaliVillas! I am interested in villas for sale in Bali.'),
+    '/property-rental/': ('Need a villa in Bali?', 'Every villa on this site is managed by our own team. Tell us your dates, area and group size on WhatsApp and we reply the same day with availability and a direct price, no platform fees.', 'Browse villas for rent', 'Hi BaliVillas! I am looking for a villa in Bali.'),
+    '/villas/sanur/': ('Staying in Sanur?', 'We manage 11 private pool villas in Sanur, from 2-bedroom townhouses to 4-bedroom family villas near the beach path. Direct booking, same-day reply.', 'See villas in Sanur', 'Hi BaliVillas! I am looking for a villa in Sanur.'),
+    '/villas/canggu/': ('Staying in Canggu?', 'Our Canggu villas are large beachside houses for groups and families, managed by our own team. Ask for dates and a direct price.', 'See villas in Canggu', 'Hi BaliVillas! I am looking for a villa in Canggu.'),
+    '/villas/umalas/': ('Staying in Umalas?', 'Quiet pool townhouses between Canggu and Seminyak, set up for weeks and months: kitchens, desks, fast Wi-Fi and parking. Direct booking, same-day reply.', 'See villas in Umalas', 'Hi BaliVillas! I am looking for a villa in Umalas.'),
+    '/villas/ungasan/': ('Staying in Ungasan?', 'Teak eco villas with private pools on the Bukit, minutes from Melasti and Green Bowl beaches, managed by our own team. Ask for dates and a direct price.', 'See villas in Ungasan', 'Hi BaliVillas! I am looking for a villa in Ungasan.'),
+    '/villas/': ('Choosing an area?', 'We manage villas in four areas of Bali and know them street by street. Tell us what matters for your stay and we will suggest the right area and villa.', 'Compare villas by area', 'Hi BaliVillas! Can you help me choose an area and a villa in Bali?'),
+    '/contacts/': ('Talk to the team', 'One WhatsApp message reaches the people who hold the keys, not a call centre. We answer 8:00–22:00 Bali time, usually within about 15 minutes.', 'Contact us', 'Hi BaliVillas!'),
 }
 for k in ('/villas-for-sale/sanur/', '/villas-for-sale/umalas/', '/villas-for-sale/canggu/', '/villas-for-sale/ungasan/'):
     CTA[k] = CTA['/villas-for-sale/']
@@ -192,7 +192,7 @@ def head_html(title, desc, url, ldjson, ogtype='article'):
         f'<link rel="canonical" href="{SITE}{url}">\n'
         f'<link rel="alternate" hreflang="x-default" href="{SITE}{url}">\n<link rel="alternate" hreflang="en" href="{SITE}{url}">\n'
         f'<meta property="og:title" content="{esc(title)}">\n<meta property="og:description" content="{esc(desc)}">\n'
-        f'<meta property="og:url" content="{SITE}{url}">\n<meta property="og:type" content="{ogtype}">\n<meta property="og:site_name" content="The Host Bali">\n'
+        f'<meta property="og:url" content="{SITE}{url}">\n<meta property="og:type" content="{ogtype}">\n<meta property="og:site_name" content="BaliVillas">\n'
         f'<meta property="og:image" content="{SITE}/public-objects/hero/slide-05-1200.jpg">\n<meta name="twitter:card" content="summary_large_image">\n'
         '<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'
         '<link rel="stylesheet" href="/fonts/fonts.css">\n'  # blog pages do not load thb-tw.css, so they keep the separate font file
@@ -218,15 +218,15 @@ def cta_block(target, meta):
 def build_article(a, by_key):
     body_html, toc = render_body(a['_body'])
     hub = HUBS[a['hub']]
-    title = a['title'] + ' | The Host Bali'
+    title = a['title'] + ' | BaliVillas'
     crumb_items = [('Home', '/'), ('Guides', '/blog/'), (hub['short'], f'/blog/{a["hub"]}/'), (a['h1'], None)]
     faq = a['_faq']
     ld = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'Article', 'headline': a['h1'], 'description': a['description'], 'url': SITE + a['url'],
          'mainEntityOfPage': SITE + a['url'], 'datePublished': a.get('published', a.get('updated', TODAY)),
          'dateModified': a.get('updated', TODAY), 'inLanguage': 'en',
-         'author': {'@type': 'Organization', 'name': 'The Host Bali', 'url': SITE + '/about/'},
-         'publisher': {'@type': 'Organization', 'name': 'The Host Bali', 'url': SITE + '/', 'logo': {'@type': 'ImageObject', 'url': SITE + '/favicon.png'}},
+         'author': {'@type': 'Organization', 'name': 'BaliVillas', 'url': SITE + '/about/'},
+         'publisher': {'@type': 'Organization', 'name': 'BaliVillas', 'url': SITE + '/', 'logo': {'@type': 'ImageObject', 'url': SITE + '/favicon.png'}},
          'image': SITE + '/public-objects/hero/slide-05-1200.jpg', 'about': a.get('primary_query', '')},
         crumbs_ld(crumb_items)]}
     if faq:
@@ -265,12 +265,12 @@ def build_article(a, by_key):
         rel_html = '<section class="art-related" aria-label="Related guides"><h2>Keep reading</h2><div class="rel-grid">' + ''.join(
             f'<a class="rel-card" href="{r["url"]}"><p class="k">{esc(HUBS[r["hub"]]["short"])}</p><h3>{esc(r["h1"])}</h3><p>{esc(r["description"][:120])}…</p></a>' for r in rel[:3]) + '</div></section>'
     updated = a.get('updated', TODAY)
-    note = a.get('note', 'Written by The Host Bali team, who manage villas in Sanur, Canggu, Umalas and Ungasan. Prices, rules and visa details change; we date every guide and update it when something moves. Nothing here is legal or tax advice — for a purchase or a licence, check the specifics with a licensed notary or adviser in Bali.')
+    note = a.get('note', 'Written by BaliVillas team, who manage villas in Sanur, Canggu, Umalas and Ungasan. Prices, rules and visa details change; we date every guide and update it when something moves. Nothing here is legal or tax advice — for a purchase or a licence, check the specifics with a licensed notary or adviser in Bali.')
     page = (head_html(title, a['description'], a['url'], ld) + read('body-top.html') +
             '<main class="art-wrap"><div class="art">' + crumbs(crumb_items) +
             f'<div class="art-grid"><article><p class="art-kicker">{esc(hub["name"])}</p><h1>{esc(a["h1"])}</h1>'
             f'<p class="art-lead">{esc(a.get("lead", a["description"]))}</p>'
-            f'<div class="art-meta"><span>By <b>The Host Bali team</b></span><span>Updated <b>{esc(updated)}</b></span><span><b>{mins} min</b> read</span></div>'
+            f'<div class="art-meta"><span>By <b>BaliVillas team</b></span><span>Updated <b>{esc(updated)}</b></span><span><b>{mins} min</b> read</span></div>'
             + toc_html + '<div class="art-body">' + body_html + '</div>' + faq_html +
             f'<p class="art-note">{esc(note)}</p></article>' + side + '</div></div></main>' + rel_html +
             read('footer.html') + read('body-tail.html'))
@@ -282,12 +282,12 @@ def card(a):
 def build_hub(hub, arts, all_arts):
     h = HUBS[hub]
     url = f'/blog/{hub}/'
-    title = f'{h["name"]} — guides | The Host Bali'
+    title = f'{h["name"]} — guides | BaliVillas'
     desc = (h['lead'][:150] + '…') if len(h['lead']) > 155 else h['lead']
     crumb_items = [('Home', '/'), ('Guides', '/blog/'), (h['short'], None)]
     ld = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'CollectionPage', 'name': h['name'], 'description': desc, 'url': SITE + url,
-         'isPartOf': {'@type': 'WebSite', 'name': 'The Host Bali', 'url': SITE + '/'}},
+         'isPartOf': {'@type': 'WebSite', 'name': 'BaliVillas', 'url': SITE + '/'}},
         crumbs_ld(crumb_items),
         {'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': SITE + a['url'], 'name': a['h1']} for i, a in enumerate(arts)]}]}
     nav = '<nav class="hub-nav" aria-label="Guide sections">' + ''.join(
@@ -304,12 +304,12 @@ def build_hub(hub, arts, all_arts):
 
 def build_index(all_arts):
     url = '/blog/'
-    title = 'Bali villa guides: renting, living, buying and villa management | The Host Bali'
+    title = 'Bali villa guides: renting, living, buying and villa management | BaliVillas'
     desc = 'Practical guides from a Bali villa management team: renting villas in Sanur, Canggu, Umalas and Ungasan, long-term stays, buying property and managing a villa.'
     crumb_items = [('Home', '/'), ('Guides', None)]
     ld = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'CollectionPage', 'name': 'Bali villa guides', 'description': desc, 'url': SITE + url,
-         'isPartOf': {'@type': 'WebSite', 'name': 'The Host Bali', 'url': SITE + '/'}}, crumbs_ld(crumb_items)]}
+         'isPartOf': {'@type': 'WebSite', 'name': 'BaliVillas', 'url': SITE + '/'}}, crumbs_ld(crumb_items)]}
     body = f'<main class="hub-wrap">{crumbs(crumb_items)}<h1>Bali villa guides</h1><p class="hub-lead">{esc(desc)} Everything is written by the people who manage the villas, not by a content agency.</p>'
     body += '<nav class="hub-nav" aria-label="Guide sections">' + ''.join(f'<a href="/blog/{k}/">{esc(HUBS[k]["short"])}</a>' for k in HUB_ORDER) + '</nav>'
     for k in HUB_ORDER:
@@ -335,7 +335,7 @@ def main():
                 errors.append(f'{f}: missing {k}')
         if a['hub'] not in HUBS:
             errors.append(f'{f}: unknown hub {a["hub"]}')
-        tl = len(a.get('title', '')) + len(' | The Host Bali')
+        tl = len(a.get('title', '')) + len(' | BaliVillas')
         if tl > 70: errors.append(f'{f}: title too long ({tl})')
         dl = len(a.get('description', ''))
         if dl < 110 or dl > 165: errors.append(f'{f}: description length {dl}')

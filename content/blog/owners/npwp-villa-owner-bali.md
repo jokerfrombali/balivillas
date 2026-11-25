@@ -98,6 +98,6 @@ Yes, typically. A company structure like a PT PMA usually needs its own NPWP and
 
 Beyond potential tax liability, unclear NPWP status can complicate other administrative or property transactions later, even if it doesn't cause an immediate problem. It's worth resolving proactively with a tax adviser rather than waiting for it to surface unexpectedly at a later transaction.
 
-### Can The Host Bali help with my NPWP registration?
+### Can BaliVillas help with my NPWP registration?
 
 We provide general compliance guidance as part of our villa management service and can point you toward licensed local tax and legal professionals, but NPWP registration and tax filing themselves are handled by qualified accountants and tax advisers, not by us directly.

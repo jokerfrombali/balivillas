@@ -1,9 +1,9 @@
-# The Host Bali — facts sheet for writers (generated 2026-09-18 from the live site files)
+# BaliVillas — facts sheet for writers (generated 2026-09-18 from the live site files)
 
-Use ONLY these company facts. Anything not listed here about The Host Bali must not be claimed.
+Use ONLY these company facts. Anything not listed here about BaliVillas must not be claimed.
 
 ## Company
-- Brand: The Host Bali. Legal entity: PT MITRA VILA NUSANTARA, NIB 1000000008820545.
+- Brand: BaliVillas. Legal entity: PT MITRA VILA NUSANTARA, NIB 1000000008820545.
 - Office: Jalan Pasekan Gang Batu Ngonjol 10 No. 8, Batubulan Kangin, Kec. Sukawati, Kab. Gianyar, Bali 80582, Indonesia.
 - WhatsApp +62 857 4649 9697 (guest support 24/7; office hours Mon–Sat 9:00–18:00 WITA; booking replies 8:00–22:00 WITA, usually within about 15 minutes). Email hello@balivillas.ai. Instagram @thehostbali.
 - What we do: we manage every villa on the site ourselves (not an aggregator). Guests book direct over WhatsApp with no booking fee and no OTA commission on direct enquiries; payment is arranged after dates are confirmed, nothing is charged on the website. Some villas are also listed on Airbnb and Booking.com. Rates on request; quote the same day. Direct-booking discounts advertised on area pages: 5% off any stay, 10% off weekly, 15% off monthly.
@@ -44,7 +44,7 @@ Use ONLY these company facts. Anything not listed here about The Host Bali must 
 - Villa Sakura — Sanur — US$520,000 — leasehold until 2057 — 3 br — land 300 m², building 200 m² — /villas-for-sale/sanur/villa-sakura-3br/ — status available
 
 ## Hard rules
-- Never invent The Host Bali numbers (occupancy, income, number of guests, years, awards, reviews, case studies, staff counts).
+- Never invent BaliVillas numbers (occupancy, income, number of guests, years, awards, reviews, case studies, staff counts).
 - Indonesian law, tax, visa and permit details: explain the mechanism and the practical effect; cite specific figures only when you are confident they are current in 2026, phrase them as "as of 2026" and list every such figure in facts_to_verify so a lawyer/tax adviser can check before publishing. Never present a figure as certain if you are not.
 - Market prices (rents, purchase prices, build costs): give indicative ranges labelled as indicative/typical and say they vary by area, size and season; do not present a precise market statistic as fact. Prefer explaining what drives the price.
 - No fake testimonials, no named third-party companies as recommendations, no promises of returns or of rankings.

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * The Host Bali Growth Engine — бесплатный трафик из SEO + AI-поиска (GEO).
+ * BaliVillas Growth Engine — бесплатный трафик из SEO + AI-поиска (GEO).
  * Zero-dependency, Node 18+.
  *
  * Что генерирует из данных вашего API (Hostaway/собственный /api/villas):
@@ -34,7 +34,7 @@ const CFG = {
   origin: (process.env.SITE_ORIGIN || "https://balivillas.ai").replace(/\/$/, ""),
   wa: process.env.WA_NUMBER || "6281239081021",
   out: process.env.OUT_DIR || path.join(__dirname, "dist"),
-  brand: "The Host Bali",
+  brand: "BaliVillas",
   today: new Date().toISOString().slice(0, 10),
 };
 
@@ -360,7 +360,7 @@ function rss(villas) {
       (v) => `<item><title>${esc(v.name)} — ${esc(v.area)}, Bali${v.priceNight ? ` (${usd(v.priceNight)}/night)` : ""}</title><link>${CFG.origin}/villa/${v.slug}/</link><guid>${CFG.origin}/villa/${v.slug}/</guid><description>${esc(`${v.bedrooms}BR villa in ${v.area}, sleeps ${v.guests}.${v.priceNight ? ` From ${usd(v.priceNight)}/night.` : ""} Book direct, no OTA fees.`)}</description>${v.images[0] ? `<enclosure url="${esc(v.images[0])}" type="image/jpeg"/>` : ""}</item>`
     )
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>${CFG.brand} — The Host Bali</title><link>${CFG.origin}</link><description>Private villas in Bali, direct booking</description>${items}</channel></rss>`;
+  return `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>${CFG.brand} — BaliVillas</title><link>${CFG.origin}</link><description>Private villas in Bali, direct booking</description>${items}</channel></rss>`;
 }
 
 const sitemap = (urls) =>

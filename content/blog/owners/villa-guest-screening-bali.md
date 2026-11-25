@@ -85,5 +85,5 @@ Most Bali villa bookings don't require ID upfront, and asking for it can put off
 ### What if a guest exceeds the stated guest count during their stay?
 This is a house-rules breach, and having stated the maximum clearly in the booking confirmation gives you a basis to address it directly and calmly, either by requesting an additional guest fee where appropriate or asking excess guests to leave.
 
-### How does The Host Bali handle problem bookings across its villas?
+### How does BaliVillas handle problem bookings across its villas?
 Because we manage villas ourselves with staff regularly on the properties, unusual situations tend to be caught early rather than only discovered at checkout. We apply consistent booking questions and deposit terms across all our villas rather than case-by-case exceptions.

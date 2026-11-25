@@ -30,8 +30,8 @@ def build(v, tpl):
                   '<meta name="robots" content="index, follow">')
     h = h.replace('<meta name="googlebot" content="noindex, nofollow">',
                   '<meta name="googlebot" content="index, follow">')
-    h = h.replace("<title>The Host Bali</title>",
-                  f"<title>{html.escape(v['name'])} | {area}, Bali — The Host Bali</title>")
+    h = h.replace("<title>BaliVillas</title>",
+                  f"<title>{html.escape(v['name'])} | {area}, Bali — BaliVillas</title>")
 
     # 2) Имя, район, цифры
     h = h.replace("Umalas Premier Villa", name_short)
@@ -55,7 +55,7 @@ def build(v, tpl):
     # 5) Цена и лицензия
     h = h.replace("from $3,588 / night", "best direct rate via WhatsApp")
     h = h.replace("$3,588", "")
-    h = re.sub(r'Property License: \d*', "Hosted by The Host Bali", h)
+    h = re.sub(r'Property License: \d*', "Hosted by BaliVillas", h)
 
     # 6) Фото: mainfoto -> slug-1, photo_N -> slug-(2..6) циклично
     h = h.replace("assets/images/mainfoto.webp", f"/public-objects/images/{slug.split('-')[0]}__MAIN__")

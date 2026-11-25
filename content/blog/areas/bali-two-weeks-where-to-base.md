@@ -53,7 +53,7 @@ A one-week trip can absorb a slightly pricier nightly rate without the total mat
 ## Practical checklist before you book a base for two weeks
 
 - Confirm the villa has a proper kitchen and washing machine if you are self-catering some meals and doing laundry mid-trip.
-- Ask directly about a weekly or extended-stay discount rather than assuming the nightly rate is fixed; The Host Bali advertises 5% off any stay and 10% off a week, for example.
+- Ask directly about a weekly or extended-stay discount rather than assuming the nightly rate is fixed; BaliVillas advertises 5% off any stay and 10% off a week, for example.
 - Check the drive time to the airport for both your arrival and departure areas if you plan to split the stay, since a transfer at the start and end of a long trip adds up.
 - Decide in advance whether you want a scooter, a private driver, or to rely on ride-hailing apps for two weeks, because the answer changes which area suits you.
 - If travelling with children, prioritise a shallow or fenced pool and a short walk to food over being close to nightlife.
@@ -70,7 +70,7 @@ A private driver booked by the day or for airport transfers works well for famil
 
 ## Booking direct versus through a platform for a longer stay
 
-For a stay of two weeks, the gap between booking direct and booking through a platform tends to widen, since platform commissions and booking fees apply per booking rather than shrinking with length of stay. Booking direct with the villa or management company, as you can with The Host Bali over WhatsApp, avoids that fee entirely and often means a faster, more specific answer about availability, discounts and what is included, because you are talking to the people who actually manage the property rather than a listing intermediary.
+For a stay of two weeks, the gap between booking direct and booking through a platform tends to widen, since platform commissions and booking fees apply per booking rather than shrinking with length of stay. Booking direct with the villa or management company, as you can with BaliVillas over WhatsApp, avoids that fee entirely and often means a faster, more specific answer about availability, discounts and what is included, because you are talking to the people who actually manage the property rather than a listing intermediary.
 
 This matters more for two weeks than for a weekend, because a small percentage saved on a longer booking adds up to a more meaningful amount, and because a direct conversation makes it easier to confirm details that matter for a longer stay, such as mid-stay cleaning, a spare set of house keys, or whether the kitchen is genuinely set up for daily cooking rather than occasional use.
 

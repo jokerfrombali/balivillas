@@ -97,6 +97,6 @@ NIB (Nomor Induk Berusaha) and KBLI codes are part of underlying business regist
 
 Potential consequences include fines, forced closure, or complications with insurance and formal dispute resolution, though specific enforcement varies by area and changes over time. If you're unsure of your villa's current status, get a clear, current answer from a notary or the local tourism office rather than assuming informal operation carries low risk.
 
-### Can The Host Bali handle my villa's licensing for me?
+### Can BaliVillas handle my villa's licensing for me?
 
 We provide compliance guidance as part of our villa management service and help connect owners with the right local professionals, but formal licensing is processed through notaries and government offices, not by us directly. Ask us and we'll explain what we can help coordinate for your specific villa.

@@ -39,7 +39,7 @@ Purchase price is only the first number. Add notary and transfer costs, an annua
 | Notary and legal fees | Indicative, several percent of price | Get a written quote before signing anything |
 | Annual land and building tax (PBB) | Indicative, low relative to purchase price | Confirm current rate with a local tax adviser |
 | Furnishing to rental standard | US$8,000–20,000 | Depends on finish level and whether sold furnished |
-| Villa management (if renting out) | Commission on bookings, no fixed fee at The Host Bali | Ask for terms; rate not published here |
+| Villa management (if renting out) | Commission on bookings, no fixed fee at BaliVillas | Ask for terms; rate not published here |
 
 Rental income tax for individual landlords in Indonesia is charged as a final tax on gross rental income (as of 2026, verify) — the rate and any recent changes should be confirmed with your notary or tax adviser before you set a rental budget, since getting this wrong affects your real net yield more than almost any other line item.
 

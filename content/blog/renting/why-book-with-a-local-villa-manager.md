@@ -76,7 +76,7 @@ If you're deciding between managers or platforms, ask a specific question first,
 
 A local manager who actually runs the property can answer specific, accurate questions, confirm real-time availability, and resolve issues quickly during your stay since they or their staff are on the ground. An aggregator or overseas agent often has to relay requests to someone else first, which adds delay exactly when it matters most.
 
-### Does The Host Bali manage villas itself or outsource to other companies?
+### Does BaliVillas manage villas itself or outsource to other companies?
 
 We manage all 20 of our villas ourselves with our own housekeeping and maintenance crew across Sanur, Canggu, Umalas and Ungasan, rather than outsourcing to separate contractors per property. This is part of why we can respond quickly and consistently if something comes up during a guest's stay.
 

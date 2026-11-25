@@ -98,5 +98,5 @@ Most residential areas, including Sanur, Umalas and Ungasan, expect evening nois
 ### Can I bring extra day guests to a villa for a birthday party?
 Usually yes, up to a limit agreed in advance, since villa utilities and staffing are set up for the booked overnight group size. Tell us your expected day-guest numbers when booking so this can be confirmed before your event, not on the day.
 
-### Does The Host Bali arrange catering for villa parties?
+### Does BaliVillas arrange catering for villa parties?
 It varies by villa and isn't standard across all properties, so ask directly when booking if catering or a private chef is something you want for your event. We'll tell you honestly what's realistic for the villa you're considering.

@@ -48,7 +48,7 @@ This keeps one check-in and one check-out, and lets you use the middle of the we
 
 ## Booking and check-in logistics
 
-Check-in is typically from 3:00 pm and check-out by 11:00 am, though early or late arrangements are often possible outside high season on request — worth asking when you book, especially for a late-night or early-morning flight. Booking direct rather than through a platform means you can ask this kind of question and get a same-day answer, and it usually comes with a discount: The Host Bali advertises 5% off any stay when you book direct.
+Check-in is typically from 3:00 pm and check-out by 11:00 am, though early or late arrangements are often possible outside high season on request — worth asking when you book, especially for a late-night or early-morning flight. Booking direct rather than through a platform means you can ask this kind of question and get a same-day answer, and it usually comes with a discount: BaliVillas advertises 5% off any stay when you book direct.
 
 ## Common mistakes for a one-week trip
 

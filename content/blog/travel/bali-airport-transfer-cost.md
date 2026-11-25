@@ -81,5 +81,5 @@ Canggu is generally further from the airport than Sanur, meaning a longer transf
 ### Should I book a private driver for my whole stay instead of just the airport transfer?
 If you're planning several day trips or multiple journeys during your stay, a private driver arranged for the period can work out more convenient and cost-effective than booking separate transfers each time. Our private driver cost guide covers this comparison.
 
-### Does The Host Bali arrange airport transfers for guests?
+### Does BaliVillas arrange airport transfers for guests?
 Yes, we can arrange transfers as part of your villa booking, and because we manage the villa ourselves, our driver knows exactly how to find it, which matters on some of Bali's smaller residential lanes.

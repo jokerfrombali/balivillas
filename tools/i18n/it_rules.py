@@ -18,7 +18,7 @@ for v in V:
     NAMES.add(v['name']); NAMES.add(v['name'].split(' — ')[0]); NAMES.add(v['name'].split(' — ')[0])
 for x in S:
     NAMES.add(x['shortName']); NAMES.add(x['name'])
-NAMES |= {'Sanur', 'Canggu', 'Umalas', 'Ungasan', 'Pererenan', 'Bali', 'The Host Bali', 'The HOST', 'WhatsApp',
+NAMES |= {'Sanur', 'Canggu', 'Umalas', 'Ungasan', 'Pererenan', 'Bali', 'BaliVillas', 'The HOST', 'WhatsApp',
           'Instagram', 'Email', 'Bosch', 'Hostex', 'Airbnb', 'Booking.com', 'Google', 'Wi-Fi', 'IDR', 'USD', 'EUR',
           'hello@balivillas.ai', 'THB-001', 'THB-002', 'THB-003', 'THB-004', 'THB-005', 'THB-006',
           'Jl. Kesari II, Sanur, South Denpasar', 'Jl. Kesari II, Sanur, Denpasar Selatan',
@@ -40,10 +40,10 @@ PAT = [
     (r'^Villas in (Sanur|Canggu|Umalas|Ungasan), Bali$', r'Ville a \1, Bali'),
     (r'^Villa in (Sanur|Canggu|Umalas|Ungasan)$', r'Villa a \1'),
     (r'^Villa for sale in (Sanur|Canggu|Umalas|Ungasan), Bali$', r'Villa in vendita a \1, Bali'),
-    (r'^(.+) — Photo gallery \| The Host Bali$', r'\1 — Galleria fotografica | The Host Bali'),
-    (r'^(.+) photo tour \| The Host Bali$', r'\1 — Galleria fotografica | The Host Bali'),
-    (r'^Photo tour of (.+): every room, the pool and the outdoor areas\. Managed and rented direct by The Host Bali\.$',
-     r'Tour fotografico di \1: ogni stanza, la piscina e gli spazi esterni. Gestita e affittata direttamente da The Host Bali.'),
+    (r'^(.+) — Photo gallery \| BaliVillas$', r'\1 — Galleria fotografica | BaliVillas'),
+    (r'^(.+) photo tour \| BaliVillas$', r'\1 — Galleria fotografica | BaliVillas'),
+    (r'^Photo tour of (.+): every room, the pool and the outdoor areas\. Managed and rented direct by BaliVillas\.$',
+     r'Tour fotografico di \1: ogni stanza, la piscina e gli spazi esterni. Gestita e affittata direttamente da BaliVillas.'),
     (r'^(\d+) villas$', r'\1 ville'),
     (r'^(\d+) villa$', r'\1 villa'),
     (r'^(\d+) bed$', r'\1 letti'),
@@ -95,9 +95,9 @@ def try_extra(t):
     m = re.match(r'^(.+) — (.+?) photo (\d+)$', t)
     if m:
         return '%s — %s, foto %s' % (m.group(1), room_it(m.group(2)), m.group(3))
-    m = re.match(r'^Photo tour of (.+): every room, the pool and the outdoor areas\. Managed and rented direct(?:ly)? by The Host Bali\.$', t)
+    m = re.match(r'^Photo tour of (.+): every room, the pool and the outdoor areas\. Managed and rented direct(?:ly)? by BaliVillas\.$', t)
     if m:
-        return 'Tour fotografico di %s: ogni stanza, la piscina e gli spazi esterni. Gestita e affittata direttamente da The Host Bali.' % m.group(1)
+        return 'Tour fotografico di %s: ogni stanza, la piscina e gli spazi esterni. Gestita e affittata direttamente da BaliVillas.' % m.group(1)
     m = re.match(r'^Frequently asked questions — (.+)$', t)
     if m:
         return 'Domande frequenti — ' + m.group(1)

@@ -86,7 +86,7 @@ Umalas is the strongest fit among our four areas for long-stay tenants who want 
 ### Is Umalas good for long-term rental?
 Yes, particularly for remote workers who want café and coworking access without Canggu's traffic. It's quieter and more residential than Canggu while still close to it.
 
-### What villa sizes does The Host Bali manage in Umalas?
+### What villa sizes does BaliVillas manage in Umalas?
 We manage three villas in Umalas: two pool townhouses (3-bedroom and 2-bedroom) set up with dedicated workspaces and fast Wi-Fi, and a larger 4-bedroom pool villa, Villa Papat, suited to bigger groups or families.
 
 ### Is Umalas close to Canggu?

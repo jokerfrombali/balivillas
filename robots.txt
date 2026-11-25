@@ -1,4 +1,4 @@
-# The Host Bali — all crawlers welcome, including AI assistants
+# BaliVillas — all crawlers welcome, including AI assistants
 User-agent: *
 Allow: /
 

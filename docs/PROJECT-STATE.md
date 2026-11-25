@@ -83,7 +83,7 @@ VacationRental/ItemList/BreadcrumbList/FAQPage/LocalBusiness JSON-LD,
 шрифты локально в /fonts/, llms.txt, hreflang (главная ↔ 16 языковых).
 
 Осталось (владелец): Google Business Profile —
-черновик создан (The Host Bali, Vacation home rental agency), нужен ввод
+черновик создан (BaliVillas, Vacation home rental agency), нужен ввод
 адреса + видео-подтверждение (инструкция в SEO-CHECKLIST §4); фото для GBP
 подготовлены в `D:\Projects\thebalihost-gbp-photos`. Через 7–10 дней после
 19.08.2026 — первый разбор запросов в Search Console.

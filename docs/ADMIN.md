@@ -89,7 +89,7 @@ GA4 читает **сервисный аккаунт** (`thehostbali-stats@theho
 
 Область запрошена одна и только на чтение: `webmasters.readonly`.
 
-**Важно про 7 дней.** OAuth-приложение (`The Host Bali Stats`, проект
+**Важно про 7 дней.** OAuth-приложение (`BaliVillas Stats`, проект
 `thehostbali`) переведено в статус **In production**. Если кто-то вернёт его в
 «Testing», все refresh-токены начнут протухать через 7 дней и Search Console в
 панели молча отвалится. Не возвращайте.

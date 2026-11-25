@@ -33,7 +33,7 @@ A deposit is meant to cover accidental damage, breakages, missing linen or equip
 | Excess cleaning (stains, spills, mess) | Minor scuffs from reasonable use |
 | Damage to pool equipment or garden | Weather-related issues outside guest control |
 
-## How we handle it at The Host Bali
+## How we handle it at BaliVillas
 
 We manage all 20 of our [villas for rent](/property-rental/) directly, so the process is consistent across Sanur, Canggu, Umalas and Ungasan rather than varying owner to owner. We confirm the deposit terms for your specific booking over WhatsApp before you pay, and any deduction after your stay is explained with a reason, not deducted silently. If you have questions about a charge, message us and we will walk through it with you. Exact deposit amounts depend on the villa and length of stay, so ask for your dates directly rather than relying on a figure quoted elsewhere.
 

@@ -36,7 +36,7 @@ Pool safety is usually the biggest practical concern for families, more than gen
 
 A villa gives you control over your own space, one locked gate rather than shared hotel corridors and lift lobbies, but it also means less on-site staff presence around the clock unless the villa specifically offers it. Neither is inherently safer in the abstract; it depends on what matters to you. Our guide on [villa versus hotel in Bali](/blog/renting/villa-vs-hotel-bali/) compares the two more broadly, including security as one factor among several.
 
-## What we do at The Host Bali
+## What we do at BaliVillas
 
 We manage every one of our [villas for rent](/property-rental/) ourselves, which means a consistent standard of gated access, working locks and lighting across our 20 villas in Sanur, Canggu, Umalas and Ungasan, rather than relying on individual owners to maintain this independently. Guest support is available 24/7 over WhatsApp, so if something comes up during your stay, day or night, there's a direct line to someone who can help, not a generic call centre.
 

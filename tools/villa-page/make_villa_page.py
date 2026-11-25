@@ -221,7 +221,7 @@ def build(v, tpl):
         'amenityFeature': [{'@type': 'LocationFeatureSpecification', 'name': a, 'value': True}
                            for a in v['amenities'][:8]],
         'geo': {'@type': 'GeoCoordinates', 'latitude': v['lat'], 'longitude': v['lng']},
-        'brand': {'@type': 'Brand', 'name': 'The Host Bali'},
+        'brand': {'@type': 'Brand', 'name': 'BaliVillas'},
     }
     crumbs = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
         {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE + '/'},

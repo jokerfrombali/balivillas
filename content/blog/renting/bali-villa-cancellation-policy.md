@@ -1,7 +1,7 @@
 ---
 page_id: P011
 title: Bali Villa Cancellation Policy Explained
-description: How Bali villa cancellation policies actually work, what to check before you pay a deposit, and how The Host Bali handles changes and cancellations.
+description: How Bali villa cancellation policies actually work, what to check before you pay a deposit, and how BaliVillas handles changes and cancellations.
 h1: Bali Villa Cancellation Policy
 lead: Most Bali villas set their own cancellation terms, so read them before you pay a deposit; we confirm ours in writing on WhatsApp before you send anything.
 primary_query: bali villa cancellation policy
@@ -22,7 +22,7 @@ Most Bali villa bookings use tiered terms tied to how close to check-in you canc
 
 Some owners also distinguish between cancelling outright and changing dates. Moving your stay to different dates, subject to availability, is often possible even inside a window where a straight cancellation would forfeit the deposit. It's worth asking about this separately.
 
-## What we do at The Host Bali
+## What we do at BaliVillas
 
 We manage every villa on our site ourselves, so terms are consistent across our 20 villas rather than set villa-by-villa by different owners. We do not charge anything on the website itself; payment is arranged only after your dates are confirmed over WhatsApp, and we send the cancellation and payment terms in that same conversation before you pay a deposit. If your plans change, message us directly and we will tell you plainly what is refundable and what changing dates would involve for your specific booking (as of 2026, verify current wording with us, since terms can be refined between updates to this page).
 
@@ -96,7 +96,7 @@ Before you commit to any villa, get the cancellation terms in writing, check the
 
 It depends on how close to your check-in date you cancel and the specific villa's terms. Most villas offer a full or near-full refund if you cancel well ahead of arrival, a partial refund in a middle window, and no refund close to the date. Ask for the exact cutoff dates in writing before you pay a deposit, and confirm whether the deposit itself is refundable or only the remaining balance.
 
-### Does The Host Bali charge anything upfront to hold a booking?
+### Does BaliVillas charge anything upfront to hold a booking?
 
 Nothing is charged on the website itself. We confirm availability and price over WhatsApp first, and payment is arranged only after your dates are agreed. The cancellation and deposit terms are part of that same conversation, so you know exactly what you are agreeing to before any money changes hands.
 

@@ -34,7 +34,7 @@ Between roughly November and March, extended cloud cover reduces how much the so
 
 ## What a well-run villa does differently
 
-At The Host Bali, our maintenance crew checks the solar tank, booster element and shower mixers as part of routine servicing between guest stays, not only when someone reports a problem. That's the difference between a villa where hot water is a non-issue and one where it's a recurring guest complaint. When you're comparing listings, ask directly whether the villa has a solar tank with electric backup and when it was last serviced — a manager who answers specifically, rather than just saying "yes we have hot water," is usually managing the property properly.
+At BaliVillas, our maintenance crew checks the solar tank, booster element and shower mixers as part of routine servicing between guest stays, not only when someone reports a problem. That's the difference between a villa where hot water is a non-issue and one where it's a recurring guest complaint. When you're comparing listings, ask directly whether the villa has a solar tank with electric backup and when it was last serviced — a manager who answers specifically, rather than just saying "yes we have hot water," is usually managing the property properly.
 
 ## Comparing the common setups
 

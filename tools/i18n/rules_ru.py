@@ -24,7 +24,7 @@ for v in V:
     NAMES.add(v['name'].split(' — ')[0])
 for x in S:
     NAMES.add(x['shortName']); NAMES.add(x['name'])
-NAMES |= {'Bali', 'The Host Bali', 'The HOST', 'WhatsApp', 'Instagram', 'Email', 'Bosch',
+NAMES |= {'Bali', 'BaliVillas', 'The HOST', 'WhatsApp', 'Instagram', 'Email', 'Bosch',
           'Hostex', 'Airbnb', 'Booking.com', 'Agoda', 'Trip.com', 'Google', 'Wi-Fi',
           'IDR', 'USD', 'EUR', 'hello@balivillas.ai', 'Pererenan', 'Berawa', 'Seminyak',
           'Uluwatu', 'Melasti', 'Green Bowl', 'Ubud', 'Jimbaran', 'Pecatu', 'Kerobokan',
@@ -193,9 +193,9 @@ def try_pattern(t):
     m = re.match(r'^(.+) — (.+?) photo (\d+)$', t)
     if m:
         return '%s — %s, фото %s' % (m.group(1), room_ru(m.group(2)), m.group(3))
-    m = re.match(r'^(.+) — Photo gallery \| The Host Bali$', t)
+    m = re.match(r'^(.+) — Photo gallery \| BaliVillas$', t)
     if m:
-        return '%s — фотогалерея | The Host Bali' % m.group(1)
+        return '%s — фотогалерея | BaliVillas' % m.group(1)
     m = re.match(r'^Frequently asked questions — (.+)$', t)
     if m:
         return 'Частые вопросы — ' + m.group(1)

@@ -70,5 +70,5 @@ Heavy rain and power cuts are the most common causes of brief disruptions, since
 ### Which areas of Bali have the best internet for long stays?
 Canggu, Umalas and Sanur generally have the most consistent fibre coverage given the concentration of remote workers and coworking infrastructure in those areas. More rural parts of the island can have less consistent coverage, worth checking directly before committing to a long stay there.
 
-### Do The Host Bali villas include reliable internet for remote work?
+### Do BaliVillas villas include reliable internet for remote work?
 Yes, our long-stay villas across all four areas are set up with fast Wi-Fi and dedicated workspaces, and we can talk through actual connection quality and any backup options for a specific villa before you book.

@@ -89,7 +89,7 @@ Yes, particularly for couples or small households who want quiet, clifftop views
 ### Do I need a scooter or car to live in Ungasan?
 Essentially yes — the area's lanes are longer and more spread out than Sanur's or Umalas's, and reaching beaches and restaurants comfortably needs transport.
 
-### What villa sizes does The Host Bali manage in Ungasan?
+### What villa sizes does BaliVillas manage in Ungasan?
 We manage four teak-built villas in Ungasan, three 1-bedroom and one 2-bedroom, each with a private pool — suited to couples or small households rather than large families.
 
 ### Is Ungasan far from the airport?

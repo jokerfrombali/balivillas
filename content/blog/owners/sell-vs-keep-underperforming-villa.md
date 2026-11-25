@@ -85,5 +85,5 @@ Gather 12 months of actual income data, running costs and any maintenance histor
 ### Can changing management companies fix a struggling villa without selling?
 Often yes, if the underperformance is coming from weak marketing, inconsistent pricing or poor guest communication rather than the property itself. It's worth trying before committing to a sale, since a change in management is far less costly and disruptive than selling.
 
-### Does The Host Bali help owners sell villas as well as manage them?
+### Does BaliVillas help owners sell villas as well as manage them?
 Yes — our villas for sale listings typically come with rental history and running costs, because many of them are properties our own team already manages, which gives buyers (and sellers) a clearer picture than a bare listing.

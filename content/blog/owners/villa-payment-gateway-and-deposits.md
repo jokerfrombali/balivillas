@@ -91,5 +91,5 @@ Whichever currency you actually settle in, stated clearly and as an exact figure
 ### How do I handle a guest who wants to cancel after paying a deposit?
 Refer back to the cancellation terms you sent when the deposit was requested. This is exactly why those terms need to be written down at the start — negotiating them after a cancellation request arrives is far harder and less consistent.
 
-### Does The Host Bali charge guests anything through its own website?
+### Does BaliVillas charge guests anything through its own website?
 No. Nothing is charged on balivillas.ai itself; payment is arranged directly with the guest after dates and rate are confirmed, and there is no booking fee or OTA-style commission on direct enquiries.

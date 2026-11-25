@@ -84,7 +84,7 @@ Tell us your total group size, how many separate travelling parties are within i
 
 ## FAQ
 
-### What's the largest villa The Host Bali manages for a group?
+### What's the largest villa BaliVillas manages for a group?
 Leonardo, in Pererenan, has nine bedrooms and sleeps up to 18 guests, with a home cinema, piano and BBQ area for group gatherings. Villa The Wave, in Canggu, sleeps up to 12 across six en-suite bedrooms and sits close to Berawa Beach.
 
 ### Is it cheaper to book one large villa or several smaller ones for a big group?

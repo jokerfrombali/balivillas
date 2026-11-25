@@ -114,6 +114,6 @@ Reliability is broadly similar across Sanur, Canggu, Umalas and Ungasan, since t
 
 No. Lights kept low or off during Nyepi are a planned religious observance, not an outage. See our guide on staying in a villa during Nyepi for what that day involves if your stay overlaps with it.
 
-### Does The Host Bali have backup power at its villas?
+### Does BaliVillas have backup power at its villas?
 
 Our villas are set up with backup lighting and, depending on the property, generator or inverter support for key circuits, precisely because outages are one of the few things genuinely outside anyone's control. Ask us about the specific setup at any villa you are considering.

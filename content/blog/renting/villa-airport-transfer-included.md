@@ -87,6 +87,6 @@ Confirm in advance how the driver or manager will be informed of delays and how 
 
 Yes, that's fine — just make sure your driver has the exact villa address and ideally a local contact number, since some villa compounds sit down lanes that aren't always easy for an unfamiliar driver to find.
 
-### Does The Host Bali arrange airport pickups for its villas?
+### Does BaliVillas arrange airport pickups for its villas?
 
 We can coordinate airport pickup timed to your flight for direct bookings — send your flight number and arrival time and we'll confirm the arrangement and cost before you travel.

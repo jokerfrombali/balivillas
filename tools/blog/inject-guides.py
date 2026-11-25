@@ -38,7 +38,7 @@ for f,(target,title,hub) in PAGES.items():
     if not os.path.exists(p): continue
     h=open(p,encoding='utf-8').read()
     items=''.join(f'<li><a href="{a["url"]}">{html.escape(a["h1"])}<span>{html.escape(a["description"][:90])}…</span></a></li>' for a in pick(target))
-    block=f'<!-- thb-guides:begin -->{CSS}<section class="thb-guides" aria-label="Guides"><h2>{html.escape(title)}</h2><p class="l">Written by The Host Bali team, who manage the villas on this site.</p><ul>{items}</ul><a class="all" href="{hub}">All guides →</a></section><!-- thb-guides:end -->'
+    block=f'<!-- thb-guides:begin -->{CSS}<section class="thb-guides" aria-label="Guides"><h2>{html.escape(title)}</h2><p class="l">Written by BaliVillas team, who manage the villas on this site.</p><ul>{items}</ul><a class="all" href="{hub}">All guides →</a></section><!-- thb-guides:end -->'
     if '<!-- thb-guides:begin -->' in h:
         h=re.sub(r'<!-- thb-guides:begin -->.*?<!-- thb-guides:end -->',lambda m:block,h,flags=re.S)
     else:

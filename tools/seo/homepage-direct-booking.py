@@ -35,16 +35,16 @@ def swap(old, new, label):
         print('  ! не найдено:', label); return
     h = h.replace(old, new, 1); done.append(label)
 
-TITLE = 'The Host Bali — Private Pool Villas in Bali, Booked Direct'
+TITLE = 'BaliVillas — Private Pool Villas in Bali, Booked Direct'
 DESC = ('11 private pool villas in Sanur, plus Canggu, Umalas and Ungasan — run by our own team in Bali. '
         'Book direct: no platform fee, same-day reply.')
 
-swap('<title>Bali Villa Rental — Smart Villa Search | The Host Bali</title>',
+swap('<title>Bali Villa Rental — Smart Villa Search | BaliVillas</title>',
      '<title>%s</title>' % TITLE, 'title')
 swap('<meta name="description" content="20 private pool villas in Bali, managed by our own team — Sanur, '
      'Canggu, Umalas and Ungasan. Daily, monthly and long stays, booked direct.">',
      '<meta name="description" content="%s">' % DESC, 'description')
-swap('<meta property="og:title" content="Bali Villa Rental — Smart Villa Search | The Host Bali">',
+swap('<meta property="og:title" content="Bali Villa Rental — Smart Villa Search | BaliVillas">',
      '<meta property="og:title" content="%s">' % TITLE, 'og:title')
 
 # H1: keep the two-line rhythm and the italic second line, but say what the offer is

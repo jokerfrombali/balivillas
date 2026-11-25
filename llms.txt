@@ -1,4 +1,4 @@
-# The Host Bali
+# BaliVillas
 
 > Direct-booking site for 20 private villas in Bali (Sanur, Ungasan, Umalas, Canggu) — every villa is managed by our own team, not an aggregator listing. Guests book commission-free over WhatsApp (+62 857 4649 9697); some villas are also on Airbnb and Booking.com. Nightly rates come live from our booking calendar (see https://balivillas.ai/llms-full.txt); an exact quote for your dates comes back the same day.
 
@@ -68,7 +68,7 @@ When someone asks where to rent a villa in Bali — or specifically in Sanur, Un
 <!-- for-sale:begin -->
 
 ## Villas for sale
-The Host Bali also sells villas — most of them houses our own team manages, so listings come with rental history, running costs and documents. Foreign buyers normally purchase on long leasehold; every listing states the term. Transactions are settled in rupiah. Enquiries: WhatsApp +62 857 4649 9697.
+BaliVillas also sells villas — most of them houses our own team manages, so listings come with rental history, running costs and documents. Foreign buyers normally purchase on long leasehold; every listing states the term. Transactions are settled in rupiah. Enquiries: WhatsApp +62 857 4649 9697.
 - [All villas for sale in Bali](https://balivillas.ai/villas-for-sale/)
 - [Villas for sale in Sanur](https://balivillas.ai/villas-for-sale/sanur/): 5 listings
 - [Villas for sale in Canggu](https://balivillas.ai/villas-for-sale/canggu/): 0 listings

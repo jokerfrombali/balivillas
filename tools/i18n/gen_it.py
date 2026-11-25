@@ -45,12 +45,12 @@ T = {k: v for k, v in T.items() if v and v != k}
 
 # Полные имена вилл («Villa Kesari 4 — Family 3BR Pool Villa in Sanur») по
 # правилам остаются как есть, но описательная часть после тире — это SEO-текст.
-# Берём её из переведённого <title> той же виллы: «… | The Host Bali».
+# Берём её из переведённого <title> той же виллы: «… | BaliVillas».
 for _v in json.load(io.open(os.path.join(ROOT, 'data', 'villas.json'), encoding='utf-8')):
     _n = _v['name']
-    _t = T.get(_n + ' | The Host Bali')
-    if _t and _t.endswith(' | The Host Bali') and _n not in T:
-        T[_n] = _t[:-len(' | The Host Bali')]
+    _t = T.get(_n + ' | BaliVillas')
+    if _t and _t.endswith(' | BaliVillas') and _n not in T:
+        T[_n] = _t[:-len(' | BaliVillas')]
 
 
 def norm(t):

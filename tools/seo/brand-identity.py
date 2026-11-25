@@ -27,7 +27,7 @@ os.chdir(ROOT)
 # на пустую страницу в sameAs нельзя — это сигнал в никуда. Впишите сюда профиль,
 # когда он появится: sameAs как раз и разводит одноимённые компании.
 SAME_AS = []
-ALT_NAMES = ["TheHostBali", "The Host Bali Villas", "Host Bali"]
+ALT_NAMES = ["TheHostBali", "BaliVillas Villas", "Host Bali"]
 
 changed = skipped = 0
 for f in sorted(glob.glob('**/*.html', recursive=True)):

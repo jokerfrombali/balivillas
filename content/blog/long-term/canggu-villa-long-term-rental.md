@@ -83,7 +83,7 @@ Canggu remains the strongest choice for long-stay tenants prioritising surf, caf
 ### Is Canggu good for long-term rental?
 Yes, particularly for remote workers and surfers who want cafés, coworking and surf breaks close by. It's busier and more built-up than Sanur or Umalas, which suits some long-stayers and not others.
 
-### What villa sizes does The Host Bali manage in Canggu?
+### What villa sizes does BaliVillas manage in Canggu?
 We manage two villas in Canggu: a 6-bedroom beachside villa near Berawa Beach and a 9-bedroom resort-style villa in Pererenan, both suited to groups or families wanting space.
 
 ### Is Canggu expensive for long-term villa rental?

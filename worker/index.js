@@ -1,4 +1,4 @@
-/* The Host Bali — site backend on Cloudflare Workers.
+/* BaliVillas — site backend on Cloudflare Workers.
  *
  * Serves the static site (ASSETS binding) and adds a small API that talks to the
  * Telegram admin chat:

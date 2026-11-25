@@ -14,7 +14,7 @@ facts_to_verify: none
 ---
 The best beaches in Bali depend entirely on what you want from a beach day, and the island's coastline varies enough that a single "best" answer misleads more than it helps. Sanur's bay is calm and shallow, good for families and slow mornings. Canggu and the Bukit have real surf and dramatic cliff settings, better for active days and sunset views than for a toddler paddling unsupervised. Knowing which category you want narrows the choice fast.
 
-Because The Host Bali manages villas in Sanur, Canggu, Umalas and Ungasan, we see all four coastal styles daily through guests' eyes — which beaches disappoint people expecting Instagram photos, and which ones consistently deliver for the trip they actually planned.
+Because BaliVillas manages villas in Sanur, Canggu, Umalas and Ungasan, we see all four coastal styles daily through guests' eyes — which beaches disappoint people expecting Instagram photos, and which ones consistently deliver for the trip they actually planned.
 
 ## Calm, family-friendly beaches
 

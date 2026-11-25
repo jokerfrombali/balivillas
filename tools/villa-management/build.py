@@ -161,7 +161,7 @@ def steps():
 
 def service_ld(url, name, area):
     ld = {"@context": "https://schema.org", "@type": "Service", "name": name, "serviceType": "Villa management", "url": SITE + url,
-          "provider": {"@type": "Organization", "name": "The Host Bali", "url": SITE + "/", "telephone": "+62 857 4649 9697"},
+          "provider": {"@type": "Organization", "name": "BaliVillas", "url": SITE + "/", "telephone": "+62 857 4649 9697"},
           "areaServed": area, "offers": {"@type": "Offer", "description": "20% commission on actual booking revenue, no fixed fees"}}
     bc = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"}, {"@type": "ListItem", "position": 2, "name": "Villa management", "item": SITE + "/villa-management/"}, {"@type": "ListItem", "position": 3, "name": name, "item": SITE + url}]}
     return '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script><script type="application/ld+json">' + json.dumps(bc, ensure_ascii=False) + '</script>'
@@ -241,7 +241,7 @@ calc_html = '''<div class="calc" id="calc">
   </div>
   <div class="out">
     <span style="font-size:12.5px;color:#6b6b66">Gross booking revenue per year</span><b id="o_gross">—</b>
-    <p>Platform fees: <span id="o_ota">—</span> · The Host Bali 20%: <span id="o_fee">—</span> · Running costs: <span id="o_costs">—</span></p>
+    <p>Platform fees: <span id="o_ota">—</span> · BaliVillas 20%: <span id="o_fee">—</span> · Running costs: <span id="o_costs">—</span></p>
     <span style="font-size:12.5px;color:#6b6b66">Estimated net to owner per year</span><b id="o_net">—</b>
     <p id="o_month">—</p>
     <a class="btn-wa" href="#" id="o_wa" rel="noopener">Ask for an exact estimate for my villa</a>
@@ -265,8 +265,8 @@ faq_html, faq_ld = faq_block([('Is this a guaranteed income?', 'No. It is arithm
 body += section('Questions owners ask', 'Income calculator: FAQ', faq_html, 'faq')
 body += section('Related', 'More on <span class="serif" style="font-style:italic">villa management</span>', related(['pricing', 'rent-out-my-villa', 'holiday-rental-management', 'long-term-rental-management', 'foreign-and-overseas-owners'], NAMES), 'related', wide=True)
 body += final_cta('Hi! I own a villa in Bali and would like an income estimate.')
-doc = head_for(url, 'Bali Villa Rental Income Calculator | The Host Bali', 'Estimate what your Bali villa could earn under management from your own nightly rate and occupancy assumptions, minus platform fees, our 20% commission and running costs.') + service_ld(url, 'Villa income calculator', 'Bali') + faq_ld + '\n' + body + '\n' + TAIL
-write(url, doc); built.append((url, 'Bali Villa Rental Income Calculator | The Host Bali'))
+doc = head_for(url, 'Bali Villa Rental Income Calculator | BaliVillas', 'Estimate what your Bali villa could earn under management from your own nightly rate and occupancy assumptions, minus platform fees, our 20% commission and running costs.') + service_ld(url, 'Villa income calculator', 'Bali') + faq_ld + '\n' + body + '\n' + TAIL
+write(url, doc); built.append((url, 'Bali Villa Rental Income Calculator | BaliVillas'))
 
 # ---------------- hub update ----------------
 h = hub

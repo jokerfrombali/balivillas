@@ -26,23 +26,23 @@ CUT_TO = '<!-- =============== CONTACT + OFFICE'
 
 PAGES = {
  'about/index.html': dict(
-   h1='About <span class="italic">The Host Bali.</span>',
+   h1='About <span class="italic">BaliVillas.</span>',
    lead='We rent out and manage private pool villas in Bali — eleven in Sanur, '
         'plus Canggu, Umalas and Ungasan. Every villa on this site is run by our own team: '
         'we clean it, answer the messages and keep the calendar you see.',
    cta_href='/property-rental/', cta_text='See our villas',
-   title='About The Host Bali — the team that runs the villas',
-   desc='The Host Bali rents out and manages private pool villas in Sanur, Canggu, Umalas '
+   title='About BaliVillas — the team that runs the villas',
+   desc='BaliVillas rents out and manages private pool villas in Sanur, Canggu, Umalas '
         'and Ungasan. Run by our own team on the island. Visit us in Canggu.',
  ),
  'it/about/index.html': dict(
-   h1='Chi siamo: <span class="italic">The Host Bali.</span>',
+   h1='Chi siamo: <span class="italic">BaliVillas.</span>',
    lead='Affittiamo e gestiamo ville con piscina privata a Bali — undici a Sanur, '
         'più Canggu, Umalas e Ungasan. Ogni villa su questo sito è gestita dal nostro team: '
         'la puliamo noi, rispondiamo noi ai messaggi e teniamo noi il calendario che vedete.',
    cta_href='/it/property-rental/', cta_text='Guarda le ville',
-   title='Chi siamo — The Host Bali | il team che gestisce le ville',
-   desc='The Host Bali affitta e gestisce ville con piscina privata a Sanur, Canggu, Umalas '
+   title='Chi siamo — BaliVillas | il team che gestisce le ville',
+   desc='BaliVillas affitta e gestisce ville con piscina privata a Sanur, Canggu, Umalas '
         'e Ungasan. Gestite dal nostro team sull&rsquo;isola. Venite a trovarci a Canggu.',
  ),
 }

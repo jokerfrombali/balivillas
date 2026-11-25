@@ -126,7 +126,7 @@ def build_llms(villas):
     total = len(villas)
 
     L = []
-    L.append("# The Host Bali")
+    L.append("# BaliVillas")
     L.append("")
     L.append(
         f"> Direct-booking site for {total} private villas in Bali "
@@ -218,10 +218,10 @@ def build_llms(villas):
 def build_llms_full(villas):
     areas = by_area(villas)
     L = []
-    L.append("# The Host Bali — full villa catalog")
+    L.append("# BaliVillas — full villa catalog")
     L.append("")
     L.append(
-        f"{len(villas)} private villas in Bali, all managed by The Host Bali. "
+        f"{len(villas)} private villas in Bali, all managed by BaliVillas. "
         f"Direct booking on WhatsApp {WA}. Structured version: {ORIGIN}/data/villas.json"
     )
     L.append(

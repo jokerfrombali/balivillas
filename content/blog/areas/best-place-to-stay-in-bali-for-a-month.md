@@ -35,7 +35,7 @@ For a month, Sanur and Umalas answer most of these needs well. Sanur is quiet, w
 
 Every "best place" list assumes a single traveller type, so treat any ranking, including ours, as a starting point rather than an answer. What changes the calculation for a month is that small daily costs and small daily frictions repeat thirty times. A ten-minute extra drive to groceries is nothing on holiday; it is a real cost of living for a month.
 
-Rent for a month is also where the area choice affects your budget most directly, because monthly rates usually carry a meaningfully better discount than nightly ones. Ask any villa or agency, including us, for the monthly rate rather than assuming the nightly price times thirty, since The Host Bali and most managers price monthly stays separately with a lower effective rate. For a general sense of how prices move by area and season, see our guide to Bali villa prices by area.
+Rent for a month is also where the area choice affects your budget most directly, because monthly rates usually carry a meaningfully better discount than nightly ones. Ask any villa or agency, including us, for the monthly rate rather than assuming the nightly price times thirty, since BaliVillas and most managers price monthly stays separately with a lower effective rate. For a general sense of how prices move by area and season, see our guide to Bali villa prices by area.
 
 ## A short checklist before committing to a month in one area
 
