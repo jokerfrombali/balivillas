@@ -3,7 +3,7 @@
 Use ONLY these company facts. Anything not listed here about BaliVillas must not be claimed.
 
 ## Company
-- Brand: BaliVillas. Legal entity: PT MALE ESTATE, NIB 1000000008820545.
+- Brand: BaliVillas. Legal entity: PT MALE ESTATE.
 - Office: Jalan Pasekan Gang Batu Ngonjol 10 No. 8, Batubulan Kangin, Kec. Sukawati, Kab. Gianyar, Bali 80582, Indonesia.
 - WhatsApp +62 857 4649 9697 (guest support 24/7; office hours Mon–Sat 9:00–18:00 WITA; booking replies 8:00–22:00 WITA, usually within about 15 minutes). Email info@balivillas.ai. Instagram @thehostbali.
 - What we do: we manage every villa on the site ourselves (not an aggregator). Guests book direct over WhatsApp with no booking fee and no OTA commission on direct enquiries; payment is arranged after dates are confirmed, nothing is charged on the website. Some villas are also listed on Airbnb and Booking.com. Rates on request; quote the same day. Direct-booking discounts advertised on area pages: 5% off any stay, 10% off weekly, 15% off monthly.
